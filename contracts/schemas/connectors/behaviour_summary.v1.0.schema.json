@@ -1,0 +1,37 @@
+{
+  "$id": "https://atra.local/schemas/connectors/behaviour_summary/v1.0",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "active_minutes_24h": {
+      "maximum": 1440,
+      "minimum": 0,
+      "type": "number",
+      "x-ucum": "min"
+    },
+    "carbohydrate_g": {
+      "maximum": 1000,
+      "minimum": 0,
+      "type": "number",
+      "x-ucum": "g"
+    },
+    "medication_adherence": {
+      "maximum": 1,
+      "minimum": 0,
+      "type": "number",
+      "x-ucum": "1"
+    },
+    "sleep_hours": {
+      "maximum": 24,
+      "minimum": 0,
+      "type": "number",
+      "x-ucum": "h"
+    }
+  },
+  "required": [
+    "active_minutes_24h",
+    "sleep_hours"
+  ],
+  "title": "behaviour_summary v1.0",
+  "type": "object"
+}

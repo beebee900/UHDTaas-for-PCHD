@@ -1,0 +1,33 @@
+# Kidney function: CKD-EPI 2021 eGFR, one-compartment creatinine kinetics, KDIGO staging.
+model_id: ahdt.renal_urinary.kidney_and_renal_function
+sources:
+- id: inker2021
+  citation: "Inker LA, Eneanya ND, Coresh J, et al. New creatinine- and cystatin C-based
+    equations to estimate GFR without race. N Engl J Med. 2021;385(19):1737-1749.
+    doi:10.1056/NEJMoa2102953"
+- id: watson1980
+  citation: "Watson PE, Watson ID, Batt RD. Total body water volumes for adult males and
+    females estimated from simple anthropometric measurements. Am J Clin Nutr.
+    1980;33(1):27-39. doi:10.1093/ajcn/33.1.27"
+- id: mosteller1987
+  citation: "Mosteller RD. Simplified calculation of body-surface area. N Engl J Med.
+    1987;317(17):1098. doi:10.1056/NEJM198710223171717"
+- id: guyton
+  citation: "Hall JE, Hall ME. Guyton and Hall Textbook of Medical Physiology. 14th ed.
+    Elsevier; 2021"
+params:
+  ckd_a: {value: 142, unit: 'mL/min/{1.73_m2}', source: inker2021}
+  kappa_f: {value: 0.7, unit: mg/dL, source: inker2021}
+  kappa_m: {value: 0.9, unit: mg/dL, source: inker2021}
+  alpha_f: {value: -0.241, unit: '1', source: inker2021}
+  alpha_m: {value: -0.302, unit: '1', source: inker2021}
+  beta: {value: -1.200, unit: '1', source: inker2021}
+  age_base: {value: 0.9938, unit: '1', source: inker2021}
+  female_factor: {value: 1.012, unit: '1', source: inker2021}
+  creatinine_mw_factor: {value: 88.4, unit: umol/mg.dL/L, source: inker2021,
+                         note: "umol/L per mg/dL of creatinine"}
+  gfr_factor: {value: 1.0, unit: '1', source: inker2021, calibrate: true, prior_cv: 0.5,
+               bounds: [0.02, 1.5], note: "fraction of the baseline GFR (1 = baseline)"}
+  renal_share: {value: 0.22, unit: '1', source: guyton, verified: false,
+                justification: "Basal renal blood flow 1100 of 5000 mL/min as recalled from the
+                  Guyton and Hall table; needs a page check"}

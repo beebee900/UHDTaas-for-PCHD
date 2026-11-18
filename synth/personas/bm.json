@@ -1,0 +1,515 @@
+{
+ "age_years": 8,
+ "episodes": [
+  {
+   "condition": "cond.malaria_falciparum",
+   "duration_d": 14.0,
+   "episode_key": "ep-persona-bm",
+   "hdt_id": "hdt-21639ea535e8",
+   "onset": "2026-09-28T08:00:00+00:00",
+   "severity": "severe"
+  }
+ ],
+ "facts": {
+  "conditions": [
+   "cond.malaria_falciparum",
+   "cond.hypoglycaemia"
+  ],
+  "medications": [
+   {
+    "atc": "P01BE03",
+    "name": "artesunate",
+    "twin": "haematological"
+   }
+  ],
+  "observations": [
+   {
+    "code": "15074-8",
+    "field": "glucose",
+    "unit": "mmol/L",
+    "value": 2.1
+   }
+  ]
+ },
+ "findings": [
+  "find.hypoglycaemia",
+  "find.headache",
+  "find.pallor",
+  "find.fever",
+  "find.fever_history",
+  "find.impaired_consciousness",
+  "find.prostration",
+  "find.convulsions",
+  "find.bleeding",
+  "find.shock",
+  "find.anaemia"
+ ],
+ "hdt_id": "hdt-21639ea535e8",
+ "initials": "B.M.",
+ "key": "bm",
+ "labs": [
+  {
+   "code": {
+    "code": "14682-9",
+    "system": "http://loinc.org"
+   },
+   "device_id": null,
+   "effective_time": "2026-01-31T00:00:00+00:00",
+   "hdt_id": "hdt-21639ea535e8",
+   "idempotency_key": "lab-hdt-21639ea535e8-creatinine-0",
+   "record_id": "lab-hdt-21639ea535e8-creatinine-0",
+   "source": "manual",
+   "unit": "umol/L",
+   "value": 65.08
+  },
+  {
+   "code": {
+    "code": "718-7",
+    "system": "http://loinc.org"
+   },
+   "device_id": null,
+   "effective_time": "2026-01-31T00:00:00+00:00",
+   "hdt_id": "hdt-21639ea535e8",
+   "idempotency_key": "lab-hdt-21639ea535e8-hb-1",
+   "record_id": "lab-hdt-21639ea535e8-hb-1",
+   "source": "manual",
+   "unit": "g/dL",
+   "value": 13.87
+  },
+  {
+   "code": {
+    "code": "76772-3",
+    "system": "http://loinc.org"
+   },
+   "effective_time": "2026-09-28T08:00:00+00:00",
+   "hdt_id": "hdt-21639ea535e8",
+   "record_id": "lab-hdt-21639ea535e8-rdt-2",
+   "result_of": "malaria_rdt",
+   "source": "manual",
+   "unit": "1",
+   "value": false
+  },
+  {
+   "code": {
+    "code": "718-7",
+    "system": "http://loinc.org"
+   },
+   "device_id": null,
+   "effective_time": "2026-09-28T08:00:00+00:00",
+   "hdt_id": "hdt-21639ea535e8",
+   "idempotency_key": "lab-hdt-21639ea535e8-hb-3",
+   "record_id": "lab-hdt-21639ea535e8-hb-3",
+   "source": "manual",
+   "unit": "g/dL",
+   "value": 14.36
+  }
+ ],
+ "language": "ha",
+ "notes": [
+  {
+   "date": "2026-09-28T09:00:00+00:00",
+   "hdt_id": "hdt-21639ea535e8",
+   "synthetic": true,
+   "text": "History of Present Illness: 8-year-old male presenting with hypoglycaemia, headache, pallor, fever, history of fever, impaired consciousness, prostration (unable to sit, stand or walk unaided), convulsions, abnormal bleeding, shock, anaemia.\nAssessment: Plasmodium falciparum malaria.\nPlan: treat per guideline and review in 48 hours.",
+   "type": "note",
+   "writer": "template"
+  }
+ ],
+ "observations": [
+  {
+   "code": {
+    "code": "8310-5",
+    "system": "http://loinc.org"
+   },
+   "device_id": "thermometer-a535e8",
+   "effective_time": "2026-09-28T08:00:00+00:00",
+   "hdt_id": "hdt-21639ea535e8",
+   "idempotency_key": "dev-hdt-21639ea535e8-temperature-0",
+   "record_id": "dev-hdt-21639ea535e8-temperature-0",
+   "source": "device",
+   "unit": "Cel",
+   "value": 36.8
+  },
+  {
+   "code": {
+    "code": "8310-5",
+    "system": "http://loinc.org"
+   },
+   "device_id": "thermometer-a535e8",
+   "effective_time": "2026-09-28T20:00:00+00:00",
+   "hdt_id": "hdt-21639ea535e8",
+   "idempotency_key": "dev-hdt-21639ea535e8-temperature-1",
+   "record_id": "dev-hdt-21639ea535e8-temperature-1",
+   "source": "device",
+   "unit": "Cel",
+   "value": 38.2
+  },
+  {
+   "code": {
+    "code": "8310-5",
+    "system": "http://loinc.org"
+   },
+   "device_id": "thermometer-a535e8",
+   "effective_time": "2026-09-29T08:00:00+00:00",
+   "hdt_id": "hdt-21639ea535e8",
+   "idempotency_key": "dev-hdt-21639ea535e8-temperature-2",
+   "record_id": "dev-hdt-21639ea535e8-temperature-2",
+   "source": "device",
+   "unit": "Cel",
+   "value": 38.4
+  },
+  {
+   "code": {
+    "code": "8310-5",
+    "system": "http://loinc.org"
+   },
+   "device_id": "thermometer-a535e8",
+   "effective_time": "2026-09-29T20:00:00+00:00",
+   "hdt_id": "hdt-21639ea535e8",
+   "idempotency_key": "dev-hdt-21639ea535e8-temperature-3",
+   "record_id": "dev-hdt-21639ea535e8-temperature-3",
+   "source": "device",
+   "unit": "Cel",
+   "value": 38.4
+  },
+  {
+   "code": {
+    "code": "8310-5",
+    "system": "http://loinc.org"
+   },
+   "device_id": "thermometer-a535e8",
+   "effective_time": "2026-09-30T08:00:00+00:00",
+   "hdt_id": "hdt-21639ea535e8",
+   "idempotency_key": "dev-hdt-21639ea535e8-temperature-4",
+   "record_id": "dev-hdt-21639ea535e8-temperature-4",
+   "source": "device",
+   "unit": "Cel",
+   "value": 38.2
+  },
+  {
+   "code": {
+    "code": "8310-5",
+    "system": "http://loinc.org"
+   },
+   "device_id": "thermometer-a535e8",
+   "effective_time": "2026-09-30T20:00:00+00:00",
+   "hdt_id": "hdt-21639ea535e8",
+   "idempotency_key": "dev-hdt-21639ea535e8-temperature-5",
+   "record_id": "dev-hdt-21639ea535e8-temperature-5",
+   "source": "device",
+   "unit": "Cel",
+   "value": 36.7
+  },
+  {
+   "code": {
+    "code": "8310-5",
+    "system": "http://loinc.org"
+   },
+   "device_id": "thermometer-a535e8",
+   "effective_time": "2026-10-01T08:00:00+00:00",
+   "hdt_id": "hdt-21639ea535e8",
+   "idempotency_key": "dev-hdt-21639ea535e8-temperature-6",
+   "record_id": "dev-hdt-21639ea535e8-temperature-6",
+   "source": "device",
+   "unit": "Cel",
+   "value": 36.8
+  },
+  {
+   "code": {
+    "code": "8310-5",
+    "system": "http://loinc.org"
+   },
+   "device_id": "thermometer-a535e8",
+   "effective_time": "2026-10-01T20:00:00+00:00",
+   "hdt_id": "hdt-21639ea535e8",
+   "idempotency_key": "dev-hdt-21639ea535e8-temperature-7",
+   "record_id": "dev-hdt-21639ea535e8-temperature-7",
+   "source": "device",
+   "unit": "Cel",
+   "value": 36.9
+  },
+  {
+   "code": {
+    "code": "8310-5",
+    "system": "http://loinc.org"
+   },
+   "device_id": "thermometer-a535e8",
+   "effective_time": "2026-10-02T08:00:00+00:00",
+   "hdt_id": "hdt-21639ea535e8",
+   "idempotency_key": "dev-hdt-21639ea535e8-temperature-8",
+   "record_id": "dev-hdt-21639ea535e8-temperature-8",
+   "source": "device",
+   "unit": "Cel",
+   "value": 36.8
+  },
+  {
+   "code": {
+    "code": "8310-5",
+    "system": "http://loinc.org"
+   },
+   "device_id": "thermometer-a535e8",
+   "effective_time": "2026-10-02T20:00:00+00:00",
+   "hdt_id": "hdt-21639ea535e8",
+   "idempotency_key": "dev-hdt-21639ea535e8-temperature-9",
+   "record_id": "dev-hdt-21639ea535e8-temperature-9",
+   "source": "device",
+   "unit": "Cel",
+   "value": 36.9
+  },
+  {
+   "code": {
+    "code": "8310-5",
+    "system": "http://loinc.org"
+   },
+   "device_id": "thermometer-a535e8",
+   "effective_time": "2026-10-03T08:00:00+00:00",
+   "hdt_id": "hdt-21639ea535e8",
+   "idempotency_key": "dev-hdt-21639ea535e8-temperature-10",
+   "record_id": "dev-hdt-21639ea535e8-temperature-10",
+   "source": "device",
+   "unit": "Cel",
+   "value": 36.7
+  },
+  {
+   "code": {
+    "code": "8310-5",
+    "system": "http://loinc.org"
+   },
+   "device_id": "thermometer-a535e8",
+   "effective_time": "2026-10-03T20:00:00+00:00",
+   "hdt_id": "hdt-21639ea535e8",
+   "idempotency_key": "dev-hdt-21639ea535e8-temperature-11",
+   "record_id": "dev-hdt-21639ea535e8-temperature-11",
+   "source": "device",
+   "unit": "Cel",
+   "value": 36.8
+  },
+  {
+   "code": {
+    "code": "8310-5",
+    "system": "http://loinc.org"
+   },
+   "device_id": "thermometer-a535e8",
+   "effective_time": "2026-10-04T08:00:00+00:00",
+   "hdt_id": "hdt-21639ea535e8",
+   "idempotency_key": "dev-hdt-21639ea535e8-temperature-12",
+   "record_id": "dev-hdt-21639ea535e8-temperature-12",
+   "source": "device",
+   "unit": "Cel",
+   "value": 37.0
+  },
+  {
+   "code": {
+    "code": "8310-5",
+    "system": "http://loinc.org"
+   },
+   "device_id": "thermometer-a535e8",
+   "effective_time": "2026-10-04T20:00:00+00:00",
+   "hdt_id": "hdt-21639ea535e8",
+   "idempotency_key": "dev-hdt-21639ea535e8-temperature-13",
+   "record_id": "dev-hdt-21639ea535e8-temperature-13",
+   "source": "device",
+   "unit": "Cel",
+   "value": 36.6
+  },
+  {
+   "code": {
+    "code": "8310-5",
+    "system": "http://loinc.org"
+   },
+   "device_id": "thermometer-a535e8",
+   "effective_time": "2026-10-05T08:00:00+00:00",
+   "hdt_id": "hdt-21639ea535e8",
+   "idempotency_key": "dev-hdt-21639ea535e8-temperature-14",
+   "record_id": "dev-hdt-21639ea535e8-temperature-14",
+   "source": "device",
+   "unit": "Cel",
+   "value": 36.9
+  },
+  {
+   "code": {
+    "code": "8310-5",
+    "system": "http://loinc.org"
+   },
+   "device_id": "thermometer-a535e8",
+   "effective_time": "2026-10-05T20:00:00+00:00",
+   "hdt_id": "hdt-21639ea535e8",
+   "idempotency_key": "dev-hdt-21639ea535e8-temperature-15",
+   "record_id": "dev-hdt-21639ea535e8-temperature-15",
+   "source": "device",
+   "unit": "Cel",
+   "value": 36.9
+  },
+  {
+   "code": {
+    "code": "8310-5",
+    "system": "http://loinc.org"
+   },
+   "device_id": "thermometer-a535e8",
+   "effective_time": "2026-10-06T08:00:00+00:00",
+   "hdt_id": "hdt-21639ea535e8",
+   "idempotency_key": "dev-hdt-21639ea535e8-temperature-16",
+   "record_id": "dev-hdt-21639ea535e8-temperature-16",
+   "source": "device",
+   "unit": "Cel",
+   "value": 36.6
+  },
+  {
+   "code": {
+    "code": "8310-5",
+    "system": "http://loinc.org"
+   },
+   "device_id": "thermometer-a535e8",
+   "effective_time": "2026-10-06T20:00:00+00:00",
+   "hdt_id": "hdt-21639ea535e8",
+   "idempotency_key": "dev-hdt-21639ea535e8-temperature-17",
+   "record_id": "dev-hdt-21639ea535e8-temperature-17",
+   "source": "device",
+   "unit": "Cel",
+   "value": 36.7
+  },
+  {
+   "code": {
+    "code": "8310-5",
+    "system": "http://loinc.org"
+   },
+   "device_id": "thermometer-a535e8",
+   "effective_time": "2026-10-07T20:00:00+00:00",
+   "hdt_id": "hdt-21639ea535e8",
+   "idempotency_key": "dev-hdt-21639ea535e8-temperature-18",
+   "record_id": "dev-hdt-21639ea535e8-temperature-18",
+   "source": "device",
+   "unit": "Cel",
+   "value": 36.7
+  },
+  {
+   "code": {
+    "code": "8310-5",
+    "system": "http://loinc.org"
+   },
+   "device_id": "thermometer-a535e8",
+   "effective_time": "2026-10-08T08:00:00+00:00",
+   "hdt_id": "hdt-21639ea535e8",
+   "idempotency_key": "dev-hdt-21639ea535e8-temperature-19",
+   "record_id": "dev-hdt-21639ea535e8-temperature-19",
+   "source": "device",
+   "unit": "Cel",
+   "value": 36.9
+  },
+  {
+   "code": {
+    "code": "8310-5",
+    "system": "http://loinc.org"
+   },
+   "device_id": "thermometer-a535e8",
+   "effective_time": "2026-10-08T20:00:00+00:00",
+   "hdt_id": "hdt-21639ea535e8",
+   "idempotency_key": "dev-hdt-21639ea535e8-temperature-20",
+   "record_id": "dev-hdt-21639ea535e8-temperature-20",
+   "source": "device",
+   "unit": "Cel",
+   "value": 37.0
+  },
+  {
+   "code": {
+    "code": "8310-5",
+    "system": "http://loinc.org"
+   },
+   "device_id": "thermometer-a535e8",
+   "effective_time": "2026-10-09T08:00:00+00:00",
+   "hdt_id": "hdt-21639ea535e8",
+   "idempotency_key": "dev-hdt-21639ea535e8-temperature-21",
+   "record_id": "dev-hdt-21639ea535e8-temperature-21",
+   "source": "device",
+   "unit": "Cel",
+   "value": 37.1
+  },
+  {
+   "code": {
+    "code": "8310-5",
+    "system": "http://loinc.org"
+   },
+   "device_id": "thermometer-a535e8",
+   "effective_time": "2026-10-09T20:00:00+00:00",
+   "hdt_id": "hdt-21639ea535e8",
+   "idempotency_key": "dev-hdt-21639ea535e8-temperature-22",
+   "record_id": "dev-hdt-21639ea535e8-temperature-22",
+   "source": "device",
+   "unit": "Cel",
+   "value": 37.0
+  },
+  {
+   "code": {
+    "code": "8310-5",
+    "system": "http://loinc.org"
+   },
+   "device_id": "thermometer-a535e8",
+   "effective_time": "2026-10-10T08:00:00+00:00",
+   "hdt_id": "hdt-21639ea535e8",
+   "idempotency_key": "dev-hdt-21639ea535e8-temperature-23",
+   "record_id": "dev-hdt-21639ea535e8-temperature-23",
+   "source": "device",
+   "unit": "Cel",
+   "value": 37.0
+  },
+  {
+   "code": {
+    "code": "8310-5",
+    "system": "http://loinc.org"
+   },
+   "device_id": "thermometer-a535e8",
+   "effective_time": "2026-10-10T20:00:00+00:00",
+   "hdt_id": "hdt-21639ea535e8",
+   "idempotency_key": "dev-hdt-21639ea535e8-temperature-24",
+   "record_id": "dev-hdt-21639ea535e8-temperature-24",
+   "source": "device",
+   "unit": "Cel",
+   "value": 37.1
+  },
+  {
+   "code": {
+    "code": "8310-5",
+    "system": "http://loinc.org"
+   },
+   "device_id": "thermometer-a535e8",
+   "effective_time": "2026-10-11T08:00:00+00:00",
+   "hdt_id": "hdt-21639ea535e8",
+   "idempotency_key": "dev-hdt-21639ea535e8-temperature-25",
+   "record_id": "dev-hdt-21639ea535e8-temperature-25",
+   "source": "device",
+   "unit": "Cel",
+   "value": 37.0
+  },
+  {
+   "code": {
+    "code": "8310-5",
+    "system": "http://loinc.org"
+   },
+   "device_id": "thermometer-a535e8",
+   "effective_time": "2026-10-11T20:00:00+00:00",
+   "hdt_id": "hdt-21639ea535e8",
+   "idempotency_key": "dev-hdt-21639ea535e8-temperature-26",
+   "record_id": "dev-hdt-21639ea535e8-temperature-26",
+   "source": "device",
+   "unit": "Cel",
+   "value": 36.7
+  },
+  {
+   "code": {
+    "code": "8310-5",
+    "system": "http://loinc.org"
+   },
+   "device_id": "thermometer-a535e8",
+   "effective_time": "2026-10-12T08:00:00+00:00",
+   "hdt_id": "hdt-21639ea535e8",
+   "idempotency_key": "dev-hdt-21639ea535e8-temperature-27",
+   "record_id": "dev-hdt-21639ea535e8-temperature-27",
+   "source": "device",
+   "unit": "Cel",
+   "value": 36.8
+  }
+ ],
+ "scenario": "severe malaria with falling consciousness and hypoglycaemia",
+ "sex": "male",
+ "tenant_id": "fac-a"
+}

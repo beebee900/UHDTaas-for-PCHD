@@ -1,0 +1,55 @@
+# T3 reference-state items of the respiratory twin (design 04, 4.5.3).
+- model_id: ahdt.respiratory.trachea_bronchial_tree_upper_airway_and_larynx
+  twin: respiratory
+  intended_use: Airway obstruction state from asthma or COPD activity
+  instances: []
+  variables:
+    airway_obstruction_index:
+      unit: '1'
+      ref: state.airway_obstruction_index
+      tau_h: 48
+      justification: Relaxation time constant of a T3 state; a modelling assumption (design 01, rule
+        R3)
+  couplings:
+  - input: exacerbation_risk
+    from: model:ahdt.respiratory.exacerbation_risk#exacerbation_risk
+    unit: '1'
+    target: airway_obstruction_index
+    gain: coupling.respiratory.trachea_bronchial_tree_upper_airway_and_larynx.exacerbation_risk.airway_obstruction_index.gain
+    reference: coupling.respiratory.trachea_bronchial_tree_upper_airway_and_larynx.exacerbation_risk.airway_obstruction_index.reference
+- model_id: ahdt.respiratory.diaphragm
+  twin: respiratory
+  intended_use: Respiratory muscle fatigue index
+  instances: []
+  variables:
+    muscle_fatigue_index:
+      unit: '1'
+      ref: state.muscle_fatigue_index
+      tau_h: 12
+      justification: Relaxation time constant of a T3 state; a modelling assumption (design 01, rule
+        R3)
+  couplings:
+  - input: minute_ventilation
+    from: model:ahdt.respiratory.lungs_and_gas_exchange#minute_ventilation
+    unit: L/min
+    target: muscle_fatigue_index
+    gain: coupling.respiratory.diaphragm.minute_ventilation.muscle_fatigue_index.gain
+    reference: coupling.respiratory.diaphragm.minute_ventilation.muscle_fatigue_index.reference
+- model_id: ahdt.respiratory.airway_epithelium
+  twin: respiratory
+  intended_use: Airway epithelial inflammation coupled from the Immune twin
+  instances: []
+  variables:
+    epithelial_inflammation:
+      unit: '1'
+      ref: state.epithelial_inflammation
+      tau_h: 48
+      justification: Relaxation time constant of a T3 state; a modelling assumption (design 01, rule
+        R3)
+  couplings:
+  - input: crp
+    from: field:1988-5
+    unit: mg/L
+    target: epithelial_inflammation
+    gain: coupling.respiratory.airway_epithelium.crp.epithelial_inflammation.gain
+    reference: coupling.respiratory.airway_epithelium.crp.epithelial_inflammation.reference

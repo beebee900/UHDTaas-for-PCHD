@@ -1,0 +1,64 @@
+# T3 reference-state items of the cardiovascular twin (design 04, 4.5.3).
+- model_id: ahdt.cardiovascular.vascular_endothelium
+  twin: cardiovascular
+  intended_use: Endothelial function driven by glycaemia, blood pressure and inflammation
+  instances: []
+  variables:
+    endothelial_function:
+      unit: '1'
+      ref: state.endothelial_function
+      tau_h: 720
+      justification: Relaxation time constant of a T3 state; a modelling assumption (design 01, rule
+        R3)
+  couplings:
+  - input: glucose
+    from: field:15074-8
+    unit: mmol/L
+    target: endothelial_function
+    gain: coupling.cardiovascular.vascular_endothelium.glucose.endothelial_function.gain
+    reference: coupling.cardiovascular.vascular_endothelium.glucose.endothelial_function.reference
+  - input: sbp
+    from: field:8480-6
+    unit: mm[Hg]
+    target: endothelial_function
+    gain: coupling.cardiovascular.vascular_endothelium.sbp.endothelial_function.gain
+    reference: coupling.cardiovascular.vascular_endothelium.sbp.endothelial_function.reference
+  - input: inflammation_index
+    from: connector:InfectionHaemodynamicsConnector#inflammation_index
+    unit: '1'
+    target: endothelial_function
+    gain: coupling.cardiovascular.vascular_endothelium.inflammation_index.endothelial_function.gain
+    reference: coupling.cardiovascular.vascular_endothelium.inflammation_index.endothelial_function.reference
+- model_id: ahdt.cardiovascular.cardiac_biomarkers
+  twin: cardiovascular
+  intended_use: Troponin and natriuretic peptide state against reference ranges
+  instances: []
+  variables:
+    troponin_i:
+      unit: ng/L
+      ref: range.troponin_i
+      tau_h: 12
+      justification: Relaxation time constant of a T3 state; a modelling assumption (design 01, rule
+        R3)
+    bnp:
+      unit: pg/mL
+      ref: range.bnp
+      tau_h: 24
+      justification: Relaxation time constant of a T3 state; a modelling assumption (design 01, rule
+        R3)
+  couplings:
+  - input: lvedp
+    from: model:ahdt.cardiovascular.heart_chambers_and_valves#lvedp
+    unit: mm[Hg]
+    target: bnp
+    gain: coupling.cardiovascular.cardiac_biomarkers.lvedp.bnp.gain
+    reference: coupling.cardiovascular.cardiac_biomarkers.lvedp.bnp.reference
+  - input: lvedp
+    from: model:ahdt.cardiovascular.heart_chambers_and_valves#lvedp
+    unit: mm[Hg]
+    target: troponin_i
+    gain: coupling.cardiovascular.cardiac_biomarkers.lvedp.troponin_i.gain
+    reference: coupling.cardiovascular.cardiac_biomarkers.lvedp.troponin_i.reference
+  obs_map:
+    10839-9: troponin_i
+    42637-9: bnp

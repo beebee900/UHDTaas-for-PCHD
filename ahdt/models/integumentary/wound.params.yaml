@@ -1,0 +1,19 @@
+# Logistic wound closure with glycaemic and perfusion modifiers.
+model_id: ahdt.integumentary.wound_healing
+sources:
+- id: atra-assumption
+  citation: ATRA design 01 rule R5 assumption register
+params:
+  k: {value: 0.15, unit: /d, source: atra-assumption, assumption: true, calibrate: true,
+      prior_cv: 0.6,
+      justification: "Logistic closure rate of an uncomplicated wound; calibrated to the
+        person's measured wound areas"}
+  healed0: {value: 0.02, unit: '1', source: atra-assumption, assumption: true,
+            justification: "Healed fraction at the first measurement; the logistic form needs
+              a non-zero start"}
+  hba1c_ref: {value: 6.5, unit: '%', source: atra-assumption, assumption: true,
+              justification: "HbA1c above which the closure rate falls; to be replaced by a
+                kb threshold"}
+  hba1c_slope: {value: 0.1, unit: '/%', source: atra-assumption, assumption: true,
+                justification: "Relative fall of the closure rate per percentage point of HbA1c
+                  above the reference"}

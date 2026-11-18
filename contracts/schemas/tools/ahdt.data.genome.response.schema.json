@@ -1,0 +1,74 @@
+{
+  "$defs": {
+    "Variant": {
+      "additionalProperties": false,
+      "properties": {
+        "gene": {
+          "title": "Gene",
+          "type": "string"
+        },
+        "genotype": {
+          "title": "Genotype",
+          "type": "string"
+        },
+        "phenotype": {
+          "title": "Phenotype",
+          "type": "string"
+        },
+        "rsid": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Rsid"
+        },
+        "source": {
+          "title": "Source",
+          "type": "string"
+        },
+        "star_allele": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Star Allele"
+        }
+      },
+      "required": [
+        "gene",
+        "genotype",
+        "phenotype",
+        "source"
+      ],
+      "title": "Variant",
+      "type": "object"
+    }
+  },
+  "$id": "https://atra.local/schemas/tools/ahdt.data.genome.response.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "variants": {
+      "items": {
+        "$ref": "#/$defs/Variant"
+      },
+      "title": "Variants",
+      "type": "array"
+    }
+  },
+  "required": [
+    "variants"
+  ],
+  "title": "GenomeData",
+  "type": "object"
+}

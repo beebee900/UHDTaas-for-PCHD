@@ -1,0 +1,91 @@
+{
+  "$defs": {
+    "TrajectoryEvent": {
+      "additionalProperties": false,
+      "properties": {
+        "detail": {
+          "additionalProperties": true,
+          "title": "Detail",
+          "type": "object"
+        },
+        "kind": {
+          "title": "Kind",
+          "type": "string"
+        },
+        "t": {
+          "title": "T",
+          "type": "number"
+        }
+      },
+      "required": [
+        "t",
+        "kind"
+      ],
+      "title": "TrajectoryEvent",
+      "type": "object"
+    }
+  },
+  "$id": "https://atra.local/schemas/tools/ahdt.model.cosimulate.response.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "events": {
+      "items": {
+        "$ref": "#/$defs/TrajectoryEvent"
+      },
+      "title": "Events",
+      "type": "array"
+    },
+    "fork_id": {
+      "title": "Fork Id",
+      "type": "string"
+    },
+    "model_id": {
+      "title": "Model Id",
+      "type": "string"
+    },
+    "output_id": {
+      "title": "Output Id",
+      "type": "string"
+    },
+    "series": {
+      "additionalProperties": {
+        "items": {
+          "type": "number"
+        },
+        "type": "array"
+      },
+      "title": "Series",
+      "type": "object"
+    },
+    "t": {
+      "items": {
+        "type": "number"
+      },
+      "title": "T",
+      "type": "array"
+    },
+    "units": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "title": "Units",
+      "type": "object"
+    },
+    "version": {
+      "title": "Version",
+      "type": "string"
+    }
+  },
+  "required": [
+    "output_id",
+    "model_id",
+    "version",
+    "t",
+    "series",
+    "units",
+    "fork_id"
+  ],
+  "title": "SimulateData",
+  "type": "object"
+}

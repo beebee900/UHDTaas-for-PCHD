@@ -1,0 +1,238 @@
+# Diagnostic tests. `targets` gives the accuracy for a condition where a source reports it
+# (percent). Cost and turnaround are tenant data: they live in the tenant price list
+# (kb/prices/<tenant>.csv) and are joined by test id.
+
+- id: test.malaria_rdt_hrp2
+  name: Malaria rapid diagnostic test (PfHRP2)
+  loinc: 76772-3
+  sample: capillary blood
+  targets:
+  - {condition: cond.malaria_falciparum, sensitivity_percent: 95.0, specificity_percent: 95.2}
+  provenance:
+    source: who-malaria-2026
+    section: 5.1 Diagnosing malaria
+    page: 168
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: test.malaria_rdt_pldh
+  name: Malaria rapid diagnostic test (P. falciparum pLDH)
+  loinc: 76772-3
+  sample: capillary blood
+  targets:
+  - {condition: cond.malaria_falciparum, sensitivity_percent: 93.2, specificity_percent: 98.5}
+  provenance:
+    source: who-malaria-2026
+    section: 5.1 Diagnosing malaria
+    page: 168
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: test.malaria_microscopy
+  name: Malaria microscopy (thick and thin film)
+  loinc: 32206-5
+  sample: capillary or venous blood
+  field_detection_limit_per_ul: 100
+  reports: [species, parasite density]
+  note: The reference method; sensitivity depends on microscopist skill.
+  provenance:
+    source: who-malaria-2026
+    section: 5.1 Diagnosing malaria
+    page: 167
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: test.tb_lc_anaat
+  name: Low-complexity automated NAAT for TB (e.g. Xpert MTB/RIF Ultra)
+  loinc: 85362-2
+  sample: sputum
+  targets:
+  - {condition: cond.tb_pulmonary, sensitivity_percent: 90.4, specificity_percent: 94.9}
+  rifampicin_resistance: {loinc: 33634-7, sensitivity_percent: 95.1, specificity_percent: 98.1}
+  provenance:
+    source: who-tb-m3-2025
+    section: 2.1.1 LC-aNAATs for detection of TB and resistance to rifampicin
+    page: 29
+    also:
+    - {source: who-tb-m3-2025, page: 30}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: test.hiv_rapid_test
+  name: HIV 1+2 antibody rapid test (national testing strategy)
+  loinc: 80387-4
+  sample: capillary blood
+  targets:
+  - {condition: cond.hiv, sensitivity_percent_at_least: 99, specificity_percent_at_least: 98}
+  note: A testing strategy combines assays that each meet these minimum performances.
+  provenance:
+    source: who-hiv-2021
+    page: 20
+    also:
+    - {source: who-hiv-2021, page: 74}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: test.typhoid_rdt
+  name: Typhoid rapid diagnostic test
+  sample: blood
+  targets:
+  - {condition: cond.enteric_fever, sensitivity_percent: 80}
+  note: Highly specific on average; the Widal test is not helpful.
+  provenance:
+    source: who-imai-dcm-2011-v2
+    page: 516
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: test.blood_culture
+  name: Blood culture
+  loinc: 600-7
+  sample: venous blood
+  targets:
+  - {condition: cond.enteric_fever}
+  - {condition: cond.sepsis}
+  note: Take before antibiotics. Reference test for enteric fever in severe cases.
+  provenance:
+    source: who-aware-2022
+    section: 15. Enteric fever
+    page: 202
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: test.urine_dipstick
+  name: Urine dipstick (leucocyte esterase and nitrite)
+  loinc: 32782-5
+  sample: urine
+  targets:
+  - {condition: cond.cystitis}
+  - {condition: cond.pyelonephritis}
+  note: Positive leucocyte esterase and nitrites are indirect signs of infection. No accuracy
+    figures are in the kb sources.
+  provenance:
+    source: who-aware-2022
+    section: 34. Upper urinary tract infection
+    page: 492
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: test.urine_culture
+  name: Urine culture
+  loinc: 630-4
+  sample: midstream urine
+  targets:
+  - {condition: cond.cystitis}
+  - {condition: cond.pyelonephritis}
+  note: Ideally before antibiotics; the positive cut-off varies between laboratories.
+  provenance:
+    source: who-aware-2022
+    section: 34. Upper urinary tract infection
+    page: 492
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: test.lassa_rt_pcr
+  name: Lassa virus real-time PCR
+  loinc: 103719-1
+  sample: blood
+  targets:
+  - {condition: cond.lassa_fever}
+  note: Confirms a suspected or probable case.
+  provenance:
+    source: ncdc-lassa-2018
+    page: 9
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: test.urine_ketones
+  name: Urine ketones (test strip)
+  loinc: 2514-8
+  sample: urine
+  targets:
+  - {condition: cond.hyperglycaemic_crisis}
+  provenance:
+    source: who-hearts-d-2020
+    page: 16
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+# Measurement tests: their results are twin fields; the field definitions carry the LOINC codes.
+- id: test.haemoglobin
+  name: Haemoglobin
+  loinc: 718-7
+  field: hb
+  targets:
+  - {condition: cond.anaemia}
+  provenance:
+    source: who-hb-2024
+    section: Haemoglobin cutoffs to define anaemia
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: test.glucose_capillary
+  name: Capillary blood glucose (glucometer)
+  loinc: 14743-9
+  field: glucose
+  targets:
+  - {condition: cond.hypoglycaemia}
+  - {condition: cond.diabetes_type2}
+  provenance:
+    source: who-hearts-d-2020
+    page: 16
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: test.creatinine
+  name: Serum creatinine
+  loinc: 14682-9
+  field: creatinine
+  targets:
+  - {condition: cond.aki}
+  - {condition: cond.ckd}
+  provenance:
+    source: kdigo-aki-2012
+    section: Definition and staging of AKI
+    page: 22
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: test.cd4
+  name: CD4 count
+  loinc: 24467-3
+  field: cd4
+  targets:
+  - {condition: cond.hiv}
+  provenance:
+    source: who-hiv-2021
+    page: 158
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: test.hiv_viral_load
+  name: HIV-1 viral load
+  loinc: 70241-5
+  field: viral_load
+  targets:
+  - {condition: cond.hiv}
+  provenance:
+    source: who-hiv-2021
+    section: 4.7 Monitoring the response to ART
+    page: 191
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified

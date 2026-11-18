@@ -1,0 +1,676 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="https://atra.health/ontology/ahdt.owl"
+         xmlns="https://atra.health/ontology/ahdt.owl#"
+         xmlns:swrl="http://www.w3.org/2003/11/swrl#">
+
+<owl:Ontology rdf:about="https://atra.health/ontology/ahdt.owl"/>
+
+<owl:ObjectProperty rdf:about="#ownedBy">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Organ"/>
+  <rdfs:range rdf:resource="#System"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#observedIn">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Observation"/>
+  <rdfs:range rdf:resource="#Organ"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#attributedTo">
+  <rdfs:domain rdf:resource="#Observation"/>
+  <rdfs:range rdf:resource="#System"/>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="#System">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Organ">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Observation">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#BehaviouralCognitiveSystem">
+  <rdfs:subClassOf rdf:resource="#System"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Behavioural and Cognitive DT</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#CardiovascularSystem">
+  <rdfs:subClassOf rdf:resource="#System"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cardiovascular DT</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#DigestiveSystem">
+  <rdfs:subClassOf rdf:resource="#System"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Digestive DT</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#EndocrineSystem">
+  <rdfs:subClassOf rdf:resource="#System"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Endocrine DT</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#HaematologicalSystem">
+  <rdfs:subClassOf rdf:resource="#System"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Haematological DT</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#HepatobiliarySystem">
+  <rdfs:subClassOf rdf:resource="#System"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hepatobiliary DT</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#ImmuneLymphaticSystem">
+  <rdfs:subClassOf rdf:resource="#System"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Immune and Lymphatic DT</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#IntegumentarySystem">
+  <rdfs:subClassOf rdf:resource="#System"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Integumentary DT</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#MusculoskeletalSystem">
+  <rdfs:subClassOf rdf:resource="#System"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Musculoskeletal DT</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#NervousSystem">
+  <rdfs:subClassOf rdf:resource="#System"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nervous DT</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#PopulationSystem">
+  <rdfs:subClassOf rdf:resource="#System"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Population DT</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#RenalUrinarySystem">
+  <rdfs:subClassOf rdf:resource="#System"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Renal and Urinary DT</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#ReproductiveSystem">
+  <rdfs:subClassOf rdf:resource="#System"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reproductive DT</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#RespiratorySystem">
+  <rdfs:subClassOf rdf:resource="#System"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Respiratory DT</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#SensorySystem">
+  <rdfs:subClassOf rdf:resource="#System"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sensory DT</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#SocialSystem">
+  <rdfs:subClassOf rdf:resource="#System"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Social DT</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#WholeBodySystem">
+  <rdfs:subClassOf rdf:resource="#System"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Whole-Body DT</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000948">
+  <rdfs:subClassOf rdf:resource="#Organ"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#ownedBy"/>
+      <owl:someValuesFrom rdf:resource="#CardiovascularSystem"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">heart</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000947">
+  <rdfs:subClassOf rdf:resource="#Organ"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#ownedBy"/>
+      <owl:someValuesFrom rdf:resource="#CardiovascularSystem"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aorta</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0001637">
+  <rdfs:subClassOf rdf:resource="#Organ"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#ownedBy"/>
+      <owl:someValuesFrom rdf:resource="#CardiovascularSystem"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">artery</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0001638">
+  <rdfs:subClassOf rdf:resource="#Organ"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#ownedBy"/>
+      <owl:someValuesFrom rdf:resource="#CardiovascularSystem"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vein</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0001982">
+  <rdfs:subClassOf rdf:resource="#Organ"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#ownedBy"/>
+      <owl:someValuesFrom rdf:resource="#CardiovascularSystem"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">capillary</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000945">
+  <rdfs:subClassOf rdf:resource="#Organ"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#ownedBy"/>
+      <owl:someValuesFrom rdf:resource="#DigestiveSystem"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stomach</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000160">
+  <rdfs:subClassOf rdf:resource="#Organ"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#ownedBy"/>
+      <owl:someValuesFrom rdf:resource="#DigestiveSystem"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">intestine</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#atra_microbiome">
+  <rdfs:subClassOf rdf:resource="#Organ"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#ownedBy"/>
+      <owl:someValuesFrom rdf:resource="#DigestiveSystem"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">atra:microbiome</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0001264">
+  <rdfs:subClassOf rdf:resource="#Organ"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#ownedBy"/>
+      <owl:someValuesFrom rdf:resource="#EndocrineSystem"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pancreas</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0001898">
+  <rdfs:subClassOf rdf:resource="#Organ"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#ownedBy"/>
+      <owl:someValuesFrom rdf:resource="#EndocrineSystem"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hypothalamus</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000007">
+  <rdfs:subClassOf rdf:resource="#Organ"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#ownedBy"/>
+      <owl:someValuesFrom rdf:resource="#EndocrineSystem"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pituitary gland</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0002046">
+  <rdfs:subClassOf rdf:resource="#Organ"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#ownedBy"/>
+      <owl:someValuesFrom rdf:resource="#EndocrineSystem"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">thyroid gland</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0001132">
+  <rdfs:subClassOf rdf:resource="#Organ"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#ownedBy"/>
+      <owl:someValuesFrom rdf:resource="#EndocrineSystem"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">parathyroid gland</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0002369">
+  <rdfs:subClassOf rdf:resource="#Organ"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#ownedBy"/>
+      <owl:someValuesFrom rdf:resource="#EndocrineSystem"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">adrenal gland</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0001905">
+  <rdfs:subClassOf rdf:resource="#Organ"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#ownedBy"/>
+      <owl:someValuesFrom rdf:resource="#EndocrineSystem"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pineal body</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000178">
+  <rdfs:subClassOf rdf:resource="#Organ"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#ownedBy"/>
+      <owl:someValuesFrom rdf:resource="#HaematologicalSystem"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">blood</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0002371">
+  <rdfs:subClassOf rdf:resource="#Organ"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#ownedBy"/>
+      <owl:someValuesFrom rdf:resource="#HaematologicalSystem"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bone marrow</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0002107">
+  <rdfs:subClassOf rdf:resource="#Organ"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#ownedBy"/>
+      <owl:someValuesFrom rdf:resource="#HepatobiliarySystem"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">liver</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0002106">
+  <rdfs:subClassOf rdf:resource="#Organ"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#ownedBy"/>
+      <owl:someValuesFrom rdf:resource="#ImmuneLymphaticSystem"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">spleen</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0002370">
+  <rdfs:subClassOf rdf:resource="#Organ"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#ownedBy"/>
+      <owl:someValuesFrom rdf:resource="#ImmuneLymphaticSystem"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">thymus</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000029">
+  <rdfs:subClassOf rdf:resource="#Organ"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#ownedBy"/>
+      <owl:someValuesFrom rdf:resource="#ImmuneLymphaticSystem"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lymph node</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0002372">
+  <rdfs:subClassOf rdf:resource="#Organ"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#ownedBy"/>
+      <owl:someValuesFrom rdf:resource="#ImmuneLymphaticSystem"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tonsil</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0002097">
+  <rdfs:subClassOf rdf:resource="#Organ"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#ownedBy"/>
+      <owl:someValuesFrom rdf:resource="#IntegumentarySystem"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">skin of body</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0001434">
+  <rdfs:subClassOf rdf:resource="#Organ"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#ownedBy"/>
+      <owl:someValuesFrom rdf:resource="#MusculoskeletalSystem"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">skeletal system</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000982">
+  <rdfs:subClassOf rdf:resource="#Organ"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#ownedBy"/>
+      <owl:someValuesFrom rdf:resource="#MusculoskeletalSystem"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">skeletal joint</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0014892">
+  <rdfs:subClassOf rdf:resource="#Organ"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#ownedBy"/>
+      <owl:someValuesFrom rdf:resource="#MusculoskeletalSystem"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">skeletal muscle organ, vertebrate</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000043">
+  <rdfs:subClassOf rdf:resource="#Organ"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#ownedBy"/>
+      <owl:someValuesFrom rdf:resource="#MusculoskeletalSystem"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tendon</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0002418">
+  <rdfs:subClassOf rdf:resource="#Organ"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#ownedBy"/>
+      <owl:someValuesFrom rdf:resource="#MusculoskeletalSystem"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cartilage tissue</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000955">
+  <rdfs:subClassOf rdf:resource="#Organ"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#ownedBy"/>
+      <owl:someValuesFrom rdf:resource="#NervousSystem"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">brain</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0002113">
+  <rdfs:subClassOf rdf:resource="#Organ"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#ownedBy"/>
+      <owl:someValuesFrom rdf:resource="#RenalUrinarySystem"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kidney</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0001255">
+  <rdfs:subClassOf rdf:resource="#Organ"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#ownedBy"/>
+      <owl:someValuesFrom rdf:resource="#RenalUrinarySystem"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">urinary bladder</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000056">
+  <rdfs:subClassOf rdf:resource="#Organ"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#ownedBy"/>
+      <owl:someValuesFrom rdf:resource="#RenalUrinarySystem"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ureter</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000057">
+  <rdfs:subClassOf rdf:resource="#Organ"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#ownedBy"/>
+      <owl:someValuesFrom rdf:resource="#RenalUrinarySystem"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">urethra</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000991">
+  <rdfs:subClassOf rdf:resource="#Organ"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#ownedBy"/>
+      <owl:someValuesFrom rdf:resource="#ReproductiveSystem"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gonad</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000995">
+  <rdfs:subClassOf rdf:resource="#Organ"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#ownedBy"/>
+      <owl:someValuesFrom rdf:resource="#ReproductiveSystem"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">uterus</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000310">
+  <rdfs:subClassOf rdf:resource="#Organ"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#ownedBy"/>
+      <owl:someValuesFrom rdf:resource="#ReproductiveSystem"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">breast</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0002367">
+  <rdfs:subClassOf rdf:resource="#Organ"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#ownedBy"/>
+      <owl:someValuesFrom rdf:resource="#ReproductiveSystem"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">prostate gland</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0001987">
+  <rdfs:subClassOf rdf:resource="#Organ"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#ownedBy"/>
+      <owl:someValuesFrom rdf:resource="#ReproductiveSystem"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">placenta</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0002048">
+  <rdfs:subClassOf rdf:resource="#Organ"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#ownedBy"/>
+      <owl:someValuesFrom rdf:resource="#RespiratorySystem"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lung</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000970">
+  <rdfs:subClassOf rdf:resource="#Organ"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#ownedBy"/>
+      <owl:someValuesFrom rdf:resource="#SensorySystem"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eye</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0001690">
+  <rdfs:subClassOf rdf:resource="#Organ"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#ownedBy"/>
+      <owl:someValuesFrom rdf:resource="#SensorySystem"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ear</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0002268">
+  <rdfs:subClassOf rdf:resource="#Organ"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#ownedBy"/>
+      <owl:someValuesFrom rdf:resource="#SensorySystem"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">olfactory organ</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0001727">
+  <rdfs:subClassOf rdf:resource="#Organ"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#ownedBy"/>
+      <owl:someValuesFrom rdf:resource="#SensorySystem"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">taste bud</rdfs:label>
+</owl:Class>
+
+<swrl:Variable rdf:about="urn:swrl#o"/>
+
+<swrl:Variable rdf:about="urn:swrl#g"/>
+
+<swrl:Variable rdf:about="urn:swrl#s"/>
+
+<swrl:Imp>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="#Observation"/>
+          <swrl:argument1 rdf:resource="urn:swrl#o"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first>
+            <swrl:IndividualPropertyAtom>
+              <swrl:propertyPredicate rdf:resource="#observedIn"/>
+              <swrl:argument1 rdf:resource="urn:swrl#o"/>
+              <swrl:argument2 rdf:resource="urn:swrl#g"/>
+            </swrl:IndividualPropertyAtom>
+          </rdf:first>
+          <rdf:rest>
+            <rdf:Description>
+              <rdf:first>
+                <swrl:IndividualPropertyAtom>
+                  <swrl:propertyPredicate rdf:resource="#ownedBy"/>
+                  <swrl:argument1 rdf:resource="urn:swrl#g"/>
+                  <swrl:argument2 rdf:resource="urn:swrl#s"/>
+                </swrl:IndividualPropertyAtom>
+              </rdf:first>
+              <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+          </rdf:rest>
+        </rdf:Description>
+      </rdf:rest>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:IndividualPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="#attributedTo"/>
+          <swrl:argument1 rdf:resource="urn:swrl#o"/>
+          <swrl:argument2 rdf:resource="urn:swrl#s"/>
+        </swrl:IndividualPropertyAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:head>
+</swrl:Imp>
+
+<owl:AllDisjointClasses>
+  <owl:members rdf:parseType="Collection">
+    <rdf:Description rdf:about="#BehaviouralCognitiveSystem"/>
+    <rdf:Description rdf:about="#CardiovascularSystem"/>
+    <rdf:Description rdf:about="#DigestiveSystem"/>
+    <rdf:Description rdf:about="#EndocrineSystem"/>
+    <rdf:Description rdf:about="#HaematologicalSystem"/>
+    <rdf:Description rdf:about="#HepatobiliarySystem"/>
+    <rdf:Description rdf:about="#ImmuneLymphaticSystem"/>
+    <rdf:Description rdf:about="#IntegumentarySystem"/>
+    <rdf:Description rdf:about="#MusculoskeletalSystem"/>
+    <rdf:Description rdf:about="#NervousSystem"/>
+    <rdf:Description rdf:about="#PopulationSystem"/>
+    <rdf:Description rdf:about="#RenalUrinarySystem"/>
+    <rdf:Description rdf:about="#ReproductiveSystem"/>
+    <rdf:Description rdf:about="#RespiratorySystem"/>
+    <rdf:Description rdf:about="#SensorySystem"/>
+    <rdf:Description rdf:about="#SocialSystem"/>
+    <rdf:Description rdf:about="#WholeBodySystem"/>
+  </owl:members>
+</owl:AllDisjointClasses>
+
+
+</rdf:RDF>

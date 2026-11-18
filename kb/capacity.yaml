@@ -1,0 +1,16 @@
+# Capacity and proxy rules for patient agency (design 05, 5.5). The first rule that
+# matches decides who acts for the patient; every proxy decision is audited with its rule.
+
+- id: capacity.rules
+  rules:
+  - {id: minor, when: {age_below_years: 18}, actor: guardian, proxy_relationship: GUARD}
+  - {id: not_alert, when: {avpu_not: A}, actor: registered_proxy, proxy_relationship: any}
+  - {id: assessed_lacks_capacity, when: {capacity_assessment: lacks_capacity}, actor: registered_proxy, proxy_relationship: any}
+  - {id: default, when: {}, actor: self}
+  proxy_scope: consent_provisions_with_actor
+  no_registered_proxy: escalate_to_clinician
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Age of majority 18 as in the Nigerian Child Rights Act 2003; AVPU other than Alert or a clinician finding of lacking capacity hands decisions to the registered proxy as design 05 states. The legal basis needs a clinical reviewer's confirmation.

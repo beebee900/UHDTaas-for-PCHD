@@ -1,0 +1,246 @@
+{
+  "resourceType": "PlanDefinition",
+  "id": "malaria-falciparum",
+  "url": "https://atra.health/fhir/PlanDefinition/malaria_falciparum",
+  "version": "1.0.0",
+  "name": "malaria_falciparum",
+  "title": "Plasmodium falciparum malaria",
+  "type": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/plan-definition-type",
+        "code": "clinical-protocol"
+      }
+    ]
+  },
+  "status": "active",
+  "useContext": [
+    {
+      "code": {
+        "system": "http://terminology.hl7.org/CodeSystem/usage-context-type",
+        "code": "focus"
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "62676009"
+          }
+        ]
+      }
+    }
+  ],
+  "extension": [
+    {
+      "url": "https://atra.health/fhir/StructureDefinition/kb-entry",
+      "valueString": "cond.malaria_falciparum"
+    }
+  ],
+  "action": [
+    {
+      "id": "grade",
+      "title": "Grade severity",
+      "extension": [
+        {
+          "url": "https://atra.health/fhir/StructureDefinition/kb-entry",
+          "valueString": "severity.malaria.falciparum"
+        }
+      ]
+    },
+    {
+      "id": "treat",
+      "title": "Choose treatment",
+      "selectionBehavior": "exactly-one",
+      "action": [
+        {
+          "id": "treat-severe",
+          "title": "Treat (severe)",
+          "condition": [
+            {
+              "kind": "applicability",
+              "expression": {
+                "language": "text/fhirpath",
+                "expression": "%severity = 'severe'"
+              }
+            }
+          ],
+          "selectionBehavior": "exactly-one",
+          "action": [
+            {
+              "id": "tx.malaria.severe.prereferral_rectal_artesunate",
+              "title": "artesunate rectal prereferral",
+              "definitionCanonical": "https://atra.health/fhir/ActivityDefinition/dose.artesunate_rectal_prereferral",
+              "extension": [
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/kb-entry",
+                  "valueString": "tx.malaria.severe.prereferral_rectal_artesunate"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/preference",
+                  "valueCode": "pre_referral"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/eligibility",
+                  "valueString": "{\"age_below_years\": 6, \"intramuscular_available\": false}"
+                }
+              ]
+            },
+            {
+              "id": "tx.malaria.severe.artesunate",
+              "title": "artesunate parenteral",
+              "definitionCanonical": "https://atra.health/fhir/ActivityDefinition/dose.artesunate_parenteral",
+              "extension": [
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/kb-entry",
+                  "valueString": "tx.malaria.severe.artesunate"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/preference",
+                  "valueCode": "first_line"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/eligibility",
+                  "valueString": "{\"pregnancy\": [\"none\", \"t1\", \"t2\", \"t3\"]}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "treat-uncomplicated",
+          "title": "Treat (uncomplicated)",
+          "condition": [
+            {
+              "kind": "applicability",
+              "expression": {
+                "language": "text/fhirpath",
+                "expression": "%severity = 'uncomplicated'"
+              }
+            }
+          ],
+          "selectionBehavior": "exactly-one",
+          "action": [
+            {
+              "id": "tx.malaria.uncomplicated.artemether_lumefantrine",
+              "title": "artemether lumefantrine",
+              "definitionCanonical": "https://atra.health/fhir/ActivityDefinition/dose.artemether_lumefantrine",
+              "extension": [
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/kb-entry",
+                  "valueString": "tx.malaria.uncomplicated.artemether_lumefantrine"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/preference",
+                  "valueCode": "first_line"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/eligibility",
+                  "valueString": "{\"oral_intake\": true, \"pregnancy\": [\"none\", \"t1\", \"t2\", \"t3\"]}"
+                }
+              ]
+            },
+            {
+              "id": "tx.malaria.uncomplicated.artesunate_amodiaquine",
+              "title": "artesunate amodiaquine",
+              "definitionCanonical": "https://atra.health/fhir/ActivityDefinition/dose.artesunate_amodiaquine",
+              "extension": [
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/kb-entry",
+                  "valueString": "tx.malaria.uncomplicated.artesunate_amodiaquine"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/preference",
+                  "valueCode": "first_line"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/eligibility",
+                  "valueString": "{\"oral_intake\": true, \"pregnancy\": [\"none\", \"t2\", \"t3\"]}"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/exclusions",
+                  "valueString": "[\"ix.amodiaquine.zidovudine\", \"ix.amodiaquine.efavirenz\", \"ix.amodiaquine.cotrimoxazole\"]"
+                }
+              ]
+            },
+            {
+              "id": "tx.malaria.uncomplicated.artesunate_mefloquine",
+              "title": "artesunate mefloquine",
+              "definitionCanonical": "https://atra.health/fhir/ActivityDefinition/dose.artesunate_mefloquine",
+              "extension": [
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/kb-entry",
+                  "valueString": "tx.malaria.uncomplicated.artesunate_mefloquine"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/preference",
+                  "valueCode": "first_line"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/eligibility",
+                  "valueString": "{\"oral_intake\": true, \"pregnancy\": [\"none\", \"t2\", \"t3\"]}"
+                }
+              ]
+            },
+            {
+              "id": "tx.malaria.uncomplicated.dihydroartemisinin_piperaquine",
+              "title": "dihydroartemisinin piperaquine",
+              "definitionCanonical": "https://atra.health/fhir/ActivityDefinition/dose.dihydroartemisinin_piperaquine",
+              "extension": [
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/kb-entry",
+                  "valueString": "tx.malaria.uncomplicated.dihydroartemisinin_piperaquine"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/preference",
+                  "valueCode": "first_line"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/eligibility",
+                  "valueString": "{\"oral_intake\": true, \"pregnancy\": [\"none\", \"t2\", \"t3\"]}"
+                }
+              ]
+            },
+            {
+              "id": "tx.malaria.uncomplicated.artesunate_sp",
+              "title": "artesunate sp",
+              "definitionCanonical": "https://atra.health/fhir/ActivityDefinition/dose.artesunate_sp",
+              "extension": [
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/kb-entry",
+                  "valueString": "tx.malaria.uncomplicated.artesunate_sp"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/preference",
+                  "valueCode": "alternative"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/eligibility",
+                  "valueString": "{\"oral_intake\": true, \"pregnancy\": [\"none\", \"t2\", \"t3\"]}"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/exclusions",
+                  "valueString": "[\"ix.sp.folic_acid_high_dose\"]"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "monitor",
+      "title": "Monitor with the early-warning score",
+      "extension": [
+        {
+          "url": "https://atra.health/fhir/StructureDefinition/kb-entry",
+          "valueString": "news2.monitoring"
+        }
+      ]
+    },
+    {
+      "id": "check-in",
+      "title": "Daily check-in",
+      "definitionCanonical": "https://atra.health/fhir/Questionnaire/check-in"
+    }
+  ]
+}

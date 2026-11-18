@@ -1,0 +1,28 @@
+{
+  "$id": "https://atra.local/schemas/apdt/episode_close.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "discharge_summary_ref": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Discharge Summary Ref"
+    },
+    "outcome": {
+      "title": "Outcome",
+      "type": "string"
+    }
+  },
+  "required": [
+    "outcome"
+  ],
+  "title": "EpisodeClose",
+  "type": "object"
+}

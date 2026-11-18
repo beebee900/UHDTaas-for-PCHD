@@ -1,0 +1,25 @@
+# Devices and edge sites reach MQTT over TLS and CoAP on the VM through the K3s service
+# load balancer.
+apiVersion: v1
+kind: Service
+metadata:
+  name: mosquitto-devices
+  namespace: atra
+spec:
+  type: LoadBalancer
+  selector:
+    app.kubernetes.io/name: mosquitto
+  ports:
+    - {name: mqtts, port: 8883, targetPort: 8883, protocol: TCP}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: edge-coap
+  namespace: atra
+spec:
+  type: LoadBalancer
+  selector:
+    app.kubernetes.io/name: edge
+  ports:
+    - {name: coap, port: 5683, targetPort: 5683, protocol: UDP}

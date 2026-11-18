@@ -1,0 +1,23 @@
+{
+  "$id": "https://atra.local/schemas/connectors/referral/v1.0",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "bundle_ref": {
+      "type": "string"
+    },
+    "reason": {
+      "type": "string"
+    },
+    "urgency": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "bundle_ref",
+    "reason",
+    "urgency"
+  ],
+  "title": "referral v1.0",
+  "type": "object"
+}

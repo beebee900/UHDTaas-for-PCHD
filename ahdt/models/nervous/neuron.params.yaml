@@ -1,0 +1,29 @@
+# Hodgkin-Huxley squid axon and FitzHugh-Nagumo neuron, educational fidelity.
+model_id: ahdt.nervous.neuron_and_circuit
+sources:
+- id: hh1952
+  citation: "Hodgkin AL, Huxley AF. A quantitative description of membrane current and its
+    application to conduction and excitation in nerve. J Physiol. 1952;117(4):500-544.
+    doi:10.1113/jphysiol.1952.sp004764"
+  via: BioModels BIOMD0000000020 (original sign convention, V as depolarisation from rest)
+  url: https://www.ebi.ac.uk/biomodels/BIOMD0000000020
+- id: fitzhugh1961
+  citation: "FitzHugh R. Impulses and physiological states in theoretical models of nerve
+    membrane. Biophys J. 1961;1(6):445-466. doi:10.1016/S0006-3495(61)86902-6"
+  via: BioModels BIOMD0000000346
+  url: https://www.ebi.ac.uk/biomodels/BIOMD0000000346
+params:
+  Cm: {value: 1, unit: uF/cm2, source: hh1952}
+  g_Na: {value: 120, unit: mS/cm2, source: hh1952}
+  g_K: {value: 36, unit: mS/cm2, source: hh1952}
+  g_L: {value: 0.3, unit: mS/cm2, source: hh1952}
+  V_Na: {value: -115, unit: mV, source: hh1952, note: "1952 convention, outward positive"}
+  V_K: {value: 12, unit: mV, source: hh1952}
+  V_L: {value: -10.613, unit: mV, source: hh1952}
+  E_R: {value: -75, unit: mV, source: hh1952, note: resting potential offset in the SBML}
+  fhn_a: {value: 0.7, unit: '1', source: fitzhugh1961}
+  fhn_b: {value: 0.8, unit: '1', source: fitzhugh1961}
+  fhn_c: {value: 3, unit: '1', source: fitzhugh1961}
+  fhn_coupling: {value: 0.1, unit: '1', source: fitzhugh1961, assumption: true,
+                 justification: "Diffusive coupling strength of the illustrative ring network;
+                   FitzHugh (1961) describes a single unit"}

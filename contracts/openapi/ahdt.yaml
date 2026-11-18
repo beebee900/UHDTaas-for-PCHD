@@ -1,0 +1,2682 @@
+components:
+  schemas:
+    AHDTExplanation:
+      additionalProperties: false
+      properties:
+        artefacts:
+          anyOf:
+          - items:
+              $ref: '#/components/schemas/Artefact'
+            type: array
+          - type: 'null'
+          default: null
+          title: Artefacts
+        causal_graph_ref:
+          anyOf:
+          - type: string
+          - type: 'null'
+          default: null
+          title: Causal Graph Ref
+        counterfactuals:
+          anyOf:
+          - items:
+              $ref: '#/components/schemas/Counterfactual'
+            type: array
+          - type: 'null'
+          default: null
+          title: Counterfactuals
+        drivers:
+          items:
+            $ref: '#/components/schemas/Driver'
+          title: Drivers
+          type: array
+        explainer:
+          title: Explainer
+          type: string
+        explanation_id:
+          title: Explanation Id
+          type: string
+        method_family:
+          enum:
+          - attribution
+          - saliency
+          - counterfactual
+          - sensitivity
+          - rule_trace
+          - ontology_justification
+          - citation
+          - temporal_attribution
+          - graph
+          title: Method Family
+          type: string
+        model_id:
+          title: Model Id
+          type: string
+        output_id:
+          title: Output Id
+          type: string
+        quality:
+          anyOf:
+          - $ref: '#/components/schemas/ExplanationQuality'
+          - type: 'null'
+          default: null
+        text:
+          title: Text
+          type: string
+        uncertainty:
+          additionalProperties: true
+          title: Uncertainty
+          type: object
+        version:
+          title: Version
+          type: string
+      required:
+      - explanation_id
+      - output_id
+      - model_id
+      - version
+      - explainer
+      - method_family
+      - text
+      title: AHDTExplanation
+      type: object
+    AgentRunRequest:
+      description: Name a `twin` to run its orchestrator, or a `person_goal` to run the conductor.
+      properties:
+        hdt_id:
+          pattern: ^hdt-[0-9a-f]{12}$
+          title: Hdt Id
+          type: string
+        now:
+          anyOf:
+          - format: date-time
+            type: string
+          - type: 'null'
+          title: Now
+        person_goal:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Person Goal
+        plans:
+          items:
+            $ref: '#/components/schemas/PlanIn'
+          title: Plans
+          type: array
+        probes:
+          description: Action classes to attempt, to show the guard's answer
+          items:
+            type: string
+          title: Probes
+          type: array
+        triggers:
+          items:
+            type: string
+          title: Triggers
+          type: array
+        twin:
+          anyOf:
+          - $ref: '#/components/schemas/DTKind'
+          - type: 'null'
+      required:
+      - hdt_id
+      title: AgentRunRequest
+      type: object
+    Artefact:
+      additionalProperties: false
+      properties:
+        kind:
+          enum:
+          - heatmap
+          - plot
+          - subgraph
+          title: Kind
+          type: string
+        ref:
+          title: Ref
+          type: string
+      required:
+      - kind
+      - ref
+      title: Artefact
+      type: object
+    CalibrateArgs:
+      additionalProperties: false
+      properties:
+        dt:
+          $ref: '#/components/schemas/DTKind'
+        hdt_id:
+          pattern: ^hdt-[0-9a-f]{12}$
+          title: Hdt Id
+          type: string
+        model_id:
+          title: Model Id
+          type: string
+      required:
+      - hdt_id
+      - dt
+      - model_id
+      title: CalibrateArgs
+      type: object
+    CalibrateData:
+      additionalProperties: false
+      properties:
+        fit_after:
+          title: Fit After
+          type: number
+        fit_before:
+          title: Fit Before
+          type: number
+        instance_id:
+          title: Instance Id
+          type: string
+        revision:
+          minimum: 0
+          title: Revision
+          type: integer
+      required:
+      - instance_id
+      - revision
+      - fit_before
+      - fit_after
+      title: CalibrateData
+      type: object
+    CausalGraphArgs:
+      additionalProperties: false
+      properties:
+        hdt_id:
+          pattern: ^hdt-[0-9a-f]{12}$
+          title: Hdt Id
+          type: string
+        output_id:
+          title: Output Id
+          type: string
+      required:
+      - hdt_id
+      - output_id
+      title: CausalGraphArgs
+      type: object
+    CausalGraphData:
+      additionalProperties: false
+      properties:
+        edges:
+          items:
+            $ref: '#/components/schemas/GraphEdge'
+          title: Edges
+          type: array
+        nodes:
+          items:
+            $ref: '#/components/schemas/GraphNode'
+          title: Nodes
+          type: array
+      required:
+      - nodes
+      - edges
+      title: CausalGraphData
+      type: object
+    CohortExtractArgs:
+      additionalProperties: false
+      properties:
+        as_of:
+          anyOf:
+          - format: date-time
+            type: string
+          - type: 'null'
+          default: null
+          title: As Of
+        cohort_def:
+          additionalProperties: true
+          title: Cohort Def
+          type: object
+        fields:
+          items:
+            type: string
+          minItems: 1
+          title: Fields
+          type: array
+        hdt_id:
+          pattern: ^hdt-[0-9a-f]{12}$
+          title: Hdt Id
+          type: string
+        privacy:
+          anyOf:
+          - $ref: '#/components/schemas/KAnonymity'
+          - $ref: '#/components/schemas/DifferentialPrivacy'
+          title: Privacy
+      required:
+      - hdt_id
+      - cohort_def
+      - fields
+      - privacy
+      title: CohortExtractArgs
+      type: object
+    CohortExtractData:
+      additionalProperties: false
+      properties:
+        aggregates:
+          anyOf:
+          - additionalProperties: true
+            type: object
+          - type: 'null'
+          default: null
+          title: Aggregates
+        privacy_report:
+          additionalProperties: true
+          title: Privacy Report
+          type: object
+        rows:
+          anyOf:
+          - items:
+              additionalProperties: true
+              type: object
+            type: array
+          - type: 'null'
+          default: null
+          title: Rows
+      required:
+      - privacy_report
+      title: CohortExtractData
+      type: object
+    ConnectorRow:
+      properties:
+        buffered:
+          title: Buffered
+          type: integer
+        connector:
+          description: Connector name in design 03, 3.16
+          title: Connector
+          type: string
+        direction:
+          title: Direction
+          type: string
+        in:
+          anyOf:
+          - $ref: '#/components/schemas/ContractRef'
+          - type: 'null'
+        metrics:
+          additionalProperties:
+            type: integer
+          title: Metrics
+          type: object
+        mode:
+          title: Mode
+          type: string
+        name:
+          description: <connector>:<source>-><target>
+          title: Name
+          type: string
+        out:
+          $ref: '#/components/schemas/ContractRef'
+        purpose:
+          title: Purpose
+          type: string
+        purposes:
+          items:
+            type: string
+          title: Purposes
+          type: array
+        source:
+          title: Source
+          type: string
+        state:
+          title: State
+          type: string
+        target:
+          title: Target
+          type: string
+        topics:
+          $ref: '#/components/schemas/ConnectorTopics'
+      required:
+      - name
+      - connector
+      - source
+      - target
+      - mode
+      - direction
+      - out
+      - purpose
+      - purposes
+      - topics
+      - state
+      - buffered
+      - metrics
+      title: ConnectorRow
+      type: object
+    ConnectorTopics:
+      properties:
+        dlq:
+          title: Dlq
+          type: string
+        in:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: In
+        out:
+          title: Out
+          type: string
+      required:
+      - out
+      - dlq
+      title: ConnectorTopics
+      type: object
+    ContractRef:
+      properties:
+        contract:
+          description: <name>/v<version>
+          title: Contract
+          type: string
+        fields:
+          additionalProperties:
+            anyOf:
+            - type: string
+            - type: 'null'
+          description: Field name to UCUM unit
+          title: Fields
+          type: object
+      required:
+      - contract
+      - fields
+      title: ContractRef
+      type: object
+    ConverseArgs:
+      additionalProperties: false
+      properties:
+        hdt_id:
+          pattern: ^hdt-[0-9a-f]{12}$
+          title: Hdt Id
+          type: string
+        language:
+          enum:
+          - en
+          - yo
+          - ha
+          - ig
+          - pcm
+          title: Language
+          type: string
+        session_id:
+          anyOf:
+          - type: string
+          - type: 'null'
+          default: null
+          title: Session Id
+        utterance:
+          minLength: 1
+          title: Utterance
+          type: string
+      required:
+      - hdt_id
+      - utterance
+      - language
+      title: ConverseArgs
+      type: object
+    ConverseData:
+      additionalProperties: false
+      properties:
+        grounded_on:
+          items:
+            $ref: '#/components/schemas/GraphCitation'
+          title: Grounded On
+          type: array
+        language:
+          enum:
+          - en
+          - yo
+          - ha
+          - ig
+          - pcm
+          title: Language
+          type: string
+        reply:
+          title: Reply
+          type: string
+        session_id:
+          title: Session Id
+          type: string
+      required:
+      - reply
+      - language
+      - session_id
+      - grounded_on
+      title: ConverseData
+      type: object
+    CosimulateArgs:
+      additionalProperties: false
+      properties:
+        dts:
+          items:
+            $ref: '#/components/schemas/DTKind'
+          minItems: 2
+          title: Dts
+          type: array
+        fork:
+          const: true
+          default: true
+          title: Fork
+          type: boolean
+        hdt_id:
+          pattern: ^hdt-[0-9a-f]{12}$
+          title: Hdt Id
+          type: string
+        horizon_h:
+          exclusiveMinimum: 0
+          maximum: 720
+          title: Horizon H
+          type: number
+        scenario:
+          $ref: '#/components/schemas/Scenario'
+        step_s:
+          exclusiveMinimum: 0
+          title: Step S
+          type: number
+      required:
+      - hdt_id
+      - scenario
+      - dts
+      - horizon_h
+      - step_s
+      title: CosimulateArgs
+      type: object
+    Counterfactual:
+      additionalProperties: false
+      properties:
+        changes:
+          additionalProperties: true
+          title: Changes
+          type: object
+        outcome:
+          title: Outcome
+      required:
+      - changes
+      - outcome
+      title: Counterfactual
+      type: object
+    CouplingMatrix:
+      properties:
+        connectors:
+          items:
+            $ref: '#/components/schemas/ConnectorRow'
+          title: Connectors
+          type: array
+        count:
+          title: Count
+          type: integer
+        hdt_id:
+          title: Hdt Id
+          type: string
+        matrix:
+          additionalProperties:
+            additionalProperties:
+              items:
+                type: string
+              type: array
+            type: object
+          description: source twin -> target twin -> contract names, reverse paths included
+          title: Matrix
+          type: object
+        running:
+          title: Running
+          type: boolean
+      required:
+      - hdt_id
+      - running
+      - count
+      - connectors
+      - matrix
+      title: CouplingMatrix
+      type: object
+    DTKind:
+      description: The 17 peer DTs of the federated Human Digital Twin, plus the Patient DT (APDT).
+      enum:
+      - cardiovascular
+      - respiratory
+      - nervous
+      - sensory
+      - digestive
+      - hepatobiliary
+      - renal_urinary
+      - endocrine
+      - immune_lymphatic
+      - haematological
+      - musculoskeletal
+      - integumentary
+      - reproductive
+      - whole_body
+      - behavioural_cognitive
+      - social
+      - population
+      - patient
+      title: DTKind
+      type: string
+    DifferentialPrivacy:
+      additionalProperties: false
+      properties:
+        epsilon:
+          exclusiveMinimum: 0
+          title: Epsilon
+          type: number
+      required:
+      - epsilon
+      title: DifferentialPrivacy
+      type: object
+    DocumentHit:
+      additionalProperties: false
+      properties:
+        doc_id:
+          title: Doc Id
+          type: string
+        score:
+          title: Score
+          type: number
+        section_path:
+          items:
+            type: string
+          title: Section Path
+          type: array
+        snippet:
+          title: Snippet
+          type: string
+      required:
+      - doc_id
+      - section_path
+      - snippet
+      - score
+      title: DocumentHit
+      type: object
+    DocumentsArgs:
+      additionalProperties: false
+      properties:
+        as_of:
+          anyOf:
+          - format: date-time
+            type: string
+          - type: 'null'
+          default: null
+          title: As Of
+        hdt_id:
+          pattern: ^hdt-[0-9a-f]{12}$
+          title: Hdt Id
+          type: string
+        query:
+          minLength: 1
+          title: Query
+          type: string
+        top_k:
+          default: 5
+          maximum: 50
+          minimum: 1
+          title: Top K
+          type: integer
+        types:
+          anyOf:
+          - items:
+              enum:
+              - discharge_summary
+              - note
+              - report
+              type: string
+            type: array
+          - type: 'null'
+          default: null
+          title: Types
+      required:
+      - hdt_id
+      - query
+      title: DocumentsArgs
+      type: object
+    DocumentsData:
+      additionalProperties: false
+      properties:
+        hits:
+          items:
+            $ref: '#/components/schemas/DocumentHit'
+          title: Hits
+          type: array
+      required:
+      - hits
+      title: DocumentsData
+      type: object
+    Driver:
+      additionalProperties: false
+      properties:
+        contribution:
+          title: Contribution
+          type: number
+        direction:
+          enum:
+          - up
+          - down
+          title: Direction
+          type: string
+        feature:
+          title: Feature
+          type: string
+        value:
+          default: null
+          title: Value
+      required:
+      - feature
+      - contribution
+      - direction
+      title: Driver
+      type: object
+    ExplainArgs:
+      additionalProperties: false
+      properties:
+        audience:
+          default: clinician
+          enum:
+          - clinician
+          - patient
+          - pharmacist
+          - nurse
+          - radiologist
+          title: Audience
+          type: string
+        hdt_id:
+          pattern: ^hdt-[0-9a-f]{12}$
+          title: Hdt Id
+          type: string
+        output_id:
+          title: Output Id
+          type: string
+      required:
+      - hdt_id
+      - output_id
+      title: ExplainArgs
+      type: object
+    ExplanationQuality:
+      additionalProperties: false
+      properties:
+        complexity:
+          anyOf:
+          - type: number
+          - type: 'null'
+          default: null
+          title: Complexity
+        faithfulness:
+          anyOf:
+          - type: number
+          - type: 'null'
+          default: null
+          title: Faithfulness
+        robustness:
+          anyOf:
+          - type: number
+          - type: 'null'
+          default: null
+          title: Robustness
+      title: ExplanationQuality
+      type: object
+    FacetArgs:
+      additionalProperties: false
+      properties:
+        anatomy:
+          title: Anatomy
+          type: string
+        facet:
+          title: Facet
+          type: string
+        hdt_id:
+          pattern: ^hdt-[0-9a-f]{12}$
+          title: Hdt Id
+          type: string
+      required:
+      - hdt_id
+      - anatomy
+      - facet
+      title: FacetArgs
+      type: object
+    FacetView:
+      additionalProperties: false
+      properties:
+        anatomy:
+          title: Anatomy
+          type: string
+        facet:
+          title: Facet
+          type: string
+        fields:
+          additionalProperties: true
+          title: Fields
+          type: object
+        fork_id:
+          anyOf:
+          - type: string
+          - type: 'null'
+          default: null
+          title: Fork Id
+        instance_id:
+          title: Instance Id
+          type: string
+        revision:
+          title: Revision
+          type: integer
+        uncertainty:
+          additionalProperties: true
+          title: Uncertainty
+          type: object
+      required:
+      - instance_id
+      - anatomy
+      - facet
+      - fields
+      - revision
+      title: FacetView
+      type: object
+    Finding:
+      additionalProperties: false
+      properties:
+        code:
+          title: Code
+          type: string
+        confidence:
+          maximum: 1
+          minimum: 0
+          title: Confidence
+          type: number
+        display:
+          title: Display
+          type: string
+        value:
+          default: null
+          title: Value
+      required:
+      - code
+      - display
+      - confidence
+      title: Finding
+      type: object
+    ForecastArgs:
+      additionalProperties: false
+      properties:
+        dt:
+          $ref: '#/components/schemas/DTKind'
+        hdt_id:
+          pattern: ^hdt-[0-9a-f]{12}$
+          title: Hdt Id
+          type: string
+        horizon_h:
+          exclusiveMinimum: 0
+          maximum: 720
+          title: Horizon H
+          type: number
+        variable:
+          title: Variable
+          type: string
+      required:
+      - hdt_id
+      - dt
+      - variable
+      - horizon_h
+      title: ForecastArgs
+      type: object
+    ForecastData:
+      additionalProperties: false
+      properties:
+        level:
+          exclusiveMaximum: 1
+          exclusiveMinimum: 0
+          title: Level
+          type: number
+        lower:
+          items:
+            type: number
+          title: Lower
+          type: array
+        mean:
+          items:
+            type: number
+          title: Mean
+          type: array
+        output_id:
+          title: Output Id
+          type: string
+        t:
+          items:
+            type: number
+          title: T
+          type: array
+        upper:
+          items:
+            type: number
+          title: Upper
+          type: array
+      required:
+      - t
+      - mean
+      - lower
+      - upper
+      - level
+      - output_id
+      title: ForecastData
+      type: object
+    GenomeArgs:
+      additionalProperties: false
+      properties:
+        as_of:
+          anyOf:
+          - format: date-time
+            type: string
+          - type: 'null'
+          default: null
+          title: As Of
+        genes:
+          items:
+            type: string
+          minItems: 1
+          title: Genes
+          type: array
+        hdt_id:
+          pattern: ^hdt-[0-9a-f]{12}$
+          title: Hdt Id
+          type: string
+      required:
+      - hdt_id
+      - genes
+      title: GenomeArgs
+      type: object
+    GenomeData:
+      additionalProperties: false
+      properties:
+        variants:
+          items:
+            $ref: '#/components/schemas/Variant'
+          title: Variants
+          type: array
+      required:
+      - variants
+      title: GenomeData
+      type: object
+    GraphCitation:
+      additionalProperties: false
+      properties:
+        doc_id:
+          anyOf:
+          - type: string
+          - type: 'null'
+          default: null
+          title: Doc Id
+        label:
+          title: Label
+          type: string
+        node_id:
+          anyOf:
+          - type: string
+          - type: 'null'
+          default: null
+          title: Node Id
+        path:
+          anyOf:
+          - items:
+              type: string
+            type: array
+          - type: 'null'
+          default: null
+          title: Path
+      required:
+      - label
+      title: GraphCitation
+      type: object
+    GraphEdge:
+      additionalProperties: false
+      properties:
+        from:
+          title: From
+          type: string
+        to:
+          title: To
+          type: string
+        weight:
+          title: Weight
+          type: number
+      required:
+      - from
+      - to
+      - weight
+      title: GraphEdge
+      type: object
+    GraphNode:
+      additionalProperties: false
+      properties:
+        id:
+          title: Id
+          type: string
+        kind:
+          enum:
+          - model
+          - message
+          - observation
+          title: Kind
+          type: string
+        label:
+          title: Label
+          type: string
+      required:
+      - id
+      - kind
+      - label
+      title: GraphNode
+      type: object
+    GraphQueryArgs:
+      additionalProperties: false
+      properties:
+        as_of:
+          anyOf:
+          - format: date-time
+            type: string
+          - type: 'null'
+          default: null
+          title: As Of
+        hdt_id:
+          pattern: ^hdt-[0-9a-f]{12}$
+          title: Hdt Id
+          type: string
+        mode:
+          default: hybrid
+          enum:
+          - graphrag
+          - vector
+          - chunkless
+          - hybrid
+          title: Mode
+          type: string
+        question:
+          minLength: 1
+          title: Question
+          type: string
+      required:
+      - hdt_id
+      - question
+      title: GraphQueryArgs
+      type: object
+    GraphQueryData:
+      additionalProperties: false
+      properties:
+        answer:
+          title: Answer
+          type: string
+        citations:
+          items:
+            $ref: '#/components/schemas/GraphCitation'
+          title: Citations
+          type: array
+        subgraph:
+          anyOf:
+          - $ref: '#/components/schemas/Subgraph'
+          - type: 'null'
+          default: null
+      required:
+      - answer
+      - citations
+      title: GraphQueryData
+      type: object
+    HTTPValidationError:
+      properties:
+        detail:
+          items:
+            $ref: '#/components/schemas/ValidationError'
+          title: Detail
+          type: array
+      title: HTTPValidationError
+      type: object
+    ImagingArgs:
+      additionalProperties: false
+      properties:
+        as_of:
+          anyOf:
+          - format: date-time
+            type: string
+          - type: 'null'
+          default: null
+          title: As Of
+        hdt_id:
+          pattern: ^hdt-[0-9a-f]{12}$
+          title: Hdt Id
+          type: string
+        modality:
+          enum:
+          - CR
+          - DX
+          - CT
+          - MR
+          - US
+          - SM
+          title: Modality
+          type: string
+        period:
+          anyOf:
+          - $ref: '#/components/schemas/Period'
+          - type: 'null'
+          default: null
+      required:
+      - hdt_id
+      - modality
+      title: ImagingArgs
+      type: object
+    ImagingData:
+      additionalProperties: false
+      properties:
+        studies:
+          items:
+            $ref: '#/components/schemas/ImagingStudy'
+          title: Studies
+          type: array
+      required:
+      - studies
+      title: ImagingData
+      type: object
+    ImagingStudy:
+      additionalProperties: false
+      properties:
+        description:
+          title: Description
+          type: string
+        dicomweb_url:
+          title: Dicomweb Url
+          type: string
+        modality:
+          title: Modality
+          type: string
+        series_count:
+          minimum: 0
+          title: Series Count
+          type: integer
+        started:
+          format: date-time
+          title: Started
+          type: string
+        study_uid:
+          title: Study Uid
+          type: string
+      required:
+      - study_uid
+      - modality
+      - started
+      - description
+      - dicomweb_url
+      - series_count
+      title: ImagingStudy
+      type: object
+    KAnonymity:
+      additionalProperties: false
+      properties:
+        k:
+          minimum: 2
+          title: K
+          type: integer
+      required:
+      - k
+      title: KAnonymity
+      type: object
+    KnowledgeArgs:
+      additionalProperties: false
+      properties:
+        as_of:
+          anyOf:
+          - format: date-time
+            type: string
+          - type: 'null'
+          default: null
+          title: As Of
+        hdt_id:
+          pattern: ^hdt-[0-9a-f]{12}$
+          title: Hdt Id
+          type: string
+        params:
+          additionalProperties: true
+          title: Params
+          type: object
+        query_id:
+          title: Query Id
+          type: string
+      required:
+      - hdt_id
+      - query_id
+      - params
+      title: KnowledgeArgs
+      type: object
+    KnowledgeData:
+      additionalProperties: false
+      properties:
+        rows:
+          items:
+            additionalProperties: true
+            type: object
+          title: Rows
+          type: array
+      required:
+      - rows
+      title: KnowledgeData
+      type: object
+    MedicationEntry:
+      additionalProperties: false
+      properties:
+        adherence:
+          anyOf:
+          - maximum: 1
+            minimum: 0
+            type: number
+          - type: 'null'
+          default: null
+          title: Adherence
+        atc:
+          title: Atc
+          type: string
+        display:
+          title: Display
+          type: string
+        dose:
+          title: Dose
+          type: string
+        end:
+          anyOf:
+          - format: date-time
+            type: string
+          - type: 'null'
+          default: null
+          title: End
+        frequency:
+          title: Frequency
+          type: string
+        route:
+          title: Route
+          type: string
+        rxnorm:
+          anyOf:
+          - type: string
+          - type: 'null'
+          default: null
+          title: Rxnorm
+        start:
+          format: date-time
+          title: Start
+          type: string
+      required:
+      - atc
+      - display
+      - dose
+      - route
+      - frequency
+      - start
+      title: MedicationEntry
+      type: object
+    MedicationsArgs:
+      additionalProperties: false
+      properties:
+        active_only:
+          default: false
+          title: Active Only
+          type: boolean
+        as_of:
+          anyOf:
+          - format: date-time
+            type: string
+          - type: 'null'
+          default: null
+          title: As Of
+        hdt_id:
+          pattern: ^hdt-[0-9a-f]{12}$
+          title: Hdt Id
+          type: string
+      required:
+      - hdt_id
+      title: MedicationsArgs
+      type: object
+    MedicationsData:
+      additionalProperties: false
+      properties:
+        medications:
+          items:
+            $ref: '#/components/schemas/MedicationEntry'
+          title: Medications
+          type: array
+      required:
+      - medications
+      title: MedicationsData
+      type: object
+    ObservationsArgs:
+      additionalProperties: false
+      properties:
+        aggregate:
+          default: raw
+          enum:
+          - raw
+          - 1m
+          - 5m
+          - 1h
+          title: Aggregate
+          type: string
+        as_of:
+          anyOf:
+          - format: date-time
+            type: string
+          - type: 'null'
+          default: null
+          title: As Of
+        codes:
+          items:
+            type: string
+          minItems: 1
+          title: Codes
+          type: array
+        hdt_id:
+          pattern: ^hdt-[0-9a-f]{12}$
+          title: Hdt Id
+          type: string
+        period:
+          anyOf:
+          - $ref: '#/components/schemas/Period'
+          - type: 'null'
+          default: null
+      required:
+      - hdt_id
+      - codes
+      title: ObservationsArgs
+      type: object
+    ObservationsData:
+      additionalProperties: false
+      properties:
+        series:
+          additionalProperties:
+            items:
+              $ref: '#/components/schemas/SeriesPoint'
+            type: array
+          title: Series
+          type: object
+      required:
+      - series
+      title: ObservationsData
+      type: object
+    PerceiveArgs:
+      additionalProperties: false
+      properties:
+        content_ref:
+          anyOf:
+          - type: string
+          - type: 'null'
+          default: null
+          title: Content Ref
+        hdt_id:
+          pattern: ^hdt-[0-9a-f]{12}$
+          title: Hdt Id
+          type: string
+        language:
+          anyOf:
+          - enum:
+            - en
+            - yo
+            - ha
+            - ig
+            - pcm
+            type: string
+          - type: 'null'
+          default: null
+          title: Language
+        modality:
+          enum:
+          - speech
+          - image
+          - signal
+          - text
+          title: Modality
+          type: string
+        text:
+          anyOf:
+          - type: string
+          - type: 'null'
+          default: null
+          title: Text
+      required:
+      - hdt_id
+      - modality
+      title: PerceiveArgs
+      type: object
+    PerceiveData:
+      additionalProperties: false
+      properties:
+        findings:
+          items:
+            $ref: '#/components/schemas/Finding'
+          title: Findings
+          type: array
+        transcript:
+          anyOf:
+          - type: string
+          - type: 'null'
+          default: null
+          title: Transcript
+      required:
+      - findings
+      title: PerceiveData
+      type: object
+    Period:
+      additionalProperties: false
+      properties:
+        end:
+          format: date-time
+          title: End
+          type: string
+        start:
+          format: date-time
+          title: Start
+          type: string
+      required:
+      - start
+      - end
+      title: Period
+      type: object
+    PlanIn:
+      properties:
+        action:
+          title: Action
+          type: string
+        plan_id:
+          title: Plan Id
+          type: string
+        risk:
+          default: 0.0
+          maximum: 1.0
+          minimum: 0.0
+          title: Risk
+          type: number
+        risk_to:
+          additionalProperties:
+            type: number
+          title: Risk To
+          type: object
+        twin:
+          $ref: '#/components/schemas/DTKind'
+      required:
+      - plan_id
+      - twin
+      - action
+      title: PlanIn
+      type: object
+    Quality:
+      enum:
+      - ok
+      - suspect
+      - rejected
+      title: Quality
+      type: string
+    ReasonArgs:
+      additionalProperties: false
+      properties:
+        hdt_id:
+          pattern: ^hdt-[0-9a-f]{12}$
+          title: Hdt Id
+          type: string
+        kind:
+          enum:
+          - ontology
+          - causal
+          - probabilistic
+          - temporal
+          title: Kind
+          type: string
+        query:
+          minLength: 1
+          title: Query
+          type: string
+      required:
+      - hdt_id
+      - kind
+      - query
+      title: ReasonArgs
+      type: object
+    ReasonData:
+      additionalProperties: false
+      properties:
+        answer:
+          title: Answer
+          type: string
+        justification:
+          items:
+            type: string
+          title: Justification
+          type: array
+      required:
+      - answer
+      - justification
+      title: ReasonData
+      type: object
+    ReidentifyRequest:
+      properties:
+        hdt_id:
+          title: Hdt Id
+          type: string
+      required:
+      - hdt_id
+      title: ReidentifyRequest
+      type: object
+    RequestDataArgs:
+      additionalProperties: false
+      properties:
+        channel:
+          anyOf:
+          - enum:
+            - app
+            - sms
+            - ussd
+            - voice
+            type: string
+          - type: 'null'
+          default: null
+          title: Channel
+        deadline_h:
+          anyOf:
+          - exclusiveMinimum: 0
+            type: number
+          - type: 'null'
+          default: null
+          title: Deadline H
+        from:
+          enum:
+          - person
+          - device
+          - clinician
+          title: From
+          type: string
+        hdt_id:
+          pattern: ^hdt-[0-9a-f]{12}$
+          title: Hdt Id
+          type: string
+        what:
+          items:
+            type: string
+          minItems: 1
+          title: What
+          type: array
+      required:
+      - hdt_id
+      - what
+      - from
+      title: RequestDataArgs
+      type: object
+    RequestDataData:
+      additionalProperties: false
+      properties:
+        request_id:
+          title: Request Id
+          type: string
+        status:
+          enum:
+          - queued
+          - sent
+          - answered
+          - expired
+          title: Status
+          type: string
+      required:
+      - request_id
+      - status
+      title: RequestDataData
+      type: object
+    Scenario:
+      additionalProperties: false
+      properties:
+        activity:
+          anyOf:
+          - additionalProperties: true
+            type: object
+          - type: 'null'
+          default: null
+          title: Activity
+        diet:
+          anyOf:
+          - additionalProperties: true
+            type: object
+          - type: 'null'
+          default: null
+          title: Diet
+        drug:
+          anyOf:
+          - $ref: '#/components/schemas/ScenarioDrug'
+          - type: 'null'
+          default: null
+        dts:
+          items:
+            $ref: '#/components/schemas/DTKind'
+          title: Dts
+          type: array
+        environment:
+          anyOf:
+          - additionalProperties: true
+            type: object
+          - type: 'null'
+          default: null
+          title: Environment
+        intervention:
+          anyOf:
+          - additionalProperties: true
+            type: object
+          - type: 'null'
+          default: null
+          title: Intervention
+        kind:
+          enum:
+          - drug
+          - activity
+          - diet
+          - environment
+          - intervention
+          title: Kind
+          type: string
+      required:
+      - kind
+      title: Scenario
+      type: object
+    ScenarioDrug:
+      additionalProperties: false
+      properties:
+        atc:
+          title: Atc
+          type: string
+        dose_mg:
+          title: Dose Mg
+          type: number
+        route:
+          title: Route
+          type: string
+        schedule_h:
+          items:
+            type: number
+          title: Schedule H
+          type: array
+      required:
+      - atc
+      - dose_mg
+      - route
+      - schedule_h
+      title: ScenarioDrug
+      type: object
+    SeriesPoint:
+      additionalProperties: false
+      properties:
+        quality:
+          $ref: '#/components/schemas/Quality'
+          default: ok
+        t:
+          format: date-time
+          title: T
+          type: string
+        unit:
+          title: Unit
+          type: string
+        v:
+          anyOf:
+          - type: number
+          - type: string
+          - type: boolean
+          title: V
+      required:
+      - t
+      - v
+      - unit
+      title: SeriesPoint
+      type: object
+    SimulateArgs:
+      additionalProperties: false
+      properties:
+        dt:
+          $ref: '#/components/schemas/DTKind'
+        fork:
+          const: true
+          default: true
+          title: Fork
+          type: boolean
+        hdt_id:
+          pattern: ^hdt-[0-9a-f]{12}$
+          title: Hdt Id
+          type: string
+        horizon_h:
+          default: 72
+          exclusiveMinimum: 0
+          maximum: 720
+          title: Horizon H
+          type: number
+        scenario:
+          $ref: '#/components/schemas/Scenario'
+      required:
+      - hdt_id
+      - dt
+      - scenario
+      title: SimulateArgs
+      type: object
+    SimulateData:
+      additionalProperties: false
+      properties:
+        events:
+          items:
+            $ref: '#/components/schemas/TrajectoryEvent'
+          title: Events
+          type: array
+        fork_id:
+          title: Fork Id
+          type: string
+        model_id:
+          title: Model Id
+          type: string
+        output_id:
+          title: Output Id
+          type: string
+        series:
+          additionalProperties:
+            items:
+              type: number
+            type: array
+          title: Series
+          type: object
+        t:
+          items:
+            type: number
+          title: T
+          type: array
+        units:
+          additionalProperties:
+            type: string
+          title: Units
+          type: object
+        version:
+          title: Version
+          type: string
+      required:
+      - output_id
+      - model_id
+      - version
+      - t
+      - series
+      - units
+      - fork_id
+      title: SimulateData
+      type: object
+    StageChange:
+      properties:
+        stage:
+          title: Stage
+          type: string
+      required:
+      - stage
+      title: StageChange
+      type: object
+    StateArgs:
+      additionalProperties: false
+      properties:
+        dt:
+          $ref: '#/components/schemas/DTKind'
+        hdt_id:
+          pattern: ^hdt-[0-9a-f]{12}$
+          title: Hdt Id
+          type: string
+      required:
+      - hdt_id
+      - dt
+      title: StateArgs
+      type: object
+    StateData:
+      additionalProperties: false
+      properties:
+        dt:
+          $ref: '#/components/schemas/DTKind'
+        output_id:
+          title: Output Id
+          type: string
+        state:
+          additionalProperties: true
+          title: State
+          type: object
+        status:
+          enum:
+          - normal
+          - watch
+          - alert
+          title: Status
+          type: string
+        updated_at:
+          format: date-time
+          title: Updated At
+          type: string
+      required:
+      - dt
+      - state
+      - status
+      - updated_at
+      - output_id
+      title: StateData
+      type: object
+    Subgraph:
+      additionalProperties: false
+      properties:
+        edges:
+          items:
+            additionalProperties: true
+            type: object
+          title: Edges
+          type: array
+        nodes:
+          items:
+            additionalProperties: true
+            type: object
+          title: Nodes
+          type: array
+      required:
+      - nodes
+      - edges
+      title: Subgraph
+      type: object
+    TimeseriesArgs:
+      additionalProperties: false
+      properties:
+        as_of:
+          anyOf:
+          - format: date-time
+            type: string
+          - type: 'null'
+          default: null
+          title: As Of
+        code:
+          title: Code
+          type: string
+        hdt_id:
+          pattern: ^hdt-[0-9a-f]{12}$
+          title: Hdt Id
+          type: string
+        max_points:
+          anyOf:
+          - minimum: 2
+            type: integer
+          - type: 'null'
+          default: null
+          title: Max Points
+        period:
+          $ref: '#/components/schemas/Period'
+      required:
+      - hdt_id
+      - code
+      - period
+      title: TimeseriesArgs
+      type: object
+    TimeseriesData:
+      additionalProperties: false
+      properties:
+        t:
+          items:
+            format: date-time
+            type: string
+          title: T
+          type: array
+        unit:
+          title: Unit
+          type: string
+        v:
+          items:
+            type: number
+          title: V
+          type: array
+      required:
+      - t
+      - v
+      - unit
+      title: TimeseriesData
+      type: object
+    TrajectoryEvent:
+      additionalProperties: false
+      properties:
+        detail:
+          additionalProperties: true
+          title: Detail
+          type: object
+        kind:
+          title: Kind
+          type: string
+        t:
+          title: T
+          type: number
+      required:
+      - t
+      - kind
+      title: TrajectoryEvent
+      type: object
+    ValidationError:
+      properties:
+        ctx:
+          title: Context
+          type: object
+        input:
+          title: Input
+        loc:
+          items:
+            anyOf:
+            - type: string
+            - type: integer
+          title: Location
+          type: array
+        msg:
+          title: Message
+          type: string
+        type:
+          title: Error Type
+          type: string
+      required:
+      - loc
+      - msg
+      - type
+      title: ValidationError
+      type: object
+    Variant:
+      additionalProperties: false
+      properties:
+        gene:
+          title: Gene
+          type: string
+        genotype:
+          title: Genotype
+          type: string
+        phenotype:
+          title: Phenotype
+          type: string
+        rsid:
+          anyOf:
+          - type: string
+          - type: 'null'
+          default: null
+          title: Rsid
+        source:
+          title: Source
+          type: string
+        star_allele:
+          anyOf:
+          - type: string
+          - type: 'null'
+          default: null
+          title: Star Allele
+      required:
+      - gene
+      - genotype
+      - phenotype
+      - source
+      title: Variant
+      type: object
+info:
+  description: 'Agentic Human Digital Twin: Layer 6 services and Layer 7 agents'
+  title: AHDT
+  version: 1.0.0
+openapi: 3.1.0
+paths:
+  /.well-known/jwks.json:
+    get:
+      operationId: jwks__well_known_jwks_json_get
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                additionalProperties: true
+                title: Response Jwks  Well Known Jwks Json Get
+                type: object
+          description: Successful Response
+      summary: Jwks
+      tags:
+      - operations
+  /health:
+    get:
+      operationId: health_health_get
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                additionalProperties: true
+                title: Response Health Health Get
+                type: object
+          description: Successful Response
+      summary: Health
+      tags:
+      - operations
+  /v1/agents/run:
+    post:
+      operationId: run_v1_agents_run_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AgentRunRequest'
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                additionalProperties: true
+                title: Response Run V1 Agents Run Post
+                type: object
+          description: Successful Response
+        '422':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Run a twin orchestrator or the conductor and return its report
+      tags:
+      - agents
+  /v1/fhir/{resource_type}:
+    get:
+      operationId: search_v1_fhir__resource_type__get
+      parameters:
+      - in: path
+        name: resource_type
+        required: true
+        schema:
+          title: Resource Type
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                additionalProperties: true
+                title: Response Search V1 Fhir  Resource Type  Get
+                type: object
+          description: Successful Response
+        '422':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Search the FHIR resources of one person
+      tags:
+      - fhir
+  /v1/fhir/{resource_type}/{resource_id}:
+    get:
+      operationId: read_v1_fhir__resource_type___resource_id__get
+      parameters:
+      - in: path
+        name: resource_type
+        required: true
+        schema:
+          title: Resource Type
+          type: string
+      - in: path
+        name: resource_id
+        required: true
+        schema:
+          title: Resource Id
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                additionalProperties: true
+                title: Response Read V1 Fhir  Resource Type   Resource Id  Get
+                type: object
+          description: Successful Response
+        '422':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Read one FHIR resource of a person
+      tags:
+      - fhir
+  /v1/identity/reidentify:
+    post:
+      operationId: reidentify_v1_identity_reidentify_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ReidentifyRequest'
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                additionalProperties: true
+                title: Response Reidentify V1 Identity Reidentify Post
+                type: object
+          description: Successful Response
+        '422':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Direct identifiers recorded for an hdt_id (audited)
+      tags:
+      - identity
+  /v1/import:
+    post:
+      operationId: import_batch_v1_import_post
+      parameters:
+      - in: query
+        name: format
+        required: true
+        schema:
+          pattern: ^(fhir|hl7v2|csv|dicom|vcf)$
+          title: Format
+          type: string
+      - in: query
+        name: hdt_id
+        required: false
+        schema:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Hdt Id
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                additionalProperties: true
+                title: Response Import Batch V1 Import Post
+                type: object
+          description: Successful Response
+        '422':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: 'Import a batch: FHIR Bundle, HL7 v2, CSV, DICOM or VCF'
+      tags:
+      - ingestion
+  /v1/language/status:
+    get:
+      operationId: language_status_v1_language_status_get
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                additionalProperties: true
+                title: Response Language Status V1 Language Status Get
+                type: object
+          description: Successful Response
+      summary: The conversation backends in the order they are tried, with their use
+      tags:
+      - language
+  /v1/models:
+    get:
+      operationId: models_v1_models_get
+      parameters:
+      - in: query
+        name: twin
+        required: false
+        schema:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Twin
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                items:
+                  additionalProperties: true
+                  type: object
+                title: Response Models V1 Models Get
+                type: array
+          description: Successful Response
+        '422':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Registered models with their stage
+      tags:
+      - lifecycle
+  /v1/models/{model_id}/rollback:
+    post:
+      operationId: rollback_v1_models__model_id__rollback_post
+      parameters:
+      - in: path
+        name: model_id
+        required: true
+        schema:
+          title: Model Id
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                additionalProperties:
+                  type: string
+                title: Response Rollback V1 Models  Model Id  Rollback Post
+                type: object
+          description: Successful Response
+        '422':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Re-promote the newest archived version
+      tags:
+      - lifecycle
+  /v1/models/{model_id}/versions/{version}/stage:
+    post:
+      operationId: stage_v1_models__model_id__versions__version__stage_post
+      parameters:
+      - in: path
+        name: model_id
+        required: true
+        schema:
+          title: Model Id
+          type: string
+      - in: path
+        name: version
+        required: true
+        schema:
+          title: Version
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/StageChange'
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                additionalProperties:
+                  type: string
+                title: Response Stage V1 Models  Model Id  Versions  Version  Stage Post
+                type: object
+          description: Successful Response
+        '422':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Move a model version to Staging, Production or Archived
+      tags:
+      - lifecycle
+  /v1/persons/{hdt_id}/coupling:
+    get:
+      operationId: coupling_v1_persons__hdt_id__coupling_get
+      parameters:
+      - in: path
+        name: hdt_id
+        required: true
+        schema:
+          title: Hdt Id
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CouplingMatrix'
+          description: Successful Response
+        '422':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Connectors and coupling matrix of the person's running HDT
+      tags:
+      - coupling
+  /v1/persons/{hdt_id}/findings:
+    post:
+      operationId: finding_v1_persons__hdt_id__findings_post
+      parameters:
+      - in: path
+        name: hdt_id
+        required: true
+        schema:
+          title: Hdt Id
+          type: string
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                additionalProperties: true
+                title: Response Finding V1 Persons  Hdt Id  Findings Post
+                type: object
+          description: Successful Response
+        '422':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Store a clinician-confirmed finding written back by the APDT
+      tags:
+      - coupling
+  /v1/persons/{hdt_id}/phkg.ttl:
+    get:
+      operationId: phkg_ttl_v1_persons__hdt_id__phkg_ttl_get
+      parameters:
+      - in: path
+        name: hdt_id
+        required: true
+        schema:
+          title: Hdt Id
+          type: string
+      responses:
+        '200':
+          description: Successful Response
+        '422':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: The person's health knowledge graph as FHIR RDF Turtle
+      tags:
+      - knowledge
+  /v1/tools/ahdt.cognitive.converse:
+    post:
+      operationId: ahdt_cognitive_converse_v1_tools_ahdt_cognitive_converse_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ConverseArgs'
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ConverseData'
+          description: Tool result
+      summary: Natural-language interaction in the patient's language
+      tags:
+      - tools
+  /v1/tools/ahdt.cognitive.perceive:
+    post:
+      operationId: ahdt_cognitive_perceive_v1_tools_ahdt_cognitive_perceive_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PerceiveArgs'
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PerceiveData'
+          description: Tool result
+      summary: Findings from speech, image, signal or text
+      tags:
+      - tools
+  /v1/tools/ahdt.cognitive.reason:
+    post:
+      operationId: ahdt_cognitive_reason_v1_tools_ahdt_cognitive_reason_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ReasonArgs'
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ReasonData'
+          description: Tool result
+      summary: Ontology, causal, probabilistic or temporal reasoning
+      tags:
+      - tools
+  /v1/tools/ahdt.cognitive.request_data:
+    post:
+      operationId: ahdt_cognitive_request_data_v1_tools_ahdt_cognitive_request_data_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RequestDataArgs'
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RequestDataData'
+          description: Tool result
+      summary: Request for missing data from the person, a device or a clinician
+      tags:
+      - tools
+  /v1/tools/ahdt.data.cohort_extract:
+    post:
+      operationId: ahdt_data_cohort_extract_v1_tools_ahdt_data_cohort_extract_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CohortExtractArgs'
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CohortExtractData'
+          description: Tool result
+      summary: De-identified cohort rows or aggregates under k-anonymity or differential privacy
+      tags:
+      - tools
+  /v1/tools/ahdt.data.documents:
+    post:
+      operationId: ahdt_data_documents_v1_tools_ahdt_data_documents_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DocumentsArgs'
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DocumentsData'
+          description: Tool result
+      summary: Search of notes, reports and discharge summaries
+      tags:
+      - tools
+  /v1/tools/ahdt.data.genome:
+    post:
+      operationId: ahdt_data_genome_v1_tools_ahdt_data_genome_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GenomeArgs'
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenomeData'
+          description: Tool result
+      summary: Pharmacogenomic variants
+      tags:
+      - tools
+  /v1/tools/ahdt.data.graph_query:
+    post:
+      operationId: ahdt_data_graph_query_v1_tools_ahdt_data_graph_query_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GraphQueryArgs'
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GraphQueryData'
+          description: Tool result
+      summary: GraphRAG question over the personal health knowledge graph
+      tags:
+      - tools
+  /v1/tools/ahdt.data.imaging:
+    post:
+      operationId: ahdt_data_imaging_v1_tools_ahdt_data_imaging_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ImagingArgs'
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ImagingData'
+          description: Tool result
+      summary: Imaging studies (DICOMweb references) by modality and period
+      tags:
+      - tools
+  /v1/tools/ahdt.data.knowledge:
+    post:
+      operationId: ahdt_data_knowledge_v1_tools_ahdt_data_knowledge_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/KnowledgeArgs'
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/KnowledgeData'
+          description: Tool result
+      summary: Allow-listed SPARQL or Cypher query with parameters
+      tags:
+      - tools
+  /v1/tools/ahdt.data.medications:
+    post:
+      operationId: ahdt_data_medications_v1_tools_ahdt_data_medications_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MedicationsArgs'
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MedicationsData'
+          description: Tool result
+      summary: Medication history and adherence data
+      tags:
+      - tools
+  /v1/tools/ahdt.data.observations:
+    post:
+      operationId: ahdt_data_observations_v1_tools_ahdt_data_observations_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ObservationsArgs'
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ObservationsData'
+          description: Tool result
+      summary: Vitals, device and lab observations by LOINC code and period
+      tags:
+      - tools
+  /v1/tools/ahdt.data.timeseries:
+    post:
+      operationId: ahdt_data_timeseries_v1_tools_ahdt_data_timeseries_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TimeseriesArgs'
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TimeseriesData'
+          description: Tool result
+      summary: One series by code and period, optionally downsampled
+      tags:
+      - tools
+  /v1/tools/ahdt.model.calibrate:
+    post:
+      operationId: ahdt_model_calibrate_v1_tools_ahdt_model_calibrate_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CalibrateArgs'
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CalibrateData'
+          description: Tool result
+      summary: Re-calibration of one model instance
+      tags:
+      - tools
+  /v1/tools/ahdt.model.cosimulate:
+    post:
+      operationId: ahdt_model_cosimulate_v1_tools_ahdt_model_cosimulate_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CosimulateArgs'
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SimulateData'
+          description: Tool result
+      summary: Co-simulation of several twins on forked instances
+      tags:
+      - tools
+  /v1/tools/ahdt.model.facet:
+    post:
+      operationId: ahdt_model_facet_v1_tools_ahdt_model_facet_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/FacetArgs'
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FacetView'
+          description: Tool result
+      summary: Role-specific view of a shared organ instance
+      tags:
+      - tools
+  /v1/tools/ahdt.model.forecast:
+    post:
+      operationId: ahdt_model_forecast_v1_tools_ahdt_model_forecast_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ForecastArgs'
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ForecastData'
+          description: Tool result
+      summary: Forecast of a DT variable with uncertainty
+      tags:
+      - tools
+  /v1/tools/ahdt.model.simulate:
+    post:
+      operationId: ahdt_model_simulate_v1_tools_ahdt_model_simulate_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SimulateArgs'
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SimulateData'
+          description: Tool result
+      summary: What-if simulation of a scenario (e.g. a dose) on forked model instances
+      tags:
+      - tools
+  /v1/tools/ahdt.model.state:
+    post:
+      operationId: ahdt_model_state_v1_tools_ahdt_model_state_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/StateArgs'
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StateData'
+          description: Tool result
+      summary: Current state estimate of one of the 17 DTs
+      tags:
+      - tools
+  /v1/tools/ahdt.xai.causal_graph:
+    post:
+      operationId: ahdt_xai_causal_graph_v1_tools_ahdt_xai_causal_graph_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CausalGraphArgs'
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CausalGraphData'
+          description: Tool result
+      summary: Cross-model causal explanation graph of an output
+      tags:
+      - tools
+  /v1/tools/ahdt.xai.explain:
+    post:
+      operationId: ahdt_xai_explain_v1_tools_ahdt_xai_explain_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ExplainArgs'
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AHDTExplanation'
+          description: Tool result
+      summary: Explanation of an AHDT model output
+      tags:
+      - tools

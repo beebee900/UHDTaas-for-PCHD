@@ -1,0 +1,6 @@
+region         = "<in-country region>"
+image_name     = "<Ubuntu 24.04 image>"
+flavor_name    = "<flavor with 16 GB RAM or more>"
+network_name   = "<network>"
+ssh_public_key = "ssh-ed25519 AAAA... operator"
+admin_cidrs    = ["203.0.113.10/32"]

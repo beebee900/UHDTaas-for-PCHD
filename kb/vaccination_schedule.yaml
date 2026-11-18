@@ -1,0 +1,43 @@
+# Nigerian routine childhood immunisation schedule, by minimum target age.
+- id: vaccination.schedule
+  doses:
+  - {age_weeks: 0, vaccine: BCG, dose_ml: 0.05, route: intradermal, site: left upper arm}
+  - {age_weeks: 0, vaccine: OPV 0, dose_drops: 2, route: oral}
+  - {age_weeks: 0, vaccine: Hepatitis B birth dose, dose_ml: 0.5, route: intramuscular, site: right anterolateral thigh}
+  - {age_weeks: 6, vaccine: Pentavalent 1, dose_ml: 0.5, route: intramuscular, site: left anterolateral thigh}
+  - {age_weeks: 6, vaccine: Pneumococcal Conjugate Vaccine 1, dose_ml: 0.5, route: intramuscular, site: right anterolateral thigh}
+  - {age_weeks: 6, vaccine: OPV 1, dose_drops: 2, route: oral}
+  - {age_weeks: 6, vaccine: Rotavirus Vaccine 1, dose_drops: 5, route: oral}
+  - {age_weeks: 6, vaccine: IPV 1, dose_ml: 0.5, route: intramuscular, site: right anterolateral thigh}
+  - {age_weeks: 10, vaccine: Pentavalent 2, dose_ml: 0.5, route: intramuscular, site: left anterolateral thigh}
+  - {age_weeks: 10, vaccine: Pneumococcal Conjugate Vaccine 2, dose_ml: 0.5, route: intramuscular, site: right anterolateral thigh}
+  - {age_weeks: 10, vaccine: OPV 2, dose_drops: 2, route: oral}
+  - {age_weeks: 10, vaccine: Rotavirus Vaccine 2, dose_drops: 5, route: oral}
+  - {age_weeks: 14, vaccine: Pentavalent 3, dose_ml: 0.5, route: intramuscular, site: left anterolateral thigh}
+  - {age_weeks: 14, vaccine: Pneumococcal Conjugate Vaccine 3, dose_ml: 0.5, route: intramuscular, site: right anterolateral thigh}
+  - {age_weeks: 14, vaccine: OPV 3, dose_drops: 2, route: oral}
+  - {age_weeks: 14, vaccine: Rotavirus Vaccine 3, dose_drops: 5, route: oral}
+  - {age_weeks: 14, vaccine: IPV 2, dose_ml: 0.5, route: intramuscular, site: right anterolateral thigh}
+  - {age_months: 5, vaccine: Malaria Vaccine 1, dose_ml: 0.5, route: intramuscular, site: deltoid}
+  - {age_months: 6, vaccine: Vitamin A first dose, dose_iu: 100000, route: oral}
+  - {age_months: 6, vaccine: Malaria Vaccine 2, dose_ml: 0.5, route: intramuscular, site: deltoid}
+  - {age_months: 7, vaccine: Malaria Vaccine 3, dose_ml: 0.5, route: intramuscular, site: deltoid}
+  - {age_months: 9, vaccine: MCV1, dose_ml: 0.5, route: subcutaneous, site: left upper arm}
+  - {age_months: 9, vaccine: Yellow Fever Vaccine, dose_ml: 0.5, route: subcutaneous, site: right upper arm}
+  - {age_months: 9, vaccine: Meningitis Vaccine, dose_ml: 0.5, route: intramuscular, site: left anterolateral thigh}
+  - {age_months: 12, vaccine: Vitamin A second dose, dose_iu: 200000, route: oral}
+  - {age_months: 15, vaccine: MCV2, dose_ml: 0.5, route: subcutaneous, site: left upper arm}
+  - {age_months: 15, vaccine: Malaria Vaccine 4, dose_ml: 0.5, route: intramuscular, site: deltoid}
+  - {age_years: 9, vaccine: HPV, dose_ml: 0.5, route: intramuscular, site: deltoid}
+  windows:
+  - {vaccine: BCG, preferably_within_weeks: 2, up_to_months: 11}
+  - {vaccine: OPV 0, before_weeks: 2}
+  - {vaccine: Hepatitis B birth dose, within_hours: 24}
+  provenance:
+    source: nphcda-immunization-ig
+    section: Nigeria Routine Immunization Schedule
+    also:
+    - {source: nphcda-immunization-ig, section: Timing Notes}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified

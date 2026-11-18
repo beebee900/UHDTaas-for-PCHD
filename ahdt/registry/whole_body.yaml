@@ -1,0 +1,105 @@
+kind: whole_body
+name: Whole-Body DT
+referent: The whole person across scales
+fields:
+- name: news2
+  ucum: '{score}'
+  ref: range.news2
+  source:
+  - derived
+- name: weight
+  loinc: 29463-7
+  mdc: MDC_MASS_BODY_ACTUAL
+  ucum: kg
+  ref: range.weight
+  source:
+  - device
+  - manual
+- name: height
+  loinc: 8302-2
+  ucum: cm
+  ref: range.height
+  source:
+  - manual
+- name: bmi
+  loinc: 39156-5
+  ucum: kg/m2
+  ref: range.bmi
+  source:
+  - derived
+- name: waist
+  loinc: 8280-0
+  ucum: cm
+  ref: range.waist
+  source:
+  - manual
+- name: deterioration_risk
+  ucum: '1'
+  ref: range.deterioration_risk
+  source:
+  - derived
+models:
+- ahdt.whole_body.anatomical_avatar
+- ahdt.whole_body.biomechanical_and_kinematic
+- ahdt.whole_body.whole_body_pbpk
+- ahdt.whole_body.clinical_health_state
+- ahdt.whole_body.life_course_and_ageing
+- ahdt.whole_body.maternal_foetal
+- ahdt.whole_body.omics
+- ahdt.whole_body.pharmacogenomics
+- ahdt.whole_body.early_warning
+owns_instances: []
+reads_facets:
+- instance: UBERON:0000955
+  facet: consciousness
+- instance: UBERON:0000945
+  facet: absorption
+- instance: UBERON:0002107
+  facet: clearance
+- instance: UBERON:0002113
+  facet: renal_function
+- instance: UBERON:0001434
+  facet: mechanical
+- instance: UBERON:0001987
+  facet: maternal_foetal
+standing_goals:
+- id: wb.picture_current
+  text: Keep the integrated clinical picture current
+  check:
+    kind: freshness
+    params:
+      fields:
+      - news2
+      max_age_s: 3600
+- id: wb.news2
+  text: Raise NEWS2 trigger bands
+  check:
+    kind: threshold
+    params:
+      field: news2
+      bands:
+        kb: news2.bands
+- id: wb.pbpk_ready
+  text: Keep PBPK ready for active medications
+  check:
+    kind: composite
+    params:
+      model: ahdt.whole_body.whole_body_pbpk
+- id: wb.life_course
+  text: Update life-course risk monthly
+  check:
+    kind: freshness
+    params:
+      fields:
+      - deterioration_risk
+      max_age_s: 2592000
+connectors_out:
+- AHDTEventToAPDTConnector
+- DeteriorationEventConnector
+- IndividualToPopulationConnector
+connectors_in:
+- ClinicalFindingWriteBackConnector
+- HepaticClearanceConnector
+- PriorConnector
+- RenalClearanceConnector
+- SystemToWholeBodyConnector

@@ -1,0 +1,40 @@
+# Gait analysis on OpenSim gait2392: marker, filter and optimisation settings.
+model_id: ahdt.musculoskeletal.skeletal_muscle_and_biomechanics
+sources:
+- id: gait2392
+  citation: "OpenSim gait2392 generic musculoskeletal model, Thelen 2003 muscles (CC BY 3.0).
+    Delp SL, Loan JP, Hoy MG, Zajac FE, Topp EL, Rosen JM. An interactive graphics-based model
+    of the lower extremity to study orthopaedic surgical procedures. IEEE Trans Biomed Eng.
+    1990;37(8):757-767."
+  via: "model file credits and publications fields; file pinned in sources.lock.yaml (gait2392)"
+- id: atra-assumption
+  citation: ATRA design 01 rule R5 assumption register
+params:
+  toe_tip_ahead_m: {value: 0.06, unit: m, source: atra-assumption, assumption: true,
+    justification: "Distance from the metatarsophalangeal joint of the model to the foot index landmark of the pose model; the model has no marker set"}
+  analysis_seconds: {value: 3.0, unit: s, source: atra-assumption, assumption: true,
+    justification: "Length of the analysed window of a pose track; about three strides at a normal cadence, and short enough for one persona run to stay under two minutes"}
+  min_coverage: {value: 0.8, unit: '1', source: atra-assumption, assumption: true,
+    justification: "Smallest share of frames in which all leg landmarks are detected; the same limit as the gait feature extraction of the edge service"}
+  marker_cutoff_hz: {value: 6.0, unit: Hz, source: atra-assumption, assumption: true,
+    justification: "Low-pass cut-off of the landmark paths; the same cut-off as the gait feature extraction of the edge service"}
+  coordinate_cutoff_hz: {value: 6.0, unit: Hz, source: atra-assumption, assumption: true,
+    justification: "Low-pass cut-off of the joint angles before static optimisation"}
+  weight_hip: {value: 1.0, unit: '1', source: atra-assumption, assumption: true,
+    justification: "Inverse kinematics weight of the hip markers"}
+  weight_knee: {value: 1.0, unit: '1', source: atra-assumption, assumption: true,
+    justification: "Inverse kinematics weight of the knee markers"}
+  weight_ankle: {value: 1.0, unit: '1', source: atra-assumption, assumption: true,
+    justification: "Inverse kinematics weight of the ankle markers"}
+  weight_foot: {value: 0.5, unit: '1', source: atra-assumption, assumption: true,
+    justification: "Inverse kinematics weight of the heel and toe markers, lower because the foot landmarks of the pose model are the least stable"}
+  com_window_s: {value: 0.3, unit: s, source: atra-assumption, assumption: true,
+    justification: "Window of the polynomial smoother that differentiates the centre of mass twice for the estimated ground reaction force"}
+  contact_softness_m: {value: 0.04, unit: m, source: atra-assumption, assumption: true,
+    justification: "Height of a foot marker above its standing height over which the estimated contact falls from one to zero"}
+  so_max_iterations: {value: 40, unit: '1', source: atra-assumption, assumption: true,
+    justification: "Iteration limit of the static optimisation at each frame; a limit of 200 left the objective of the test stride unchanged and took five times as long"}
+  so_window_s: {value: 1.5, unit: s, source: atra-assumption, assumption: true,
+    justification: "Length of the motion given to static optimisation, about one stride at a normal cadence; keeps one persona run under two minutes"}
+  so_rate_hz: {value: 15, unit: Hz, source: atra-assumption, assumption: true,
+    justification: "Sampling rate of the motion given to static optimisation; below the 6 Hz cut-off times two so the accelerations stay defined"}

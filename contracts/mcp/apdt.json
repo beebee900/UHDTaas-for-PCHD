@@ -1,0 +1,1564 @@
+{
+  "server": "apdt",
+  "tools": [
+    {
+      "description": "Summary of one care episode",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "episode_id": {
+            "pattern": "^ep-\\d{4}-\\d{6}$",
+            "title": "Episode Id",
+            "type": "string"
+          },
+          "tenant_id": {
+            "enum": [
+              "fac-a",
+              "fac-b"
+            ],
+            "title": "Tenant Id",
+            "type": "string"
+          }
+        },
+        "required": [
+          "tenant_id",
+          "episode_id"
+        ],
+        "title": "EpisodeSummaryArgs",
+        "type": "object"
+      },
+      "name": "apdt.episode.summary",
+      "outputSchema": {
+        "$defs": {
+          "CareTeamMember": {
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "title": "Id",
+                "type": "string"
+              },
+              "role": {
+                "$ref": "#/$defs/Role"
+              }
+            },
+            "required": [
+              "id",
+              "role"
+            ],
+            "title": "CareTeamMember",
+            "type": "object"
+          },
+          "Code": {
+            "additionalProperties": false,
+            "properties": {
+              "code": {
+                "title": "Code",
+                "type": "string"
+              },
+              "display": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Display"
+              },
+              "system": {
+                "title": "System",
+                "type": "string"
+              }
+            },
+            "required": [
+              "system",
+              "code"
+            ],
+            "title": "Code",
+            "type": "object"
+          },
+          "Episode": {
+            "additionalProperties": false,
+            "properties": {
+              "care_team": {
+                "items": {
+                  "$ref": "#/$defs/CareTeamMember"
+                },
+                "title": "Care Team",
+                "type": "array"
+              },
+              "closed_at": {
+                "anyOf": [
+                  {
+                    "format": "date-time",
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Closed At"
+              },
+              "episode_id": {
+                "title": "Episode Id",
+                "type": "string"
+              },
+              "goal_text": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Goal Text"
+              },
+              "hdt_id": {
+                "title": "Hdt Id",
+                "type": "string"
+              },
+              "opened_at": {
+                "format": "date-time",
+                "title": "Opened At",
+                "type": "string"
+              },
+              "reason": {
+                "title": "Reason",
+                "type": "string"
+              },
+              "responsible_clinician": {
+                "title": "Responsible Clinician",
+                "type": "string"
+              },
+              "status": {
+                "enum": [
+                  "open",
+                  "closed"
+                ],
+                "title": "Status",
+                "type": "string"
+              },
+              "tenant_id": {
+                "title": "Tenant Id",
+                "type": "string"
+              }
+            },
+            "required": [
+              "episode_id",
+              "tenant_id",
+              "hdt_id",
+              "status",
+              "opened_at",
+              "reason",
+              "responsible_clinician"
+            ],
+            "title": "Episode",
+            "type": "object"
+          },
+          "ModelRef": {
+            "additionalProperties": false,
+            "properties": {
+              "model_id": {
+                "title": "Model Id",
+                "type": "string"
+              },
+              "version": {
+                "title": "Version",
+                "type": "string"
+              }
+            },
+            "required": [
+              "model_id",
+              "version"
+            ],
+            "title": "ModelRef",
+            "type": "object"
+          },
+          "Role": {
+            "enum": [
+              "medical_officer",
+              "radiologist",
+              "pharmacist",
+              "nurse",
+              "lab_scientist",
+              "patient",
+              "proxy",
+              "community_health_worker",
+              "therapist",
+              "carer",
+              "clinical_safety_officer",
+              "administrator",
+              "researcher",
+              "public_health_official",
+              "person"
+            ],
+            "title": "Role",
+            "type": "string"
+          },
+          "ToolMeta": {
+            "additionalProperties": true,
+            "properties": {
+              "ahdt_version": {
+                "title": "Ahdt Version",
+                "type": "string"
+              },
+              "as_of": {
+                "anyOf": [
+                  {
+                    "format": "date-time",
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "As Of"
+              },
+              "explainers": {
+                "anyOf": [
+                  {
+                    "items": {
+                      "type": "string"
+                    },
+                    "type": "array"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Explainers"
+              },
+              "fork_id": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Fork Id"
+              },
+              "forked": {
+                "anyOf": [
+                  {
+                    "type": "boolean"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Forked"
+              },
+              "models": {
+                "items": {
+                  "$ref": "#/$defs/ModelRef"
+                },
+                "title": "Models",
+                "type": "array"
+              },
+              "output_id": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Output Id"
+              }
+            },
+            "required": [
+              "ahdt_version"
+            ],
+            "title": "ToolMeta",
+            "type": "object"
+          }
+        },
+        "additionalProperties": false,
+        "properties": {
+          "_meta": {
+            "$ref": "#/$defs/ToolMeta"
+          },
+          "active_medications": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Active Medications",
+            "type": "array"
+          },
+          "episode": {
+            "$ref": "#/$defs/Episode"
+          },
+          "latest_news2": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Latest News2"
+          },
+          "open_recommendations": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Open Recommendations",
+            "type": "array"
+          },
+          "problems": {
+            "items": {
+              "$ref": "#/$defs/Code"
+            },
+            "title": "Problems",
+            "type": "array"
+          }
+        },
+        "required": [
+          "episode",
+          "problems",
+          "active_medications",
+          "open_recommendations"
+        ],
+        "title": "EpisodeSummaryData",
+        "type": "object"
+      }
+    },
+    {
+      "description": "Current differential diagnosis with probabilities",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "episode_id": {
+            "pattern": "^ep-\\d{4}-\\d{6}$",
+            "title": "Episode Id",
+            "type": "string"
+          },
+          "tenant_id": {
+            "enum": [
+              "fac-a",
+              "fac-b"
+            ],
+            "title": "Tenant Id",
+            "type": "string"
+          },
+          "top_k": {
+            "default": 5,
+            "maximum": 20,
+            "minimum": 1,
+            "title": "Top K",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "tenant_id",
+          "episode_id"
+        ],
+        "title": "DifferentialArgs",
+        "type": "object"
+      },
+      "name": "apdt.diagnosis.differential",
+      "outputSchema": {
+        "$defs": {
+          "Code": {
+            "additionalProperties": false,
+            "properties": {
+              "code": {
+                "title": "Code",
+                "type": "string"
+              },
+              "display": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Display"
+              },
+              "system": {
+                "title": "System",
+                "type": "string"
+              }
+            },
+            "required": [
+              "system",
+              "code"
+            ],
+            "title": "Code",
+            "type": "object"
+          },
+          "DifferentialEntry": {
+            "additionalProperties": false,
+            "properties": {
+              "bundle_id": {
+                "title": "Bundle Id",
+                "type": "string"
+              },
+              "code": {
+                "$ref": "#/$defs/Code"
+              },
+              "probability": {
+                "maximum": 1,
+                "minimum": 0,
+                "title": "Probability",
+                "type": "number"
+              },
+              "recommendation_id": {
+                "title": "Recommendation Id",
+                "type": "string"
+              }
+            },
+            "required": [
+              "code",
+              "probability",
+              "recommendation_id",
+              "bundle_id"
+            ],
+            "title": "DifferentialEntry",
+            "type": "object"
+          },
+          "ModelRef": {
+            "additionalProperties": false,
+            "properties": {
+              "model_id": {
+                "title": "Model Id",
+                "type": "string"
+              },
+              "version": {
+                "title": "Version",
+                "type": "string"
+              }
+            },
+            "required": [
+              "model_id",
+              "version"
+            ],
+            "title": "ModelRef",
+            "type": "object"
+          },
+          "ToolMeta": {
+            "additionalProperties": true,
+            "properties": {
+              "ahdt_version": {
+                "title": "Ahdt Version",
+                "type": "string"
+              },
+              "as_of": {
+                "anyOf": [
+                  {
+                    "format": "date-time",
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "As Of"
+              },
+              "explainers": {
+                "anyOf": [
+                  {
+                    "items": {
+                      "type": "string"
+                    },
+                    "type": "array"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Explainers"
+              },
+              "fork_id": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Fork Id"
+              },
+              "forked": {
+                "anyOf": [
+                  {
+                    "type": "boolean"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Forked"
+              },
+              "models": {
+                "items": {
+                  "$ref": "#/$defs/ModelRef"
+                },
+                "title": "Models",
+                "type": "array"
+              },
+              "output_id": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Output Id"
+              }
+            },
+            "required": [
+              "ahdt_version"
+            ],
+            "title": "ToolMeta",
+            "type": "object"
+          }
+        },
+        "additionalProperties": false,
+        "properties": {
+          "_meta": {
+            "$ref": "#/$defs/ToolMeta"
+          },
+          "conformal_set": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Conformal Set",
+            "type": "array"
+          },
+          "differential": {
+            "items": {
+              "$ref": "#/$defs/DifferentialEntry"
+            },
+            "title": "Differential",
+            "type": "array"
+          }
+        },
+        "required": [
+          "differential",
+          "conformal_set"
+        ],
+        "title": "DifferentialData",
+        "type": "object"
+      }
+    },
+    {
+      "description": "Ranked treatment options for a diagnosis",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "diagnosis_code": {
+            "title": "Diagnosis Code",
+            "type": "string"
+          },
+          "episode_id": {
+            "pattern": "^ep-\\d{4}-\\d{6}$",
+            "title": "Episode Id",
+            "type": "string"
+          },
+          "tenant_id": {
+            "enum": [
+              "fac-a",
+              "fac-b"
+            ],
+            "title": "Tenant Id",
+            "type": "string"
+          }
+        },
+        "required": [
+          "tenant_id",
+          "episode_id",
+          "diagnosis_code"
+        ],
+        "title": "TreatmentOptionsArgs",
+        "type": "object"
+      },
+      "name": "apdt.treatment.options",
+      "outputSchema": {
+        "$defs": {
+          "ModelRef": {
+            "additionalProperties": false,
+            "properties": {
+              "model_id": {
+                "title": "Model Id",
+                "type": "string"
+              },
+              "version": {
+                "title": "Version",
+                "type": "string"
+              }
+            },
+            "required": [
+              "model_id",
+              "version"
+            ],
+            "title": "ModelRef",
+            "type": "object"
+          },
+          "ToolMeta": {
+            "additionalProperties": true,
+            "properties": {
+              "ahdt_version": {
+                "title": "Ahdt Version",
+                "type": "string"
+              },
+              "as_of": {
+                "anyOf": [
+                  {
+                    "format": "date-time",
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "As Of"
+              },
+              "explainers": {
+                "anyOf": [
+                  {
+                    "items": {
+                      "type": "string"
+                    },
+                    "type": "array"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Explainers"
+              },
+              "fork_id": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Fork Id"
+              },
+              "forked": {
+                "anyOf": [
+                  {
+                    "type": "boolean"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Forked"
+              },
+              "models": {
+                "items": {
+                  "$ref": "#/$defs/ModelRef"
+                },
+                "title": "Models",
+                "type": "array"
+              },
+              "output_id": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Output Id"
+              }
+            },
+            "required": [
+              "ahdt_version"
+            ],
+            "title": "ToolMeta",
+            "type": "object"
+          },
+          "TreatmentOption": {
+            "additionalProperties": false,
+            "properties": {
+              "atc": {
+                "items": {
+                  "type": "string"
+                },
+                "title": "Atc",
+                "type": "array"
+              },
+              "bundle_id": {
+                "title": "Bundle Id",
+                "type": "string"
+              },
+              "guideline_concordant": {
+                "title": "Guideline Concordant",
+                "type": "boolean"
+              },
+              "recommendation_id": {
+                "title": "Recommendation Id",
+                "type": "string"
+              },
+              "score": {
+                "title": "Score",
+                "type": "number"
+              },
+              "text": {
+                "title": "Text",
+                "type": "string"
+              }
+            },
+            "required": [
+              "text",
+              "atc",
+              "score",
+              "guideline_concordant",
+              "recommendation_id",
+              "bundle_id"
+            ],
+            "title": "TreatmentOption",
+            "type": "object"
+          }
+        },
+        "additionalProperties": false,
+        "properties": {
+          "_meta": {
+            "$ref": "#/$defs/ToolMeta"
+          },
+          "options": {
+            "items": {
+              "$ref": "#/$defs/TreatmentOption"
+            },
+            "title": "Options",
+            "type": "array"
+          }
+        },
+        "required": [
+          "options"
+        ],
+        "title": "TreatmentOptionsData",
+        "type": "object"
+      }
+    },
+    {
+      "description": "Explanation bundle of a recommendation for an audience",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "audience": {
+            "default": "medical_officer",
+            "enum": [
+              "medical_officer",
+              "pharmacist",
+              "nurse",
+              "radiologist",
+              "patient"
+            ],
+            "title": "Audience",
+            "type": "string"
+          },
+          "bundle_id": {
+            "title": "Bundle Id",
+            "type": "string"
+          },
+          "tenant_id": {
+            "enum": [
+              "fac-a",
+              "fac-b"
+            ],
+            "title": "Tenant Id",
+            "type": "string"
+          }
+        },
+        "required": [
+          "tenant_id",
+          "bundle_id"
+        ],
+        "title": "APDTExplainArgs",
+        "type": "object"
+      },
+      "name": "apdt.explain",
+      "outputSchema": {
+        "$defs": {
+          "Alternative": {
+            "additionalProperties": false,
+            "properties": {
+              "score": {
+                "title": "Score",
+                "type": "number"
+              },
+              "text": {
+                "title": "Text",
+                "type": "string"
+              },
+              "why_lower": {
+                "title": "Why Lower",
+                "type": "string"
+              }
+            },
+            "required": [
+              "text",
+              "score",
+              "why_lower"
+            ],
+            "title": "Alternative",
+            "type": "object"
+          },
+          "BundleCounterfactual": {
+            "additionalProperties": false,
+            "properties": {
+              "change": {
+                "title": "Change",
+                "type": "string"
+              },
+              "delta": {
+                "title": "Delta",
+                "type": "number"
+              },
+              "new_top": {
+                "title": "New Top",
+                "type": "string"
+              }
+            },
+            "required": [
+              "change",
+              "new_top",
+              "delta"
+            ],
+            "title": "BundleCounterfactual",
+            "type": "object"
+          },
+          "BundleRecommendation": {
+            "additionalProperties": false,
+            "properties": {
+              "code": {
+                "anyOf": [
+                  {
+                    "$ref": "#/$defs/Code"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null
+              },
+              "confidence": {
+                "maximum": 1,
+                "minimum": 0,
+                "title": "Confidence",
+                "type": "number"
+              },
+              "conformal_set": {
+                "anyOf": [
+                  {
+                    "items": {
+                      "type": "string"
+                    },
+                    "type": "array"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Conformal Set"
+              },
+              "interval": {
+                "anyOf": [
+                  {
+                    "$ref": "#/$defs/Interval"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null
+              },
+              "text": {
+                "title": "Text",
+                "type": "string"
+              }
+            },
+            "required": [
+              "text",
+              "confidence"
+            ],
+            "title": "BundleRecommendation",
+            "type": "object"
+          },
+          "Citation": {
+            "additionalProperties": false,
+            "properties": {
+              "kb_entry_id": {
+                "title": "Kb Entry Id",
+                "type": "string"
+              },
+              "section": {
+                "title": "Section",
+                "type": "string"
+              },
+              "source_title": {
+                "title": "Source Title",
+                "type": "string"
+              },
+              "url": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Url"
+              }
+            },
+            "required": [
+              "kb_entry_id",
+              "source_title",
+              "section"
+            ],
+            "title": "Citation",
+            "type": "object"
+          },
+          "Code": {
+            "additionalProperties": false,
+            "properties": {
+              "code": {
+                "title": "Code",
+                "type": "string"
+              },
+              "display": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Display"
+              },
+              "system": {
+                "title": "System",
+                "type": "string"
+              }
+            },
+            "required": [
+              "system",
+              "code"
+            ],
+            "title": "Code",
+            "type": "object"
+          },
+          "EvidenceItem": {
+            "additionalProperties": false,
+            "properties": {
+              "ahdt_explanation_id": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Ahdt Explanation Id"
+              },
+              "item": {
+                "title": "Item",
+                "type": "string"
+              },
+              "source": {
+                "enum": [
+                  "apdt",
+                  "ahdt"
+                ],
+                "title": "Source",
+                "type": "string"
+              },
+              "value": {
+                "default": null,
+                "title": "Value"
+              },
+              "weight": {
+                "title": "Weight",
+                "type": "number"
+              }
+            },
+            "required": [
+              "source",
+              "item",
+              "weight"
+            ],
+            "title": "EvidenceItem",
+            "type": "object"
+          },
+          "Interval": {
+            "additionalProperties": false,
+            "properties": {
+              "level": {
+                "title": "Level",
+                "type": "number"
+              },
+              "lower": {
+                "title": "Lower",
+                "type": "number"
+              },
+              "upper": {
+                "title": "Upper",
+                "type": "number"
+              }
+            },
+            "required": [
+              "lower",
+              "upper",
+              "level"
+            ],
+            "title": "Interval",
+            "type": "object"
+          },
+          "ModelRef": {
+            "additionalProperties": false,
+            "properties": {
+              "model_id": {
+                "title": "Model Id",
+                "type": "string"
+              },
+              "version": {
+                "title": "Version",
+                "type": "string"
+              }
+            },
+            "required": [
+              "model_id",
+              "version"
+            ],
+            "title": "ModelRef",
+            "type": "object"
+          },
+          "PatientSummary": {
+            "additionalProperties": false,
+            "properties": {
+              "audio_ref": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Audio Ref"
+              },
+              "language": {
+                "enum": [
+                  "en",
+                  "yo",
+                  "ha",
+                  "ig",
+                  "pcm"
+                ],
+                "title": "Language",
+                "type": "string"
+              },
+              "text": {
+                "title": "Text",
+                "type": "string"
+              }
+            },
+            "required": [
+              "language",
+              "text"
+            ],
+            "title": "PatientSummary",
+            "type": "object"
+          },
+          "Sensitivity": {
+            "additionalProperties": false,
+            "properties": {
+              "S1": {
+                "title": "S1",
+                "type": "number"
+              },
+              "ST": {
+                "title": "St",
+                "type": "number"
+              },
+              "param": {
+                "title": "Param",
+                "type": "string"
+              }
+            },
+            "required": [
+              "param",
+              "S1",
+              "ST"
+            ],
+            "title": "Sensitivity",
+            "type": "object"
+          },
+          "SimulationTrace": {
+            "additionalProperties": false,
+            "properties": {
+              "assumptions": {
+                "items": {
+                  "type": "string"
+                },
+                "title": "Assumptions",
+                "type": "array"
+              },
+              "fork_id": {
+                "title": "Fork Id",
+                "type": "string"
+              },
+              "output_id": {
+                "title": "Output Id",
+                "type": "string"
+              },
+              "sensitivity": {
+                "items": {
+                  "$ref": "#/$defs/Sensitivity"
+                },
+                "title": "Sensitivity",
+                "type": "array"
+              },
+              "summary": {
+                "title": "Summary",
+                "type": "string"
+              }
+            },
+            "required": [
+              "output_id",
+              "fork_id",
+              "summary",
+              "assumptions"
+            ],
+            "title": "SimulationTrace",
+            "type": "object"
+          },
+          "ToolMeta": {
+            "additionalProperties": true,
+            "properties": {
+              "ahdt_version": {
+                "title": "Ahdt Version",
+                "type": "string"
+              },
+              "as_of": {
+                "anyOf": [
+                  {
+                    "format": "date-time",
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "As Of"
+              },
+              "explainers": {
+                "anyOf": [
+                  {
+                    "items": {
+                      "type": "string"
+                    },
+                    "type": "array"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Explainers"
+              },
+              "fork_id": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Fork Id"
+              },
+              "forked": {
+                "anyOf": [
+                  {
+                    "type": "boolean"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Forked"
+              },
+              "models": {
+                "items": {
+                  "$ref": "#/$defs/ModelRef"
+                },
+                "title": "Models",
+                "type": "array"
+              },
+              "output_id": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Output Id"
+              }
+            },
+            "required": [
+              "ahdt_version"
+            ],
+            "title": "ToolMeta",
+            "type": "object"
+          }
+        },
+        "additionalProperties": false,
+        "properties": {
+          "_meta": {
+            "$ref": "#/$defs/ToolMeta"
+          },
+          "alternatives": {
+            "items": {
+              "$ref": "#/$defs/Alternative"
+            },
+            "title": "Alternatives",
+            "type": "array"
+          },
+          "audience_views": {
+            "additionalProperties": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "propertyNames": {
+              "enum": [
+                "medical_officer",
+                "pharmacist",
+                "nurse",
+                "radiologist",
+                "patient"
+              ]
+            },
+            "title": "Audience Views",
+            "type": "object"
+          },
+          "bundle_id": {
+            "title": "Bundle Id",
+            "type": "string"
+          },
+          "citations": {
+            "items": {
+              "$ref": "#/$defs/Citation"
+            },
+            "title": "Citations",
+            "type": "array"
+          },
+          "counterfactuals": {
+            "items": {
+              "$ref": "#/$defs/BundleCounterfactual"
+            },
+            "title": "Counterfactuals",
+            "type": "array"
+          },
+          "created_at": {
+            "format": "date-time",
+            "title": "Created At",
+            "type": "string"
+          },
+          "evidence_against": {
+            "items": {
+              "$ref": "#/$defs/EvidenceItem"
+            },
+            "title": "Evidence Against",
+            "type": "array"
+          },
+          "evidence_for": {
+            "items": {
+              "$ref": "#/$defs/EvidenceItem"
+            },
+            "title": "Evidence For",
+            "type": "array"
+          },
+          "model_versions": {
+            "items": {
+              "$ref": "#/$defs/ModelRef"
+            },
+            "title": "Model Versions",
+            "type": "array"
+          },
+          "patient_summary": {
+            "$ref": "#/$defs/PatientSummary"
+          },
+          "recommendation": {
+            "$ref": "#/$defs/BundleRecommendation"
+          },
+          "recommendation_id": {
+            "title": "Recommendation Id",
+            "type": "string"
+          },
+          "simulation_trace": {
+            "anyOf": [
+              {
+                "$ref": "#/$defs/SimulationTrace"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null
+          }
+        },
+        "required": [
+          "bundle_id",
+          "recommendation_id",
+          "recommendation",
+          "evidence_for",
+          "evidence_against",
+          "citations",
+          "counterfactuals",
+          "alternatives",
+          "patient_summary",
+          "audience_views",
+          "created_at",
+          "model_versions"
+        ],
+        "title": "ExplanationBundle",
+        "type": "object"
+      }
+    },
+    {
+      "description": "The patient's current consent for AHDT access",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "hdt_id": {
+            "pattern": "^hdt-[0-9a-f]{12}$",
+            "title": "Hdt Id",
+            "type": "string"
+          },
+          "tenant_id": {
+            "enum": [
+              "fac-a",
+              "fac-b"
+            ],
+            "title": "Tenant Id",
+            "type": "string"
+          }
+        },
+        "required": [
+          "tenant_id",
+          "hdt_id"
+        ],
+        "title": "ConsentGetArgs",
+        "type": "object"
+      },
+      "name": "apdt.consent.get",
+      "outputSchema": {
+        "$defs": {
+          "ModelRef": {
+            "additionalProperties": false,
+            "properties": {
+              "model_id": {
+                "title": "Model Id",
+                "type": "string"
+              },
+              "version": {
+                "title": "Version",
+                "type": "string"
+              }
+            },
+            "required": [
+              "model_id",
+              "version"
+            ],
+            "title": "ModelRef",
+            "type": "object"
+          },
+          "PurposeOfUse": {
+            "enum": [
+              "care",
+              "emergency",
+              "research",
+              "public_health",
+              "operations",
+              "self_management"
+            ],
+            "title": "PurposeOfUse",
+            "type": "string"
+          },
+          "ToolMeta": {
+            "additionalProperties": true,
+            "properties": {
+              "ahdt_version": {
+                "title": "Ahdt Version",
+                "type": "string"
+              },
+              "as_of": {
+                "anyOf": [
+                  {
+                    "format": "date-time",
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "As Of"
+              },
+              "explainers": {
+                "anyOf": [
+                  {
+                    "items": {
+                      "type": "string"
+                    },
+                    "type": "array"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Explainers"
+              },
+              "fork_id": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Fork Id"
+              },
+              "forked": {
+                "anyOf": [
+                  {
+                    "type": "boolean"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Forked"
+              },
+              "models": {
+                "items": {
+                  "$ref": "#/$defs/ModelRef"
+                },
+                "title": "Models",
+                "type": "array"
+              },
+              "output_id": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Output Id"
+              }
+            },
+            "required": [
+              "ahdt_version"
+            ],
+            "title": "ToolMeta",
+            "type": "object"
+          }
+        },
+        "additionalProperties": false,
+        "properties": {
+          "_meta": {
+            "$ref": "#/$defs/ToolMeta"
+          },
+          "consent_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Consent Id"
+          },
+          "hdt_id": {
+            "title": "Hdt Id",
+            "type": "string"
+          },
+          "purposes": {
+            "items": {
+              "$ref": "#/$defs/PurposeOfUse"
+            },
+            "title": "Purposes",
+            "type": "array"
+          },
+          "refused_tools": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Refused Tools",
+            "type": "array"
+          }
+        },
+        "required": [
+          "hdt_id",
+          "purposes",
+          "refused_tools"
+        ],
+        "title": "ConsentData",
+        "type": "object"
+      }
+    }
+  ]
+}

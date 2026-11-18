@@ -1,0 +1,423 @@
+# Role-specific facets of the shared organ instances (design 04, section 4.5.2).
+# The owner of an instance is the twin that lists it under owns_instances.
+- instance: UBERON:0000948
+  facet: haemodynamics
+  fields:
+  - cardiac_output
+  - stroke_volume
+  - ejection_fraction
+  consumers:
+  - cardiovascular
+  - respiratory
+  - renal_urinary
+- instance: UBERON:0000948
+  facet: electrophysiology
+  fields:
+  - apd90
+  - qt_surrogate
+  consumers:
+  - cardiovascular
+- instance: UBERON:0000947
+  facet: vascular
+  fields:
+  - resistance
+  - compliance
+  consumers:
+  - cardiovascular
+  - renal_urinary
+  - nervous
+- instance: UBERON:0001637
+  facet: vascular
+  fields:
+  - resistance
+  - compliance
+  consumers:
+  - cardiovascular
+  - renal_urinary
+  - nervous
+- instance: UBERON:0001638
+  facet: vascular
+  fields:
+  - resistance
+  - compliance
+  consumers:
+  - cardiovascular
+  - renal_urinary
+  - nervous
+- instance: UBERON:0001982
+  facet: vascular
+  fields:
+  - perfusion_index
+  consumers:
+  - cardiovascular
+  - renal_urinary
+  - nervous
+- instance: UBERON:0002048
+  facet: gas_exchange
+  fields:
+  - pao2
+  - paco2
+  - shunt_fraction
+  consumers:
+  - respiratory
+  - cardiovascular
+  - renal_urinary
+- instance: UBERON:0000955
+  facet: neural
+  fields:
+  - consciousness_level
+  - autonomic_tone
+  consumers:
+  - nervous
+- instance: UBERON:0000955
+  facet: consciousness
+  fields:
+  - avpu
+  - gcs_total
+  consumers:
+  - whole_body
+- instance: UBERON:0001898
+  facet: endocrine
+  fields:
+  - crh_drive
+  consumers:
+  - endocrine
+- instance: UBERON:0001898
+  facet: neural
+  fields:
+  - stress_drive
+  consumers:
+  - nervous
+- instance: UBERON:0000007
+  facet: endocrine
+  fields:
+  - acth
+  - tsh_drive
+  consumers:
+  - endocrine
+- instance: UBERON:0002046
+  facet: endocrine
+  fields:
+  - ft4
+  consumers:
+  - endocrine
+- instance: UBERON:0001132
+  facet: endocrine
+  fields:
+  - pth
+  consumers:
+  - endocrine
+- instance: UBERON:0002369
+  facet: endocrine
+  fields:
+  - cortisol
+  consumers:
+  - endocrine
+- instance: UBERON:0001905
+  facet: endocrine
+  fields:
+  - melatonin
+  consumers:
+  - endocrine
+- instance: UBERON:0001905
+  facet: circadian
+  fields:
+  - circadian_phase
+  consumers:
+  - nervous
+- instance: UBERON:0001264
+  facet: endocrine
+  fields:
+  - insulin_secretion
+  - glucagon_secretion
+  - beta_cell_mass
+  consumers:
+  - endocrine
+- instance: UBERON:0001264
+  facet: exocrine
+  fields:
+  - enzyme_secretion
+  consumers:
+  - digestive
+- instance: UBERON:0000945
+  facet: absorption
+  fields:
+  - gastric_emptying_rate
+  - absorption_rate
+  consumers:
+  - digestive
+  - endocrine
+  - whole_body
+- instance: UBERON:0000160
+  facet: absorption
+  fields:
+  - absorption_rate
+  - transit_time
+  consumers:
+  - digestive
+  - endocrine
+  - whole_body
+- instance: UBERON:0002107
+  facet: digestive
+  fields:
+  - bile_flow
+  consumers:
+  - digestive
+- instance: UBERON:0002107
+  facet: metabolic
+  fields:
+  - hepatic_glucose_output
+  consumers:
+  - endocrine
+- instance: UBERON:0002107
+  facet: clearance
+  fields:
+  - clearance_factor
+  consumers:
+  - whole_body
+- instance: UBERON:0002107
+  facet: haematological
+  fields:
+  - clotting_factor_synthesis
+  consumers:
+  - haematological
+- instance: UBERON:0002113
+  facet: renal_function
+  fields:
+  - egfr
+  - creatinine_clearance
+  consumers:
+  - renal_urinary
+  - whole_body
+  - endocrine
+  - hepatobiliary
+- instance: UBERON:0002113
+  facet: filtration
+  fields:
+  - filtration_fraction
+  consumers:
+  - cardiovascular
+- instance: UBERON:0001255
+  facet: urinary
+  fields:
+  - bladder_volume
+  consumers:
+  - renal_urinary
+- instance: UBERON:0000056
+  facet: urinary
+  fields:
+  - obstruction
+  consumers:
+  - renal_urinary
+- instance: UBERON:0000057
+  facet: urinary
+  fields:
+  - obstruction
+  consumers:
+  - renal_urinary
+- instance: UBERON:0000178
+  facet: haematology
+  fields:
+  - hb
+  - haematocrit
+  - platelets
+  consumers:
+  - haematological
+- instance: UBERON:0000178
+  facet: oxygen_carriage
+  fields:
+  - hb
+  - o2_content
+  consumers:
+  - cardiovascular
+  - respiratory
+- instance: UBERON:0000178
+  facet: coagulation
+  fields:
+  - inr
+  consumers:
+  - haematological
+  - hepatobiliary
+- instance: UBERON:0002371
+  facet: haematopoiesis
+  fields:
+  - erythropoiesis_rate
+  consumers:
+  - haematological
+- instance: UBERON:0002371
+  facet: immune_output
+  fields:
+  - neutrophil_output
+  - lymphocyte_output
+  consumers:
+  - immune_lymphatic
+- instance: UBERON:0002106
+  facet: immune
+  fields:
+  - immune_activity
+  consumers:
+  - immune_lymphatic
+- instance: UBERON:0002106
+  facet: red_cell_clearance
+  fields:
+  - clearance_rate
+  consumers:
+  - haematological
+- instance: UBERON:0002370
+  facet: immune
+  fields:
+  - t_cell_output
+  consumers:
+  - immune_lymphatic
+- instance: UBERON:0000029
+  facet: immune
+  fields:
+  - immune_activity
+  consumers:
+  - immune_lymphatic
+- instance: UBERON:0002372
+  facet: immune
+  fields:
+  - immune_activity
+  consumers:
+  - immune_lymphatic
+- instance: UBERON:0001434
+  facet: mechanical
+  fields:
+  - bone_density
+  - range_of_motion
+  consumers:
+  - musculoskeletal
+  - whole_body
+- instance: UBERON:0000982
+  facet: mechanical
+  fields:
+  - range_of_motion
+  - joint_pain
+  consumers:
+  - musculoskeletal
+  - whole_body
+- instance: UBERON:0014892
+  facet: mechanical
+  fields:
+  - muscle_strength
+  - fatigue
+  consumers:
+  - musculoskeletal
+  - whole_body
+- instance: UBERON:0000043
+  facet: mechanical
+  fields:
+  - tendon_stiffness
+  consumers:
+  - musculoskeletal
+  - whole_body
+- instance: UBERON:0002418
+  facet: mechanical
+  fields:
+  - cartilage_integrity
+  consumers:
+  - musculoskeletal
+  - whole_body
+- instance: UBERON:0002097
+  facet: thermal
+  fields:
+  - skin_temp
+  - sweat_rate
+  consumers:
+  - integumentary
+  - nervous
+- instance: UBERON:0002097
+  facet: barrier
+  fields:
+  - barrier_integrity
+  consumers:
+  - immune_lymphatic
+- instance: UBERON:0000970
+  facet: sensory
+  fields:
+  - visual_acuity_logmar
+  consumers:
+  - sensory
+  - behavioural_cognitive
+- instance: UBERON:0001690
+  facet: sensory
+  fields:
+  - hearing_threshold
+  - vestibular_score
+  consumers:
+  - sensory
+  - behavioural_cognitive
+- instance: UBERON:0002268
+  facet: sensory
+  fields:
+  - olfaction_score
+  consumers:
+  - sensory
+  - behavioural_cognitive
+- instance: UBERON:0001727
+  facet: sensory
+  fields:
+  - taste_score
+  consumers:
+  - sensory
+  - behavioural_cognitive
+- instance: UBERON:0000991
+  facet: hormonal
+  fields:
+  - oestradiol
+  - progesterone
+  - testosterone
+  consumers:
+  - endocrine
+- instance: UBERON:0000991
+  facet: reproductive
+  fields:
+  - cycle_phase
+  consumers:
+  - reproductive
+- instance: UBERON:0000995
+  facet: hormonal
+  fields:
+  - endometrial_phase
+  consumers:
+  - endocrine
+- instance: UBERON:0000995
+  facet: reproductive
+  fields:
+  - uterine_state
+  consumers:
+  - reproductive
+- instance: UBERON:0000310
+  facet: reproductive
+  fields:
+  - screening_status
+  consumers:
+  - reproductive
+- instance: UBERON:0002367
+  facet: hormonal
+  fields:
+  - psa_state
+  consumers:
+  - endocrine
+- instance: UBERON:0002367
+  facet: reproductive
+  fields:
+  - screening_status
+  consumers:
+  - reproductive
+- instance: UBERON:0001987
+  facet: maternal_foetal
+  fields:
+  - placental_function
+  - gestation_weeks
+  consumers:
+  - whole_body
+- instance: atra:microbiome
+  facet: microbiome
+  fields:
+  - diversity_index
+  - dysbiosis
+  consumers:
+  - digestive
+  - immune_lymphatic

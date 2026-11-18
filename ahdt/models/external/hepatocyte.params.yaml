@@ -1,0 +1,12 @@
+# Hepatic glucose metabolism of the hepatocyte (Bulik et al. 2016), BioModels BIOMD0000000633.
+model_id: ahdt.hepatobiliary.hepatocyte_metabolism_and_detoxification
+sources:
+- id: bulik2016
+  citation: "Bulik S, Holzhütter HG, Berndt N. The relative importance of kinetic mechanisms
+    and variable enzyme abundances for the regulation of hepatic glucose metabolism: insights
+    from mathematical modeling. BMC Biol. 2016;14:15. doi:10.1186/s12915-016-0237-6"
+  via: "BioModels BIOMD0000000633, curated, CC0 1.0, SBML L2V4, sha256 ca360484d69831e4e334562b000e3113fa93cbe70617ca1d06298e2efee6a538"
+  url: https://www.ebi.ac.uk/biomodels/BIOMD0000000633
+params:
+  reference_blood_glucose: {value: 4.0, unit: mmol/L, source: bulik2016,
+                            note: plasma glucose of the model's default state}

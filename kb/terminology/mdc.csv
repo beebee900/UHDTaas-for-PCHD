@@ -1,0 +1,42 @@
+code,display,version,via,partition,term_code,reference_id,description,source
+65542,MDC_MOC_VMO_METRIC_NU,2024-12-05,tx.fhir.org,1,6,MDC_MOC_VMO_METRIC_NU,Numeric,https://tx.fhir.org/r4/CodeSystem/$lookup?system=urn:iso:std:iso:11073:10101&code=65542
+67887,MDC_ATTR_ID_TYPE,2024-12-05,tx.fhir.org,1,2351,MDC_ATTR_ID_TYPE,Type,https://tx.fhir.org/r4/CodeSystem/$lookup?system=urn:iso:std:iso:11073:10101&code=67887
+67984,MDC_ATTR_TIME_STAMP_ABS,2024-12-05,tx.fhir.org,1,2448,MDC_ATTR_TIME_STAMP_ABS,Absolute time stamp value for observations and derived objects.,https://tx.fhir.org/r4/CodeSystem/$lookup?system=urn:iso:std:iso:11073:10101&code=67984
+67990,MDC_ATTR_UNIT_CODE,2024-12-05,tx.fhir.org,1,2454,MDC_ATTR_UNIT_CODE,Unit-Code *,https://tx.fhir.org/r4/CodeSystem/$lookup?system=urn:iso:std:iso:11073:10101&code=67990
+68166,MDC_ATTR_METRIC_SPEC_SMALL,2024-12-05,tx.fhir.org,1,2630,MDC_ATTR_METRIC_SPEC_SMALL,Metric-Spec-Small,https://tx.fhir.org/r4/CodeSystem/$lookup?system=urn:iso:std:iso:11073:10101&code=68166
+68167,MDC_ATTR_SOURCE_HANDLE_REF,2024-12-05,tx.fhir.org,1,2631,MDC_ATTR_SOURCE_HANDLE_REF,Source-Handle-Reference,https://tx.fhir.org/r4/CodeSystem/$lookup?system=urn:iso:std:iso:11073:10101&code=68167
+68172,MDC_ATTR_NU_VAL_OBS_BASIC,2024-12-05,tx.fhir.org,1,2636,MDC_ATTR_NU_VAL_OBS_BASIC,Basic-Nu-Observed-Value,https://tx.fhir.org/r4/CodeSystem/$lookup?system=urn:iso:std:iso:11073:10101&code=68172
+68181,MDC_ATTR_ATTRIBUTE_VAL_MAP,2024-12-05,tx.fhir.org,1,2645,MDC_ATTR_ATTRIBUTE_VAL_MAP,Attribute-Value-Map,https://tx.fhir.org/r4/CodeSystem/$lookup?system=urn:iso:std:iso:11073:10101&code=68181
+68182,MDC_ATTR_NU_VAL_OBS_SIMP,2024-12-05,tx.fhir.org,1,2646,MDC_ATTR_NU_VAL_OBS_SIMP,Simple-Nu-Observed-Value,https://tx.fhir.org/r4/CodeSystem/$lookup?system=urn:iso:std:iso:11073:10101&code=68182
+68211,MDC_ATTR_METRIC_STRUCT_SMALL,2024-12-05,tx.fhir.org,1,2675,MDC_ATTR_METRIC_STRUCT_SMALL,Metric-Structure-Small,https://tx.fhir.org/r4/CodeSystem/$lookup?system=urn:iso:std:iso:11073:10101&code=68211
+68213,MDC_ATTR_NU_CMPD_VAL_OBS_BASIC,2024-12-05,tx.fhir.org,1,2677,MDC_ATTR_NU_CMPD_VAL_OBS_BASIC,Compound-Basic-Nu-Observed-Value,https://tx.fhir.org/r4/CodeSystem/$lookup?system=urn:iso:std:iso:11073:10101&code=68213
+68214,MDC_ATTR_ID_PHYSIO_LIST,2024-12-05,tx.fhir.org,1,2678,MDC_ATTR_ID_PHYSIO_LIST,Metric-Id-List,https://tx.fhir.org/r4/CodeSystem/$lookup?system=urn:iso:std:iso:11073:10101&code=68214
+68892,MDC_NOTI_CONFIG,2024-12-05,tx.fhir.org,1,3356,MDC_NOTI_CONFIG,MDS-Configuration-Event,https://tx.fhir.org/r4/CodeSystem/$lookup?system=urn:iso:std:iso:11073:10101&code=68892
+68893,MDC_NOTI_SCAN_REPORT_FIXED,2024-12-05,tx.fhir.org,1,3357,MDC_NOTI_SCAN_REPORT_FIXED,MDS-Dynamic-Data-Update-Fixed,https://tx.fhir.org/r4/CodeSystem/$lookup?system=urn:iso:std:iso:11073:10101&code=68893
+131330,MDC_ECG_ELEC_POTL_II,2024-12-05,tx.fhir.org,2,258,MDC_ECG_ELEC_POTL_II,Definition for base term 2::256 MDC_ECG_ELEC_POTL is: 1. ECG as recorded from a set of leads (time sample array is unspecified lead as a composite element of specified or unspecified leads),https://tx.fhir.org/r4/CodeSystem/$lookup?system=urn:iso:std:iso:11073:10101&code=131330
+147842,MDC_ECG_HEART_RATE,2024-12-05,tx.fhir.org,2,16770,MDC_ECG_HEART_RATE,heart rate,https://tx.fhir.org/r4/CodeSystem/$lookup?system=urn:iso:std:iso:11073:10101&code=147842
+149530,MDC_PULS_OXIM_PULS_RATE,2024-12-05,tx.fhir.org,2,18458,MDC_PULS_OXIM_PULS_RATE,Rate of blood pulse as obtained by pulse oximetry,https://tx.fhir.org/r4/CodeSystem/$lookup?system=urn:iso:std:iso:11073:10101&code=149530
+149546,MDC_PULS_RATE_NON_INV,2024-12-05,tx.fhir.org,2,18474,MDC_PULS_RATE_NON_INV,Noninvasive pulse rate,https://tx.fhir.org/r4/CodeSystem/$lookup?system=urn:iso:std:iso:11073:10101&code=149546
+150020,MDC_PRESS_BLD_NONINV,2024-12-05,tx.fhir.org,2,18948,MDC_PRESS_BLD_NONINV,"Pressure of the blood, obtained noninvasively (i.e., fingertip) – this refers normally to the measurement of diastolic and systolic together",https://tx.fhir.org/r4/CodeSystem/$lookup?system=urn:iso:std:iso:11073:10101&code=150020
+150021,MDC_PRESS_BLD_NONINV_SYS,2024-12-05,tx.fhir.org,2,18949,MDC_PRESS_BLD_NONINV_SYS,Noninvasive systolic blood pressure,https://tx.fhir.org/r4/CodeSystem/$lookup?system=urn:iso:std:iso:11073:10101&code=150021
+150022,MDC_PRESS_BLD_NONINV_DIA,2024-12-05,tx.fhir.org,2,18950,MDC_PRESS_BLD_NONINV_DIA,Noninvasive diastolic blood pressure,https://tx.fhir.org/r4/CodeSystem/$lookup?system=urn:iso:std:iso:11073:10101&code=150022
+150023,MDC_PRESS_BLD_NONINV_MEAN,2024-12-05,tx.fhir.org,2,18951,MDC_PRESS_BLD_NONINV_MEAN,Noninvasive mean blood pressure,https://tx.fhir.org/r4/CodeSystem/$lookup?system=urn:iso:std:iso:11073:10101&code=150023
+150364,MDC_TEMP_BODY,2024-12-05,tx.fhir.org,2,19292,MDC_TEMP_BODY,Body temperature,https://tx.fhir.org/r4/CodeSystem/$lookup?system=urn:iso:std:iso:11073:10101&code=150364
+150456,MDC_PULS_OXIM_SAT_O2,2024-12-05,tx.fhir.org,2,19384,MDC_PULS_OXIM_SAT_O2,,https://tx.fhir.org/r4/CodeSystem/$lookup?system=urn:iso:std:iso:11073:10101&code=150456
+152584,MDC_FLOW_AWAY_EXP_FORCED_PEAK,2024-12-05,tx.fhir.org,2,21512,MDC_FLOW_AWAY_EXP_FORCED_PEAK,peak expiratory flow,https://tx.fhir.org/r4/CodeSystem/$lookup?system=urn:iso:std:iso:11073:10101&code=152584
+152586,MDC_VOL_AWAY_EXP_FORCED_1S,2024-12-05,tx.fhir.org,2,21514,MDC_VOL_AWAY_EXP_FORCED_1S,forced expiratory volume at 1s,https://tx.fhir.org/r4/CodeSystem/$lookup?system=urn:iso:std:iso:11073:10101&code=152586
+160184,MDC_CONC_GLU_CAPILLARY_WHOLEBLOOD,2024-12-05,tx.fhir.org,2,29112,MDC_CONC_GLU_CAPILLARY_WHOLEBLOOD,Capillary whole blood glucose,https://tx.fhir.org/r4/CodeSystem/$lookup?system=urn:iso:std:iso:11073:10101&code=160184
+188736,MDC_MASS_BODY_ACTUAL,2024-12-05,tx.fhir.org,2,57664,MDC_MASS_BODY_ACTUAL,Patient actual weight,https://tx.fhir.org/r4/CodeSystem/$lookup?system=urn:iso:std:iso:11073:10101&code=188736
+188740,MDC_LEN_BODY_ACTUAL,2024-12-05,tx.fhir.org,2,57668,MDC_LEN_BODY_ACTUAL,Patient actual height,https://tx.fhir.org/r4/CodeSystem/$lookup?system=urn:iso:std:iso:11073:10101&code=188740
+188752,MDC_RATIO_MASS_BODY_LEN_SQ,2024-12-05,tx.fhir.org,2,57680,MDC_RATIO_MASS_BODY_LEN_SQ,body mass index,https://tx.fhir.org/r4/CodeSystem/$lookup?system=urn:iso:std:iso:11073:10101&code=188752
+262688,MDC_DIM_PERCENT,2024-12-05,tx.fhir.org,4,544,MDC_DIM_PERCENT,,https://tx.fhir.org/r4/CodeSystem/$lookup?system=urn:iso:std:iso:11073:10101&code=262688
+263441,MDC_DIM_CENTI_M,2024-12-05,tx.fhir.org,4,1297,MDC_DIM_CENTI_M,,https://tx.fhir.org/r4/CodeSystem/$lookup?system=urn:iso:std:iso:11073:10101&code=263441
+263744,MDC_DIM_X_L,2024-12-05,tx.fhir.org,4,1600,MDC_DIM_X_L,,https://tx.fhir.org/r4/CodeSystem/$lookup?system=urn:iso:std:iso:11073:10101&code=263744
+263875,MDC_DIM_KILO_G,2024-12-05,tx.fhir.org,4,1731,MDC_DIM_KILO_G,,https://tx.fhir.org/r4/CodeSystem/$lookup?system=urn:iso:std:iso:11073:10101&code=263875
+264096,MDC_DIM_KG_PER_M_SQ,2024-12-05,tx.fhir.org,4,1952,MDC_DIM_KG_PER_M_SQ,,https://tx.fhir.org/r4/CodeSystem/$lookup?system=urn:iso:std:iso:11073:10101&code=264096
+264274,MDC_DIM_MILLI_G_PER_DL,2024-12-05,tx.fhir.org,4,2130,MDC_DIM_MILLI_G_PER_DL,,https://tx.fhir.org/r4/CodeSystem/$lookup?system=urn:iso:std:iso:11073:10101&code=264274
+264864,MDC_DIM_BEAT_PER_MIN,2024-12-05,tx.fhir.org,4,2720,MDC_DIM_BEAT_PER_MIN,,https://tx.fhir.org/r4/CodeSystem/$lookup?system=urn:iso:std:iso:11073:10101&code=264864
+265216,MDC_DIM_X_L_PER_MIN,2024-12-05,tx.fhir.org,4,3072,MDC_DIM_X_L_PER_MIN,,https://tx.fhir.org/r4/CodeSystem/$lookup?system=urn:iso:std:iso:11073:10101&code=265216
+265987,MDC_DIM_KILO_PASCAL,2024-12-05,tx.fhir.org,4,3843,MDC_DIM_KILO_PASCAL,,https://tx.fhir.org/r4/CodeSystem/$lookup?system=urn:iso:std:iso:11073:10101&code=265987
+266016,MDC_DIM_MMHG,2024-12-05,tx.fhir.org,4,3872,MDC_DIM_MMHG,,https://tx.fhir.org/r4/CodeSystem/$lookup?system=urn:iso:std:iso:11073:10101&code=266016
+266866,MDC_DIM_MILLI_MOLE_PER_L,2024-12-05,tx.fhir.org,4,4722,MDC_DIM_MILLI_MOLE_PER_L,,https://tx.fhir.org/r4/CodeSystem/$lookup?system=urn:iso:std:iso:11073:10101&code=266866

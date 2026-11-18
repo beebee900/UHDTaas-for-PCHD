@@ -1,0 +1,47 @@
+# T3 reference-state items of the musculoskeletal twin (design 04, 4.5.3).
+- model_id: ahdt.musculoskeletal.skeleton_joints_tendons_and_cartilage
+  twin: musculoskeletal
+  intended_use: Range of motion, joint pain, strength and connective tissue state
+  instances:
+  - UBERON:0001434
+  - UBERON:0000982
+  - UBERON:0014892
+  - UBERON:0000043
+  - UBERON:0002418
+  variables:
+    range_of_motion:
+      unit: deg
+      ref: state.range_of_motion
+      tau_h: 336
+      justification: Relaxation time constant of a T3 state; a modelling assumption (design 01, rule
+        R3)
+    joint_pain:
+      unit: '{score}'
+      ref: state.joint_pain
+      tau_h: 48
+      justification: Relaxation time constant of a T3 state; a modelling assumption (design 01, rule
+        R3)
+    muscle_strength:
+      unit: '1'
+      ref: state.muscle_strength
+      tau_h: 336
+      justification: Relaxation time constant of a T3 state; a modelling assumption (design 01, rule
+        R3)
+    fatigue:
+      unit: '1'
+      ref: state.fatigue
+      tau_h: 12
+      justification: Relaxation time constant of a T3 state; a modelling assumption (design 01, rule
+        R3)
+    tendon_stiffness:
+      unit: '1'
+      ref: state.tendon_stiffness
+      tau_h: 720
+      justification: Relaxation time constant of a T3 state; a modelling assumption (design 01, rule
+        R3)
+    cartilage_integrity:
+      unit: '1'
+      ref: state.cartilage_integrity
+      tau_h: 8760
+      justification: Relaxation time constant of a T3 state; a modelling assumption (design 01, rule
+        R3)

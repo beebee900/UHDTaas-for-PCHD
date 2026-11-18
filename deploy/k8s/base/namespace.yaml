@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: atra
+  annotations:
+    linkerd.io/inject: enabled
+  labels:
+    atra.health/residency: NG
+    pod-security.kubernetes.io/enforce: baseline

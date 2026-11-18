@@ -1,0 +1,39 @@
+{
+  "$id": "https://atra.local/schemas/tools/ahdt.data.genome.args.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "as_of": {
+      "anyOf": [
+        {
+          "format": "date-time",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "As Of"
+    },
+    "genes": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "title": "Genes",
+      "type": "array"
+    },
+    "hdt_id": {
+      "pattern": "^hdt-[0-9a-f]{12}$",
+      "title": "Hdt Id",
+      "type": "string"
+    }
+  },
+  "required": [
+    "hdt_id",
+    "genes"
+  ],
+  "title": "GenomeArgs",
+  "type": "object"
+}

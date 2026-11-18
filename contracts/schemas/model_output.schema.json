@@ -1,0 +1,146 @@
+{
+  "$defs": {
+    "ConformalSet": {
+      "additionalProperties": false,
+      "properties": {
+        "set": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Set",
+          "type": "array"
+        }
+      },
+      "required": [
+        "set"
+      ],
+      "title": "ConformalSet",
+      "type": "object"
+    },
+    "Interval": {
+      "additionalProperties": false,
+      "properties": {
+        "level": {
+          "title": "Level",
+          "type": "number"
+        },
+        "lower": {
+          "title": "Lower",
+          "type": "number"
+        },
+        "upper": {
+          "title": "Upper",
+          "type": "number"
+        }
+      },
+      "required": [
+        "lower",
+        "upper",
+        "level"
+      ],
+      "title": "Interval",
+      "type": "object"
+    },
+    "StdDev": {
+      "additionalProperties": false,
+      "properties": {
+        "std": {
+          "title": "Std",
+          "type": "number"
+        }
+      },
+      "required": [
+        "std"
+      ],
+      "title": "StdDev",
+      "type": "object"
+    },
+    "Uncertainty": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Interval"
+        },
+        {
+          "$ref": "#/$defs/StdDev"
+        },
+        {
+          "$ref": "#/$defs/ConformalSet"
+        }
+      ]
+    }
+  },
+  "$id": "https://atra.local/schemas/model_output.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "created_at": {
+      "format": "date-time",
+      "title": "Created At",
+      "type": "string"
+    },
+    "hdt_id": {
+      "title": "Hdt Id",
+      "type": "string"
+    },
+    "inputs_ref": {
+      "title": "Inputs Ref",
+      "type": "string"
+    },
+    "model_id": {
+      "title": "Model Id",
+      "type": "string"
+    },
+    "output_id": {
+      "title": "Output Id",
+      "type": "string"
+    },
+    "uncertainty": {
+      "additionalProperties": {
+        "$ref": "#/$defs/Uncertainty"
+      },
+      "title": "Uncertainty",
+      "type": "object"
+    },
+    "values": {
+      "additionalProperties": {
+        "anyOf": [
+          {
+            "type": "number"
+          },
+          {
+            "type": "string"
+          },
+          {
+            "items": {
+              "type": "number"
+            },
+            "type": "array"
+          },
+          {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        ]
+      },
+      "title": "Values",
+      "type": "object"
+    },
+    "version": {
+      "title": "Version",
+      "type": "string"
+    }
+  },
+  "required": [
+    "output_id",
+    "model_id",
+    "version",
+    "hdt_id",
+    "values",
+    "inputs_ref",
+    "created_at"
+  ],
+  "title": "ModelOutput",
+  "type": "object"
+}

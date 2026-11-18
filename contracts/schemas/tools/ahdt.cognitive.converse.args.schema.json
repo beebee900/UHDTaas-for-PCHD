@@ -1,0 +1,47 @@
+{
+  "$id": "https://atra.local/schemas/tools/ahdt.cognitive.converse.args.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "hdt_id": {
+      "pattern": "^hdt-[0-9a-f]{12}$",
+      "title": "Hdt Id",
+      "type": "string"
+    },
+    "language": {
+      "enum": [
+        "en",
+        "yo",
+        "ha",
+        "ig",
+        "pcm"
+      ],
+      "title": "Language",
+      "type": "string"
+    },
+    "session_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Session Id"
+    },
+    "utterance": {
+      "minLength": 1,
+      "title": "Utterance",
+      "type": "string"
+    }
+  },
+  "required": [
+    "hdt_id",
+    "utterance",
+    "language"
+  ],
+  "title": "ConverseArgs",
+  "type": "object"
+}

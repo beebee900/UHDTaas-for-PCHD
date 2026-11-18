@@ -1,0 +1,68 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "consent",
+  "url": "https://atra.health/fhir/Questionnaire/consent",
+  "version": "1.0.0",
+  "status": "active",
+  "title": "Consent to use my health data",
+  "item": [
+    {
+      "linkId": "care",
+      "text": "Use my record for my care at this facility",
+      "type": "boolean",
+      "required": true
+    },
+    {
+      "linkId": "emergency",
+      "text": "Use my record in an emergency at any facility",
+      "type": "boolean",
+      "required": false
+    },
+    {
+      "linkId": "self_management",
+      "text": "Use my twin to support me at home",
+      "type": "boolean",
+      "required": false
+    },
+    {
+      "linkId": "public_health",
+      "text": "Share de-identified data for public health",
+      "type": "boolean",
+      "required": false
+    },
+    {
+      "linkId": "research",
+      "text": "Share de-identified data for research",
+      "type": "boolean",
+      "required": false
+    },
+    {
+      "linkId": "operations",
+      "text": "Use my data to run and improve the service",
+      "type": "boolean",
+      "required": false
+    },
+    {
+      "linkId": "proxy",
+      "text": "Someone may decide for me if I cannot",
+      "type": "group",
+      "item": [
+        {
+          "linkId": "proxy.name",
+          "text": "Name",
+          "type": "string"
+        },
+        {
+          "linkId": "proxy.relationship",
+          "text": "Relationship to me",
+          "type": "string"
+        },
+        {
+          "linkId": "proxy.phone",
+          "text": "Phone number",
+          "type": "string"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "$id": "https://atra.local/schemas/connectors/registry_case/v1.0",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "age_band": {
+      "type": "string"
+    },
+    "condition": {
+      "type": "string"
+    },
+    "outcome": {
+      "type": "string"
+    },
+    "sex": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "condition",
+    "age_band",
+    "sex",
+    "state",
+    "outcome"
+  ],
+  "title": "registry_case v1.0",
+  "type": "object"
+}

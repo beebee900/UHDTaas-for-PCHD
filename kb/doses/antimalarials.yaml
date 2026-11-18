@@ -1,0 +1,165 @@
+# Antimalarial regimens. A weight band holds from `min_kg` (inclusive) to `below_kg` (exclusive).
+# Combination doses list each component in mg per dose.
+
+- id: dose.artemether_lumefantrine
+  drug: artemether + lumefantrine
+  atc: P01BF01
+  route: oral
+  doses_per_day: 2
+  duration_days: 3
+  first_two_doses_apart_h: 8
+  weight_bands:
+  - {below_kg: 5, mg: {artemether: 5, lumefantrine: 60}}
+  - {min_kg: 5, below_kg: 15, mg: {artemether: 20, lumefantrine: 120}}
+  - {min_kg: 15, below_kg: 25, mg: {artemether: 40, lumefantrine: 240}}
+  - {min_kg: 25, below_kg: 35, mg: {artemether: 60, lumefantrine: 360}}
+  - {min_kg: 35, mg: {artemether: 80, lumefantrine: 480}}
+  target_total_mg_per_kg: {artemether: [5, 24], lumefantrine: [29, 144]}
+  advice: Take immediately after food or a fat-containing drink such as milk.
+  provenance:
+    source: who-malaria-2026
+    section: 5.2.1.1.2 Dosing of ACTs
+    page: 175
+    derived:
+      doses_per_day: Text "twice a day".
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: dose.artesunate_amodiaquine
+  drug: artesunate + amodiaquine
+  atc: P01BF03
+  route: oral
+  doses_per_day: 1
+  duration_days: 3
+  weight_bands:
+  - {below_kg: 9, mg: {artesunate: 25, amodiaquine: 67.5}}
+  - {min_kg: 9, below_kg: 18, mg: {artesunate: 50, amodiaquine: 135}}
+  - {min_kg: 18, below_kg: 36, mg: {artesunate: 100, amodiaquine: 270}}
+  - {min_kg: 36, mg: {artesunate: 200, amodiaquine: 540}}
+  target_mg_per_kg_per_day: {artesunate: [2, 10], amodiaquine: [7.5, 15]}
+  provenance:
+    source: who-malaria-2026
+    section: 5.2.1.1.2 Dosing of ACTs
+    page: 176
+    derived:
+      doses_per_day: Text "once a day".
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: dose.artesunate_mefloquine
+  drug: artesunate + mefloquine
+  atc: P01BF02
+  route: oral
+  doses_per_day: 1
+  duration_days: 3
+  weight_bands:
+  - {below_kg: 9, mg: {artesunate: 25, mefloquine_hydrochloride: 55}}
+  - {min_kg: 9, below_kg: 18, mg: {artesunate: 50, mefloquine_hydrochloride: 110}}
+  - {min_kg: 18, below_kg: 30, mg: {artesunate: 100, mefloquine_hydrochloride: 220}}
+  - {min_kg: 30, mg: {artesunate: 200, mefloquine_hydrochloride: 440}}
+  target_mg_per_kg_per_day: {artesunate: [2, 10], mefloquine: [7, 11]}
+  provenance:
+    source: who-malaria-2026
+    section: 5.2.1.1.2 Dosing of ACTs
+    page: 177
+    derived:
+      doses_per_day: Text "once a day".
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: dose.artesunate_sp
+  drug: artesunate + sulfadoxine-pyrimethamine
+  atc: P01BF09
+  route: oral
+  duration_days: 3
+  weight_bands:
+  - {below_kg: 10, mg: {artesunate_daily: 25, sulfadoxine_day1: 250, pyrimethamine_day1: 12.5}}
+  - {min_kg: 10, below_kg: 25, mg: {artesunate_daily: 50, sulfadoxine_day1: 500,
+                                   pyrimethamine_day1: 25}}
+  - {min_kg: 25, below_kg: 50, mg: {artesunate_daily: 100, sulfadoxine_day1: 1000,
+                                   pyrimethamine_day1: 50}}
+  - {min_kg: 50, mg: {artesunate_daily: 200, sulfadoxine_day1: 1500, pyrimethamine_day1: 75}}
+  provenance:
+    source: who-malaria-2026
+    section: 5.2.1.1.2 Dosing of ACTs
+    page: 177
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: dose.dihydroartemisinin_piperaquine
+  drug: dihydroartemisinin + piperaquine
+  atc: P01BF05
+  route: oral
+  doses_per_day: 1
+  duration_days: 3
+  weight_bands:
+  - {below_kg: 8, mg: {dihydroartemisinin: 20, piperaquine: 160}}
+  - {min_kg: 8, below_kg: 11, mg: {dihydroartemisinin: 30, piperaquine: 240}}
+  - {min_kg: 11, below_kg: 17, mg: {dihydroartemisinin: 40, piperaquine: 320}}
+  - {min_kg: 17, below_kg: 25, mg: {dihydroartemisinin: 60, piperaquine: 480}}
+  - {min_kg: 25, below_kg: 36, mg: {dihydroartemisinin: 80, piperaquine: 640}}
+  - {min_kg: 36, below_kg: 60, mg: {dihydroartemisinin: 120, piperaquine: 960}}
+  - {min_kg: 60, below_kg: 80, mg: {dihydroartemisinin: 160, piperaquine: 1280}}
+  - {min_kg: 80, mg: {dihydroartemisinin: 200, piperaquine: 1600}}
+  minimum_mg_per_kg_per_day_below_25kg: {dihydroartemisinin: 2.5, piperaquine: 20}
+  advice: Avoid high-fat meals; they raise the risk of QT prolongation.
+  provenance:
+    source: who-malaria-2026
+    section: 5.2.1.1.2 Dosing of ACTs
+    page: 178
+    derived:
+      doses_per_day: Text "given once a day".
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: dose.artesunate_parenteral
+  drug: artesunate
+  atc: P01BE03
+  route: [intravenous, intramuscular]
+  mg_per_kg_per_dose:
+  - {below_kg: 20, mg_per_kg: 3}
+  - {min_kg: 20, mg_per_kg: 2.4}
+  minimum_parenteral_h: 24
+  then: Complete with 3 days of an ACT once oral medication is tolerated.
+  provenance:
+    source: who-malaria-2026
+    section: 5.2.2.1 Artesunate
+    page: 216
+    also:
+    - {source: who-malaria-2026, section: 5.2.2.1 Artesunate, page: 218}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: dose.artesunate_rectal_prereferral
+  drug: artesunate
+  atc: P01BE03
+  route: rectal
+  mg_per_kg_single_dose: 10
+  age_below_years: 6
+  provenance:
+    source: who-malaria-2026
+    section: 5.2.2.3 Pre-referral treatment options
+    page: 222
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: dose.primaquine_single_low_dose
+  drug: primaquine
+  atc: P01BA03
+  route: oral
+  mg_per_kg_single_dose: 0.25
+  setting: low transmission only; not in moderate to high transmission areas
+  provenance:
+    source: who-malaria-2026
+    section: 5.2.1.3 Reducing the transmissibility of treated P. falciparum infections
+    page: 180
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified

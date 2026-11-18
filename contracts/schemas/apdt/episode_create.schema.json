@@ -1,0 +1,47 @@
+{
+  "$id": "https://atra.local/schemas/apdt/episode_create.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "encounter_class": {
+      "default": "AMB",
+      "enum": [
+        "AMB",
+        "EMER",
+        "IMP",
+        "HH",
+        "VR"
+      ],
+      "title": "Encounter Class",
+      "type": "string"
+    },
+    "hdt_id": {
+      "pattern": "^hdt-[0-9a-f]{12}$",
+      "title": "Hdt Id",
+      "type": "string"
+    },
+    "reason": {
+      "minLength": 1,
+      "title": "Reason",
+      "type": "string"
+    },
+    "responsible_clinician": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Responsible Clinician"
+    }
+  },
+  "required": [
+    "hdt_id",
+    "reason"
+  ],
+  "title": "EpisodeCreate",
+  "type": "object"
+}

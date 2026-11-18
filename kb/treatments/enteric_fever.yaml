@@ -1,0 +1,93 @@
+# Enteric fever. The empiric choice depends on severity and on the local risk of
+# fluoroquinolone resistance in Salmonella Typhi and Paratyphi (`fq_resistance_risk`).
+
+- id: tx.enteric_fever.adult.low_fq_risk.ciprofloxacin
+  condition: cond.enteric_fever
+  severity: [mild, severe]
+  preference: first_line
+  regimen: dose.ciprofloxacin_oral_adult
+  duration_days: {mild: 7, severe: 10}
+  eligibility: {patient_group: adult, fq_resistance_risk: low, oral_intake: true, pregnancy: [none]}
+  exclusions: [ix.quinolones.pregnancy]
+  provenance:
+    source: who-aware-2022
+    section: 15. Enteric fever
+    page: 202
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: tx.enteric_fever.adult.high_fq_risk.azithromycin
+  condition: cond.enteric_fever
+  severity: mild
+  preference: first_line
+  regimen: dose.azithromycin_oral_adult_enteric
+  duration_days: 7
+  eligibility: {patient_group: adult, fq_resistance_risk: high, oral_intake: true}
+  provenance:
+    source: who-aware-2022
+    section: 15. Enteric fever
+    page: 202
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: tx.enteric_fever.adult.high_fq_risk.ceftriaxone
+  condition: cond.enteric_fever
+  severity: severe
+  preference: first_line
+  regimen: dose.ceftriaxone_iv_adult_enteric
+  duration_days: 10
+  eligibility: {patient_group: adult, fq_resistance_risk: high}
+  provenance:
+    source: who-aware-2022
+    section: 15. Enteric fever
+    page: 202
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: tx.enteric_fever.child.low_fq_risk.ciprofloxacin
+  condition: cond.enteric_fever
+  severity: [mild, severe]
+  preference: first_line
+  regimen: dose.ciprofloxacin_oral_child
+  duration_days: {mild: 7, severe: 10}
+  eligibility: {patient_group: child, fq_resistance_risk: low, oral_intake: true}
+  provenance:
+    source: who-aware-2022
+    section: 15. Enteric fever
+    page: 203
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: tx.enteric_fever.child.high_fq_risk.azithromycin
+  condition: cond.enteric_fever
+  severity: mild
+  preference: first_line
+  regimen: dose.azithromycin_oral_child_enteric
+  duration_days: 7
+  eligibility: {patient_group: child, fq_resistance_risk: high, oral_intake: true}
+  provenance:
+    source: who-aware-2022
+    section: 15. Enteric fever
+    page: 203
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: tx.enteric_fever.child.high_fq_risk.ceftriaxone
+  condition: cond.enteric_fever
+  severity: severe
+  preference: first_line
+  regimen: dose.ceftriaxone_iv_child
+  duration_days: 10
+  eligibility: {patient_group: child, fq_resistance_risk: high}
+  provenance:
+    source: who-aware-2022
+    section: 15. Enteric fever
+    page: 203
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified

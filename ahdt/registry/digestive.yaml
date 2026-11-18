@@ -1,0 +1,68 @@
+kind: digestive
+name: Digestive DT
+referent: Gastrointestinal tract, exocrine pancreas and microbiome
+fields:
+- name: energy_intake
+  ucum: kcal/d
+  ref: range.energy_intake
+  source:
+  - self_report
+- name: fluid_intake
+  ucum: mL/d
+  ref: range.fluid_intake
+  source:
+  - self_report
+- name: oral_intake_ok
+  ucum: '1'
+  ref: range.oral_intake_ok
+  source:
+  - self_report
+  - manual
+- name: stool_frequency
+  ucum: /d
+  ref: range.stool_frequency
+  source:
+  - self_report
+- name: carb_intake
+  ucum: g
+  ref: range.carb_intake
+  source:
+  - self_report
+models:
+- ahdt.digestive.stomach_and_intestine_absorption
+- ahdt.digestive.mouth_oesophagus_rectum_and_gut_epithelium
+- ahdt.digestive.exocrine_pancreas_facet
+- ahdt.digestive.microbiome
+- ahdt.digestive.nutrition_and_hydration
+owns_instances:
+- UBERON:0000945
+- UBERON:0000160
+- atra:microbiome
+reads_facets:
+- instance: UBERON:0001264
+  facet: exocrine
+- instance: UBERON:0002107
+  facet: digestive
+standing_goals:
+- id: dig.nutrition
+  text: Keep nutrition and hydration balance current
+  check:
+    kind: freshness
+    params:
+      fields:
+      - energy_intake
+      - fluid_intake
+      max_age_s: 86400
+- id: dig.meal_symptom
+  text: Relate meals to symptoms
+  check:
+    kind: model_flag
+    params:
+      model: ahdt.digestive.nutrition_and_hydration
+      threshold:
+        kb: goal.dig.association_p
+connectors_out:
+- DigestiveEndocrineConnector
+- SystemToWholeBodyConnector
+connectors_in:
+- NormsConnector

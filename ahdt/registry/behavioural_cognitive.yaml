@@ -1,0 +1,71 @@
+kind: behavioural_cognitive
+name: Behavioural and Cognitive DT
+referent: Cognition, mood, behaviour and adherence
+fields:
+- name: phq9
+  loinc: 44261-6
+  ucum: '{score}'
+  ref: range.phq9
+  source:
+  - self_report
+- name: gad7
+  loinc: 70274-6
+  ucum: '{score}'
+  ref: range.gad7
+  source:
+  - self_report
+- name: adherence
+  ucum: '1'
+  ref: range.adherence
+  source:
+  - derived
+- name: active_minutes
+  ucum: min
+  ref: range.active_minutes
+  source:
+  - wearable
+- name: screen_time
+  ucum: min
+  ref: range.screen_time
+  source:
+  - device
+- name: preferred_language
+  ucum: '1'
+  ref: range.preferred_language
+  source:
+  - self_report
+models:
+- ahdt.behavioural_cognitive.cognition_and_workload
+- ahdt.behavioural_cognitive.affect_and_stress
+- ahdt.behavioural_cognitive.mental_health_trajectory
+- ahdt.behavioural_cognitive.decision_making_and_preferences
+- ahdt.behavioural_cognitive.lifestyle
+- ahdt.behavioural_cognitive.motor_skill
+- ahdt.behavioural_cognitive.communication_and_language
+- ahdt.behavioural_cognitive.adherence
+- ahdt.behavioural_cognitive.traits
+owns_instances: []
+reads_facets: []
+standing_goals:
+- id: behav.wellbeing
+  text: Track cognition, mood, adherence and lifestyle
+  check:
+    kind: freshness
+    params:
+      fields:
+      - phq9
+      - adherence
+      max_age_s: 1209600
+- id: behav.support
+  text: Keep a behaviour-change support plan
+  check:
+    kind: human_decision
+    params:
+      plan: behaviour_change
+connectors_out:
+- BehaviourToSocialConnector
+connectors_in:
+- ContextToBehaviourConnector
+- EndocrineBehaviouralConnector
+- MusculoskeletalBehaviouralConnector
+- SensoryBehaviouralConnector

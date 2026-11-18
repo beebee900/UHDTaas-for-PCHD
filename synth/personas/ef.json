@@ -1,0 +1,87 @@
+{
+ "age_years": 19,
+ "episodes": [],
+ "facts": {
+  "conditions": [
+   "cond.scd_crisis"
+  ],
+  "medications": [
+   {
+    "atc": "N02AA01",
+    "name": "morphine",
+    "twin": "haematological"
+   },
+   {
+    "atc": "L01XX05",
+    "name": "hydroxycarbamide",
+    "twin": "haematological"
+   }
+  ],
+  "observations": [
+   {
+    "code": "718-7",
+    "field": "hb",
+    "unit": "g/dL",
+    "value": 7.1
+   }
+  ],
+  "phenotypes": [
+   {
+    "hpo": "HP:0002653",
+    "label": "Bone pain",
+    "twin": "musculoskeletal"
+   }
+  ]
+ },
+ "findings": [
+  "find.bone_pain"
+ ],
+ "hdt_id": "hdt-ca1a4365ace6",
+ "initials": "E.F.",
+ "key": "ef",
+ "labs": [
+  {
+   "code": {
+    "code": "14682-9",
+    "system": "http://loinc.org"
+   },
+   "device_id": null,
+   "effective_time": "2026-01-31T00:00:00+00:00",
+   "hdt_id": "hdt-ca1a4365ace6",
+   "idempotency_key": "lab-hdt-ca1a4365ace6-creatinine-0",
+   "record_id": "lab-hdt-ca1a4365ace6-creatinine-0",
+   "source": "manual",
+   "unit": "umol/L",
+   "value": 215.51
+  },
+  {
+   "code": {
+    "code": "718-7",
+    "system": "http://loinc.org"
+   },
+   "device_id": null,
+   "effective_time": "2026-01-31T00:00:00+00:00",
+   "hdt_id": "hdt-ca1a4365ace6",
+   "idempotency_key": "lab-hdt-ca1a4365ace6-hb-1",
+   "record_id": "lab-hdt-ca1a4365ace6-hb-1",
+   "source": "manual",
+   "unit": "g/dL",
+   "value": 13.68
+  }
+ ],
+ "language": "yo",
+ "notes": [
+  {
+   "date": "2026-09-28T09:00:00+00:00",
+   "hdt_id": "hdt-ca1a4365ace6",
+   "synthetic": true,
+   "text": "History of Present Illness: 19-year-old female presenting with bone pain.\nAssessment: Sickle cell disease with vaso-occlusive crisis.\nPlan: treat per guideline and review in 48 hours.",
+   "type": "note",
+   "writer": "template"
+  }
+ ],
+ "observations": [],
+ "scenario": "sickle cell vaso-occlusive crisis",
+ "sex": "female",
+ "tenant_id": "fac-a"
+}

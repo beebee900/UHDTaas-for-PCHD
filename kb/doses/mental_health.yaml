@@ -1,0 +1,32 @@
+# Antidepressants (mhGAP Intervention Guide 2.0, Depression module, Table 1).
+- id: dose.amitriptyline
+  drug: amitriptyline
+  atc: N06AA09
+  route: oral
+  adult: {start_mg: 25, timing: bedtime, increase_mg_per_week: [25, 50], target_mg_per_day: [100, 150],
+          max_mg_per_day: 300, minimum_effective_mg: 75}
+  elderly_or_medically_ill: {start_mg: 25, target_mg_per_day: [50, 75], max_mg_per_day: 100}
+  children_adolescents: do not use
+  provenance:
+    source: who-mhgap-ig-2016
+    section: "AMITRIPTYLINE"
+    page: 37
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: dose.fluoxetine
+  drug: fluoxetine
+  atc: N06AB03
+  route: oral
+  adult: {start_mg: 10, start_weeks: 1, then_mg: 20, if_no_response_after_weeks: 6, increase_to_mg: 40,
+          max_mg_per_day: 80}
+  elderly_or_medically_ill: {start_mg: 10, then_mg: 20, max_mg_per_day: 40}
+  adolescents: {start_mg: 10, if_no_response_after_weeks: 6, increase_to_mg: 20, max_mg_per_day: 40}
+  provenance:
+    source: who-mhgap-ig-2016
+    section: "FLUOXETINE"
+    page: 37
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified

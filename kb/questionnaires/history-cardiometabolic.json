@@ -1,0 +1,100 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "history-cardiometabolic",
+  "url": "https://atra.health/fhir/Questionnaire/history-cardiometabolic",
+  "version": "1.0.0",
+  "status": "active",
+  "title": "History: cardiometabolic",
+  "item": [
+    {
+      "linkId": "onset_days",
+      "text": "How many days ago did this illness start?",
+      "type": "integer",
+      "required": true
+    },
+    {
+      "linkId": "find.abdominal_pain",
+      "text": "Abdominal pain?",
+      "type": "boolean",
+      "code": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "21522001",
+          "display": "Abdominal pain"
+        }
+      ]
+    },
+    {
+      "linkId": "find.headache",
+      "text": "Headache?",
+      "type": "boolean",
+      "code": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "25064002",
+          "display": "Headache"
+        }
+      ]
+    },
+    {
+      "linkId": "find.polydipsia",
+      "text": "Excessive thirst?",
+      "type": "boolean",
+      "code": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "17173007",
+          "display": "Excessive thirst"
+        }
+      ]
+    },
+    {
+      "linkId": "find.polyuria",
+      "text": "Polyuria?",
+      "type": "boolean",
+      "code": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "28442001",
+          "display": "Polyuria"
+        }
+      ]
+    },
+    {
+      "linkId": "find.visual_disturbance",
+      "text": "Visual disturbance?",
+      "type": "boolean",
+      "code": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "63102001",
+          "display": "Visual disturbance"
+        }
+      ]
+    },
+    {
+      "linkId": "find.vomiting",
+      "text": "Vomiting?",
+      "type": "boolean",
+      "code": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "422400008",
+          "display": "Vomiting"
+        }
+      ]
+    },
+    {
+      "linkId": "find.weight_loss",
+      "text": "Weight loss?",
+      "type": "boolean",
+      "code": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "262285001",
+          "display": "Weight loss"
+        }
+      ]
+    }
+  ]
+}

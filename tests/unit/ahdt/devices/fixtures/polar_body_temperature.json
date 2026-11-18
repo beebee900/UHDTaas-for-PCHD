@@ -1,0 +1,22 @@
+{
+ "source_url": "https://www.polar.com/accesslink-api/",
+ "retrieved": "2026-10-10",
+ "kind": "verbatim_sample",
+ "note": "Section 'Body temperature data', GET /v3/users/biosensing/bodytemperature, 200 Response.",
+ "body": [
+  {
+   "source_device_id": "1111AAAA",
+   "measurement_type": "TM_CORE_TEMPERATURE",
+   "sensor_location": "SL_PROXIMAL",
+   "start_time": "2023-10-20T04:00:00",
+   "end_time": "2023-10-20T05:00:00",
+   "modified_time": "2023-10-20T04:00:00",
+   "samples": [
+    {
+     "temperature_celsius": 36.5,
+     "recording_time_delta_milliseconds": 123
+    }
+   ]
+  }
+ ]
+}

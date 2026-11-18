@@ -1,0 +1,40 @@
+kind: population
+name: Population DT
+referent: The platform-wide cohort
+fields:
+- name: cohort_size
+  ucum: '1'
+  ref: range.cohort_size
+  source:
+  - derived
+models:
+- ahdt.population.cohort
+- ahdt.population.epidemiological
+- ahdt.population.public_health
+- ahdt.population.in_silico_trial
+- ahdt.population.demographic
+- ahdt.population.population_priors_and_norms
+owns_instances: []
+reads_facets: []
+standing_goals:
+- id: pop.publish
+  text: Publish priors and norms
+  check:
+    kind: freshness
+    params:
+      fields:
+      - cohort_size
+      max_age_s: 604800
+- id: pop.aggregate
+  text: Aggregate de-identified contributions
+  check:
+    kind: composite
+    params:
+      k:
+        kb: privacy.k_min
+connectors_out:
+- NormsConnector
+- PriorConnector
+connectors_in:
+- IndividualToPopulationConnector
+- RegistryContributionConnector

@@ -1,0 +1,950 @@
+{
+  "app": {
+    "title": "ATRA Health",
+    "language": "Langwej",
+    "tagline": "Digital twin dem for patient and for person, wey get agents"
+  },
+  "locale": {
+    "en": "English",
+    "yo": "Yorùbá",
+    "ha": "Hausa",
+    "ig": "Igbo",
+    "pcm": "Naijá"
+  },
+  "login": {
+    "title": "Enter inside",
+    "username": "Your username",
+    "password": "Your password",
+    "submit": "Enter",
+    "failed": "Di username or password no correct.",
+    "overline": "ATRA Health",
+    "headline": "Digital twin dem wey dey help care, but na doctor dey decide everything",
+    "about": "Every person get one human twin for life, wey get 17 member twin. Every care episode for facility dey open one patient twin. Agents dey prepare di work and clinicians dey decide.",
+    "demo": "Demo sign-in dem",
+    "demoAbout": "Pick one username make e fill di box. Di passwords dey inside di demo login sheet.",
+    "groups": {
+      "clinical": "Clinical staff",
+      "patients": "Patients, owners and carers",
+      "governance": "Governance",
+      "population": "Research and public health"
+    }
+  },
+  "dashboard": {
+    "signOut": "Comot",
+    "worklist": "Work wey dey ground",
+    "worklistEmpty": "No work dey open.",
+    "unavailable": "Dis info no dey now.",
+    "open": "Open di workbench",
+    "openFor": "Open di workbench for {title}"
+  },
+  "status": {
+    "normal": "E dey normal",
+    "watch": "Watch am",
+    "alert": "Danger",
+    "unavailable": "E no dey"
+  },
+  "twin": {
+    "cardiovascular": "Heart and blood pipe",
+    "respiratory": "Breathing",
+    "nervous": "Brain and nerve",
+    "sensory": "Body sense dem",
+    "digestive": "Food digestion",
+    "hepatobiliary": "Liver",
+    "renal_urinary": "Kidney and bladder",
+    "endocrine": "Hormone and blood sugar",
+    "immune_lymphatic": "Body defence system",
+    "haematological": "Blood",
+    "musculoskeletal": "Muscle and bone",
+    "integumentary": "Skin",
+    "reproductive": "Health for born pikin",
+    "whole_body": "Di whole body",
+    "behavioural_cognitive": "Mind and character",
+    "social": "Life with people",
+    "population": "Di people dem"
+  },
+  "workbench": {
+    "title": "Doctor workbench",
+    "back": "Main page",
+    "episode": "Episode {id}",
+    "reason": "Wetin bring am: {reason}",
+    "clinician": "Doctor: {name}",
+    "episodeStatus": {
+      "open": "E dey open",
+      "closed": "E don close"
+    },
+    "degradedTitle": "Some evidence no dey",
+    "degraded": "AHDT no fit bring all di evidence. Di advice dem use di data wey dey.",
+    "missing": "Wetin no dey: {items}.",
+    "differential": "Sickness wey e fit be",
+    "noDifferential": "No list of sickness wey e fit be yet.",
+    "probability": "Chance {value}",
+    "tests": "Test wey we recommend",
+    "noTests": "We no recommend any test.",
+    "treatments": "Treatment wey dey",
+    "noTreatments": "No treatment option yet.",
+    "noSafetyIssues": "We no see any safety wahala.",
+    "unified": "Everything for one place",
+    "noUnified": "Nothing don show yet.",
+    "source": {
+      "apdt": "APDT",
+      "ahdt": "AHDT"
+    },
+    "twins": "Human digital twin",
+    "openTwin": "Open di {twin} twin",
+    "patientExplanation": "Explanation for di patient",
+    "decision": {
+      "title": "Decision",
+      "starting": "We dey prepare di decision.",
+      "none": "No decision dey wait.",
+      "accept": "Accept am",
+      "edit": "Change am",
+      "reject": "Reject am",
+      "recorded": "We don record di decision: {decision}.",
+      "needsRole": "Your role no fit make dis decision.",
+      "failed": "Di decision no fit send.",
+      "editLabel": "Wetin you change",
+      "reasonLabel": "Reason",
+      "cancel": "Leave am",
+      "confirm": "Confirm am",
+      "onlyMo": "Na medical officer go decide di diagnosis.",
+      "start": {
+        "diagnosis": "Prepare di diagnosis decision",
+        "treatment": "Prepare di prescription",
+        "care": "Prepare di care plan"
+      },
+      "waitingFor": "Dis step dey wait for {role}: {step}.",
+      "yourStep": "Your step: {step}.",
+      "step": {
+        "accept_diagnosis": "accept di working diagnosis",
+        "sign_prescription": "sign di prescription",
+        "verify_prescription": "verify di prescription",
+        "approve_care_plan": "approve di care plan",
+        "patient_consent_to_treatment": "agree to di treatment"
+      },
+      "sign": "Sign",
+      "verify": "Verify",
+      "consent": "Agree",
+      "query": "Ask question",
+      "decline": "Refuse",
+      "dialog": {
+        "edit": "Change di recommendation",
+        "query": "Ask question about di prescription",
+        "reject": "Reject di recommendation",
+        "decline": "Refuse"
+      }
+    },
+    "twinsLoading": "Di twin dem dey load...",
+    "about": "Wetin di reasoner propose for dis episode. Agents dey prepare each step and one clinician wey we know im name dey make every decision.",
+    "patientWho": "{initials}, {sex}, {age}, dey speak {language}",
+    "openedAt": "E open {time}",
+    "tabs": {
+      "label": "Episode views",
+      "review": "Review",
+      "twins": "Twins and agents",
+      "ask": "Ask di twin",
+      "activity": "Activity"
+    },
+    "noRecsTitle": "No proposal yet",
+    "noRecs": "Di findings wey dem record no support any diagnosis yet. Record more findings make you get proposals.",
+    "differentialAbout": "Diagnoses wey dem rank with dia chance. Open Why? to see di evidence and di sources.",
+    "testsAbout": "Tests wey dem rank by how dem go change di diagnosis, and by dia price for dis facility.",
+    "treatmentsAbout": "Treatment options wey dem check for interactions, kidney function and pregnancy, and wey dem simulate for di patient twin.",
+    "care": "Care plan",
+    "careAbout": "Follow-up, reminders and support for di patient.",
+    "noCare": "No care plan yet.",
+    "decisionAbout": "Di diagnosis agents stop here and dey wait for di medical officer.",
+    "unifiedAbout": "Di episode own records and di human twin readings for one list.",
+    "twinsAbout": "Di current state of each member twin. Open one twin to see im forecast and im agents.",
+    "openTwinsAndAgents": "Twins and agents",
+    "recStatus": {
+      "proposed": "Dem propose am",
+      "accepted": "Dem accept am",
+      "edited": "Dem change am",
+      "overridden": "Dem override am",
+      "declined": "Dem refuse am",
+      "signed": "Dem sign am"
+    }
+  },
+  "why": {
+    "button": "Why e be so?",
+    "title": "Why we give dis advice",
+    "recommendation": "Advice",
+    "confidence": "How sure we be {value}",
+    "evidenceFor": "Evidence wey support am",
+    "evidenceAgainst": "Evidence wey go against am",
+    "citations": "Where we get am from",
+    "counterfactuals": "Wetin go change am",
+    "counterfactual": "If {change}, di main sickness go turn {top}",
+    "change": "Change {value}",
+    "simulation": "Simulation",
+    "noSimulation": "We no run any simulation.",
+    "assumptions": "Wetin we assume: {items}",
+    "alternatives": "Oda tins wey e fit be",
+    "patientSummary": "Summary for di patient",
+    "models": "Models wey we use",
+    "none": "Nothing to show.",
+    "close": "Close am"
+  },
+  "drill": {
+    "back": "All di twins",
+    "state": "How e dey now",
+    "updated": "We update am {time}",
+    "variable": "Wetin we measure",
+    "value": "Value",
+    "noState": "Dis twin never get state.",
+    "forecast": "Wetin go happen next",
+    "forecastOf": "Wetin go happen to {variable}, with {level}% range",
+    "chartLabel": "Chart of wetin go happen to {variable}",
+    "noForecast": "Data never reach to tok wetin go happen next.",
+    "denied": "Dis person don hold dis twin back or your role no fit read am.",
+    "forecastAbout": "Wetin we expect for di next 24 hours, with di band of how sure we no sure."
+  },
+  "explain": {
+    "title": "Your result, explained",
+    "shownIn": "Dis explanation dey for {language}."
+  },
+  "agents": {
+    "title": "Agents",
+    "run": "Run di agents",
+    "runConductor": "Run di conductor",
+    "conductorTitle": "Care goal",
+    "conductorGoal": "Control high blood pressure, sugar sickness type 2 and kidney sickness stage 3 safe-safe",
+    "steps": "Wetin di agents do",
+    "noSteps": "Di agents never do anything yet.",
+    "tools": "Tools: {tools}",
+    "noTools": "Dem no call any tool.",
+    "missing": "Evidence wey no dey: {items}",
+    "goals": "Goals",
+    "noGoals": "Dem no check any goal.",
+    "goalStatus": {
+      "met": "E don reach",
+      "unmet": "E never reach",
+      "not_evaluated": "Dem never check am"
+    },
+    "stepStatus": {
+      "ok": "E don finish",
+      "degraded": "E no complete",
+      "failed": "E fail"
+    },
+    "toolCalls": "Tool wey dem call",
+    "noToolCalls": "Dem no call any tool.",
+    "proposals": "Wetin dem propose",
+    "noProposals": "Dem no propose anything.",
+    "explanations": "Explanations",
+    "denials": "Action wey we block",
+    "noDenials": "We no block any action.",
+    "needsRole": "Your role no fit run agents.",
+    "failed": "Di agents no fit run.",
+    "about": "Di orchestrator of dis twin dey sense, update di state, check di twin standing goals, plan, act inside im autonomy level, explain and report.",
+    "goalLabel": "Care goal",
+    "goalHelp": "Goal wey no get goal template go show as unmatched."
+  },
+  "shell": {
+    "signedInAs": "Sign in as",
+    "openMenu": "Open di menu",
+    "roleAt": "{role} for {facility}"
+  },
+  "nav": {
+    "label": "Main navigation",
+    "home": "Main page",
+    "episodes": "Episodes",
+    "newEpisode": "New episode",
+    "myCare": "My care",
+    "myTwin": "My twin",
+    "cared": "People wey I dey care for",
+    "population": "Di people dem",
+    "audit": "Audit log",
+    "models": "Model registry",
+    "system": "How ATRA dey work"
+  },
+  "role": {
+    "medical_officer": "Medical officer",
+    "radiologist": "Radiologist",
+    "pharmacist": "Pharmacist",
+    "nurse": "Nurse",
+    "lab_scientist": "Lab scientist",
+    "patient": "Patient",
+    "proxy": "Proxy",
+    "community_health_worker": "Community health worker",
+    "therapist": "Therapist",
+    "carer": "Carer",
+    "clinical_safety_officer": "Clinical safety officer",
+    "administrator": "Administrator",
+    "researcher": "Researcher",
+    "public_health_official": "Public health official",
+    "person": "Twin owner"
+  },
+  "facility": {
+    "fac-a": "Facility A, secondary hospital",
+    "fac-b": "Facility B, primary health centre"
+  },
+  "sex": {
+    "female": "Female",
+    "male": "Male"
+  },
+  "home": {
+    "title": "{role} main page",
+    "intro": {
+      "medical_officer": "Check wetin di reasoner propose, decide, and follow each patient twin.",
+      "radiologist": "See di episodes for your facility and di imaging evidence of each patient.",
+      "pharmacist": "Verify di prescriptions wey medical officers sign. Di ones wey dem block go first.",
+      "nurse": "Follow di care plans, open new episodes and watch each patient twin.",
+      "lab_scientist": "See di episodes for your facility and di tests wey di reasoner recommend.",
+      "community_health_worker": "Open episodes for di community and follow each patient readings.",
+      "therapist": "Follow your patients twins and how dem dey improve as time dey go.",
+      "administrator": "Check who do wetin for your facility and manage di model registry.",
+      "clinical_safety_officer": "Check di audit trail, every action dem refuse, and di stage of every model."
+    },
+    "openEpisodes": "Open episodes",
+    "worklistItems": "Items for your worklist",
+    "blocked": "Safety check block am",
+    "blockedHint": "Prescriptions wey dem no fit sign until dem change dem",
+    "blockedChip": "Dem block am",
+    "worklistAbout": {
+      "medical_officer": "New episodes to triage and proposals to review.",
+      "radiologist": "Your facility no get radiology worklist yet.",
+      "pharmacist": "Prescriptions to verify.",
+      "nurse": "Care plans to follow.",
+      "lab_scientist": "Your facility no get laboratory worklist yet.",
+      "community_health_worker": "Your facility no get community worklist yet.",
+      "therapist": "Your facility no get therapy worklist yet."
+    },
+    "patients": "Open episodes for your facility",
+    "patientsAbout": "Every episode get one workbench and one view of di patient 17 member twins.",
+    "allEpisodes": "All episodes",
+    "explore": "Explore di system",
+    "exploreAbout": "See how di twins, agents and safety checks dey work together.",
+    "governanceTools": "Governance tools"
+  },
+  "worklistKind": {
+    "triage": "New episode",
+    "review_diagnosis": "Diagnosis to review",
+    "review_test": "Tests to order",
+    "review_care": "Care plan",
+    "review_treatment": "Prescription to verify"
+  },
+  "episodes": {
+    "title": "Episodes of care",
+    "about": "Episode na one period of care for one problem for dis facility. Open one to review di reasoner proposals and di patient twins.",
+    "none": "No episode match.",
+    "patient": "Patient",
+    "reason": "Reason",
+    "opened": "Opened",
+    "status": "Status",
+    "actions": "Open",
+    "who": "{sex}, {age}",
+    "workbench": "Workbench",
+    "twins": "Twins and agents",
+    "filter": {
+      "open": "Open episodes",
+      "closed": "Closed episodes",
+      "all": "All episodes"
+    }
+  },
+  "newEpisode": {
+    "title": "New episode",
+    "about": "Open one episode for one patient of dis facility and record wetin you see. Den di reasoner go propose differential, tests, treatment and care plan.",
+    "who": "Patient and reason",
+    "whoAbout": "Di patient age and sex dey come from di facility patient list.",
+    "patient": "Patient",
+    "patientOption": "{initials}, {sex}, {age}, {language}",
+    "reason": "Why dem come",
+    "reasonHint": "For example: Fever for three days",
+    "encounter": "Encounter",
+    "weight": "Weight",
+    "avpu": "How awake di person be",
+    "pregnancy": "Pregnancy",
+    "measurements": "Measurements",
+    "measurementsAbout": "Leave di box empty if dem no measure am.",
+    "findings": "Findings",
+    "findingsAbout": "Tick each finding wey dey. Finding wey you no tick, dem go record am as not known.",
+    "capture": {
+      "question": "Symptoms",
+      "exam": "Examination",
+      "lab": "Laboratory findings"
+    },
+    "tests": "Test results",
+    "testsAbout": "Record di tests wey dem don do already.",
+    "notDone": "Dem no do am",
+    "positive": "Positive",
+    "negative": "Negative",
+    "submit": "Open di episode",
+    "next": "Di workbench go open with di reasoner proposals.",
+    "role": "Your role no fit open episodes.",
+    "failed": "Dem no fit open di episode."
+  },
+  "encounter": {
+    "AMB": "Outpatient",
+    "EMER": "Emergency",
+    "IMP": "Inpatient",
+    "HH": "Home visit",
+    "VR": "Remote"
+  },
+  "avpu": {
+    "A": "Awake",
+    "V": "E dey answer voice",
+    "P": "E dey answer pain",
+    "U": "E no dey answer"
+  },
+  "pregnancy": {
+    "none": "No get belle",
+    "t1": "First trimester",
+    "t2": "Second trimester",
+    "t3": "Third trimester"
+  },
+  "measure": {
+    "temperature": "Temperature",
+    "heart_rate": "Heart rate",
+    "respiratory_rate": "Breathing rate",
+    "sbp": "Systolic blood pressure",
+    "dbp": "Diastolic blood pressure",
+    "spo2": "Oxygen for blood",
+    "glucose": "Blood sugar",
+    "hb": "Haemoglobin",
+    "creatinine": "Creatinine"
+  },
+  "episodeActions": {
+    "refer": "Refer am",
+    "close": "Close episode",
+    "failed": "Dem no fit finish di action.",
+    "referred": "Referral {id} na {status}.",
+    "status": {
+      "sent": "sent",
+      "queued": "dey wait to send"
+    },
+    "closed": "Di episode don close.",
+    "referTitle": "Refer go {facility}",
+    "closeTitle": "Close di episode",
+    "urgency": "How e urgent",
+    "urgencies": {
+      "routine": "Routine",
+      "urgent": "Urgent",
+      "emergency": "Emergency"
+    },
+    "reason": "Why you dey refer am",
+    "outcome": "How di episode end",
+    "cancel": "Cancel",
+    "send": "Send referral",
+    "confirmClose": "Close episode"
+  },
+  "twins": {
+    "members": "Member twins",
+    "membersAbout": "Each tile na one member twin of di person human twin, with im status now. Open one tile to see im state, im forecast and im agents.",
+    "conductorAbout": "Di conductor dey match one care goal to one goal template, dey run di member twins orchestrators by clinical priority and dey settle quarrel between dia plans."
+  },
+  "coupling": {
+    "title": "How di twins connect",
+    "about": "Connectors dey pass values between member twins, for example di heart output go di kidneys.",
+    "notRunning": "Dis person twin never dey run. E dey start when dem first read one twin.",
+    "count": "{count} connectors between di member twins."
+  },
+  "twinAbout": {
+    "cardiovascular": "Heart rate, blood pressure and di heart output.",
+    "respiratory": "Breathing rate, oxygen and lung function.",
+    "nervous": "How awake person be, seizures and nerve function.",
+    "sensory": "Eye and ear.",
+    "digestive": "Stomach, bowel and nutrition.",
+    "hepatobiliary": "Liver function and bilirubin.",
+    "renal_urinary": "Kidney function, fluids and urine.",
+    "endocrine": "Sugar, insulin and hormones.",
+    "immune_lymphatic": "Infection, fever and inflammation.",
+    "haematological": "Haemoglobin, blood cells and clotting.",
+    "musculoskeletal": "Muscle, bone, joints and movement.",
+    "integumentary": "Skin, wounds and pressure areas.",
+    "reproductive": "Pregnancy and reproductive health.",
+    "whole_body": "Body temperature, weight and energy balance.",
+    "behavioural_cognitive": "Mood, sleep, stress and thinking.",
+    "social": "Support, income and how person fit reach care.",
+    "population": "How common each sickness dey among similar people."
+  },
+  "ask": {
+    "title": "Ask di twin",
+    "chat": "Conversation",
+    "aboutClinician": "Ask about dis patient latest readings. Di twin dey answer from di patient own data.",
+    "titleOwn": "Ask my twin",
+    "aboutPatient": "Ask about your readings for your own language.",
+    "aboutPerson": "Ask about your readings for your own language. Your twin dey answer from your own data.",
+    "aboutCarer": "Ask about di readings of di person wey you dey care for.",
+    "empty": "No message yet.",
+    "answeredBy": "{backend}: {model}",
+    "backend": {
+      "ollama": "Hosted model",
+      "openai": "Hosted model",
+      "slm": "Local small model",
+      "offline": "Offline fallback"
+    },
+    "thinking": "Di twin dey answer",
+    "language": "Language",
+    "message": "Your question",
+    "placeholder": "For example: How my blood pressure be?",
+    "send": "Send",
+    "role": "Your role no fit talk to dis twin.",
+    "failed": "Di twin no fit answer."
+  },
+  "language": {
+    "title": "How di twin dey answer",
+    "about": "Di conversation dey try each language model for dis order. Di first one wey answer go work.",
+    "backend": {
+      "ollama": "Hosted model (Ollama)",
+      "openai": "Hosted model (OpenAI-compatible)",
+      "slm": "Local small model",
+      "offline": "Offline fallback"
+    },
+    "hostedDetail": "{model}, {keys, plural, one {# key} other {# keys wey dey take turn}}",
+    "backendAbout": {
+      "slm": "E dey run for dis server with one language adapter for each language.",
+      "offline": "E dey talk straight say no model answer.",
+      "ollama": "One hosted model.",
+      "openai": "One hosted model."
+    },
+    "calls": "{count, plural, one {# call} other {# calls}}",
+    "failures": "{count, plural, one {# failure} other {# failures}}",
+    "unavailable": "Di language status no dey available now."
+  },
+  "audit": {
+    "title": "Audit log",
+    "about": "Every request, decision and agent action for dis facility, di newest first. Each record carry di hash of di record before am, so if anybody change any record, di chain go break.",
+    "records": "Records",
+    "recordsHint": "Di latest records of dis facility",
+    "denied": "Dem refuse",
+    "deniedHint": "Requests and agent actions wey di policy refuse",
+    "chain": "Hash chain",
+    "intact": "E dey whole",
+    "broken": "E don break",
+    "chainHint": "Each record dey link to di one before am",
+    "agentActions": "Agent actions",
+    "agentHint": "Actions wey agent try do",
+    "show": {
+      "all": "All records",
+      "denied": "Refused only"
+    },
+    "none": "No record.",
+    "seq": "Record",
+    "time": "Time",
+    "actor": "Who",
+    "action": "Wetin",
+    "episode": "Episode",
+    "outcome": "Outcome",
+    "viaAgent": "{agent} for {role}",
+    "outcomes": {
+      "ok": "Dem allow am",
+      "denied": "Dem refuse",
+      "degraded": "E no complete",
+      "error": "Error"
+    },
+    "episodeTitle": "Activity",
+    "trail": "Activity for dis patient",
+    "episodeAbout": "Every request, decision and agent action wey concern dis patient, di newest first."
+  },
+  "models": {
+    "overline": "Layer 4",
+    "title": "Model registry",
+    "about": "Every model of di twins with im fidelity tier and im release stage.",
+    "tier": {
+      "T1": "Trained models",
+      "T2": "Mechanistic models",
+      "T3": "Reference-state models"
+    },
+    "tierAbout": {
+      "T1": "Dem train or calibrate dem on data, with one validation metric.",
+      "T2": "Published equations with published parameters, wey dem personalise by calibration.",
+      "T3": "Reference states with ranges, wey connectors and readings dey drive."
+    },
+    "registry": "Registered models",
+    "stagerAbout": "Move one version go Staging, then go Production. Only clinical safety officer fit release go Production.",
+    "viewerAbout": "Your role fit read di registry. Clinical safety officer dey manage di releases.",
+    "model": "Model",
+    "twin": "Twin",
+    "tierLabel": "Tier",
+    "stage": "Stage",
+    "actions": "Release",
+    "stages": {
+      "None": "No stage yet",
+      "Staging": "Staging",
+      "Production": "Production",
+      "Archived": "Archived"
+    },
+    "to": {
+      "Staging": "Go staging",
+      "Production": "Release",
+      "Archived": "Archive"
+    },
+    "rollback": "Roll back",
+    "roleRefused": "Your role no fit make dis change.",
+    "failed": "Dem no make di change."
+  },
+  "population": {
+    "title": "Population twin",
+    "about": "Wetin common among people wey be like one patient. Di diagnosis reasoner dey use dis priors and norms, and researchers fit extract cohorts wey no carry person name.",
+    "priors": "Prevalence priors",
+    "priorsAbout": "How common each sickness be for one age, sex, region and season, from published sources and federated updates.",
+    "norms": "Reference norms",
+    "normsAbout": "Di usual range of each measurement for one age and sex.",
+    "cohort": "De-identified cohort",
+    "cohortAbout": "Readings of everybody wey agree make dem use am for research or public health. Differential privacy dey add calibrated noise and e dey use your privacy budget. k-anonymity (hide person inside group) dey hide every group wey small pass k.",
+    "age": "Age",
+    "sex": "Sex",
+    "female": "Female",
+    "male": "Male",
+    "region": "Region of Lagos",
+    "regions": {
+      "island_and_coast": "Island and coast",
+      "mainland_core": "Mainland core",
+      "north_west": "North-west",
+      "west_and_ikorodu": "West and Ikorodu"
+    },
+    "season": "Season",
+    "rainy": "Rainy",
+    "dry": "Dry",
+    "show": "Show",
+    "privacy": "Privacy method",
+    "dp": "Differential privacy",
+    "k": "k-anonymity",
+    "epsilon": "Epsilon",
+    "kValue": "k",
+    "extract": "Extract",
+    "privacyReport": "Privacy report",
+    "aggregates": "Aggregates"
+  },
+  "care": {
+    "title": "My care",
+    "about": "Your episodes of care, wetin your clinicians find, and your choices about your data.",
+    "aboutProxy": "Di episodes of care of di person wey you dey act for.",
+    "episodes": "Episodes",
+    "since": "Since {date}, with {clinician}",
+    "open": "Open",
+    "none": "No episode yet.",
+    "episodeAbout": "Wetin your care team find and wetin go happen next.",
+    "resultsAbout": "Each result for simple words. Your clinician dey review every proposal before dem use am.",
+    "kind": {
+      "diagnosis": "Diagnosis",
+      "test": "Tests",
+      "treatment": "Treatment",
+      "care": "Care plan"
+    },
+    "status": {
+      "proposed": "Your clinician dey review dis one",
+      "accepted": "Your clinician don agree",
+      "edited": "Your clinician don change am",
+      "overridden": "Your clinician don change am",
+      "declined": "Dem no use am",
+      "signed": "Your clinician don sign am"
+    },
+    "noResults": "No result yet."
+  },
+  "consent": {
+    "title": "My consent",
+    "about": "Choose wetin your twin fit share and for which reason.",
+    "purposes": "I allow make dem use my data for",
+    "purpose": {
+      "care": "My care",
+      "emergency": "Emergencies",
+      "self_management": "To manage my own health",
+      "public_health": "Public health",
+      "research": "Research"
+    },
+    "categories": "My twin fit use",
+    "categoriesAbout": "Switch off one kind of data to hold am back from every clinician and agent.",
+    "category": {
+      "vital_signs_and_device_data": "Vital signs and device data",
+      "laboratory_and_imaging": "Laboratory results and imaging",
+      "medicines": "Medicines",
+      "genome": "Genome",
+      "knowledge_graph_and_notes": "Health records and notes",
+      "body_models_and_simulation": "Body models and simulations",
+      "explanations": "Explanations",
+      "conversation_and_speech": "Conversation and speech"
+    },
+    "save": "Save my consent",
+    "saved": "Dem don save your consent.",
+    "failed": "Dem no fit save your consent."
+  },
+  "preferences": {
+    "title": "My preferences",
+    "about": "Tell your care team wetin matter to you. Dem go rank treatment options with dis answers.",
+    "prioritiesAbout": "Give each one number from 1 (e no matter plenty) to 5 (e matter pass).",
+    "save": "Save my preferences",
+    "saved": "Dem don save your preferences.",
+    "failed": "Dem no fit save your preferences.",
+    "option": {
+      "app": "App",
+      "sms": "Text message",
+      "ussd": "USSD",
+      "voice": "Voice call"
+    }
+  },
+  "message": {
+    "title": "Message my care team",
+    "about": "Your care team go read your message.",
+    "label": "Your message",
+    "send": "Send",
+    "failed": "Dem no fit send your message."
+  },
+  "twinHome": {
+    "overline": "Lifelong human twin",
+    "title": "My twin",
+    "about": "Your twin dey keep your body data, models and context for life. E be your own whether you dey sick or you no dey sick.",
+    "download": "Download my health knowledge graph",
+    "lifelong": "Clinicians fit see your twin only for di reasons wey you agree to."
+  },
+  "cared": {
+    "title": "People wey I dey care for",
+    "about": "Di readings of each person wey give you access.",
+    "none": "Nobody don give you access yet.",
+    "person": "Person {n}",
+    "personAbout": "Readings of di past week."
+  },
+  "readings": {
+    "denied": "Dis person never share im readings with you.",
+    "none": "No reading from di past week.",
+    "chart": "Readings of {measure}"
+  },
+  "system": {
+    "overline": "About di system",
+    "title": "How ATRA dey work",
+    "about": "ATRA Health dey pair two digital twins for every person. Agents dey prepare di clinical work inside each twin, and clinicians wey we know dia names dey make every decision.",
+    "twins": {
+      "ahdt": {
+        "short": "AHDT",
+        "name": "Agentic Human Digital Twin",
+        "about": "E dey for life. E carry di person body data, models and context through 17 member twins, from di heart go reach social life. E dey exist whether di person dey sick or e no dey sick."
+      },
+      "apdt": {
+        "short": "APDT",
+        "name": "Agentic Patient Digital Twin",
+        "about": "Dem dey open am when one care episode start for facility and dem dey close am when e end. E carry di history, examination, tests, diagnoses, prescriptions and decisions of dat episode."
+      }
+    },
+    "workflow": "From arrival to decision",
+    "workflowAbout": "Wetin dey happen to one patient, step by step.",
+    "steps": {
+      "open": {
+        "title": "Clinician open one episode",
+        "about": "Medical officer, nurse or community health worker go choose di patient and di reason for di visit."
+      },
+      "intake": {
+        "title": "Dem record di intake",
+        "about": "Symptoms, examination findings, measurements and test results go turn FHIR records of di episode."
+      },
+      "reason": {
+        "title": "Di reasoner propose",
+        "about": "E dey rank di differential diagnosis, choose tests by value and price, check treatments for safety and simulate dem for di patient twin. Every proposal get one explanation bundle with im evidence and sources."
+      },
+      "agents": {
+        "title": "Agents prepare each decision",
+        "about": "Di diagnosis, treatment and care orchestrators dey gather evidence from di human twin and dem dey stop for each decision point."
+      },
+      "decide": {
+        "title": "Di medical officer decide",
+        "about": "Accept, edit or reject di diagnosis. Sign di prescription. Dem no fit sign prescription wey get blocking safety issue until dem change am."
+      },
+      "verify": {
+        "title": "Di pharmacist verify",
+        "about": "Di signed prescription go reach di pharmacist worklist for di same run, to verify, query or reject."
+      },
+      "explain": {
+        "title": "Di patient see explanation",
+        "about": "Each result for simple words for di patient own language, with consent and preference controls."
+      },
+      "twin": {
+        "title": "Di human twin keep dey learn",
+        "about": "Readings from devices and from di facility dey update di member twins, and dia agents dey watch dia standing goals."
+      }
+    },
+    "layers": "Di eight ATRA layers",
+    "layersAbout": "Di lower layers dey support di higher ones.",
+    "layer": {
+      "1": {
+        "name": "Physical",
+        "about": "Di person, dia devices and actuators, and di clinicians wey dey enter data."
+      },
+      "2": {
+        "name": "Network and cloud integration",
+        "about": "Di edge service for each facility or home, device transports and store-and-forward."
+      },
+      "3": {
+        "name": "Data ingestion",
+        "about": "Validation, unit harmonisation, pseudonymisation, di data stores and di knowledge graphs."
+      },
+      "4": {
+        "name": "Model",
+        "about": "Mechanistic body models, trained machine-learning models, and language and speech models."
+      },
+      "5": {
+        "name": "Explainable AI",
+        "about": "One explainer for every model output."
+      },
+      "6": {
+        "name": "Service",
+        "about": "Data, models and simulation, explanations, cognitive services and di connections between twins."
+      },
+      "7": {
+        "name": "Agentic",
+        "about": "Worker agents, orchestrators, di conductor and di external API."
+      },
+      "8": {
+        "name": "Application",
+        "about": "Dis web app, di mobile apps, SMS, USSD and voice."
+      }
+    },
+    "ahdtAgents": "Agents of di human twin",
+    "ahdtAgentsAbout": "Workers dey do one job, one orchestrator dey run each member twin, and di conductor dey coordinate dem.",
+    "apdtAgents": "Agents of di patient twin",
+    "apdtAgentsAbout": "Dem dey prepare di clinical work. Every decision stay with one clinician wey we know im name.",
+    "agent": {
+      "monitoring": {
+        "name": "Monitoring",
+        "about": "E dey read di twin state and when dem last observe each field."
+      },
+      "anomaly": {
+        "name": "Anomaly",
+        "about": "E dey rate how serious di twin state be."
+      },
+      "forecasting": {
+        "name": "Forecasting",
+        "about": "E dey run di forecasts wey di twin goals need."
+      },
+      "explanation": {
+        "name": "Explanation",
+        "about": "E dey explain unmet goals and outputs for watch or alert level."
+      },
+      "recommendation": {
+        "name": "Recommendation",
+        "about": "E dey propose support actions wey dey inside di knowledge base, each one with im source."
+      },
+      "orchestrator": {
+        "name": "Twin orchestrator",
+        "about": "E dey sense, update di state, check goals, plan, act, explain and report for one member twin."
+      },
+      "conductor": {
+        "name": "Conductor",
+        "about": "E dey turn one person care goal to sub-goals, arrange di orchestrators and settle quarrel between dia plans."
+      },
+      "history": {
+        "name": "History taking",
+        "about": "E dey list di inputs wey di episode still need."
+      },
+      "evidence": {
+        "name": "Evidence assembly",
+        "about": "E dey gather readings, medicines, twin states and explanations from di human twin."
+      },
+      "differential": {
+        "name": "Differential diagnosis",
+        "about": "E dey rank di diagnoses and build dia explanation bundles."
+      },
+      "investigation": {
+        "name": "Investigation",
+        "about": "E dey choose di tests wey go change di diagnosis pass for dia price."
+      },
+      "treatment": {
+        "name": "Treatment planning",
+        "about": "E dey list di options and simulate di first three for di patient twin."
+      },
+      "pharmacotherapy": {
+        "name": "Pharmacotherapy",
+        "about": "E dey check interactions, kidney function, pregnancy and genome for each dose."
+      },
+      "guard": {
+        "name": "Safety and consent guard",
+        "about": "E dey check every agent action before e run."
+      }
+    },
+    "safety": "How di system keep clinicians in charge",
+    "safetyAbout": "Two separate checks dey stop agent from deciding clinical matter.",
+    "safetyItem": {
+      "guard": {
+        "name": "Autonomy levels",
+        "about": "Each kind of action get one fixed level, from inform reach never. Agent no fit ever sign, order or dispense."
+      },
+      "human": {
+        "name": "Person for every decision",
+        "about": "Di API dey accept decision only from person wey get di role wey di step need, never from agent or service."
+      },
+      "consent": {
+        "name": "Consent",
+        "about": "Person fit hold back any kind of data. Every tool call dey check di person consent first."
+      },
+      "audit": {
+        "name": "Audit",
+        "about": "Dem dey write every request, decision and refusal inside one hash-chained audit log."
+      }
+    },
+    "members": "Di 17 member twins",
+    "membersAbout": "Di human twin na federation of dis twins. Each one own im models and im standing goals.",
+    "models": "Models",
+    "modelsAbout": "Every model get one fidelity tier wey show how dem build am.",
+    "modelCount": {
+      "T2": "43",
+      "T3": "24",
+      "T1": "19"
+    },
+    "services": "Running services",
+    "servicesAbout": "Di services behind dis app and whether each one dey answer now.",
+    "service": {
+      "apdt": {
+        "name": "Patient twin",
+        "about": "Episodes, di reasoner and decisions"
+      },
+      "ahdt": {
+        "name": "Human twin",
+        "about": "Member twins, models, agents and language"
+      },
+      "population": {
+        "name": "Population twin",
+        "about": "Priors, norms and cohorts"
+      },
+      "edge": {
+        "name": "Edge",
+        "about": "Devices and on-device models"
+      },
+      "channels": {
+        "name": "Channels",
+        "about": "SMS, USSD and voice"
+      },
+      "opa": {
+        "name": "Policy engine",
+        "about": "Role, facility and consent rules"
+      }
+    },
+    "up": "E dey run",
+    "down": "E no dey answer",
+    "personas": "Di demo patients",
+    "personasAbout": "Six synthetic patients. Nobody among dem na real person.",
+    "persona": "Patient",
+    "facility": "Facility",
+    "scenario": "Scenario",
+    "tests": "Wetin e show",
+    "persona_": {
+      "ao": {
+        "who": "A.O., female, 47",
+        "scenario": "Malaria wey no get complication",
+        "shows": "Di worked example: differential, tests, treatment and explanation"
+      },
+      "bm": {
+        "who": "B.M., male, 8",
+        "scenario": "Severe malaria wey dey reduce consciousness and low blood sugar",
+        "shows": "How patient dey worse, di children early warning score and one proxy"
+      },
+      "cn": {
+        "who": "C.N., female, 29",
+        "scenario": "Pyelonephritis for 22 weeks of pregnancy",
+        "shows": "Treatment options wey dey change for pregnancy"
+      },
+      "de": {
+        "who": "D.E., male, 58",
+        "scenario": "Hypertension, type 2 diabetes and kidney disease",
+        "shows": "Kidney-adjusted doses and di conductor care goal"
+      },
+      "ef": {
+        "who": "E.F., female, 19",
+        "scenario": "Sickle cell crisis",
+        "shows": "Di crisis risk model and di patient explanation"
+      },
+      "gh": {
+        "who": "G.H., male, 35",
+        "scenario": "Tuberculosis work-up for person wey dey take antiretroviral therapy",
+        "shows": "Di pharmacist queue, one blocking interaction and one genome wey dem hold back"
+      }
+    }
+  }
+}

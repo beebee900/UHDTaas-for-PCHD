@@ -1,0 +1,26 @@
+# The in-country VM of the Terraform module (P9). The atra-secrets Secret is created on the
+# cluster from the operator's secret store; nothing secret is kept in this repository.
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - ../../base
+  - ../../spire
+  - device-ingress.yaml
+images:
+  - name: atra-health
+    newTag: "1.0.0"
+replicas:
+  - name: population
+    count: 2
+  - name: apdt
+    count: 2
+  - name: channels
+    count: 2
+patches:
+  - target:
+      kind: ConfigMap
+      name: atra-config
+    patch: |-
+      - op: add
+        path: /data/ATRA_RESIDENCY_MODE
+        value: strict

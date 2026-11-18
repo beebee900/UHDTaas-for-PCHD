@@ -1,0 +1,400 @@
+# Conditions in scope (design 06, 6.2). Codes are verified by `sourcing verify-codes`.
+# `twin` is the AHDT system twin that owns the diagnosis (write-back routing, PHKG OWNED_BY).
+# `severity_rule` names the kb entry that grades the condition; `red_flags` are findings.yaml ids.
+
+- id: cond.malaria_falciparum
+  name: Plasmodium falciparum malaria
+  snomed: '62676009'
+  icd11: 1F40
+  pathway: acute_febrile
+  twin: haematological
+  severity_levels: [uncomplicated, severe]
+  severity_rule: severity.malaria.falciparum
+  red_flags: [find.impaired_consciousness, find.prostration, find.convulsions, find.respiratory_distress,
+              find.hypoglycaemia, find.jaundice, find.bleeding, find.shock]
+  provenance:
+    source: who-malaria-2026
+    section: 5.2.2 Treating severe malaria
+    page: 212
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: cond.enteric_fever
+  name: Enteric (typhoid) fever
+  snomed: '4834000'
+  icd11: 1A07
+  pathway: acute_febrile
+  twin: digestive
+  severity_levels: [uncomplicated, severe]
+  provenance:
+    source: who-aware-2022
+    section: 15. Enteric fever
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: cond.cystitis
+  name: Lower urinary tract infection (cystitis)
+  snomed: '38822007'
+  icd11: GC00
+  pathway: acute_febrile
+  twin: renal_urinary
+  severity_levels: [uncomplicated]
+  provenance:
+    source: who-aware-2022
+    section: 23. Lower urinary tract infection
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: cond.pyelonephritis
+  name: Upper urinary tract infection (acute pyelonephritis)
+  snomed: '36689008'
+  icd11: GB51
+  pathway: acute_febrile
+  twin: renal_urinary
+  severity_levels: [mild, severe]
+  provenance:
+    source: who-aware-2022
+    section: 34. Upper urinary tract infection
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: cond.pneumonia_community
+  name: Community-acquired pneumonia
+  snomed: '385093006'
+  icd11: CA40.Z
+  pathway: acute_febrile
+  twin: respiratory
+  severity_levels: [mild, severe]
+  provenance:
+    source: who-aware-2022
+    section: 12. Community-acquired pneumonia – mild
+    also:
+    - {source: who-aware-2022, section: 27. Community-acquired pneumonia – severe}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: cond.lassa_fever
+  name: Lassa fever
+  snomed: '19065005'
+  icd11: 1D61.2
+  pathway: acute_febrile
+  twin: immune_lymphatic
+  severity_levels: [suspected, probable, confirmed, high_risk_contact]
+  severity_rule: severity.lassa.case_definition
+  provenance:
+    source: ncdc-lassa-2018
+    section: Case Definition of Lassa Fever
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: cond.viral_febrile_illness
+  name: Other viral febrile illness
+  snomed: '34014006'
+  icd11: 1E1Z
+  pathway: acute_febrile
+  twin: immune_lymphatic
+  severity_levels: [uncomplicated]
+  provenance:
+    source: who-imai-dcm-2011-v1
+    section: Fever
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: cond.sepsis
+  name: Sepsis (severity overlay)
+  snomed: '91302008'
+  icd11: [1G40, 1G41]
+  pathway: acute_febrile
+  twin: immune_lymphatic
+  severity_levels: [sepsis, septic_shock]
+  provenance:
+    source: ssc-2021
+    section: Introduction
+    also:
+    - {source: who-aware-2022, section: 24. Sepsis in adults (including septic shock)}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: cond.hypertension
+  name: Hypertension
+  snomed: '59621000'
+  icd11: BA00
+  pathway: cardiometabolic
+  twin: cardiovascular
+  severity_levels: [controlled, uncontrolled, urgency]
+  provenance:
+    source: who-htn-2021
+    section: 1 Introduction
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: cond.diabetes_type2
+  name: Type 2 diabetes mellitus
+  snomed: '44054006'
+  icd11: 5A11
+  pathway: cardiometabolic
+  twin: endocrine
+  severity_levels: [controlled, uncontrolled]
+  provenance:
+    source: who-hearts-d-2020
+    section: 1 Clinical manifestations of diabetes and diagnostic criteria
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: cond.hypoglycaemia
+  name: Hypoglycaemia
+  snomed: '302866003'
+  icd11: [5A21, 5A41]
+  pathway: cardiometabolic
+  twin: endocrine
+  severity_levels: [mild, severe]
+  provenance:
+    source: who-hearts-d-2020
+    section: Hypoglycaemia
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: cond.hyperglycaemic_crisis
+  name: Hyperglycaemic crisis (diabetic ketoacidosis or hyperosmolar state)
+  snomed: ['420422005', '310505005']
+  icd11: [5A22.0, 5A20]
+  pathway: cardiometabolic
+  twin: endocrine
+  severity_levels: [ketoacidosis, hyperosmolar]
+  provenance:
+    source: who-hearts-d-2020
+    section: Hyperglycaemia
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: cond.atrial_fibrillation
+  name: Atrial fibrillation
+  snomed: '49436004'
+  icd11: BC81.3Z
+  pathway: cardiometabolic
+  twin: cardiovascular
+  severity_levels: [rate_controlled, uncontrolled]
+  note: No treatment options until a sourced AF guideline is added (sources.yaml, esc-af-2024).
+  provenance:
+    source: who-hearts-protocols-2018
+    page: 13
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: cond.asthma
+  name: Asthma
+  snomed: '195967001'
+  icd11: CA23
+  pathway: respiratory
+  twin: respiratory
+  severity_levels: [controlled, exacerbation_mild, exacerbation_severe]
+  provenance:
+    source: who-pen-2020
+    section: Asthma
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: cond.copd_exacerbation
+  name: Exacerbation of chronic obstructive pulmonary disease
+  snomed: '195951007'
+  icd11: CA22.0
+  pathway: respiratory
+  twin: respiratory
+  severity_levels: [mild, moderate, severe]
+  provenance:
+    source: gold-2025-pocket
+    section: Classification of the severity of COPD exacerbations
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: cond.aki
+  name: Acute kidney injury
+  snomed: '14669001'
+  icd11: GB60
+  pathway: renal
+  twin: renal_urinary
+  severity_levels: [stage_1, stage_2, stage_3]
+  severity_rule: severity.aki.kdigo
+  provenance:
+    source: kdigo-aki-2012
+    section: Definition and staging of AKI
+    page: 22
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: cond.ckd
+  name: Chronic kidney disease
+  snomed: '709044004'
+  icd11: GB61.Z
+  pathway: renal
+  twin: renal_urinary
+  severity_levels: [G1, G2, G3a, G3b, G4, G5]
+  severity_rule: severity.ckd.kdigo
+  provenance:
+    source: kdigo-ckd-2024
+    section: Clarifying definition and classification
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: cond.tb_pulmonary
+  name: Pulmonary tuberculosis
+  snomed: '154283005'
+  icd11: 1B10.Z
+  pathway: chronic_infection
+  twin: respiratory
+  severity_levels: [drug_susceptible, drug_resistant]
+  provenance:
+    source: who-tb-m4-2026
+    section: TB treatment regimens
+    also:
+    - {source: who-tb-m3-2025, section: 1. Introduction}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: cond.hiv
+  name: HIV infection
+  snomed: '86406008'
+  icd11: 1C62.Z
+  pathway: chronic_infection
+  twin: immune_lymphatic
+  severity_levels: [stage_1, stage_2, stage_3, stage_4]
+  provenance:
+    source: who-hiv-2021
+    section: HIV TESTING AND DIAGNOSIS
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: cond.scd_crisis
+  name: Sickle cell disease with vaso-occlusive crisis
+  snomed: '417425009'
+  icd11: 3A51.2
+  pathway: haematology
+  twin: haematological
+  severity_levels: [mild, moderate, severe]
+  red_flags: [find.chest_pain, find.respiratory_distress, find.hypoxaemia, find.fever]
+  provenance:
+    source: ng-scd-2014
+    section: 2.1 Clinical Presentation of Sickle Cell
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: cond.acute_chest_syndrome
+  name: Acute chest syndrome in sickle cell disease
+  snomed: '372146004'
+  icd11: 3A51.2
+  pathway: haematology
+  twin: respiratory
+  severity_levels: [present]
+  provenance:
+    source: ng-scd-2014
+    section: Clinical Features of Acute Chest Syndrome
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: cond.anaemia
+  name: Anaemia
+  snomed: '271737000'
+  icd11: 3A9Z
+  pathway: haematology
+  twin: haematological
+  severity_levels: [mild, moderate, severe]
+  severity_rule: severity.anaemia.who
+  provenance:
+    source: who-hb-2024
+    section: Haemoglobin cutoffs to define anaemia
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: cond.depression
+  name: Depression
+  snomed: '35489007'
+  icd11: 6A70
+  pathway: mental_health
+  twin: behavioural_cognitive
+  severity_levels: [mild, moderate, severe]
+  provenance:
+    source: who-mhgap-ig-2016
+    section: Depression
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: cond.anxiety
+  name: Generalized anxiety disorder
+  snomed: '21897009'
+  icd11: 6B00
+  pathway: mental_health
+  twin: behavioural_cognitive
+  severity_levels: [mild, moderate, severe]
+  provenance:
+    source: who-mhgap-2023
+    section: anxiety
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: cond.pregnancy
+  name: Pregnancy (antenatal care)
+  snomed: '289908002'
+  icd11: QA41
+  pathway: maternal
+  twin: reproductive
+  severity_levels: [t1, t2, t3]
+  provenance:
+    source: who-anc-2016
+    section: 1. Introduction
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: cond.pre_eclampsia
+  name: Pre-eclampsia
+  snomed: '398254007'
+  icd11: JA24
+  pathway: maternal
+  twin: reproductive
+  severity_levels: [mild_to_moderate, severe]
+  provenance:
+    source: who-pe-2011
+    section: 1. Background
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: cond.liver_disease
+  name: Chronic liver disease
+  snomed: '328383001'
+  icd11: DB99.0
+  pathway: cross_cutting
+  twin: hepatobiliary
+  severity_levels: [child_pugh_a, child_pugh_b, child_pugh_c]
+  severity_rule: severity.child_pugh
+  provenance:
+    source: who-malaria-2026
+    section: 5.2.1.1 Artemisinin-based combination therapy
+    page: 172
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified

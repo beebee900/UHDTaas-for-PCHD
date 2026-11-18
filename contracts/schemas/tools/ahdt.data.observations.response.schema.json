@@ -1,0 +1,72 @@
+{
+  "$defs": {
+    "Quality": {
+      "enum": [
+        "ok",
+        "suspect",
+        "rejected"
+      ],
+      "title": "Quality",
+      "type": "string"
+    },
+    "SeriesPoint": {
+      "additionalProperties": false,
+      "properties": {
+        "quality": {
+          "$ref": "#/$defs/Quality",
+          "default": "ok"
+        },
+        "t": {
+          "format": "date-time",
+          "title": "T",
+          "type": "string"
+        },
+        "unit": {
+          "title": "Unit",
+          "type": "string"
+        },
+        "v": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "string"
+            },
+            {
+              "type": "boolean"
+            }
+          ],
+          "title": "V"
+        }
+      },
+      "required": [
+        "t",
+        "v",
+        "unit"
+      ],
+      "title": "SeriesPoint",
+      "type": "object"
+    }
+  },
+  "$id": "https://atra.local/schemas/tools/ahdt.data.observations.response.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "series": {
+      "additionalProperties": {
+        "items": {
+          "$ref": "#/$defs/SeriesPoint"
+        },
+        "type": "array"
+      },
+      "title": "Series",
+      "type": "object"
+    }
+  },
+  "required": [
+    "series"
+  ],
+  "title": "ObservationsData",
+  "type": "object"
+}

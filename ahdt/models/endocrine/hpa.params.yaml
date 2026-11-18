@@ -1,0 +1,33 @@
+# Hypothalamic-pituitary-adrenal axis with pituitary glucocorticoid receptor (scaled form).
+model_id: ahdt.endocrine.hpa_axis
+sources:
+- id: gupta2007
+  citation: "Gupta S, Aslakson E, Gurbaxani BM, Vernon SD. Inclusion of the glucocorticoid
+    receptor in a hypothalamic pituitary adrenal axis model reveals bistability. Theor Biol
+    Med Model. 2007;4:8. doi:10.1186/1742-4682-4-8"
+  via: Europe PMC PMC1804264 (equations 9 to 12 and the scaled parameter values)
+  url: https://europepmc.org/article/PMC/PMC1804264
+- id: atra-assumption
+  citation: ATRA design 01 rule R5 assumption register
+params:
+  kcd: {value: 1, unit: '1', source: gupta2007}
+  kad: {value: 10, unit: '1', source: gupta2007}
+  krd: {value: 0.9, unit: '1', source: gupta2007, calibrate: true, prior_cv: 0.2}
+  kcr: {value: 0.05, unit: '1', source: gupta2007}
+  k: {value: 0.001, unit: '1', source: gupta2007}
+  ki1: {value: 0.1, unit: '1', source: gupta2007}
+  ki2: {value: 0.1, unit: '1', source: gupta2007}
+  cortisol_half_life: {value: 66, unit: min, source: atra-assumption, verified: false,
+                       justification: "Plasma cortisol half-life of about an hour sets the
+                         time scale K_od; a sourced value is needed before sign-off"}
+  circadian_amplitude: {value: 0.5, unit: '1', source: atra-assumption, assumption: true,
+                        justification: "Gupta et al. omit the circadian input; the CRH drive is
+                          modulated by the circadian phase with this relative amplitude"}
+  peak_phase_h: {value: 8.0, unit: h, source: atra-assumption, assumption: true,
+                 justification: "Clock time of the CRH drive maximum, placing the cortisol
+                   peak in the morning; calibrated per person"}
+  cortisol_scale: {value: 5000, unit: nmol/L, source: atra-assumption, assumption: true,
+                   calibrate: true, prior_cv: 0.5,
+                   justification: "Conversion of scaled cortisol to nmol/L that maps the scaled
+                     steady state (about 0.06) to about 300 nmol/L; fitted to the person's
+                     cortisol measurements"}

@@ -1,0 +1,52 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "history-mental-health",
+  "url": "https://atra.health/fhir/Questionnaire/history-mental-health",
+  "version": "1.0.0",
+  "status": "active",
+  "title": "History: mental health",
+  "item": [
+    {
+      "linkId": "onset_days",
+      "text": "How many days ago did this illness start?",
+      "type": "integer",
+      "required": true
+    },
+    {
+      "linkId": "find.anhedonia",
+      "text": "Loss of interest or pleasure?",
+      "type": "boolean",
+      "code": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "28669007",
+          "display": "Loss of interest or pleasure"
+        }
+      ]
+    },
+    {
+      "linkId": "find.excessive_worry",
+      "text": "Excessive worry?",
+      "type": "boolean",
+      "code": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "79015004",
+          "display": "Excessive worry"
+        }
+      ]
+    },
+    {
+      "linkId": "find.low_mood",
+      "text": "Depressed mood?",
+      "type": "boolean",
+      "code": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "366979004",
+          "display": "Depressed mood"
+        }
+      ]
+    }
+  ]
+}

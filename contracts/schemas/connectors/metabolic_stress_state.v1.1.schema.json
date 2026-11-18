@@ -1,0 +1,31 @@
+{
+  "$id": "https://atra.local/schemas/connectors/metabolic_stress_state/v1.1",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "glucose": {
+      "maximum": 35.0,
+      "minimum": 1.0,
+      "type": "number",
+      "x-ucum": "mmol/L"
+    },
+    "stress_index": {
+      "maximum": 1,
+      "minimum": 0,
+      "type": "number",
+      "x-ucum": "1"
+    },
+    "time_in_range_24h": {
+      "maximum": 100,
+      "minimum": 0,
+      "type": "number",
+      "x-ucum": "%"
+    }
+  },
+  "required": [
+    "glucose",
+    "time_in_range_24h"
+  ],
+  "title": "metabolic_stress_state v1.1",
+  "type": "object"
+}

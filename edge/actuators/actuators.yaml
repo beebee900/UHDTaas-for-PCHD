@@ -1,0 +1,134 @@
+# Actuators of design 04, 4.1.2, with the action classes and AHDT autonomy levels of design
+# 03, 3.14. `limits` are the command parameters each actuator accepts: numbers as
+# [min, max] in the stated unit, texts as [min, max] characters, choices as a list. A command
+# carries every `required` parameter and no parameter outside `limits`; an insulin bolus also
+# carries `bolus_u` and a basal rate `basal_u_per_h`.
+# `python -m edge.actuators.catalogue` writes this table to policies/opa/ahdt/actuators/data.json.
+#
+# Every limit is a device or channel bound, not a clinical dose. Clinical doses come from the
+# approving clinician; the bounds only reject commands no device in the class could carry out.
+
+action_classes:
+  notification:
+    level: act
+    text: Reminders, data requests, scheduling, result routing, notifications
+  environment:
+    level: act
+    text: Smart-home lighting and ventilation
+  clinical_actuator:
+    level: act_with_approval
+    text: Drive a clinical actuator (insulin pump, CPAP, rehabilitation robot)
+
+approvers: [medical_officer]
+
+actuators:
+  notify:
+    text: Phone notification
+    topic: act/{hdt_id}/phone/notify
+    channel: FCM or the in-app WebSocket
+    class: notification
+    required: [title, body]
+    limits:
+      title: {text: [1, 65]}
+      body: {text: [1, 240]}
+  sms:
+    text: SMS
+    topic: act/{hdt_id}/channels/sms
+    channel: channels service
+    class: notification
+    required: [body]
+    limits:
+      body: {text: [1, 459]}
+  ussd:
+    text: USSD prompt
+    topic: act/{hdt_id}/channels/ussd
+    channel: channels service
+    class: notification
+    required: [menu]
+    limits:
+      menu: {text: [1, 182]}
+  voice:
+    text: Voice call
+    topic: act/{hdt_id}/channels/voice
+    channel: channels service
+    class: notification
+    required: [script]
+    limits:
+      script: {text: [1, 1000]}
+      language: {choice: [en, yo, ig, ha, pcm]}
+  carer:
+    text: Message to carer or clinician
+    topic: act/{hdt_id}/carer/message
+    channel: channels service and an APDT task
+    class: notification
+    required: [recipient_role, body]
+    limits:
+      recipient_role: {choice: [carer, proxy, nurse, medical_officer, community_health_worker]}
+      body: {text: [1, 1000]}
+  haptic:
+    text: Wearable haptic cue
+    topic: act/{hdt_id}/{device_id}/haptic
+    channel: MQTT
+    class: notification
+    device_classes: [smartwatch]
+    required: [pattern]
+    limits:
+      pattern: {choice: [pulse, double, long]}
+      duration_ms: {range: [50, 3000], unit: ms}
+  lighting:
+    text: Smart-home lighting
+    topic: act/{hdt_id}/home/{device_id}
+    channel: MQTT
+    class: environment
+    device_classes: [lighting]
+    required: [level_pct]
+    limits:
+      level_pct: {range: [0, 100], unit: '%'}
+  ventilation:
+    text: Smart-home ventilation
+    topic: act/{hdt_id}/home/{device_id}
+    channel: MQTT
+    class: environment
+    device_classes: [ventilation]
+    required: [fan_pct]
+    limits:
+      fan_pct: {range: [0, 100], unit: '%'}
+  insulin_pump:
+    text: Insulin pump bolus or basal rate
+    topic: act/{hdt_id}/{device_id}/therapy
+    channel: MQTT
+    class: clinical_actuator
+    device_classes: [insulin_pump]
+    required: [kind]
+    limits:
+      kind: {choice: [bolus, basal]}
+      bolus_u: {range: [0.05, 25], unit: U}
+      basal_u_per_h: {range: [0, 5], unit: U/h}
+  cpap:
+    text: CPAP pressure
+    topic: act/{hdt_id}/{device_id}/therapy
+    channel: MQTT
+    class: clinical_actuator
+    device_classes: [cpap]
+    required: [pressure_cmh2o]
+    limits:
+      pressure_cmh2o: {range: [4, 20], unit: 'cm[H2O]'}
+  rehab_robot:
+    text: Rehabilitation robot session
+    topic: act/{hdt_id}/{device_id}/therapy
+    channel: MQTT
+    class: clinical_actuator
+    device_classes: [rehab_robot]
+    approvers: [medical_officer, therapist]
+    required: [assistance_pct, duration_min]
+    limits:
+      assistance_pct: {range: [0, 100], unit: '%'}
+      duration_min: {range: [1, 60], unit: min}
+
+assumption: true
+justification: >-
+  Text bounds follow channel sizes (an Android notification title of 65 characters, three
+  concatenated GSM-7 SMS segments of 153 characters, a 182-character USSD string). Numeric
+  bounds are the adjustable ranges of the device classes (CPAP 4 to 20 cm H2O, pump bolus up
+  to 25 U, basal up to 5 U/h). None was read from a downloaded source; they await sign-off
+  with the other device assumptions (P12).

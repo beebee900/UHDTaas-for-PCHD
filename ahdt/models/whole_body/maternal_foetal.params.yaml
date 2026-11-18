@@ -1,0 +1,15 @@
+# Foetal growth by the Hadlock (1985) estimated foetal weight formula.
+model_id: ahdt.whole_body.maternal_foetal
+sources:
+- id: hadlock1985
+  citation: "Hadlock FP, Harrist RB, Sharman RS, Deter RL, Park SK. Estimation of fetal weight
+    with the use of head, body, and femur measurements: a prospective study. Am J Obstet
+    Gynecol. 1985;151(3):333-337. doi:10.1016/0002-9378(85)90298-4"
+  via: "LOINC 11746-5 formula (EFW from AC, FL and HC, Hadlock 1985)"
+  url: https://loinc.org/11746-5
+params:
+  c0: {value: 1.326, unit: '1', source: hadlock1985}
+  c_hc: {value: 0.0107, unit: /cm, source: hadlock1985}
+  c_ac: {value: 0.0438, unit: /cm, source: hadlock1985}
+  c_fl: {value: 0.158, unit: /cm, source: hadlock1985}
+  c_acfl: {value: -0.00326, unit: /cm2, source: hadlock1985}

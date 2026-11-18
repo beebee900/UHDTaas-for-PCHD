@@ -1,0 +1,47 @@
+{
+ "source_url": "https://developer.dexcom.com/docs/swaggerv3/other/getestimatedglucosevaluesv3",
+ "retrieved": "2026-10-10",
+ "kind": "documented_schema",
+ "note": "The page documents the 200 response fields but gives no response sample. Field names and enum values are from the page; recordType 'egv', recordVersion '3.0' and transmitterTicks 72364324786 are the page's examples. systemTime/displayTime reuse the page's startDate example format; recordId, userId, transmitterId and the glucose values are fill-ins within the documented types and ranges.",
+ "body": {
+  "recordType": "egv",
+  "recordVersion": "3.0",
+  "userId": "fill-in-user-id",
+  "records": [
+   {
+    "recordId": "00000000-0000-4000-8000-000000000001",
+    "systemTime": "2025-02-06T09:12:35",
+    "displayTime": "2025-02-06T10:12:35",
+    "transmitterId": null,
+    "transmitterTicks": 72364324786,
+    "value": 108,
+    "status": null,
+    "trend": "flat",
+    "trendRate": 0.2,
+    "unit": "mg/dL",
+    "rateUnit": "mg/dL/min",
+    "displayDevice": "receiver",
+    "transmitterGeneration": "g7",
+    "transmitterGenerationVariant": "g7",
+    "displayApp": "G7"
+   },
+   {
+    "recordId": "00000000-0000-4000-8000-000000000002",
+    "systemTime": "2025-02-06T09:17:35",
+    "displayTime": "2025-02-06T10:17:35",
+    "transmitterId": null,
+    "transmitterTicks": 72364325086,
+    "value": 401,
+    "status": "high",
+    "trend": "rateOutOfRange",
+    "trendRate": null,
+    "unit": "mg/dL",
+    "rateUnit": "mg/dL/min",
+    "displayDevice": "receiver",
+    "transmitterGeneration": "g7",
+    "transmitterGenerationVariant": "g7",
+    "displayApp": "G7"
+   }
+  ]
+ }
+}

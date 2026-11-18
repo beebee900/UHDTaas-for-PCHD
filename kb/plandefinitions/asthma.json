@@ -1,0 +1,157 @@
+{
+  "resourceType": "PlanDefinition",
+  "id": "asthma",
+  "url": "https://atra.health/fhir/PlanDefinition/asthma",
+  "version": "1.0.0",
+  "name": "asthma",
+  "title": "Asthma",
+  "type": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/plan-definition-type",
+        "code": "clinical-protocol"
+      }
+    ]
+  },
+  "status": "active",
+  "useContext": [
+    {
+      "code": {
+        "system": "http://terminology.hl7.org/CodeSystem/usage-context-type",
+        "code": "focus"
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "195967001"
+          }
+        ]
+      }
+    }
+  ],
+  "extension": [
+    {
+      "url": "https://atra.health/fhir/StructureDefinition/kb-entry",
+      "valueString": "cond.asthma"
+    }
+  ],
+  "action": [
+    {
+      "id": "treat",
+      "title": "Choose treatment",
+      "selectionBehavior": "exactly-one",
+      "action": [
+        {
+          "id": "treat-exacerbation_mild",
+          "title": "Treat (exacerbation mild)",
+          "condition": [
+            {
+              "kind": "applicability",
+              "expression": {
+                "language": "text/fhirpath",
+                "expression": "%severity = 'exacerbation_mild'"
+              }
+            }
+          ],
+          "selectionBehavior": "exactly-one",
+          "action": [
+            {
+              "id": "tx.asthma.exacerbation",
+              "title": "prednisolone asthma exacerbation + salbutamol exacerbation",
+              "selectionBehavior": "all",
+              "action": [
+                {
+                  "id": "dose.prednisolone_asthma_exacerbation",
+                  "title": "prednisolone asthma exacerbation",
+                  "definitionCanonical": "https://atra.health/fhir/ActivityDefinition/dose.prednisolone_asthma_exacerbation"
+                },
+                {
+                  "id": "dose.salbutamol_exacerbation",
+                  "title": "salbutamol exacerbation",
+                  "definitionCanonical": "https://atra.health/fhir/ActivityDefinition/dose.salbutamol_exacerbation"
+                }
+              ],
+              "extension": [
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/kb-entry",
+                  "valueString": "tx.asthma.exacerbation"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/preference",
+                  "valueCode": "first_line"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/eligibility",
+                  "valueString": "{}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "treat-exacerbation_severe",
+          "title": "Treat (exacerbation severe)",
+          "condition": [
+            {
+              "kind": "applicability",
+              "expression": {
+                "language": "text/fhirpath",
+                "expression": "%severity = 'exacerbation_severe'"
+              }
+            }
+          ],
+          "selectionBehavior": "exactly-one",
+          "action": [
+            {
+              "id": "tx.asthma.exacerbation",
+              "title": "prednisolone asthma exacerbation + salbutamol exacerbation",
+              "selectionBehavior": "all",
+              "action": [
+                {
+                  "id": "dose.prednisolone_asthma_exacerbation",
+                  "title": "prednisolone asthma exacerbation",
+                  "definitionCanonical": "https://atra.health/fhir/ActivityDefinition/dose.prednisolone_asthma_exacerbation"
+                },
+                {
+                  "id": "dose.salbutamol_exacerbation",
+                  "title": "salbutamol exacerbation",
+                  "definitionCanonical": "https://atra.health/fhir/ActivityDefinition/dose.salbutamol_exacerbation"
+                }
+              ],
+              "extension": [
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/kb-entry",
+                  "valueString": "tx.asthma.exacerbation"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/preference",
+                  "valueCode": "first_line"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/eligibility",
+                  "valueString": "{}"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "monitor",
+      "title": "Monitor with the early-warning score",
+      "extension": [
+        {
+          "url": "https://atra.health/fhir/StructureDefinition/kb-entry",
+          "valueString": "news2.monitoring"
+        }
+      ]
+    },
+    {
+      "id": "check-in",
+      "title": "Daily check-in",
+      "definitionCanonical": "https://atra.health/fhir/Questionnaire/check-in"
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "$defs": {
+    "GoalCheck": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "enum": [
+            "freshness",
+            "threshold",
+            "model_flag",
+            "composite",
+            "human_decision"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "params": {
+          "additionalProperties": true,
+          "title": "Params",
+          "type": "object"
+        }
+      },
+      "required": [
+        "kind"
+      ],
+      "title": "GoalCheck",
+      "type": "object"
+    }
+  },
+  "$id": "https://atra.local/schemas/goal.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "check": {
+      "$ref": "#/$defs/GoalCheck"
+    },
+    "deadline": {
+      "anyOf": [
+        {
+          "format": "date-time",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Deadline"
+    },
+    "goal_id": {
+      "title": "Goal Id",
+      "type": "string"
+    },
+    "owner": {
+      "title": "Owner",
+      "type": "string"
+    },
+    "priority": {
+      "maximum": 5,
+      "minimum": 1,
+      "title": "Priority",
+      "type": "integer"
+    },
+    "text": {
+      "title": "Text",
+      "type": "string"
+    }
+  },
+  "required": [
+    "goal_id",
+    "text",
+    "owner",
+    "priority",
+    "check"
+  ],
+  "title": "Goal",
+  "type": "object"
+}

@@ -1,0 +1,53 @@
+{
+  "$id": "https://atra.local/schemas/apdt/diagnosis_entry.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "The diagnosis the medical officer makes, in the medical officer's own words.\n`recommendation_id` names the APDT proposal it was taken from, if any.",
+  "properties": {
+    "basis": {
+      "anyOf": [
+        {
+          "maxLength": 2000,
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Basis"
+    },
+    "condition": {
+      "maxLength": 200,
+      "minLength": 1,
+      "title": "Condition",
+      "type": "string"
+    },
+    "recommendation_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Recommendation Id"
+    },
+    "status": {
+      "default": "confirmed",
+      "enum": [
+        "confirmed",
+        "provisional"
+      ],
+      "title": "Status",
+      "type": "string"
+    }
+  },
+  "required": [
+    "condition"
+  ],
+  "title": "DiagnosisEntry",
+  "type": "object"
+}

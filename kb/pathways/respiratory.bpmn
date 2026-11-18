@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" id="defs_respiratory" targetNamespace="https://atra.health/fhir/pathways">
+  <bpmn:process id="pathway_respiratory" name="respiratory" isExecutable="false">
+    <bpmn:startEvent id="start" name="Patient arrives"/>
+    <bpmn:task id="register" name="Register and consent"/>
+    <bpmn:task id="triage" name="Triage with early-warning score"/>
+    <bpmn:task id="history" name="Take history"/>
+    <bpmn:task id="examine" name="Examine"/>
+    <bpmn:task id="test" name="Order and read tests"/>
+    <bpmn:task id="diagnose" name="Confirm diagnosis and severity"/>
+    <bpmn:task id="treat" name="Treat at this facility"/>
+    <bpmn:task id="refer" name="Stabilise and refer"/>
+    <bpmn:task id="follow_up" name="Monitor and check in"/>
+    <bpmn:task id="discharge" name="Discharge or close episode"/>
+    <bpmn:exclusiveGateway id="severity" name="Severe?"/>
+    <bpmn:exclusiveGateway id="join"/>
+    <bpmn:endEvent id="end" name="Episode closed"/>
+    <bpmn:sequenceFlow id="f0" sourceRef="start" targetRef="register"/>
+    <bpmn:sequenceFlow id="f1" sourceRef="register" targetRef="triage"/>
+    <bpmn:sequenceFlow id="f2" sourceRef="triage" targetRef="history"/>
+    <bpmn:sequenceFlow id="f3" sourceRef="history" targetRef="examine"/>
+    <bpmn:sequenceFlow id="f4" sourceRef="examine" targetRef="test"/>
+    <bpmn:sequenceFlow id="f5" sourceRef="test" targetRef="diagnose"/>
+    <bpmn:sequenceFlow id="f6" sourceRef="diagnose" targetRef="severity"/>
+    <bpmn:sequenceFlow id="f7" sourceRef="severity" targetRef="treat"/>
+    <bpmn:sequenceFlow id="f8" sourceRef="severity" targetRef="refer"/>
+    <bpmn:sequenceFlow id="f9" sourceRef="treat" targetRef="join"/>
+    <bpmn:sequenceFlow id="f10" sourceRef="refer" targetRef="join"/>
+    <bpmn:sequenceFlow id="f11" sourceRef="join" targetRef="follow_up"/>
+    <bpmn:sequenceFlow id="f12" sourceRef="follow_up" targetRef="discharge"/>
+    <bpmn:sequenceFlow id="f13" sourceRef="discharge" targetRef="end"/>
+  </bpmn:process>
+</bpmn:definitions>

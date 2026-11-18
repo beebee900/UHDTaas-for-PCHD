@@ -1,0 +1,47 @@
+# Dalla Man, Rizza and Cobelli (2007) meal model, normal-subject parameters.
+model_id: ahdt.endocrine.glucose_insulin_and_metabolic_regulation
+sources:
+- id: dallaman2007
+  citation: "Dalla Man C, Rizza RA, Cobelli C. Meal simulation model of the glucose-insulin
+    system. IEEE Trans Biomed Eng. 2007;54(10):1740-1749. doi:10.1109/TBME.2007.893506"
+  via: BioModels BIOMD0000000379 (curated SBML of the paper)
+  url: https://www.ebi.ac.uk/biomodels/BIOMD0000000379
+params:
+  BW: {value: 78, unit: kg, source: dallaman2007, note: body weight of the reference subject}
+  G_b: {value: 95, unit: mg/dL, source: dallaman2007}
+  I_b: {value: 25, unit: pmol/L, source: dallaman2007}
+  V_G: {value: 1.88, unit: dL/kg, source: dallaman2007}
+  k_1: {value: 0.065, unit: /min, source: dallaman2007}
+  k_2: {value: 0.079, unit: /min, source: dallaman2007}
+  V_I: {value: 0.05, unit: L/kg, source: dallaman2007}
+  m_1: {value: 0.19, unit: /min, source: dallaman2007}
+  m_2: {value: 0.484, unit: /min, source: dallaman2007}
+  m_4: {value: 0.194, unit: /min, source: dallaman2007}
+  m_5: {value: 0.0304, unit: min.kg/pmol, source: dallaman2007}
+  m_6: {value: 0.6471, unit: '1', source: dallaman2007}
+  k_max: {value: 0.0558, unit: /min, source: dallaman2007}
+  k_min: {value: 0.008, unit: /min, source: dallaman2007}
+  k_abs: {value: 0.057, unit: /min, source: dallaman2007, calibrate: true, prior_cv: 0.4}
+  k_gri: {value: 0.0558, unit: /min, source: dallaman2007}
+  f: {value: 0.9, unit: '1', source: dallaman2007}
+  b: {value: 0.82, unit: '1', source: dallaman2007}
+  d: {value: 0.01, unit: '1', source: dallaman2007}
+  k_p1: {value: 2.7, unit: mg/kg/min, source: dallaman2007}
+  k_p2: {value: 0.0021, unit: /min, source: dallaman2007}
+  k_p3: {value: 0.009, unit: mg/kg/min per pmol/L, source: dallaman2007, calibrate: true,
+         prior_cv: 0.4}
+  k_p4: {value: 0.0618, unit: mg/kg/min per pmol/kg, source: dallaman2007}
+  k_i: {value: 0.0079, unit: /min, source: dallaman2007}
+  F_cns: {value: 1.0, unit: mg/kg/min, source: dallaman2007, note: U_ii in the SBML}
+  K_m0: {value: 225.59, unit: mg/kg, source: dallaman2007}
+  V_mX: {value: 0.047, unit: mg/kg/min per pmol/L, source: dallaman2007, calibrate: true,
+         prior_cv: 0.4}
+  p_2U: {value: 0.0331, unit: /min, source: dallaman2007}
+  K: {value: 2.3, unit: pmol/kg per mg/dL, source: dallaman2007}
+  alpha: {value: 0.05, unit: /min, source: dallaman2007}
+  beta: {value: 0.11, unit: pmol/kg/min per mg/dL, source: dallaman2007}
+  gamma: {value: 0.5, unit: /min, source: dallaman2007}
+  k_e1: {value: 0.0005, unit: /min, source: dallaman2007}
+  k_e2: {value: 339, unit: mg/kg, source: dallaman2007}
+  V_m0: {value: 2.5, unit: mg/kg/min, source: dallaman2007}
+  S_b: {value: 1.8, unit: pmol/kg/min, source: dallaman2007, note: basal insulin secretion}

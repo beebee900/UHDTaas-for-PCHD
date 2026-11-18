@@ -1,0 +1,33 @@
+# Adherence and recovery support actions that the care models suggest (design 05, 5.5).
+# `channel` says how the APDT delivers the action; `triggers` name the model outputs
+# that make it eligible.
+
+- id: support.adherence
+  actions:
+  - {id: peer_counsellor, label: Peer counsellor, channel: chw_visit, certainty: moderate, triggers: [adherence_risk]}
+  - {id: sms_reminder, label: Mobile phone text message reminders, channel: sms, certainty: moderate, triggers: [adherence_risk, missed_dose]}
+  - {id: reminder_device, label: Reminder device, channel: app_notification, certainty: moderate, triggers: [missed_dose]}
+  - {id: cbt, label: Cognitive behavioural therapy, channel: referral, certainty: moderate, triggers: [adherence_risk, low_mood]}
+  - {id: adherence_training, label: Behavioural skills or medication adherence training, channel: clinic_session, certainty: moderate, triggers: [adherence_risk]}
+  - {id: simplify_regimen, label: Fixed-dose combination or once-daily regimen, channel: clinician_review, certainty: moderate, triggers: [regimen_complexity]}
+  provenance:
+    source: who-hiv-2021
+    section: 7.5.4 Adherence support
+    page: 40
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: support.retention
+  actions:
+  - {id: community_package, label: Patient advocates and peer support in the community, channel: chw_visit, triggers: [retention_risk]}
+  - {id: adherence_club, label: Adherence club, channel: community_group, certainty: moderate, triggers: [retention_risk, distance_to_facility]}
+  - {id: extra_care_high_risk, label: Extra care for high-risk people, channel: clinician_review, triggers: [retention_risk, deterioration_risk]}
+  - {id: trace_and_reengage, label: Trace and re-engage after disengagement, channel: chw_visit, triggers: [lost_to_follow_up]}
+  provenance:
+    source: who-hiv-2021
+    section: 7.6 Continuity of care
+    page: 41
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified

@@ -1,0 +1,61 @@
+# Tuberculosis (WHO operational handbook, Annex 4, table A4.1) and HIV doses.
+
+- id: dose.hrze_fdc_adult
+  drug: isoniazid + rifampicin + pyrazinamide + ethambutol
+  atc: J04AM06
+  route: oral
+  tablet_mg: {isoniazid: 75, rifampicin: 150, pyrazinamide: 400, ethambutol: 275}
+  doses_per_day: 1
+  weight_bands:
+  - {min_kg: 25, below_kg: 30, tablets: 2}
+  - {min_kg: 30, below_kg: 35, tablets: 3}
+  - {min_kg: 35, below_kg: 50, tablets: 4}
+  - {min_kg: 50, below_kg: 65, tablets: 4}
+  - {min_kg: 65, tablets: 5}
+  provenance:
+    source: who-tb-handbook-m4-2025
+    page: 387
+    derived:
+      weight_bands[*].tablets: Tablet counts read from the rendered table; the text layer omits them.
+      doses_per_day: Daily dosing of the 6-month regimen (who-tb-m4-2026, A6).
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: dose.hr_fdc_adult
+  drug: isoniazid + rifampicin
+  atc: J04AM02
+  route: oral
+  tablet_mg: {isoniazid: 75, rifampicin: 150}
+  doses_per_day: 1
+  weight_bands:
+  - {min_kg: 25, below_kg: 30, tablets: 2}
+  - {min_kg: 30, below_kg: 35, tablets: 3}
+  - {min_kg: 35, below_kg: 50, tablets: 4}
+  - {min_kg: 50, below_kg: 65, tablets: 4}
+  - {min_kg: 65, tablets: 5}
+  provenance:
+    source: who-tb-handbook-m4-2025
+    page: 387
+    derived:
+      weight_bands[*].tablets: Tablet counts read from the rendered table; the text layer omits them.
+      doses_per_day: Daily dosing of the 6-month regimen (who-tb-m4-2026, A6).
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: dose.tld_adult
+  drug: dolutegravir + tenofovir disoproxil + lamivudine
+  atc: J05AR27
+  route: oral
+  tablet_mg: {dolutegravir: 50, tenofovir_disoproxil: 300, lamivudine: 300}
+  doses_per_day: 1
+  min_weight_kg: 30
+  provenance:
+    source: who-hiv-2021
+    page: 472
+    derived:
+      doses_per_day: Once-daily fixed-dose combination (page 167).
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified

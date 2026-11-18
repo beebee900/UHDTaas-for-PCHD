@@ -1,0 +1,22 @@
+# Severity of an asthma exacerbation (WHO PEN), read from the rendered page.
+- id: severity.asthma.exacerbation
+  severe_any:
+    pefr_percent_best_or_predicted: [33, 50]
+    respiratory_rate_above_adult: 25
+    heart_rate_at_or_above_adult: 110
+    unable_to_complete_sentences: true
+  very_severe_any:
+    signs: [altered consciousness, exhaustion, arrhythmia, hypotension, cyanosis, silent chest,
+            poor respiratory effort]
+    spo2_below: 92
+  oxygen_if_spo2_below: 90
+  provenance:
+    source: who-pen-2020
+    page: 42
+    also:
+    - {source: who-pen-2020, page: 43}
+    derived:
+      severe_any.heart_rate_at_or_above_adult: Read from the rendered page; the text layer is garbled.
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified

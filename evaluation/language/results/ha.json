@@ -1,0 +1,457 @@
+{
+ "lang": "ha",
+ "translation": {
+  "n": 40,
+  "n_base": 16,
+  "chrf_adapter": 19.715516445167573,
+  "chrf_base": 7.418782288605068,
+  "reference_source": "MAFAND-MT test",
+  "items": [
+   {
+    "english": "We have said from the beginning that we want \"neither the east, nor the west\" - that is to say, we neither want the capitalist system, nor the socialist system.",
+    "reference": "To wannan dai shi ne abin da muke fadi; mu ma dai tun daga farko muna fadin cewa 'ba gabashi ba, ba kuma yammaci ba' wato mu dai ba mu amince da tsarin jari hujja ba, haka nan kuma ba mu amince da tsarin gurguzu ba.",
+    "adapter": "Kai kuma da suke da wani ya taimakar da wannan da ƙarin da ƙarin da ƙarin da ƙarin da ƙarin da ƙarin da ƙarin da ƙarin da ƙarin da ƙarin da ƙarin da ƙarin da ƙarin da ƙarin da ƙarin da",
+    "base": "Nigeria, kita, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni, ni"
+   },
+   {
+    "english": "Another figure that I would like to mention is the late Sardar-e Kaboli, an outstanding scholar in different areas.",
+    "reference": "Wani malamin kuma shi ne marigayi Sardar Kabuli, sanannen masanin bangarori daban-daban.",
+    "adapter": "A kuma da suke da wani ya taimakon da yana da kaiya, saboda da kabolari da suka ba da jinatar da ta kawai.",
+    "base": "Oluwa Adeniyi, a prominent scholar across various fields, has been recognized."
+   },
+   {
+    "english": "The histories of the United States and Europe are ashamed of slavery, embarrassed by the colonial period and chagrined at the oppression of people of color and non-Christians.",
+    "reference": "Tarihin Turai da Amurka ya rusunar da kansa cikin kunya saboda bautar da mutane, mulkin mallaka da kuma zaluntar wadanda ba fararen fata da kuma wadanda ba Kiristoci ba da suka yi.",
+    "adapter": "Kuma da kaiya ta suke da wani yana da shi ne da suke da wani ya taimar da suke da wani ya daga da suke da wani ya da za da suke da wani ya da za da suke da wani ya da za da suke da wani ya da za da suke da wani ya",
+    "base": "histories oyo ni ugu wa Ugunya nae iyo kuma oyo ni ugu wa Egiya nae, abuwa nae kuma oyo ni ugu wa Nigera nae, abuwa nae kuma oyo ni ugu wa Afrika nae."
+   },
+   {
+    "english": "Therefore, it is an undeniable truth that the situation of America was very bad.",
+    "reference": "A saboda haka dai an amince da cewa yanayi ne mai muni.",
+    "adapter": "Wannan da kuma ba wani ya taimakar da suke da shi ne da yana da haka.",
+    "base": "Kodunwa, kuma ni gari, ni yinawa ni yaadara kana kugwu yaadara kana."
+   },
+   {
+    "english": "This is practical. Another essential point is that we must make serious efforts to point out investment opportunities to the private sector.",
+    "reference": "Wani lamarin na asali na gaba shi ne mu ba da muhimmanci ga batun bayyanar da damar zuba jari da ake da ita a kasar nan ga bangaren ‘yan kasuwa.",
+    "adapter": "A cikin kuma jinya, yana da suke da wani ya yi da za ba da wannan.",
+    "base": "أيضاً، هذا مفهوم قانوني. آخر نقطة مهمة هي أن نقدم جهدًا حثيثًا لتحديد الفرص الاستثمارية للقطاع الخاص."
+   },
+   {
+    "english": "There is no power except with the permission of Great Almighty Allah.",
+    "reference": "‘Babu wata dabara ko karfi sai daga wajen Allah Mai girma da daukaka\".",
+    "adapter": "Kai da wani ya kuma ba suke da shi ne da suke da kuwa Allah kuwa Allah.",
+    "base": "Naiyin ni, tarihin ni kuwa kuwa kuwa kuwa kuwa kuwa kuwa kuwa kuwa kuwa kuwa kuwa kuwa kuwa kuwa kuwa kuwa kuwa kuwa kuwa kuwa kuwa kuwa kuwa kuwa kuwa kuwa kuwa kuwa kuwa kuwa kuwa kuwa kuwa kuwa"
+   },
+   {
+    "english": "His actions can only be restricted by the law, which is not in fact a restriction.",
+    "reference": "Doka ce kawai za ta yi masa iyaka, wanda hakan ma ba kan iyaka ba ne.",
+    "adapter": "Kai kuma ba da wani ya taimar da suke da shi, yana ba da wani ya taimar da suke da shi, ba da wani ya taimar da suke da shi.",
+    "base": "العدوانات могут только être réprimées par le droit, qui n'est pas en réalité une réprimande."
+   },
+   {
+    "english": "The real problem is that the Islamic Republic is safeguarding the great oil and gas resources of the country in a powerful way.",
+    "reference": "Batu na asali shi ne irin tsayin dakan da tsarin Musulunci ya yi wajen kare arzikin mai da (iskar) gas da Allah ya yi wa wannan kasar.",
+    "adapter": "Kai da wani ya kuma da suke da haka da yana da daga da shi ne da suke da taimar da da suke da jin da da da da da da da da da da da da da da da da da da da da da da da da da da da da da da da da da da da da da da da da da da",
+    "base": "العائق الحقيقي هو أن الحزب الإسلامي يحمي الثروات النفطية والغازية الكبرى من قبل فشل."
+   },
+   {
+    "english": "In our country and according to our Constitution, the president has extraordinary powers.",
+    "reference": "A kasarmu sannan kuma bisa ga kundin tsarin mulkinmu, shugaban kasa yana da iko mai girman gaske.",
+    "adapter": "Kai kuma da suke da wani ya yi da za ba da ƙarin da suke da wani ya ta'umma.",
+    "base": "أبو نينوى وقانوننا يمنح الرئيس احصاءات غير مسبوقة."
+   },
+   {
+    "english": "In order to do heavy tasks, tackle them in a determined way. \"And fear Him, and do not fear anyone but Allah.\"",
+    "reference": "Ku kuduri aniyar daukan kaya mai nauyi, don ku sami damar iyawa. \"kuma ba su tsoron kowa face Allah\".",
+    "adapter": "A wani da kuma jin haka da suke da yau, ta ba da ka sha taimakar da wannan. \"Wannan Allah kuwa shi, wanda Allah kuwa shi, wanda Allah kuwa shi.\"",
+    "base": "In Hausa, this can be translated as:\n\"Ko ni yin kuma nufun, kuma ni yin kuma nufun. Akan fahimu Allah, kan fahimu Allah.\"\nThis translates the given English text into Hausa, emphasizing determination and fear of Allah."
+   },
+   {
+    "english": "I have been stressing the issue of economic corruption for several years.",
+    "reference": "Shekara da shekaru kenan na ke ta magana kan batun fada da masu ta'annuti ga tattalin arziki.",
+    "adapter": "Kai kuma ba da suke da wani ya yi mukuwa da za ka sha ƙarin da wannan.",
+    "base": "Iwara daga ugu ya kuma yarayin ya nufun ahay."
+   },
+   {
+    "english": "What I said is only part of the dua. There were 22, 23 points in the dua and I only touched on 6, 7 of them.",
+    "reference": "Wannan wani bangare ne na wannan addu'ar. Batutuwa ne kimanin ashirin da biyu zuwa da uku, to a yanzu dai a takaice na yi magana ne kan guda shida daga cikinsu.",
+    "adapter": "Kai kuma wannan ya shi da wani daga cikin. 22, 23 kan jin haka da suke da ka sha, ta ba kake 6, 7 da suke da kuma.",
+    "base": "\"ما أقول فقط الجزء من الدعاء. كان هناك 22, 23 نقطة في الدعاء وتم تطبيقها فقط على 6, 7 منها.\""
+   },
+   {
+    "english": "This is the first point that I wanted to discuss in this meeting.",
+    "reference": "Wannan batu ne na farko da wajibi ne in sanar da ku.",
+    "adapter": "A kuma da ba ya wani yin shi ne da suke da haka a cikin da kai.",
+    "base": "أين가를 논의하고 있는 이 회의에서 가장 먼저 이야기한 것은 여기입니다."
+   },
+   {
+    "english": "Unfortunately some people who do not have any evil motives fell into this trap.",
+    "reference": "Abin bakin cikin shi ne cewa yadda wasu mutane wadanda ake zaton ba su da mummunar manufa su ka fada wannan tarko na su.",
+    "adapter": "Kuma da suke da kai ne ya wani ba da yana da ka sha, wannan jin haka da abu ya taimakar da zaikafin.",
+    "base": "أوائل الناس الذين لا يمتلكون مotive للعدم الشرعي اصطدموا في هذا المكان."
+   },
+   {
+    "english": "First of all, the conditions of the region are completely unprecedented.",
+    "reference": "Da farko dai yanayin wannan yankin wani yanayi ne maras tamka.",
+    "adapter": "Kai kuma da suke da wani ya yi da za ba da ƙarin da ƙarin da ƙarin da ƙarin da ƙarin da ƙarin da ƙarin da ƙarin da ƙarin da ƙarin da ƙarin da ƙarin da ƙarin da ƙarin da ƙarin da ƙarin da",
+    "base": "First of all, region conditions are unprecedentedly so."
+   },
+   {
+    "english": "Many achievements have been made in other areas as well, but I will not discuss them for lack of time.",
+    "reference": "A sauran bangarori ma an aiwatar da ayyuka masu yawa, to da yake lokacin da muke da shi iyakantacce ne za mu wuce su kawai.",
+    "adapter": "Kuma da suke da kai ya shi ne da wani da haka da wannan da kai da yana da kai da da za ba da kai da da da, ta ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba ba",
+    "base": "Ninadagada kuma daqo ni da ọrọ naa jẹ nipa ọdụkọ. Nípa ọmọ ọ̀nọ̀ri ìjọba àwọn ṣe ọ̀pọ̀lọpọ̀ nínú nípa ọ̀pọ̀lọ"
+   },
+   {
+    "english": "These are some of the requirements of piety.",
+    "reference": "Wadannan wani bangare ne na tsoron Allah.",
+    "adapter": "A cikin da kuma wani ya yi muhimmanci."
+   },
+   {
+    "english": "Many people started searching for the causes, so they referred to the Holy Quran and found out certain truths about Islam.",
+    "reference": "Sun koma ga Alkur'ani, sun sami wasu bayanai dangane da Musulunci, a saboda haka sai suka zamanto masu kaunar Musulunci.",
+    "adapter": "Kuma da suke da kai ya taimakarwa da wani ba'ana, ka wannan haka da kai ya taimakarwa da wani ba'ana, ka wannan haka da kai ya taimakarwa da wani ba'ana."
+   },
+   {
+    "english": "You call it pessimism and other such things, but we just want to state the facts.\" No, this is bias.",
+    "reference": "Kana cewa hakan bakanta fuska ne da makamantan hakan; mu dai muna so ne mu fadi hakika. A'a, hakan kokarin rusa lamurra ne.",
+    "adapter": "Kai kuma wannan da suke da yin haka ba, wani ya taimakon da jirma. Wannan ya shi ne mai ya kuma ta kuma wannan da suke da yin haka ba."
+   },
+   {
+    "english": "It is our responsibility to play a role in the destiny of our country.",
+    "reference": "Nauyin da ke wuyanmu ne, takalifinmu mu tsoma baki cikin makomar kasarmu.",
+    "adapter": "Kai da kuma wani ya taimakar da suke da haka da na gare ka."
+   },
+   {
+    "english": "If we achieve a victory, they feel victorious and if we fail, they feel that they have failed as well.",
+    "reference": "Idan har muka sami wata nasara, su kan ji cewa sun yi nasara, haka nan kuma idan wani abin bakin cikin ya same mu, su kan ji zafi da bakin ciki.",
+    "adapter": "Kai kuma ba da suke da wani ya taimakarwa, ta samu wannan yana da kuma ka sha kuma kuma kuma kuma kuma kuma kuma kuma kuma kuma kuma kuma kuma kuma kuma kuma kuma kuma kuma kuma kuma kuma kuma kuma kuma"
+   },
+   {
+    "english": "In this regard, the year 1391, which has come to an end, was one the busiest years for our enemies.",
+    "reference": "Wannan shekara ta 1391 da ta gabata, daya ce daga cikin shekarun da makiyanmu suka shagaltu ainun da ayyukansu na kiyayya.",
+    "adapter": "Kuma kuma da wani 1391 ya shi ne da suke da ba, yana da suke da ba da ka sha maganin da wannan."
+   },
+   {
+    "english": "It was the Americans who used to tell him to whom he should sell oil and to whom he should not.",
+    "reference": "Ganga kaza za ku samar na man fetur, ku sayar da kaza; ga wa za ku sayar, sannan kada ku sayar ga wane.",
+    "adapter": "A cikin da kuma wannan ya suke da wani yau, da kuma wannan ya suke da wani ya shi."
+   },
+   {
+    "english": "All of these things are being done on the basis of the law.",
+    "reference": "Ana gudanar da dukkanin hakan ne bisa doka.",
+    "adapter": "Kai kuma ba da suke da wani ya yi da za suka, ta suke da wani ya yi da za suka."
+   },
+   {
+    "english": "What effects have these messages produced so far?",
+    "reference": "Shin ya zuwa yanzu wani tasiri ne wannan sako ya yi a aikace?",
+    "adapter": "Kuma kuma da ba'arke da suke da wani ya taimakon?"
+   },
+   {
+    "english": "In the year 1390, they produced 20-percent enriched uranium for the research reactor in Tehran and they announced their achievement to the world. Our enemies were astonished.",
+    "reference": "A shekarar da ta gabatan sun samar da uranium da aka tace kashi ashirin cikin dari din don amfanin cibiyar nukiliyan Tehran sannan kuma suka sanar da hakan ga duniya; haka makiyanmu suka shiga cikin damuwa suka rasa abin yi.",
+    "adapter": "A 1390 ya kuma 20-ka irin haka da ta'arikin wani zai yana daga cewa Iran ta fahimaki da shi ne. A wannan da suke da kuma juyin da za'dan abuwan."
+   },
+   {
+    "english": "However, the 15th of Khordad of 1342 was a very important juncture.",
+    "reference": "To amma duk da hakan, ranar 15 ga watan Khordad wani lokaci ne mai matukar muhimmanci.",
+    "adapter": "Korin 15 da Khordad 1342 wajen kuma ba suke da yana shi."
+   },
+   {
+    "english": "They ask why Iran is supporting the people of Bahrain.",
+    "reference": "Suna fadin cewa da wani dalili ne mutanen Iran suke goyon bayan mutanen Bahrain.",
+    "adapter": "Kai kuma wani Iran da suke da haka ba'adin yana wajen Bahrain."
+   },
+   {
+    "english": "He says, \"Fasting is not an obligation, rather it is an honor for which we should be thankful to God.\"",
+    "reference": "Abin da ya ke fadi shi ne cewa: Azumi dai ba takalifi ba ne face dai wata girmamawa ce, wacce take bukatar godiya saboda ita\"; wato wannan farilla ta azumi wanda wata girmamawa ce ta Ubangiji ga bayinsa, shi kansa wani abu ne da ke bukatar godiya; wajibi ne a gode wa Allah.",
+    "adapter": "A cikin ya kuma wani da suke da shi ne, ba da suke da shi ne da yana da a gaba da aya da ta za ka sha."
+   },
+   {
+    "english": "If an investor who wants to engage in a lawful and honorable business knows that the government will prosecute those who violate the law, he will be encouraged more.",
+    "reference": "Duk wani dan kasuwan da yake son samun abinci na halal sannan kuma yake son gudanar da ayyuka na halal wadanda shari'a ta amince da su, idan ya fahimci cewa gwamnati ba za ta yi sassauci ga masu karya doka ba, hakan lamari ne da zai karfafa masa gwuiwa.",
+    "adapter": "Kai kuma wannan da suke da wani ya yi yauka ba da haka shi ne da za ka sha, kai kuma wannan da suke da wani ya yi yauka ba da haka shi ne da za ka sha, kai kuma wannan da suke da wani ya yi yauka ba da haka sh"
+   },
+   {
+    "english": "You should give them the facilities they need.",
+    "reference": "Idan har kuna son ku taimaka musu, to ku ba su makami, ku ba su kayan aiki, ku ba su makamai masu kakkabo jiragen sama.",
+    "adapter": "Kai kuma jin da suke da wani ya taimakar."
+   },
+   {
+    "english": "Today westerners admit that imposing sanctions on Iran is no longer effective.",
+    "reference": "A yau su da kansu mutanen kasashen yammacin suke fadin cewa sanya wa Iran takunkumi dai ba shi da wani amfani.",
+    "adapter": "Kai da wani ya kuma jin yana da suke da shi ne, ta kasuwa da zama da haka irin Iran na gare ka."
+   },
+   {
+    "english": "Over these years, our country has always asked them to do such important and complex things for us and we have paid for their services.",
+    "reference": "Tsawon shekaru kasar mu take bukatar a koya mata wannan fagen da wadannan ayyuka masu wahala da rikitarwa sun kashe kudade masu yawa.",
+    "adapter": "Kuma da kai ya yi da suke da wani ba da ka sha magani da haka da yin shi da juyin da kuma ba da kawai da wannan da aikinka."
+   },
+   {
+    "english": "Increasing our non-oil exports helps us move closer to this goal, and this is already happening.",
+    "reference": "Kara irin kayayyakin da ake sayarwa wadanda ba man fetur ba lamari ne da zai kusata mu da manufar da muke da ita.",
+    "adapter": "Kai kuma wani ya yi da suke da ba da yana da haka, ta ba da ba da ba da ba da ba da ba da ba da ba da ba da ba da ba da ba da ba da ba da ba da ba da ba da ba da ba da ba da ba da ba da ba da ba da ba da ba da ba da ba da ba da ba"
+   },
+   {
+    "english": "It is necessary to cleanse Islamic environments of this poison.",
+    "reference": "To wajibi ne a yi watsi da wannan gubar daga cikin al'ummar musulmi.",
+    "adapter": "Kai kuma wani da suke da yana da haka ba, ta wannan ya taimakarwa da suke da yana."
+   },
+   {
+    "english": "In the case of certain issues not even two people have the same opinion. This must not become a pretext for discord.",
+    "reference": "A wasu lokuta a cikin lamari guda a kan sami cewa ra'ayi da yadda mutane biyu suke kallon lamari ya bambanta; to amma bai kamata hakan ya zamanto abin da zai haifar da sabani ba.",
+    "adapter": "Kuma kuma da ba'arin ya yi da za suke da wani yana shi, ta ba'arin ya yi da za suke da wani yana shi. Ta ba'arin ya yi da za suke da wani yana shi."
+   },
+   {
+    "english": "There are a few points that I should mention before answering this question.",
+    "reference": "Don amsa wannan tambaya, da farko dai wajibi ne a yi karin bayani kan wasu batutuwa.",
+    "adapter": "Kai kuma da suke da wani ya yi ne mai ba da shi a cikin abuwan."
+   },
+   {
+    "english": "Duas are another area worthy of reflection.",
+    "reference": "Wani fagen kuma na tunani shi ne wannan addu'ar.",
+    "adapter": "Dukar da suke da kuma jin haka wani abuwa."
+   },
+   {
+    "english": "Of course, the relationship should be prevalent and all our industries should be linked to our universities. Then both our knowledge and our industries will grow.",
+    "reference": "Ko da yake tabbas ne hakan ya hada da ko ina, a hada dukkanin masana'antunmu da jami'oi, hakan zai sanya mu samun ci gaban ilimi haka nan kuma bangaren masana'antunmu.",
+    "adapter": "Kai kuma da suke da wani ya yi da za ba da wannan shi ne da ka sha. Da suke da wani ya yi da za ba da wannan da suke da wannan da kuwa da ta suka."
+   },
+   {
+    "english": "Today I will just mention a point, but this issue requires a lot of work.",
+    "reference": "A yau dai zan gabatar da wani takaitaccen bayani ne kan wannan lamarin, to amma akwai bukatar a gudanar da ayyuka masu fadi a wannan bangaren.",
+    "adapter": "Kai kuma wannan ya yi da za ba da suke da shi, wani yana kuma jin haka da ka sha."
+   }
+  ]
+ },
+ "dialogue": {
+  "n": 30,
+  "chrf_adapter": 95.94537731301294,
+  "chrf_base": 12.085927635730622,
+  "items": [
+   {
+    "id": "d0189-6",
+    "kind": "checkin",
+    "reference": "Na rubuta wannan a cikin bayananku don ƙungiyar kulawarku.",
+    "english": "I have written this in your record for your care team. If it gets worse, go to the nearest clinic or hospital.",
+    "adapter": "Na rubuta wannan a cikin bayananku don ƙungiyar kulawarku.",
+    "base": "Wukunin ba da suka wuce, an fara ne kwanaki uku da suka wuce."
+   },
+   {
+    "id": "d0005-2",
+    "kind": "checkin",
+    "reference": "Na yi nadamar jin haka.",
+    "english": "I am sorry to hear that. Do you have polyuria?",
+    "adapter": "Na yi nadamar jin haka.",
+    "base": "I'm here to help you. How can I assist you today?"
+   },
+   {
+    "id": "d0231-4",
+    "kind": "checkin",
+    "reference": "Na gode da ka gaya mini.",
+    "english": "Thank you for telling me. How many days have you had it?",
+    "adapter": "Na gode da ka gaya mini.",
+    "base": "Nya da ciwon haɗin gwiwa! Ina da kuma da ciwon haɗin gwiwa!"
+   },
+   {
+    "id": "d0156-3",
+    "kind": "explain",
+    "reference": "Ka ɗauki magungunanka kamar yadda likitanka ya umurce ka, ka zo wurin aikinka na gaba kuma ka tuntubi ƙungiyar kula da lafiyarka idan kana da tambayoyi.",
+    "english": "Take your medicines as your doctor told you and come to your next appointment. Contact your care team if you have questions.",
+    "adapter": "Ka ɗauki magungunanka kamar yadda likitanka ya umurce ka, ka zo wurin aikinka na gaba kuma ka tuntubi ƙungiyar kula da lafiyarka idan kana da tambayoyi.",
+    "base": "Waan kuma nufun ya, ba naa."
+   },
+   {
+    "id": "d0358-6",
+    "kind": "checkin",
+    "reference": "Na rubuta wannan a cikin bayananku don ƙungiyar kulawarku.",
+    "english": "I have written this in your record for your care team. If it gets worse, go to the nearest clinic or hospital.",
+    "adapter": "Na rubuta wannan a cikin bayananku don ƙungiyar kulawarku.",
+    "base": "Wukunu ya da kuwa da suka wuce."
+   },
+   {
+    "id": "d0328-3",
+    "kind": "explain",
+    "reference": "Ka ɗauki magungunanka kamar yadda likitanka ya umurce ka, ka zo wurin aikinka na gaba kuma ka tuntubi ƙungiyar kula da lafiyarka idan kana da tambayoyi.",
+    "english": "Take your medicines as your doctor told you and come to your next appointment. Contact your care team if you have questions.",
+    "adapter": "Ka ɗauki magungunanka kamar yadda likitanka ya umurce ka, ka zo wurin aikinka na gaba kuma ka tuntubi ƙungiyar kula da lafiyarka idan kana da tambayoyi.",
+    "base": "Ko kuma madiin ya naa, wadada da naiyana da kuwa da kama kuma madiin ya naa."
+   },
+   {
+    "id": "d0030-3",
+    "kind": "explain",
+    "reference": "Ka ɗauki magungunanka kamar yadda likitanka ya umurce ka, ka zo wurin aikinka na gaba kuma ka tuntubi ƙungiyar kula da lafiyarka idan kana da tambayoyi.",
+    "english": "Take your medicines as your doctor told you and come to your next appointment. Contact your care team if you have questions.",
+    "adapter": "Ka ɗauki magungunanka kamar yadda likitanka ya umurce ka, ka zo wurin aikinka na gaba kuma ka tuntubi ƙungiyar kula da lafiyarka idan kana da tambayoyi.",
+    "base": "Ko kuma madiin ya naa, wadada da naiyana da kuwa da kama kuma madiin ya naa."
+   },
+   {
+    "id": "d0321-2",
+    "kind": "vaccine",
+    "reference": "Za ka iya samun shi a cibiyar kiwon lafiya mafi kusa. Ka kawo katin rigakafin ɗanka.",
+    "english": "You can get it at your nearest health centre. Bring your child's immunisation card.",
+    "adapter": "Za ka iya samun shi a cibiyar kiwon lafiya mafi kusa. Ka kawo katin rigakafin ɗanka.",
+    "base": "Nyanja, ya kuma n'ya kuma."
+   },
+   {
+    "id": "d0221-6",
+    "kind": "checkin",
+    "reference": "Na rubuta wannan a cikin bayananku don ƙungiyar kulawarku.",
+    "english": "I have written this in your record for your care team. If it gets worse, go to the nearest clinic or hospital.",
+    "adapter": "Na rubuta wannan a cikin bayananku don ƙungiyar kulawarku.",
+    "base": "Wukunna, ba na jin daɗi."
+   },
+   {
+    "id": "d0298-2",
+    "kind": "vaccine",
+    "reference": "Za ka iya samun shi a cibiyar kiwon lafiya mafi kusa. Ka kawo katin rigakafin ɗanka.",
+    "english": "You can get it at your nearest health centre. Bring your child's immunisation card.",
+    "adapter": "Za ka iya samun shi a cibiyar kiwon lafiya mafi kusa. Ka kawo katin rigakafin ɗanka.",
+    "base": "Nyananya, ya kuma nyananya."
+   },
+   {
+    "id": "d0160-2",
+    "kind": "vaccine",
+    "reference": "Za ka iya samun shi a cibiyar kiwon lafiya mafi kusa. Ka kawo katin rigakafin ɗanka.",
+    "english": "You can get it at your nearest health centre. Bring your child's immunisation card.",
+    "adapter": "Za ka iya samun shi a cibiyar kiwon lafiya mafi kusa. Ka kawo katin rigakafin ɗanka.",
+    "base": "Nyanja, ya kuma n'ya kuma."
+   },
+   {
+    "id": "d0087-4",
+    "kind": "checkin",
+    "reference": "Na gode da ka gaya mini.",
+    "english": "Thank you for telling me. How many days have you had it?",
+    "adapter": "Na gode da ka gaya mini.",
+    "base": "Nya da ciwon haɗin gwiwa! Nya daɗi, ba na jin daɗi."
+   },
+   {
+    "id": "d0144-4",
+    "kind": "checkin",
+    "reference": "Na rubuta wannan a cikin rikodin ku don Allah ku gaya mani idan wani abu ya canza.",
+    "english": "Thank you. I have written that in your record. Please tell me if anything changes.",
+    "adapter": "Na rubuta wannan a cikin rikodin ku don Allah ku gaya mani idan wani abu ya canza."
+   },
+   {
+    "id": "d0008-6",
+    "kind": "checkin",
+    "reference": "Na rubuta wannan a cikin bayananku don ƙungiyar kulawarku.",
+    "english": "I have written this in your record for your care team. If it gets worse, go to the nearest clinic or hospital.",
+    "adapter": "Na rubuta wannan a cikin bayananku don ƙungiyar kulawarku."
+   },
+   {
+    "id": "d0179-2",
+    "kind": "checkin",
+    "reference": "Na yi nadamar jin haka.",
+    "english": "I am sorry to hear that. Do you have polyuria?",
+    "adapter": "Na yi nadamar jin haka."
+   },
+   {
+    "id": "d0259-4",
+    "kind": "checkin",
+    "reference": "Na rubuta wannan a cikin rikodin ku don Allah ku gaya mani idan wani abu ya canza.",
+    "english": "Thank you. I have written that in your record. Please tell me if anything changes.",
+    "adapter": "Na rubuta wannan a cikin rikodin ku don Allah ku gaya mani idan wani abu ya canza."
+   },
+   {
+    "id": "d0179-4",
+    "kind": "checkin",
+    "reference": "Na rubuta wannan a cikin rikodin ku don Allah ku gaya mani idan wani abu ya canza.",
+    "english": "Thank you. I have written that in your record. Please tell me if anything changes.",
+    "adapter": "Na rubuta wannan a cikin rikodin ku don Allah ku gaya mani idan wani abu ya canza."
+   },
+   {
+    "id": "d0231-2",
+    "kind": "checkin",
+    "reference": "Na yi nadamar jin haka. Shin kana da ciwon haɗin gwiwa?",
+    "english": "I am sorry to hear that. Do you have joint pain?",
+    "adapter": "Na yi nadamar jin haka."
+   },
+   {
+    "id": "d0343-4",
+    "kind": "checkin",
+    "reference": "Na gode da ka gaya mini.",
+    "english": "Thank you for telling me. How many days have you had it?",
+    "adapter": "Na gode da ka gaya mini."
+   },
+   {
+    "id": "d0114-4",
+    "kind": "checkin",
+    "reference": "Na gode da ka gaya mini.",
+    "english": "Thank you for telling me. How many days have you had it?",
+    "adapter": "Na gode da ka gaya mini."
+   },
+   {
+    "id": "d0277-4",
+    "kind": "checkin",
+    "reference": "Na gode da ka gaya mini.",
+    "english": "Thank you for telling me. How many days have you had it?",
+    "adapter": "Na gode da ka gaya mini."
+   },
+   {
+    "id": "d0057-4",
+    "kind": "checkin",
+    "reference": "Na rubuta wannan a cikin rikodin ku don Allah ku gaya mani idan wani abu ya canza.",
+    "english": "Thank you. I have written that in your record. Please tell me if anything changes.",
+    "adapter": "Na rubuta wannan a cikin rikodin ku don Allah ku gaya mani idan wani abu ya canza."
+   },
+   {
+    "id": "d0042-4",
+    "kind": "checkin",
+    "reference": "Na rubuta wannan a cikin rikodin ku don Allah ku gaya mani idan wani abu ya canza.",
+    "english": "Thank you. I have written that in your record. Please tell me if anything changes.",
+    "adapter": "Na rubuta wannan a cikin rikodin ku don Allah ku gaya mani idan wani abu ya canza."
+   },
+   {
+    "id": "d0005-4",
+    "kind": "checkin",
+    "reference": "Na gode da ka gaya mini.",
+    "english": "Thank you for telling me. How many days have you had it?",
+    "adapter": "Na gode da ka gaya mini."
+   },
+   {
+    "id": "d0110-2",
+    "kind": "support",
+    "reference": "Zan gaya wa ƙungiyar kulawar ku. Za su tuntube ku.",
+    "english": "I will tell your care team. They will contact you.",
+    "adapter": "Zan gaya wa ƙungiyar kulawar ku. Za su tuntube ku."
+   },
+   {
+    "id": "d0358-4",
+    "kind": "checkin",
+    "reference": "Na gode da ka gaya mini.",
+    "english": "Thank you for telling me. How many days have you had it?",
+    "adapter": "Na gode da ka gaya mini."
+   },
+   {
+    "id": "d0189-4",
+    "kind": "checkin",
+    "reference": "Na gode da ka gaya mini.",
+    "english": "Thank you for telling me. How many days have you had it?",
+    "adapter": "Na gode da ka gaya mini."
+   },
+   {
+    "id": "d0144-2",
+    "kind": "checkin",
+    "reference": "Na yi nadamar jin haka. Shin kana da damuwa cewa ba za ka iya sarrafa shi ba?",
+    "english": "I am sorry to hear that. Do you have worry that you cannot control?",
+    "adapter": "Na yi nadamar jin haka."
+   },
+   {
+    "id": "d0058-1",
+    "kind": "explain",
+    "reference": "Jikin ciki wata cuta ce da ƙungiyar kulawarka ta rubuta a gare ka.",
+    "english": "Enteric is a health condition that your care team has recorded for you. Your doctor or nurse can tell you more about it.",
+    "adapter": "Wata cuta ce da ƙungiyar kulawarka ta rubuta a gare ka."
+   },
+   {
+    "id": "d0284-3",
+    "kind": "explain",
+    "reference": "Ka ɗauki magungunanka kamar yadda likitanka ya umurce ka, ka zo wurin aikinka na gaba kuma ka tuntubi ƙungiyar kula da lafiyarka idan kana da tambayoyi.",
+    "english": "Take your medicines as your doctor told you and come to your next appointment. Contact your care team if you have questions.",
+    "adapter": "Ka ɗauki magungunanka kamar yadda likitanka ya umurce ka, ka zo wurin aikinka na gaba kuma ka tuntubi ƙungiyar kula da lafiyarka idan kana da tambayoyi."
+   }
+  ]
+ }
+}

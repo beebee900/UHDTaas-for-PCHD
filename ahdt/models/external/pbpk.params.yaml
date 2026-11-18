@@ -1,0 +1,98 @@
+# Whole-body PBPK: reference physiology (ICRP Publication 89) and drug properties (FDA labels).
+model_id: ahdt.whole_body.whole_body_pbpk
+sources:
+- id: icrp89
+  citation: "Valentin J, editor. Basic anatomical and physiological data for use in radiological
+    protection: reference values. ICRP Publication 89. Ann ICRP. 2002;32(3-4)."
+  via: "Tables 2.8, 2.9, 2.39 and 2.40 and Section 8.2 of the PDF pinned in sources.lock.yaml (icrp-89)"
+- id: fda-metformin
+  citation: "Metformin hydrochloride tablets, US prescribing information, section 12.3
+    Pharmacokinetics (openFDA drug label, set id 011de1a5-1ac0-4831-9e8d-26ec79ba2205,
+    effective 2024-08-21)."
+  url: https://api.fda.gov/drug/label.json?search=set_id:011de1a5-1ac0-4831-9e8d-26ec79ba2205
+- id: fda-ceftriaxone
+  citation: "Ceftriaxone for injection, US prescribing information, Pharmacokinetics (openFDA
+    drug label, set id 03283208-8616-4117-9d2b-aa8046017a4f, effective 2026-01-19)."
+  url: https://api.fda.gov/drug/label.json?search=set_id:03283208-8616-4117-9d2b-aa8046017a4f
+- id: atra-assumption
+  citation: ATRA design 01 rule R5 assumption register
+params:
+  mass_lung_m: {value: 500, unit: g, source: icrp89, note: "Table 2.8, lung tissue only"}
+  mass_heart_m: {value: 330, unit: g, source: icrp89, note: "Table 2.8, heart tissue only"}
+  mass_brain_m: {value: 1450, unit: g, source: icrp89, note: "Table 2.8"}
+  mass_kidney_m: {value: 310, unit: g, source: icrp89, note: "Table 2.8, kidneys (2)"}
+  mass_liver_m: {value: 1800, unit: g, source: icrp89, note: "Table 2.8"}
+  mass_splanchnic_m: {value: 1500, unit: g, source: icrp89, note: "Table 2.8, alimentary wall (oesophagus, stomach, small and large intestine) plus spleen and pancreas"}
+  mass_muscle_m: {value: 29000, unit: g, source: icrp89, note: "Table 2.8, skeletal muscle"}
+  mass_adipose_m: {value: 14500, unit: g, source: icrp89, note: "Table 2.8, separable adipose tissue"}
+  mass_skin_m: {value: 3300, unit: g, source: icrp89, note: "Table 2.8"}
+  mass_bone_m: {value: 10500, unit: g, source: icrp89, note: "Table 2.8, total skeleton"}
+  flow_heart_m: {value: 4.0, unit: '%', source: icrp89, note: "Table 2.40, coronary tissue, percent of cardiac output"}
+  flow_brain_m: {value: 12, unit: '%', source: icrp89, note: "Table 2.40, percent of cardiac output"}
+  flow_kidney_m: {value: 19, unit: '%', source: icrp89, note: "Table 2.40, kidneys, percent of cardiac output"}
+  flow_liver_m: {value: 6.5, unit: '%', source: icrp89, note: "Table 2.40, liver arterial supply, percent of cardiac output"}
+  flow_splanchnic_m: {value: 19.0, unit: '%', source: icrp89, note: "Table 2.40, liver total minus liver arterial (portal flow from gut, spleen and pancreas), percent of cardiac output"}
+  flow_muscle_m: {value: 17, unit: '%', source: icrp89, note: "Table 2.40, skeletal muscle, percent of cardiac output"}
+  flow_adipose_m: {value: 5.0, unit: '%', source: icrp89, note: "Table 2.40, fat, percent of cardiac output"}
+  flow_skin_m: {value: 5, unit: '%', source: icrp89, note: "Table 2.40, percent of cardiac output"}
+  flow_bone_m: {value: 5, unit: '%', source: icrp89, note: "Table 2.40, skeleton, percent of cardiac output"}
+  total_mass_m: {value: 73000, unit: g, source: icrp89, note: "Table 2.9, adult"}
+  blood_mass_m: {value: 5600, unit: g, source: icrp89, note: "Table 2.8, blood"}
+  blood_volume_m: {value: 5.3, unit: L, source: icrp89, note: "Section 7.3, total blood volume"}
+  cardiac_output_m: {value: 6.5, unit: L/min, source: icrp89, note: "Table 2.39, adult"}
+  mass_lung_f: {value: 420, unit: g, source: icrp89, note: "Table 2.8, lung tissue only"}
+  mass_heart_f: {value: 250, unit: g, source: icrp89, note: "Table 2.8, heart tissue only"}
+  mass_brain_f: {value: 1300, unit: g, source: icrp89, note: "Table 2.8"}
+  mass_kidney_f: {value: 275, unit: g, source: icrp89, note: "Table 2.8, kidneys (2)"}
+  mass_liver_f: {value: 1400, unit: g, source: icrp89, note: "Table 2.8"}
+  mass_splanchnic_f: {value: 1385, unit: g, source: icrp89, note: "Table 2.8, alimentary wall (oesophagus, stomach, small and large intestine) plus spleen and pancreas"}
+  mass_muscle_f: {value: 17500, unit: g, source: icrp89, note: "Table 2.8, skeletal muscle"}
+  mass_adipose_f: {value: 19000, unit: g, source: icrp89, note: "Table 2.8, separable adipose tissue"}
+  mass_skin_f: {value: 2300, unit: g, source: icrp89, note: "Table 2.8"}
+  mass_bone_f: {value: 7800, unit: g, source: icrp89, note: "Table 2.8, total skeleton"}
+  flow_heart_f: {value: 5.0, unit: '%', source: icrp89, note: "Table 2.40, coronary tissue, percent of cardiac output"}
+  flow_brain_f: {value: 12, unit: '%', source: icrp89, note: "Table 2.40, percent of cardiac output"}
+  flow_kidney_f: {value: 17, unit: '%', source: icrp89, note: "Table 2.40, kidneys, percent of cardiac output"}
+  flow_liver_f: {value: 6.5, unit: '%', source: icrp89, note: "Table 2.40, liver arterial supply, percent of cardiac output"}
+  flow_splanchnic_f: {value: 20.5, unit: '%', source: icrp89, note: "Table 2.40, liver total minus liver arterial (portal flow from gut, spleen and pancreas), percent of cardiac output"}
+  flow_muscle_f: {value: 12, unit: '%', source: icrp89, note: "Table 2.40, skeletal muscle, percent of cardiac output"}
+  flow_adipose_f: {value: 8.5, unit: '%', source: icrp89, note: "Table 2.40, fat, percent of cardiac output"}
+  flow_skin_f: {value: 5, unit: '%', source: icrp89, note: "Table 2.40, percent of cardiac output"}
+  flow_bone_f: {value: 5, unit: '%', source: icrp89, note: "Table 2.40, skeleton, percent of cardiac output"}
+  total_mass_f: {value: 60000, unit: g, source: icrp89, note: "Table 2.9, adult"}
+  blood_mass_f: {value: 4100, unit: g, source: icrp89, note: "Table 2.8, blood"}
+  blood_volume_f: {value: 3.9, unit: L, source: icrp89, note: "Section 7.3, total blood volume"}
+  cardiac_output_f: {value: 5.9, unit: L/min, source: icrp89, note: "Table 2.39, adult"}
+  arterial_blood_fraction: {value: 16, unit: '%', source: icrp89, note: "Table 2.13, aorta and large arteries 6 plus small arteries 10, percent of total blood volume"}
+  venous_blood_fraction: {value: 59.5, unit: '%', source: icrp89, note: "Table 2.13, small veins 41.5 plus large veins 18, percent of total blood volume"}
+  reference_egfr: {value: 125, unit: mL/min, source: icrp89, note: "Section 8.2, glomerular filtration rate of a middle-aged adult male"}
+  tissue_density: {value: 1.0, unit: kg/L, source: atra-assumption, assumption: true,
+                   justification: "Organ masses become volumes at 1 kg/L; ICRP 89 gives masses and the
+                     densities of soft tissues differ from 1 by under 10 percent"}
+  cardiac_output_exponent: {value: 0.75, unit: '1', source: atra-assumption, assumption: true,
+                            justification: "Cardiac output scales with body weight to this power when a person's
+                              weight differs from the ICRP reference mass; the usual allometric exponent"}
+  blood_to_plasma_ratio: {value: 1.0, unit: '1', source: atra-assumption, assumption: true,
+                          justification: "Concentrations are plasma concentrations and blood flows carry them
+                            unchanged; no blood to plasma ratio is available for the two drugs"}
+  metformin_bioavailability: {value: 0.55, unit: '1', source: fda-metformin, note: "absolute bioavailability 50 to 60 percent, midpoint"}
+  metformin_vss: {value: 360, unit: L, source: atra-assumption, assumption: true,
+                  justification: "The label gives an apparent volume V/F of 654 L; multiplying by the
+                    bioavailability of 0.55 gives the steady-state volume used to scale the tissue partition
+                    coefficients"}
+  metformin_renal_clearance: {value: 36, unit: L/h, source: fda-metformin, note: "Table 4, healthy non-diabetic adults, 500 mg single dose (n=24), mean 600 mL/min"}
+  metformin_nonrenal_clearance: {value: 0, unit: L/h, source: fda-metformin, note: "excreted unchanged, no hepatic metabolism or biliary excretion"}
+  metformin_ka: {value: 0.27, unit: 1/h, source: atra-assumption, assumption: true,
+                 justification: "First-order absorption rate fitted so that the simulated time of peak
+                   plasma concentration equals the 2.75 h of label Table 4 (500 mg single dose)"}
+  ceftriaxone_bioavailability: {value: 1.0, unit: '1', source: atra-assumption, assumption: true,
+                                justification: "Intravenous drug; the full dose enters the circulation"}
+  ceftriaxone_vss: {value: 9.64, unit: L, source: atra-assumption, assumption: true,
+                    justification: "Midpoint of the label range of 5.78 to 13.5 L for the apparent volume of
+                      distribution over 0.15 to 3 g doses"}
+  ceftriaxone_renal_clearance: {value: 0.525, unit: L/h, source: atra-assumption, assumption: true,
+                                justification: "Midpoint of the label range of 0.32 to 0.73 L/h for renal clearance"}
+  ceftriaxone_nonrenal_clearance: {value: 0.49, unit: L/h, source: atra-assumption, assumption: true,
+                                   justification: "Total plasma clearance (midpoint 1.015 L/h of the label range
+                                     0.58 to 1.45) minus the renal clearance"}
+

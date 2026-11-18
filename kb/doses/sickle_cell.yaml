@@ -1,0 +1,134 @@
+# Sickle cell disease (Nigerian national guideline 2014). Tables read from the rendered pages
+# where the text layer splits the table cells.
+
+- id: dose.scd_pain_ladder
+  drug: analgesic ladder for acute sickle cell pain
+  tables:
+    adult_opioid_naive:
+      mild:
+      - {drug: dihydrocodeine, atc: N02AA08, mg: 30, every_h: 4}
+      - {drug: paracetamol, atc: N02BE01, g: 1, every_h: 4}
+      moderate_severe:
+      - {drug: diamorphine, mg: [2.5, 5], every_h: 4, route: subcutaneous}
+      - {drug: morphine, atc: N02AA01, mg: [5, 10], schedule: stat}
+      - {drug: pentazocine, atc: N02AD01, mg: 15, every_h: 8}
+      - {drug: diclofenac, atc: M01AB05, mg: 75, route: injection, timing: 1 to 2 hours after opioids}
+      - {drug: tramadol, atc: N02AX02, mg: 100, route: injection, timing: 1 to 2 hours after NSAIDs}
+    adult_opioid_tolerant:
+      mild:
+      - {drug: morphine, atc: N02AA01, form: immediate-release oral, every_h: 4}
+      moderate_severe:
+      - {drug: diamorphine, mg: [10, 20], every_h: [2, 4], route: subcutaneous}
+      - {drug: pentazocine, atc: N02AD01, mg: [30, 60], every_h: 8}
+    child_opioid_naive:
+      mild:
+      - {drug: paracetamol, atc: N02BE01, mg_per_kg: 20, every_h: [4, 6]}
+      - {drug: ibuprofen, atc: M01AE01, mg_per_kg: 10, every_h: 8, optional: true}
+      - {drug: diclofenac, atc: M01AB05, mg_per_kg: 1, every_h: 8, alternative_to: ibuprofen}
+      - {drug: dihydrocodeine, atc: N02AA08, mg_per_kg: 1, every_h: 8}
+      moderate_severe:
+      - {drug: morphine, atc: N02AA01, route: oral, mg_per_kg: 0.4, schedule: stat}
+      - {drug: diamorphine, mg_per_kg: 0.1, schedule: stat, alternative_to: morphine}
+      - {drug: morphine slow release, atc: N02AA01, mg_per_kg: 1, every_h: 12, round_up_to_mg: 5,
+         phase: maintenance}
+      - {drug: morphine, atc: N02AA01, route: oral, mg_per_kg: 0.3, every_h: 3, as_needed: true,
+         phase: maintenance}
+      - {drug: diclofenac, atc: M01AB05, mg_per_kg: 1, route: injection, timing: after opioids}
+      - {drug: tramadol, atc: N02AX02, mg: 100, route: injection, timing: 1 to 2 hours after NSAIDs}
+  monitoring:
+    reassess_pain_every_min: [15, 30]
+    observations_every_min_until_stable: 30
+    observations_every_h_when_stable: 2
+    omit_opioid_if_respiratory_rate_below: 10
+    naloxone_ug_per_kg: {initial: 10, then: 100}
+  antiemetics:
+  - {drug: prochlorperazine, atc: N05AB04, ug_per_kg: 250, doses_per_day: 3}
+  - {drug: cyclizine, atc: R06AE03, mg: [12.5, 25], doses_per_day: 3}
+  atc_note: Diamorphine has no ATC code for analgesia; N07BC06 classifies it for opioid
+    dependence, so no code is given.
+  review_flag: Paracetamol 1 g every 4 hours is printed in the source; confirm the interval against
+    the formulary maximum daily dose at sign-off.
+  provenance:
+    source: ng-scd-2014
+    section: "Table 5: Treatment of Acute Pain in Sickle Cell Disease"
+    page: 32
+    also:
+    - {source: ng-scd-2014, page: 33}
+    derived:
+      antiemetics[*].doses_per_day: Text "t.d.s.".
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: dose.scd_fluids_painful_crisis
+  drug: intravenous or oral fluids
+  adult: {l_per_m2_per_day: 1.5, or_l_per_day: 3}
+  child_ml_per_kg_per_day: [100, 120]
+  preferred: 5% dextrose in water or dextrose saline; avoid hypertonic fluids such as 10% dextrose
+  provenance:
+    source: ng-scd-2014
+    section: "Table 3: Fluid Management in Painful Crisis"
+    page: 31
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: dose.scd_transfusion_painful_crisis
+  drug: blood transfusion
+  transfuse_if: {hb_below_g_dl: 6, hb_drop_above_g_dl_from_steady_state: 2}
+  adult: to steady state
+  child_ml_per_kg: {red_cell_concentrate: 10, sedimented_cells: 15, whole_blood: 20}
+  provenance:
+    source: ng-scd-2014
+    section: "Table 4: Blood Transfusion in Painful Crisis"
+    page: 32
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: dose.hydroxyurea_scd
+  drug: hydroxycarbamide
+  atc: L01XX05
+  route: oral
+  start_mg_per_kg_per_day: 15
+  increase_mg_per_kg_per_day: 5
+  increase_every_weeks: [3, 4]
+  max_mg_per_kg_per_day: 35
+  provenance:
+    source: ng-scd-2014
+    section: 4.1 Hydroxyurea Therapy for Sickle Cell Disease
+    page: 42
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: dose.proguanil_scd_prophylaxis
+  drug: proguanil
+  atc: P01BB01
+  route: oral
+  mg_per_day: {child_up_to_15_years: 100, adult: 200}
+  provenance:
+    source: ng-scd-2014
+    page: 42
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: dose.penicillin_v_scd_prophylaxis
+  drug: phenoxymethylpenicillin
+  atc: J01CE02
+  route: oral
+  doses_per_day: 2
+  mg: {child_from_3_months_to_16_years: 125, adult: 250}
+  penicillin_allergy: {drug: clarithromycin, atc: J01FA09, mg: 250, doses_per_day: 2}
+  recurrent_infection: {drug: ciprofloxacin, atc: J01MA02, mg: 250, doses_per_day: 2}
+  provenance:
+    source: ng-scd-2014
+    page: 43
+    derived:
+      doses_per_day: Text "b.d".
+      penicillin_allergy.doses_per_day: Text "b.d".
+      recurrent_infection.doses_per_day: Text "b.d".
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified

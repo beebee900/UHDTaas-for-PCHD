@@ -1,0 +1,457 @@
+{
+ "lang": "ig",
+ "translation": {
+  "n": 40,
+  "n_base": 16,
+  "chrf_adapter": 17.281205819087024,
+  "chrf_base": 13.27229006061219,
+  "reference_source": "MAFAND-MT test",
+  "items": [
+   {
+    "english": "Mikel Obi is sad.",
+    "reference": "Obi adịghị Mikel Obi mma",
+    "adapter": "Mikel Obi n'akụkọ.",
+    "base": "Mikir Obi nipa."
+   },
+   {
+    "english": "Groundout and different other nuts",
+    "reference": "Ọpupa na akị dị iche iche",
+    "adapter": "Mba ụmụ ndị na-akwụkwọ ndị na-akwụkwọ",
+    "base": "Mba ihe nipa ihe oye dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị"
+   },
+   {
+    "english": "The Nigerian government have mapped out what to do with more than three hundred million dollars Abacha's loot returned by Swiss.",
+    "reference": "Gọọmentị Naijiria akwadola iji ihe kariri dọlla nde dọlla narị atọ bụ ego Abacha zuru nke gọọmentị Swiss weghachitere ga-eme.",
+    "adapter": "N'ọkụ nke ndị ọrụ na-akwụkwọ bụ ọrụ nke ndị ọrụ na-akwụkwọ bụ ọrụ nke ndị ọrụ na-akwụkwọ bụ ọrụ nke ndị ọrụ na-akwụkwọ",
+    "base": "Nigeria nipa na mba ni ọrọ n'omu oye n'ihe abacha na kwa ọrọ n'omu oye. Abacha na kwa ọrọ n'omu oye na nipa na mba ni ọrọ n'omu oye."
+   },
+   {
+    "english": "He further said that the problem in Benue was because the government did not establish cattle ranch before they banned cattle grazing.",
+    "reference": "Ọ gara n'ihu kwuo na nsogbu dapụtara na Benue bụ maka na gọọmenti steeti ahụ ehibeghị ọdọ ehi tupu ha machie ịchịgharị ehi",
+    "adapter": "Ọrụ ọkụ nke ndị na-akwụkwọ Benue bụ ọrụ na-akwụkwọ ahụ na-akwụkwọ maka ọrụ na-akwụkwọ maka ọrụ na-akwụkwọ maka ọrụ na-akwụkwọ maka ọ",
+    "base": "Igbo: Eyi nipa, iki niyan na kwa mba na kwa mba na kwa mba na kwa mba na kwa mba na kwa mba na kwa mba na kwa mba na kwa mba na kwa mba na kwa mba na kwa mba na kwa mba na k"
+   },
+   {
+    "english": "Will you have the type of circumcision had in the ancient time?",
+    "reference": "I ga-egbu ụdịrị ichi a egburu mgbe gboo?",
+    "adapter": "Eyi n'akụkọ ọrụ na-akwụkwọ ahụ maka ịjụ gị?",
+    "base": "Igbo: O nwere o yẹ nipa kọ nipa ihe ọdụkọ nipa ihe ọdụkọ dị."
+   },
+   {
+    "english": "Her relations have asked her not to come home until she gets married",
+    "reference": "Ndị ụlọ anyị sị m ma alọtazina ụlọ ọzọ ma m ahụghị di'",
+    "adapter": "Echeta na-akwụkwọ ha n'ewu ịrụ ahụ ihe ndị ọ bụla ya.",
+    "base": "Igbo: Nipa n'omu ni gba, iki o n'ihe na kwa mba ni ozi."
+   },
+   {
+    "english": "Corruption and evil abound.",
+    "reference": "Mpụ na ajọọ ihe karịrị.",
+    "adapter": "Mba ụmụ ndị na-akwụkwọ n'ala.",
+    "base": "O bụ nwere ihe nipa dị."
+   },
+   {
+    "english": "He contested for presidency in 2015 under ACPN",
+    "reference": "Ọ bụbu onye zọrọ oche onyeisiala n'okpuru pati ACPN n'afọ 2015",
+    "adapter": "Ọrụ n'akwụkwọ ndị 2015 na ACPN",
+    "base": "Igbo: Ihe nipa niyan ike oye, naa kwa akwai yẹ nipa niyan ike oye, naa kwa akwai yẹ nipa niyan ike oye, naa kwa akwai yẹ nipa niyan ike oye, naa kwa akwai yẹ nipa"
+   },
+   {
+    "english": "Uber'private vehicle killed one woman at Tempe of Arizona in America.",
+    "reference": "Otu ụgbọala Uber na-anya onwe ya kụgbulu otu nwaanyị na obodo Tempe dị na Arizona, na mba Amerika",
+    "adapter": "Umbu ndị ọrụ nke ọkụ na-akwụkwọ Tempe of Arizona, Amerika.",
+    "base": "Umbu nipa niyan oye ihe Tempe, Arizona, Amerika. Ochi iba niyan oye ihe ọrọ."
+   },
+   {
+    "english": "Dara khosrowshahi, the head of the Uber company said in Twitter ' that the death of that woman is a heart break 'to them.",
+    "reference": "Onyeisi Uber bụ Dara Khosrowshahi kwuru na Twitter na ọnwụ ahụ bụ ihe 'oke obi mgbawa'.",
+    "adapter": "Dara n'akwụkwọ, oge ọkọla ndị Uber na-ahụrụ nke onye ' n'aka ọ bụ ọzọ ya ' ihe ọ bụla ọrụ ahụ.",
+    "base": "Dara nipa kwa daga ni Uber na mba ng'omu wa nipa ihe nipa kwa ọrọ. Iyi oye, wọn nipa kwa ọrọ na mba nipa ihe nipa kwa ọrọ."
+   },
+   {
+    "english": "The Nobel Prize winner Soyinka has said that Nigeria is devoid of good leadership.",
+    "reference": "Onye nwere nzere Nobel bụ Wole Soyinka ekwuola na ezi ọchịchị akpụọla afọ n'ala na Naijiria.",
+    "adapter": "Ọrụ ọkụ na-akwụkwọ Soyinka n'ụfọdụ ndị na-enye ahụ.",
+    "base": "O n'omu, Ogunlade Soyinka naa kwa mba iroyin o n'omu, Nigiri naa ka mba iroyin o n'omu."
+   },
+   {
+    "english": "The news that will interest you:",
+    "reference": "Akụkọ ndị ga-amasị gị:",
+    "adapter": "Ndị n'ụlọ iche:",
+    "base": "O nwere ihe nipa ni o bụ nwere ihe nipa dị bụ nwere ihe nipa dị dị bụ."
+   },
+   {
+    "english": "He has vied for presidency twice as the flag bearer of his party; in 2007 under AC and in 2018 under PDP",
+    "reference": "Ọ zọọla ọkwa onyeisiala dịka onye bu ọkọrọtọ pati ya ugboro abụọ; n'afọ 2007 n'okpuru AC nakwa 2018 n'okpuru PDP",
+    "adapter": "Ọrụ n'akwụkwọ ndị na-akpata ọkụ ụfọdụ ahụ, akwụkwọ ndị na-akpata ọkụ ụfọdụ ahụ ọrụ AB, ọkụ ụfọdụ ahụ ọrụ PDP.",
+    "base": "Ihe ihe nwere oyele, ibi igbọ nipa ni oyele n'iri oyele ni oyele ni oyele ni oyele ni oyele ni oyele ni oyele ni oyele ni oyele ni oyele ni oyele ni oyele ni oyele ni oyele ni"
+   },
+   {
+    "english": "Another person by name Mario Mandara calls on the government to barn the selling of those cough syrup that contains codeine.",
+    "reference": "Onye ọzọ, Mairo Mandara, kpọrọ oku ka gọọmenti machie orire ọgwụ ụkwara nwere codeine.",
+    "adapter": "Otu ọkụ nke ndị ọrụ, Manda na-akwụkwọ ndị ọrụ ya ihe ndị ọzọ ya na-akwụkwọ ya n'aka ọ bụla ya.",
+    "base": "Igbo: O ni mba nipa, iki o jẹ ọrọ naa ṣe ọdụ gbogbo yoo kò ọ̀nọ̀mọ̀ ní ọ̀pọ̀lọpọ̀ nínú ìjọ́kọ̀."
+   },
+   {
+    "english": "The news that will interest you:",
+    "reference": "Akụkọ ndị ga-amasị gị:",
+    "adapter": "Ndị n'ụlọ iche:",
+    "base": "O nwere ihe nipa ni o bụ nwere ihe nipa dị bụ nwere ihe nipa dị dị bụ."
+   },
+   {
+    "english": "Bioraji pharmaceuticals said that they sacked their worker madubiike.",
+    "reference": "Ụlọọrụ Bioraj Pharmaceuticals kwuru na ha akwụsịla ọnye ọrụ ha bụ Junaid Hassan ọrụ n'ike, Emzor kwukwara na ha achụọla onye ọrụ ha bụ Chukwunonye Madubuike n'ọrụ.",
+    "adapter": "Bioraji ndị ọrụ nke ahụ na-akpata ya, ma ọ bụ ọkụ Madubiike.",
+    "base": "Bioraji Pharmaceuticals nipa ni mba, kwa mba na Madubiike."
+   },
+   {
+    "english": "In his speech 'we have destroyed those drugs that contained codeine in our office at Ilorin.",
+    "reference": "N'ọnụ okwu ya: 'anyị akpachiela ọtụtụ ọgwụ nwere codeine n'ụlọọrụ na-emepụta ọgwụ n'Ilorin.",
+    "adapter": "N'ụlọ ụfọrụ na-akwụkwọ ndị ụmụ nke ọkụka iche ụfọrụ na-akwụkwọ ndị ụmụ nke ọkụka iche ilorin."
+   },
+   {
+    "english": "Before Breadfruit will be ready as food , it passes through different processes.",
+    "reference": "Tupu e rie ụkwa, ọ ga-agabiga ụzọ dị icheiche dịka:",
+    "adapter": "Breadfruit bụ ọrụ na-akwụkwọ n'ụlọ ịjụ, oge ọgwụ gị ga-ogwa."
+   },
+   {
+    "english": "Atiku and Obi are flying the flag of Peoples Democratic Party (PDP) in this 2019 elections",
+    "reference": "Atiku na Obi na-efe ọkọrọtọ Peoples Democratic Party (PDP) na ntuliaka 2019 a",
+    "adapter": "Atiku ndị ọrụ n'Obi na-akwụkwọ ndị ọrụ na-akwụkwọ ndị ọrụ na-akwụkwọ ndị ọrụ na-akwụkwọ ndị ọrụ na-akwụkwọ ndị ọrụ na-ak"
+   },
+   {
+    "english": "Unachukwu said 'INEC cannot say that don't have because they have where they store data.",
+    "reference": "Unachukwu sị na 'Inec agaghị asị na ha enweghị sava maka na ha nwere ebe ha na edowe mkpụrụozi bụ data.",
+    "adapter": "Unachukwu n'akwụkwọ ịkwa ndị na-akpata ọrụ maka ọgwụ gị, ọ bụ ọzọ ọzọ ọzọ ọzọ ọzọ ọzọ ọzọ ọzọ ọzọ ọzọ ọz"
+   },
+   {
+    "english": "If someone deceived you two or three times, once he comes the fourth time, you have to think deeply.",
+    "reference": "Ọ bụrụ na mmadụ ghọgbụo gị ụgboro abụọ ma ọ bụ atọ, ọ bịa nke anọ, i cheba echiche ime.",
+    "adapter": "Ọrụ ọma anyị n'akwụkwọ ndị na-ahụ, ọrụ ọkọ ọkọ ọkọ ya ọrụ ọkọ ya."
+   },
+   {
+    "english": "Mohammed explained that the ministers whose names were in this event did not receive invitation to come, or were in Washington DC when this meeting was going on.",
+    "reference": "Mohammed na-akọwa na ndị mịnịsta aha ha dị n'emume a enwetaghị akwụkwọ e ji si ha bịa ya, maọbụ nọdụ na Washịntịn DC mgbe ọgbakọ a na-eme.",
+    "adapter": "Mụkọ nke ịrụ na-akwụkwọ ndị ọrụ ahụ ihe ọ bụla ya n'ụfọdụ ahụ maka ọzọ ndị ọrụ ahụ maka ọzọ na-akwụkwọ ahụ maka ọzọ na-akwụkwọ"
+   },
+   {
+    "english": "If Son Heung-min stops playing with Rochadale",
+    "reference": "Son Heung-min kwụsị bọọlụ otu Rochadale",
+    "adapter": "Ọrọ ha ịkụ na-akwụkwọ Rochadale"
+   },
+   {
+    "english": "President Muhammadu Buhari",
+    "reference": "President Muhammadu buhari",
+    "adapter": "Muhammadu Buhari"
+   },
+   {
+    "english": "codeine syrups: Emzor have sacked his workers",
+    "reference": "Codeine ọtọmegbum: Emzor achụọla ndịọrụ",
+    "adapter": "Echikọ n'akwụkwọ: Echikọ n'akwụkwọ"
+   },
+   {
+    "english": "The news that may interest you:",
+    "reference": "Akụkọ ndị ga-amasị gị:",
+    "adapter": "Ndị n'ụlọ iche:"
+   },
+   {
+    "english": "the last time I travelled to my village, I was asked not to come home again unless I come with a man that will marry me",
+    "reference": "Oge ikpeazụ m gara ụlọ, ndị ụlọ anyị gwara m na m alọtazina ụlọ ma o buru na onweghị nwoke m ji aka lọta.",
+    "adapter": "N'ụfọ ụkwu na-akwụkwọ nke ndị ụmụ ya, oge ụfọ ụkwu na-akwụkwọ nke ndị ụmụ ya, ụfọ ụkwu na-akwụkwọ nke ndị ụmụ ya."
+   },
+   {
+    "english": "Lagos state Commissioner of Police Edgal Imohimi said that they have curbed the operations of hoodlums in Ikorodu.",
+    "reference": "Kọmishọna ndị uweojii na Legos steeti bụ Edgal Imohimi kwuru na ha ebelatala ike ndị otu badoo na-akpa n'Ikorodu",
+    "adapter": "Lagos State Commissioner of Police Edgal Imohimi n'akụkọ ọrụ ndị ọzọ ahụ na-ahụ ike Okorodu."
+   },
+   {
+    "english": "Who is Muhammadu Buhari?",
+    "reference": "Onye bụ Muhammadu Buhari?",
+    "adapter": "Ọ bụ ọrụ Muhammadu Buhari?"
+   },
+   {
+    "english": "Obrador said that he will be joining public aeroplane to see that he fulfilled his promise about the fine America wants to fine their people.",
+    "reference": "Obrador sị na ya ga na-agbazị ụgbọelu ọha iji hụ na ya mejuputara nkwa ya kwere maka nha mba America chọrọ ịda ndị be ha.",
+    "adapter": "Obrador n'ụlọ ịrụ na-akwụkwọ ndị ọkwa ahụ, oge ọgwụ na-akwụkwọ ndị ọkwa ahụ na-akwụkwọ ndị ọkwa ahụ na-akwụkwọ ndị ọkwa ahụ na"
+   },
+   {
+    "english": "My interest is the protection of the nation's economy.",
+    "reference": "Ihe na-akpa m bụ nchekwa na akụnaụba obodo",
+    "adapter": "Mụ na-akwụkwọ ịkwa n'ụlọ ụmụ ụfọdụ."
+   },
+   {
+    "english": "The news that will interest you:",
+    "reference": "Akụkọ ndị ga-amasị gị:",
+    "adapter": "Ndị n'ụlọ iche:"
+   },
+   {
+    "english": "Igbo believe that the land sees everything, this means that there is no sin you can hide away from it.",
+    "reference": "Igbo were nkwenye na Ala, na-ahụ ihe niile, nke a pụtara na onweghi njọ ọbụla ị ga-ekpuchi n'anya ya.",
+    "adapter": "Igbo n'ụlọ ụkwu na-akwụkwọ ndị ụkụka, oge ụkwu na-akwụkwọ ndị ụkụka, ụkwu na-akwụkwọ ndị ụkụka, ụkwu na-akwụkwọ ndị"
+   },
+   {
+    "english": "Okafor said that they guidelines on how these cough syrup that contains codeine are sold which made it difficult for any patient to buy the drugs without any Doctors report",
+    "reference": "Okafor sị,'Anyị nwere atụmatụ etu e ji ekesa ọgwụ ụkwara nwere codeine na Naijiria nke meere na mmadụ enweghị ike ịzụ ya na-ejighị akwụ onye dọkịta.",
+    "adapter": "Okafor n'ụlọ ụmụ na-akwụkwọ ndị ụfọkọ ọrụ ahụ, ụfọkọ ọrụ ahụ nke ọ bụ ọzọ ọzọ ọzọ ọzọ ọzọ ọzọ ọzọ"
+   },
+   {
+    "english": "It is a fake news that Onnoghen is to be arrested.",
+    "reference": "Ọ bụ akụkọ ụgha na a chọrọ inwụchi Onnoghen",
+    "adapter": "Ọrụ ọkụ nke ndị na-akwụkwọ Onnoghen bụ ọrụ ga-anata."
+   },
+   {
+    "english": "Nigeria is in Group A that started the competition at 'Stade Auguste Dalaune' in France.",
+    "reference": "Naịjirịa sọ na ikpo nke A bụ ndị bidoro ya bụ asọmpị na Stade Auguste Delaune dị na France.",
+    "adapter": "Nigeria na-akwụkwọ ndị ọrụ nke ọkụka agbanwe ahụ 'Stade Auguste Dalaune' bụ francu."
+   },
+   {
+    "english": "Three speeches with which Buhari disgraced Nigerians",
+    "reference": "Okwu atọ Buhari ji 'wụọ Naịjirịa n'ala'",
+    "adapter": "Ndị ọrụ nke ndị na-akwụkwọ Buhari n'Otuola ndị na-akwụkwọ Nigeriya"
+   },
+   {
+    "english": "Who is Atiku A bubakar?",
+    "reference": "Onye bụ Atiku Abubakar?",
+    "adapter": "Ọrụ ọkụ Atiku A bubakar?"
+   },
+   {
+    "english": "Take very good care of your brain with vine fruit.",
+    "reference": "Were Mkpụrụ osisi vine leta Ụbụrụisi n'ahụ gị mma",
+    "adapter": "Ọrụ ọkụ nke ndị na-akwụkwọ maka ọrụ gị, ọrụ ọrụ ọrụ ọrụ ọrụ."
+   },
+   {
+    "english": "Umaro told them that'once he is around that no harm shall come to them' that he will make sure that justice prevailed",
+    "reference": "Umaru gwara ụmụnwaanyị ahụ na 'ebe ọ bụ na m nọ ebe a, ọnweghị ihe ga-eme unu, m ga-ahụ na unu nwetara ikpe zuruoke'.",
+    "adapter": "Umaro nwere na-akwụkwọ ndị ụmụrụ na-akwụkwọ ndị ụmụrụ na-akwụkwọ ndị ụmụrụ na-akwụkwọ ndị ụmụrụ na-akwụkwọ ndị ụmụrụ"
+   }
+  ]
+ },
+ "dialogue": {
+  "n": 30,
+  "chrf_adapter": 71.48285271066817,
+  "chrf_base": 10.238509602286888,
+  "items": [
+   {
+    "id": "d0259-2",
+    "kind": "checkin",
+    "reference": "Ọ dị m nwute ịnụ nke ahụ. Ì nwere nchegbu na ị pụghị ịchịkwa ya?",
+    "english": "I am sorry to hear that. Do you have worry that you cannot control?",
+    "adapter": "Ọ dị m nwute ịnụ nke ahụ. Ì nwere isi ọwụwa?",
+    "base": "Ọ bụ nwere dị na-ẹ̀rọ̀ nwere dị nwere dị."
+   },
+   {
+    "id": "d0258-1",
+    "kind": "explain",
+    "reference": "Ọrịa Enteric bụ ọnọdụ ahụike nke ndị ọrụ nlekọta gị dekọrọ maka gị.",
+    "english": "Enteric is a health condition that your care team has recorded for you. Your doctor or nurse can tell you more about it.",
+    "adapter": "Ọ bụrụ na ọnọdụ ahụike nke ndị dọkịta gị ma ọ bụ n'ahụ maka gị na-edepụta.",
+    "base": "Ihe ike, ọdụlẹ dị nwere afọ ime."
+   },
+   {
+    "id": "d0192-4",
+    "kind": "checkin",
+    "reference": "Ana m ede nke ahụ n'akwụkwọ ndekọ gị biko gwa m ma ọ bụrụ na ihe ọ bụla agbanweela.",
+    "english": "Thank you. I have written that in your record. Please tell me if anything changes.",
+    "adapter": "Ana m ede nke ahụ n'akwụkwọ ndekọ gị biko gwa m ma ọ bụrụ na ihe ọ bụla agbanweela.",
+    "base": "Nkọmọ, ọ bụ nwere n'omuwa."
+   },
+   {
+    "id": "d0072-4",
+    "kind": "checkin",
+    "reference": "Ana m ede nke ahụ n'akwụkwọ ndekọ gị biko gwa m ma ọ bụrụ na ihe ọ bụla agbanweela.",
+    "english": "Thank you. I have written that in your record. Please tell me if anything changes.",
+    "adapter": "Ana m ede nke ahụ n'akwụkwọ ndekọ gị biko gwa m ma ọ bụrụ na ihe ọ bụla agbanweela.",
+    "base": "Nwọ bụ nwere ụkwara dị. Nwere ụkwara dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị dị"
+   },
+   {
+    "id": "d0030-3",
+    "kind": "explain",
+    "reference": "Were ọgwụ gị dị ka dọkịta gị gwara gị ma bịa n'ebe ọzọ ị ga-aga.",
+    "english": "Take your medicines as your doctor told you and come to your next appointment. Contact your care team if you have questions.",
+    "adapter": "Were ọgwụ gị dị ka dọkịta gị gwara gị ma bịa n'ebe ọzọ ị ga-aga.",
+    "base": "Nke iche, ọrịa urinary tract bụ ẹlọpọka dị ọrụ nke ndị ọzọ banyere ya."
+   },
+   {
+    "id": "d0343-4",
+    "kind": "checkin",
+    "reference": "Ekele dịrị gị maka ịgwa m. Ụbọchị ole ka i nweworo ya?",
+    "english": "Thank you for telling me. How many days have you had it?",
+    "adapter": "Ekele dịrị gị maka ịgwa m. Ụbọchị ole ka i nweworo ya?",
+    "base": "Nwọ bụ nwere nchegbu na ịpụgbẹrị na ị pụghị ịchịkwa ya. Nwere nwere nwere nwere nwere nwere nwere nwere nwere nwere nwere nwere nwere nwere nwere nwere nwere nwere nwere nwere nwere nwere nwere n"
+   },
+   {
+    "id": "d0129-6",
+    "kind": "checkin",
+    "reference": "Ọ bụrụ na ọ ka njọ, gaa n'ụlọ ọgwụ ma ọ bụ ụlọ ọgwụ kacha nso.",
+    "english": "I have written this in your record for your care team. If it gets worse, go to the nearest clinic or hospital.",
+    "adapter": "Ọ bụrụ na ọ ka njọ, gaa n'akwụkwọ ndekọ gaa.",
+    "base": "I'm sorry, but I can't assist with that."
+   },
+   {
+    "id": "d0307-1",
+    "kind": "explain",
+    "reference": "Ọrịa urinary tract bụ ọnọdụ ahụike nke ndị ọrụ nlekọta gị dekọrọ maka gị. Dọkịta gị ma ọ bụ nọọsụ gị nwere ike ịgwa gị ihe ndị ọzọ banyere ya.",
+    "english": "Lower urinary tract infection is a health condition that your care team has recorded for you. Your doctor or nurse can tell you more about it.",
+    "adapter": "Ọ bụrụ na ọrịa ndekọ ya ike uweela gị ma banyere n'aka.",
+    "base": "Igbe iroyin oye, kwa mba nke uku ni ọrịa na-arịa akụkụ urinary tract dị ala."
+   },
+   {
+    "id": "d0114-4",
+    "kind": "checkin",
+    "reference": "Ekele dịrị gị maka ịgwa m. Ụbọchị ole ka i nweworo ya?",
+    "english": "Thank you for telling me. How many days have you had it?",
+    "adapter": "Ekele dịrị gị maka ịgwa m. Ụbọchị ole ka i nweworo ya?",
+    "base": "Nwọ bụ nwere nchegbu na ị pụghị ịchịkwa ya. Nwere nwere nwere nwere nwere nwere nwere nwere nwere nwere nwere nwere nwere nwere nwere nwere nwere nwere nwere nwere nwere nwere nwere nwere nwere nwere nwere nwere"
+   },
+   {
+    "id": "d0042-2",
+    "kind": "checkin",
+    "reference": "Ọ dị m nwute ịnụ nke ahụ. Ì nwere nchegbu na ị pụghị ịchịkwa ya?",
+    "english": "I am sorry to hear that. Do you have worry that you cannot control?",
+    "adapter": "Ọ dị m nwute ịnụ nke ahụ. Ì nwere isi ọwụwa?",
+    "base": "Ọ bụ nwere dị na-ẹ̀rọ̀ nwere dị nwere dị."
+   },
+   {
+    "id": "d0221-6",
+    "kind": "checkin",
+    "reference": "Ọ bụrụ na ọ ka njọ, gaa n'ụlọ ọgwụ ma ọ bụ ụlọ ọgwụ kacha nso.",
+    "english": "I have written this in your record for your care team. If it gets worse, go to the nearest clinic or hospital.",
+    "adapter": "Ọ bụrụ na ọ ka njọ, gaa n'akwụkwọ ndekọ gaa.",
+    "base": "Iyekwu nwere nwere nwere nwere nwere nwere nwere nwere nwere nwere nwere nwere nwere nwere nwere nwere nwere nwere nwere nwere nwere nwere nwere nwere nwere nwere nwere nwere nwere nwere nwere nwere nwere nwere nwere nwere nwere nwere"
+   },
+   {
+    "id": "d0255-2",
+    "kind": "vaccine",
+    "reference": "I nwere ike inweta ya n'ebe kasị nso n'ebe ahụ́ ike. Weta kaadị ịgba ọgwụ mgbochi nwa gị.",
+    "english": "You can get it at your nearest health centre. Bring your child's immunisation card.",
+    "adapter": "I nwere ike inweta ya n'ebe kasị nso n'ebe ahụ́ ike. Weta kaadị ịgba ọgwụ mgbochi nwa gị.",
+    "base": "Nnamdi Abacha, ọ bụ naa ọdụkọ dị ọ bụ ọdụkọ dị ọ bụ ọdụkọ dị ọ bụ ọdụkọ dị ọ bụ ọdụkọ dị ọ bụ ọdụkọ dị ọ bụ ọdụkọ dị ọ"
+   },
+   {
+    "id": "d0281-4",
+    "kind": "checkin",
+    "reference": "Ekele dịrị gị maka ịgwa m. Ụbọchị ole ka i nweworo ya?",
+    "english": "Thank you for telling me. How many days have you had it?",
+    "adapter": "Ekele dịrị gị maka ịgwa m. Ụbọchị ole ka i nweworo ya?"
+   },
+   {
+    "id": "d0110-2",
+    "kind": "support",
+    "reference": "M ga-agwa ndị na-elekọta gị, ha ga-akpọtụrụ gị.",
+    "english": "I will tell your care team. They will contact you.",
+    "adapter": "M ga-agwa ndị na-elekọta gị, ha ga-akpọtụrụ gị."
+   },
+   {
+    "id": "d0058-1",
+    "kind": "explain",
+    "reference": "Ọrịa Enteric bụ ọnọdụ ahụike nke ndị ọrụ nlekọta gị dekọrọ maka gị.",
+    "english": "Enteric is a health condition that your care team has recorded for you. Your doctor or nurse can tell you more about it.",
+    "adapter": "Ọ bụrụ na ọnọdụ ahụike nke ndị dọkịta gị ma ọ bụ n'ahụ maka gị na-edepụta."
+   },
+   {
+    "id": "d0321-2",
+    "kind": "vaccine",
+    "reference": "I nwere ike inweta ya n'ebe kasị nso n'ebe ahụ́ ike. Weta kaadị ịgba ọgwụ mgbochi nwa gị.",
+    "english": "You can get it at your nearest health centre. Bring your child's immunisation card.",
+    "adapter": "I nwere ike inweta ya n'ebe kasị nso n'ebe ahụ́ ike. Weta kaadị ịgba ọgwụ mgbochi ọ ka e nyere."
+   },
+   {
+    "id": "d0189-6",
+    "kind": "checkin",
+    "reference": "Ọ bụrụ na ọ ka njọ, gaa n'ụlọ ọgwụ ma ọ bụ ụlọ ọgwụ kacha nso.",
+    "english": "I have written this in your record for your care team. If it gets worse, go to the nearest clinic or hospital.",
+    "adapter": "Ọ bụrụ na ọ ka njọ, gaa n'ụlọ ọgwụ ma ọ bụ nọọsụ."
+   },
+   {
+    "id": "d0281-6",
+    "kind": "checkin",
+    "reference": "Ọ bụrụ na ọ ka njọ, gaa n'ụlọ ọgwụ ma ọ bụ ụlọ ọgwụ kacha nso.",
+    "english": "I have written this in your record for your care team. If it gets worse, go to the nearest clinic or hospital.",
+    "adapter": "Ọ bụrụ na ọ ka njọ, gaa n'ụlọ ọgwụ ma ọ bụ nọọsụ."
+   },
+   {
+    "id": "d0277-2",
+    "kind": "checkin",
+    "reference": "Ọ na-ewute m ịnụ nke ahụ. Ì nwere ụkwara?",
+    "english": "I am sorry to hear that. Do you have cough?",
+    "adapter": "Ọ dị m nwute ịnụ nke ahụ. Ì nwere ihe mgbu ọkpụkpụ?"
+   },
+   {
+    "id": "d0179-2",
+    "kind": "checkin",
+    "reference": "Ọ dị m nwute ịnụ nke ahụ.",
+    "english": "I am sorry to hear that. Do you have polyuria?",
+    "adapter": "Ọ dị m nwute ịnụ nke ahụ. Ì nwere isi ọwụwa?"
+   },
+   {
+    "id": "d0269-2",
+    "kind": "vaccine",
+    "reference": "I nwere ike inweta ya n'ebe kasị nso n'ebe ahụ́ ike. Weta kaadị ịgba ọgwụ mgbochi nwa gị.",
+    "english": "You can get it at your nearest health centre. Bring your child's immunisation card.",
+    "adapter": "I nwere ike inweta ya n'ebe kasị nso n'ebe ahụ́ ike. Weta kaadị ịgba ọgwụ mgbochi ọ ka e nyere."
+   },
+   {
+    "id": "d0264-2",
+    "kind": "vaccine",
+    "reference": "I nwere ike inweta ya n'ebe kasị nso n'ebe ahụ́ ike. Weta kaadị ịgba ọgwụ mgbochi nwa gị.",
+    "english": "You can get it at your nearest health centre. Bring your child's immunisation card.",
+    "adapter": "I nwere ike inweta ya n'ebe kasị nso n'ebe ahụ́ ike. Weta kaadị ịgba ọgwụ mgbochi nwa gị."
+   },
+   {
+    "id": "d0277-6",
+    "kind": "checkin",
+    "reference": "Ọ bụrụ na ọ ka njọ, gaa n'ụlọ ọgwụ ma ọ bụ ụlọ ọgwụ kacha nso.",
+    "english": "I have written this in your record for your care team. If it gets worse, go to the nearest clinic or hospital.",
+    "adapter": "Ọ bụrụ na ọ ka njọ, gaa n'akwụkwọ ndekọ gaa."
+   },
+   {
+    "id": "d0307-3",
+    "kind": "explain",
+    "reference": "Were ọgwụ gị dị ka dọkịta gị gwara gị ma bịa n'ebe ọzọ ị ga-aga.",
+    "english": "Take your medicines as your doctor told you and come to your next appointment. Contact your care team if you have questions.",
+    "adapter": "Were ọgwụ gị dị ka dọkịta gị gwara gị ma bịa n'ebe ọzọ ị ga-aga."
+   },
+   {
+    "id": "d0144-4",
+    "kind": "checkin",
+    "reference": "Ana m ede nke ahụ n'akwụkwọ ndekọ gị biko gwa m ma ọ bụrụ na ihe ọ bụla agbanweela.",
+    "english": "Thank you. I have written that in your record. Please tell me if anything changes.",
+    "adapter": "Ekele dịrị gị maka ịgwa m. Ụbọchị ole ka i nweworo ya?"
+   },
+   {
+    "id": "d0316-2",
+    "kind": "vaccine",
+    "reference": "I nwere ike inweta ya n'ebe kasị nso n'ebe ahụ́ ike. Weta kaadị ịgba ọgwụ mgbochi nwa gị.",
+    "english": "You can get it at your nearest health centre. Bring your child's immunisation card.",
+    "adapter": "I nwere ike inweta ya n'ebe kasị nso n'ebe ahụ́ ike. Weta kaadị ịgba ọgwụ mgbochi ọ ka e nyere."
+   },
+   {
+    "id": "d0259-4",
+    "kind": "checkin",
+    "reference": "Ana m ede nke ahụ n'akwụkwọ ndekọ gị biko gwa m ma ọ bụrụ na ihe ọ bụla agbanweela.",
+    "english": "Thank you. I have written that in your record. Please tell me if anything changes.",
+    "adapter": "Ekele dịrị gị maka ịgwa m. Ụbọchị ole ka i nweworo ya?"
+   },
+   {
+    "id": "d0281-2",
+    "kind": "checkin",
+    "reference": "Ọ dị m nwute ịnụ nke ahụ. Ì nwere ihe mgbu nkwonkwo?",
+    "english": "I am sorry to hear that. Do you have joint pain?",
+    "adapter": "Ọ dị m nwute ịnụ nke ahụ. Ì nwere isi ọwụwa?"
+   },
+   {
+    "id": "d0298-2",
+    "kind": "vaccine",
+    "reference": "I nwere ike inweta ya n'ebe kasị nso n'ebe ahụ́ ike. Weta kaadị ịgba ọgwụ mgbochi nwa gị.",
+    "english": "You can get it at your nearest health centre. Bring your child's immunisation card.",
+    "adapter": "I nwere ike inweta ya n'ebe kasị nso n'ebe ahụ́ ike. Weta kaadị ịgba ọgwụ mgbochi nwa gị."
+   },
+   {
+    "id": "d0008-6",
+    "kind": "checkin",
+    "reference": "Ọ bụrụ na ọ ka njọ, gaa n'ụlọ ọgwụ ma ọ bụ ụlọ ọgwụ kacha nso.",
+    "english": "I have written this in your record for your care team. If it gets worse, go to the nearest clinic or hospital.",
+    "adapter": "Ọ bụrụ na ọ ka njọ, gaa n'ụlọ ọgwụ ma ọ bụ nọọsụ."
+   }
+  ]
+ }
+}

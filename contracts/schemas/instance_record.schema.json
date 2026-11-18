@@ -1,0 +1,98 @@
+{
+  "$defs": {
+    "DTKind": {
+      "description": "The 17 peer DTs of the federated Human Digital Twin, plus the Patient DT (APDT).",
+      "enum": [
+        "cardiovascular",
+        "respiratory",
+        "nervous",
+        "sensory",
+        "digestive",
+        "hepatobiliary",
+        "renal_urinary",
+        "endocrine",
+        "immune_lymphatic",
+        "haematological",
+        "musculoskeletal",
+        "integumentary",
+        "reproductive",
+        "whole_body",
+        "behavioural_cognitive",
+        "social",
+        "population",
+        "patient"
+      ],
+      "title": "DTKind",
+      "type": "string"
+    }
+  },
+  "$id": "https://atra.local/schemas/instance_record.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "anatomy": {
+      "title": "Anatomy",
+      "type": "string"
+    },
+    "instance_id": {
+      "title": "Instance Id",
+      "type": "string"
+    },
+    "last_assimilated": {
+      "anyOf": [
+        {
+          "format": "date-time",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Last Assimilated"
+    },
+    "model_id": {
+      "title": "Model Id",
+      "type": "string"
+    },
+    "owner_dt": {
+      "$ref": "#/$defs/DTKind"
+    },
+    "params": {
+      "additionalProperties": true,
+      "title": "Params",
+      "type": "object"
+    },
+    "revision": {
+      "default": 0,
+      "minimum": 0,
+      "title": "Revision",
+      "type": "integer"
+    },
+    "state": {
+      "additionalProperties": true,
+      "title": "State",
+      "type": "object"
+    },
+    "uncertainty": {
+      "additionalProperties": true,
+      "title": "Uncertainty",
+      "type": "object"
+    },
+    "version": {
+      "title": "Version",
+      "type": "string"
+    }
+  },
+  "required": [
+    "instance_id",
+    "anatomy",
+    "model_id",
+    "version",
+    "owner_dt",
+    "params",
+    "state"
+  ],
+  "title": "InstanceRecord",
+  "type": "object"
+}

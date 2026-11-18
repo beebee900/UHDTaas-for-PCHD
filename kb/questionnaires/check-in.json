@@ -1,0 +1,93 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "check-in",
+  "url": "https://atra.health/fhir/Questionnaire/check-in",
+  "version": "1.0.0",
+  "status": "active",
+  "title": "Daily check-in",
+  "item": [
+    {
+      "linkId": "overall",
+      "text": "How do you feel today compared with yesterday?",
+      "type": "choice",
+      "required": true,
+      "answerOption": [
+        {
+          "valueCoding": {
+            "code": "better",
+            "display": "Better"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "same",
+            "display": "The same"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "worse",
+            "display": "Worse"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "took_medicines",
+      "text": "Did you take all your medicines today?",
+      "type": "choice",
+      "required": true,
+      "answerOption": [
+        {
+          "valueCoding": {
+            "code": "yes",
+            "display": "Yes"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "no",
+            "display": "No"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "danger_signs",
+      "text": "Do you have any of these now?",
+      "type": "group",
+      "item": [
+        {
+          "linkId": "find.convulsions",
+          "text": "Fits or convulsions",
+          "type": "boolean"
+        },
+        {
+          "linkId": "find.impaired_consciousness",
+          "text": "Very sleepy or hard to wake",
+          "type": "boolean"
+        },
+        {
+          "linkId": "find.respiratory_distress",
+          "text": "Difficult or fast breathing",
+          "type": "boolean"
+        },
+        {
+          "linkId": "find.bleeding",
+          "text": "Bleeding that will not stop",
+          "type": "boolean"
+        },
+        {
+          "linkId": "find.vomiting",
+          "text": "Vomiting",
+          "type": "boolean"
+        }
+      ]
+    },
+    {
+      "linkId": "comment",
+      "text": "Anything else you want your care team to know?",
+      "type": "text"
+    }
+  ]
+}

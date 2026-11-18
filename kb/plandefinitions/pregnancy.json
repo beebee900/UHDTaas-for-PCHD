@@ -1,0 +1,250 @@
+{
+  "resourceType": "PlanDefinition",
+  "id": "pregnancy",
+  "url": "https://atra.health/fhir/PlanDefinition/pregnancy",
+  "version": "1.0.0",
+  "name": "pregnancy",
+  "title": "Pregnancy (antenatal care)",
+  "type": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/plan-definition-type",
+        "code": "clinical-protocol"
+      }
+    ]
+  },
+  "status": "active",
+  "useContext": [
+    {
+      "code": {
+        "system": "http://terminology.hl7.org/CodeSystem/usage-context-type",
+        "code": "focus"
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "289908002"
+          }
+        ]
+      }
+    }
+  ],
+  "extension": [
+    {
+      "url": "https://atra.health/fhir/StructureDefinition/kb-entry",
+      "valueString": "cond.pregnancy"
+    }
+  ],
+  "action": [
+    {
+      "id": "treat",
+      "title": "Choose treatment",
+      "selectionBehavior": "exactly-one",
+      "action": [
+        {
+          "id": "treat-t2",
+          "title": "Treat (t2)",
+          "condition": [
+            {
+              "kind": "applicability",
+              "expression": {
+                "language": "text/fhirpath",
+                "expression": "%severity = 't2'"
+              }
+            }
+          ],
+          "selectionBehavior": "exactly-one",
+          "action": [
+            {
+              "id": "tx.pregnancy.iptp",
+              "title": "iptp sp",
+              "definitionCanonical": "https://atra.health/fhir/ActivityDefinition/dose.iptp_sp",
+              "extension": [
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/kb-entry",
+                  "valueString": "tx.pregnancy.iptp"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/preference",
+                  "valueCode": "first_line"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/eligibility",
+                  "valueString": "{}"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/exclusions",
+                  "valueString": "[\"ix.iptp_sp.cotrimoxazole_prophylaxis\"]"
+                }
+              ]
+            },
+            {
+              "id": "tx.pregnancy.pre_eclampsia_prevention",
+              "title": "calcium pregnancy + aspirin low dose pregnancy",
+              "selectionBehavior": "all",
+              "action": [
+                {
+                  "id": "dose.calcium_pregnancy",
+                  "title": "calcium pregnancy",
+                  "definitionCanonical": "https://atra.health/fhir/ActivityDefinition/dose.calcium_pregnancy"
+                },
+                {
+                  "id": "dose.aspirin_low_dose_pregnancy",
+                  "title": "aspirin low dose pregnancy",
+                  "definitionCanonical": "https://atra.health/fhir/ActivityDefinition/dose.aspirin_low_dose_pregnancy"
+                }
+              ],
+              "extension": [
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/kb-entry",
+                  "valueString": "tx.pregnancy.pre_eclampsia_prevention"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/preference",
+                  "valueCode": "first_line"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/eligibility",
+                  "valueString": "{}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "treat-t3",
+          "title": "Treat (t3)",
+          "condition": [
+            {
+              "kind": "applicability",
+              "expression": {
+                "language": "text/fhirpath",
+                "expression": "%severity = 't3'"
+              }
+            }
+          ],
+          "selectionBehavior": "exactly-one",
+          "action": [
+            {
+              "id": "tx.pregnancy.iptp",
+              "title": "iptp sp",
+              "definitionCanonical": "https://atra.health/fhir/ActivityDefinition/dose.iptp_sp",
+              "extension": [
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/kb-entry",
+                  "valueString": "tx.pregnancy.iptp"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/preference",
+                  "valueCode": "first_line"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/eligibility",
+                  "valueString": "{}"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/exclusions",
+                  "valueString": "[\"ix.iptp_sp.cotrimoxazole_prophylaxis\"]"
+                }
+              ]
+            },
+            {
+              "id": "tx.pregnancy.pre_eclampsia_prevention",
+              "title": "calcium pregnancy + aspirin low dose pregnancy",
+              "selectionBehavior": "all",
+              "action": [
+                {
+                  "id": "dose.calcium_pregnancy",
+                  "title": "calcium pregnancy",
+                  "definitionCanonical": "https://atra.health/fhir/ActivityDefinition/dose.calcium_pregnancy"
+                },
+                {
+                  "id": "dose.aspirin_low_dose_pregnancy",
+                  "title": "aspirin low dose pregnancy",
+                  "definitionCanonical": "https://atra.health/fhir/ActivityDefinition/dose.aspirin_low_dose_pregnancy"
+                }
+              ],
+              "extension": [
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/kb-entry",
+                  "valueString": "tx.pregnancy.pre_eclampsia_prevention"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/preference",
+                  "valueCode": "first_line"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/eligibility",
+                  "valueString": "{}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "treat-t1",
+          "title": "Treat (t1)",
+          "condition": [
+            {
+              "kind": "applicability",
+              "expression": {
+                "language": "text/fhirpath",
+                "expression": "%severity = 't1'"
+              }
+            }
+          ],
+          "selectionBehavior": "exactly-one",
+          "action": [
+            {
+              "id": "tx.pregnancy.pre_eclampsia_prevention",
+              "title": "calcium pregnancy + aspirin low dose pregnancy",
+              "selectionBehavior": "all",
+              "action": [
+                {
+                  "id": "dose.calcium_pregnancy",
+                  "title": "calcium pregnancy",
+                  "definitionCanonical": "https://atra.health/fhir/ActivityDefinition/dose.calcium_pregnancy"
+                },
+                {
+                  "id": "dose.aspirin_low_dose_pregnancy",
+                  "title": "aspirin low dose pregnancy",
+                  "definitionCanonical": "https://atra.health/fhir/ActivityDefinition/dose.aspirin_low_dose_pregnancy"
+                }
+              ],
+              "extension": [
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/kb-entry",
+                  "valueString": "tx.pregnancy.pre_eclampsia_prevention"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/preference",
+                  "valueCode": "first_line"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/eligibility",
+                  "valueString": "{}"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "monitor",
+      "title": "Monitor with the early-warning score",
+      "extension": [
+        {
+          "url": "https://atra.health/fhir/StructureDefinition/kb-entry",
+          "valueString": "news2.monitoring"
+        }
+      ]
+    },
+    {
+      "id": "check-in",
+      "title": "Daily check-in",
+      "definitionCanonical": "https://atra.health/fhir/Questionnaire/check-in"
+    }
+  ]
+}

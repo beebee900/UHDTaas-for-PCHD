@@ -1,0 +1,23 @@
+# Energy balance and body water.
+model_id: ahdt.digestive.nutrition_and_hydration
+sources:
+- id: mifflin1990
+  citation: "Mifflin MD, St Jeor ST, Hill LA, Scott BJ, Daugherty SA, Koh YO. A new predictive
+    equation for resting energy expenditure in healthy individuals. Am J Clin Nutr.
+    1990;51(2):241-247. doi:10.1093/ajcn/51.2.241"
+- id: watson1980
+  citation: "Watson PE, Watson ID, Batt RD. Total body water volumes for adult males and
+    females estimated from simple anthropometric measurements. Am J Clin Nutr.
+    1980;33(1):27-39. doi:10.1093/ajcn/33.1.27"
+- id: wishnofsky1958
+  citation: "Wishnofsky M. Caloric equivalents of gained or lost weight. Am J Clin Nutr.
+    1958;6(5):542-546. doi:10.1093/ajcn/6.5.542"
+params:
+  w_coef: {value: 10, unit: kcal/d/kg, source: mifflin1990}
+  h_coef: {value: 6.25, unit: kcal/d/cm, source: mifflin1990}
+  a_coef: {value: 5, unit: kcal/d/a, source: mifflin1990}
+  male_const: {value: 5, unit: kcal/d, source: mifflin1990}
+  female_const: {value: -161, unit: kcal/d, source: mifflin1990}
+  energy_per_kg: {value: 7700, unit: kcal/kg, source: wishnofsky1958, verified: false,
+                  justification: "About 3500 kcal per pound as recalled from Wishnofsky (1958);
+                    a known simplification of tissue energy density"}

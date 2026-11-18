@@ -1,0 +1,199 @@
+{
+  "$defs": {
+    "DTKind": {
+      "description": "The 17 peer DTs of the federated Human Digital Twin, plus the Patient DT (APDT).",
+      "enum": [
+        "cardiovascular",
+        "respiratory",
+        "nervous",
+        "sensory",
+        "digestive",
+        "hepatobiliary",
+        "renal_urinary",
+        "endocrine",
+        "immune_lymphatic",
+        "haematological",
+        "musculoskeletal",
+        "integumentary",
+        "reproductive",
+        "whole_body",
+        "behavioural_cognitive",
+        "social",
+        "population",
+        "patient"
+      ],
+      "title": "DTKind",
+      "type": "string"
+    },
+    "Scenario": {
+      "additionalProperties": false,
+      "properties": {
+        "activity": {
+          "anyOf": [
+            {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Activity"
+        },
+        "diet": {
+          "anyOf": [
+            {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Diet"
+        },
+        "drug": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ScenarioDrug"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "dts": {
+          "items": {
+            "$ref": "#/$defs/DTKind"
+          },
+          "title": "Dts",
+          "type": "array"
+        },
+        "environment": {
+          "anyOf": [
+            {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Environment"
+        },
+        "intervention": {
+          "anyOf": [
+            {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Intervention"
+        },
+        "kind": {
+          "enum": [
+            "drug",
+            "activity",
+            "diet",
+            "environment",
+            "intervention"
+          ],
+          "title": "Kind",
+          "type": "string"
+        }
+      },
+      "required": [
+        "kind"
+      ],
+      "title": "Scenario",
+      "type": "object"
+    },
+    "ScenarioDrug": {
+      "additionalProperties": false,
+      "properties": {
+        "atc": {
+          "title": "Atc",
+          "type": "string"
+        },
+        "dose_mg": {
+          "title": "Dose Mg",
+          "type": "number"
+        },
+        "route": {
+          "title": "Route",
+          "type": "string"
+        },
+        "schedule_h": {
+          "items": {
+            "type": "number"
+          },
+          "title": "Schedule H",
+          "type": "array"
+        }
+      },
+      "required": [
+        "atc",
+        "dose_mg",
+        "route",
+        "schedule_h"
+      ],
+      "title": "ScenarioDrug",
+      "type": "object"
+    }
+  },
+  "$id": "https://atra.local/schemas/tools/ahdt.model.cosimulate.args.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "dts": {
+      "items": {
+        "$ref": "#/$defs/DTKind"
+      },
+      "minItems": 2,
+      "title": "Dts",
+      "type": "array"
+    },
+    "fork": {
+      "const": true,
+      "default": true,
+      "title": "Fork",
+      "type": "boolean"
+    },
+    "hdt_id": {
+      "pattern": "^hdt-[0-9a-f]{12}$",
+      "title": "Hdt Id",
+      "type": "string"
+    },
+    "horizon_h": {
+      "exclusiveMinimum": 0,
+      "maximum": 720,
+      "title": "Horizon H",
+      "type": "number"
+    },
+    "scenario": {
+      "$ref": "#/$defs/Scenario"
+    },
+    "step_s": {
+      "exclusiveMinimum": 0,
+      "title": "Step S",
+      "type": "number"
+    }
+  },
+  "required": [
+    "hdt_id",
+    "scenario",
+    "dts",
+    "horizon_h",
+    "step_s"
+  ],
+  "title": "CosimulateArgs",
+  "type": "object"
+}

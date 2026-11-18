@@ -1,0 +1,13 @@
+# WP14b VM queue: <name> <MemoryMax> <command>. runner.sh runs them in order, one at a time,
+# each in its own capped unit; see status.sh. Caps come from the smoke-test peak memory.
+setup 6G bash ahdt/models/ml/vm/setup.sh
+fetch-mitdb 2G bash ahdt/models/ml/vm/fetch_datasets.sh mitdb
+fetch-ptb-xl 2G bash ahdt/models/ml/vm/fetch_datasets.sh ptb-xl
+fetch-sleep-edfx 2G bash ahdt/models/ml/vm/fetch_datasets.sh sleep-edfx
+fetch-wesad 4G bash ahdt/models/ml/vm/fetch_datasets.sh wesad
+wesad-compact 6G python ahdt/models/ml/vm/wesad_compact.py
+train-stress 2G python -m ahdt.models.ml.stress
+train-mitdb 3G python -m ahdt.models.ml.ecg mitdb
+train-ptbxl 4G python -m ahdt.models.ml.ecg ptbxl
+kb-dense-index 3G python -m apdt.knowledge.dense_index
+train-sleep 6G python -m ahdt.models.ml.sleep

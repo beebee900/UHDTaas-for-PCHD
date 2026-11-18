@@ -1,0 +1,25 @@
+# Scripted questions for `ahdt.data.graph_query` (WP13 acceptance). A question passes when
+# the answer contains every `expect` string (case-insensitive), a citation label contains
+# `cite` when given (guideline questions), there is at least one citation, and every
+# citation resolves to a graph node, a kb entry, a Hetionet node or a guideline section.
+# `mode` defaults to hybrid.
+- {persona: ao, q: "Which conditions does she have?", expect: [Plasmodium falciparum malaria]}
+- {persona: ao, q: "What medicines is she taking?", expect: [artemether and lumefantrine]}
+- {persona: ao, q: "What is her latest temperature?", expect: ["38.6", Cel]}
+- {persona: ao, q: "Which system owns the falciparum malaria?", expect: [Haematological DT]}
+- {persona: ao, q: "What is the first-line treatment for uncomplicated falciparum malaria?", expect: [], cite: artemisinin-based combination therapy}
+- {persona: bm, q: "What is the latest glucose value?", expect: ["2.1", mmol/L]}
+- {persona: bm, q: "List the diagnoses recorded for him.", expect: [Hypoglycaemia, malaria]}
+- {persona: cn, q: "What symptoms does she report?", expect: [Flank pain, Dysuria]}
+- {persona: cn, q: "Which organs does the pyelonephritis affect?", expect: ["UBERON:0002113"]}
+- {persona: de, q: "Which medications is he prescribed?", expect: [amlodipine, lisinopril, metformin]}
+- {persona: de, q: "What was his most recent systolic pressure?", expect: ["162"]}
+- {persona: de, q: "Which twin owns his hypertension?", expect: [Cardiovascular DT]}
+- {persona: de, q: "Which drugs treat hypertension according to the domain graph?", mode: graphrag, expect: [Amlodipine]}
+- {persona: de, q: "Which symptoms present in hypertension?", mode: graphrag, expect: [Dizziness]}
+- {persona: de, q: "What is the latest creatinine?", expect: ["180", umol/L]}
+- {persona: ef, q: "What conditions are recorded?", expect: [Sickle cell disease]}
+- {persona: ef, q: "What is her latest haemoglobin?", expect: ["7.1", g/dL]}
+- {persona: gh, q: "Do any of his medicines interact?", expect: [dolutegravir, rifampicin]}
+- {persona: gh, q: "Which system owns the cough?", expect: [Respiratory DT]}
+- {persona: gh, q: "Which twins hold his data?", expect: [Immune and Lymphatic DT, Respiratory DT]}

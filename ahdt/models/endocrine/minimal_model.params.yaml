@@ -1,0 +1,25 @@
+# Bergman combined minimal model, fitted to the published normal-subject FSIGT data.
+model_id: ahdt.endocrine.glucose_insulin_and_metabolic_regulation.minimal_model
+sources:
+- id: bergman1979
+  citation: "Bergman RN, Ider YZ, Bowden CR, Cobelli C. Quantitative estimation of insulin
+    sensitivity. Am J Physiol. 1979;236(6):E667-E677. doi:10.1152/ajpendo.1979.236.6.E667"
+- id: pacini1986
+  citation: "Pacini G, Bergman RN. MINMOD: a computer program to calculate insulin sensitivity
+    and pancreatic responsivity from the frequently sampled intravenous glucose tolerance test.
+    Comput Methods Programs Biomed. 1986;23(2):113-122. doi:10.1016/0169-2607(86)90106-9"
+  via: "Knott GD. Minimal models for glucose and insulin. MLAB application note, Civilized
+    Software Inc. (FSIGT data of Pacini and Bergman 1986 and the combined-model fit)"
+  url: https://www.civilized.com/pdffiles/glucose.pdf
+params:
+  p1: {value: 0.01352582347, unit: /min, source: pacini1986, calibrate: true, prior_cv: 0.5}
+  p2: {value: 0.06124157093, unit: /min, source: pacini1986, calibrate: true, prior_cv: 0.5}
+  p3: {value: 2.302478892e-05, unit: mL/uU/min2, source: pacini1986, calibrate: true,
+       prior_cv: 0.5}
+  n: {value: 0.2723679397, unit: /min, source: pacini1986, note: insulin clearance (eta)}
+  gamma: {value: 0.004247946093, unit: uU/mL/min2 per mg/dL, source: pacini1986}
+  h: {value: 80.26707677, unit: mg/dL, source: pacini1986, note: "threshold, fitted as G_b"}
+  G_b: {value: 80.26707677, unit: mg/dL, source: pacini1986}
+  I_b: {value: 7, unit: uU/mL, source: pacini1986, note: insulin at 182 min}
+  G_0: {value: 294.8682961, unit: mg/dL, source: pacini1986}
+  I_0: {value: 373.0904137, unit: uU/mL, source: pacini1986}

@@ -1,0 +1,35 @@
+# Fairness slices of the T1 models (design 07, 7.5) for the synthetic population.
+age_bands:
+  # Reporting bands for the slice tables, not clinical cut-offs: [label, lower, upper) years.
+  - [0-4, 0, 5]
+  - [5-17, 5, 18]
+  - [18-39, 18, 40]
+  - [40-59, 40, 60]
+  - [60+, 60, 200]
+region:
+  # LGA groups of the 20 Lagos LGAs in the WP02 population.
+  groups:
+    island_and_coast: [Lagos Island, Eti-Osa, Ibeju-Lekki, Epe, Apapa]
+    mainland_core: [Lagos Mainland, Surulere, Mushin, Shomolu, Oshodi-Isolo]
+    north_west: [Ikeja, Agege, Ifako-Ijaiye, Alimosho, Kosofe]
+    west_and_ikorodu: [Ajeromi-Ifelodun, Amuwo-Odofin, Ojo, Badagry, Ikorodu]
+  assumption: true
+  justification: Four groups of five LGAs for slice reporting; no official grouping was
+    sourced. Replace with the tenant's own reporting regions.
+facility_level:
+  # Tenant tier of the facility a person attends; WP02 does not assign one.
+  shares: {primary: 0.6, secondary: 0.3, tertiary: 0.1}
+  assumption: true
+  justification: A pyramid of attendance shares so that every tier has persons in the
+    slice tables; not a measured distribution.
+language:
+  # Preferred language (the five app locales); WP02 does not assign one.
+  shares: {en: 0.35, yo: 0.35, pcm: 0.15, ig: 0.1, ha: 0.05}
+  assumption: true
+  justification: Lagos-weighted shares so that every locale has persons in the slice
+    tables; not a measured distribution.
+min_slice_n: 20
+flags:
+  # Design 07, 7.5: a flag fires when the disparity exceeds these values.
+  auroc: 0.05
+  coverage: 0.05

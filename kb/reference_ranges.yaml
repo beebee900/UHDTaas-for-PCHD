@@ -1,0 +1,1589 @@
+# Reference, warning and critical ranges of every twin field.
+# Status: crit if outside crit_low/crit_high, else warning outside warn_*, else abnormal outside ref_*.
+# `by` lists strata (age in months, sex, pregnancy, patient group) with their own bounds.
+# Fields without a sourced range carry `assumption: true` and stay without a status band.
+- id: range.phq9
+  field: phq9
+  twin: behavioural_cognitive
+  unit: '{score}'
+  ref_low: null
+  ref_high: 4
+  warn_low: null
+  warn_high: 9
+  crit_low: null
+  crit_high: 19
+  note: Bands from severity.phq9.
+  provenance:
+    source: phq-manual
+    page: 6
+    derived:
+      ref_high: Upper end of the minimal band (below the cutpoint 5).
+      warn_high: Upper end of the mild band (below the cutpoint 10).
+      crit_high: Upper end of the moderately severe band (below the cutpoint 20).
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+- id: range.gad7
+  field: gad7
+  twin: behavioural_cognitive
+  unit: '{score}'
+  ref_low: null
+  ref_high: 4
+  warn_low: null
+  warn_high: 9
+  crit_low: null
+  crit_high: 14
+  note: Bands from severity.gad7.
+  provenance:
+    source: phq-manual
+    page: 6
+    derived:
+      ref_high: Upper end of the minimal band (below the cutpoint 5).
+      warn_high: Upper end of the mild band (below the cutpoint 10).
+      crit_high: Upper end of the moderate band (below the cutpoint 15).
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+- id: range.adherence
+  field: adherence
+  twin: behavioural_cognitive
+  unit: '1'
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: No reference range for this field is in the kb sources; the field is shown without
+      a status band.
+- id: range.active_minutes
+  field: active_minutes
+  twin: behavioural_cognitive
+  unit: min
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: No reference range for this field is in the kb sources; the field is shown without
+      a status band.
+- id: range.screen_time
+  field: screen_time
+  twin: behavioural_cognitive
+  unit: min
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: No reference range for this field is in the kb sources; the field is shown without
+      a status band.
+- id: range.preferred_language
+  field: preferred_language
+  twin: behavioural_cognitive
+  unit: '1'
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  not_applicable: true
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Categorical or identifying field; a reference range does not apply.
+- id: range.heart_rate
+  field: heart_rate
+  twin: cardiovascular
+  unit: /min
+  ref_low: 51
+  ref_high: 90
+  warn_low: 41
+  warn_high: 110
+  crit_low: 41
+  crit_high: 130
+  by:
+  - age_from_months: 0
+    age_below_months: 12
+    ref_low: 110
+    ref_high: 150
+  - age_from_months: 12
+    age_below_months: 60
+    ref_low: 90
+    ref_high: 140
+  - age_from_months: 60
+    age_below_months: 156
+    ref_low: 80
+    ref_high: 120
+  - age_from_months: 156
+    age_below_months: 216
+    ref_low: 70
+    ref_high: 100
+  note: 'NEWS2 mapping: ref = score 0 band, warn = score 2 boundary, crit = score 3 boundary. Children:
+    PEWS score 0 band of each age chart.'
+  provenance:
+    source: rcp-news2-2017
+    section: 'Chart 1: The NEWS scoring system'
+    page: 52
+    also:
+    - source: nhse-pews-0-11m
+      page: 1
+    - source: nhse-pews-1-4y
+      page: 1
+    - source: nhse-pews-5-12y
+      page: 1
+    - source: nhse-pews-13y
+      page: 1
+    derived:
+      by[*].age_*: Age bands of the four PEWS charts, in months.
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+- id: range.sbp
+  field: sbp
+  twin: cardiovascular
+  unit: mm[Hg]
+  ref_low: 111
+  ref_high: 140
+  warn_low: 101
+  warn_high: 160
+  crit_low: 91
+  crit_high: 219
+  note: 'NEWS2 mapping: ref = score 0 band, warn = score 2 boundary, crit = score 3 boundary. ref_high
+    is the WHO treatment threshold (140 mmHg); warn_high is the HEARTS same-day start level (160 mmHg).'
+  provenance:
+    source: rcp-news2-2017
+    section: 'Chart 1: The NEWS scoring system'
+    page: 52
+    also:
+    - source: who-htn-2021
+      section: 3.1 Blood pressure threshold for initiation of pharmacological treatment
+      page: 19
+    - source: who-hearts-protocols-2018
+      page: 31
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+- id: range.dbp
+  field: dbp
+  twin: cardiovascular
+  unit: mm[Hg]
+  ref_low: 60
+  ref_high: 90
+  warn_low: null
+  warn_high: 100
+  crit_low: null
+  crit_high: null
+  note: 'ref_high: WHO treatment threshold; warn_high: HEARTS same-day start level; ref_low: CURB-65 diastolic
+    criterion.'
+  provenance:
+    source: who-htn-2021
+    section: 3.1 Blood pressure threshold for initiation of pharmacological treatment
+    page: 19
+    also:
+    - source: who-hearts-protocols-2018
+      page: 31
+    - source: who-aware-2022
+      page: 166
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+- id: range.map
+  field: map
+  twin: cardiovascular
+  unit: mm[Hg]
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: No reference range for this field is in the kb sources; the field is shown without
+      a status band.
+- id: range.hrv_rmssd
+  field: hrv_rmssd
+  twin: cardiovascular
+  unit: ms
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: No reference range for this field is in the kb sources; the field is shown without
+      a status band.
+- id: range.ecg_lead_ii
+  field: ecg_lead_ii
+  twin: cardiovascular
+  unit: mV
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: No reference range for this field is in the kb sources; the field is shown without
+      a status band.
+- id: range.troponin_i
+  field: troponin_i
+  twin: cardiovascular
+  unit: ng/L
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: No reference range for this field is in the kb sources; the field is shown without
+      a status band.
+- id: range.bnp
+  field: bnp
+  twin: cardiovascular
+  unit: pg/mL
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: No reference range for this field is in the kb sources; the field is shown without
+      a status band.
+- id: range.energy_intake
+  field: energy_intake
+  twin: digestive
+  unit: kcal/d
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: No reference range for this field is in the kb sources; the field is shown without
+      a status band.
+- id: range.fluid_intake
+  field: fluid_intake
+  twin: digestive
+  unit: mL/d
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: No reference range for this field is in the kb sources; the field is shown without
+      a status band.
+- id: range.oral_intake_ok
+  field: oral_intake_ok
+  twin: digestive
+  unit: '1'
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  not_applicable: true
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Categorical or identifying field; a reference range does not apply.
+- id: range.stool_frequency
+  field: stool_frequency
+  twin: digestive
+  unit: /d
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: No reference range for this field is in the kb sources; the field is shown without
+      a status band.
+- id: range.carb_intake
+  field: carb_intake
+  twin: digestive
+  unit: g
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: No reference range for this field is in the kb sources; the field is shown without
+      a status band.
+- id: range.glucose
+  field: glucose
+  twin: endocrine
+  unit: mmol/L
+  ref_low: 3.9
+  ref_high: 7.0
+  warn_low: null
+  warn_high: 18
+  crit_low: 2.8
+  crit_high: 33.3
+  by:
+  - patient_group: child
+    crit_low: 2.5
+  note: 'ref: hypoglycaemia threshold and fasting target; warn_high: severe hyperglycaemia; crit: severe
+    hypoglycaemia and hyperosmolar state.'
+  provenance:
+    source: who-hearts-d-2020
+    page: 18
+    also:
+    - source: who-hearts-d-2020
+      page: 19
+    - source: who-hearts-d-2020
+      page: 17
+    - source: who-pocketbook-children-2013
+      page: 40
+    - source: who-hearts-d-2020
+      page: 25
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+- id: range.hba1c
+  field: hba1c
+  twin: endocrine
+  unit: '%'
+  ref_low: null
+  ref_high: 6.5
+  warn_low: null
+  warn_high: 8
+  crit_low: null
+  crit_high: null
+  note: 'ref_high: diagnostic threshold; warn_high: relaxed treatment target.'
+  provenance:
+    source: who-pen-2020
+    page: 19
+    also:
+    - source: who-hearts-d-2020
+      page: 17
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+- id: range.insulin_delivered
+  field: insulin_delivered
+  twin: endocrine
+  unit: U
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: No reference range for this field is in the kb sources; the field is shown without
+      a status band.
+- id: range.cortisol
+  field: cortisol
+  twin: endocrine
+  unit: nmol/L
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: No reference range for this field is in the kb sources; the field is shown without
+      a status band.
+- id: range.tsh
+  field: tsh
+  twin: endocrine
+  unit: m[IU]/L
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: No reference range for this field is in the kb sources; the field is shown without
+      a status band.
+- id: range.hb
+  field: hb
+  twin: haematological
+  unit: g/dL
+  ref_low: 13.0
+  ref_high: 17.7
+  warn_low: 11.0
+  warn_high: null
+  crit_low: 8.0
+  crit_high: null
+  by:
+  - sex: male
+    ref_low: 13.0
+    ref_high: 17.7
+  - sex: female
+    ref_low: 12.0
+    ref_high: 15.8
+  - pregnancy: t2
+    ref_low: 10.5
+  - pregnancy: t1
+    ref_low: 11.0
+  - pregnancy: t3
+    ref_low: 11.0
+  note: Lower bounds from the WHO anaemia cutoffs; upper bounds from the African consensus intervals.
+  provenance:
+    source: who-hb-2024
+    page: 13
+    also:
+    - source: karita-2009
+      section: Table 2
+    derived:
+      ref_low: WHO cutoff 130 g/L for men, in g/dL.
+      warn_low: WHO moderate anaemia below 110 g/L, in g/dL.
+      crit_low: WHO severe anaemia below 80 g/L, in g/dL.
+      by[*].ref_low: WHO cutoffs in g/L, converted to g/dL.
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+- id: range.platelets
+  field: platelets
+  twin: haematological
+  unit: 10*9/L
+  ref_low: 126
+  ref_high: 438
+  warn_low: 100
+  warn_high: null
+  crit_low: 50
+  crit_high: null
+  note: 10^3 cells/µL equals 10^9/L.
+  provenance:
+    source: karita-2009
+    section: Table 2
+    also:
+    - source: karita-2009
+      section: Table 4
+    derived:
+      warn_low: DAIDS grade 2 cutoff (≤99.9 x 10^3/µL).
+      crit_low: DAIDS grade 3 cutoff (≤49.9 x 10^3/µL).
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+- id: range.inr
+  field: inr
+  twin: haematological
+  unit: '{INR}'
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: No reference range for this field is in the kb sources; the field is shown without
+      a status band.
+- id: range.hbf
+  field: hbf
+  twin: haematological
+  unit: '%'
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: No reference range for this field is in the kb sources; the field is shown without
+      a status band.
+- id: range.alt
+  field: alt
+  twin: hepatobiliary
+  unit: U/L
+  ref_low: 8
+  ref_high: 61
+  warn_low: null
+  warn_high: 91.0
+  crit_low: null
+  crit_high: 178.5
+  note: 'warn: DAIDS grade 2; crit: DAIDS grade 3.'
+  provenance:
+    source: karita-2009
+    section: Table 3
+    also:
+    - source: karita-2009
+      section: Table 4
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+- id: range.ast
+  field: ast
+  twin: hepatobiliary
+  unit: U/L
+  ref_low: 14
+  ref_high: 60
+  warn_low: null
+  warn_high: 91.0
+  crit_low: null
+  crit_high: 178.5
+  note: 'warn: DAIDS grade 2; crit: DAIDS grade 3.'
+  provenance:
+    source: karita-2009
+    section: Table 3
+    also:
+    - source: karita-2009
+      section: Table 4
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+- id: range.bilirubin
+  field: bilirubin
+  twin: hepatobiliary
+  unit: umol/L
+  ref_low: 2.9
+  ref_high: 37.0
+  warn_low: null
+  warn_high: 44.2
+  crit_low: null
+  crit_high: 85.0
+  note: 'warn: DAIDS grade 3; crit: DAIDS grade 4.'
+  provenance:
+    source: karita-2009
+    section: Table 3
+    also:
+    - source: karita-2009
+      section: Table 4
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+- id: range.albumin
+  field: albumin
+  twin: hepatobiliary
+  unit: g/dL
+  ref_low: 3.5
+  ref_high: 5.2
+  warn_low: 2.9
+  warn_high: null
+  crit_low: 2.0
+  crit_high: null
+  note: The field unit is g/dL; the source unit is g/L.
+  provenance:
+    source: karita-2009
+    section: Table 3
+    also:
+    - source: karita-2009
+      section: Table 4
+    derived:
+      ref_low: 35 g/L in g/dL.
+      ref_high: 52 g/L in g/dL.
+      warn_low: DAIDS grade 2 (≤29 g/L) in g/dL.
+      crit_low: DAIDS grade 3 (≤20 g/L) in g/dL.
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+- id: range.clearance_factor
+  field: clearance_factor
+  twin: hepatobiliary
+  unit: '1'
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: No reference range for this field is in the kb sources; the field is shown without
+      a status band.
+- id: range.temperature
+  field: temperature
+  twin: immune_lymphatic
+  unit: Cel
+  ref_low: 36.1
+  ref_high: 38.0
+  warn_low: null
+  warn_high: 39.0
+  crit_low: 35.1
+  crit_high: null
+  note: 'NEWS2 mapping: ref = score 0 band, warn = score 2 boundary, crit = score 3 boundary. There is
+    no score 3 band above normal.'
+  provenance:
+    source: rcp-news2-2017
+    section: 'Chart 1: The NEWS scoring system'
+    page: 52
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+- id: range.wbc
+  field: wbc
+  twin: immune_lymphatic
+  unit: 10*9/L
+  ref_low: 3.1
+  ref_high: 9.1
+  warn_low: 2.5
+  warn_high: null
+  crit_low: 1.49
+  crit_high: null
+  note: 'warn: DAIDS grade 1; crit: DAIDS grade 3.'
+  provenance:
+    source: karita-2009
+    section: Table 2
+    also:
+    - source: karita-2009
+      section: Table 4
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+- id: range.crp
+  field: crp
+  twin: immune_lymphatic
+  unit: mg/L
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: No reference range for this field is in the kb sources; the field is shown without
+      a status band.
+- id: range.parasitaemia
+  field: parasitaemia
+  twin: immune_lymphatic
+  unit: '%'
+  ref_low: null
+  ref_high: 0
+  warn_low: null
+  warn_high: 4
+  crit_low: null
+  crit_high: 10
+  note: 'warn: hyperparasitaemia from 4%; crit: above 10%.'
+  provenance:
+    source: who-malaria-2026
+    section: 5.2.1.4.5 Uncomplicated hyperparasitaemia
+    page: 191
+    also:
+    - source: who-malaria-2026
+      section: 5.2.2 Treating severe malaria
+      page: 212
+    derived:
+      ref_high: Any asexual parasitaemia is abnormal.
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+- id: range.cd4
+  field: cd4
+  twin: immune_lymphatic
+  unit: /uL
+  ref_low: 457
+  ref_high: 1628
+  warn_low: 200
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  note: 'warn_low: advanced HIV disease threshold.'
+  provenance:
+    source: karita-2009
+    section: Table 2
+    also:
+    - source: who-hiv-2021
+      page: 158
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+- id: range.viral_load
+  field: viral_load
+  twin: immune_lymphatic
+  unit: '{copies}/mL'
+  ref_low: null
+  ref_high: 1000
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  note: Above 1000 copies/mL is the virological failure threshold.
+  provenance:
+    source: who-hiv-2021
+    section: 4.7 Monitoring the response to ART
+    page: 191
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+- id: range.skin_temp
+  field: skin_temp
+  twin: integumentary
+  unit: Cel
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: No reference range for this field is in the kb sources; the field is shown without
+      a status band.
+- id: range.sweat_rate
+  field: sweat_rate
+  twin: integumentary
+  unit: '1'
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: No reference range for this field is in the kb sources; the field is shown without
+      a status band.
+- id: range.wound_area
+  field: wound_area
+  twin: integumentary
+  unit: cm2
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: No reference range for this field is in the kb sources; the field is shown without
+      a status band.
+- id: range.heat_index
+  field: heat_index
+  twin: integumentary
+  unit: Cel
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: No reference range for this field is in the kb sources; the field is shown without
+      a status band.
+- id: range.gait_speed
+  field: gait_speed
+  twin: musculoskeletal
+  unit: m/s
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: No reference range for this field is in the kb sources; the field is shown without
+      a status band.
+- id: range.cadence
+  field: cadence
+  twin: musculoskeletal
+  unit: /min
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: No reference range for this field is in the kb sources; the field is shown without
+      a status band.
+- id: range.stride_time_cv
+  field: stride_time_cv
+  twin: musculoskeletal
+  unit: '%'
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: No reference range for this field is in the kb sources; the field is shown without
+      a status band.
+- id: range.steps
+  field: steps
+  twin: musculoskeletal
+  unit: /d
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: No reference range for this field is in the kb sources; the field is shown without
+      a status band.
+- id: range.fall_risk
+  field: fall_risk
+  twin: musculoskeletal
+  unit: '1'
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: No reference range for this field is in the kb sources; the field is shown without
+      a status band.
+- id: range.gcs_total
+  field: gcs_total
+  twin: nervous
+  unit: '{score}'
+  ref_low: 15
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: 11
+  crit_high: null
+  note: 'ref: qSOFA altered mentation below 15; crit: impaired consciousness in severe malaria (adults).'
+  provenance:
+    source: who-aware-2022
+    page: 315
+    also:
+    - source: who-malaria-2026
+      section: 5.2.2 Treating severe malaria
+      page: 212
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+- id: range.avpu
+  field: avpu
+  twin: nervous
+  unit: '1'
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  not_applicable: true
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Categorical or identifying field; a reference range does not apply.
+- id: range.pain_nrs
+  field: pain_nrs
+  twin: nervous
+  unit: '{score}'
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: No reference range for this field is in the kb sources; the field is shown without
+      a status band.
+- id: range.sleep_duration
+  field: sleep_duration
+  twin: nervous
+  unit: h
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: No reference range for this field is in the kb sources; the field is shown without
+      a status band.
+- id: range.autonomic_tone
+  field: autonomic_tone
+  twin: nervous
+  unit: '1'
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: No reference range for this field is in the kb sources; the field is shown without
+      a status band.
+- id: range.cohort_size
+  field: cohort_size
+  twin: population
+  unit: '1'
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  not_applicable: true
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Categorical or identifying field; a reference range does not apply.
+- id: range.creatinine
+  field: creatinine
+  twin: renal_urinary
+  unit: umol/L
+  ref_low: 46
+  ref_high: 132
+  warn_low: null
+  warn_high: 186.2
+  crit_low: null
+  crit_high: 265
+  by:
+  - sex: male
+    ref_low: 46
+    ref_high: 132
+  - sex: female
+    ref_low: 48
+    ref_high: 136
+  note: 'ref: young Nigerian adults; warn: DAIDS grade 2; crit: renal impairment criterion of severe malaria.'
+  provenance:
+    source: nigeria-ri-2021
+    section: Table 2
+    also:
+    - source: karita-2009
+      section: Table 4
+    - source: who-malaria-2026
+      section: 5.2.2 Treating severe malaria
+      page: 212
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+- id: range.egfr
+  field: egfr
+  twin: renal_urinary
+  unit: mL/min/{1.73_m2}
+  ref_low: 60
+  ref_high: null
+  warn_low: 30
+  warn_high: null
+  crit_low: 15
+  crit_high: null
+  note: Below 60 is CKD G3a or worse; below 30 is G4; below 15 is G5 (kidney failure).
+  provenance:
+    source: kdigo-ckd-2024-full
+    section: Current Chronic Kidney Disease (CKD) Nomenclature
+    page: 11
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+- id: range.sodium
+  field: sodium
+  twin: renal_urinary
+  unit: mmol/L
+  ref_low: 133
+  ref_high: 146
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  note: The NHS (British) interval cited in the table. The young-Nigerian interval in the same table (114-144)
+    is too wide for clinical flagging; confirm at sign-off.
+  provenance:
+    source: nigeria-ri-2021
+    section: Table 4
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+- id: range.potassium
+  field: potassium
+  twin: renal_urinary
+  unit: mmol/L
+  ref_low: 3.5
+  ref_high: 5.3
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  note: The NHS (British) interval cited in the table. The young-Nigerian interval in the same table (2.7-7.0)
+    is too wide for clinical flagging; confirm at sign-off.
+  provenance:
+    source: nigeria-ri-2021
+    section: Table 4
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+- id: range.urine_output
+  field: urine_output
+  twin: renal_urinary
+  unit: mL/h
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: No reference range for this field is in the kb sources; the field is shown without
+      a status band.
+- id: range.aki_stage
+  field: aki_stage
+  twin: renal_urinary
+  unit: '1'
+  ref_low: null
+  ref_high: 0
+  warn_low: null
+  warn_high: 1
+  crit_low: null
+  crit_high: 2
+  note: KDIGO stages 1 to 3.
+  provenance:
+    source: kdigo-aki-2012
+    section: Definition and staging of AKI
+    page: 22
+    derived:
+      ref_high: Stage 0 is no AKI.
+      warn_high: Stage 2 or 3 is a warning.
+      crit_high: Stage 3 is critical.
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+- id: range.gestation_weeks
+  field: gestation_weeks
+  twin: reproductive
+  unit: wk
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  not_applicable: true
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Categorical or identifying field; a reference range does not apply.
+- id: range.cycle_day
+  field: cycle_day
+  twin: reproductive
+  unit: d
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  not_applicable: true
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Categorical or identifying field; a reference range does not apply.
+- id: range.oestradiol
+  field: oestradiol
+  twin: reproductive
+  unit: pmol/L
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: No reference range for this field is in the kb sources; the field is shown without
+      a status band.
+- id: range.respiratory_rate
+  field: respiratory_rate
+  twin: respiratory
+  unit: /min
+  ref_low: 12
+  ref_high: 20
+  warn_low: null
+  warn_high: 20
+  crit_low: 9
+  crit_high: 24
+  by:
+  - age_from_months: 0
+    age_below_months: 12
+    ref_low: 30
+    ref_high: 50
+  - age_from_months: 12
+    age_below_months: 60
+    ref_low: 20
+    ref_high: 40
+  - age_from_months: 60
+    age_below_months: 156
+    ref_low: 20
+    ref_high: 25
+  - age_from_months: 156
+    age_below_months: 216
+    ref_low: 15
+    ref_high: 25
+  note: 'NEWS2 mapping: ref = score 0 band, warn = score 2 boundary, crit = score 3 boundary. Children:
+    PEWS score 0 band of each age chart.'
+  provenance:
+    source: rcp-news2-2017
+    section: 'Chart 1: The NEWS scoring system'
+    page: 52
+    also:
+    - source: nhse-pews-0-11m
+      page: 1
+    - source: nhse-pews-1-4y
+      page: 1
+    - source: nhse-pews-5-12y
+      page: 1
+    - source: nhse-pews-13y
+      page: 1
+    derived:
+      by[*].age_*: Age bands of the four PEWS charts, in months.
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+- id: range.spo2
+  field: spo2
+  twin: respiratory
+  unit: '%'
+  ref_low: 96
+  ref_high: null
+  warn_low: 94
+  warn_high: null
+  crit_low: 92
+  crit_high: null
+  note: 'NEWS2 mapping: ref = score 0 band, warn = score 2 boundary, crit = score 3 boundary. Scale 1.'
+  provenance:
+    source: rcp-news2-2017
+    section: 'Chart 1: The NEWS scoring system'
+    page: 52
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+- id: range.pef
+  field: pef
+  twin: respiratory
+  unit: L/min
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: No reference range for this field is in the kb sources; the field is shown without
+      a status band.
+- id: range.fev1
+  field: fev1
+  twin: respiratory
+  unit: L
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: No reference range for this field is in the kb sources; the field is shown without
+      a status band.
+- id: range.fio2
+  field: fio2
+  twin: respiratory
+  unit: '%'
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: No reference range for this field is in the kb sources; the field is shown without
+      a status band.
+- id: range.cough_events
+  field: cough_events
+  twin: respiratory
+  unit: /h
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: No reference range for this field is in the kb sources; the field is shown without
+      a status band.
+- id: range.visual_acuity_logmar
+  field: visual_acuity_logmar
+  twin: sensory
+  unit: '1'
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: No reference range for this field is in the kb sources; the field is shown without
+      a status band.
+- id: range.hearing_threshold
+  field: hearing_threshold
+  twin: sensory
+  unit: dB
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: No reference range for this field is in the kb sources; the field is shown without
+      a status band.
+- id: range.vestibular_score
+  field: vestibular_score
+  twin: sensory
+  unit: '{score}'
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: No reference range for this field is in the kb sources; the field is shown without
+      a status band.
+- id: range.household_support
+  field: household_support
+  twin: social
+  unit: '1'
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: No reference range for this field is in the kb sources; the field is shown without
+      a status band.
+- id: range.distance_to_facility
+  field: distance_to_facility
+  twin: social
+  unit: km
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: No reference range for this field is in the kb sources; the field is shown without
+      a status band.
+- id: range.pm25
+  field: pm25
+  twin: social
+  unit: ug/m3
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: No reference range for this field is in the kb sources; the field is shown without
+      a status band.
+- id: range.ambient_temp
+  field: ambient_temp
+  twin: social
+  unit: Cel
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: No reference range for this field is in the kb sources; the field is shown without
+      a status band.
+- id: range.humidity
+  field: humidity
+  twin: social
+  unit: '%'
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: No reference range for this field is in the kb sources; the field is shown without
+      a status band.
+- id: range.food_security
+  field: food_security
+  twin: social
+  unit: '1'
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: No reference range for this field is in the kb sources; the field is shown without
+      a status band.
+- id: range.news2
+  field: news2
+  twin: whole_body
+  unit: '{score}'
+  ref_low: null
+  ref_high: 0
+  warn_low: null
+  warn_high: 4
+  crit_low: null
+  crit_high: 6
+  note: warn above the low band (total 5 or more); crit above the medium band (total 7 or more).
+  provenance:
+    source: rcp-news2-2017
+    section: 'Chart 2: NEWS thresholds and triggers'
+    page: 53
+    also:
+    - source: rcp-news2-2017
+      page: 62
+    derived:
+      ref_high: A total of 0 has no clinical risk; Chart 4 row 0.
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+- id: range.weight
+  field: weight
+  twin: whole_body
+  unit: kg
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  not_applicable: true
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Categorical or identifying field; a reference range does not apply.
+- id: range.height
+  field: height
+  twin: whole_body
+  unit: cm
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  not_applicable: true
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Categorical or identifying field; a reference range does not apply.
+- id: range.bmi
+  field: bmi
+  twin: whole_body
+  unit: kg/m2
+  ref_low: 18.5
+  ref_high: 24.9
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  note: Normal BMI band.
+  provenance:
+    source: who-anc-2016
+    page: 33
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+- id: range.waist
+  field: waist
+  twin: whole_body
+  unit: cm
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: No reference range for this field is in the kb sources; the field is shown without
+      a status band.
+- id: range.deterioration_risk
+  field: deterioration_risk
+  twin: whole_body
+  unit: '1'
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: No reference range for this field is in the kb sources; the field is shown without
+      a status band.
+- id: lifecourse.gompertz
+  value:
+    a_per_year: null
+    b_per_year: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Gompertz baseline hazard and slope for the Nigerian population; WP21 sources them from
+      the WHO Global Health Observatory life tables.
+- id: pregnancy.maternal_adjustments
+  value:
+    cardiac_output: null
+    plasma_volume: null
+    gfr: null
+    peak_week: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Peak relative increases of maternal physiology in pregnancy and the gestational week
+      of the peak; WP21 sources them from a cardiovascular and renal physiology of pregnancy review.

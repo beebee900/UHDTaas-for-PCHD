@@ -1,0 +1,22 @@
+{
+  "@@locale": "en",
+  "appTitlePerson": "My health twin",
+  "appTitleCarer": "Carer",
+  "appTitlePatient": "My care",
+  "appTitleWard": "Ward",
+  "appTitleChw": "Community health",
+  "signIn": "Sign in",
+  "username": "Username",
+  "password": "Password",
+  "signInFailed": "The username or password is not correct.",
+  "serviceUnreachable": "The service cannot be reached. Try again when you are online.",
+  "signOut": "Sign out",
+  "dashboard": "Dashboard",
+  "signedInAs": "Signed in as {user} ({role})",
+  "@signedInAs": {"placeholders": {"user": {"type": "String"}, "role": {"type": "String"}}},
+  "worklist": "Worklist",
+  "worklistEmpty": "No open items.",
+  "pendingChanges": "{count, plural, =0{All changes are sent.} =1{1 change waits to be sent.} other{{count} changes wait to be sent.}}",
+  "@pendingChanges": {"placeholders": {"count": {"type": "int"}}},
+  "language": "Language"
+}

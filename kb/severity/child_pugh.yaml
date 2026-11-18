@@ -1,0 +1,28 @@
+# Child-Pugh score of chronic liver disease severity.
+- id: severity.child_pugh
+  bilirubin_umol_l: [34, 50]
+  albumin_g_l: [35, 28]
+  inr: [1.7, 2.3]
+  ascites: [none, mild, moderate_or_severe]
+  encephalopathy: [none, grade_1_2, grade_3_4]
+  classes: {A: [5, 6], B: [7, 9], C: [10, 15]}
+  provenance:
+    source: pugh-1973
+    section: "Table 1 (grading of severity of liver disease)"
+    extracted_by: llm
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: The Pugh 1973 table is the standard Child-Pugh definition, but no full text
+      is retrievable (sources.yaml, pugh-1973). Values are the commonly published SI thresholds,
+      listed for sign-off.
+- id: hepatic.clint_fraction_by_child_pugh
+  value: {A: null, B: null, C: null}
+  provenance:
+    source: johnson-2010-cirrhosis
+    section: "Population libraries for Child-Pugh A, B and C"
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Fractions of intrinsic clearance remaining per class; to be sourced from
+      Johnson et al. 2010 in WP21. Until then the clearance factor is 1 for every class.

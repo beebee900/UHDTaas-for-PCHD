@@ -1,0 +1,41 @@
+# Settings of every ATRA service (design 02, 2.8). Credentials, including the PostgreSQL
+# URL, are in the atra-secrets Secret.
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: atra-config
+data:
+  ATRA_PROFILE: k8s
+  ATRA_RESIDENCY: NG
+  ATRA_VAR_DIR: /data
+  ATRA_SECURITY__PKI_DIR: /data/pki
+  ATRA_BACKEND__TIMESERIES: influxdb
+  ATRA_BACKEND__FHIR: hapi
+  ATRA_BACKEND__GRAPH: neo4j
+  ATRA_BACKEND__VECTOR: qdrant
+  ATRA_BACKEND__OBJECT: minio
+  ATRA_BACKEND__RELATIONAL: postgres
+  ATRA_BACKEND__CACHE: redis
+  ATRA_BACKEND__BUS: kafka
+  ATRA_BACKEND__POLICY: opa
+  ATRA_SERVICES__EDGE: http://edge:8095
+  ATRA_SERVICES__AHDT: http://ahdt:8100
+  ATRA_SERVICES__POPULATION: http://population:8110
+  ATRA_SERVICES__APDT: http://apdt:8200
+  ATRA_SERVICES__CHANNELS: http://channels:8300
+  ATRA_INFRA__OPA: http://opa:8181
+  ATRA_INFRA__INFLUXDB: http://influxdb:8086
+  ATRA_INFRA__HAPI: http://hapi-fhir:8080/fhir
+  ATRA_INFRA__NEO4J: bolt://neo4j:7687
+  ATRA_INFRA__QDRANT: http://qdrant:6333
+  ATRA_INFRA__MINIO: minio:9000
+  ATRA_INFRA__REDIS: redis://redis:6379/0
+  ATRA_INFRA__KAFKA: kafka-0.kafka:9092
+  ATRA_INFRA__MQTT: mosquitto
+  ATRA_EDGE__SITE: edge-fac-a
+  ATRA_EDGE__DATA_DIR: /data/edge
+  ATRA_EDGE__MODELS_DIR: /data/models/edge
+  ATRA_EDGE__AHDT_GRPC: ahdt:50051
+  ATRA_EDGE__MQTT_HOST: mosquitto
+  ATRA_EDGE__MQTT_PORT: "1883"
+  ATRA_EDGE__MQTT_TLS: "false"

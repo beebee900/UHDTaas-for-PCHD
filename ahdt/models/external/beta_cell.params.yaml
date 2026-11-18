@@ -1,0 +1,20 @@
+# Beta-cell mass, insulin and glucose dynamics (Topp et al. 2000), BioModels BIOMD0000000341.
+model_id: ahdt.endocrine.beta_cell_mass_dynamics
+sources:
+- id: topp2000
+  citation: "Topp B, Promislow K, deVries G, Miura RM, Finegood DT. A model of beta-cell mass,
+    insulin, and glucose kinetics: pathways to diabetes. J Theor Biol. 2000;206(4):605-619.
+    doi:10.1006/jtbi.2000.2150"
+  via: "BioModels BIOMD0000000341, curated, CC0 1.0, SBML L2V4, sha256 e86507d1dc05cbc37d5145eaaafb0ac627ba6f71d69652b3c72a9d129e15851a"
+  url: https://www.ebi.ac.uk/biomodels/BIOMD0000000341
+params:
+  si: {value: 0.72, unit: mL/uU/d, source: topp2000, calibrate: true, prior_cv: 0.3,
+       note: insulin sensitivity}
+  Eg0: {value: 1.44, unit: 1/d, source: topp2000, note: glucose effectiveness at zero insulin}
+  R0: {value: 864, unit: mg/dL/d, source: topp2000, note: glucose production rate}
+  sigma: {value: 43.2, unit: uU/mg/d, source: topp2000, note: insulin secretion per beta-cell mass}
+  alpha: {value: 20000, unit: mg2/dL2, source: topp2000, note: half-saturation of secretion squared}
+  k: {value: 432, unit: 1/d, source: topp2000, note: insulin clearance}
+  d0: {value: 0.06, unit: 1/d, source: topp2000, note: beta-cell death rate}
+  r1: {value: 0.00084, unit: 1/d/(mg/dL), source: topp2000, note: linear glucose term of beta-cell replication}
+  r2: {value: 0.0000024, unit: 1/d/(mg/dL)2, source: topp2000, note: quadratic glucose term of beta-cell replication}

@@ -1,0 +1,113 @@
+{
+  "$defs": {
+    "Interrupt": {
+      "additionalProperties": false,
+      "properties": {
+        "allowed_decisions": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Allowed Decisions",
+          "type": "array"
+        },
+        "kind": {
+          "enum": [
+            "accept_diagnosis",
+            "verify_prescription",
+            "sign_prescription",
+            "approve_care_plan",
+            "patient_consent_to_treatment"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "payload": {
+          "additionalProperties": true,
+          "title": "Payload",
+          "type": "object"
+        },
+        "required_role": {
+          "$ref": "#/$defs/Role"
+        }
+      },
+      "required": [
+        "kind",
+        "payload",
+        "allowed_decisions",
+        "required_role"
+      ],
+      "title": "Interrupt",
+      "type": "object"
+    },
+    "Role": {
+      "enum": [
+        "medical_officer",
+        "radiologist",
+        "pharmacist",
+        "nurse",
+        "lab_scientist",
+        "patient",
+        "proxy",
+        "community_health_worker",
+        "therapist",
+        "carer",
+        "clinical_safety_officer",
+        "administrator",
+        "researcher",
+        "public_health_official",
+        "person"
+      ],
+      "title": "Role",
+      "type": "string"
+    }
+  },
+  "$id": "https://atra.local/schemas/apdt/run_status.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "interrupt": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Interrupt"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "result": {
+      "anyOf": [
+        {
+          "additionalProperties": true,
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Result"
+    },
+    "run_id": {
+      "title": "Run Id",
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "running",
+        "waiting_for_human",
+        "done",
+        "failed"
+      ],
+      "title": "Status",
+      "type": "string"
+    }
+  },
+  "required": [
+    "run_id",
+    "status"
+  ],
+  "title": "RunStatus",
+  "type": "object"
+}

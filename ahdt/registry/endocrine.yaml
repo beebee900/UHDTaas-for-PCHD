@@ -1,0 +1,90 @@
+kind: endocrine
+name: Endocrine DT
+referent: Endocrine glands and metabolic regulation
+fields:
+- name: glucose
+  loinc: 15074-8
+  mdc: MDC_CONC_GLU_CAPILLARY_WHOLEBLOOD
+  ucum: mmol/L
+  ref: range.glucose
+  sample_period_s: 300
+  source:
+  - device
+  - lab
+  - manual
+- name: hba1c
+  loinc: 4548-4
+  ucum: '%'
+  ref: range.hba1c
+  source:
+  - lab
+- name: insulin_delivered
+  ucum: U
+  ref: range.insulin_delivered
+  source:
+  - device
+- name: cortisol
+  ucum: nmol/L
+  ref: range.cortisol
+  source:
+  - lab
+- name: tsh
+  loinc: 3016-3
+  ucum: m[IU]/L
+  ref: range.tsh
+  source:
+  - lab
+models:
+- ahdt.endocrine.glucose_insulin_and_metabolic_regulation
+- ahdt.endocrine.hpa_axis
+- ahdt.endocrine.thyroid_and_parathyroids
+- ahdt.endocrine.pineal
+- ahdt.endocrine.gonadal_hormones
+- ahdt.endocrine.hormone_kinetics
+owns_instances:
+- UBERON:0001264
+- UBERON:0001898
+- UBERON:0000007
+- UBERON:0002046
+- UBERON:0001132
+- UBERON:0002369
+- UBERON:0001905
+reads_facets:
+- instance: UBERON:0000945
+  facet: absorption
+- instance: UBERON:0002107
+  facet: metabolic
+- instance: UBERON:0002113
+  facet: renal_function
+- instance: UBERON:0000991
+  facet: hormonal
+standing_goals:
+- id: endo.state_current
+  text: Keep the glucose-insulin state current
+  check:
+    kind: freshness
+    params:
+      fields:
+      - glucose
+      max_age_s: 900
+- id: endo.glycaemic_forecast
+  text: Alert on a forecast hypo- or hyperglycaemia within 2 h
+  check:
+    kind: threshold
+    params:
+      model: ahdt.endocrine.glucose_insulin_and_metabolic_regulation
+      variable: glucose
+      horizon_h: 2
+      below:
+        kb: goal.endo.hypo
+      above:
+        kb: goal.endo.hyper
+connectors_out:
+- EndocrineBehaviouralConnector
+- EndocrineReproductiveConnector
+- GlucoseRenalConnector
+- SystemToWholeBodyConnector
+connectors_in:
+- DigestiveEndocrineConnector
+- NeuroEndocrineConnector
+- NormsConnector

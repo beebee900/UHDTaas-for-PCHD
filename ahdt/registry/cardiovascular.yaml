@@ -1,0 +1,124 @@
+kind: cardiovascular
+name: Cardiovascular DT
+referent: Heart and vasculature
+fields:
+- name: heart_rate
+  loinc: 8867-4
+  mdc: MDC_ECG_HEART_RATE
+  ucum: /min
+  ref: range.heart_rate
+  sample_period_s: 60
+  source:
+  - wearable
+  - monitor
+  - device
+  - manual
+- name: sbp
+  loinc: 8480-6
+  mdc: MDC_PRESS_BLD_NONINV_SYS
+  ucum: mm[Hg]
+  ref: range.sbp
+  source:
+  - device
+  - monitor
+  - manual
+- name: dbp
+  loinc: 8462-4
+  mdc: MDC_PRESS_BLD_NONINV_DIA
+  ucum: mm[Hg]
+  ref: range.dbp
+  source:
+  - device
+  - monitor
+  - manual
+- name: map
+  loinc: 8478-0
+  mdc: MDC_PRESS_BLD_NONINV_MEAN
+  ucum: mm[Hg]
+  ref: range.map
+  source:
+  - device
+  - monitor
+  - derived
+- name: hrv_rmssd
+  ucum: ms
+  ref: range.hrv_rmssd
+  source:
+  - wearable
+  - derived
+- name: ecg_lead_ii
+  mdc: MDC_ECG_ELEC_POTL_II
+  ucum: mV
+  ref: range.ecg_lead_ii
+  sample_period_s: 0.004
+  source:
+  - device
+- name: troponin_i
+  ucum: ng/L
+  ref: range.troponin_i
+  source:
+  - lab
+- name: bnp
+  ucum: pg/mL
+  ref: range.bnp
+  source:
+  - lab
+models:
+- ahdt.cardiovascular.heart_chambers_and_valves
+- ahdt.cardiovascular.conduction_system_and_cardiomyocyte_electrophysiology
+- ahdt.cardiovascular.aorta
+- ahdt.cardiovascular.coronary_cerebral_peripheral_vasculature_and_microcirculation
+- ahdt.cardiovascular.vascular_endothelium
+- ahdt.cardiovascular.baroreflex_regulation
+- ahdt.cardiovascular.blood_pressure_forecasting
+- ahdt.cardiovascular.arrhythmia_detection
+- ahdt.cardiovascular.cardiac_biomarkers
+owns_instances:
+- UBERON:0000948
+- UBERON:0000947
+- UBERON:0001637
+- UBERON:0001638
+- UBERON:0001982
+reads_facets:
+- instance: UBERON:0002048
+  facet: gas_exchange
+- instance: UBERON:0000178
+  facet: oxygen_carriage
+- instance: UBERON:0002113
+  facet: filtration
+standing_goals:
+- id: cv.bp_current
+  text: Keep BP and heart rhythm estimates current
+  check:
+    kind: freshness
+    params:
+      fields:
+      - sbp
+      - dbp
+      - heart_rate
+      max_age_s: 900
+- id: cv.detect_arrhythmia
+  text: Detect arrhythmia
+  check:
+    kind: model_flag
+    params:
+      model: ahdt.cardiovascular.arrhythmia_detection
+      threshold:
+        kb: goal.cv.arrhythmia_probability
+- id: cv.hypertensive_trend
+  text: Detect a hypertensive trend
+  check:
+    kind: threshold
+    params:
+      model: ahdt.cardiovascular.blood_pressure_forecasting
+      variable: sbp
+      horizon_h: 168
+      above:
+        kb: goal.cv.forecast_sbp
+connectors_out:
+- CardiovascularRespiratoryConnector
+- SystemToWholeBodyConnector
+connectors_in:
+- InfectionHaemodynamicsConnector
+- NormsConnector
+- OxygenCarriageConnector

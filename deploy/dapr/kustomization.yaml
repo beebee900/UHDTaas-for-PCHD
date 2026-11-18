@@ -1,0 +1,8 @@
+# Dapr resources of the AHDT Layer 6 services (design 04, 4.6): Kafka pub/sub and the
+# sidecar configuration named by the `dapr.io/config` annotation.
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - configuration.yaml
+  - pubsub-kafka.yaml
+  - subscription-ahdt.yaml

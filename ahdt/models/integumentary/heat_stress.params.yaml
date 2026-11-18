@@ -1,0 +1,19 @@
+# Heat index by the Rothfusz regression with the National Weather Service adjustments.
+model_id: ahdt.integumentary.heat_stress
+sources:
+- id: rothfusz1990
+  citation: "Rothfusz LP. The heat index equation (or, more than you ever wanted to know about
+    heat index). NWS Southern Region Technical Attachment SR 90-23. National Weather
+    Service; 1990"
+  via: NOAA Weather Prediction Center, The Heat Index Equation
+  url: https://www.wpc.ncep.noaa.gov/html/heatindex_equation.shtml
+params:
+  c1: {value: -42.379, unit: '[degF]', source: rothfusz1990}
+  c2: {value: 2.04901523, unit: '1', source: rothfusz1990}
+  c3: {value: 10.14333127, unit: '[degF]/%', source: rothfusz1990}
+  c4: {value: -0.22475541, unit: '1/%', source: rothfusz1990}
+  c5: {value: -0.00683783, unit: '/[degF]', source: rothfusz1990}
+  c6: {value: -0.05481717, unit: '[degF]/%2', source: rothfusz1990}
+  c7: {value: 0.00122874, unit: '/[degF]/%', source: rothfusz1990}
+  c8: {value: 0.00085282, unit: '1/%2', source: rothfusz1990}
+  c9: {value: -0.00000199, unit: '/[degF]/%2', source: rothfusz1990}

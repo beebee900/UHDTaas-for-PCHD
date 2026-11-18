@@ -1,0 +1,22 @@
+# Osteoclast-osteoblast interaction and bone mass at one remodelling site.
+model_id: ahdt.musculoskeletal.bone_remodelling_and_density
+sources:
+- id: komarova2003
+  citation: "Komarova SV, Smith RJ, Dixon SJ, Sims SM, Wahl LM. Mathematical model predicts a
+    critical role for osteoclast autocrine regulation in the control of bone remodeling.
+    Bone. 2003;33(2):206-215. doi:10.1016/S8756-3282(03)00157-1"
+  via: Physiome Model Repository, komarova_2003.cellml
+  url: https://models.physiomeproject.org/workspace/komarova_smith_dixon_sims_wahl_2003
+params:
+  alpha1: {value: 3, unit: /d, source: komarova2003}
+  alpha2: {value: 4, unit: /d, source: komarova2003}
+  beta1: {value: 0.2, unit: /d, source: komarova2003}
+  beta2: {value: 0.02, unit: /d, source: komarova2003}
+  g11: {value: 0.5, unit: '1', source: komarova2003}
+  g12: {value: 1, unit: '1', source: komarova2003}
+  g21: {value: -0.5, unit: '1', source: komarova2003}
+  g22: {value: 0, unit: '1', source: komarova2003}
+  k1: {value: 0.24, unit: '%/cell/d', source: komarova2003, calibrate: true, prior_cv: 0.2}
+  k2: {value: 0.0017, unit: '%/cell/d', source: komarova2003, calibrate: true, prior_cv: 0.2}
+  x1_0: {value: 10.06066, unit: cells, source: komarova2003, note: initial osteoclasts}
+  x2_0: {value: 212.132, unit: cells, source: komarova2003, note: initial osteoblasts}

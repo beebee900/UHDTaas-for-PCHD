@@ -1,0 +1,29 @@
+# Training environment on the aarch64 VM. Versions match requirements/all.lock; torch comes
+# from the PyTorch CPU index (setup.sh).
+numpy==2.2.6
+scipy==1.15.3
+scikit-learn==1.9.1
+pandas==2.3.3
+pyarrow==22.0.0
+lightgbm==4.7.0
+onnx==1.23.2
+onnxruntime==1.31.0
+wfdb==4.3.1
+mne==1.13.2
+pyyaml==6.0.3
+pydantic==2.14.0
+pydantic-settings==2.15.0
+python-jose[cryptography]==3.5.0
+httpx==0.28.1
+structlog==26.1.0
+pint==0.26.1
+sentence-transformers==6.1.0
+transformers==5.19.0
+tokenizers==0.23.3
+huggingface-hub==1.33.0
+safetensors==0.8.0
+torchmetrics==1.9.0
+lightning-utilities==0.15.3
+xlrd==2.0.2
+neurokit2==0.2.12
+PyWavelets==1.10.0

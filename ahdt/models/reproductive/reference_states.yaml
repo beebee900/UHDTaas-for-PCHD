@@ -1,0 +1,55 @@
+# T3 reference-state items of the reproductive twin (design 04, 4.5.3).
+- model_id: ahdt.reproductive.reproductive_organs
+  twin: reproductive
+  intended_use: Organ state and screening status of the reproductive organs
+  instances:
+  - UBERON:0000991
+  - UBERON:0000995
+  - UBERON:0000310
+  - UBERON:0002367
+  variables:
+    screening_status:
+      unit: '{code}'
+      ref: state.screening_status
+      tau_h: 8760
+      justification: Relaxation time constant of a T3 state; a modelling assumption (design 01, rule
+        R3)
+    uterine_state:
+      unit: '{code}'
+      ref: state.uterine_state
+      tau_h: 720
+      justification: Relaxation time constant of a T3 state; a modelling assumption (design 01, rule
+        R3)
+    psa_state:
+      unit: ug/L
+      ref: state.psa_state
+      tau_h: 8760
+      justification: Relaxation time constant of a T3 state; a modelling assumption (design 01, rule
+        R3)
+    oestradiol:
+      unit: pmol/L
+      ref: range.oestradiol
+      tau_h: 24
+      justification: Relaxation time constant of a T3 state; a modelling assumption (design 01, rule
+        R3)
+  obs_map:
+    2986-8: psa_state
+- model_id: ahdt.reproductive.placenta
+  twin: reproductive
+  intended_use: Placental function and gestational age
+  instances:
+  - UBERON:0001987
+  variables:
+    placental_function:
+      unit: '1'
+      ref: state.placental_function
+      tau_h: 168
+      justification: Relaxation time constant of a T3 state; a modelling assumption (design 01, rule
+        R3)
+    gestation_weeks:
+      unit: wk
+      ref: range.gestation_weeks
+      tau_h: 8760
+      justification: Relaxation time constant of a T3 state; a modelling assumption (design 01, rule
+        R3)
+      hold: true

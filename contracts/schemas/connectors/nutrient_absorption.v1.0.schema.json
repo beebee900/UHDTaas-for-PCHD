@@ -1,0 +1,22 @@
+{
+  "$id": "https://atra.local/schemas/connectors/nutrient_absorption/v1.0",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "carb_appearance": {
+      "maximum": 50,
+      "minimum": 0,
+      "type": "number",
+      "x-ucum": "mmol/min"
+    },
+    "oral_intake_ok": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "carb_appearance",
+    "oral_intake_ok"
+  ],
+  "title": "nutrient_absorption v1.0",
+  "type": "object"
+}

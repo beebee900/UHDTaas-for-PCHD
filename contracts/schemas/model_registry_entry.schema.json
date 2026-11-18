@@ -1,0 +1,259 @@
+{
+  "$defs": {
+    "DTKind": {
+      "description": "The 17 peer DTs of the federated Human Digital Twin, plus the Patient DT (APDT).",
+      "enum": [
+        "cardiovascular",
+        "respiratory",
+        "nervous",
+        "sensory",
+        "digestive",
+        "hepatobiliary",
+        "renal_urinary",
+        "endocrine",
+        "immune_lymphatic",
+        "haematological",
+        "musculoskeletal",
+        "integumentary",
+        "reproductive",
+        "whole_body",
+        "behavioural_cognitive",
+        "social",
+        "population",
+        "patient"
+      ],
+      "title": "DTKind",
+      "type": "string"
+    },
+    "ModelFamily": {
+      "enum": [
+        "ml",
+        "slm",
+        "llm",
+        "simulation",
+        "semantic",
+        "physics_hybrid"
+      ],
+      "title": "ModelFamily",
+      "type": "string"
+    },
+    "ModelIO": {
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "unit": {
+          "title": "Unit",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "unit"
+      ],
+      "title": "ModelIO",
+      "type": "object"
+    },
+    "ModelInput": {
+      "additionalProperties": false,
+      "properties": {
+        "from": {
+          "title": "From",
+          "type": "string"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "unit": {
+          "title": "Unit",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "unit",
+        "from"
+      ],
+      "title": "ModelInput",
+      "type": "object"
+    },
+    "ModelRef": {
+      "additionalProperties": false,
+      "properties": {
+        "model_id": {
+          "title": "Model Id",
+          "type": "string"
+        },
+        "version": {
+          "title": "Version",
+          "type": "string"
+        }
+      },
+      "required": [
+        "model_id",
+        "version"
+      ],
+      "title": "ModelRef",
+      "type": "object"
+    },
+    "Tier": {
+      "enum": [
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "title": "Tier",
+      "type": "string"
+    },
+    "Validation": {
+      "additionalProperties": false,
+      "properties": {
+        "dataset": {
+          "title": "Dataset",
+          "type": "string"
+        },
+        "date": {
+          "title": "Date",
+          "type": "string"
+        },
+        "metric": {
+          "title": "Metric",
+          "type": "string"
+        },
+        "value": {
+          "title": "Value",
+          "type": "number"
+        }
+      },
+      "required": [
+        "dataset",
+        "metric",
+        "value",
+        "date"
+      ],
+      "title": "Validation",
+      "type": "object"
+    }
+  },
+  "$id": "https://atra.local/schemas/model_registry_entry.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "anatomy": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Anatomy"
+    },
+    "depends_on": {
+      "items": {
+        "$ref": "#/$defs/ModelRef"
+      },
+      "title": "Depends On",
+      "type": "array"
+    },
+    "explainers": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Explainers",
+      "type": "array"
+    },
+    "family": {
+      "$ref": "#/$defs/ModelFamily"
+    },
+    "inputs": {
+      "items": {
+        "$ref": "#/$defs/ModelInput"
+      },
+      "title": "Inputs",
+      "type": "array"
+    },
+    "intended_use": {
+      "title": "Intended Use",
+      "type": "string"
+    },
+    "model_id": {
+      "title": "Model Id",
+      "type": "string"
+    },
+    "outputs": {
+      "items": {
+        "$ref": "#/$defs/ModelIO"
+      },
+      "title": "Outputs",
+      "type": "array"
+    },
+    "regulatory_status": {
+      "default": "research",
+      "enum": [
+        "research",
+        "investigational",
+        "samd_candidate"
+      ],
+      "title": "Regulatory Status",
+      "type": "string"
+    },
+    "source": {
+      "title": "Source",
+      "type": "string"
+    },
+    "tier": {
+      "$ref": "#/$defs/Tier"
+    },
+    "twin": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/DTKind"
+        },
+        {
+          "const": "apdt",
+          "type": "string"
+        }
+      ],
+      "title": "Twin"
+    },
+    "validation": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Validation"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "validity": {
+      "additionalProperties": true,
+      "title": "Validity",
+      "type": "object"
+    },
+    "version": {
+      "title": "Version",
+      "type": "string"
+    }
+  },
+  "required": [
+    "model_id",
+    "version",
+    "twin",
+    "family",
+    "tier",
+    "anatomy",
+    "inputs",
+    "outputs",
+    "intended_use",
+    "source"
+  ],
+  "title": "ModelRegistryEntry",
+  "type": "object"
+}

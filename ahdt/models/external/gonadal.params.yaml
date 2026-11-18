@@ -1,0 +1,18 @@
+# Gonadal hormones of the endocrine twin, from the same menstrual cycle model.
+model_id: ahdt.endocrine.gonadal_hormones
+sources:
+- id: roeblitz2013
+  citation: "Röblitz S, Stötzel C, Deuflhard P, Jones HM, Azulay DO, van der Graaf PH,
+    Martin SW. A mathematical model of the human menstrual cycle for the administration of
+    GnRH analogues. J Theor Biol. 2013;321:8-27. doi:10.1016/j.jtbi.2012.11.020"
+  via: "BioModels BIOMD0000000494, curated, CC0 1.0, SBML L2V4, sha256 7eb01f255157c04ff346d8df279283b5735bee751f9167c31948d3fbfeaf81fe; units from the ZIB report 11-16 (Fig. 4)"
+  url: https://www.ebi.ac.uk/biomodels/BIOMD0000000494
+- id: atra-assumption
+  citation: ATRA design 01 rule R5 assumption register
+params:
+  agonist_dose: {value: 0, unit: '1', source: atra-assumption, assumption: true,
+                 justification: "The pinned model schedules a Nafarelin dose; the twin models a
+                   cycle without GnRH analogues, so the dose is set to zero"}
+  antagonist_dose: {value: 0, unit: '1', source: atra-assumption, assumption: true,
+                    justification: "The pinned model schedules a Cetrorelix dose; the twin models a
+                      cycle without GnRH analogues, so the dose is set to zero"}

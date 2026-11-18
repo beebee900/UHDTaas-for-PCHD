@@ -1,0 +1,118 @@
+# Prevalence seeds for the population twin (design 06, 6.4.1). Values are percentages as
+# printed in the source. Lagos is in the South-West zone: an entry gives the Lagos value
+# where the source has one, else the South-West value, else the national value.
+# `by_age_pct`, `by_sex_pct` and `by_month_pct` are one-way breakdowns from the same source;
+# the population twin combines them by scaling the entry value (rule in prior.combination).
+
+- id: prior.hypertension
+  condition: cond.hypertension
+  population: adults
+  region: south_west
+  prevalence_pct: 42.1
+  by_sex_pct: {male: 38.2, female: 43.4}
+  by_age_pct: {'<30': 6.56, '30-39': 20.8, '40-49': 46.5, '50-59': 54.9, '60-69': 53.6, '70+': 58.2}
+  definition: Systolic 140 mmHg or above, diastolic 90 mmHg or above, or on antihypertensive medication.
+  provenance:
+    source: odili-2020-htn
+    section: Table 2
+    also:
+    - {source: odili-2020-htn, section: 'Results:'}
+    - {source: odili-2020-htn, section: Table 3}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: prior.diabetes_type2
+  condition: cond.diabetes_type2
+  population: adults
+  region: south_west
+  prevalence_pct: 5.5
+  national_pct: 5.77
+  provenance:
+    source: uloko-2018-dm
+    section: Results
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: prior.sickle_cell
+  genotype: HbSS
+  population: children and adolescents
+  region: south_west
+  prevalence_pct: 5.0
+  community_based_pct: 3.0
+  by_age_pct: {newborn: 1.0, infant: 1.0, under_five: 2.0}
+  trait_pct: 19.0
+  note: The zonal values pool hospital and community studies; community-based studies give 3.0%.
+  provenance:
+    source: issa-2025-scd
+    section: Regional variation in the prevalence of sickle cell disease and sickle cell traits among children across geopolitical zones in Nigeria
+    also:
+    - {source: issa-2025-scd, section: Table 2}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: prior.malaria_falciparum
+  condition: cond.malaria_falciparum
+  population: children aged 6 to 59 months
+  region: lagos
+  test: RDT
+  prevalence_pct: 3.4
+  south_west_pct: 28.9
+  national_pct: 36.2
+  by_sex_pct: {female: 35.7, male: 36.6}
+  by_age_months_pct: {'6-23': 28.9, '24-35': 36.6, '36-47': 40.5, '48-59': 42.7}
+  by_month_pct: {aug: 26.2, sep: 38.3, oct: 37.6, nov: 36.8, dec: 35.0}
+  note: Breakdowns by sex, age and month are national. The survey ran from August to December 2018 only.
+  provenance:
+    source: oviedo-2023-malaria
+    section: Table 1
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: prior.hiv
+  condition: cond.hiv
+  population: adults aged 15 to 49 years
+  region: lagos
+  prevalence_pct: 1.8
+  interval_pct: [1.2, 2.4]
+  naiis_2018_pct: 1.3
+  national_pct: 2.1
+  provenance:
+    source: onovo-2023-hiv
+    section: Table 3
+    also:
+    - {source: onovo-2023-hiv, section: Findings}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: prior.tb_pulmonary
+  condition: cond.tb_pulmonary
+  population: all ages
+  region: global
+  incidence_per_100k: 131
+  nigeria_share_of_global_cases_pct: 4.8
+  case_mix_pct: {men: 54, women: 35, children: 11}
+  note: The global report gives no Nigeria rate. The Nigeria country profile is needed before the twin samples TB.
+  provenance:
+    source: who-tb-report-2025
+    section: Box 1. Top findings and messages in the 2025 report
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: prior.combination
+  rule: scale_marginals
+  description: >-
+    The prevalence for one person is the entry value multiplied by the ratio of each one-way
+    breakdown that applies (age band value over the entry value, sex value over the entry
+    value, month value over the national value), capped at 100%. This treats age, sex and
+    season as independent, which no source states.
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: The sources publish one-way breakdowns only; no joint table is available.

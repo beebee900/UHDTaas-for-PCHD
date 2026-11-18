@@ -1,0 +1,48 @@
+{
+  "$defs": {
+    "DTKind": {
+      "description": "The 17 peer DTs of the federated Human Digital Twin, plus the Patient DT (APDT).",
+      "enum": [
+        "cardiovascular",
+        "respiratory",
+        "nervous",
+        "sensory",
+        "digestive",
+        "hepatobiliary",
+        "renal_urinary",
+        "endocrine",
+        "immune_lymphatic",
+        "haematological",
+        "musculoskeletal",
+        "integumentary",
+        "reproductive",
+        "whole_body",
+        "behavioural_cognitive",
+        "social",
+        "population",
+        "patient"
+      ],
+      "title": "DTKind",
+      "type": "string"
+    }
+  },
+  "$id": "https://atra.local/schemas/tools/ahdt.model.state.args.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "dt": {
+      "$ref": "#/$defs/DTKind"
+    },
+    "hdt_id": {
+      "pattern": "^hdt-[0-9a-f]{12}$",
+      "title": "Hdt Id",
+      "type": "string"
+    }
+  },
+  "required": [
+    "hdt_id",
+    "dt"
+  ],
+  "title": "StateArgs",
+  "type": "object"
+}

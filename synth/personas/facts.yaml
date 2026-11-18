@@ -1,0 +1,54 @@
+# Scenario facts of the six demo personas (design 06, 6.4.2). Every code comes from the kb
+# or kb/terminology. `python -m synth.build --personas` turns them into the persona
+# documents `synth/personas/<key>.json` (truth, device readings, labs, findings, notes).
+
+ao:
+  conditions: [cond.malaria_falciparum]
+  medications:
+  - {atc: P01BF01, name: artemether and lumefantrine, twin: haematological}
+  phenotypes:
+  - {hpo: 'HP:0001945', label: Fever, twin: immune_lymphatic}
+  observations:
+  - {field: temperature, code: 8310-5, value: 38.6, unit: Cel}
+bm:
+  conditions: [cond.malaria_falciparum, cond.hypoglycaemia]
+  medications:
+  - {atc: P01BE03, name: artesunate, twin: haematological}
+  observations:
+  - {field: glucose, code: 15074-8, value: 2.1, unit: mmol/L}
+cn:
+  conditions: [cond.pyelonephritis, cond.pregnancy]
+  medications:
+  - {atc: J01DD04, name: ceftriaxone, twin: renal_urinary}
+  phenotypes:
+  - {hpo: 'HP:0030157', label: Flank pain, twin: renal_urinary}
+  - {hpo: 'HP:0100518', label: Dysuria, twin: renal_urinary}
+de:
+  conditions: [cond.hypertension, cond.diabetes_type2, cond.ckd]
+  medications:
+  - {atc: C08CA01, name: amlodipine, twin: cardiovascular}
+  - {atc: C09AA03, name: lisinopril, twin: cardiovascular}
+  - {atc: A10BA02, name: metformin, twin: endocrine}
+  observations:
+  - {field: sbp, code: 8480-6, value: 162, unit: 'mm[Hg]'}
+  - {field: dbp, code: 8462-4, value: 98, unit: 'mm[Hg]'}
+  - {field: creatinine, code: 14682-9, value: 180, unit: umol/L}
+ef:
+  conditions: [cond.scd_crisis]
+  medications:
+  - {atc: N02AA01, name: morphine, twin: haematological}
+  - {atc: L01XX05, name: hydroxycarbamide, twin: haematological}
+  phenotypes:
+  - {hpo: 'HP:0002653', label: Bone pain, twin: musculoskeletal}
+  observations:
+  - {field: hb, code: 718-7, value: 7.1, unit: g/dL}
+gh:
+  conditions: [cond.hiv, cond.tb_pulmonary]
+  medications:
+  - {atc: J05AR27, name: 'lamivudine, tenofovir disoproxil and dolutegravir', twin: immune_lymphatic}
+  - {atc: J04AM06, name: 'rifampicin, pyrazinamide, ethambutol and isoniazid', twin: respiratory}
+  phenotypes:
+  - {hpo: 'HP:0012735', label: Cough, twin: respiratory}
+  - {hpo: 'HP:0001824', label: Weight loss, twin: whole_body}
+  observations:
+  - {field: weight, code: 29463-7, value: 58, unit: kg}

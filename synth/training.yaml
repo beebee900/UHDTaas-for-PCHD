@@ -1,0 +1,121 @@
+# Generators of the synthetic training data for the T1 models that WP02 does not yet
+# produce. Each block draws from the WP02 population (persons, conditions, network) and
+# adds the series, events and labels below. Every value is a simulator parameter.
+assumption: true
+justification: Round values that give each task a known, learnable structure, so that the
+  training, validation, conformal and fairness pipeline can be checked end to end. They are
+  not clinical estimates and are replaced when real or WP02 truth-mode data exist.
+
+population: {persons: 2000, seed: 7}
+
+home_bp:
+  days: 120
+  hours: [7, 19]
+  sbp: {intercept: 112.0, per_year_over_40: 0.5, male: 4.0, hypertension: 24.0,
+        person_sd: 8.0, morning: 5.0, drift_sd_per_day: 0.4, ar: 0.6, ar_sd: 4.0,
+        noise_sd: 3.0}
+  dbp: {ratio: 0.62, offset: 2.0, noise_sd: 3.0}
+  history_days: 28
+  horizon_days: 7
+
+glucose:
+  days: 60
+  hours: [7, 9, 14, 19]
+  fasting: {normal: 5.0, diabetes: 8.5, person_sd: 0.6}
+  meal_rise: {9: 2.0, 14: 1.6, 19: 0.4}
+  diabetes_meal_factor: 1.8
+  day_sd: 0.5
+  ar: 0.5
+  noise_sd: 0.35
+  history_days: 14
+  horizon_days: 2
+
+ward:
+  stay_share: 0.25
+  hours: 96
+  states: [stable, deteriorating, critical, recovering]
+  start: [0.85, 0.15, 0.0, 0.0]
+  transition_per_hour:
+    stable: {stable: 0.985, deteriorating: 0.015}
+    deteriorating: {deteriorating: 0.94, critical: 0.03, recovering: 0.03}
+    critical: {critical: 0.95, recovering: 0.05}
+    recovering: {recovering: 0.95, stable: 0.05}
+  means:
+    respiration_rate: [16, 21, 27, 18]
+    spo2: [97, 94, 89, 96]
+    systolic_bp: [124, 112, 92, 118]
+    pulse: [78, 98, 122, 86]
+    temperature: [36.9, 37.7, 38.6, 37.2]
+  ar: 0.8
+  sd: {respiration_rate: 1.5, spo2: 1.0, systolic_bp: 6.0, pulse: 5.0, temperature: 0.2}
+  problems: {stable: 1.0, deteriorating: 2.0, critical: 3.0, recovering: 1.5}
+  history_hours: 24
+  horizon_hours: 6
+  deterioration_window_hours: 24
+
+mental_health:
+  visits: 26
+  states: [remission, mild, moderate, severe]
+  start: [0.55, 0.25, 0.15, 0.05]
+  stay: 0.85
+  phq9_mean: [2.5, 7.5, 12.5, 18.5]
+  gad7_mean: [2.0, 6.5, 11.0, 16.0]
+  sd: 2.5
+
+desaturation:
+  windows_per_person: 12
+  window_s: 300
+  spo2: {baseline: 97.0, respiratory: -3.0, person_sd: 1.0, noise_sd: 0.6}
+  heart_rate: {baseline: 76.0, sd: 8.0, per_point_drop: 1.5}
+  event: {p: 0.2, depth: [3.0, 12.0], duration_s: [10, 90]}
+  artefact: {p: 0.08, depth: [10.0, 25.0], duration_s: [1, 4]}
+  label_min_drop: 4.0
+  label_min_duration_s: 10
+
+exacerbation:
+  share: 0.08
+  weeks: 40
+  logit: {intercept: -4.6, pef_deficit_per_10pct: 0.55, symptom_score: 0.35,
+          night_waking: 0.2, reliever_per_10: 0.5, pm25_per_10: 0.12, viral: 1.3,
+          adherence: -1.0, prior_exacerbations: 0.3}
+
+sickle_crisis:
+  cohort: 400
+  months: 24
+  hb: {mean: 8.0, sd: 1.0}
+  hbf: {mean: 8.0, sd: 5.0}
+  logit: {intercept: -3.2, hb_below_8: 0.35, hbf_per_5pct: -0.35, infection: 1.4,
+          dehydration: 0.5, fever: 0.9, hydroxyurea: -0.7}
+
+falls:
+  min_age: 50
+  gait_speed: {intercept: 1.35, per_year_over_50: -0.012, sd: 0.15}
+  cadence: {intercept: 112.0, per_mps: 12.0, sd: 6.0}
+  stride_time_cv: {intercept: 2.0, per_year_over_50: 0.05, slow_gait: 2.5, sd: 0.8}
+  logit: {intercept: -2.4, gait_speed_below_1: 3.0, stride_cv_per_pct: 0.25,
+          cadence_below_100_per_10: 0.4}
+
+adherence:
+  conditions: [cond.hypertension, cond.diabetes_type2, cond.hiv]
+  follow_up_d: 365
+  base_hazard_per_d: 0.0025
+  log_hr: {age_per_decade_under_40: 0.15, pills_per_day: 0.12, distance_per_5km: 0.2,
+           low_income: 0.35, insured: -0.3, depression: 0.5}
+  depression_p: 0.12
+  pills_per_day: [1, 4]
+  distance_km: {mean: 6.0, sd: 4.0}
+
+lifestyle:
+  days: 120
+  fields:
+    steps: {mean: 6500, person_sd: 1800, day_sd: 1200}
+    active_minutes: {mean: 35, person_sd: 12, day_sd: 10}
+    sleep_duration: {mean: 7.0, person_sd: 0.6, day_sd: 0.7}
+    screen_time: {mean: 240, person_sd: 60, day_sd: 40}
+  anomaly: {p_per_day: 0.04, steps: -0.55, active_minutes: -0.6, sleep_duration: 0.25,
+            screen_time: 0.4}
+
+social:
+  working_age: [18, 65]
+  logit: {intercept: -1.4, working_adult_household: 0.9, community_not_low_income: 0.35,
+          own_low_income: -0.5, own_age_over_70: -0.6}

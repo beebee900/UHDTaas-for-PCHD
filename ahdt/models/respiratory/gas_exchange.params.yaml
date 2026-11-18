@@ -1,0 +1,36 @@
+# Single-compartment lung mechanics and gas exchange.
+model_id: ahdt.respiratory.lungs_and_gas_exchange
+sources:
+- id: severinghaus1979
+  citation: "Severinghaus JW. Simple, accurate equations for human blood O2 dissociation
+    computations. J Appl Physiol Respir Environ Exerc Physiol. 1979;46(3):599-602.
+    doi:10.1152/jappl.1979.46.3.599"
+- id: west
+  citation: "West JB, Luks AM. West's Respiratory Physiology: The Essentials. 11th ed.
+    Wolters Kluwer; 2020. Chapters 2 (ventilation), 5 (gas transport) and 7 (mechanics)"
+- id: atra-assumption
+  citation: ATRA design 01 rule R5 assumption register
+params:
+  p_atm: {value: 760, unit: 'mm[Hg]', source: west, note: sea level}
+  p_h2o: {value: 47, unit: 'mm[Hg]', source: west, note: water vapour at 37 Cel}
+  rq: {value: 0.8, unit: '1', source: west, note: respiratory exchange ratio}
+  k_paco2: {value: 0.863, unit: 'mm[Hg].L/mL', source: west,
+            note: "alveolar ventilation equation constant (BTPS/STPD)"}
+  hufner: {value: 1.34, unit: mL/g, source: west, note: O2 bound per gram of haemoglobin}
+  o2_solubility: {value: 0.003, unit: 'mL/dL/mm[Hg]', source: west}
+  dead_space: {value: 150, unit: mL, source: west, note: anatomical dead space of an adult}
+  vco2: {value: 200, unit: mL/min, source: west, note: resting CO2 output}
+  vo2: {value: 250, unit: mL/min, source: west, note: resting O2 uptake}
+  shunt_fraction: {value: 0.03, unit: '1', source: atra-assumption, assumption: true,
+                   calibrate: true, prior_cv: 0.5, bounds: [0.0, 0.6],
+                   justification: "Physiological shunt of a few percent; calibrated to the
+                     person's SpO2"}
+  compliance: {value: 0.1, unit: 'L/cm[H2O]', source: west, verified: false,
+               justification: "Typical total respiratory system compliance as recalled from
+                 West; needs a page check"}
+  airway_resistance: {value: 2.0, unit: 'cm[H2O].s/L', source: west, verified: false,
+                      justification: "Typical adult airway resistance as recalled from West;
+                        needs a page check"}
+  inspiratory_time: {value: 1.0, unit: s, source: atra-assumption, assumption: true,
+                     justification: "Inspiratory time used for the mean inspiratory flow in the
+                       peak pressure; replaced by the observed value when available"}

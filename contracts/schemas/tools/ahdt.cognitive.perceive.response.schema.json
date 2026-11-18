@@ -1,0 +1,63 @@
+{
+  "$defs": {
+    "Finding": {
+      "additionalProperties": false,
+      "properties": {
+        "code": {
+          "title": "Code",
+          "type": "string"
+        },
+        "confidence": {
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Confidence",
+          "type": "number"
+        },
+        "display": {
+          "title": "Display",
+          "type": "string"
+        },
+        "value": {
+          "default": null,
+          "title": "Value"
+        }
+      },
+      "required": [
+        "code",
+        "display",
+        "confidence"
+      ],
+      "title": "Finding",
+      "type": "object"
+    }
+  },
+  "$id": "https://atra.local/schemas/tools/ahdt.cognitive.perceive.response.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "findings": {
+      "items": {
+        "$ref": "#/$defs/Finding"
+      },
+      "title": "Findings",
+      "type": "array"
+    },
+    "transcript": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Transcript"
+    }
+  },
+  "required": [
+    "findings"
+  ],
+  "title": "PerceiveData",
+  "type": "object"
+}

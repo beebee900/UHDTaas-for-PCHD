@@ -1,0 +1,211 @@
+{
+  "$defs": {
+    "AutonomyLevel": {
+      "enum": [
+        "inform",
+        "recommend",
+        "prepare_for_signature",
+        "act_with_approval",
+        "act",
+        "never"
+      ],
+      "title": "AutonomyLevel",
+      "type": "string"
+    },
+    "Recommendation": {
+      "additionalProperties": false,
+      "properties": {
+        "autonomy_level": {
+          "$ref": "#/$defs/AutonomyLevel"
+        },
+        "bundle_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Bundle Id"
+        },
+        "confidence": {
+          "anyOf": [
+            {
+              "maximum": 1,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Confidence"
+        },
+        "created_by_agent": {
+          "title": "Created By Agent",
+          "type": "string"
+        },
+        "episode_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Episode Id"
+        },
+        "hdt_id": {
+          "title": "Hdt Id",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "diagnosis",
+            "test",
+            "treatment",
+            "care",
+            "lifestyle",
+            "data_request"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "payload": {
+          "additionalProperties": true,
+          "title": "Payload",
+          "type": "object"
+        },
+        "recommendation_id": {
+          "title": "Recommendation Id",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "proposed",
+            "accepted",
+            "edited",
+            "overridden",
+            "declined",
+            "signed"
+          ],
+          "title": "Status",
+          "type": "string"
+        }
+      },
+      "required": [
+        "recommendation_id",
+        "hdt_id",
+        "kind",
+        "payload",
+        "status",
+        "autonomy_level",
+        "created_by_agent"
+      ],
+      "title": "Recommendation",
+      "type": "object"
+    },
+    "ToolCallRecord": {
+      "additionalProperties": false,
+      "properties": {
+        "ahdt_layer": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Ahdt Layer"
+        },
+        "args_hash": {
+          "title": "Args Hash",
+          "type": "string"
+        },
+        "result_ref": {
+          "title": "Result Ref",
+          "type": "string"
+        },
+        "tool": {
+          "title": "Tool",
+          "type": "string"
+        }
+      },
+      "required": [
+        "tool",
+        "args_hash",
+        "result_ref"
+      ],
+      "title": "ToolCallRecord",
+      "type": "object"
+    }
+  },
+  "$id": "https://atra.local/schemas/agent_result.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "agent": {
+      "title": "Agent",
+      "type": "string"
+    },
+    "autonomy_level": {
+      "$ref": "#/$defs/AutonomyLevel"
+    },
+    "explanations": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Explanations",
+      "type": "array"
+    },
+    "goal_id": {
+      "title": "Goal Id",
+      "type": "string"
+    },
+    "missing_evidence": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Missing Evidence",
+      "type": "array"
+    },
+    "proposals": {
+      "items": {
+        "$ref": "#/$defs/Recommendation"
+      },
+      "title": "Proposals",
+      "type": "array"
+    },
+    "status": {
+      "enum": [
+        "ok",
+        "degraded",
+        "failed"
+      ],
+      "title": "Status",
+      "type": "string"
+    },
+    "tool_calls": {
+      "items": {
+        "$ref": "#/$defs/ToolCallRecord"
+      },
+      "title": "Tool Calls",
+      "type": "array"
+    }
+  },
+  "required": [
+    "agent",
+    "goal_id",
+    "autonomy_level",
+    "status"
+  ],
+  "title": "AgentResult",
+  "type": "object"
+}

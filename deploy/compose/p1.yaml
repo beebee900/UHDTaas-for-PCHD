@@ -1,0 +1,158 @@
+# Profile p1: data infrastructure (design 02, section 2.2). Memory caps are the planned
+# limits; deploy/compose/MEASURED.md records what each container actually uses.
+name: atra-p1
+
+x-cap: &cap
+  restart: unless-stopped
+
+services:
+  mosquitto:
+    <<: *cap
+    image: eclipse-mosquitto:2
+    ports: ["1883:1883", "8883:8883"]
+    volumes:
+      - ./config/mosquitto.conf:/mosquitto/config/mosquitto.conf:ro
+      - ../pki/out:/mosquitto/certs:ro
+    mem_limit: 32m
+    healthcheck:
+      test: ["CMD", "mosquitto_sub", "-t", "$$SYS/broker/uptime", "-C", "1", "-W", "3"]
+      interval: 10s
+
+  kafka:
+    <<: *cap
+    image: apache/kafka:3.9.1
+    ports: ["9092:9092"]
+    environment:
+      KAFKA_NODE_ID: 1
+      KAFKA_PROCESS_ROLES: broker,controller
+      KAFKA_LISTENERS: PLAINTEXT://:9092,CONTROLLER://:9093
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://127.0.0.1:9092
+      KAFKA_CONTROLLER_LISTENER_NAMES: CONTROLLER
+      KAFKA_CONTROLLER_QUORUM_VOTERS: 1@localhost:9093
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_HEAP_OPTS: "-Xmx512m -Xms256m"
+    mem_limit: 768m
+    healthcheck:
+      test: ["CMD-SHELL", "/opt/kafka/bin/kafka-broker-api-versions.sh --bootstrap-server localhost:9092 >/dev/null"]
+      interval: 15s
+
+  apicurio:
+    <<: *cap
+    image: apicurio/apicurio-registry:3.0.9
+    ports: ["8085:8080"]
+    environment:
+      APICURIO_STORAGE_KIND: sql
+      APICURIO_STORAGE_SQL_KIND: h2
+    mem_limit: 384m
+
+  postgres:
+    <<: *cap
+    image: postgis/postgis:16-3.4
+    ports: ["5432:5432"]
+    environment:
+      POSTGRES_USER: atra
+      POSTGRES_PASSWORD: ${ATRA_POSTGRES_PASSWORD:-atra}
+      POSTGRES_DB: atra
+    volumes: ["pgdata:/var/lib/postgresql/data"]
+    mem_limit: 512m
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U atra"]
+      interval: 10s
+
+  influxdb:
+    <<: *cap
+    image: influxdb:2.7
+    ports: ["8086:8086"]
+    environment:
+      DOCKER_INFLUXDB_INIT_MODE: setup
+      DOCKER_INFLUXDB_INIT_USERNAME: atra
+      DOCKER_INFLUXDB_INIT_PASSWORD: ${ATRA_INFLUX_PASSWORD:-atra-influx}
+      DOCKER_INFLUXDB_INIT_ORG: atra
+      DOCKER_INFLUXDB_INIT_BUCKET: ahdt
+      DOCKER_INFLUXDB_INIT_ADMIN_TOKEN: ${ATRA_INFLUX_TOKEN:-atra-local-token}
+    volumes: ["influx:/var/lib/influxdb2"]
+    mem_limit: 384m
+
+  neo4j:
+    <<: *cap
+    image: neo4j:5
+    ports: ["7474:7474", "7687:7687"]
+    environment:
+      NEO4J_AUTH: neo4j/${ATRA_NEO4J_PASSWORD:-atra-neo4j}
+      NEO4J_server_memory_heap_max__size: 512m
+      NEO4J_server_memory_pagecache_size: 256m
+    volumes: ["neo4j:/data"]
+    mem_limit: 1g
+
+  minio:
+    <<: *cap
+    image: minio/minio:latest
+    command: server /data --console-address :9011
+    ports: ["9000:9000", "9011:9011"]
+    environment:
+      MINIO_ROOT_USER: atra
+      MINIO_ROOT_PASSWORD: ${ATRA_MINIO_PASSWORD:-atra-minio}
+    volumes: ["minio:/data"]
+    mem_limit: 256m
+
+  redis:
+    <<: *cap
+    image: redis:7-alpine
+    ports: ["6379:6379"]
+    mem_limit: 64m
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+
+  qdrant:
+    <<: *cap
+    image: qdrant/qdrant:v1.15.5
+    ports: ["6333:6333", "6334:6334"]
+    volumes: ["qdrant:/qdrant/storage"]
+    mem_limit: 256m
+
+  hapi-fhir:
+    <<: *cap
+    image: hapiproject/hapi:v8.4.0-1
+    ports: ["8081:8080"]
+    environment:
+      spring.datasource.url: jdbc:postgresql://postgres:5432/atra
+      spring.datasource.username: atra
+      spring.datasource.password: ${ATRA_POSTGRES_PASSWORD:-atra}
+      spring.datasource.driverClassName: org.postgresql.Driver
+      spring.jpa.properties.hibernate.dialect: ca.uhn.fhir.jpa.model.dialect.HapiFhirPostgresDialect
+      hapi.fhir.fhir_version: R4
+      hapi.fhir.partitioning.allow_references_across_partitions: "false"
+      hapi.fhir.partitioning.partitioning_include_in_search_hashes: "false"
+      JAVA_TOOL_OPTIONS: "-Xmx640m"
+    depends_on:
+      postgres: {condition: service_healthy}
+    mem_limit: 1g
+
+  orthanc:
+    <<: *cap
+    image: orthancteam/orthanc:26.9.1
+    ports: ["8042:8042", "4242:4242"]
+    environment:
+      DICOM_WEB_PLUGIN_ENABLED: "true"
+      ORTHANC__AUTHENTICATION_ENABLED: "false"
+    mem_limit: 256m
+
+  htsget:
+    <<: *cap
+    image: ghcr.io/umccr/htsget-rs:latest
+    ports: ["8087:8080"]
+    mem_limit: 64m
+
+  toxiproxy:
+    <<: *cap
+    image: ghcr.io/shopify/toxiproxy:2.12.0
+    ports: ["8474:8474"]
+    mem_limit: 32m
+
+volumes:
+  pgdata: {}
+  influx: {}
+  neo4j: {}
+  minio: {}
+  qdrant: {}

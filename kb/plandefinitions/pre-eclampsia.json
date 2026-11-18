@@ -1,0 +1,98 @@
+{
+  "resourceType": "PlanDefinition",
+  "id": "pre-eclampsia",
+  "url": "https://atra.health/fhir/PlanDefinition/pre_eclampsia",
+  "version": "1.0.0",
+  "name": "pre_eclampsia",
+  "title": "Pre-eclampsia",
+  "type": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/plan-definition-type",
+        "code": "clinical-protocol"
+      }
+    ]
+  },
+  "status": "active",
+  "useContext": [
+    {
+      "code": {
+        "system": "http://terminology.hl7.org/CodeSystem/usage-context-type",
+        "code": "focus"
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "398254007"
+          }
+        ]
+      }
+    }
+  ],
+  "extension": [
+    {
+      "url": "https://atra.health/fhir/StructureDefinition/kb-entry",
+      "valueString": "cond.pre_eclampsia"
+    }
+  ],
+  "action": [
+    {
+      "id": "treat",
+      "title": "Choose treatment",
+      "selectionBehavior": "exactly-one",
+      "action": [
+        {
+          "id": "treat-severe",
+          "title": "Treat (severe)",
+          "condition": [
+            {
+              "kind": "applicability",
+              "expression": {
+                "language": "text/fhirpath",
+                "expression": "%severity = 'severe'"
+              }
+            }
+          ],
+          "selectionBehavior": "exactly-one",
+          "action": [
+            {
+              "id": "tx.pre_eclampsia.severe.magnesium_sulfate",
+              "title": "magnesium sulfate eclampsia",
+              "definitionCanonical": "https://atra.health/fhir/ActivityDefinition/dose.magnesium_sulfate_eclampsia",
+              "extension": [
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/kb-entry",
+                  "valueString": "tx.pre_eclampsia.severe.magnesium_sulfate"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/preference",
+                  "valueCode": "first_line"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/eligibility",
+                  "valueString": "{}"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "monitor",
+      "title": "Monitor with the early-warning score",
+      "extension": [
+        {
+          "url": "https://atra.health/fhir/StructureDefinition/kb-entry",
+          "valueString": "news2.monitoring"
+        }
+      ]
+    },
+    {
+      "id": "check-in",
+      "title": "Daily check-in",
+      "definitionCanonical": "https://atra.health/fhir/Questionnaire/check-in"
+    }
+  ]
+}

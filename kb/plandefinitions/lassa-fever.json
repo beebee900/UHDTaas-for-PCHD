@@ -1,0 +1,311 @@
+{
+  "resourceType": "PlanDefinition",
+  "id": "lassa-fever",
+  "url": "https://atra.health/fhir/PlanDefinition/lassa_fever",
+  "version": "1.0.0",
+  "name": "lassa_fever",
+  "title": "Lassa fever",
+  "type": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/plan-definition-type",
+        "code": "clinical-protocol"
+      }
+    ]
+  },
+  "status": "active",
+  "useContext": [
+    {
+      "code": {
+        "system": "http://terminology.hl7.org/CodeSystem/usage-context-type",
+        "code": "focus"
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "19065005"
+          }
+        ]
+      }
+    }
+  ],
+  "extension": [
+    {
+      "url": "https://atra.health/fhir/StructureDefinition/kb-entry",
+      "valueString": "cond.lassa_fever"
+    }
+  ],
+  "action": [
+    {
+      "id": "grade",
+      "title": "Grade severity",
+      "extension": [
+        {
+          "url": "https://atra.health/fhir/StructureDefinition/kb-entry",
+          "valueString": "severity.lassa.case_definition"
+        }
+      ]
+    },
+    {
+      "id": "treat",
+      "title": "Choose treatment",
+      "selectionBehavior": "exactly-one",
+      "action": [
+        {
+          "id": "treat-suspected",
+          "title": "Treat (suspected)",
+          "condition": [
+            {
+              "kind": "applicability",
+              "expression": {
+                "language": "text/fhirpath",
+                "expression": "%severity = 'suspected'"
+              }
+            }
+          ],
+          "selectionBehavior": "exactly-one",
+          "action": [
+            {
+              "id": "tx.lassa.adult.ribavirin_irrua",
+              "title": "ribavirin iv irrua",
+              "definitionCanonical": "https://atra.health/fhir/ActivityDefinition/dose.ribavirin_iv_irrua",
+              "extension": [
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/kb-entry",
+                  "valueString": "tx.lassa.adult.ribavirin_irrua"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/preference",
+                  "valueCode": "first_line"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/eligibility",
+                  "valueString": "{\"patient_group\": \"adult\", \"pregnancy\": [\"none\"]}"
+                }
+              ]
+            },
+            {
+              "id": "tx.lassa.adult.ribavirin_mccormick",
+              "title": "ribavirin iv mccormick",
+              "definitionCanonical": "https://atra.health/fhir/ActivityDefinition/dose.ribavirin_iv_mccormick",
+              "extension": [
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/kb-entry",
+                  "valueString": "tx.lassa.adult.ribavirin_mccormick"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/preference",
+                  "valueCode": "first_line"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/eligibility",
+                  "valueString": "{\"patient_group\": \"adult\", \"pregnancy\": [\"none\"]}"
+                }
+              ]
+            },
+            {
+              "id": "tx.lassa.child.ribavirin",
+              "title": "ribavirin iv child",
+              "definitionCanonical": "https://atra.health/fhir/ActivityDefinition/dose.ribavirin_iv_child",
+              "extension": [
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/kb-entry",
+                  "valueString": "tx.lassa.child.ribavirin"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/preference",
+                  "valueCode": "first_line"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/eligibility",
+                  "valueString": "{\"patient_group\": \"child\"}"
+                }
+              ]
+            },
+            {
+              "id": "tx.lassa.pregnancy.ribavirin",
+              "title": "ribavirin iv pregnancy",
+              "definitionCanonical": "https://atra.health/fhir/ActivityDefinition/dose.ribavirin_iv_pregnancy",
+              "extension": [
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/kb-entry",
+                  "valueString": "tx.lassa.pregnancy.ribavirin"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/preference",
+                  "valueCode": "first_line"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/eligibility",
+                  "valueString": "{\"pregnancy\": [\"t1\", \"t2\", \"t3\"]}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "treat-confirmed",
+          "title": "Treat (confirmed)",
+          "condition": [
+            {
+              "kind": "applicability",
+              "expression": {
+                "language": "text/fhirpath",
+                "expression": "%severity = 'confirmed'"
+              }
+            }
+          ],
+          "selectionBehavior": "exactly-one",
+          "action": [
+            {
+              "id": "tx.lassa.adult.ribavirin_irrua",
+              "title": "ribavirin iv irrua",
+              "definitionCanonical": "https://atra.health/fhir/ActivityDefinition/dose.ribavirin_iv_irrua",
+              "extension": [
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/kb-entry",
+                  "valueString": "tx.lassa.adult.ribavirin_irrua"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/preference",
+                  "valueCode": "first_line"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/eligibility",
+                  "valueString": "{\"patient_group\": \"adult\", \"pregnancy\": [\"none\"]}"
+                }
+              ]
+            },
+            {
+              "id": "tx.lassa.adult.ribavirin_mccormick",
+              "title": "ribavirin iv mccormick",
+              "definitionCanonical": "https://atra.health/fhir/ActivityDefinition/dose.ribavirin_iv_mccormick",
+              "extension": [
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/kb-entry",
+                  "valueString": "tx.lassa.adult.ribavirin_mccormick"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/preference",
+                  "valueCode": "first_line"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/eligibility",
+                  "valueString": "{\"patient_group\": \"adult\", \"pregnancy\": [\"none\"]}"
+                }
+              ]
+            },
+            {
+              "id": "tx.lassa.child.ribavirin",
+              "title": "ribavirin iv child",
+              "definitionCanonical": "https://atra.health/fhir/ActivityDefinition/dose.ribavirin_iv_child",
+              "extension": [
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/kb-entry",
+                  "valueString": "tx.lassa.child.ribavirin"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/preference",
+                  "valueCode": "first_line"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/eligibility",
+                  "valueString": "{\"patient_group\": \"child\"}"
+                }
+              ]
+            },
+            {
+              "id": "tx.lassa.pregnancy.ribavirin",
+              "title": "ribavirin iv pregnancy",
+              "definitionCanonical": "https://atra.health/fhir/ActivityDefinition/dose.ribavirin_iv_pregnancy",
+              "extension": [
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/kb-entry",
+                  "valueString": "tx.lassa.pregnancy.ribavirin"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/preference",
+                  "valueCode": "first_line"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/eligibility",
+                  "valueString": "{\"pregnancy\": [\"t1\", \"t2\", \"t3\"]}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "treat-high_risk_contact",
+          "title": "Treat (high risk contact)",
+          "condition": [
+            {
+              "kind": "applicability",
+              "expression": {
+                "language": "text/fhirpath",
+                "expression": "%severity = 'high_risk_contact'"
+              }
+            }
+          ],
+          "selectionBehavior": "exactly-one",
+          "action": [
+            {
+              "id": "tx.lassa.contact.pep",
+              "title": "ribavirin oral pep",
+              "definitionCanonical": "https://atra.health/fhir/ActivityDefinition/dose.ribavirin_oral_pep",
+              "extension": [
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/kb-entry",
+                  "valueString": "tx.lassa.contact.pep"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/preference",
+                  "valueCode": "first_line"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/eligibility",
+                  "valueString": "{\"pregnancy\": [\"none\"]}"
+                }
+              ]
+            },
+            {
+              "id": "tx.lassa.contact.pep_pregnancy",
+              "title": "ribavirin iv pep pregnancy",
+              "definitionCanonical": "https://atra.health/fhir/ActivityDefinition/dose.ribavirin_iv_pep_pregnancy",
+              "extension": [
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/kb-entry",
+                  "valueString": "tx.lassa.contact.pep_pregnancy"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/preference",
+                  "valueCode": "first_line"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/eligibility",
+                  "valueString": "{\"pregnancy\": [\"t1\", \"t2\", \"t3\"]}"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "monitor",
+      "title": "Monitor with the early-warning score",
+      "extension": [
+        {
+          "url": "https://atra.health/fhir/StructureDefinition/kb-entry",
+          "valueString": "news2.monitoring"
+        }
+      ]
+    },
+    {
+      "id": "check-in",
+      "title": "Daily check-in",
+      "definitionCanonical": "https://atra.health/fhir/Questionnaire/check-in"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+# Person-level goal template for the conductor (design 04, 4.9.3).
+# A sub-goal names an orchestrator standing goal. `set` replaces its thresholds with the
+# value at `path` of the cited kb entry; the entry carries the source.
+- id: goal_template.cardiometabolic_ckd
+  person_goal: Control hypertension, type 2 diabetes and CKD stage 3 safely
+  sub_goals:
+  - twin: cardiovascular
+    goal: cv.hypertensive_trend
+    set:
+      above: {threshold: threshold.hypertension, path: systolic_at_or_above}
+  - twin: endocrine
+    goal: endo.state_current
+  - twin: endocrine
+    goal: endo.glycaemic_forecast
+    set:
+      below: {threshold: threshold.hypoglycaemia_diabetes, path: at_or_below}
+      above: {threshold: threshold.hyperglycaemia_severe, path: above}
+  - twin: renal_urinary
+    goal: ren.function_current
+  - twin: renal_urinary
+    goal: ren.aki_alert
+  provenance:
+    source: who-htn-2021
+    section: 3.1 Blood pressure threshold for initiation of pharmacological treatment
+    page: 19
+    also:
+    - {source: who-hearts-d-2020, page: 18}
+    - {source: who-hearts-d-2020, page: 19}
+    extracted_by: human
+    status: draft

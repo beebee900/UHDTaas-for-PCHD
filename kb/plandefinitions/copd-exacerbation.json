@@ -1,0 +1,110 @@
+{
+  "resourceType": "PlanDefinition",
+  "id": "copd-exacerbation",
+  "url": "https://atra.health/fhir/PlanDefinition/copd_exacerbation",
+  "version": "1.0.0",
+  "name": "copd_exacerbation",
+  "title": "Exacerbation of chronic obstructive pulmonary disease",
+  "type": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/plan-definition-type",
+        "code": "clinical-protocol"
+      }
+    ]
+  },
+  "status": "active",
+  "useContext": [
+    {
+      "code": {
+        "system": "http://terminology.hl7.org/CodeSystem/usage-context-type",
+        "code": "focus"
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "195951007"
+          }
+        ]
+      }
+    }
+  ],
+  "extension": [
+    {
+      "url": "https://atra.health/fhir/StructureDefinition/kb-entry",
+      "valueString": "cond.copd_exacerbation"
+    }
+  ],
+  "action": [
+    {
+      "id": "treat",
+      "title": "Choose treatment",
+      "selectionBehavior": "exactly-one",
+      "action": [
+        {
+          "id": "treat-severe",
+          "title": "Treat (severe)",
+          "condition": [
+            {
+              "kind": "applicability",
+              "expression": {
+                "language": "text/fhirpath",
+                "expression": "%severity = 'severe'"
+              }
+            }
+          ],
+          "selectionBehavior": "exactly-one",
+          "action": [
+            {
+              "id": "tx.copd.exacerbation",
+              "title": "prednisolone copd exacerbation + salbutamol exacerbation",
+              "selectionBehavior": "all",
+              "action": [
+                {
+                  "id": "dose.prednisolone_copd_exacerbation",
+                  "title": "prednisolone copd exacerbation",
+                  "definitionCanonical": "https://atra.health/fhir/ActivityDefinition/dose.prednisolone_copd_exacerbation"
+                },
+                {
+                  "id": "dose.salbutamol_exacerbation",
+                  "title": "salbutamol exacerbation",
+                  "definitionCanonical": "https://atra.health/fhir/ActivityDefinition/dose.salbutamol_exacerbation"
+                }
+              ],
+              "extension": [
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/kb-entry",
+                  "valueString": "tx.copd.exacerbation"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/preference",
+                  "valueCode": "first_line"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/eligibility",
+                  "valueString": "{}"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "monitor",
+      "title": "Monitor with the early-warning score",
+      "extension": [
+        {
+          "url": "https://atra.health/fhir/StructureDefinition/kb-entry",
+          "valueString": "news2.monitoring"
+        }
+      ]
+    },
+    {
+      "id": "check-in",
+      "title": "Daily check-in",
+      "definitionCanonical": "https://atra.health/fhir/Questionnaire/check-in"
+    }
+  ]
+}

@@ -1,0 +1,213 @@
+{
+  "$defs": {
+    "Code": {
+      "additionalProperties": false,
+      "properties": {
+        "code": {
+          "title": "Code",
+          "type": "string"
+        },
+        "display": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Display"
+        },
+        "system": {
+          "title": "System",
+          "type": "string"
+        }
+      },
+      "required": [
+        "system",
+        "code"
+      ],
+      "title": "Code",
+      "type": "object"
+    },
+    "DTKind": {
+      "description": "The 17 peer DTs of the federated Human Digital Twin, plus the Patient DT (APDT).",
+      "enum": [
+        "cardiovascular",
+        "respiratory",
+        "nervous",
+        "sensory",
+        "digestive",
+        "hepatobiliary",
+        "renal_urinary",
+        "endocrine",
+        "immune_lymphatic",
+        "haematological",
+        "musculoskeletal",
+        "integumentary",
+        "reproductive",
+        "whole_body",
+        "behavioural_cognitive",
+        "social",
+        "population",
+        "patient"
+      ],
+      "title": "DTKind",
+      "type": "string"
+    },
+    "Quality": {
+      "enum": [
+        "ok",
+        "suspect",
+        "rejected"
+      ],
+      "title": "Quality",
+      "type": "string"
+    },
+    "Waveform": {
+      "additionalProperties": false,
+      "properties": {
+        "array": {
+          "items": {
+            "type": "number"
+          },
+          "title": "Array",
+          "type": "array"
+        },
+        "period_ms": {
+          "title": "Period Ms",
+          "type": "number"
+        }
+      },
+      "required": [
+        "array",
+        "period_ms"
+      ],
+      "title": "Waveform",
+      "type": "object"
+    }
+  },
+  "$id": "https://atra.local/schemas/observation_record.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "alt_codes": {
+      "items": {
+        "$ref": "#/$defs/Code"
+      },
+      "title": "Alt Codes",
+      "type": "array"
+    },
+    "code": {
+      "$ref": "#/$defs/Code"
+    },
+    "consent_tag": {
+      "title": "Consent Tag",
+      "type": "string"
+    },
+    "device_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Device Id"
+    },
+    "dt": {
+      "$ref": "#/$defs/DTKind"
+    },
+    "effective_time": {
+      "format": "date-time",
+      "title": "Effective Time",
+      "type": "string"
+    },
+    "hdt_id": {
+      "title": "Hdt Id",
+      "type": "string"
+    },
+    "provenance_id": {
+      "title": "Provenance Id",
+      "type": "string"
+    },
+    "quality": {
+      "$ref": "#/$defs/Quality",
+      "default": "ok"
+    },
+    "record_id": {
+      "title": "Record Id",
+      "type": "string"
+    },
+    "sim_time": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Sim Time"
+    },
+    "source": {
+      "enum": [
+        "device",
+        "manual",
+        "self_report",
+        "derived",
+        "import"
+      ],
+      "title": "Source",
+      "type": "string"
+    },
+    "unit": {
+      "title": "Unit",
+      "type": "string"
+    },
+    "value": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "integer"
+        },
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "string"
+        },
+        {
+          "$ref": "#/$defs/Waveform"
+        }
+      ],
+      "title": "Value"
+    },
+    "version": {
+      "default": 1,
+      "minimum": 1,
+      "title": "Version",
+      "type": "integer"
+    }
+  },
+  "required": [
+    "record_id",
+    "hdt_id",
+    "dt",
+    "code",
+    "value",
+    "unit",
+    "effective_time",
+    "source",
+    "consent_tag",
+    "provenance_id"
+  ],
+  "title": "ObservationRecord",
+  "type": "object"
+}

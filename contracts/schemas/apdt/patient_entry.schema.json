@@ -1,0 +1,58 @@
+{
+  "$id": "https://atra.local/schemas/apdt/patient_entry.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "A patient of a facility, as the demo patient directory lists them.",
+  "properties": {
+    "age_years": {
+      "minimum": 0,
+      "title": "Age Years",
+      "type": "integer"
+    },
+    "hdt_id": {
+      "title": "Hdt Id",
+      "type": "string"
+    },
+    "initials": {
+      "title": "Initials",
+      "type": "string"
+    },
+    "language": {
+      "enum": [
+        "en",
+        "yo",
+        "ha",
+        "ig",
+        "pcm"
+      ],
+      "title": "Language",
+      "type": "string"
+    },
+    "sex": {
+      "enum": [
+        "female",
+        "male"
+      ],
+      "title": "Sex",
+      "type": "string"
+    },
+    "tenant_id": {
+      "enum": [
+        "fac-a",
+        "fac-b"
+      ],
+      "title": "Tenant Id",
+      "type": "string"
+    }
+  },
+  "required": [
+    "hdt_id",
+    "initials",
+    "sex",
+    "age_years",
+    "language",
+    "tenant_id"
+  ],
+  "title": "PatientEntry",
+  "type": "object"
+}

@@ -1,0 +1,16 @@
+# Cortisol metabolism and excretion after a tracer dose (Kraan et al. 1992), BioModels BIOMD0000000916.
+model_id: ahdt.endocrine.cortisol_metabolism_and_excretion
+sources:
+- id: kraan1992
+  citation: "Kraan GP, Drayer NM, de Bruin R. Kinetics of cortisol metabolism and excretion. A
+    hypothetic model based on the cumulative urinary radioactivity in eight multiple pituitary
+    deficient patients. J Steroid Biochem Mol Biol. 1992;42(2):169-177.
+    doi:10.1016/0960-0760(92)90025-E"
+  via: "BioModels BIOMD0000000916, curated, CC0 1.0, SBML L2V4, sha256 f16b05b77ce9a873421cb06079e02d5ab6e19319502a457446cfcf1c516d2cb9"
+  url: https://www.ebi.ac.uk/biomodels/BIOMD0000000916
+params:
+  K1: {value: 3.6, unit: 1/d, source: kraan1992, note: circulation to metabolising tissues}
+  K2: {value: 1.2, unit: 1/d, source: kraan1992}
+  K3: {value: 26.6, unit: 1/d, source: kraan1992, note: circulation to the non-urinary pool}
+  K4: {value: 1.2, unit: 1/d, source: kraan1992}
+  K5: {value: 1.2, unit: 1/d, source: kraan1992}

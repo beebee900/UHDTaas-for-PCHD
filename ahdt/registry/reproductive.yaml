@@ -1,0 +1,54 @@
+kind: reproductive
+name: Reproductive DT
+referent: Reproductive organs, cycle and pregnancy
+fields:
+- name: gestation_weeks
+  loinc: 49051-6
+  ucum: wk
+  ref: range.gestation_weeks
+  source:
+  - manual
+  - derived
+- name: cycle_day
+  ucum: d
+  ref: range.cycle_day
+  source:
+  - self_report
+- name: oestradiol
+  ucum: pmol/L
+  ref: range.oestradiol
+  source:
+  - lab
+models:
+- ahdt.reproductive.reproductive_organs
+- ahdt.reproductive.menstrual_and_fertility_cycle
+- ahdt.reproductive.placenta
+owns_instances:
+- UBERON:0000991
+- UBERON:0000995
+- UBERON:0000310
+- UBERON:0002367
+- UBERON:0001987
+reads_facets: []
+standing_goals:
+- id: repro.cycle
+  text: Keep cycle and fertility estimates current
+  check:
+    kind: freshness
+    params:
+      fields:
+      - cycle_day
+      max_age_s: 604800
+- id: repro.pregnancy
+  text: Turn on the maternal-foetal model and the ANC schedule in pregnancy
+  check:
+    kind: composite
+    params:
+      when: pregnant
+      schedule:
+        kb: anc.schedule
+connectors_out:
+- SystemToWholeBodyConnector
+connectors_in:
+- EndocrineReproductiveConnector
+- NormsConnector

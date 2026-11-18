@@ -1,0 +1,71 @@
+kind: haematological
+name: Haematological DT
+referent: Blood, bone marrow and coagulation
+fields:
+- name: hb
+  loinc: 718-7
+  ucum: g/dL
+  ref: range.hb
+  source:
+  - lab
+- name: platelets
+  loinc: 777-3
+  ucum: 10*9/L
+  ref: range.platelets
+  source:
+  - lab
+- name: inr
+  loinc: 6301-6
+  ucum: '{INR}'
+  ref: range.inr
+  source:
+  - lab
+- name: hbf
+  ucum: '%'
+  ref: range.hbf
+  source:
+  - lab
+models:
+- ahdt.haematological.bone_marrow_and_erythrocytes
+- ahdt.haematological.platelets
+- ahdt.haematological.coagulation
+- ahdt.haematological.anaemia_and_sickle_cell_crisis_risk
+owns_instances:
+- UBERON:0000178
+- UBERON:0002371
+reads_facets:
+- instance: UBERON:0002106
+  facet: red_cell_clearance
+- instance: UBERON:0002107
+  facet: haematological
+standing_goals:
+- id: haem.anaemia
+  text: Detect anaemia
+  check:
+    kind: threshold
+    params:
+      field: hb
+      below:
+        kb: goal.haem.hb_by_sex
+- id: haem.coagulation
+  text: Track coagulation
+  check:
+    kind: freshness
+    params:
+      fields:
+      - inr
+      max_age_s: 604800
+- id: haem.sickle_crisis
+  text: Flag sickle-crisis risk in HbSS persons
+  check:
+    kind: model_flag
+    params:
+      model: ahdt.haematological.anaemia_and_sickle_cell_crisis_risk
+      threshold:
+        kb: goal.haem.crisis_risk
+connectors_out:
+- OxygenCarriageConnector
+- SystemToWholeBodyConnector
+connectors_in:
+- HaemolysisConnector
+- NormsConnector

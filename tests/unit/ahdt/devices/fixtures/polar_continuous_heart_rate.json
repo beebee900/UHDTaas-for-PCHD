@@ -1,0 +1,20 @@
+{
+ "source_url": "https://www.polar.com/accesslink-api/",
+ "retrieved": "2026-10-10",
+ "kind": "verbatim_sample",
+ "note": "Section 'Continuous Heart Rate', GET /v3/users/continuous-heart-rate/{date}, 200 Response.",
+ "body": {
+  "polar_user": "https://polaraccesslink.com/v3/users/627139",
+  "date": "2022-09-12",
+  "heart_rate_samples": [
+   {
+    "heart_rate": 63,
+    "sample_time": "00:02:08"
+   },
+   {
+    "heart_rate": 62,
+    "sample_time": "00:07:08"
+   }
+  ]
+ }
+}

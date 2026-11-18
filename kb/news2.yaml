@@ -1,0 +1,58 @@
+# NEWS2 scoring table and response bands. Each scale lists bands in ascending order: a band
+# scores when the value is at or below `upto`; the final band has no upper limit.
+- id: news2.scoring
+  min_age_years: 16
+  respiration_rate: [{upto: 8, score: 3}, {upto: 11, score: 1}, {upto: 20, score: 0},
+                     {upto: 24, score: 2}, {score: 3}]
+  spo2_scale1: [{upto: 91, score: 3}, {upto: 93, score: 2}, {upto: 95, score: 1}, {score: 0}]
+  spo2_scale2_air: [{upto: 83, score: 3}, {upto: 85, score: 2}, {upto: 87, score: 1},
+                    {score: 0}]
+  spo2_scale2_oxygen: [{upto: 83, score: 3}, {upto: 85, score: 2}, {upto: 87, score: 1},
+                       {upto: 92, score: 0}, {upto: 94, score: 1}, {upto: 96, score: 2},
+                       {score: 3}]
+  supplemental_oxygen: {air: 0, oxygen: 2}
+  systolic_bp: [{upto: 90, score: 3}, {upto: 100, score: 2}, {upto: 110, score: 1},
+                {upto: 219, score: 0}, {score: 3}]
+  pulse: [{upto: 40, score: 3}, {upto: 50, score: 1}, {upto: 90, score: 0}, {upto: 110, score: 1},
+          {upto: 130, score: 2}, {score: 3}]
+  consciousness: {alert: 0, new_confusion: 3, voice: 3, pain: 3, unresponsive: 3}
+  temperature: [{upto: 35.0, score: 3}, {upto: 36.0, score: 1}, {upto: 38.0, score: 0},
+                {upto: 39.0, score: 1}, {score: 2}]
+  provenance:
+    source: rcp-news2-2017
+    section: "Chart 1: The NEWS scoring system"
+    page: 52
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+- id: news2.bands
+  bands:
+  - {band: low, min_total: 0, max_total: 4}
+  - {band: low_medium, single_parameter_score: 3}
+  - {band: medium, min_total: 5, max_total: 6}
+  - {band: high, min_total: 7}
+  provenance:
+    source: rcp-news2-2017
+    section: "Chart 2: NEWS thresholds and triggers"
+    page: 53
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+# Minimum monitoring interval per band. The escalation timer of UC8 uses `max_interval_h`;
+# a continuous band has interval 0.
+- id: news2.monitoring
+  bands:
+  - {band: zero, min_total: 0, max_total: 0, min_interval_h: 12, max_interval_h: 12}
+  - {band: low, min_total: 1, max_total: 4, min_interval_h: 4, max_interval_h: 6}
+  - {band: low_medium, single_parameter_score: 3, min_interval_h: 1, max_interval_h: 1}
+  - {band: medium, min_total: 5, max_total: 6, min_interval_h: 1, max_interval_h: 1}
+  - {band: high, min_total: 7, continuous: true}
+  provenance:
+    source: rcp-news2-2017
+    section: "Chart 4: Clinical response to the NEWS trigger thresholds"
+    page: 62
+    derived:
+      bands[0].*_total: Row "0" of Chart 4, read from the rendered page; the text layer omits it.
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified

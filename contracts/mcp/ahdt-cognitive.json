@@ -1,0 +1,890 @@
+{
+  "server": "ahdt-cognitive",
+  "tools": [
+    {
+      "annotations": {
+        "readOnlyHint": false,
+        "x-atra-forces-fork": false,
+        "x-atra-reaches-layer": null,
+        "x-atra-sublayer": "6.4"
+      },
+      "description": "[AHDT 6.4] Natural-language interaction in the patient's language",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "hdt_id": {
+            "pattern": "^hdt-[0-9a-f]{12}$",
+            "title": "Hdt Id",
+            "type": "string"
+          },
+          "language": {
+            "enum": [
+              "en",
+              "yo",
+              "ha",
+              "ig",
+              "pcm"
+            ],
+            "title": "Language",
+            "type": "string"
+          },
+          "session_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Session Id"
+          },
+          "utterance": {
+            "minLength": 1,
+            "title": "Utterance",
+            "type": "string"
+          }
+        },
+        "required": [
+          "hdt_id",
+          "utterance",
+          "language"
+        ],
+        "title": "ConverseArgs",
+        "type": "object"
+      },
+      "name": "ahdt.cognitive.converse",
+      "outputSchema": {
+        "$defs": {
+          "GraphCitation": {
+            "additionalProperties": false,
+            "properties": {
+              "doc_id": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Doc Id"
+              },
+              "label": {
+                "title": "Label",
+                "type": "string"
+              },
+              "node_id": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Node Id"
+              },
+              "path": {
+                "anyOf": [
+                  {
+                    "items": {
+                      "type": "string"
+                    },
+                    "type": "array"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Path"
+              }
+            },
+            "required": [
+              "label"
+            ],
+            "title": "GraphCitation",
+            "type": "object"
+          },
+          "ModelRef": {
+            "additionalProperties": false,
+            "properties": {
+              "model_id": {
+                "title": "Model Id",
+                "type": "string"
+              },
+              "version": {
+                "title": "Version",
+                "type": "string"
+              }
+            },
+            "required": [
+              "model_id",
+              "version"
+            ],
+            "title": "ModelRef",
+            "type": "object"
+          },
+          "ToolMeta": {
+            "additionalProperties": true,
+            "properties": {
+              "ahdt_version": {
+                "title": "Ahdt Version",
+                "type": "string"
+              },
+              "as_of": {
+                "anyOf": [
+                  {
+                    "format": "date-time",
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "As Of"
+              },
+              "explainers": {
+                "anyOf": [
+                  {
+                    "items": {
+                      "type": "string"
+                    },
+                    "type": "array"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Explainers"
+              },
+              "fork_id": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Fork Id"
+              },
+              "forked": {
+                "anyOf": [
+                  {
+                    "type": "boolean"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Forked"
+              },
+              "models": {
+                "items": {
+                  "$ref": "#/$defs/ModelRef"
+                },
+                "title": "Models",
+                "type": "array"
+              },
+              "output_id": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Output Id"
+              }
+            },
+            "required": [
+              "ahdt_version"
+            ],
+            "title": "ToolMeta",
+            "type": "object"
+          }
+        },
+        "additionalProperties": false,
+        "properties": {
+          "_meta": {
+            "$ref": "#/$defs/ToolMeta"
+          },
+          "grounded_on": {
+            "items": {
+              "$ref": "#/$defs/GraphCitation"
+            },
+            "title": "Grounded On",
+            "type": "array"
+          },
+          "language": {
+            "enum": [
+              "en",
+              "yo",
+              "ha",
+              "ig",
+              "pcm"
+            ],
+            "title": "Language",
+            "type": "string"
+          },
+          "reply": {
+            "title": "Reply",
+            "type": "string"
+          },
+          "session_id": {
+            "title": "Session Id",
+            "type": "string"
+          }
+        },
+        "required": [
+          "reply",
+          "language",
+          "session_id",
+          "grounded_on"
+        ],
+        "title": "ConverseData",
+        "type": "object"
+      }
+    },
+    {
+      "annotations": {
+        "readOnlyHint": false,
+        "x-atra-forces-fork": false,
+        "x-atra-reaches-layer": null,
+        "x-atra-sublayer": "6.4"
+      },
+      "description": "[AHDT 6.4] Findings from speech, image, signal or text",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "content_ref": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Content Ref"
+          },
+          "hdt_id": {
+            "pattern": "^hdt-[0-9a-f]{12}$",
+            "title": "Hdt Id",
+            "type": "string"
+          },
+          "language": {
+            "anyOf": [
+              {
+                "enum": [
+                  "en",
+                  "yo",
+                  "ha",
+                  "ig",
+                  "pcm"
+                ],
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Language"
+          },
+          "modality": {
+            "enum": [
+              "speech",
+              "image",
+              "signal",
+              "text"
+            ],
+            "title": "Modality",
+            "type": "string"
+          },
+          "text": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Text"
+          }
+        },
+        "required": [
+          "hdt_id",
+          "modality"
+        ],
+        "title": "PerceiveArgs",
+        "type": "object"
+      },
+      "name": "ahdt.cognitive.perceive",
+      "outputSchema": {
+        "$defs": {
+          "Finding": {
+            "additionalProperties": false,
+            "properties": {
+              "code": {
+                "title": "Code",
+                "type": "string"
+              },
+              "confidence": {
+                "maximum": 1,
+                "minimum": 0,
+                "title": "Confidence",
+                "type": "number"
+              },
+              "display": {
+                "title": "Display",
+                "type": "string"
+              },
+              "value": {
+                "default": null,
+                "title": "Value"
+              }
+            },
+            "required": [
+              "code",
+              "display",
+              "confidence"
+            ],
+            "title": "Finding",
+            "type": "object"
+          },
+          "ModelRef": {
+            "additionalProperties": false,
+            "properties": {
+              "model_id": {
+                "title": "Model Id",
+                "type": "string"
+              },
+              "version": {
+                "title": "Version",
+                "type": "string"
+              }
+            },
+            "required": [
+              "model_id",
+              "version"
+            ],
+            "title": "ModelRef",
+            "type": "object"
+          },
+          "ToolMeta": {
+            "additionalProperties": true,
+            "properties": {
+              "ahdt_version": {
+                "title": "Ahdt Version",
+                "type": "string"
+              },
+              "as_of": {
+                "anyOf": [
+                  {
+                    "format": "date-time",
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "As Of"
+              },
+              "explainers": {
+                "anyOf": [
+                  {
+                    "items": {
+                      "type": "string"
+                    },
+                    "type": "array"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Explainers"
+              },
+              "fork_id": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Fork Id"
+              },
+              "forked": {
+                "anyOf": [
+                  {
+                    "type": "boolean"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Forked"
+              },
+              "models": {
+                "items": {
+                  "$ref": "#/$defs/ModelRef"
+                },
+                "title": "Models",
+                "type": "array"
+              },
+              "output_id": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Output Id"
+              }
+            },
+            "required": [
+              "ahdt_version"
+            ],
+            "title": "ToolMeta",
+            "type": "object"
+          }
+        },
+        "additionalProperties": false,
+        "properties": {
+          "_meta": {
+            "$ref": "#/$defs/ToolMeta"
+          },
+          "findings": {
+            "items": {
+              "$ref": "#/$defs/Finding"
+            },
+            "title": "Findings",
+            "type": "array"
+          },
+          "transcript": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Transcript"
+          }
+        },
+        "required": [
+          "findings"
+        ],
+        "title": "PerceiveData",
+        "type": "object"
+      }
+    },
+    {
+      "annotations": {
+        "readOnlyHint": false,
+        "x-atra-forces-fork": false,
+        "x-atra-reaches-layer": null,
+        "x-atra-sublayer": "6.4"
+      },
+      "description": "[AHDT 6.4] Ontology, causal, probabilistic or temporal reasoning",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "hdt_id": {
+            "pattern": "^hdt-[0-9a-f]{12}$",
+            "title": "Hdt Id",
+            "type": "string"
+          },
+          "kind": {
+            "enum": [
+              "ontology",
+              "causal",
+              "probabilistic",
+              "temporal"
+            ],
+            "title": "Kind",
+            "type": "string"
+          },
+          "query": {
+            "minLength": 1,
+            "title": "Query",
+            "type": "string"
+          }
+        },
+        "required": [
+          "hdt_id",
+          "kind",
+          "query"
+        ],
+        "title": "ReasonArgs",
+        "type": "object"
+      },
+      "name": "ahdt.cognitive.reason",
+      "outputSchema": {
+        "$defs": {
+          "ModelRef": {
+            "additionalProperties": false,
+            "properties": {
+              "model_id": {
+                "title": "Model Id",
+                "type": "string"
+              },
+              "version": {
+                "title": "Version",
+                "type": "string"
+              }
+            },
+            "required": [
+              "model_id",
+              "version"
+            ],
+            "title": "ModelRef",
+            "type": "object"
+          },
+          "ToolMeta": {
+            "additionalProperties": true,
+            "properties": {
+              "ahdt_version": {
+                "title": "Ahdt Version",
+                "type": "string"
+              },
+              "as_of": {
+                "anyOf": [
+                  {
+                    "format": "date-time",
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "As Of"
+              },
+              "explainers": {
+                "anyOf": [
+                  {
+                    "items": {
+                      "type": "string"
+                    },
+                    "type": "array"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Explainers"
+              },
+              "fork_id": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Fork Id"
+              },
+              "forked": {
+                "anyOf": [
+                  {
+                    "type": "boolean"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Forked"
+              },
+              "models": {
+                "items": {
+                  "$ref": "#/$defs/ModelRef"
+                },
+                "title": "Models",
+                "type": "array"
+              },
+              "output_id": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Output Id"
+              }
+            },
+            "required": [
+              "ahdt_version"
+            ],
+            "title": "ToolMeta",
+            "type": "object"
+          }
+        },
+        "additionalProperties": false,
+        "properties": {
+          "_meta": {
+            "$ref": "#/$defs/ToolMeta"
+          },
+          "answer": {
+            "title": "Answer",
+            "type": "string"
+          },
+          "justification": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Justification",
+            "type": "array"
+          }
+        },
+        "required": [
+          "answer",
+          "justification"
+        ],
+        "title": "ReasonData",
+        "type": "object"
+      }
+    },
+    {
+      "annotations": {
+        "readOnlyHint": false,
+        "x-atra-forces-fork": false,
+        "x-atra-reaches-layer": null,
+        "x-atra-sublayer": "6.4"
+      },
+      "description": "[AHDT 6.4] Request for missing data from the person, a device or a clinician",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "channel": {
+            "anyOf": [
+              {
+                "enum": [
+                  "app",
+                  "sms",
+                  "ussd",
+                  "voice"
+                ],
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Channel"
+          },
+          "deadline_h": {
+            "anyOf": [
+              {
+                "exclusiveMinimum": 0,
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Deadline H"
+          },
+          "from": {
+            "enum": [
+              "person",
+              "device",
+              "clinician"
+            ],
+            "title": "From",
+            "type": "string"
+          },
+          "hdt_id": {
+            "pattern": "^hdt-[0-9a-f]{12}$",
+            "title": "Hdt Id",
+            "type": "string"
+          },
+          "what": {
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1,
+            "title": "What",
+            "type": "array"
+          }
+        },
+        "required": [
+          "hdt_id",
+          "what",
+          "from"
+        ],
+        "title": "RequestDataArgs",
+        "type": "object"
+      },
+      "name": "ahdt.cognitive.request_data",
+      "outputSchema": {
+        "$defs": {
+          "ModelRef": {
+            "additionalProperties": false,
+            "properties": {
+              "model_id": {
+                "title": "Model Id",
+                "type": "string"
+              },
+              "version": {
+                "title": "Version",
+                "type": "string"
+              }
+            },
+            "required": [
+              "model_id",
+              "version"
+            ],
+            "title": "ModelRef",
+            "type": "object"
+          },
+          "ToolMeta": {
+            "additionalProperties": true,
+            "properties": {
+              "ahdt_version": {
+                "title": "Ahdt Version",
+                "type": "string"
+              },
+              "as_of": {
+                "anyOf": [
+                  {
+                    "format": "date-time",
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "As Of"
+              },
+              "explainers": {
+                "anyOf": [
+                  {
+                    "items": {
+                      "type": "string"
+                    },
+                    "type": "array"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Explainers"
+              },
+              "fork_id": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Fork Id"
+              },
+              "forked": {
+                "anyOf": [
+                  {
+                    "type": "boolean"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Forked"
+              },
+              "models": {
+                "items": {
+                  "$ref": "#/$defs/ModelRef"
+                },
+                "title": "Models",
+                "type": "array"
+              },
+              "output_id": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Output Id"
+              }
+            },
+            "required": [
+              "ahdt_version"
+            ],
+            "title": "ToolMeta",
+            "type": "object"
+          }
+        },
+        "additionalProperties": false,
+        "properties": {
+          "_meta": {
+            "$ref": "#/$defs/ToolMeta"
+          },
+          "request_id": {
+            "title": "Request Id",
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "queued",
+              "sent",
+              "answered",
+              "expired"
+            ],
+            "title": "Status",
+            "type": "string"
+          }
+        },
+        "required": [
+          "request_id",
+          "status"
+        ],
+        "title": "RequestDataData",
+        "type": "object"
+      }
+    }
+  ]
+}

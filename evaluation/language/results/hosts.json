@@ -1,0 +1,16 @@
+{
+ "biolord": {
+  "dim": 768,
+  "seconds": 12.7,
+  "unit_norm": true,
+  "nearest_passage": 0
+ },
+ "bge-reranker": {
+  "order": [
+   0,
+   1,
+   2
+  ],
+  "seconds": 9.8
+ }
+}

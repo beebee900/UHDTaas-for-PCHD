@@ -1,0 +1,55 @@
+{
+  "$id": "https://atra.local/schemas/tools/ahdt.model.forecast.response.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "level": {
+      "exclusiveMaximum": 1,
+      "exclusiveMinimum": 0,
+      "title": "Level",
+      "type": "number"
+    },
+    "lower": {
+      "items": {
+        "type": "number"
+      },
+      "title": "Lower",
+      "type": "array"
+    },
+    "mean": {
+      "items": {
+        "type": "number"
+      },
+      "title": "Mean",
+      "type": "array"
+    },
+    "output_id": {
+      "title": "Output Id",
+      "type": "string"
+    },
+    "t": {
+      "items": {
+        "type": "number"
+      },
+      "title": "T",
+      "type": "array"
+    },
+    "upper": {
+      "items": {
+        "type": "number"
+      },
+      "title": "Upper",
+      "type": "array"
+    }
+  },
+  "required": [
+    "t",
+    "mean",
+    "lower",
+    "upper",
+    "level",
+    "output_id"
+  ],
+  "title": "ForecastData",
+  "type": "object"
+}

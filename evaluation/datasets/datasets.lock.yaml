@@ -1,0 +1,39 @@
+mediapipe-pose-lite:
+  accessed: '2026-10-10'
+  bytes: 5777746
+  sha256: 59929e1d1ee95287735ddd833b19cf4ac46d29bc7afddbbf6753c459690d574a
+mitdb:
+  accessed: '2026-10-11'
+  bytes: 109337739
+  check: every file matches SHA256SUMS.txt of https://physionet.org/files/mitdb/1.0.0
+    (sha256 given is of SHA256SUMS.txt)
+  sha256: b61158a96d5f2ca80edfb354a9a66a6324836c390a84e1966dcee2b907d6be43
+  stored: Oracle VM /home/ubuntu/atra/data/mitdb
+  url: https://physionet-open.s3.amazonaws.com/mitdb/1.0.0/
+ptb-xl:
+  accessed: '2026-10-11'
+  bytes: 3181524022
+  check: every file matches SHA256SUMS.txt of https://physionet.org/files/ptb-xl/1.0.3
+    (sha256 given is of SHA256SUMS.txt)
+  sha256: b7224b92b341511ec3ceb13dc6652079b2c36a06504bcb49506f157f51dc695d
+  stored: Oracle VM /home/ubuntu/atra/data/ptb-xl
+  url: https://physionet-open.s3.amazonaws.com/ptb-xl/1.0.3/
+sleep-edfx:
+  accessed: '2026-10-11'
+  bytes: 8715229580
+  check: every file matches SHA256SUMS.txt of https://physionet.org/files/sleep-edfx/1.0.0
+    (sha256 given is of SHA256SUMS.txt)
+  sha256: 1bc88e19e2e921f7851d7cf61e31ceb8f6d670211ca546a323e9db5a77525edf
+  stored: Oracle VM /home/ubuntu/atra/data/sleep-edfx
+  url: https://physionet-open.s3.amazonaws.com/sleep-edfx/1.0.0/
+wesad:
+  accessed: '2026-10-11'
+  bytes: 2249444501
+  check: zip CRC check; no published checksum
+  sha256: 5e15d2606adf16d819ba535c1786d92e94bae5ff5392f7ae01fb63f9938fd71c
+  stored: Oracle VM /home/ubuntu/atra/data/wesad
+  url: https://uni-siegen.sciebo.de/s/HGdUkoNlW1Ub0Gx/download
+yoon-2012-treadmill:
+  accessed: '2026-10-10'
+  bytes: 3798720
+  sha256: f06a3b0d9eb258d6f47170ffc08b456e340731753f936af23e20780618767d1f

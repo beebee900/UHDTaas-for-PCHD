@@ -1,0 +1,47 @@
+{
+  "$id": "https://atra.local/schemas/apdt/patient_reply.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "audio_ref": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Audio Ref"
+    },
+    "grounded_on": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Grounded On",
+      "type": "array"
+    },
+    "language": {
+      "enum": [
+        "en",
+        "yo",
+        "ha",
+        "ig",
+        "pcm"
+      ],
+      "title": "Language",
+      "type": "string"
+    },
+    "reply": {
+      "title": "Reply",
+      "type": "string"
+    }
+  },
+  "required": [
+    "reply",
+    "language"
+  ],
+  "title": "PatientReply",
+  "type": "object"
+}

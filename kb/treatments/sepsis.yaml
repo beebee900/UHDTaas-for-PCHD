@@ -1,0 +1,72 @@
+# Sepsis of unknown origin. Adults: AWaRe chapter 24 (page 318); children: chapter 25 (page 344).
+# Antibiotics start as soon as sepsis is suspected, before results (empirical_allowed).
+
+- id: tx.sepsis.adult.cephalosporin_aminoglycoside
+  condition: cond.sepsis
+  severity: [sepsis, septic_shock]
+  preference: first_line
+  regimen: [dose.cefotaxime_iv_adult_severe, dose.ceftriaxone_iv_adult_severe]
+  combined_with: [dose.amikacin_iv, dose.gentamicin_iv_adult]
+  duration_days: 7
+  empirical_allowed: true
+  eligibility: {patient_group: adult}
+  provenance:
+    source: who-aware-2022
+    section: 24. Sepsis in adults (including septic shock)
+    page: 318
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: tx.sepsis.child_referral.penicillin_gentamicin
+  condition: cond.sepsis
+  severity: [sepsis, septic_shock]
+  preference: first_line
+  regimen: [dose.ampicillin_parenteral_child, dose.benzylpenicillin_iv_child]
+  combined_with: dose.gentamicin_iv_child
+  duration_days: 7
+  empirical_allowed: true
+  eligibility: {patient_group: child, referral_possible: true}
+  provenance:
+    source: who-aware-2022
+    section: 25. Sepsis in neonates (< 28 days) and children (28 days–12 years)
+    page: 344
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: tx.sepsis.child_referral.second_line
+  condition: cond.sepsis
+  severity: [sepsis, septic_shock]
+  preference: second_line
+  regimen: [dose.cefotaxime_iv_child, dose.ceftriaxone_iv_child]
+  alternative: {regimen: dose.cloxacillin_iv_child, combined_with: dose.amikacin_iv,
+                when: Staphylococcus aureus infection suspected}
+  duration_days: 7
+  empirical_allowed: true
+  eligibility: {patient_group: child, referral_possible: true}
+  provenance:
+    source: who-aware-2022
+    section: 25. Sepsis in neonates (< 28 days) and children (28 days–12 years)
+    page: 344
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: tx.sepsis.child_no_referral.amoxicillin_gentamicin
+  condition: cond.sepsis
+  severity: [sepsis]
+  preference: first_line
+  regimen: dose.amoxicillin_oral_child_sepsis_no_referral
+  combined_with: dose.gentamicin_iv_child
+  duration_days: 7
+  empirical_allowed: true
+  eligibility: {patient_group: child, referral_possible: false}
+  note: Gentamicin is given intramuscularly in this setting.
+  provenance:
+    source: who-aware-2022
+    section: 25. Sepsis in neonates (< 28 days) and children (28 days–12 years)
+    page: 344
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified

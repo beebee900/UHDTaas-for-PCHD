@@ -1,0 +1,279 @@
+{
+  "$defs": {
+    "DTKind": {
+      "description": "The 17 peer DTs of the federated Human Digital Twin, plus the Patient DT (APDT).",
+      "enum": [
+        "cardiovascular",
+        "respiratory",
+        "nervous",
+        "sensory",
+        "digestive",
+        "hepatobiliary",
+        "renal_urinary",
+        "endocrine",
+        "immune_lymphatic",
+        "haematological",
+        "musculoskeletal",
+        "integumentary",
+        "reproductive",
+        "whole_body",
+        "behavioural_cognitive",
+        "social",
+        "population",
+        "patient"
+      ],
+      "title": "DTKind",
+      "type": "string"
+    },
+    "FacetRead": {
+      "additionalProperties": false,
+      "properties": {
+        "facet": {
+          "title": "Facet",
+          "type": "string"
+        },
+        "instance": {
+          "title": "Instance",
+          "type": "string"
+        }
+      },
+      "required": [
+        "instance",
+        "facet"
+      ],
+      "title": "FacetRead",
+      "type": "object"
+    },
+    "FieldDefinition": {
+      "additionalProperties": false,
+      "properties": {
+        "loinc": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Loinc"
+        },
+        "mdc": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Mdc"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "ref": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "kb/reference_ranges.yaml entry id",
+          "title": "Ref"
+        },
+        "sample_period_s": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Sample Period S"
+        },
+        "snomed": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Snomed"
+        },
+        "source": {
+          "items": {
+            "enum": [
+              "wearable",
+              "monitor",
+              "device",
+              "manual",
+              "self_report",
+              "lab",
+              "imaging",
+              "derived",
+              "import"
+            ],
+            "type": "string"
+          },
+          "title": "Source",
+          "type": "array"
+        },
+        "ucum": {
+          "title": "Ucum",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "ucum",
+        "source"
+      ],
+      "title": "FieldDefinition",
+      "type": "object"
+    },
+    "GoalCheck": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "enum": [
+            "freshness",
+            "threshold",
+            "model_flag",
+            "composite",
+            "human_decision"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "params": {
+          "additionalProperties": true,
+          "title": "Params",
+          "type": "object"
+        }
+      },
+      "required": [
+        "kind"
+      ],
+      "title": "GoalCheck",
+      "type": "object"
+    },
+    "StandingGoal": {
+      "additionalProperties": false,
+      "properties": {
+        "check": {
+          "$ref": "#/$defs/GoalCheck"
+        },
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "priority": {
+          "default": 3,
+          "maximum": 5,
+          "minimum": 1,
+          "title": "Priority",
+          "type": "integer"
+        },
+        "text": {
+          "title": "Text",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "text",
+        "check"
+      ],
+      "title": "StandingGoal",
+      "type": "object"
+    }
+  },
+  "$id": "https://atra.local/schemas/twin_definition.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "connectors_in": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Connectors In",
+      "type": "array"
+    },
+    "connectors_out": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Connectors Out",
+      "type": "array"
+    },
+    "fields": {
+      "items": {
+        "$ref": "#/$defs/FieldDefinition"
+      },
+      "title": "Fields",
+      "type": "array"
+    },
+    "kind": {
+      "$ref": "#/$defs/DTKind"
+    },
+    "models": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Models",
+      "type": "array"
+    },
+    "name": {
+      "title": "Name",
+      "type": "string"
+    },
+    "owns_instances": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Owns Instances",
+      "type": "array"
+    },
+    "reads_facets": {
+      "items": {
+        "$ref": "#/$defs/FacetRead"
+      },
+      "title": "Reads Facets",
+      "type": "array"
+    },
+    "referent": {
+      "title": "Referent",
+      "type": "string"
+    },
+    "standing_goals": {
+      "items": {
+        "$ref": "#/$defs/StandingGoal"
+      },
+      "title": "Standing Goals",
+      "type": "array"
+    }
+  },
+  "required": [
+    "kind",
+    "name",
+    "referent",
+    "fields",
+    "models",
+    "owns_instances",
+    "standing_goals"
+  ],
+  "title": "TwinDefinition",
+  "type": "object"
+}

@@ -1,0 +1,44 @@
+# Hypertension. Treatment threshold and targets from the WHO 2021 guideline; drug steps from the
+# HEARTS adapted CCB-first protocol. Each step applies when BP stays at or above the threshold
+# (threshold.hypertension) at review.
+
+- id: tx.hypertension.hearts_ccb_first
+  condition: cond.hypertension
+  severity: [uncontrolled]
+  preference: first_line
+  regimen: [dose.amlodipine, dose.telmisartan, dose.chlorthalidone]
+  review_after_weeks: 4
+  steps:
+  - {step: 2, action: start, drug: amlodipine, mg: 5}
+  - {step: 3, action: increase, drug: amlodipine, mg: 10}
+  - {step: 4, action: add, drug: telmisartan, mg: 40}
+  - {step: 5, action: increase, drug: telmisartan, mg: 80}
+  - {step: 6, action: add, drug: chlorthalidone, mg: 12.5}
+  - {step: 7, action: increase, drug: chlorthalidone, mg: 25}
+  - {step: 8, action: check_adherence_then_refer}
+  start_same_day_at_or_above: {systolic: 160, diastolic: 100}
+  step_back_if_systolic_repeatedly_at_or_below: 110
+  target_with_diabetes_or_high_risk: {systolic_below: 130, diastolic_below: 80}
+  eligibility: {patient_group: adult}
+  exclusions: [ix.ras_blockers.pregnancy]
+  provenance:
+    source: who-hearts-protocols-2018
+    section: "Adapted example: CCB as first-line treatment"
+    page: 31
+    derived:
+      steps[*].step: Step labels of the flow chart, read from the rendered page.
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: tx.hypertension.targets
+  condition: cond.hypertension
+  target_general: {systolic_below: 140, diastolic_below: 90}
+  target_known_cvd_systolic_below: 130
+  provenance:
+    source: who-htn-2021
+    section: 3.6 Target blood pressure
+    page: 28
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified

@@ -1,0 +1,15 @@
+# Patient groups for choosing between adult and child antibiotic regimens. A person is in the
+# child group below `child_age_below_years` unless they weigh more than `adult_dosing_above_kg`,
+# where adult dosing applies.
+- id: dosing.patient_group
+  child_age_below_years: 12
+  adult_dosing_above_kg: 30
+  provenance:
+    source: who-aware-2022
+    section: 2. Improving the use of antibiotics with the AWaRe book
+    page: 34
+    also:
+    - {source: who-aware-2022, section: Glossary, page: 14}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified

@@ -1,0 +1,33 @@
+# Three-element Windkessel per vascular bed. Bed resistances follow from the mean arterial
+# pressure and the basal share of cardiac output; compliances from an assumed bed time
+# constant. All values need a check against a cited source before sign-off.
+model_id: ahdt.cardiovascular.coronary_cerebral_peripheral_vasculature_and_microcirculation
+sources:
+- id: westerhof2009
+  citation: "Westerhof N, Lankhaar JW, Westerhof BE. The arterial Windkessel. Med Biol Eng
+    Comput. 2009;47(2):131-141. doi:10.1007/s11517-008-0359-2"
+- id: guyton
+  citation: "Hall JE, Hall ME. Guyton and Hall Textbook of Medical Physiology. 14th ed.
+    Elsevier; 2021. Blood flow to organs and tissues under basal conditions"
+- id: atra-assumption
+  citation: ATRA design 01 rule R5 assumption register
+params:
+  share_coronary: {value: 0.04, unit: '1', source: guyton, verified: false,
+                   justification: "Basal coronary flow 200 of 5000 mL/min as recalled from the
+                     Guyton and Hall table; edition and page need a check"}
+  share_cerebral: {value: 0.14, unit: '1', source: guyton, verified: false,
+                   justification: "Basal brain flow 700 of 5000 mL/min as recalled from the
+                     Guyton and Hall table; edition and page need a check"}
+  share_peripheral: {value: 0.21, unit: '1', source: guyton, verified: false,
+                     justification: "Basal skeletal muscle (15 %) plus skin (6 %) flow as
+                       recalled from the Guyton and Hall table; needs a check"}
+  rc_fraction: {value: 0.05, unit: '1', source: westerhof2009, assumption: true,
+                justification: "Characteristic impedance taken as 5 % of bed resistance, the
+                  order of magnitude described for the systemic Windkessel"}
+  tau_bed: {value: 1.5, unit: s, source: atra-assumption, assumption: true,
+            justification: "Bed diastolic decay time constant R*C; no per-bed published value
+              located"}
+  map_ref: {value: 93, unit: 'mm[Hg]', source: atra-assumption, assumption: true,
+            justification: "Reference mean arterial pressure used to size bed resistances"}
+  co_ref: {value: 5.0, unit: L/min, source: guyton, verified: false,
+           justification: "Basal cardiac output of the Guyton and Hall table; needs a check"}

@@ -1,0 +1,592 @@
+{
+  "server": "population",
+  "tools": [
+    {
+      "description": "Condition prevalence priors by age band, sex, region and season",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "age_band": {
+            "title": "Age Band",
+            "type": "string"
+          },
+          "conditions": {
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1,
+            "title": "Conditions",
+            "type": "array"
+          },
+          "region": {
+            "title": "Region",
+            "type": "string"
+          },
+          "season": {
+            "enum": [
+              "dry",
+              "rainy"
+            ],
+            "title": "Season",
+            "type": "string"
+          },
+          "sex": {
+            "enum": [
+              "female",
+              "male"
+            ],
+            "title": "Sex",
+            "type": "string"
+          }
+        },
+        "required": [
+          "conditions",
+          "age_band",
+          "sex",
+          "region",
+          "season"
+        ],
+        "title": "PriorsArgs",
+        "type": "object"
+      },
+      "name": "population.priors",
+      "outputSchema": {
+        "$defs": {
+          "ModelRef": {
+            "additionalProperties": false,
+            "properties": {
+              "model_id": {
+                "title": "Model Id",
+                "type": "string"
+              },
+              "version": {
+                "title": "Version",
+                "type": "string"
+              }
+            },
+            "required": [
+              "model_id",
+              "version"
+            ],
+            "title": "ModelRef",
+            "type": "object"
+          },
+          "PriorRow": {
+            "additionalProperties": false,
+            "properties": {
+              "age_band": {
+                "title": "Age Band",
+                "type": "string"
+              },
+              "condition": {
+                "title": "Condition",
+                "type": "string"
+              },
+              "prevalence": {
+                "maximum": 1,
+                "minimum": 0,
+                "title": "Prevalence",
+                "type": "number"
+              },
+              "region": {
+                "title": "Region",
+                "type": "string"
+              },
+              "season": {
+                "title": "Season",
+                "type": "string"
+              },
+              "source": {
+                "title": "Source",
+                "type": "string"
+              }
+            },
+            "required": [
+              "condition",
+              "prevalence",
+              "age_band",
+              "season",
+              "region",
+              "source"
+            ],
+            "title": "PriorRow",
+            "type": "object"
+          },
+          "ToolMeta": {
+            "additionalProperties": true,
+            "properties": {
+              "ahdt_version": {
+                "title": "Ahdt Version",
+                "type": "string"
+              },
+              "as_of": {
+                "anyOf": [
+                  {
+                    "format": "date-time",
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "As Of"
+              },
+              "explainers": {
+                "anyOf": [
+                  {
+                    "items": {
+                      "type": "string"
+                    },
+                    "type": "array"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Explainers"
+              },
+              "fork_id": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Fork Id"
+              },
+              "forked": {
+                "anyOf": [
+                  {
+                    "type": "boolean"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Forked"
+              },
+              "models": {
+                "items": {
+                  "$ref": "#/$defs/ModelRef"
+                },
+                "title": "Models",
+                "type": "array"
+              },
+              "output_id": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Output Id"
+              }
+            },
+            "required": [
+              "ahdt_version"
+            ],
+            "title": "ToolMeta",
+            "type": "object"
+          }
+        },
+        "additionalProperties": false,
+        "properties": {
+          "_meta": {
+            "$ref": "#/$defs/ToolMeta"
+          },
+          "priors": {
+            "items": {
+              "$ref": "#/$defs/PriorRow"
+            },
+            "title": "Priors",
+            "type": "array"
+          }
+        },
+        "required": [
+          "priors"
+        ],
+        "title": "PriorsData",
+        "type": "object"
+      }
+    },
+    {
+      "description": "Population percentiles of a field by age band and sex",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "age_band": {
+            "title": "Age Band",
+            "type": "string"
+          },
+          "fields": {
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1,
+            "title": "Fields",
+            "type": "array"
+          },
+          "sex": {
+            "enum": [
+              "female",
+              "male"
+            ],
+            "title": "Sex",
+            "type": "string"
+          }
+        },
+        "required": [
+          "fields",
+          "age_band",
+          "sex"
+        ],
+        "title": "NormsArgs",
+        "type": "object"
+      },
+      "name": "population.norms",
+      "outputSchema": {
+        "$defs": {
+          "ModelRef": {
+            "additionalProperties": false,
+            "properties": {
+              "model_id": {
+                "title": "Model Id",
+                "type": "string"
+              },
+              "version": {
+                "title": "Version",
+                "type": "string"
+              }
+            },
+            "required": [
+              "model_id",
+              "version"
+            ],
+            "title": "ModelRef",
+            "type": "object"
+          },
+          "NormRow": {
+            "additionalProperties": false,
+            "properties": {
+              "field": {
+                "title": "Field",
+                "type": "string"
+              },
+              "n": {
+                "minimum": 0,
+                "title": "N",
+                "type": "integer"
+              },
+              "p05": {
+                "title": "P05",
+                "type": "number"
+              },
+              "p50": {
+                "title": "P50",
+                "type": "number"
+              },
+              "p95": {
+                "title": "P95",
+                "type": "number"
+              },
+              "unit": {
+                "title": "Unit",
+                "type": "string"
+              }
+            },
+            "required": [
+              "field",
+              "unit",
+              "p05",
+              "p50",
+              "p95",
+              "n"
+            ],
+            "title": "NormRow",
+            "type": "object"
+          },
+          "ToolMeta": {
+            "additionalProperties": true,
+            "properties": {
+              "ahdt_version": {
+                "title": "Ahdt Version",
+                "type": "string"
+              },
+              "as_of": {
+                "anyOf": [
+                  {
+                    "format": "date-time",
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "As Of"
+              },
+              "explainers": {
+                "anyOf": [
+                  {
+                    "items": {
+                      "type": "string"
+                    },
+                    "type": "array"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Explainers"
+              },
+              "fork_id": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Fork Id"
+              },
+              "forked": {
+                "anyOf": [
+                  {
+                    "type": "boolean"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Forked"
+              },
+              "models": {
+                "items": {
+                  "$ref": "#/$defs/ModelRef"
+                },
+                "title": "Models",
+                "type": "array"
+              },
+              "output_id": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Output Id"
+              }
+            },
+            "required": [
+              "ahdt_version"
+            ],
+            "title": "ToolMeta",
+            "type": "object"
+          }
+        },
+        "additionalProperties": false,
+        "properties": {
+          "_meta": {
+            "$ref": "#/$defs/ToolMeta"
+          },
+          "norms": {
+            "items": {
+              "$ref": "#/$defs/NormRow"
+            },
+            "title": "Norms",
+            "type": "array"
+          }
+        },
+        "required": [
+          "norms"
+        ],
+        "title": "NormsData",
+        "type": "object"
+      }
+    },
+    {
+      "description": "De-identified contribution, stored only when k-anonymity holds",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "contract": {
+            "enum": [
+              "cohort_contribution",
+              "registry_case"
+            ],
+            "title": "Contract",
+            "type": "string"
+          },
+          "records": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "minItems": 1,
+            "title": "Records",
+            "type": "array"
+          }
+        },
+        "required": [
+          "contract",
+          "records"
+        ],
+        "title": "ContributeArgs",
+        "type": "object"
+      },
+      "name": "population.contribute",
+      "outputSchema": {
+        "$defs": {
+          "ModelRef": {
+            "additionalProperties": false,
+            "properties": {
+              "model_id": {
+                "title": "Model Id",
+                "type": "string"
+              },
+              "version": {
+                "title": "Version",
+                "type": "string"
+              }
+            },
+            "required": [
+              "model_id",
+              "version"
+            ],
+            "title": "ModelRef",
+            "type": "object"
+          },
+          "ToolMeta": {
+            "additionalProperties": true,
+            "properties": {
+              "ahdt_version": {
+                "title": "Ahdt Version",
+                "type": "string"
+              },
+              "as_of": {
+                "anyOf": [
+                  {
+                    "format": "date-time",
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "As Of"
+              },
+              "explainers": {
+                "anyOf": [
+                  {
+                    "items": {
+                      "type": "string"
+                    },
+                    "type": "array"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Explainers"
+              },
+              "fork_id": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Fork Id"
+              },
+              "forked": {
+                "anyOf": [
+                  {
+                    "type": "boolean"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Forked"
+              },
+              "models": {
+                "items": {
+                  "$ref": "#/$defs/ModelRef"
+                },
+                "title": "Models",
+                "type": "array"
+              },
+              "output_id": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Output Id"
+              }
+            },
+            "required": [
+              "ahdt_version"
+            ],
+            "title": "ToolMeta",
+            "type": "object"
+          }
+        },
+        "additionalProperties": false,
+        "properties": {
+          "_meta": {
+            "$ref": "#/$defs/ToolMeta"
+          },
+          "accepted": {
+            "minimum": 0,
+            "title": "Accepted",
+            "type": "integer"
+          },
+          "k": {
+            "minimum": 1,
+            "title": "K",
+            "type": "integer"
+          },
+          "suppressed": {
+            "minimum": 0,
+            "title": "Suppressed",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "accepted",
+          "suppressed",
+          "k"
+        ],
+        "title": "ContributeData",
+        "type": "object"
+      }
+    }
+  ]
+}

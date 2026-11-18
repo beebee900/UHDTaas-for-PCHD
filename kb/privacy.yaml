@@ -1,0 +1,28 @@
+# Privacy parameters of de-identified releases.
+# Draft placeholders written by WP01; WP21 fills and sources every value (design 06, 6.3.3).
+- id: privacy.k_min
+  value: 5
+  unit: '1'
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Value stated in design 03, 3.16; WP21 replaces it with a sourced value.
+- id: privacy.epsilon_per_cell
+  value: 1.0
+  unit: '1'
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Laplace noise scale 1/epsilon per count of a tenant's federated count
+      table; the value of the WP14b priors model. Set by the data protection officer.
+- id: privacy.epsilon_budget
+  value: 20.0
+  unit: '1'
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Total epsilon a tenant or researcher may spend on released population
+      statistics under basic composition. Set by the data protection officer.

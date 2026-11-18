@@ -1,0 +1,76 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "history-haematology",
+  "url": "https://atra.health/fhir/Questionnaire/history-haematology",
+  "version": "1.0.0",
+  "status": "active",
+  "title": "History: haematology",
+  "item": [
+    {
+      "linkId": "onset_days",
+      "text": "How many days ago did this illness start?",
+      "type": "integer",
+      "required": true
+    },
+    {
+      "linkId": "find.bone_pain",
+      "text": "Bone pain?",
+      "type": "boolean",
+      "code": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "12584003",
+          "display": "Bone pain"
+        }
+      ]
+    },
+    {
+      "linkId": "find.chest_pain",
+      "text": "Chest pain?",
+      "type": "boolean",
+      "code": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "29857009",
+          "display": "Chest pain"
+        }
+      ]
+    },
+    {
+      "linkId": "find.cough",
+      "text": "Cough?",
+      "type": "boolean",
+      "code": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "49727002",
+          "display": "Cough"
+        }
+      ]
+    },
+    {
+      "linkId": "find.dyspnoea",
+      "text": "Breathlessness?",
+      "type": "boolean",
+      "code": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "267036007",
+          "display": "Breathlessness"
+        }
+      ]
+    },
+    {
+      "linkId": "find.joint_pain",
+      "text": "Joint pain?",
+      "type": "boolean",
+      "code": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "57676002",
+          "display": "Joint pain"
+        }
+      ]
+    }
+  ]
+}

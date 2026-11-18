@@ -1,0 +1,96 @@
+{
+  "$defs": {
+    "GraphCitation": {
+      "additionalProperties": false,
+      "properties": {
+        "doc_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Doc Id"
+        },
+        "label": {
+          "title": "Label",
+          "type": "string"
+        },
+        "node_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Node Id"
+        },
+        "path": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Path"
+        }
+      },
+      "required": [
+        "label"
+      ],
+      "title": "GraphCitation",
+      "type": "object"
+    }
+  },
+  "$id": "https://atra.local/schemas/tools/ahdt.cognitive.converse.response.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "grounded_on": {
+      "items": {
+        "$ref": "#/$defs/GraphCitation"
+      },
+      "title": "Grounded On",
+      "type": "array"
+    },
+    "language": {
+      "enum": [
+        "en",
+        "yo",
+        "ha",
+        "ig",
+        "pcm"
+      ],
+      "title": "Language",
+      "type": "string"
+    },
+    "reply": {
+      "title": "Reply",
+      "type": "string"
+    },
+    "session_id": {
+      "title": "Session Id",
+      "type": "string"
+    }
+  },
+  "required": [
+    "reply",
+    "language",
+    "session_id",
+    "grounded_on"
+  ],
+  "title": "ConverseData",
+  "type": "object"
+}

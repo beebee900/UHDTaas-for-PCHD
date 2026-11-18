@@ -1,0 +1,274 @@
+{
+  "resourceType": "PlanDefinition",
+  "id": "scd-crisis",
+  "url": "https://atra.health/fhir/PlanDefinition/scd_crisis",
+  "version": "1.0.0",
+  "name": "scd_crisis",
+  "title": "Sickle cell disease with vaso-occlusive crisis",
+  "type": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/plan-definition-type",
+        "code": "clinical-protocol"
+      }
+    ]
+  },
+  "status": "active",
+  "useContext": [
+    {
+      "code": {
+        "system": "http://terminology.hl7.org/CodeSystem/usage-context-type",
+        "code": "focus"
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "417425009"
+          }
+        ]
+      }
+    }
+  ],
+  "extension": [
+    {
+      "url": "https://atra.health/fhir/StructureDefinition/kb-entry",
+      "valueString": "cond.scd_crisis"
+    }
+  ],
+  "action": [
+    {
+      "id": "treat",
+      "title": "Choose treatment",
+      "selectionBehavior": "exactly-one",
+      "action": [
+        {
+          "id": "treat-prevention",
+          "title": "Treat (prevention)",
+          "condition": [
+            {
+              "kind": "applicability",
+              "expression": {
+                "language": "text/fhirpath",
+                "expression": "%severity = 'prevention'"
+              }
+            }
+          ],
+          "selectionBehavior": "exactly-one",
+          "action": [
+            {
+              "id": "tx.scd.hydroxyurea",
+              "title": "hydroxyurea scd",
+              "definitionCanonical": "https://atra.health/fhir/ActivityDefinition/dose.hydroxyurea_scd",
+              "extension": [
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/kb-entry",
+                  "valueString": "tx.scd.hydroxyurea"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/preference",
+                  "valueCode": "first_line"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/eligibility",
+                  "valueString": "{}"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/exclusions",
+                  "valueString": "[\"ix.hydroxyurea.contraindications\"]"
+                }
+              ]
+            },
+            {
+              "id": "tx.scd.prophylaxis",
+              "title": "proguanil scd prophylaxis + penicillin v scd prophylaxis",
+              "selectionBehavior": "all",
+              "action": [
+                {
+                  "id": "dose.proguanil_scd_prophylaxis",
+                  "title": "proguanil scd prophylaxis",
+                  "definitionCanonical": "https://atra.health/fhir/ActivityDefinition/dose.proguanil_scd_prophylaxis"
+                },
+                {
+                  "id": "dose.penicillin_v_scd_prophylaxis",
+                  "title": "penicillin v scd prophylaxis",
+                  "definitionCanonical": "https://atra.health/fhir/ActivityDefinition/dose.penicillin_v_scd_prophylaxis"
+                }
+              ],
+              "extension": [
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/kb-entry",
+                  "valueString": "tx.scd.prophylaxis"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/preference",
+                  "valueCode": "first_line"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/eligibility",
+                  "valueString": "{}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "treat-mild",
+          "title": "Treat (mild)",
+          "condition": [
+            {
+              "kind": "applicability",
+              "expression": {
+                "language": "text/fhirpath",
+                "expression": "%severity = 'mild'"
+              }
+            }
+          ],
+          "selectionBehavior": "exactly-one",
+          "action": [
+            {
+              "id": "tx.scd_crisis.painful_crisis",
+              "title": "scd pain ladder + scd fluids painful crisis",
+              "selectionBehavior": "all",
+              "action": [
+                {
+                  "id": "dose.scd_pain_ladder",
+                  "title": "scd pain ladder",
+                  "definitionCanonical": "https://atra.health/fhir/ActivityDefinition/dose.scd_pain_ladder"
+                },
+                {
+                  "id": "dose.scd_fluids_painful_crisis",
+                  "title": "scd fluids painful crisis",
+                  "definitionCanonical": "https://atra.health/fhir/ActivityDefinition/dose.scd_fluids_painful_crisis"
+                }
+              ],
+              "extension": [
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/kb-entry",
+                  "valueString": "tx.scd_crisis.painful_crisis"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/preference",
+                  "valueCode": "first_line"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/eligibility",
+                  "valueString": "{}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "treat-moderate",
+          "title": "Treat (moderate)",
+          "condition": [
+            {
+              "kind": "applicability",
+              "expression": {
+                "language": "text/fhirpath",
+                "expression": "%severity = 'moderate'"
+              }
+            }
+          ],
+          "selectionBehavior": "exactly-one",
+          "action": [
+            {
+              "id": "tx.scd_crisis.painful_crisis",
+              "title": "scd pain ladder + scd fluids painful crisis",
+              "selectionBehavior": "all",
+              "action": [
+                {
+                  "id": "dose.scd_pain_ladder",
+                  "title": "scd pain ladder",
+                  "definitionCanonical": "https://atra.health/fhir/ActivityDefinition/dose.scd_pain_ladder"
+                },
+                {
+                  "id": "dose.scd_fluids_painful_crisis",
+                  "title": "scd fluids painful crisis",
+                  "definitionCanonical": "https://atra.health/fhir/ActivityDefinition/dose.scd_fluids_painful_crisis"
+                }
+              ],
+              "extension": [
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/kb-entry",
+                  "valueString": "tx.scd_crisis.painful_crisis"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/preference",
+                  "valueCode": "first_line"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/eligibility",
+                  "valueString": "{}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "treat-severe",
+          "title": "Treat (severe)",
+          "condition": [
+            {
+              "kind": "applicability",
+              "expression": {
+                "language": "text/fhirpath",
+                "expression": "%severity = 'severe'"
+              }
+            }
+          ],
+          "selectionBehavior": "exactly-one",
+          "action": [
+            {
+              "id": "tx.scd_crisis.painful_crisis",
+              "title": "scd pain ladder + scd fluids painful crisis",
+              "selectionBehavior": "all",
+              "action": [
+                {
+                  "id": "dose.scd_pain_ladder",
+                  "title": "scd pain ladder",
+                  "definitionCanonical": "https://atra.health/fhir/ActivityDefinition/dose.scd_pain_ladder"
+                },
+                {
+                  "id": "dose.scd_fluids_painful_crisis",
+                  "title": "scd fluids painful crisis",
+                  "definitionCanonical": "https://atra.health/fhir/ActivityDefinition/dose.scd_fluids_painful_crisis"
+                }
+              ],
+              "extension": [
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/kb-entry",
+                  "valueString": "tx.scd_crisis.painful_crisis"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/preference",
+                  "valueCode": "first_line"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/eligibility",
+                  "valueString": "{}"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "monitor",
+      "title": "Monitor with the early-warning score",
+      "extension": [
+        {
+          "url": "https://atra.health/fhir/StructureDefinition/kb-entry",
+          "valueString": "news2.monitoring"
+        }
+      ]
+    },
+    {
+      "id": "check-in",
+      "title": "Daily check-in",
+      "definitionCanonical": "https://atra.health/fhir/Questionnaire/check-in"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+# Depression (mhGAP Intervention Guide 2.0). Severity bands come from severity.phq9.
+
+- id: tx.depression.fluoxetine
+  condition: cond.depression
+  severity: [moderate, severe]
+  preference: first_line
+  regimen: dose.fluoxetine
+  eligibility: {patient_group: adult}
+  note: Preferred in older or medically ill adults; the antidepressant considered in adolescents
+    12 years or older, with weekly review.
+  provenance:
+    source: who-mhgap-ig-2016
+    section: "FLUOXETINE"
+    page: 37
+    also:
+    - {source: who-mhgap-ig-2016, page: 36}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: tx.depression.amitriptyline
+  condition: cond.depression
+  severity: [moderate, severe]
+  preference: alternative
+  regimen: dose.amitriptyline
+  eligibility: {patient_group: adult}
+  exclusions: [ix.amitriptyline.contraindications]
+  provenance:
+    source: who-mhgap-ig-2016
+    section: "AMITRIPTYLINE"
+    page: 37
+    also:
+    - {source: who-mhgap-ig-2016, page: 36}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified

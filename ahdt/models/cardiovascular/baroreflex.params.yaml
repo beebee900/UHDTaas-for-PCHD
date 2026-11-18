@@ -1,0 +1,61 @@
+# Ursino (1998) carotid baroreflex: afferent pathway, efferent sympathetic and vagal
+# activity, and effectors on heart period, left ventricular elastance and splanchnic
+# resistance. Values marked verified were checked against Kana (2010), which tabulates
+# them from Ursino and Magosso (2000). The others are Ursino (1998) values that could not
+# be checked against the paywalled primary text.
+model_id: ahdt.cardiovascular.baroreflex_regulation
+sources:
+- id: ursino1998
+  citation: "Ursino M. Interaction between carotid baroregulation and the pulsating heart: a
+    mathematical model. Am J Physiol. 1998;275(5):H1733-H1747.
+    doi:10.1152/ajpheart.1998.275.5.H1733"
+- id: kana2010
+  citation: "Kana M. Mathematical models of cardiovascular control by the autonomic nervous
+    system. Doctoral thesis, Czech Technical University in Prague; 2010. Tables 2.5.2 to
+    2.5.14, values from Ursino M, Magosso E. Acute cardiovascular response to isocapnic
+    hypoxia. I. A mathematical model. Am J Physiol Heart Circ Physiol. 2000;279(1):H149-H165"
+  url: https://arxiv.org/abs/1901.05071
+params:
+  P_n: {value: 92, unit: 'mm[Hg]', source: ursino1998, verified: false,
+        justification: "Ursino 1998 Table 1 value; primary text not reachable (HTTP 403)"}
+  k_ab: {value: 11.758, unit: 'mm[Hg]', source: ursino1998, verified: false,
+         justification: "Ursino 1998 Table 1 value; primary text not reachable (HTTP 403)"}
+  f_ab_min: {value: 2.52, unit: Hz, source: ursino1998, verified: false,
+             justification: "Ursino 1998 Table 1 value; primary text not reachable (HTTP 403)"}
+  f_ab_max: {value: 47.78, unit: Hz, source: ursino1998, verified: false,
+             justification: "Ursino 1998 Table 1 value; primary text not reachable (HTTP 403)"}
+  tau_z: {value: 6.37, unit: s, source: ursino1998, verified: false,
+          justification: "Ursino 1998 Table 1 value; primary text not reachable (HTTP 403)"}
+  tau_p: {value: 2.076, unit: s, source: ursino1998, verified: false,
+          justification: "Ursino 1998 Table 1 value; primary text not reachable (HTTP 403)"}
+  f_es_inf: {value: 2.10, unit: Hz, source: kana2010}
+  f_es_0: {value: 16.11, unit: Hz, source: kana2010}
+  f_es_min: {value: 2.66, unit: Hz, source: kana2010}
+  k_es: {value: 0.0675, unit: s, source: kana2010}
+  f_ev_0: {value: 3.2, unit: Hz, source: kana2010}
+  f_ev_inf: {value: 6.3, unit: Hz, source: ursino1998, verified: false,
+             justification: "Ursino 1998 value; Kana 2010 Table 2.5.5 lists 2.1 Hz for a
+               differently structured vagal neuron, so the primary value needs a check"}
+  f_ab_0: {value: 25, unit: Hz, source: ursino1998, verified: false,
+           justification: "Ursino 1998 Table 1 value; primary text not reachable (HTTP 403)"}
+  k_ev: {value: 7.06, unit: Hz, source: kana2010}
+  G_E: {value: 0.475, unit: 'mm[Hg]/mL', source: kana2010, note: gain per unit of log activity}
+  tau_E: {value: 8, unit: s, source: kana2010}
+  D_E: {value: 2, unit: s, source: kana2010}
+  E_0: {value: 2.392, unit: 'mm[Hg]/mL', source: kana2010}
+  G_R: {value: 0.695, unit: 'mm[Hg].s/mL', source: ursino1998, verified: false,
+        justification: "Ursino 1998 splanchnic resistance gain; Kana 2010 uses a different
+          vascular-bed structure, so the primary value needs a check"}
+  tau_R: {value: 6, unit: s, source: kana2010}
+  D_R: {value: 2, unit: s, source: ursino1998, verified: false,
+        justification: "Ursino 1998 value; Kana 2010 uses 5 s in a different structure"}
+  R_0: {value: 2.49, unit: 'mm[Hg].s/mL', source: kana2010, note: splanchnic bed}
+  G_Ts: {value: -0.13, unit: s, source: kana2010}
+  tau_Ts: {value: 2, unit: s, source: kana2010}
+  D_Ts: {value: 2, unit: s, source: kana2010}
+  G_Tv: {value: 0.09, unit: s, source: kana2010}
+  tau_Tv: {value: 1.5, unit: s, source: kana2010}
+  D_Tv: {value: 0.2, unit: s, source: kana2010}
+  T_0: {value: 0.58, unit: s, source: ursino1998, verified: false,
+        justification: "Ursino 1998 heart period with no autonomic input; primary text not
+          reachable (HTTP 403)"}

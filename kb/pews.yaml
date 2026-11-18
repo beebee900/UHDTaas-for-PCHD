@@ -1,0 +1,206 @@
+# Paediatric early warning score: the NHS England national PEWS (2023), chosen because its four
+# age charts and escalation levels are published openly and cover 0 to 18 years.
+# The chart shows score bands as coloured cells (0 white, 1 yellow, 2 orange, 4 pink) between grid
+# lines. Each band is [min, max] on the grid; a value on a grid line touches two bands and scores
+# the higher one. Temperature is not scored; it feeds the sepsis prompt only.
+
+- id: pews.version
+  name: NHS England national paediatric early warning system (PEWS), September 2023
+  charts: [nhse-pews-0-11m, nhse-pews-1-4y, nhse-pews-5-12y, nhse-pews-13y]
+  provenance:
+    source: nhse-pews-1-4y
+    page: 1
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: pews.scoring.0_11m
+  age_min_months: 0
+  age_max_months: 11
+  respiration_rate:
+  - {max: 10, score: 4}
+  - {min: 10, max: 20, score: 2}
+  - {min: 20, max: 30, score: 1}
+  - {min: 30, max: 50, score: 0}
+  - {min: 50, max: 60, score: 1}
+  - {min: 60, max: 70, score: 2}
+  - {min: 70, score: 4}
+  heart_rate:
+  - {max: 80, score: 4}
+  - {min: 80, max: 90, score: 2}
+  - {min: 90, max: 110, score: 1}
+  - {min: 110, max: 150, score: 0}
+  - {min: 150, max: 170, score: 1}
+  - {min: 170, max: 180, score: 2}
+  - {min: 180, score: 4}
+  systolic_bp:
+  - {max: 50, score: 4}
+  - {min: 50, max: 60, score: 2}
+  - {min: 60, max: 70, score: 1}
+  - {min: 70, max: 90, score: 0}
+  - {min: 90, max: 100, score: 1}
+  - {min: 100, max: 110, score: 2}
+  - {min: 110, score: 4}
+  provenance:
+    source: nhse-pews-0-11m
+    page: 1
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: pews.scoring.1_4y
+  age_min_months: 12
+  age_max_months: 59
+  respiration_rate:
+  - {max: 10, score: 4}
+  - {min: 10, max: 20, score: 2}
+  - {min: 20, max: 40, score: 0}
+  - {min: 40, max: 50, score: 1}
+  - {min: 50, max: 60, score: 2}
+  - {min: 60, score: 4}
+  heart_rate:
+  - {max: 60, score: 4}
+  - {min: 60, max: 70, score: 2}
+  - {min: 70, max: 90, score: 1}
+  - {min: 90, max: 140, score: 0}
+  - {min: 140, max: 150, score: 1}
+  - {min: 150, max: 170, score: 2}
+  - {min: 170, score: 4}
+  systolic_bp:
+  - {max: 50, score: 4}
+  - {min: 50, max: 60, score: 2}
+  - {min: 60, max: 80, score: 1}
+  - {min: 80, max: 100, score: 0}
+  - {min: 100, max: 120, score: 1}
+  - {min: 120, max: 130, score: 2}
+  - {min: 130, score: 4}
+  provenance:
+    source: nhse-pews-1-4y
+    page: 1
+    derived:
+      age_max_months: Upper end of the 1 to 4 years chart (4 years 11 months).
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: pews.scoring.5_12y
+  age_min_months: 60
+  age_max_months: 155
+  respiration_rate:
+  - {max: 10, score: 4}
+  - {min: 10, max: 15, score: 2}
+  - {min: 15, max: 20, score: 1}
+  - {min: 20, max: 25, score: 0}
+  - {min: 25, max: 40, score: 1}
+  - {min: 40, max: 50, score: 2}
+  - {min: 50, score: 4}
+  heart_rate:
+  - {max: 60, score: 4}
+  - {min: 60, max: 70, score: 2}
+  - {min: 70, max: 80, score: 1}
+  - {min: 80, max: 120, score: 0}
+  - {min: 120, max: 140, score: 1}
+  - {min: 140, max: 160, score: 2}
+  - {min: 160, score: 4}
+  systolic_bp:
+  - {max: 70, score: 4}
+  - {min: 70, max: 80, score: 2}
+  - {min: 80, max: 90, score: 1}
+  - {min: 90, max: 110, score: 0}
+  - {min: 110, max: 120, score: 1}
+  - {min: 120, max: 130, score: 2}
+  - {min: 130, score: 4}
+  provenance:
+    source: nhse-pews-5-12y
+    page: 1
+    derived:
+      age_min_months: Lower end of the 5 to 12 years chart (5 years).
+      age_max_months: Upper end of the 5 to 12 years chart (12 years 11 months).
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: pews.scoring.13y
+  age_min_months: 156
+  age_max_months: 215
+  respiration_rate:
+  - {max: 10, score: 4}
+  - {min: 10, max: 15, score: 1}
+  - {min: 15, max: 25, score: 0}
+  - {min: 25, max: 30, score: 1}
+  - {min: 30, max: 40, score: 2}
+  - {min: 40, score: 4}
+  heart_rate:
+  - {max: 50, score: 4}
+  - {min: 50, max: 60, score: 2}
+  - {min: 60, max: 70, score: 1}
+  - {min: 70, max: 100, score: 0}
+  - {min: 100, max: 120, score: 1}
+  - {min: 120, max: 130, score: 2}
+  - {min: 130, score: 4}
+  systolic_bp:
+  - {max: 80, score: 4}
+  - {min: 80, max: 90, score: 2}
+  - {min: 90, max: 100, score: 1}
+  - {min: 100, max: 120, score: 0}
+  - {min: 120, max: 130, score: 1}
+  - {min: 130, max: 140, score: 2}
+  - {min: 140, score: 4}
+  provenance:
+    source: nhse-pews-13y
+    page: 1
+    derived:
+      age_min_months: Lower end of the 13 years and over chart (13 years).
+      age_max_months: PEWS is used until the 18th birthday; adults use NEWS2 (news2.scoring).
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+# Parameters scored the same on every age chart.
+- id: pews.scoring.common
+  respiratory_distress: {none: 0, mild: 1, moderate: 2, severe: 4}
+  spo2: [{min: 95, score: 0}, {min: 92, max: 94, score: 1}, {max: 91, score: 4}]
+  oxygen_fio2_percent: [{max: 24, score: 0}, {min: 24, max: 30, score: 1},
+                        {min: 30, max: 50, score: 2}, {min: 50, score: 4}]
+  oxygen_flow_l_min: [{max: 0.1, score: 0}, {min: 0.1, max: 2, score: 1},
+                      {min: 2, max: 6, score: 2}, {min: 6, score: 4}]
+  respiratory_support_device: {high_flow: 4, bipap: 4, cpap: 4}
+  capillary_refill_s: [{max: 2, score: 0}, {min: 3, score: 2}]
+  provenance:
+    source: nhse-pews-1-4y
+    page: 1
+    also:
+    - {source: nhse-pews-0-11m, page: 1}
+    - {source: nhse-pews-5-12y, page: 1}
+    - {source: nhse-pews-13y, page: 1}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+# Escalation level by total score, with the triggers that set a level on their own.
+# `review_within_min` is the medical review time; `reassess_within_min` the observation interval.
+- id: pews.escalation
+  levels:
+  - {level: low, min_total: 1, max_total: 4, reassess_within_min: 60}
+  - {level: medium, min_total: 5, max_total: 8, review_within_min: 30, reassess_within_min: 30}
+  - {level: high, min_total: 9, max_total: 12, review_within_min: 15, reassess_within_min: 30,
+     continuous_monitoring: true}
+  - {level: emergency, min_total: 13, review_within_min: 0, reassess_within_min: 15,
+     continuous_monitoring: true}
+  triggers:
+  - {trigger: new_suspicion_of_sepsis, level: medium}
+  - {trigger: avpu_voice, level: high}
+  - {trigger: new_suspicion_of_septic_shock, level: high}
+  - {trigger: avpu_pain_or_unresponsive, level: emergency}
+  - {trigger: abnormal_pupillary_response, level: emergency}
+  sepsis_prompt_temperature_c: {at_or_above: 38, below: 36}
+  provenance:
+    source: nhse-pews-1-4y
+    page: 1
+    also:
+    - {source: nhse-pews-13y, page: 1}
+    derived:
+      levels[3].review_within_min: Chart wording "Immediate".
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified

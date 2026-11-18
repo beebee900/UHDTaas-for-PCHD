@@ -1,0 +1,950 @@
+{
+  "app": {
+    "title": "ATRA Health",
+    "language": "Èdè",
+    "tagline": "Àwọn ìbejì dígítà aláìsàn àti ènìyàn pẹ̀lú aṣojú"
+  },
+  "locale": {
+    "en": "English",
+    "yo": "Yorùbá",
+    "ha": "Hausa",
+    "ig": "Igbo",
+    "pcm": "Naijá"
+  },
+  "login": {
+    "title": "Wọlé",
+    "username": "Orúkọ olùmúlò",
+    "password": "Ọ̀rọ̀ aṣínà",
+    "submit": "Wọlé",
+    "failed": "Orúkọ olùmúlò tàbí ọ̀rọ̀ aṣínà kò tọ̀nà.",
+    "overline": "ATRA Health",
+    "headline": "Àwọn ìbejì dígítà tó ń ṣe àtìlẹ́yìn ìtọ́jú, tí oníṣègùn sì ń ṣe gbogbo ìpinnu",
+    "about": "Ẹnì kọ̀ọ̀kan ní ìbejì ènìyàn fún gbogbo ayé rẹ̀, tó ní ìbejì ọmọ ẹgbẹ́ mẹ́tàdínlógún. Ìṣẹ̀lẹ̀ ìtọ́jú kọ̀ọ̀kan ní ilé ìtọ́jú ń ṣí ìbejì aláìsàn. Àwọn aṣojú ń pèsè iṣẹ́, àwọn oníṣègùn sì ń pinnu.",
+    "demo": "Àwọn ìwọlé àyẹ̀wò",
+    "demoAbout": "Yan orúkọ olùmúlò kí ó fi sí àyè rẹ̀. Àwọn ọ̀rọ̀ aṣínà wà nínú ìwé ìwọlé àyẹ̀wò.",
+    "groups": {
+      "clinical": "Òṣìṣẹ́ ìtọ́jú",
+      "patients": "Àwọn aláìsàn, àwọn olónìí àti àwọn olùtọ́jú",
+      "governance": "Ìṣàkóso",
+      "population": "Ìwádìí àti ìlera gbogbo ènìyàn"
+    }
+  },
+  "dashboard": {
+    "signOut": "Jáde",
+    "worklist": "Àkójọ iṣẹ́",
+    "worklistEmpty": "Kò sí iṣẹ́ tó ṣí sílẹ̀.",
+    "unavailable": "Ìsọfúnni yìí kò sí lọ́wọ́lọ́wọ́.",
+    "open": "Ṣí ibi iṣẹ́",
+    "openFor": "Ṣí ibi iṣẹ́ fún {title}"
+  },
+  "status": {
+    "normal": "Déédé",
+    "watch": "Ṣọ́ra",
+    "alert": "Ìkìlọ̀",
+    "unavailable": "Kò sí"
+  },
+  "twin": {
+    "cardiovascular": "Ọkàn àti àwọn iṣan ẹ̀jẹ̀",
+    "respiratory": "Mímí",
+    "nervous": "Ọpọlọ àti iṣan ara",
+    "sensory": "Àwọn ìmọ̀lára",
+    "digestive": "Ìdà oúnjẹ",
+    "hepatobiliary": "Ẹ̀dọ̀",
+    "renal_urinary": "Kídìnrín àti àpò ìtọ̀",
+    "endocrine": "Àwọn họ́mọ̀nù àti ṣúgà ẹ̀jẹ̀",
+    "immune_lymphatic": "Ètò àjẹsára",
+    "haematological": "Ẹ̀jẹ̀",
+    "musculoskeletal": "Iṣan àti egungun",
+    "integumentary": "Awọ ara",
+    "reproductive": "Ìlera ìbímọ",
+    "whole_body": "Gbogbo ara",
+    "behavioural_cognitive": "Èrò inú àti ìwà",
+    "social": "Ìgbésí ayé láwùjọ",
+    "population": "Àwùjọ ènìyàn"
+  },
+  "workbench": {
+    "title": "Ibi iṣẹ́ oníṣègùn",
+    "back": "Pẹpẹ ìṣàkóso",
+    "episode": "Ìṣẹ̀lẹ̀ {id}",
+    "reason": "Ìdí: {reason}",
+    "clinician": "Oníṣègùn: {name}",
+    "episodeStatus": {
+      "open": "Ṣíṣí",
+      "closed": "Títì"
+    },
+    "degradedTitle": "Àwọn ẹ̀rí kan kò sí",
+    "degraded": "AHDT kò lè pèsè gbogbo ẹ̀rí rẹ̀. Àwọn àbá náà lo dátà tó wà.",
+    "missing": "Ohun tí kò sí: {items}.",
+    "differential": "Àwọn àìsàn tó ṣeé ṣe",
+    "noDifferential": "Kò sí àkójọ àwọn àìsàn tó ṣeé ṣe síbẹ̀.",
+    "probability": "Ìṣeéṣe {value}",
+    "tests": "Àwọn àyẹ̀wò tí a dábàá",
+    "noTests": "A kò dábàá àyẹ̀wò kankan.",
+    "treatments": "Àwọn àṣàyàn ìtọ́jú",
+    "noTreatments": "Kò sí àṣàyàn ìtọ́jú síbẹ̀.",
+    "noSafetyIssues": "A kò rí ewu kankan sí ààbò.",
+    "unified": "Ìwòye àpapọ̀",
+    "noUnified": "Kò sí àbájáde síbẹ̀.",
+    "source": {
+      "apdt": "APDT",
+      "ahdt": "AHDT"
+    },
+    "twins": "Ìbejì dígítà ènìyàn",
+    "openTwin": "Ṣí ìbejì {twin}",
+    "patientExplanation": "Àlàyé fún aláìsàn",
+    "decision": {
+      "title": "Ìpinnu",
+      "starting": "À ń pèsè ìpinnu náà.",
+      "none": "Kò sí ìpinnu tó ń dúró.",
+      "accept": "Gbà",
+      "edit": "Ṣàtúnṣe",
+      "reject": "Kọ̀",
+      "recorded": "A ti kọ ìpinnu sílẹ̀: {decision}.",
+      "needsRole": "Ipa rẹ kò fàyè gbà ọ́ láti ṣe ìpinnu yìí.",
+      "failed": "A kò lè fi ìpinnu náà ránṣẹ́.",
+      "editLabel": "Àyípadà rẹ",
+      "reasonLabel": "Ìdí",
+      "cancel": "Fagilé",
+      "confirm": "Jẹ́rìí sí i",
+      "onlyMo": "Dókítà ni ó ń pinnu lórí àyẹ̀wò àìsàn.",
+      "start": {
+        "diagnosis": "Pèsè ìpinnu àyẹ̀wò àìsàn",
+        "treatment": "Pèsè ìwé òògùn",
+        "care": "Pèsè ètò ìtọ́jú"
+      },
+      "waitingFor": "Ìgbésẹ̀ yìí ń dúró de {role}: {step}.",
+      "yourStep": "Ìgbésẹ̀ rẹ: {step}.",
+      "step": {
+        "accept_diagnosis": "gba àyẹ̀wò àìsàn àtìgbà díẹ̀",
+        "sign_prescription": "fọwọ́ sí ìwé òògùn",
+        "verify_prescription": "jẹ́rìí sí ìwé òògùn",
+        "approve_care_plan": "buwọ́ lú ètò ìtọ́jú",
+        "patient_consent_to_treatment": "fún ní ìfọwọ́sí sí ìtọ́jú"
+      },
+      "sign": "Fọwọ́ sí",
+      "verify": "Jẹ́rìí",
+      "consent": "Fọwọ́ sí i",
+      "query": "Béèrè ìbéèrè",
+      "decline": "Kọ̀",
+      "dialog": {
+        "edit": "Ṣàtúnṣe àbá náà",
+        "query": "Béèrè ìbéèrè lórí ìwé òògùn",
+        "reject": "Kọ àbá náà",
+        "decline": "Kọ̀"
+      }
+    },
+    "twinsLoading": "À ń gbé àwọn ìbejì jáde...",
+    "about": "Àwọn àbá olùronú fún ìṣẹ̀lẹ̀ yìí. Àwọn aṣojú ń pèsè ìgbésẹ̀ kọ̀ọ̀kan, oníṣègùn tí a dárúkọ sì ń ṣe gbogbo ìpinnu.",
+    "patientWho": "{initials}, {sex}, {age}, ó ń sọ {language}",
+    "openedAt": "A ṣí i {time}",
+    "tabs": {
+      "label": "Àwọn ojú ìwòye ìṣẹ̀lẹ̀",
+      "review": "Àtúnyẹ̀wò",
+      "twins": "Àwọn ìbejì àti aṣojú",
+      "ask": "Bi ìbejì náà",
+      "activity": "Iṣẹ́ tó ṣẹlẹ̀"
+    },
+    "noRecsTitle": "Kò sí àbá síbẹ̀",
+    "noRecs": "Àwọn àbájáde tí a kọ sílẹ̀ kò ṣe àtìlẹ́yìn àyẹ̀wò àìsàn kankan síbẹ̀. Kọ àwọn àbájáde sí i kí o lè rí àbá.",
+    "differentialAbout": "Àwọn àyẹ̀wò àìsàn tí a tò lẹ́sẹẹsẹ pẹ̀lú ìṣeéṣe wọn. Ṣí Kí ló fà á? fún ẹ̀rí àti àwọn orísun.",
+    "testsAbout": "Àwọn àyẹ̀wò tí a tò gẹ́gẹ́ bí bí wọ́n ṣe lè yí àyẹ̀wò àìsàn padà, àti iye owó wọn ní ilé ìtọ́jú yìí.",
+    "treatmentsAbout": "Àwọn àṣàyàn ìtọ́jú tí a ṣàyẹ̀wò fún ìbáṣepọ̀ òògùn, iṣẹ́ kíndìnrín àti oyún, tí a sì ṣàfarawé lórí ìbejì aláìsàn.",
+    "care": "Ètò ìtọ́jú",
+    "careAbout": "Ìtọ́jú àtẹ̀lé, àwọn ìránnilétí àti àtìlẹ́yìn fún aláìsàn.",
+    "noCare": "Kò sí ètò ìtọ́jú síbẹ̀.",
+    "decisionAbout": "Àwọn aṣojú àyẹ̀wò àìsàn dúró níbí, wọ́n sì ń dúró de dókítà.",
+    "unifiedAbout": "Àwọn ìwé ìṣẹ̀lẹ̀ yìí àti àwọn kíkà ìbejì ènìyàn ní àkójọ kan.",
+    "twinsAbout": "Ipò lọ́wọ́lọ́wọ́ ti ìbejì ọmọ ẹgbẹ́ kọ̀ọ̀kan. Ṣí ìbejì kan fún àsọtẹ́lẹ̀ rẹ̀ àti àwọn aṣojú rẹ̀.",
+    "openTwinsAndAgents": "Àwọn ìbejì àti aṣojú",
+    "recStatus": {
+      "proposed": "A dábàá",
+      "accepted": "A gbà",
+      "edited": "A ṣàtúnṣe",
+      "overridden": "A yí padà",
+      "declined": "A kọ̀",
+      "signed": "A fọwọ́ sí i"
+    }
+  },
+  "why": {
+    "button": "Kí ló fà á?",
+    "title": "Ìdí tí a fi dábàá èyí",
+    "recommendation": "Àbá",
+    "confidence": "Ìdánilójú {value}",
+    "evidenceFor": "Ẹ̀rí tó ṣe àtìlẹ́yìn",
+    "evidenceAgainst": "Ẹ̀rí tó tako",
+    "citations": "Àwọn orísun",
+    "counterfactuals": "Ohun tí yóò yí i padà",
+    "counterfactual": "Bí {change}, àìsàn àkọ́kọ́ yóò di {top}",
+    "change": "Àyípadà {value}",
+    "simulation": "Ìṣàfarawé",
+    "noSimulation": "A kò ṣe ìṣàfarawé kankan.",
+    "assumptions": "Àwọn àròsọ: {items}",
+    "alternatives": "Àwọn ohun mìíràn tó ṣeé ṣe",
+    "patientSummary": "Àkópọ̀ fún aláìsàn",
+    "models": "Àwọn àwòṣe tí a lò",
+    "none": "Kò sí nǹkan láti fihàn.",
+    "close": "Padé"
+  },
+  "drill": {
+    "back": "Gbogbo ìbejì",
+    "state": "Ipò lọ́wọ́lọ́wọ́",
+    "updated": "Àtúnṣe tó kẹ́yìn {time}",
+    "variable": "Ohun tí a wọ̀n",
+    "value": "Iye",
+    "noState": "Ìbejì yìí kò ní ipò síbẹ̀.",
+    "forecast": "Àsọtẹ́lẹ̀",
+    "forecastOf": "Àsọtẹ́lẹ̀ {variable} pẹ̀lú ààlà {level}%",
+    "chartLabel": "Àwòrán àsọtẹ́lẹ̀ {variable}",
+    "noForecast": "Kò sí dátà tó tó fún àsọtẹ́lẹ̀ síbẹ̀.",
+    "denied": "Ẹni yìí ti dá ìbejì yìí dúró tàbí ipa rẹ kò lè kà á.",
+    "forecastAbout": "Bí nǹkan ṣe máa lọ ní wákàtí mẹ́rìnlélógún tó ń bọ̀, pẹ̀lú ààlà àìdánilójú rẹ̀."
+  },
+  "explain": {
+    "title": "Àlàyé àbájáde rẹ",
+    "shownIn": "A fi àlàyé yìí hàn ní èdè {language}."
+  },
+  "agents": {
+    "title": "Àwọn aṣojú",
+    "run": "Mú àwọn aṣojú ṣiṣẹ́",
+    "runConductor": "Mú olùdarí ṣiṣẹ́",
+    "conductorTitle": "Àfojúsùn ìtọ́jú",
+    "conductorGoal": "Ṣàkóso ẹ̀jẹ̀ ríru, àtọ̀gbẹ irú kejì àti àìsàn kídìnrín ìpele kẹta láìléwu",
+    "steps": "Àwọn ìgbésẹ̀ aṣojú",
+    "noSteps": "Kò sí ìgbésẹ̀ aṣojú síbẹ̀.",
+    "tools": "Àwọn irinṣẹ́: {tools}",
+    "noTools": "A kò pe irinṣẹ́ kankan.",
+    "missing": "Ẹ̀rí tí kò sí: {items}",
+    "goals": "Àwọn àfojúsùn",
+    "noGoals": "A kò ṣàyẹ̀wò àfojúsùn kankan.",
+    "goalStatus": {
+      "met": "Ó ti ṣẹ",
+      "unmet": "Kò tíì ṣẹ",
+      "not_evaluated": "A kò tíì ṣàyẹ̀wò rẹ̀"
+    },
+    "stepStatus": {
+      "ok": "Ó ti parí",
+      "degraded": "Kò pé",
+      "failed": "Kò yọrí"
+    },
+    "toolCalls": "Àwọn ìpè irinṣẹ́",
+    "noToolCalls": "A kò pe irinṣẹ́ kankan.",
+    "proposals": "Àwọn àbá",
+    "noProposals": "Kò sí àbá.",
+    "explanations": "Àwọn àlàyé",
+    "denials": "Àwọn ìṣe tí a kọ̀",
+    "noDenials": "A kò kọ ìṣe kankan.",
+    "needsRole": "Ipa rẹ kò fàyè gbà ọ́ láti mú àwọn aṣojú ṣiṣẹ́.",
+    "failed": "A kò lè mú àwọn aṣojú ṣiṣẹ́.",
+    "about": "Olùṣètò ìbejì yìí ń ṣàkíyèsí, ń ṣe àtúnṣe ipò, ń ṣàyẹ̀wò àwọn àfojúsùn ìbejì náà, ń ṣètò, ń ṣe iṣẹ́ láàrin ìpele òmìnira rẹ̀, ń ṣàlàyé, ó sì ń ròyìn.",
+    "goalLabel": "Àfojúsùn ìtọ́jú",
+    "goalHelp": "Àfojúsùn tí kò ní àwòṣe àfojúsùn ni a máa ròyìn gẹ́gẹ́ bí èyí tí kò bá nǹkan mu."
+  },
+  "shell": {
+    "signedInAs": "Wọlé gẹ́gẹ́ bí",
+    "openMenu": "Ṣí àtòjọ",
+    "roleAt": "{role} ní {facility}"
+  },
+  "nav": {
+    "label": "Ìrìnàjò pàtàkì",
+    "home": "Pẹpẹ ìṣàkóso",
+    "episodes": "Àwọn ìṣẹ̀lẹ̀",
+    "newEpisode": "Ìṣẹ̀lẹ̀ tuntun",
+    "myCare": "Ìtọ́jú mi",
+    "myTwin": "Ìbejì mi",
+    "cared": "Àwọn tí mo ń tọ́jú",
+    "population": "Àwùjọ ènìyàn",
+    "audit": "Ìwé àyẹ̀wò",
+    "models": "Ìwé orúkọ àwòṣe",
+    "system": "Bí ATRA ṣe ń ṣiṣẹ́"
+  },
+  "role": {
+    "medical_officer": "Dókítà",
+    "radiologist": "Onímọ̀ àwòrán ìṣègùn",
+    "pharmacist": "Oníṣègùn òògùn",
+    "nurse": "Nọ́ọ̀sì",
+    "lab_scientist": "Onímọ̀ yàrá ìwádìí",
+    "patient": "Aláìsàn",
+    "proxy": "Olùdúró fún aláìsàn",
+    "community_health_worker": "Òṣìṣẹ́ ìlera àdúgbò",
+    "therapist": "Oníṣègùn ìtọ́jú",
+    "carer": "Olùtọ́jú",
+    "clinical_safety_officer": "Òṣìṣẹ́ ààbò ìtọ́jú",
+    "administrator": "Alábòójútó",
+    "researcher": "Olùwádìí",
+    "public_health_official": "Òṣìṣẹ́ ìlera gbogbo ènìyàn",
+    "person": "Olùní ìbejì"
+  },
+  "facility": {
+    "fac-a": "Ilé ìtọ́jú A, ilé ìwòsàn alábọ́dé",
+    "fac-b": "Ilé ìtọ́jú B, ilé ìlera alákọ̀ọ́kọ́"
+  },
+  "sex": {
+    "female": "Obìnrin",
+    "male": "Ọkùnrin"
+  },
+  "home": {
+    "title": "Pẹpẹ ìṣàkóso {role}",
+    "intro": {
+      "medical_officer": "Ṣàyẹ̀wò ohun tí olùronú dábàá, ṣe ìpinnu, kí o sì tẹ̀lé ìbejì aláìsàn kọ̀ọ̀kan.",
+      "radiologist": "Wo àwọn ìṣẹ̀lẹ̀ ilé ìtọ́jú rẹ àti ẹ̀rí àwòrán ìṣègùn ti aláìsàn kọ̀ọ̀kan.",
+      "pharmacist": "Jẹ́rìí sí àwọn ìwé òògùn tí àwọn dókítà fọwọ́ sí. Àwọn ìwé òògùn tí a dí lọ́wọ́ wà níwájú.",
+      "nurse": "Tẹ̀lé àwọn ètò ìtọ́jú, ṣí àwọn ìṣẹ̀lẹ̀ tuntun, kí o sì máa wo ìbejì aláìsàn kọ̀ọ̀kan.",
+      "lab_scientist": "Wo àwọn ìṣẹ̀lẹ̀ ilé ìtọ́jú rẹ àti àwọn àyẹ̀wò tí olùronú dábàá.",
+      "community_health_worker": "Ṣí àwọn ìṣẹ̀lẹ̀ ní àdúgbò kí o sì tẹ̀lé àwọn kíkà aláìsàn kọ̀ọ̀kan.",
+      "therapist": "Tẹ̀lé àwọn ìbejì àwọn aláìsàn rẹ àti ìlọsíwájú wọn lórí àkókò.",
+      "administrator": "Ṣàyẹ̀wò ẹni tó ṣe nǹkan kọ̀ọ̀kan ní ilé ìtọ́jú rẹ kí o sì ṣàkóso ìwé orúkọ àwòṣe.",
+      "clinical_safety_officer": "Ṣàyẹ̀wò ìwé àyẹ̀wò, gbogbo ìṣe tí a kọ̀, àti ìpele àwòṣe kọ̀ọ̀kan."
+    },
+    "openEpisodes": "Àwọn ìṣẹ̀lẹ̀ tó ṣí",
+    "worklistItems": "Àwọn nǹkan lórí àkójọ iṣẹ́ rẹ",
+    "blocked": "Ìdánwò ààbò dí i lọ́wọ́",
+    "blockedHint": "Àwọn ìwé òògùn tí a kò lè fọwọ́ sí títí a ó fi yí wọn padà",
+    "blockedChip": "A dí i lọ́wọ́",
+    "worklistAbout": {
+      "medical_officer": "Àwọn ìṣẹ̀lẹ̀ tuntun láti ṣètò àti àwọn àbá láti ṣàyẹ̀wò.",
+      "radiologist": "Ilé ìtọ́jú rẹ kò tíì ní àkójọ iṣẹ́ àwòrán ìṣègùn.",
+      "pharmacist": "Àwọn ìwé òògùn láti jẹ́rìí sí.",
+      "nurse": "Àwọn ètò ìtọ́jú láti tẹ̀lé.",
+      "lab_scientist": "Ilé ìtọ́jú rẹ kò tíì ní àkójọ iṣẹ́ yàrá ìwádìí.",
+      "community_health_worker": "Ilé ìtọ́jú rẹ kò tíì ní àkójọ iṣẹ́ àdúgbò.",
+      "therapist": "Ilé ìtọ́jú rẹ kò tíì ní àkójọ iṣẹ́ ìtọ́jú."
+    },
+    "patients": "Àwọn ìṣẹ̀lẹ̀ tó ṣí ní ilé ìtọ́jú rẹ",
+    "patientsAbout": "Ìṣẹ̀lẹ̀ kọ̀ọ̀kan ní ibi iṣẹ́ àti ojú ìwòye àwọn ìbejì ọmọ ẹgbẹ́ mẹ́tàdínlógún ti aláìsàn.",
+    "allEpisodes": "Gbogbo àwọn ìṣẹ̀lẹ̀",
+    "explore": "Ṣàwárí ètò náà",
+    "exploreAbout": "Wo bí àwọn ìbejì, àwọn aṣojú àti àwọn ìdánwò ààbò ṣe ń ṣiṣẹ́ papọ̀.",
+    "governanceTools": "Àwọn irinṣẹ́ ìṣàkóso"
+  },
+  "worklistKind": {
+    "triage": "Ìṣẹ̀lẹ̀ tuntun",
+    "review_diagnosis": "Àyẹ̀wò àìsàn láti ṣàtúnyẹ̀wò",
+    "review_test": "Àwọn àyẹ̀wò láti pàṣẹ",
+    "review_care": "Ètò ìtọ́jú",
+    "review_treatment": "Ìwé òògùn láti jẹ́rìí sí"
+  },
+  "episodes": {
+    "title": "Àwọn ìṣẹ̀lẹ̀ ìtọ́jú",
+    "about": "Ìṣẹ̀lẹ̀ jẹ́ àkókò ìtọ́jú kan fún ìṣòro kan ní ilé ìtọ́jú yìí. Ṣí ọ̀kan láti ṣàyẹ̀wò àwọn àbá olùronú àti àwọn ìbejì aláìsàn.",
+    "none": "Kò sí ìṣẹ̀lẹ̀ tó bá a mu.",
+    "patient": "Aláìsàn",
+    "reason": "Ìdí",
+    "opened": "A ṣí i",
+    "status": "Ipò",
+    "actions": "Ṣí",
+    "who": "{sex}, {age}",
+    "workbench": "Ibi iṣẹ́",
+    "twins": "Àwọn ìbejì àti aṣojú",
+    "filter": {
+      "open": "Àwọn ìṣẹ̀lẹ̀ tó ṣí",
+      "closed": "Àwọn ìṣẹ̀lẹ̀ tó tì",
+      "all": "Gbogbo àwọn ìṣẹ̀lẹ̀"
+    }
+  },
+  "newEpisode": {
+    "title": "Ìṣẹ̀lẹ̀ tuntun",
+    "about": "Ṣí ìṣẹ̀lẹ̀ fún aláìsàn ilé ìtọ́jú yìí kí o sì kọ ohun tí o rí sílẹ̀. Olùronú á wá dábàá àwọn àyẹ̀wò àìsàn, àwọn àyẹ̀wò, ìtọ́jú àti ètò ìtọ́jú.",
+    "who": "Aláìsàn àti ìdí",
+    "whoAbout": "Ọjọ́ orí àti ibalopọ̀ aláìsàn wá láti àkójọ aláìsàn ilé ìtọ́jú.",
+    "patient": "Aláìsàn",
+    "patientOption": "{initials}, {sex}, {age}, {language}",
+    "reason": "Ìdí ìbẹ̀wò",
+    "reasonHint": "Fún àpẹẹrẹ: Ibà fún ọjọ́ mẹ́ta",
+    "encounter": "Irú ìbẹ̀wò",
+    "weight": "Ìwọ̀n ara",
+    "avpu": "Ìpele ìmọ̀ràn",
+    "pregnancy": "Oyún",
+    "measurements": "Àwọn ìwọ̀n",
+    "measurementsAbout": "Fi àyè sílẹ̀ ní òfo bí a kò bá wọ̀n ọ́n.",
+    "findings": "Àwọn àbájáde",
+    "findingsAbout": "Fi àmì sí àbájáde kọ̀ọ̀kan tó wà. A máa kọ àbájáde tí a kò fi àmì sí gẹ́gẹ́ bí èyí tí a kò mọ̀.",
+    "capture": {
+      "question": "Àwọn àmì àìsàn",
+      "exam": "Àyẹ̀wò ara",
+      "lab": "Àbájáde yàrá ìwádìí"
+    },
+    "tests": "Àbájáde àyẹ̀wò",
+    "testsAbout": "Kọ àwọn àyẹ̀wò tí a ti ṣe sílẹ̀.",
+    "notDone": "A kò ṣe é",
+    "positive": "Dídára",
+    "negative": "Òdì",
+    "submit": "Ṣí ìṣẹ̀lẹ̀ náà",
+    "next": "Ibi iṣẹ́ á ṣí pẹ̀lú àwọn àbá olùronú.",
+    "role": "Ipa rẹ kò fàyè gbà ọ́ láti ṣí ìṣẹ̀lẹ̀.",
+    "failed": "A kò lè ṣí ìṣẹ̀lẹ̀ náà."
+  },
+  "encounter": {
+    "AMB": "Aláìsàn àìgbàdúró",
+    "EMER": "Pàjáwìrì",
+    "IMP": "Aláìsàn tó dúró",
+    "HH": "Ìbẹ̀wò ilé",
+    "VR": "Láti ọ̀nà jíjìn"
+  },
+  "avpu": {
+    "A": "Jí pépé",
+    "V": "Ó dáhùn sí ohùn",
+    "P": "Ó dáhùn sí ìrora",
+    "U": "Kò dáhùn"
+  },
+  "pregnancy": {
+    "none": "Kò lóyún",
+    "t1": "Oṣù mẹ́ta àkọ́kọ́",
+    "t2": "Oṣù mẹ́ta kejì",
+    "t3": "Oṣù mẹ́ta kẹta"
+  },
+  "measure": {
+    "temperature": "Ìgbóná ara",
+    "heart_rate": "Ìlù ọkàn",
+    "respiratory_rate": "Ìwọ̀n mímí",
+    "sbp": "Ẹ̀jẹ̀ ríru òkè",
+    "dbp": "Ẹ̀jẹ̀ ríru ìsàlẹ̀",
+    "spo2": "Atẹ́gùn nínú ẹ̀jẹ̀",
+    "glucose": "Ṣúgà ẹ̀jẹ̀",
+    "hb": "Haemoglobin",
+    "creatinine": "Creatinine"
+  },
+  "episodeActions": {
+    "refer": "Tọ́ka sí ibòmíràn",
+    "close": "Tì ìṣẹ̀lẹ̀",
+    "failed": "A kò lè parí ìgbésẹ̀ náà.",
+    "referred": "Ìtọ́kasí {id} jẹ́ {status}.",
+    "status": {
+      "sent": "a ti fi ránṣẹ́",
+      "queued": "ó wà nínú ìlà fún fífiránṣẹ́"
+    },
+    "closed": "A ti ti ìṣẹ̀lẹ̀ náà.",
+    "referTitle": "Tọ́ka sí {facility}",
+    "closeTitle": "Tì ìṣẹ̀lẹ̀ náà",
+    "urgency": "Ìkánjú",
+    "urgencies": {
+      "routine": "Déédé",
+      "urgent": "Kánjúkánjú",
+      "emergency": "Pàjáwìrì"
+    },
+    "reason": "Ìdí ìtọ́kasí",
+    "outcome": "Àbájáde ìṣẹ̀lẹ̀ náà",
+    "cancel": "Fagilé",
+    "send": "Fi ìtọ́kasí ránṣẹ́",
+    "confirmClose": "Tì ìṣẹ̀lẹ̀"
+  },
+  "twins": {
+    "members": "Àwọn ìbejì ọmọ ẹgbẹ́",
+    "membersAbout": "Àpótí kọ̀ọ̀kan jẹ́ ìbejì ọmọ ẹgbẹ́ kan ti ìbejì ènìyàn, pẹ̀lú ipò rẹ̀ báyìí. Ṣí àpótí kan fún ipò rẹ̀, àsọtẹ́lẹ̀ rẹ̀ àti àwọn aṣojú rẹ̀.",
+    "conductorAbout": "Olùdarí ń so àfojúsùn ìtọ́jú mọ́ àwòṣe àfojúsùn, ń mú àwọn olùṣètò ìbejì ọmọ ẹgbẹ́ ṣiṣẹ́ ní ìlànà ìkánjú ìtọ́jú, ó sì ń yanjú ìjàmbá láàrin àwọn ètò wọn."
+  },
+  "coupling": {
+    "title": "Bí àwọn ìbejì ṣe so mọ́ ara wọn",
+    "about": "Àwọn afọwọ́sopọ̀ ń gbé iye láti ìbejì ọmọ ẹgbẹ́ kan sí òmíràn, fún àpẹẹrẹ ìjáde ọkàn sí kíndìnrín.",
+    "notRunning": "Ìbejì ẹni yìí kò tíì ṣiṣẹ́. Ó ń bẹ̀rẹ̀ nígbà tí a kọ́kọ́ ka ìbejì.",
+    "count": "Àwọn afọwọ́sopọ̀ {count} láàrin àwọn ìbejì ọmọ ẹgbẹ́."
+  },
+  "twinAbout": {
+    "cardiovascular": "Ìlù ọkàn, ẹ̀jẹ̀ ríru àti ìjáde ọkàn.",
+    "respiratory": "Ìwọ̀n mímí, atẹ́gùn àti iṣẹ́ ẹ̀dọ̀fóró.",
+    "nervous": "Ìmọ̀ràn, ìfàṣẹ́yọ àti iṣẹ́ iṣan ara.",
+    "sensory": "Ríran àti gbígbọ́.",
+    "digestive": "Ikùn, ìfun àti oúnjẹ aṣaralóore.",
+    "hepatobiliary": "Iṣẹ́ ẹ̀dọ̀ àti bilirubin.",
+    "renal_urinary": "Iṣẹ́ kíndìnrín, omi ara àti ìtọ̀.",
+    "endocrine": "Ṣúgà, insulin àti àwọn họ́mọ̀nù.",
+    "immune_lymphatic": "Àkóràn, ibà àti ìwúwo.",
+    "haematological": "Haemoglobin, àwọn sẹ́ẹ̀lì ẹ̀jẹ̀ àti dídì ẹ̀jẹ̀.",
+    "musculoskeletal": "Iṣan, egungun, oríkèé àti ìrìn.",
+    "integumentary": "Awọ ara, ọgbẹ́ àti àwọn ibi tí ìtẹ̀ ti ń pa ara lára.",
+    "reproductive": "Oyún àti ìlera ìbímọ.",
+    "whole_body": "Ìgbóná ara, ìwọ̀n ara àti ìwọ́ntúnwọ̀nsì agbára.",
+    "behavioural_cognitive": "Ìṣesí, oorun, wàhálà àti ìrònú.",
+    "social": "Àtìlẹ́yìn, owó oṣù àti ọ̀nà sí ìtọ́jú.",
+    "population": "Bí àìsàn kọ̀ọ̀kan ṣe wọ́pọ̀ tó láàrin àwọn ènìyàn tó jọra."
+  },
+  "ask": {
+    "title": "Bi ìbejì náà",
+    "chat": "Ọ̀rọ̀ sísọ",
+    "aboutClinician": "Béèrè nípa àwọn kíkà tuntun aláìsàn yìí. Ìbejì náà ń dáhùn láti inú dátà aláìsàn fúnra rẹ̀.",
+    "titleOwn": "Bi ìbejì mi",
+    "aboutPatient": "Béèrè nípa àwọn kíkà rẹ ní èdè rẹ.",
+    "aboutPerson": "Béèrè nípa àwọn kíkà rẹ ní èdè rẹ. Ìbejì rẹ ń dáhùn láti inú dátà rẹ.",
+    "aboutCarer": "Béèrè nípa àwọn kíkà ẹni tí ò ń tọ́jú.",
+    "empty": "Kò sí ìfiránṣẹ́ síbẹ̀.",
+    "answeredBy": "{backend}: {model}",
+    "backend": {
+      "ollama": "Àwòṣe orí ayélujára",
+      "openai": "Àwòṣe orí ayélujára",
+      "slm": "Àwòṣe kékeré àdúgbò",
+      "offline": "Ìdáhùn àìsí ayélujára"
+    },
+    "thinking": "Ìbejì náà ń dáhùn",
+    "language": "Èdè",
+    "message": "Ìbéèrè rẹ",
+    "placeholder": "Fún àpẹẹrẹ: Báwo ni ẹ̀jẹ̀ ríru mi?",
+    "send": "Fi ránṣẹ́",
+    "role": "Ipa rẹ kò fàyè gbà ọ́ láti bá ìbejì yìí sọ̀rọ̀.",
+    "failed": "Ìbejì náà kò lè dáhùn."
+  },
+  "language": {
+    "title": "Bí ìbejì ṣe ń dáhùn",
+    "about": "Ọ̀rọ̀ sísọ ń gbìyànjú àwòṣe èdè kọ̀ọ̀kan ní ìlànà yìí. A ó lo èyí tó kọ́kọ́ dáhùn.",
+    "backend": {
+      "ollama": "Àwòṣe orí ayélujára (Ollama)",
+      "openai": "Àwòṣe orí ayélujára (OpenAI-compatible)",
+      "slm": "Àwòṣe kékeré àdúgbò",
+      "offline": "Ìdáhùn àìsí ayélujára"
+    },
+    "hostedDetail": "{model}, {keys, plural, one {kọ́kọ́rọ́ #} other {kọ́kọ́rọ́ # tó ń gba ìgbà}}",
+    "backendAbout": {
+      "slm": "Ó ń ṣiṣẹ́ lórí olupin yìí pẹ̀lú ohun ìbáramu èdè fún èdè kọ̀ọ̀kan.",
+      "offline": "Ó sọ ní gbangba pé kò sí àwòṣe tó dáhùn.",
+      "ollama": "Àwòṣe orí ayélujára.",
+      "openai": "Àwòṣe orí ayélujára."
+    },
+    "calls": "{count, plural, one {ìpè #} other {ìpè #}}",
+    "failures": "{count, plural, one {ìkùnà #} other {ìkùnà #}}",
+    "unavailable": "Ipò èdè kò sí lọ́wọ́lọ́wọ́."
+  },
+  "audit": {
+    "title": "Ìwé àyẹ̀wò",
+    "about": "Gbogbo ìbéèrè, ìpinnu àti ìṣe aṣojú ní ilé ìtọ́jú yìí, tuntun lákọ̀ọ́kọ́. Àkọsílẹ̀ kọ̀ọ̀kan ní hash àkọsílẹ̀ tó ṣáájú rẹ̀, nítorí náà àyípadà sí èyíkéyìí á fọ́ ẹ̀wọ̀n náà.",
+    "records": "Àwọn àkọsílẹ̀",
+    "recordsHint": "Àwọn àkọsílẹ̀ tuntun ti ilé ìtọ́jú yìí",
+    "denied": "A kọ̀",
+    "deniedHint": "Àwọn ìbéèrè àti ìṣe aṣojú tí ìlànà kọ̀",
+    "chain": "Ẹ̀wọ̀n hash",
+    "intact": "Wà ní pípé",
+    "broken": "Ti fọ́",
+    "chainHint": "Àkọsílẹ̀ kọ̀ọ̀kan so mọ́ èyí tó ṣáájú rẹ̀",
+    "agentActions": "Àwọn ìṣe aṣojú",
+    "agentHint": "Àwọn ìṣe tí aṣojú gbìyànjú",
+    "show": {
+      "all": "Gbogbo àwọn àkọsílẹ̀",
+      "denied": "Àwọn tí a kọ̀ nìkan"
+    },
+    "none": "Kò sí àkọsílẹ̀.",
+    "seq": "Àkọsílẹ̀",
+    "time": "Àkókò",
+    "actor": "Ta ni",
+    "action": "Kí ni",
+    "episode": "Ìṣẹ̀lẹ̀",
+    "outcome": "Àbájáde",
+    "viaAgent": "{agent} fún {role}",
+    "outcomes": {
+      "ok": "A gbà",
+      "denied": "A kọ̀",
+      "degraded": "Kò pé",
+      "error": "Àṣìṣe"
+    },
+    "episodeTitle": "Iṣẹ́ tó ṣẹlẹ̀",
+    "trail": "Iṣẹ́ tó ṣẹlẹ̀ fún aláìsàn yìí",
+    "episodeAbout": "Gbogbo ìbéèrè, ìpinnu àti ìṣe aṣojú tó kan aláìsàn yìí, tuntun lákọ̀ọ́kọ́."
+  },
+  "models": {
+    "overline": "Ìpele 4",
+    "title": "Ìwé orúkọ àwòṣe",
+    "about": "Gbogbo àwòṣe àwọn ìbejì pẹ̀lú ìpele ìṣòótọ́ wọn àti ìpele ìtújáde wọn.",
+    "tier": {
+      "T1": "Àwọn àwòṣe tí a kọ́",
+      "T2": "Àwọn àwòṣe ìṣiṣẹ́ ara",
+      "T3": "Àwọn àwòṣe ipò ìtọ́kasí"
+    },
+    "tierAbout": {
+      "T1": "A kọ́ tàbí a ṣe ìwọ̀ntúnwọ̀nsì wọn lórí dátà, pẹ̀lú òṣùwọ̀n ìfọwọ́sí.",
+      "T2": "Àwọn ìgbékalẹ̀ tí a tẹ̀jáde pẹ̀lú àwọn òṣùwọ̀n tí a tẹ̀jáde, tí a ṣe fún ẹnì kọ̀ọ̀kan nípa ìwọ̀ntúnwọ̀nsì.",
+      "T3": "Àwọn ipò ìtọ́kasí pẹ̀lú àwọn ààlà, tí àwọn afọwọ́sopọ̀ àti àwọn kíkà ń darí."
+    },
+    "registry": "Àwọn àwòṣe tí a forúkọ sílẹ̀",
+    "stagerAbout": "Gbé ẹ̀yà kan lọ sí Staging, lẹ́yìn náà sí Production. Òṣìṣẹ́ ààbò ìtọ́jú nìkan ló lè tú u sí Production.",
+    "viewerAbout": "Ipa rẹ lè ka ìwé orúkọ náà. Òṣìṣẹ́ ààbò ìtọ́jú ló ń ṣàkóso àwọn ìtújáde.",
+    "model": "Àwòṣe",
+    "twin": "Ìbejì",
+    "tierLabel": "Ìpele",
+    "stage": "Ìgbésẹ̀",
+    "actions": "Ìtújáde",
+    "stages": {
+      "None": "Kò sí ní ìgbésẹ̀",
+      "Staging": "Staging",
+      "Production": "Production",
+      "Archived": "Ti wà nínú àkójọpọ̀"
+    },
+    "to": {
+      "Staging": "Sí staging",
+      "Production": "Tú u jáde",
+      "Archived": "Kó o pamọ́"
+    },
+    "rollback": "Dá padà",
+    "roleRefused": "Ipa rẹ kò lè ṣe àyípadà yìí.",
+    "failed": "A kò ṣe àyípadà náà."
+  },
+  "population": {
+    "title": "Ìbejì àwùjọ ènìyàn",
+    "about": "Ohun tó wọ́pọ̀ láàrin àwọn ènìyàn bí aláìsàn. Olùronú àyẹ̀wò àìsàn ń lo àwọn ìsọtẹ́lẹ̀ àti ìwọ̀n déédé wọ̀nyí, àwọn olùwádìí sì lè yọ àwọn ẹgbẹ́ tí a ti yọ orúkọ kúrò.",
+    "priors": "Ìsọtẹ́lẹ̀ ìwọ́pọ̀ àìsàn",
+    "priorsAbout": "Bí àìsàn kọ̀ọ̀kan ṣe wọ́pọ̀ tó fún ọjọ́ orí, ibalopọ̀, agbègbè àti àkókò ọdún, láti àwọn orísun tí a tẹ̀jáde àti àtúnṣe àjùmọ̀ṣe.",
+    "norms": "Àwọn ìwọ̀n déédé ìtọ́kasí",
+    "normsAbout": "Ààlà déédé ti ìwọ̀n kọ̀ọ̀kan fún ọjọ́ orí àti ibalopọ̀.",
+    "cohort": "Ẹgbẹ́ tí a ti yọ orúkọ kúrò",
+    "cohortAbout": "Àwọn kíkà gbogbo ẹni tó fọwọ́ sí lílo fún ìwádìí tàbí ìlera gbogbo ènìyàn. Differential privacy ń fi ariwo tí a ṣe ìwọ̀ntúnwọ̀nsì rẹ̀ kún un, ó sì ń gba lára ìṣúná ìpamọ́ rẹ. k-anonymity (fífi ẹni pamọ́ nínú ẹgbẹ́) ń fi gbogbo ẹgbẹ́ tó kéré ju k pamọ́.",
+    "age": "Ọjọ́ orí",
+    "sex": "Ibalopọ̀",
+    "female": "Obìnrin",
+    "male": "Ọkùnrin",
+    "region": "Agbègbè Ìpínlẹ̀ Èkó",
+    "regions": {
+      "island_and_coast": "Erékùṣù àti etíkun",
+      "mainland_core": "Àárín ilẹ̀ ńlá",
+      "north_west": "Àríwá ìwọ̀-oòrùn",
+      "west_and_ikorodu": "Ìwọ̀-oòrùn àti Ìkòròdú"
+    },
+    "season": "Àkókò ọdún",
+    "rainy": "Ìgbà òjò",
+    "dry": "Ìgbà ẹ̀rùn",
+    "show": "Fihàn",
+    "privacy": "Ọ̀nà ìpamọ́",
+    "dp": "Differential privacy",
+    "k": "k-anonymity",
+    "epsilon": "Epsilon",
+    "kValue": "k",
+    "extract": "Yọ jáde",
+    "privacyReport": "Ìròyìn ìpamọ́",
+    "aggregates": "Àwọn àpapọ̀"
+  },
+  "care": {
+    "title": "Ìtọ́jú mi",
+    "about": "Àwọn ìṣẹ̀lẹ̀ ìtọ́jú rẹ, ohun tí àwọn oníṣègùn rẹ rí, àti àwọn yíyàn rẹ nípa dátà rẹ.",
+    "aboutProxy": "Àwọn ìṣẹ̀lẹ̀ ìtọ́jú ẹni tí ò ń dúró fún.",
+    "episodes": "Àwọn ìṣẹ̀lẹ̀",
+    "since": "Láti {date}, pẹ̀lú {clinician}",
+    "open": "Ṣí",
+    "none": "Kò sí ìṣẹ̀lẹ̀ síbẹ̀.",
+    "episodeAbout": "Ohun tí ẹgbẹ́ ìtọ́jú rẹ rí àti ohun tó ń bọ̀.",
+    "resultsAbout": "Àbájáde kọ̀ọ̀kan ní èdè gbangba. Oníṣègùn rẹ ń ṣàyẹ̀wò gbogbo àbá kí a tó lò ó.",
+    "kind": {
+      "diagnosis": "Àyẹ̀wò àìsàn",
+      "test": "Àwọn àyẹ̀wò",
+      "treatment": "Ìtọ́jú",
+      "care": "Ètò ìtọ́jú"
+    },
+    "status": {
+      "proposed": "Oníṣègùn rẹ ń ṣàyẹ̀wò èyí",
+      "accepted": "Oníṣègùn rẹ ti gbà á",
+      "edited": "Oníṣègùn rẹ ti yí i padà",
+      "overridden": "Oníṣègùn rẹ ti yí i padà",
+      "declined": "A kò lò ó",
+      "signed": "Oníṣègùn rẹ ti fọwọ́ sí i"
+    },
+    "noResults": "Kò sí àbájáde síbẹ̀."
+  },
+  "consent": {
+    "title": "Ìfọwọ́sí mi",
+    "about": "Yan ohun tí ìbejì rẹ lè pín àti fún àwọn ète wo.",
+    "purposes": "Mo fàyè gba lílo dátà mi fún",
+    "purpose": {
+      "care": "Ìtọ́jú mi",
+      "emergency": "Àwọn pàjáwìrì",
+      "self_management": "Ṣíṣàkóso ìlera ara mi",
+      "public_health": "Ìlera gbogbo ènìyàn",
+      "research": "Ìwádìí"
+    },
+    "categories": "Ìbejì mi lè lo",
+    "categoriesAbout": "Pa irú dátà kan láti dá a dúró lọ́wọ́ gbogbo oníṣègùn àti aṣojú.",
+    "category": {
+      "vital_signs_and_device_data": "Àwọn àmì pàtàkì ara àti dátà ẹ̀rọ",
+      "laboratory_and_imaging": "Àbájáde yàrá ìwádìí àti àwòrán ìṣègùn",
+      "medicines": "Àwọn òògùn",
+      "genome": "Àbùdá ara (genome)",
+      "knowledge_graph_and_notes": "Àwọn ìwé ìlera àti àkọsílẹ̀",
+      "body_models_and_simulation": "Àwọn àwòṣe ara àti ìṣàfarawé",
+      "explanations": "Àwọn àlàyé",
+      "conversation_and_speech": "Ọ̀rọ̀ sísọ àti ohùn"
+    },
+    "save": "Fi ìfọwọ́sí mi pamọ́",
+    "saved": "A ti fi ìfọwọ́sí rẹ pamọ́.",
+    "failed": "A kò lè fi ìfọwọ́sí rẹ pamọ́."
+  },
+  "preferences": {
+    "title": "Àwọn ààyò mi",
+    "about": "Sọ ohun tó ṣe pàtàkì fún ọ fún ẹgbẹ́ ìtọ́jú rẹ. A ń tò àwọn àṣàyàn ìtọ́jú pẹ̀lú àwọn ìdáhùn wọ̀nyí.",
+    "prioritiesAbout": "Fún ọ̀kọ̀ọ̀kan ní nọ́mbà láti 1 (kò já mọ́ nǹkan púpọ̀) sí 5 (ó ṣe pàtàkì jùlọ).",
+    "save": "Fi àwọn ààyò mi pamọ́",
+    "saved": "A ti fi àwọn ààyò rẹ pamọ́.",
+    "failed": "A kò lè fi àwọn ààyò rẹ pamọ́.",
+    "option": {
+      "app": "App",
+      "sms": "Ìfiránṣẹ́ SMS",
+      "ussd": "USSD",
+      "voice": "Ìpè ohùn"
+    }
+  },
+  "message": {
+    "title": "Fi ìfiránṣẹ́ sí ẹgbẹ́ ìtọ́jú mi",
+    "about": "Ẹgbẹ́ ìtọ́jú rẹ ń ka ìfiránṣẹ́ rẹ.",
+    "label": "Ìfiránṣẹ́ rẹ",
+    "send": "Fi ránṣẹ́",
+    "failed": "A kò lè fi ìfiránṣẹ́ rẹ ránṣẹ́."
+  },
+  "twinHome": {
+    "overline": "Ìbejì ènìyàn fún gbogbo ayé",
+    "title": "Ìbejì mi",
+    "about": "Ìbejì rẹ ń pa dátà ara rẹ, àwọn àwòṣe àti àyíká mọ́ fún gbogbo ayé. Tìrẹ ni yálà o ń ṣàìsàn tàbí o kò ṣàìsàn.",
+    "download": "Gba àwòrán ìmọ̀ ìlera mi",
+    "lifelong": "Àwọn oníṣègùn ń rí ìbejì rẹ fún àwọn ète tí o fọwọ́ sí nìkan."
+  },
+  "cared": {
+    "title": "Àwọn tí mo ń tọ́jú",
+    "about": "Àwọn kíkà ẹni kọ̀ọ̀kan tó fún ọ ní àyè.",
+    "none": "Kò sí ẹni tó fún ọ ní àyè síbẹ̀.",
+    "person": "Ẹni {n}",
+    "personAbout": "Àwọn kíkà ọ̀sẹ̀ tó kọjá."
+  },
+  "readings": {
+    "denied": "Ẹni yìí kò pín àwọn kíkà rẹ̀ pẹ̀lú rẹ.",
+    "none": "Kò sí kíkà láti ọ̀sẹ̀ tó kọjá.",
+    "chart": "Àwọn kíkà {measure}"
+  },
+  "system": {
+    "overline": "Nípa ètò náà",
+    "title": "Bí ATRA ṣe ń ṣiṣẹ́",
+    "about": "ATRA Health ń so ìbejì dígítà méjì pọ̀ fún ẹni kọ̀ọ̀kan. Àwọn aṣojú ń pèsè iṣẹ́ ìtọ́jú nínú ìbejì kọ̀ọ̀kan, àwọn oníṣègùn tí a dárúkọ sì ń ṣe gbogbo ìpinnu.",
+    "twins": {
+      "ahdt": {
+        "short": "AHDT",
+        "name": "Ìbejì Dígítà Ènìyàn Aláṣojú",
+        "about": "Fún gbogbo ayé. Ó ní dátà ara ẹni, àwọn àwòṣe àti àyíká nípasẹ̀ ìbejì ọmọ ẹgbẹ́ mẹ́tàdínlógún, láti ọkàn dé ìgbésí ayé láwùjọ. Ó wà yálà ẹni náà ń ṣàìsàn tàbí kò ṣàìsàn."
+      },
+      "apdt": {
+        "short": "APDT",
+        "name": "Ìbejì Dígítà Aláìsàn Aláṣojú",
+        "about": "A ṣí i nígbà tí ìṣẹ̀lẹ̀ ìtọ́jú bẹ̀rẹ̀ ní ilé ìtọ́jú, a sì tì í nígbà tó parí. Ó ní ìtàn, àyẹ̀wò ara, àwọn àyẹ̀wò, àwọn àyẹ̀wò àìsàn, àwọn ìwé òògùn àti àwọn ìpinnu ìṣẹ̀lẹ̀ náà."
+      }
+    },
+    "workflow": "Láti dídé dé ìpinnu",
+    "workflowAbout": "Ohun tó ń ṣẹlẹ̀ sí aláìsàn kan, ìgbésẹ̀ lẹ́yìn ìgbésẹ̀.",
+    "steps": {
+      "open": {
+        "title": "Oníṣègùn ṣí ìṣẹ̀lẹ̀",
+        "about": "Dókítà, nọ́ọ̀sì tàbí òṣìṣẹ́ ìlera àdúgbò yan aláìsàn àti ìdí ìbẹ̀wò."
+      },
+      "intake": {
+        "title": "A kọ ìgbàlejò sílẹ̀",
+        "about": "Àwọn àmì àìsàn, àbájáde àyẹ̀wò ara, àwọn ìwọ̀n àti àbájáde àyẹ̀wò di àkọsílẹ̀ FHIR ti ìṣẹ̀lẹ̀ náà."
+      },
+      "reason": {
+        "title": "Olùronú ń dábàá",
+        "about": "Ó ń tò àwọn àyẹ̀wò àìsàn, ó ń yan àwọn àyẹ̀wò nípa iye àti owó, ó ń ṣàyẹ̀wò ààbò ìtọ́jú, ó sì ń ṣàfarawé wọn lórí ìbejì aláìsàn. Àbá kọ̀ọ̀kan ní àpò àlàyé pẹ̀lú ẹ̀rí àti orísun rẹ̀."
+      },
+      "agents": {
+        "title": "Àwọn aṣojú ń pèsè ìpinnu kọ̀ọ̀kan",
+        "about": "Àwọn olùṣètò àyẹ̀wò àìsàn, ìtọ́jú àti ìtọ́jú àtẹ̀lé ń kó ẹ̀rí jọ láti ìbejì ènìyàn, wọ́n sì dúró ní ibi ìpinnu kọ̀ọ̀kan."
+      },
+      "decide": {
+        "title": "Dókítà ń pinnu",
+        "about": "Gba, ṣàtúnṣe tàbí kọ àyẹ̀wò àìsàn. Fọwọ́ sí ìwé òògùn. A kò lè fọwọ́ sí ìwé òògùn tó ní ìṣòro ààbò tó ń dí i lọ́wọ́ títí a ó fi yí i padà."
+      },
+      "verify": {
+        "title": "Oníṣègùn òògùn ń jẹ́rìí sí i",
+        "about": "Ìwé òògùn tí a fọwọ́ sí dé àkójọ iṣẹ́ oníṣègùn òògùn ní ìgbà kan náà, fún jíjẹ́rìí sí, bíbéèrè ìbéèrè tàbí kíkọ̀."
+      },
+      "explain": {
+        "title": "Aláìsàn rí àlàyé",
+        "about": "Àbájáde kọ̀ọ̀kan ní èdè gbangba ní èdè aláìsàn, pẹ̀lú àwọn ìṣàkóso ìfọwọ́sí àti ààyò."
+      },
+      "twin": {
+        "title": "Ìbejì ènìyàn ń kọ́ ẹ̀kọ́ lọ",
+        "about": "Àwọn kíkà láti ẹ̀rọ àti ilé ìtọ́jú ń ṣe àtúnṣe àwọn ìbejì ọmọ ẹgbẹ́, tí àwọn aṣojú wọn ń ṣọ́ àwọn àfojúsùn wọn."
+      }
+    },
+    "layers": "Àwọn ìpele ATRA mẹ́jọ",
+    "layersAbout": "Àwọn ìpele ìsàlẹ̀ ń ṣe àtìlẹ́yìn àwọn ti òkè.",
+    "layer": {
+      "1": {
+        "name": "Ara",
+        "about": "Ẹni náà, àwọn ẹ̀rọ àti ohun amúniṣiṣẹ́ rẹ̀, àti àwọn oníṣègùn tó ń tẹ dátà sínú rẹ̀."
+      },
+      "2": {
+        "name": "Nẹ́tíwọ́ọ̀kì àti ìsopọ̀ sí cloud",
+        "about": "Iṣẹ́ etí ní ilé ìtọ́jú tàbí ilé kọ̀ọ̀kan, àwọn ọ̀nà ẹ̀rọ àti fífipamọ́-kí-a-tó-fi-ránṣẹ́."
+      },
+      "3": {
+        "name": "Gbígba dátà",
+        "about": "Ìfọwọ́sí, ìṣọ̀kan ẹyọ, fífi orúkọ èké bò, àwọn ibi ìpamọ́ dátà àti àwọn àwòrán ìmọ̀."
+      },
+      "4": {
+        "name": "Àwòṣe",
+        "about": "Àwọn àwòṣe ìṣiṣẹ́ ara, àwọn àwòṣe ẹ̀kọ́ ẹ̀rọ tí a kọ́, àti àwọn àwòṣe èdè àti ohùn."
+      },
+      "5": {
+        "name": "AI tó ṣeé ṣàlàyé",
+        "about": "Olùṣàlàyé fún àbájáde àwòṣe kọ̀ọ̀kan."
+      },
+      "6": {
+        "name": "Iṣẹ́",
+        "about": "Dátà, àwọn àwòṣe àti ìṣàfarawé, àwọn àlàyé, àwọn iṣẹ́ ìmọ̀ àti àwọn ìsopọ̀ láàrin àwọn ìbejì."
+      },
+      "7": {
+        "name": "Aṣojú",
+        "about": "Àwọn aṣojú òṣìṣẹ́, àwọn olùṣètò, olùdarí àti API ti ìta."
+      },
+      "8": {
+        "name": "Ìlò",
+        "about": "App wẹ́ẹ̀bù yìí, àwọn app alágbèéká, SMS, USSD àti ohùn."
+      }
+    },
+    "ahdtAgents": "Àwọn aṣojú ìbejì ènìyàn",
+    "ahdtAgentsAbout": "Àwọn òṣìṣẹ́ ń ṣe iṣẹ́ kan, olùṣètò ń darí ìbejì ọmọ ẹgbẹ́ kọ̀ọ̀kan, olùdarí sì ń ṣètò wọn.",
+    "apdtAgents": "Àwọn aṣojú ìbejì aláìsàn",
+    "apdtAgentsAbout": "Wọ́n ń pèsè iṣẹ́ ìtọ́jú. Gbogbo ìpinnu wà lọ́wọ́ oníṣègùn tí a dárúkọ.",
+    "agent": {
+      "monitoring": {
+        "name": "Ìṣọ́",
+        "about": "Ó ń ka ipò ìbejì àti ìgbà tí a kọ́kọ́ ṣàkíyèsí pápá kọ̀ọ̀kan kẹ́yìn."
+      },
+      "anomaly": {
+        "name": "Àìbáradé",
+        "about": "Ó ń ṣe ìdíwọ̀n bí ipò ìbejì ṣe le tó."
+      },
+      "forecasting": {
+        "name": "Àsọtẹ́lẹ̀",
+        "about": "Ó ń ṣe àwọn àsọtẹ́lẹ̀ tí àwọn àfojúsùn ìbejì nílò."
+      },
+      "explanation": {
+        "name": "Àlàyé",
+        "about": "Ó ń ṣàlàyé àwọn àfojúsùn tí kò ṣẹ àti àbájáde ní ìpele ìṣọ́ra tàbí ìkìlọ̀."
+      },
+      "recommendation": {
+        "name": "Àbá",
+        "about": "Ó ń dábàá àwọn ìṣe àtìlẹ́yìn tí a kọ sínú ibi ìpamọ́ ìmọ̀, ọ̀kọ̀ọ̀kan pẹ̀lú orísun rẹ̀."
+      },
+      "orchestrator": {
+        "name": "Olùṣètò ìbejì",
+        "about": "Ó ń ṣàkíyèsí, ń ṣe àtúnṣe ipò, ń ṣàyẹ̀wò àwọn àfojúsùn, ń ṣètò, ń ṣe iṣẹ́, ń ṣàlàyé, ó sì ń ròyìn fún ìbejì ọmọ ẹgbẹ́ kan."
+      },
+      "conductor": {
+        "name": "Olùdarí",
+        "about": "Ó ń sọ àfojúsùn ìtọ́jú ẹni di àwọn àfojúsùn kéékèèké, ó ń tò àwọn olùṣètò, ó sì ń yanjú ìjàmbá láàrin àwọn ètò wọn."
+      },
+      "history": {
+        "name": "Gbígba ìtàn",
+        "about": "Ó ń kọ àwọn ohun tí ìṣẹ̀lẹ̀ náà ṣì nílò."
+      },
+      "evidence": {
+        "name": "Kíkó ẹ̀rí jọ",
+        "about": "Ó ń kó àwọn kíkà, àwọn òògùn, ipò ìbejì àti àwọn àlàyé jọ láti ìbejì ènìyàn."
+      },
+      "differential": {
+        "name": "Àyẹ̀wò àìsàn tó ṣeé ṣe",
+        "about": "Ó ń tò àwọn àyẹ̀wò àìsàn, ó sì ń kọ́ àpò àlàyé wọn."
+      },
+      "investigation": {
+        "name": "Ìwádìí",
+        "about": "Ó ń yan àwọn àyẹ̀wò tó lè yí àyẹ̀wò àìsàn padà jùlọ fún owó wọn."
+      },
+      "treatment": {
+        "name": "Ṣíṣètò ìtọ́jú",
+        "about": "Ó ń kọ àwọn àṣàyàn, ó sì ń ṣàfarawé àwọn mẹ́ta àkọ́kọ́ lórí ìbejì aláìsàn."
+      },
+      "pharmacotherapy": {
+        "name": "Ìtọ́jú pẹ̀lú òògùn",
+        "about": "Ó ń ṣàyẹ̀wò ìbáṣepọ̀ òògùn, kíndìnrín, oyún àti àbùdá ara fún ìwọ̀n òògùn kọ̀ọ̀kan."
+      },
+      "guard": {
+        "name": "Olùṣọ́ ààbò àti ìfọwọ́sí",
+        "about": "Ó ń ṣàyẹ̀wò ìṣe aṣojú kọ̀ọ̀kan kí ó tó ṣiṣẹ́."
+      }
+    },
+    "safety": "Bí ètò náà ṣe ń jẹ́ kí àwọn oníṣègùn máa darí",
+    "safetyAbout": "Ìdánwò méjì tó dá dúró ń dá aṣojú dúró láti pinnu ọ̀rọ̀ ìtọ́jú.",
+    "safetyItem": {
+      "guard": {
+        "name": "Àwọn ìpele òmìnira",
+        "about": "Irú ìṣe kọ̀ọ̀kan ní ìpele tó wà ní ìpìlẹ̀, láti fi ìsọfúnni sí ẹ̀gbẹ́ dé kò gbọdọ̀ rárá. Aṣojú kò gbọdọ̀ fọwọ́ sí, pàṣẹ tàbí pín òògùn rárá."
+      },
+      "human": {
+        "name": "Ènìyàn ní ìpinnu kọ̀ọ̀kan",
+        "about": "API ń gba ìpinnu láti ọ̀dọ̀ ènìyàn tó ní ipa tí ìgbésẹ̀ náà nílò nìkan, kò gba láti ọ̀dọ̀ aṣojú tàbí iṣẹ́ rí."
+      },
+      "consent": {
+        "name": "Ìfọwọ́sí",
+        "about": "Ẹnì kan lè dá irú dátà èyíkéyìí dúró. Ìpè irinṣẹ́ kọ̀ọ̀kan ń kọ́kọ́ ṣàyẹ̀wò ìfọwọ́sí ẹni náà."
+      },
+      "audit": {
+        "name": "Àyẹ̀wò",
+        "about": "A kọ gbogbo ìbéèrè, ìpinnu àti ìkọ̀ sínú ìwé àyẹ̀wò ẹ̀wọ̀n hash."
+      }
+    },
+    "members": "Àwọn ìbejì ọmọ ẹgbẹ́ mẹ́tàdínlógún",
+    "membersAbout": "Ìbejì ènìyàn jẹ́ àjùmọ̀ṣepọ̀ àwọn ìbejì wọ̀nyí. Ọ̀kọ̀ọ̀kan ní àwọn àwòṣe àti àwọn àfojúsùn rẹ̀.",
+    "models": "Àwọn àwòṣe",
+    "modelsAbout": "Àwòṣe kọ̀ọ̀kan ní ìpele ìṣòótọ́ tó sọ bí a ṣe kọ́ ọ.",
+    "modelCount": {
+      "T2": "43",
+      "T3": "24",
+      "T1": "19"
+    },
+    "services": "Àwọn iṣẹ́ tó ń ṣiṣẹ́",
+    "servicesAbout": "Àwọn iṣẹ́ tó wà lẹ́yìn app yìí àti bóyá ọ̀kọ̀ọ̀kan ń dáhùn báyìí.",
+    "service": {
+      "apdt": {
+        "name": "Ìbejì aláìsàn",
+        "about": "Àwọn ìṣẹ̀lẹ̀, olùronú àti àwọn ìpinnu"
+      },
+      "ahdt": {
+        "name": "Ìbejì ènìyàn",
+        "about": "Àwọn ìbejì ọmọ ẹgbẹ́, àwọn àwòṣe, àwọn aṣojú àti èdè"
+      },
+      "population": {
+        "name": "Ìbejì àwùjọ ènìyàn",
+        "about": "Àwọn ìsọtẹ́lẹ̀, ìwọ̀n déédé àti àwọn ẹgbẹ́"
+      },
+      "edge": {
+        "name": "Etí",
+        "about": "Àwọn ẹ̀rọ àti àwọn àwòṣe orí ẹ̀rọ"
+      },
+      "channels": {
+        "name": "Àwọn ọ̀nà",
+        "about": "SMS, USSD àti ohùn"
+      },
+      "opa": {
+        "name": "Ẹ̀rọ ìlànà",
+        "about": "Àwọn òfin ipa, ilé ìtọ́jú àti ìfọwọ́sí"
+      }
+    },
+    "up": "Ń ṣiṣẹ́",
+    "down": "Kò dáhùn",
+    "personas": "Àwọn aláìsàn àyẹ̀wò",
+    "personasAbout": "Àwọn aláìsàn àtọwọ́dá mẹ́fà. Kò sí ẹni gidi nínú wọn.",
+    "persona": "Aláìsàn",
+    "facility": "Ilé ìtọ́jú",
+    "scenario": "Ìṣẹ̀lẹ̀ àpẹẹrẹ",
+    "tests": "Ohun tó fihàn",
+    "persona_": {
+      "ao": {
+        "who": "A.O., obìnrin, 47",
+        "scenario": "Ibà (malaria) tí kò le",
+        "shows": "Àpẹẹrẹ iṣẹ́: àyẹ̀wò àìsàn tó ṣeé ṣe, àwọn àyẹ̀wò, ìtọ́jú àti àlàyé"
+      },
+      "bm": {
+        "who": "B.M., ọkùnrin, 8",
+        "scenario": "Ibà (malaria) tó le pẹ̀lú ìmọ̀ràn tó ń dín kù àti ṣúgà ẹ̀jẹ̀ tó kéré jù",
+        "shows": "Bí ara ṣe ń burú sí i, àmì ìkìlọ̀ ọ̀wọ́ ọmọdé àti olùdúró"
+      },
+      "cn": {
+        "who": "C.N., obìnrin, 29",
+        "scenario": "Àkóràn kíndìnrín ní oyún ọ̀sẹ̀ méjìlélógún",
+        "shows": "Àwọn àṣàyàn ìtọ́jú tó ń yípadà nígbà oyún"
+      },
+      "de": {
+        "who": "D.E., ọkùnrin, 58",
+        "scenario": "Ẹ̀jẹ̀ ríru, àtọ̀gbẹ irú kejì àti àìsàn kíndìnrín",
+        "shows": "Ìwọ̀n òògùn tí a ṣe fún kíndìnrín àti àfojúsùn ìtọ́jú olùdarí"
+      },
+      "ef": {
+        "who": "E.F., obìnrin, 19",
+        "scenario": "Ìgbà ìrora àìsàn sẹ́ẹ̀lì ẹ̀jẹ̀ (sickle cell)",
+        "shows": "Àwòṣe ewu ìrora àti àlàyé aláìsàn"
+      },
+      "gh": {
+        "who": "G.H., ọkùnrin, 35",
+        "scenario": "Ìwádìí ikọ́ ẹ̀gbẹ (tuberculosis) lórí ìtọ́jú antiretroviral",
+        "shows": "Ìlà oníṣègùn òògùn, ìbáṣepọ̀ òògùn tó ń dí ìṣe àti àbùdá ara tí a dá dúró"
+      }
+    }
+  }
+}

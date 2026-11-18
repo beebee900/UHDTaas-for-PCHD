@@ -1,0 +1,14 @@
+.venv
+.venv-scispacy/
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+var
+deploy/pki/out/
+deploy/keycloak/demo-users.local.env
+deploy/keycloak/demo-logins.local.txt
+.env
+firmware/esp32/.pio/
+firmware/esp32/include/secrets.h

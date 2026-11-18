@@ -1,0 +1,67 @@
+kind: hepatobiliary
+name: Hepatobiliary DT
+referent: Liver, gallbladder and biliary tree
+fields:
+- name: alt
+  loinc: 1742-6
+  ucum: U/L
+  ref: range.alt
+  source:
+  - lab
+- name: ast
+  loinc: 1920-8
+  ucum: U/L
+  ref: range.ast
+  source:
+  - lab
+- name: bilirubin
+  loinc: 14631-6
+  ucum: umol/L
+  ref: range.bilirubin
+  source:
+  - lab
+- name: albumin
+  loinc: 1751-7
+  ucum: g/dL
+  ref: range.albumin
+  source:
+  - lab
+- name: clearance_factor
+  ucum: '1'
+  ref: range.clearance_factor
+  source:
+  - derived
+models:
+- ahdt.hepatobiliary.liver_drug_clearance_capacity
+- ahdt.hepatobiliary.hepatocyte_metabolism_and_detoxification
+- ahdt.hepatobiliary.gallbladder_and_biliary_tree
+owns_instances:
+- UBERON:0002107
+reads_facets:
+- instance: UBERON:0002113
+  facet: renal_function
+standing_goals:
+- id: hep.function_current
+  text: Keep liver function and clearance capacity current
+  check:
+    kind: freshness
+    params:
+      fields:
+      - alt
+      - bilirubin
+      - clearance_factor
+      max_age_s: 604800
+- id: hep.clearance_flag
+  text: Flag reduced clearance for prescribers
+  check:
+    kind: threshold
+    params:
+      field: clearance_factor
+      below:
+        kb: goal.hep.clearance_factor
+connectors_out:
+- HepaticClearanceConnector
+- SystemToWholeBodyConnector
+connectors_in:
+- NormsConnector
+- RenalHepatobiliaryConnector

@@ -1,0 +1,142 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "preferences",
+  "url": "https://atra.health/fhir/Questionnaire/preferences",
+  "version": "1.0.0",
+  "status": "active",
+  "title": "How I want my care",
+  "item": [
+    {
+      "linkId": "language",
+      "text": "Language",
+      "type": "choice",
+      "required": true,
+      "answerOption": [
+        {
+          "valueCoding": {
+            "code": "en",
+            "display": "en"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "ha",
+            "display": "ha"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "ig",
+            "display": "ig"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "yo",
+            "display": "yo"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "pcm",
+            "display": "pcm"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "channel",
+      "text": "How should we reach you?",
+      "type": "choice",
+      "required": true,
+      "answerOption": [
+        {
+          "valueCoding": {
+            "code": "app",
+            "display": "app"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "sms",
+            "display": "sms"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "ussd",
+            "display": "ussd"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "voice",
+            "display": "voice"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "literacy",
+      "text": "How often do you need help reading health information?",
+      "type": "choice",
+      "answerOption": [
+        {
+          "valueCoding": {
+            "code": "never",
+            "display": "Never"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "sometimes",
+            "display": "Sometimes"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "often",
+            "display": "Often"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "priorities",
+      "text": "What matters most to you in treatment?",
+      "type": "group",
+      "item": [
+        {
+          "linkId": "priority.effectiveness",
+          "text": "That it works best",
+          "type": "integer"
+        },
+        {
+          "linkId": "priority.cost",
+          "text": "That it costs less",
+          "type": "integer"
+        },
+        {
+          "linkId": "priority.side_effects",
+          "text": "Fewer side effects",
+          "type": "integer"
+        },
+        {
+          "linkId": "priority.travel",
+          "text": "Less travel to the clinic",
+          "type": "integer"
+        },
+        {
+          "linkId": "priority.time",
+          "text": "Shorter treatment",
+          "type": "integer"
+        }
+      ]
+    },
+    {
+      "linkId": "budget_ngn",
+      "text": "How much can you spend on this treatment (naira)?",
+      "type": "integer"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "$id": "https://atra.local/schemas/tools/ahdt.data.medications.args.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "active_only": {
+      "default": false,
+      "title": "Active Only",
+      "type": "boolean"
+    },
+    "as_of": {
+      "anyOf": [
+        {
+          "format": "date-time",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "As Of"
+    },
+    "hdt_id": {
+      "pattern": "^hdt-[0-9a-f]{12}$",
+      "title": "Hdt Id",
+      "type": "string"
+    }
+  },
+  "required": [
+    "hdt_id"
+  ],
+  "title": "MedicationsArgs",
+  "type": "object"
+}

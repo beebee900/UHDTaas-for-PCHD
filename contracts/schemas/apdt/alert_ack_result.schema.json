@@ -1,0 +1,27 @@
+{
+  "$id": "https://atra.local/schemas/apdt/alert_ack_result.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "acknowledged_at": {
+      "format": "date-time",
+      "title": "Acknowledged At",
+      "type": "string"
+    },
+    "acknowledged_by": {
+      "title": "Acknowledged By",
+      "type": "string"
+    },
+    "alert_id": {
+      "title": "Alert Id",
+      "type": "string"
+    }
+  },
+  "required": [
+    "alert_id",
+    "acknowledged_by",
+    "acknowledged_at"
+  ],
+  "title": "AlertAckResult",
+  "type": "object"
+}

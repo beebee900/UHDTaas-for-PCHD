@@ -1,0 +1,47 @@
+{
+ "en": {
+  "voice": "mms-tts-eng",
+  "seconds": 16.9,
+  "text": "Acute kidney injury is a health condition that your care team has recorded for you. Your doctor or nurse can tell you more about it. Anaemia is a health condition that your care team has recorded for you. Your doctor or nurse can tell you more about it.",
+  "transcript": "Tute kidney injury is a health condition that your care team has recorded for you. Your doctor or nurse can tell you more about it. Anemia is a health condition that your care team has recorded for you. Your doctor or nurse can tell you more about it.",
+  "wer": 0.041666666666666664,
+  "chrf": 97.48167260693347,
+  "stt_seconds": 21.8
+ },
+ "yo": {
+  "voice": "mms-tts-yor",
+  "seconds": 16.5,
+  "text": "Bẹ́ẹ̀ ni, o lè mú ìyọlẹ́nu rẹ kúrò ní àkókò yòówù kó o fẹ́. Mo kíyè sí i pé ó lè ṣòro fún ẹ láti máa lo oògùn rẹ déédéé. Ǹjẹ́ o fẹ́ ìrànlọ́wọ́? Mo kíyè sí i pé ó lè ṣòro fún ẹ láti máa lo oògùn rẹ déédéé. Ṣé o fẹ́ ìrànlọ́wọ́ nípa èyí?",
+  "transcript": "lẹ́ẹ̀ni ó lè mú ìyọlénu rẹ̀ kúrò ní akòkò yò owo kòó fe mo kíyèsí pé ó lè ṣòro fún n ẹ láti máa ló ògun rẹ dédé ǹjẹ ó fé ìràn lówó mo kíyèsí pé ó lè ṣòro fúnn ẹ láti máa ló ògun rẹ dédé ṣí ó fé ìrànlówó nípa èyí",
+  "wer": 0.5892857142857143,
+  "chrf": 45.996219989139874,
+  "stt_seconds": 88.4
+ },
+ "ha": {
+  "voice": "mms-tts-hau",
+  "seconds": 13.2,
+  "text": "Anaemia wata cuta ce da ƙungiyar kulawarka ta rubuta a gare ka. Asma wata cuta ce da ƙungiyar kulawarka ta rubuta a gare ka.",
+  "transcript": "anamiya wata cuta ce da kungiyar kulawarka ta rubuta a gare ka asma wata cuta ce da kungiyar kulawarka ta rubuta a gare ka",
+  "wer": 0.125,
+  "chrf": 82.45023879023515,
+  "stt_seconds": 44.9
+ },
+ "ig": {
+  "voice": "mms-tts-ibo-ft",
+  "seconds": 17.4,
+  "text": "Achọpụtala m na ịṅụ ọgwụ gị mgbe niile nwere ike isiri gị ike. Ị̀ chọrọ ka e nyere gị aka? Achọpụtala m na ịṅụ ọgwụ gị mgbe niile nwere ike isiri gị ike. Ị̀ chọrọ ka m nyere gị aka?",
+  "transcript": "naapa ile nkpọ nụnurụ kiiyi beii jeibei jiziiziji ise iidizi ọrọ kana na emiri biaa akpedọ adịm maakụ iipoi do kpee pitedi seli ili dik anụrụ naụ ge kpasịisa",
+  "wer": 0.975,
+  "chrf": 15.11408247357119,
+  "stt_seconds": 62.6
+ },
+ "pcm": {
+  "voice": "mms-tts-eng",
+  "seconds": 17.9,
+  "text": "Acute kidney injury na health wahala wey your care team don write for your record. Your doctor or nurse fit tell you more about am. Anaemia na health wahala wey your care team don write for your record. Your doctor or nurse fit tell you more about am.",
+  "transcript": "Cute kidney injury in a health or how of way your care team done right for your record, your doctor or nurse, fit tell you more about him and Amy, the health or how of way your care team done right for your record, your doctor or nurse, fit tell you more about him.",
+  "wer": 0.4166666666666667,
+  "chrf": 66.20376323860386,
+  "stt_seconds": 57.6
+ }
+}

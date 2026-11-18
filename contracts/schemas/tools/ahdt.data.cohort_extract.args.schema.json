@@ -1,0 +1,89 @@
+{
+  "$defs": {
+    "DifferentialPrivacy": {
+      "additionalProperties": false,
+      "properties": {
+        "epsilon": {
+          "exclusiveMinimum": 0,
+          "title": "Epsilon",
+          "type": "number"
+        }
+      },
+      "required": [
+        "epsilon"
+      ],
+      "title": "DifferentialPrivacy",
+      "type": "object"
+    },
+    "KAnonymity": {
+      "additionalProperties": false,
+      "properties": {
+        "k": {
+          "minimum": 2,
+          "title": "K",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "k"
+      ],
+      "title": "KAnonymity",
+      "type": "object"
+    }
+  },
+  "$id": "https://atra.local/schemas/tools/ahdt.data.cohort_extract.args.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "as_of": {
+      "anyOf": [
+        {
+          "format": "date-time",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "As Of"
+    },
+    "cohort_def": {
+      "additionalProperties": true,
+      "title": "Cohort Def",
+      "type": "object"
+    },
+    "fields": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "title": "Fields",
+      "type": "array"
+    },
+    "hdt_id": {
+      "pattern": "^hdt-[0-9a-f]{12}$",
+      "title": "Hdt Id",
+      "type": "string"
+    },
+    "privacy": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/KAnonymity"
+        },
+        {
+          "$ref": "#/$defs/DifferentialPrivacy"
+        }
+      ],
+      "title": "Privacy"
+    }
+  },
+  "required": [
+    "hdt_id",
+    "cohort_def",
+    "fields",
+    "privacy"
+  ],
+  "title": "CohortExtractArgs",
+  "type": "object"
+}

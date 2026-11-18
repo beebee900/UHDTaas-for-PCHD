@@ -1,0 +1,114 @@
+{
+  "resourceType": "PlanDefinition",
+  "id": "diabetes-type2",
+  "url": "https://atra.health/fhir/PlanDefinition/diabetes_type2",
+  "version": "1.0.0",
+  "name": "diabetes_type2",
+  "title": "Type 2 diabetes mellitus",
+  "type": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/plan-definition-type",
+        "code": "clinical-protocol"
+      }
+    ]
+  },
+  "status": "active",
+  "useContext": [
+    {
+      "code": {
+        "system": "http://terminology.hl7.org/CodeSystem/usage-context-type",
+        "code": "focus"
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "44054006"
+          }
+        ]
+      }
+    }
+  ],
+  "extension": [
+    {
+      "url": "https://atra.health/fhir/StructureDefinition/kb-entry",
+      "valueString": "cond.diabetes_type2"
+    }
+  ],
+  "action": [
+    {
+      "id": "treat",
+      "title": "Choose treatment",
+      "selectionBehavior": "exactly-one",
+      "action": [
+        {
+          "id": "treat-uncontrolled",
+          "title": "Treat (uncontrolled)",
+          "condition": [
+            {
+              "kind": "applicability",
+              "expression": {
+                "language": "text/fhirpath",
+                "expression": "%severity = 'uncontrolled'"
+              }
+            }
+          ],
+          "selectionBehavior": "exactly-one",
+          "action": [
+            {
+              "id": "tx.diabetes_type2.hearts_d",
+              "title": "metformin + gliclazide",
+              "selectionBehavior": "all",
+              "action": [
+                {
+                  "id": "dose.metformin",
+                  "title": "metformin",
+                  "definitionCanonical": "https://atra.health/fhir/ActivityDefinition/dose.metformin"
+                },
+                {
+                  "id": "dose.gliclazide",
+                  "title": "gliclazide",
+                  "definitionCanonical": "https://atra.health/fhir/ActivityDefinition/dose.gliclazide"
+                }
+              ],
+              "extension": [
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/kb-entry",
+                  "valueString": "tx.diabetes_type2.hearts_d"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/preference",
+                  "valueCode": "first_line"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/eligibility",
+                  "valueString": "{\"patient_group\": \"adult\"}"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/exclusions",
+                  "valueString": "[\"ix.metformin.contraindications\", \"ix.glibenclamide.not_recommended\"]"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "monitor",
+      "title": "Monitor with the early-warning score",
+      "extension": [
+        {
+          "url": "https://atra.health/fhir/StructureDefinition/kb-entry",
+          "valueString": "news2.monitoring"
+        }
+      ]
+    },
+    {
+      "id": "check-in",
+      "title": "Daily check-in",
+      "definitionCanonical": "https://atra.health/fhir/Questionnaire/check-in"
+    }
+  ]
+}

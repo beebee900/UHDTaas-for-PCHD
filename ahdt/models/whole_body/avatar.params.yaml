@@ -1,0 +1,15 @@
+# Dimensions of the reference humanoid mesh used by the 3-D viewer.
+model_id: ahdt.whole_body.anatomical_avatar
+sources:
+- id: mosteller1987
+  citation: "Mosteller RD. Simplified calculation of body-surface area. N Engl J Med.
+    1987;317(17):1098. doi:10.1056/NEJM198710223171717"
+- id: atra-mesh
+  citation: ATRA viewer reference mesh (WP19); its own dimensions, not clinical values
+params:
+  mesh_height: {value: 175, unit: cm, source: atra-mesh, assumption: true,
+                justification: "Height of the reference mesh as modelled"}
+  mesh_weight: {value: 70, unit: kg, source: atra-mesh, assumption: true,
+                justification: "Body mass the reference mesh represents"}
+  mesh_waist: {value: 85, unit: cm, source: atra-mesh, assumption: true,
+               justification: "Waist circumference of the reference mesh"}

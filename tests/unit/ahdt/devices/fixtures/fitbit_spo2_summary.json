@@ -1,0 +1,13 @@
+{
+ "source_url": "https://dev.fitbit.com/build/reference/web-api/spo2/get-spo2-summary-by-date/",
+ "retrieved": "2026-10-10",
+ "kind": "verbatim_sample",
+ "body": {
+  "dateTime": "2021-10-04",
+  "value": {
+   "avg": 97.5,
+   "min": 94.0,
+   "max": 100.0
+  }
+ }
+}

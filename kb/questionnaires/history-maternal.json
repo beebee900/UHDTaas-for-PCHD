@@ -1,0 +1,28 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "history-maternal",
+  "url": "https://atra.health/fhir/Questionnaire/history-maternal",
+  "version": "1.0.0",
+  "status": "active",
+  "title": "History: maternal",
+  "item": [
+    {
+      "linkId": "onset_days",
+      "text": "How many days ago did this illness start?",
+      "type": "integer",
+      "required": true
+    },
+    {
+      "linkId": "find.headache",
+      "text": "Headache?",
+      "type": "boolean",
+      "code": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "25064002",
+          "display": "Headache"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+# Maternal medicines.
+
+- id: dose.magnesium_sulfate_eclampsia
+  drug: magnesium sulfate
+  atc: A12CC02
+  loading:
+  - {route: intravenous, g: 4, solution_percent: 20, ml: 20, over_min: 20}
+  - {route: intramuscular, g: 10, as: 5 g of 50% solution deep into each buttock with 1 ml of 2% lidocaine}
+  if_unable_to_give_iv: {route: intramuscular, g: 10}
+  if_convulsions_recur: {route: intravenous, g: 2, solution_percent: 20, over_min: 20}
+  maintenance: {route: intramuscular, g: 5, solution_percent: 50, every_h: 4, sites: alternate buttocks}
+  give_next_dose_only_if: {knee_jerk: present, urine_output_ml_per_4h_above: 100,
+                           respiratory_rate_above: 16}
+  provenance:
+    source: who-imai-dcm-2011-v1
+    section: How to give magnesium sulfate
+    page: 70
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: dose.calcium_pregnancy
+  drug: calcium (elemental)
+  atc: A12AA
+  route: oral
+  g_per_day: [1.5, 2.0]
+  provenance:
+    source: who-pe-2011
+    page: 10
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: dose.aspirin_low_dose_pregnancy
+  drug: acetylsalicylic acid
+  atc: B01AC06
+  route: oral
+  mg_per_day: 75
+  start_before_weeks: 20
+  provenance:
+    source: who-pe-2011
+    page: 10
+    derived:
+      mg_per_day: Low-dose aspirin "75 mg", given daily.
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: dose.iptp_sp
+  drug: sulfadoxine + pyrimethamine
+  atc: P01BD51
+  route: oral
+  schedule: At each scheduled ANC contact, starting early in the second trimester and not before
+    week 13, with doses at least one month apart.
+  start_not_before_week: 13
+  provenance:
+    source: who-malaria-2026
+    page: 11
+    also:
+    - {source: who-anc-2016, page: 132}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified

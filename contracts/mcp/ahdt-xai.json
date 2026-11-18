@@ -1,0 +1,611 @@
+{
+  "server": "ahdt-xai",
+  "tools": [
+    {
+      "annotations": {
+        "readOnlyHint": false,
+        "x-atra-forces-fork": false,
+        "x-atra-reaches-layer": 5,
+        "x-atra-sublayer": "6.3"
+      },
+      "description": "[AHDT 6.3] Explanation of an AHDT model output",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "audience": {
+            "default": "clinician",
+            "enum": [
+              "clinician",
+              "patient",
+              "pharmacist",
+              "nurse",
+              "radiologist"
+            ],
+            "title": "Audience",
+            "type": "string"
+          },
+          "hdt_id": {
+            "pattern": "^hdt-[0-9a-f]{12}$",
+            "title": "Hdt Id",
+            "type": "string"
+          },
+          "output_id": {
+            "title": "Output Id",
+            "type": "string"
+          }
+        },
+        "required": [
+          "hdt_id",
+          "output_id"
+        ],
+        "title": "ExplainArgs",
+        "type": "object"
+      },
+      "name": "ahdt.xai.explain",
+      "outputSchema": {
+        "$defs": {
+          "Artefact": {
+            "additionalProperties": false,
+            "properties": {
+              "kind": {
+                "enum": [
+                  "heatmap",
+                  "plot",
+                  "subgraph"
+                ],
+                "title": "Kind",
+                "type": "string"
+              },
+              "ref": {
+                "title": "Ref",
+                "type": "string"
+              }
+            },
+            "required": [
+              "kind",
+              "ref"
+            ],
+            "title": "Artefact",
+            "type": "object"
+          },
+          "Counterfactual": {
+            "additionalProperties": false,
+            "properties": {
+              "changes": {
+                "additionalProperties": true,
+                "title": "Changes",
+                "type": "object"
+              },
+              "outcome": {
+                "title": "Outcome"
+              }
+            },
+            "required": [
+              "changes",
+              "outcome"
+            ],
+            "title": "Counterfactual",
+            "type": "object"
+          },
+          "Driver": {
+            "additionalProperties": false,
+            "properties": {
+              "contribution": {
+                "title": "Contribution",
+                "type": "number"
+              },
+              "direction": {
+                "enum": [
+                  "up",
+                  "down"
+                ],
+                "title": "Direction",
+                "type": "string"
+              },
+              "feature": {
+                "title": "Feature",
+                "type": "string"
+              },
+              "value": {
+                "default": null,
+                "title": "Value"
+              }
+            },
+            "required": [
+              "feature",
+              "contribution",
+              "direction"
+            ],
+            "title": "Driver",
+            "type": "object"
+          },
+          "ExplanationQuality": {
+            "additionalProperties": false,
+            "properties": {
+              "complexity": {
+                "anyOf": [
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Complexity"
+              },
+              "faithfulness": {
+                "anyOf": [
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Faithfulness"
+              },
+              "robustness": {
+                "anyOf": [
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Robustness"
+              }
+            },
+            "title": "ExplanationQuality",
+            "type": "object"
+          },
+          "ModelRef": {
+            "additionalProperties": false,
+            "properties": {
+              "model_id": {
+                "title": "Model Id",
+                "type": "string"
+              },
+              "version": {
+                "title": "Version",
+                "type": "string"
+              }
+            },
+            "required": [
+              "model_id",
+              "version"
+            ],
+            "title": "ModelRef",
+            "type": "object"
+          },
+          "ToolMeta": {
+            "additionalProperties": true,
+            "properties": {
+              "ahdt_version": {
+                "title": "Ahdt Version",
+                "type": "string"
+              },
+              "as_of": {
+                "anyOf": [
+                  {
+                    "format": "date-time",
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "As Of"
+              },
+              "explainers": {
+                "anyOf": [
+                  {
+                    "items": {
+                      "type": "string"
+                    },
+                    "type": "array"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Explainers"
+              },
+              "fork_id": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Fork Id"
+              },
+              "forked": {
+                "anyOf": [
+                  {
+                    "type": "boolean"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Forked"
+              },
+              "models": {
+                "items": {
+                  "$ref": "#/$defs/ModelRef"
+                },
+                "title": "Models",
+                "type": "array"
+              },
+              "output_id": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Output Id"
+              }
+            },
+            "required": [
+              "ahdt_version"
+            ],
+            "title": "ToolMeta",
+            "type": "object"
+          }
+        },
+        "additionalProperties": false,
+        "properties": {
+          "_meta": {
+            "$ref": "#/$defs/ToolMeta"
+          },
+          "artefacts": {
+            "anyOf": [
+              {
+                "items": {
+                  "$ref": "#/$defs/Artefact"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Artefacts"
+          },
+          "causal_graph_ref": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Causal Graph Ref"
+          },
+          "counterfactuals": {
+            "anyOf": [
+              {
+                "items": {
+                  "$ref": "#/$defs/Counterfactual"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Counterfactuals"
+          },
+          "drivers": {
+            "items": {
+              "$ref": "#/$defs/Driver"
+            },
+            "title": "Drivers",
+            "type": "array"
+          },
+          "explainer": {
+            "title": "Explainer",
+            "type": "string"
+          },
+          "explanation_id": {
+            "title": "Explanation Id",
+            "type": "string"
+          },
+          "method_family": {
+            "enum": [
+              "attribution",
+              "saliency",
+              "counterfactual",
+              "sensitivity",
+              "rule_trace",
+              "ontology_justification",
+              "citation",
+              "temporal_attribution",
+              "graph"
+            ],
+            "title": "Method Family",
+            "type": "string"
+          },
+          "model_id": {
+            "title": "Model Id",
+            "type": "string"
+          },
+          "output_id": {
+            "title": "Output Id",
+            "type": "string"
+          },
+          "quality": {
+            "anyOf": [
+              {
+                "$ref": "#/$defs/ExplanationQuality"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null
+          },
+          "text": {
+            "title": "Text",
+            "type": "string"
+          },
+          "uncertainty": {
+            "additionalProperties": true,
+            "title": "Uncertainty",
+            "type": "object"
+          },
+          "version": {
+            "title": "Version",
+            "type": "string"
+          }
+        },
+        "required": [
+          "explanation_id",
+          "output_id",
+          "model_id",
+          "version",
+          "explainer",
+          "method_family",
+          "text"
+        ],
+        "title": "AHDTExplanation",
+        "type": "object"
+      }
+    },
+    {
+      "annotations": {
+        "readOnlyHint": false,
+        "x-atra-forces-fork": false,
+        "x-atra-reaches-layer": 5,
+        "x-atra-sublayer": "6.3"
+      },
+      "description": "[AHDT 6.3] Cross-model causal explanation graph of an output",
+      "inputSchema": {
+        "additionalProperties": false,
+        "properties": {
+          "hdt_id": {
+            "pattern": "^hdt-[0-9a-f]{12}$",
+            "title": "Hdt Id",
+            "type": "string"
+          },
+          "output_id": {
+            "title": "Output Id",
+            "type": "string"
+          }
+        },
+        "required": [
+          "hdt_id",
+          "output_id"
+        ],
+        "title": "CausalGraphArgs",
+        "type": "object"
+      },
+      "name": "ahdt.xai.causal_graph",
+      "outputSchema": {
+        "$defs": {
+          "GraphEdge": {
+            "additionalProperties": false,
+            "properties": {
+              "from": {
+                "title": "From",
+                "type": "string"
+              },
+              "to": {
+                "title": "To",
+                "type": "string"
+              },
+              "weight": {
+                "title": "Weight",
+                "type": "number"
+              }
+            },
+            "required": [
+              "from",
+              "to",
+              "weight"
+            ],
+            "title": "GraphEdge",
+            "type": "object"
+          },
+          "GraphNode": {
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "title": "Id",
+                "type": "string"
+              },
+              "kind": {
+                "enum": [
+                  "model",
+                  "message",
+                  "observation"
+                ],
+                "title": "Kind",
+                "type": "string"
+              },
+              "label": {
+                "title": "Label",
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "kind",
+              "label"
+            ],
+            "title": "GraphNode",
+            "type": "object"
+          },
+          "ModelRef": {
+            "additionalProperties": false,
+            "properties": {
+              "model_id": {
+                "title": "Model Id",
+                "type": "string"
+              },
+              "version": {
+                "title": "Version",
+                "type": "string"
+              }
+            },
+            "required": [
+              "model_id",
+              "version"
+            ],
+            "title": "ModelRef",
+            "type": "object"
+          },
+          "ToolMeta": {
+            "additionalProperties": true,
+            "properties": {
+              "ahdt_version": {
+                "title": "Ahdt Version",
+                "type": "string"
+              },
+              "as_of": {
+                "anyOf": [
+                  {
+                    "format": "date-time",
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "As Of"
+              },
+              "explainers": {
+                "anyOf": [
+                  {
+                    "items": {
+                      "type": "string"
+                    },
+                    "type": "array"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Explainers"
+              },
+              "fork_id": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Fork Id"
+              },
+              "forked": {
+                "anyOf": [
+                  {
+                    "type": "boolean"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Forked"
+              },
+              "models": {
+                "items": {
+                  "$ref": "#/$defs/ModelRef"
+                },
+                "title": "Models",
+                "type": "array"
+              },
+              "output_id": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "title": "Output Id"
+              }
+            },
+            "required": [
+              "ahdt_version"
+            ],
+            "title": "ToolMeta",
+            "type": "object"
+          }
+        },
+        "additionalProperties": false,
+        "properties": {
+          "_meta": {
+            "$ref": "#/$defs/ToolMeta"
+          },
+          "edges": {
+            "items": {
+              "$ref": "#/$defs/GraphEdge"
+            },
+            "title": "Edges",
+            "type": "array"
+          },
+          "nodes": {
+            "items": {
+              "$ref": "#/$defs/GraphNode"
+            },
+            "title": "Nodes",
+            "type": "array"
+          }
+        },
+        "required": [
+          "nodes",
+          "edges"
+        ],
+        "title": "CausalGraphData",
+        "type": "object"
+      }
+    }
+  ]
+}

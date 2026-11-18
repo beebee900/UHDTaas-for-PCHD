@@ -1,0 +1,30 @@
+code,display,version,via
+1A07,Typhoid fever,2026-01,tx.fhir.org
+1B10.Z,"Respiratory tuberculosis, without mention of bacteriological or histological confirmation",2026-01,tx.fhir.org
+1C62.Z,"Human immunodeficiency virus disease without mention of tuberculosis or malaria, clinical stage unspecified",2026-01,tx.fhir.org
+1D61.2,Lassa fever,2026-01,tx.fhir.org
+1E1Z,Unspecified viral disease,2026-01,tx.fhir.org
+1F40,Malaria due to Plasmodium falciparum,2026-01,tx.fhir.org
+1G40,Sepsis without septic shock,2026-01,tx.fhir.org
+1G41,Sepsis with septic shock,2026-01,tx.fhir.org
+3A51.2,Sickle cell disease with crisis,2026-01,tx.fhir.org
+3A9Z,"Anaemias or other erythrocyte disorders, unspecified",2026-01,tx.fhir.org
+5A11,Type 2 diabetes mellitus,2026-01,tx.fhir.org
+5A20,Diabetic hyperosmolar hyperglycaemic state,2026-01,tx.fhir.org
+5A21,Hypoglycaemia in the context of diabetes mellitus,2026-01,tx.fhir.org
+5A22.0,Diabetic ketoacidosis without coma,2026-01,tx.fhir.org
+5A41,Hypoglycaemia without associated diabetes,2026-01,tx.fhir.org
+6A70,Single episode depressive disorder,2026-01,tx.fhir.org
+6B00,Generalised anxiety disorder,2026-01,tx.fhir.org
+BA00,Essential hypertension,2026-01,tx.fhir.org
+BC81.3Z,"Atrial fibrillation, unspecified",2026-01,tx.fhir.org
+CA22.0,"Chronic obstructive pulmonary disease with acute exacerbation, unspecified",2026-01,tx.fhir.org
+CA23,Asthma,2026-01,tx.fhir.org
+CA40.Z,"Pneumonia, organism unspecified",2026-01,tx.fhir.org
+DB99.0,Chronic liver disease,2026-01,tx.fhir.org
+GB51,Acute pyelonephritis,2026-01,tx.fhir.org
+GB60,Acute kidney failure,2026-01,tx.fhir.org
+GB61.Z,"Chronic kidney disease, stage unspecified",2026-01,tx.fhir.org
+GC00,Cystitis,2026-01,tx.fhir.org
+JA24,Pre-eclampsia,2026-01,tx.fhir.org
+QA41,Pregnant state,2026-01,tx.fhir.org

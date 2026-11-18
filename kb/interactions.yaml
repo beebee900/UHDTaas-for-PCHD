@@ -1,0 +1,408 @@
+# Drug–drug, drug–condition and drug–food interactions. Severity `high` blocks signing until a
+# pharmacist resolves it; `moderate` needs an acknowledged management step; `low` is shown only.
+# `a` and `b` name drugs by their lower-case INN, or a condition or food by its kb id.
+
+- id: ix.amodiaquine.zidovudine
+  kind: drug_drug
+  a: amodiaquine
+  b: zidovudine
+  severity: high
+  effect: Severe neutropenia.
+  management: Avoid artesunate + amodiaquine unless it is the only ACT promptly available.
+  provenance:
+    source: who-malaria-2026
+    section: 5.2.1.1.2 Dosing of ACTs
+    page: 176
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: ix.amodiaquine.cotrimoxazole
+  kind: drug_drug
+  a: amodiaquine
+  b: sulfamethoxazole + trimethoprim
+  severity: high
+  effect: Severe neutropenia, particularly with HIV co-infection.
+  management: Avoid artesunate + amodiaquine unless it is the only ACT promptly available.
+  provenance:
+    source: who-malaria-2026
+    section: 5.2.1.1.2 Dosing of ACTs
+    page: 176
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: ix.amodiaquine.efavirenz
+  kind: drug_drug
+  a: amodiaquine
+  b: efavirenz
+  severity: high
+  effect: Increased amodiaquine exposure and hepatotoxicity.
+  management: Avoid artesunate + amodiaquine unless it is the only ACT promptly available.
+  provenance:
+    source: who-malaria-2026
+    section: 5.2.1.1.2 Dosing of ACTs
+    page: 176
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: ix.lumefantrine.rifampicin
+  kind: drug_drug
+  a: lumefantrine
+  b: rifampicin
+  severity: moderate
+  effect: Decreased lumefantrine exposure and a higher risk of treatment failure.
+  management: Monitor the treatment response closely and ensure full adherence.
+  provenance:
+    source: who-malaria-2026
+    section: 5.2.1.1.2 Dosing of ACTs
+    page: 176
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: ix.lumefantrine.efavirenz
+  kind: drug_drug
+  a: lumefantrine
+  b: efavirenz
+  severity: moderate
+  effect: Decreased lumefantrine exposure and a higher risk of treatment failure.
+  management: Monitor the treatment response closely and ensure full adherence.
+  provenance:
+    source: who-malaria-2026
+    section: 5.2.1.1.2 Dosing of ACTs
+    page: 176
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: ix.lumefantrine.lopinavir_ritonavir
+  kind: drug_drug
+  a: lumefantrine
+  b: lopinavir + ritonavir
+  severity: low
+  effect: Increased lumefantrine exposure without increased toxicity.
+  management: No dose adjustment.
+  provenance:
+    source: who-malaria-2026
+    section: 5.2.1.1.2 Dosing of ACTs
+    page: 176
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: ix.mefloquine.rifampicin
+  kind: drug_drug
+  a: mefloquine
+  b: rifampicin
+  severity: moderate
+  effect: Decreased mefloquine exposure, possibly reducing efficacy.
+  management: Follow up carefully to identify treatment failure.
+  provenance:
+    source: who-malaria-2026
+    section: 5.2.1.1.2 Dosing of ACTs
+    page: 177
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: ix.sp.folic_acid_high_dose
+  kind: drug_drug
+  a: sulfadoxine + pyrimethamine
+  b: folic acid
+  b_dose_mg_per_day_at_least: 5
+  severity: high
+  effect: Folic acid 5 mg daily significantly reduces the efficacy of SP; 0.4 mg daily does not.
+  management: Do not co-administer high-dose folic acid; use 0.4 mg daily or another ACT.
+  provenance:
+    source: who-malaria-2026
+    section: 5.2.1.1.2 Dosing of ACTs
+    page: 177
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: ix.piperaquine.high_fat_meal
+  kind: drug_food
+  a: piperaquine
+  b: food.high_fat_meal
+  severity: moderate
+  effect: Faster piperaquine absorption and a higher risk of QT prolongation.
+  management: Take with a normal meal, not a high-fat meal.
+  provenance:
+    source: who-malaria-2026
+    section: 5.2.1.1.2 Dosing of ACTs
+    page: 178
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: ix.pyronaridine.liver_disease
+  kind: drug_condition
+  a: pyronaridine
+  b: cond.liver_disease
+  severity: high
+  effect: Liver transaminitis.
+  management: Avoid artesunate-pyronaridine in clinically apparent liver disease.
+  provenance:
+    source: who-malaria-2026
+    section: 5.2.1.1 Artemisinin-based combination therapy
+    page: 172
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: ix.sp.pregnancy_first_trimester
+  kind: drug_condition
+  a: sulfadoxine + pyrimethamine
+  b: pregnancy.t1
+  severity: high
+  effect: Antifolates are contraindicated in the first trimester.
+  management: Use artemether-lumefantrine.
+  provenance:
+    source: who-malaria-2026
+    section: 5.2.1.4.1 Pregnant and lactating women
+    page: 183
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: ix.primaquine.pregnancy
+  kind: drug_condition
+  a: primaquine
+  b: pregnancy
+  severity: high
+  effect: Primaquine must not be used in pregnancy.
+  management: Withhold primaquine during pregnancy.
+  provenance:
+    source: who-malaria-2026
+    section: 5.2.1.4.1 Pregnant and lactating women
+    page: 183
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: ix.tetracyclines.pregnancy
+  kind: drug_condition
+  a: doxycycline
+  b: pregnancy
+  severity: high
+  effect: Tetracyclines must not be used in pregnancy.
+  management: Use clindamycin as the partner drug where one is needed.
+  provenance:
+    source: who-malaria-2026
+    section: 5.2.1.4.1 Pregnant and lactating women
+    page: 183
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: ix.quinolones.pregnancy
+  kind: drug_condition
+  a: ciprofloxacin
+  atc_class: J01MA
+  b: pregnancy
+  severity: high
+  effect: Quinolones are to be avoided in pregnancy.
+  management: Use ceftriaxone, or nitrofurantoin or amoxicillin + clavulanic acid for cystitis.
+  provenance:
+    source: who-imai-dcm-2011-v2
+    page: 517
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: ix.ras_blockers.pregnancy
+  kind: drug_condition
+  a: angiotensin receptor blockers and ACE inhibitors
+  atc_class: [C09A, C09C]
+  b: pregnancy
+  severity: high
+  effect: ACE inhibitors and ARBs must not be given to women who are or may become pregnant.
+  management: Use a calcium channel blocker or a thiazide-type diuretic.
+  provenance:
+    source: who-hearts-protocols-2018
+    page: 31
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: ix.metformin.contraindications
+  kind: drug_condition
+  a: metformin
+  b: [egfr_below_30, cond.liver_disease, acute_cardiac_insufficiency, respiratory_insufficiency,
+      alcohol_abuse]
+  egfr_below: 30
+  severity: high
+  effect: Metformin is contraindicated in these conditions.
+  management: Use a second-generation sulfonylurea (preferably gliclazide) or refer.
+  provenance:
+    source: who-hearts-d-2020
+    page: 15
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: ix.glibenclamide.not_recommended
+  kind: drug_condition
+  a: glibenclamide
+  b: [age_60_or_older, cond.liver_disease, high_hypoglycaemia_risk, drives_for_work]
+  age_at_or_above_years: 60
+  severity: high
+  effect: Higher risk of hypoglycaemia than gliclazide.
+  management: Use gliclazide.
+  provenance:
+    source: who-hearts-d-2020
+    page: 15
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: ix.dolutegravir.rifampicin
+  kind: drug_drug
+  a: dolutegravir
+  b: rifampicin
+  severity: high
+  effect: Rifampicin induces dolutegravir metabolism and lowers its exposure.
+  management: Give dolutegravir 50 mg twice daily (an extra 50 mg 12 hours after the regimen) in
+    the absence of integrase inhibitor resistance; continue twice daily for two weeks after the
+    last rifampicin dose. With integrase inhibitor resistance, avoid the combination.
+  dose_mg: 50
+  doses_per_day: 2
+  continue_after_rifampicin_weeks: 2
+  provenance:
+    source: who-hiv-2021
+    section: 4.6 What to start
+    page: 172
+    also:
+    - {source: who-hiv-2021, page: 175}
+    - {source: who-hiv-2021, page: 226}
+    derived:
+      doses_per_day: Text "twice daily".
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: ix.rifampicin.protease_inhibitors
+  kind: drug_drug
+  a: rifampicin
+  b: [atazanavir + ritonavir, darunavir + ritonavir, lopinavir + ritonavir, nevirapine]
+  severity: high
+  effect: Rifampicin with protease inhibitors or nevirapine is a key contraindicated combination.
+  management: Replace rifampicin with rifabutin 150 mg daily, or double the LPV/r dose; replace
+    ATV/r or DRV/r with DTG if DTG-naive.
+  rifabutin_mg_per_day: 150
+  provenance:
+    source: who-hiv-2021
+    page: 226
+    also:
+    - {source: who-hiv-2021, section: Table 4.5 Guidance for adjusting ART when rifampicin-based TB,
+       page: 177}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: ix.rifampicin.tenofovir_alafenamide
+  kind: drug_drug
+  a: rifampicin
+  b: tenofovir alafenamide
+  severity: moderate
+  effect: Rifampicin reduces tenofovir alafenamide exposure.
+  management: Replace TAF with TDF or abacavir when rifampicin-based TB treatment starts.
+  provenance:
+    source: who-hiv-2021
+    page: 177
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: ix.hydroxyurea.contraindications
+  kind: drug_condition
+  a: hydroxycarbamide
+  b: [pregnancy, planning_conception, low_blood_counts, cond.liver_disease, kidney_failure]
+  severity: high
+  effect: Hydroxyurea is contraindicated in pregnancy, in people planning conception, and with low
+    blood counts, liver disease or kidney failure.
+  management: Do not start; review at each visit.
+  provenance:
+    source: ng-scd-2014
+    section: 4.1 Hydroxyurea Therapy for Sickle Cell Disease
+    page: 41
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: ix.amitriptyline.contraindications
+  kind: drug_condition
+  a: amitriptyline
+  b: [cardiovascular_disease, seizure_history, hyperthyroidism, urinary_retention,
+      narrow_angle_glaucoma, bipolar_disorder, suicidal_thoughts_or_plans, age_below_18]
+  severity: high
+  effect: Cardiac arrhythmia and seizure risk; overdose may be fatal.
+  management: Use fluoxetine.
+  provenance:
+    source: who-mhgap-ig-2016
+    section: "AMITRIPTYLINE"
+    page: 37
+    also:
+    - {source: who-mhgap-ig-2016, page: 36}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: ix.amitriptyline.quinine
+  kind: drug_drug
+  a: amitriptyline
+  b: quinine
+  severity: moderate
+  effect: Antimalarials including quinine may raise amitriptyline levels.
+  management: Monitor for toxicity; consider fluoxetine.
+  provenance:
+    source: who-mhgap-ig-2016
+    page: 37
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: ix.fluoxetine.warfarin
+  kind: drug_drug
+  a: fluoxetine
+  b: warfarin
+  severity: high
+  effect: Higher bleeding risk.
+  management: Avoid the combination.
+  provenance:
+    source: who-mhgap-ig-2016
+    page: 37
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: ix.fluoxetine.codeine_tramadol_tamoxifen
+  kind: drug_drug
+  a: fluoxetine
+  b: [codeine, tramadol, tamoxifen]
+  severity: moderate
+  effect: Fluoxetine reduces the effect of these drugs.
+  management: Use with caution and review the response.
+  provenance:
+    source: who-mhgap-ig-2016
+    page: 37
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: ix.iptp_sp.cotrimoxazole_prophylaxis
+  kind: drug_drug
+  a: sulfadoxine + pyrimethamine
+  b: sulfamethoxazole + trimethoprim
+  severity: high
+  effect: IPTp-SP is contraindicated in HIV-positive pregnant women on co-trimoxazole prophylaxis.
+  management: Do not give IPTp-SP.
+  provenance:
+    source: who-malaria-2026
+    page: 11
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified

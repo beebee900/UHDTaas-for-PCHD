@@ -1,0 +1,62 @@
+# Pre-eclampsia, eclampsia and malaria prevention in pregnancy.
+
+- id: tx.pre_eclampsia.severe.magnesium_sulfate
+  condition: cond.pre_eclampsia
+  severity: severe
+  preference: first_line
+  regimen: dose.magnesium_sulfate_eclampsia
+  note: Recommended for prevention of eclampsia in severe pre-eclampsia and for treatment of
+    eclampsia, in preference to other anticonvulsants. Where the full regimen is not possible,
+    give the loading dose and transfer immediately.
+  empirical_allowed: true
+  provenance:
+    source: who-pe-2011
+    page: 10
+    also:
+    - {source: who-imai-dcm-2011-v1, section: How to give magnesium sulfate, page: 70}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: tx.pre_eclampsia.severe_hypertension
+  condition: cond.pre_eclampsia
+  severity: severe
+  preference: first_line
+  regimen: null
+  note: Treat severe hypertension; the drug and route follow the clinician's experience, cost and
+    local availability. No single agent is recommended over others.
+  exclusions: [ix.ras_blockers.pregnancy]
+  provenance:
+    source: who-pe-2011
+    page: 10
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: tx.pregnancy.pre_eclampsia_prevention
+  condition: cond.pregnancy
+  severity: [t1, t2, t3]
+  preference: first_line
+  regimen: [dose.calcium_pregnancy, dose.aspirin_low_dose_pregnancy]
+  indications:
+    calcium: Low dietary calcium intake; all women, especially those at high risk.
+    aspirin: Women at high risk of pre-eclampsia, started before 20 weeks.
+  provenance:
+    source: who-pe-2011
+    page: 10
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: tx.pregnancy.iptp
+  condition: cond.pregnancy
+  severity: [t2, t3]
+  preference: first_line
+  regimen: dose.iptp_sp
+  exclusions: [ix.iptp_sp.cotrimoxazole_prophylaxis]
+  provenance:
+    source: who-malaria-2026
+    page: 11
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified

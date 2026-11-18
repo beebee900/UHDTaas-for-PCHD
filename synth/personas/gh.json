@@ -1,0 +1,95 @@
+{
+ "age_years": 35,
+ "episodes": [],
+ "facts": {
+  "conditions": [
+   "cond.hiv",
+   "cond.tb_pulmonary"
+  ],
+  "medications": [
+   {
+    "atc": "J05AR27",
+    "name": "lamivudine, tenofovir disoproxil and dolutegravir",
+    "twin": "immune_lymphatic"
+   },
+   {
+    "atc": "J04AM06",
+    "name": "rifampicin, pyrazinamide, ethambutol and isoniazid",
+    "twin": "respiratory"
+   }
+  ],
+  "observations": [
+   {
+    "code": "29463-7",
+    "field": "weight",
+    "unit": "kg",
+    "value": 58
+   }
+  ],
+  "phenotypes": [
+   {
+    "hpo": "HP:0012735",
+    "label": "Cough",
+    "twin": "respiratory"
+   },
+   {
+    "hpo": "HP:0001824",
+    "label": "Weight loss",
+    "twin": "whole_body"
+   }
+  ]
+ },
+ "findings": [
+  "find.fever",
+  "find.weight_loss",
+  "find.night_sweats"
+ ],
+ "hdt_id": "hdt-8b3095406ebb",
+ "initials": "G.H.",
+ "key": "gh",
+ "labs": [
+  {
+   "code": {
+    "code": "14682-9",
+    "system": "http://loinc.org"
+   },
+   "device_id": null,
+   "effective_time": "2026-01-31T00:00:00+00:00",
+   "hdt_id": "hdt-8b3095406ebb",
+   "idempotency_key": "lab-hdt-8b3095406ebb-creatinine-0",
+   "record_id": "lab-hdt-8b3095406ebb-creatinine-0",
+   "source": "manual",
+   "unit": "umol/L",
+   "value": 54.17
+  },
+  {
+   "code": {
+    "code": "718-7",
+    "system": "http://loinc.org"
+   },
+   "device_id": null,
+   "effective_time": "2026-01-31T00:00:00+00:00",
+   "hdt_id": "hdt-8b3095406ebb",
+   "idempotency_key": "lab-hdt-8b3095406ebb-hb-1",
+   "record_id": "lab-hdt-8b3095406ebb-hb-1",
+   "source": "manual",
+   "unit": "g/dL",
+   "value": 14.23
+  }
+ ],
+ "language": "en",
+ "notes": [
+  {
+   "date": "2026-09-28T09:00:00+00:00",
+   "hdt_id": "hdt-8b3095406ebb",
+   "synthetic": true,
+   "text": "History of Present Illness: 35-year-old male presenting with fever, weight loss, night sweats.\nAssessment: HIV infection.\nPlan: treat per guideline and review in 48 hours.",
+   "type": "note",
+   "writer": "template"
+  }
+ ],
+ "observations": [],
+ "scenario": "TB work-up while on ART",
+ "sex": "male",
+ "tenant_id": "fac-b"
+}

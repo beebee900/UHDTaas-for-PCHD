@@ -1,0 +1,105 @@
+{
+  "$defs": {
+    "IntakeFinding": {
+      "additionalProperties": false,
+      "properties": {
+        "capture": {
+          "enum": [
+            "question",
+            "exam",
+            "lab"
+          ],
+          "title": "Capture",
+          "type": "string"
+        },
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "capture"
+      ],
+      "title": "IntakeFinding",
+      "type": "object"
+    },
+    "IntakeMeasurement": {
+      "additionalProperties": false,
+      "properties": {
+        "field": {
+          "title": "Field",
+          "type": "string"
+        },
+        "unit": {
+          "title": "Unit",
+          "type": "string"
+        }
+      },
+      "required": [
+        "field",
+        "unit"
+      ],
+      "title": "IntakeMeasurement",
+      "type": "object"
+    },
+    "IntakeTest": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "name"
+      ],
+      "title": "IntakeTest",
+      "type": "object"
+    }
+  },
+  "$id": "https://atra.local/schemas/apdt/intake_catalogue.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "What a clinician can record at intake: findings, tests and measurements from the KB.",
+  "properties": {
+    "findings": {
+      "items": {
+        "$ref": "#/$defs/IntakeFinding"
+      },
+      "title": "Findings",
+      "type": "array"
+    },
+    "measurements": {
+      "items": {
+        "$ref": "#/$defs/IntakeMeasurement"
+      },
+      "title": "Measurements",
+      "type": "array"
+    },
+    "tests": {
+      "items": {
+        "$ref": "#/$defs/IntakeTest"
+      },
+      "title": "Tests",
+      "type": "array"
+    }
+  },
+  "required": [
+    "findings",
+    "tests",
+    "measurements"
+  ],
+  "title": "IntakeCatalogue",
+  "type": "object"
+}

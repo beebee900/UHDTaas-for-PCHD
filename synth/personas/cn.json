@@ -1,0 +1,78 @@
+{
+ "age_years": 29,
+ "episodes": [],
+ "facts": {
+  "conditions": [
+   "cond.pyelonephritis",
+   "cond.pregnancy"
+  ],
+  "medications": [
+   {
+    "atc": "J01DD04",
+    "name": "ceftriaxone",
+    "twin": "renal_urinary"
+   }
+  ],
+  "phenotypes": [
+   {
+    "hpo": "HP:0030157",
+    "label": "Flank pain",
+    "twin": "renal_urinary"
+   },
+   {
+    "hpo": "HP:0100518",
+    "label": "Dysuria",
+    "twin": "renal_urinary"
+   }
+  ]
+ },
+ "findings": [],
+ "hdt_id": "hdt-fa6993fb8be4",
+ "initials": "C.N.",
+ "key": "cn",
+ "labs": [
+  {
+   "code": {
+    "code": "14682-9",
+    "system": "http://loinc.org"
+   },
+   "device_id": null,
+   "effective_time": "2026-01-31T00:00:00+00:00",
+   "hdt_id": "hdt-fa6993fb8be4",
+   "idempotency_key": "lab-hdt-fa6993fb8be4-creatinine-0",
+   "record_id": "lab-hdt-fa6993fb8be4-creatinine-0",
+   "source": "manual",
+   "unit": "umol/L",
+   "value": 54.45
+  },
+  {
+   "code": {
+    "code": "718-7",
+    "system": "http://loinc.org"
+   },
+   "device_id": null,
+   "effective_time": "2026-01-31T00:00:00+00:00",
+   "hdt_id": "hdt-fa6993fb8be4",
+   "idempotency_key": "lab-hdt-fa6993fb8be4-hb-1",
+   "record_id": "lab-hdt-fa6993fb8be4-hb-1",
+   "source": "manual",
+   "unit": "g/dL",
+   "value": 14.29
+  }
+ ],
+ "language": "ig",
+ "notes": [
+  {
+   "date": "2026-09-28T09:00:00+00:00",
+   "hdt_id": "hdt-fa6993fb8be4",
+   "synthetic": true,
+   "text": "History of Present Illness: 29-year-old female presenting with no specific complaints.\nAssessment: Upper urinary tract infection (acute pyelonephritis).\nPlan: treat per guideline and review in 48 hours.",
+   "type": "note",
+   "writer": "template"
+  }
+ ],
+ "observations": [],
+ "scenario": "pyelonephritis at 22 weeks pregnancy",
+ "sex": "female",
+ "tenant_id": "fac-a"
+}

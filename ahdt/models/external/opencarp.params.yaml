@@ -1,0 +1,43 @@
+# Ventricular tissue slab in openCARP: ten Tusscher-Panfilov (2006) ionic model.
+model_id: ahdt.cardiovascular.conduction_system_and_cardiomyocyte_electrophysiology
+sources:
+- id: tt2006
+  citation: "ten Tusscher KHWJ, Panfilov AV. Alternans and spiral breakup in a human ventricular
+    tissue model. Am J Physiol Heart Circ Physiol. 2006;291(3):H1088-H1100.
+    doi:10.1152/ajpheart.00109.2006"
+  via: "openCARP v20.0 ionic model tenTusscherPanfilov (limpet model file header and source)"
+- id: opencarp
+  citation: "openCARP v20.0 simulator, AppImage pinned in sources.lock.yaml (opencarp-appimage);
+    Plank G et al. The openCARP simulation environment for cardiac electrophysiology. Comput
+    Methods Programs Biomed. 2021;208:106223. doi:10.1016/j.cmpb.2021.106223"
+  via: "default conductivities read with openCARP --doc gregion.g_il and the related keys"
+- id: atra-assumption
+  citation: ATRA design 01 rule R5 assumption register
+params:
+  g_il: {value: 0.174, unit: S/m, source: opencarp, note: "intracellular longitudinal conductivity, openCARP default"}
+  g_it: {value: 0.019, unit: S/m, source: opencarp, note: "intracellular transverse conductivity, openCARP default"}
+  g_el: {value: 0.625, unit: S/m, source: opencarp, note: "extracellular longitudinal conductivity, openCARP default"}
+  g_et: {value: 0.236, unit: S/m, source: opencarp, note: "extracellular transverse conductivity, openCARP default"}
+  slab_length_cm: {value: 2.0, unit: cm, source: atra-assumption, assumption: true,
+                   justification: "Size of the tissue slab; long enough for a conduction velocity fit
+                     and small enough to run in under a minute"}
+  slab_width_cm: {value: 0.5, unit: cm, source: atra-assumption, assumption: true,
+                  justification: "Width of the tissue slab"}
+  resolution_um: {value: 250, unit: um, source: atra-assumption, assumption: true,
+                  justification: "Element edge; the usual 200 to 500 micrometre range of tissue
+                    simulations"}
+  dt_us: {value: 25, unit: us, source: atra-assumption, assumption: true,
+          justification: "Time step of the solver"}
+  stimulus_strength: {value: 40, unit: uA/cm2, source: atra-assumption, assumption: true,
+                      justification: "Transmembrane current of the pacing stimulus; supra-threshold, checked
+                        by the activation of the whole slab"}
+  stimulus_duration_ms: {value: 2, unit: ms, source: atra-assumption, assumption: true,
+                         justification: "Duration of the pacing stimulus"}
+  activation_threshold_mv: {value: -40, unit: mV, source: atra-assumption, assumption: true,
+                            justification: "Membrane potential crossing that defines the activation
+                              time"}
+  repolarisation_fraction: {value: 0.9, unit: '1', source: atra-assumption, assumption: true,
+                            justification: "APD90 is the time from activation to repolarisation of 90
+                              percent of the amplitude"}
+  beats: {value: 2, unit: '1', source: atra-assumption, assumption: true,
+          justification: "Paced beats simulated; the last beat is analysed"}

@@ -1,0 +1,962 @@
+# Reference values of T3 model states and gains of their couplings.
+# Draft placeholders written by WP14a; WP21 fills and sources every value.
+- id: state.endothelial_function
+  field: endothelial_function
+  twin: cardiovascular
+  unit: '1'
+  normal: null
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Placeholder until WP21 sources the reference values of this T3 state.
+- id: coupling.cardiovascular.vascular_endothelium.glucose.endothelial_function.gain
+  value: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Coupling gain of a T3 state; placeholder until WP21 sources or justifies it. The
+      coupling is inactive while it is empty.
+- id: coupling.cardiovascular.vascular_endothelium.glucose.endothelial_function.reference
+  value: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Coupling reference of a T3 state; placeholder until WP21 sources or justifies it.
+      The coupling is inactive while it is empty.
+- id: coupling.cardiovascular.vascular_endothelium.sbp.endothelial_function.gain
+  value: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Coupling gain of a T3 state; placeholder until WP21 sources or justifies it. The
+      coupling is inactive while it is empty.
+- id: coupling.cardiovascular.vascular_endothelium.sbp.endothelial_function.reference
+  value: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Coupling reference of a T3 state; placeholder until WP21 sources or justifies it.
+      The coupling is inactive while it is empty.
+- id: coupling.cardiovascular.vascular_endothelium.inflammation_index.endothelial_function.gain
+  value: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Coupling gain of a T3 state; placeholder until WP21 sources or justifies it. The
+      coupling is inactive while it is empty.
+- id: coupling.cardiovascular.vascular_endothelium.inflammation_index.endothelial_function.reference
+  value: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Coupling reference of a T3 state; placeholder until WP21 sources or justifies it.
+      The coupling is inactive while it is empty.
+- id: coupling.cardiovascular.cardiac_biomarkers.lvedp.bnp.gain
+  value: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Coupling gain of a T3 state; placeholder until WP21 sources or justifies it. The
+      coupling is inactive while it is empty.
+- id: coupling.cardiovascular.cardiac_biomarkers.lvedp.bnp.reference
+  value: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Coupling reference of a T3 state; placeholder until WP21 sources or justifies it.
+      The coupling is inactive while it is empty.
+- id: coupling.cardiovascular.cardiac_biomarkers.lvedp.troponin_i.gain
+  value: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Coupling gain of a T3 state; placeholder until WP21 sources or justifies it. The
+      coupling is inactive while it is empty.
+- id: coupling.cardiovascular.cardiac_biomarkers.lvedp.troponin_i.reference
+  value: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Coupling reference of a T3 state; placeholder until WP21 sources or justifies it.
+      The coupling is inactive while it is empty.
+- id: state.airway_obstruction_index
+  field: airway_obstruction_index
+  twin: respiratory
+  unit: '1'
+  normal: null
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Placeholder until WP21 sources the reference values of this T3 state.
+- id: coupling.respiratory.trachea_bronchial_tree_upper_airway_and_larynx.exacerbation_risk.airway_obstruction_index.gain
+  value: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Coupling gain of a T3 state; placeholder until WP21 sources or justifies it. The
+      coupling is inactive while it is empty.
+- id: coupling.respiratory.trachea_bronchial_tree_upper_airway_and_larynx.exacerbation_risk.airway_obstruction_index.reference
+  value: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Coupling reference of a T3 state; placeholder until WP21 sources or justifies it.
+      The coupling is inactive while it is empty.
+- id: state.muscle_fatigue_index
+  field: muscle_fatigue_index
+  twin: respiratory
+  unit: '1'
+  normal: null
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Placeholder until WP21 sources the reference values of this T3 state.
+- id: coupling.respiratory.diaphragm.minute_ventilation.muscle_fatigue_index.gain
+  value: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Coupling gain of a T3 state; placeholder until WP21 sources or justifies it. The
+      coupling is inactive while it is empty.
+- id: coupling.respiratory.diaphragm.minute_ventilation.muscle_fatigue_index.reference
+  value: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Coupling reference of a T3 state; placeholder until WP21 sources or justifies it.
+      The coupling is inactive while it is empty.
+- id: state.epithelial_inflammation
+  field: epithelial_inflammation
+  twin: respiratory
+  unit: '1'
+  normal: null
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Placeholder until WP21 sources the reference values of this T3 state.
+- id: coupling.respiratory.airway_epithelium.crp.epithelial_inflammation.gain
+  value: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Coupling gain of a T3 state; placeholder until WP21 sources or justifies it. The
+      coupling is inactive while it is empty.
+- id: coupling.respiratory.airway_epithelium.crp.epithelial_inflammation.reference
+  value: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Coupling reference of a T3 state; placeholder until WP21 sources or justifies it.
+      The coupling is inactive while it is empty.
+- id: state.consciousness_level
+  field: consciousness_level
+  twin: nervous
+  unit: '1'
+  normal: null
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Placeholder until WP21 sources the reference values of this T3 state.
+- id: coupling.nervous.brain_regions_spinal_cord_nerves_and_neural_tissue.core_temp.gcs_total.gain
+  value: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Coupling gain of a T3 state; placeholder until WP21 sources or justifies it. The
+      coupling is inactive while it is empty.
+- id: coupling.nervous.brain_regions_spinal_cord_nerves_and_neural_tissue.core_temp.gcs_total.reference
+  value: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Coupling reference of a T3 state; placeholder until WP21 sources or justifies it.
+      The coupling is inactive while it is empty.
+- id: coupling.nervous.brain_regions_spinal_cord_nerves_and_neural_tissue.glucose.gcs_total.gain
+  value: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Coupling gain of a T3 state; placeholder until WP21 sources or justifies it. The
+      coupling is inactive while it is empty.
+- id: coupling.nervous.brain_regions_spinal_cord_nerves_and_neural_tissue.glucose.gcs_total.reference
+  value: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Coupling reference of a T3 state; placeholder until WP21 sources or justifies it.
+      The coupling is inactive while it is empty.
+- id: coupling.nervous.pain.inflammation_index.pain_nrs.gain
+  value: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Coupling gain of a T3 state; placeholder until WP21 sources or justifies it. The
+      coupling is inactive while it is empty.
+- id: coupling.nervous.pain.inflammation_index.pain_nrs.reference
+  value: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Coupling reference of a T3 state; placeholder until WP21 sources or justifies it.
+      The coupling is inactive while it is empty.
+- id: state.lens_opacity
+  field: lens_opacity
+  twin: sensory
+  unit: '1'
+  normal: null
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Placeholder until WP21 sources the reference values of this T3 state.
+- id: state.olfaction_score
+  field: olfaction_score
+  twin: sensory
+  unit: '{score}'
+  normal: null
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Placeholder until WP21 sources the reference values of this T3 state.
+- id: state.taste_score
+  field: taste_score
+  twin: sensory
+  unit: '{score}'
+  normal: null
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Placeholder until WP21 sources the reference values of this T3 state.
+- id: state.dysphagia
+  field: dysphagia
+  twin: digestive
+  unit: '1'
+  normal: null
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Placeholder until WP21 sources the reference values of this T3 state.
+- id: state.enzyme_secretion
+  field: enzyme_secretion
+  twin: digestive
+  unit: '1'
+  normal: null
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Placeholder until WP21 sources the reference values of this T3 state.
+- id: state.diversity_index
+  field: diversity_index
+  twin: digestive
+  unit: '1'
+  normal: null
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Placeholder until WP21 sources the reference values of this T3 state.
+- id: state.dysbiosis
+  field: dysbiosis
+  twin: digestive
+  unit: '1'
+  normal: null
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Placeholder until WP21 sources the reference values of this T3 state.
+- id: coupling.digestive.microbiome.antibiotic_course.diversity_index.gain
+  value: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Coupling gain of a T3 state; placeholder until WP21 sources or justifies it. The
+      coupling is inactive while it is empty.
+- id: coupling.digestive.microbiome.antibiotic_course.diversity_index.reference
+  value: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Coupling reference of a T3 state; placeholder until WP21 sources or justifies it.
+      The coupling is inactive while it is empty.
+- id: coupling.digestive.microbiome.antibiotic_course.dysbiosis.gain
+  value: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Coupling gain of a T3 state; placeholder until WP21 sources or justifies it. The
+      coupling is inactive while it is empty.
+- id: coupling.digestive.microbiome.antibiotic_course.dysbiosis.reference
+  value: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Coupling reference of a T3 state; placeholder until WP21 sources or justifies it.
+      The coupling is inactive while it is empty.
+- id: state.cholestasis_index
+  field: cholestasis_index
+  twin: hepatobiliary
+  unit: '1'
+  normal: null
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Placeholder until WP21 sources the reference values of this T3 state.
+- id: state.bile_flow
+  field: bile_flow
+  twin: hepatobiliary
+  unit: '1'
+  normal: null
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Placeholder until WP21 sources the reference values of this T3 state.
+- id: coupling.hepatobiliary.gallbladder_and_biliary_tree.bilirubin.cholestasis_index.gain
+  value: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Coupling gain of a T3 state; placeholder until WP21 sources or justifies it. The
+      coupling is inactive while it is empty.
+- id: coupling.hepatobiliary.gallbladder_and_biliary_tree.bilirubin.cholestasis_index.reference
+  value: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Coupling reference of a T3 state; placeholder until WP21 sources or justifies it.
+      The coupling is inactive while it is empty.
+- id: state.bladder_volume
+  field: bladder_volume
+  twin: renal_urinary
+  unit: mL
+  normal: null
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Placeholder until WP21 sources the reference values of this T3 state.
+- id: state.obstruction
+  field: obstruction
+  twin: renal_urinary
+  unit: '1'
+  normal: null
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Placeholder until WP21 sources the reference values of this T3 state.
+- id: state.urinary_symptoms
+  field: urinary_symptoms
+  twin: renal_urinary
+  unit: '{score}'
+  normal: null
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Placeholder until WP21 sources the reference values of this T3 state.
+- id: state.tsh_drive
+  field: tsh_drive
+  twin: endocrine
+  unit: '1'
+  normal: null
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Placeholder until WP21 sources the reference values of this T3 state.
+- id: state.ft4
+  field: ft4
+  twin: endocrine
+  unit: pmol/L
+  normal: null
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Placeholder until WP21 sources the reference values of this T3 state.
+- id: state.pth
+  field: pth
+  twin: endocrine
+  unit: pmol/L
+  normal: null
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Placeholder until WP21 sources the reference values of this T3 state.
+- id: state.calcium
+  field: calcium
+  twin: endocrine
+  unit: mmol/L
+  normal: null
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Placeholder until WP21 sources the reference values of this T3 state.
+- id: state.immune_activity
+  field: immune_activity
+  twin: immune_lymphatic
+  unit: '1'
+  normal: null
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Placeholder until WP21 sources the reference values of this T3 state.
+- id: state.t_cell_output
+  field: t_cell_output
+  twin: immune_lymphatic
+  unit: '1'
+  normal: null
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Placeholder until WP21 sources the reference values of this T3 state.
+- id: state.clearance_rate
+  field: clearance_rate
+  twin: immune_lymphatic
+  unit: '1'
+  normal: null
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Placeholder until WP21 sources the reference values of this T3 state.
+- id: coupling.immune_lymphatic.spleen_thymus_lymph_nodes_and_tonsils.inflammation_index.immune_activity.gain
+  value: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Coupling gain of a T3 state; placeholder until WP21 sources or justifies it. The
+      coupling is inactive while it is empty.
+- id: coupling.immune_lymphatic.spleen_thymus_lymph_nodes_and_tonsils.inflammation_index.immune_activity.reference
+  value: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Coupling reference of a T3 state; placeholder until WP21 sources or justifies it.
+      The coupling is inactive while it is empty.
+- id: coupling.immune_lymphatic.spleen_thymus_lymph_nodes_and_tonsils.parasitaemia.clearance_rate.gain
+  value: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Coupling gain of a T3 state; placeholder until WP21 sources or justifies it. The
+      coupling is inactive while it is empty.
+- id: coupling.immune_lymphatic.spleen_thymus_lymph_nodes_and_tonsils.parasitaemia.clearance_rate.reference
+  value: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Coupling reference of a T3 state; placeholder until WP21 sources or justifies it.
+      The coupling is inactive while it is empty.
+- id: state.neutrophil_output
+  field: neutrophil_output
+  twin: haematological
+  unit: '1'
+  normal: null
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Placeholder until WP21 sources the reference values of this T3 state.
+- id: state.lymphocyte_output
+  field: lymphocyte_output
+  twin: haematological
+  unit: '1'
+  normal: null
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Placeholder until WP21 sources the reference values of this T3 state.
+- id: coupling.haematological.coagulation.clotting_factor_synthesis.inr.gain
+  value: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Coupling gain of a T3 state; placeholder until WP21 sources or justifies it. The
+      coupling is inactive while it is empty.
+- id: coupling.haematological.coagulation.clotting_factor_synthesis.inr.reference
+  value: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Coupling reference of a T3 state; placeholder until WP21 sources or justifies it.
+      The coupling is inactive while it is empty.
+- id: state.range_of_motion
+  field: range_of_motion
+  twin: musculoskeletal
+  unit: deg
+  normal: null
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Placeholder until WP21 sources the reference values of this T3 state.
+- id: state.joint_pain
+  field: joint_pain
+  twin: musculoskeletal
+  unit: '{score}'
+  normal: null
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Placeholder until WP21 sources the reference values of this T3 state.
+- id: state.muscle_strength
+  field: muscle_strength
+  twin: musculoskeletal
+  unit: '1'
+  normal: null
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Placeholder until WP21 sources the reference values of this T3 state.
+- id: state.fatigue
+  field: fatigue
+  twin: musculoskeletal
+  unit: '1'
+  normal: null
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Placeholder until WP21 sources the reference values of this T3 state.
+- id: state.tendon_stiffness
+  field: tendon_stiffness
+  twin: musculoskeletal
+  unit: '1'
+  normal: null
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Placeholder until WP21 sources the reference values of this T3 state.
+- id: state.cartilage_integrity
+  field: cartilage_integrity
+  twin: musculoskeletal
+  unit: '1'
+  normal: null
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Placeholder until WP21 sources the reference values of this T3 state.
+- id: state.barrier_integrity
+  field: barrier_integrity
+  twin: integumentary
+  unit: '1'
+  normal: null
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Placeholder until WP21 sources the reference values of this T3 state.
+- id: coupling.integumentary.skin_hair_nails_sweat_and_sebaceous_glands.wound_area.barrier_integrity.gain
+  value: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Coupling gain of a T3 state; placeholder until WP21 sources or justifies it. The
+      coupling is inactive while it is empty.
+- id: coupling.integumentary.skin_hair_nails_sweat_and_sebaceous_glands.wound_area.barrier_integrity.reference
+  value: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Coupling reference of a T3 state; placeholder until WP21 sources or justifies it.
+      The coupling is inactive while it is empty.
+- id: state.screening_status
+  field: screening_status
+  twin: reproductive
+  unit: '{code}'
+  normal: null
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Placeholder until WP21 sources the reference values of this T3 state.
+- id: state.uterine_state
+  field: uterine_state
+  twin: reproductive
+  unit: '{code}'
+  normal: null
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Placeholder until WP21 sources the reference values of this T3 state.
+- id: state.psa_state
+  field: psa_state
+  twin: reproductive
+  unit: ug/L
+  normal: null
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Placeholder until WP21 sources the reference values of this T3 state.
+- id: state.placental_function
+  field: placental_function
+  twin: reproductive
+  unit: '1'
+  normal: null
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Placeholder until WP21 sources the reference values of this T3 state.
+- id: state.proteome_inflammation_index
+  field: proteome_inflammation_index
+  twin: whole_body
+  unit: '1'
+  normal: null
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Placeholder until WP21 sources the reference values of this T3 state.
+- id: state.metabolome_glycaemic_index
+  field: metabolome_glycaemic_index
+  twin: whole_body
+  unit: '1'
+  normal: null
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Placeholder until WP21 sources the reference values of this T3 state.
+- id: state.epigenetic_age
+  field: epigenetic_age
+  twin: whole_body
+  unit: a
+  normal: null
+  ref_low: null
+  ref_high: null
+  warn_low: null
+  warn_high: null
+  crit_low: null
+  crit_high: null
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Placeholder until WP21 sources the reference values of this T3 state.
+- id: population.reference_adult
+  value:
+    age: 40
+    height: 170
+    weight: 70
+    weight0: 70
+    female: false
+    hb: 14.0
+    hb0: 14.0
+    platelets0: 250
+    rbc: 5.0
+    haematocrit: 42
+    baseline_creatinine_male: 80
+    baseline_creatinine_female: 65
+    sodium0: 140
+    potassium0: 4.2
+    hco3_0: 24
+    paco2: 40
+    respiratory_rate: 14
+    tidal_volume: 500
+    cardiac_output: 5.0
+    air_temperature: 25
+    relative_humidity: 50
+    air_speed: 0.1
+    met: 1.0
+    clo: 0.5
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Values of a reference adult used only when the person's own value is
+      missing; the Population twin norms replace them per age band and sex (WP14e).

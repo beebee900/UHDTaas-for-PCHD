@@ -1,0 +1,67 @@
+{
+  "$id": "https://atra.local/schemas/apdt/intake_record.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Findings (present or absent), test results (positive or negative) and measurements of\none episode, keyed by KB id or field name, with the patient details the reasoner needs.",
+  "properties": {
+    "avpu": {
+      "default": "A",
+      "enum": [
+        "A",
+        "V",
+        "P",
+        "U"
+      ],
+      "title": "Avpu",
+      "type": "string"
+    },
+    "findings": {
+      "additionalProperties": {
+        "type": "boolean"
+      },
+      "title": "Findings",
+      "type": "object"
+    },
+    "measurements": {
+      "additionalProperties": {
+        "type": "number"
+      },
+      "title": "Measurements",
+      "type": "object"
+    },
+    "pregnancy": {
+      "default": "none",
+      "enum": [
+        "none",
+        "t1",
+        "t2",
+        "t3"
+      ],
+      "title": "Pregnancy",
+      "type": "string"
+    },
+    "tests": {
+      "additionalProperties": {
+        "type": "boolean"
+      },
+      "title": "Tests",
+      "type": "object"
+    },
+    "weight_kg": {
+      "anyOf": [
+        {
+          "exclusiveMinimum": 0,
+          "maximum": 400,
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Weight Kg"
+    }
+  },
+  "title": "IntakeRecord",
+  "type": "object"
+}

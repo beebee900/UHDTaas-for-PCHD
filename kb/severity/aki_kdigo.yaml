@@ -1,0 +1,19 @@
+# KDIGO acute kidney injury staging criteria.
+- id: severity.aki.kdigo
+  creatinine_ratio_bands: [1.5, 2.0, 3.0]
+  creatinine_rise_umol_l: 26.5
+  creatinine_rise_window_h: 48
+  creatinine_ratio_window_days: 7
+  stage3_creatinine_umol_l: 353.6
+  urine_output:
+  - {stage: 1, below_ml_kg_h: 0.5, hours: 6}
+  - {stage: 2, below_ml_kg_h: 0.5, hours: 12}
+  - {stage: 3, below_ml_kg_h: 0.3, hours: 24}
+  - {stage: 3, anuria_hours: 12}
+  provenance:
+    source: kdigo-aki-2012
+    section: Definition and staging of AKI
+    page: 22
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified

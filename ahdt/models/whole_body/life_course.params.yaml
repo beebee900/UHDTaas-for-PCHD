@@ -1,0 +1,12 @@
+# Frailty index accumulation with age.
+model_id: ahdt.whole_body.life_course_and_ageing
+sources:
+- id: mitnitski2002
+  citation: "Mitnitski AB, Graham JE, Mogilner AJ, Rockwood K. Frailty, fitness and late-life
+    mortality in relation to chronological and biological age. BMC Geriatr. 2002;2:1.
+    doi:10.1186/1471-2318-2-1"
+  via: Europe PMC PMC88955, equation 1
+params:
+  ln_q_intercept: {value: -4.23, unit: '1', source: mitnitski2002,
+                   note: "Canadian cohort aged 65 and over, no cognitive impairment"}
+  ln_q_slope: {value: 0.03, unit: /a, source: mitnitski2002}

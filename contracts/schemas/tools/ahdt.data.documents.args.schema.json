@@ -1,0 +1,63 @@
+{
+  "$id": "https://atra.local/schemas/tools/ahdt.data.documents.args.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "as_of": {
+      "anyOf": [
+        {
+          "format": "date-time",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "As Of"
+    },
+    "hdt_id": {
+      "pattern": "^hdt-[0-9a-f]{12}$",
+      "title": "Hdt Id",
+      "type": "string"
+    },
+    "query": {
+      "minLength": 1,
+      "title": "Query",
+      "type": "string"
+    },
+    "top_k": {
+      "default": 5,
+      "maximum": 50,
+      "minimum": 1,
+      "title": "Top K",
+      "type": "integer"
+    },
+    "types": {
+      "anyOf": [
+        {
+          "items": {
+            "enum": [
+              "discharge_summary",
+              "note",
+              "report"
+            ],
+            "type": "string"
+          },
+          "type": "array"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Types"
+    }
+  },
+  "required": [
+    "hdt_id",
+    "query"
+  ],
+  "title": "DocumentsArgs",
+  "type": "object"
+}

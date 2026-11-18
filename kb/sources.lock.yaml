@@ -1,0 +1,336 @@
+# Written by `python -m apdt.knowledge.sourcing fetch`. Do not edit by hand.
+adeloye-2021-htn:
+  bytes: 195583
+  sha256: 6f09c3b0fc856ac1805bf36ae6d50d231d5321e4c0df1fe47837e3774fb81fe0
+  accessed: '2026-10-10'
+  content_type: application/xml
+bt-gatt-supplement:
+  bytes: 612415
+  sha256: 34ad6b5f2e48c29759c2ef17f01502cb60080aff5d213712a6f581c56c9150b8
+  accessed: '2026-10-10'
+  content_type: application/pdf
+  title_found: GATT Specification Supplement
+bt-plxs-1.0.1:
+  bytes: 223895
+  sha256: 8002076f8bc25ee9bb6d255370f53d09881f45b1df84fb0ae76eab5267340346
+  accessed: '2026-10-10'
+  content_type: text/html
+cpic-api:
+  bytes: 2575523
+  sha256: 862cd660710afe17d2dd8e903114bd0fb3769d3b2cf25a03a3c076f57d9ffdc5
+  accessed: '2026-10-10'
+  content_type: application/json
+cpic-cyp2d6-2020:
+  bytes: 107302
+  sha256: 6dbcc4b59b5b2eb90c4b069d048617ca58e56037f14623c7cf176f12b37b9cfb
+  accessed: '2026-10-10'
+  content_type: application/xml
+cpic-frequencies:
+  bytes: 28032
+  sha256: 515b3cbf55c724fb98c1ae1845db80c5d41858415139cc5552e32d7e4b8d343d
+  accessed: '2026-10-10'
+  content_type: application/json
+gad7-form:
+  bytes: 32952
+  sha256: 180538a8e3f2f3cb012f9991d1b307d3d14720e82bf0593f8853f4885740ce48
+  accessed: '2026-10-10'
+  content_type: application/pdf
+  title_found: Microsoft Word - GAD-7_v2.doc
+gold-2025-pocket:
+  bytes: 12531283
+  sha256: 15520ae79c9457746781f52d822f40a9db3401372c87e47894ab891ffe139907
+  accessed: '2026-10-10'
+  content_type: application/pdf
+  title_found: 2025 POCKET GUIDE Global Strategy for the Diagnosis, Management, and
+    Prevention of Chronic Obstructive Pulmonary Disease Global Initiative for Chronic
+    Obstructi
+issa-2025-scd:
+  bytes: 145074
+  sha256: e212b0c436bc5d359f2821c5038c7feb91876222ef6fe690fd07b857f0076bcf
+  accessed: '2026-10-10'
+  content_type: application/xml
+karita-2009:
+  bytes: 152065
+  sha256: 3c37b56ac91265564b5ceeb65f1990e49fc4a527b71a936325dbec910bd45b4e
+  accessed: '2026-10-10'
+  content_type: application/xml
+kdigo-aki-2012:
+  bytes: 1650239
+  sha256: 20db2b44ea228cd1006ea9f867ee8d830663fae04c7f1ac3d24aaab7388ed1ad
+  accessed: '2026-10-10'
+  content_type: application/pdf
+  title_found: KI_SuppCover_2.1.indd
+kdigo-ckd-2024:
+  bytes: 889463
+  sha256: b1bc562dab89af2c591dadef71fa011098290338f914da5db2c8078d4111f537
+  accessed: '2026-10-10'
+  content_type: application/pdf
+  title_found: 'Executive summary of the KDIGO 2024 Clinical Practice Guideline for
+    the Evaluation and Management of Chronic Kidney Disease: known knowns and known
+    unknowns'
+kdigo-ckd-2024-full:
+  bytes: 5966902
+  sha256: b18db280f7dc889a1a99447b779c0312cd536f939a5180b38894a5d68e4410c0
+  accessed: '2026-10-10'
+  content_type: application/pdf
+  title_found: VOLUME 105 | ISSUE 4S | APRIL 2024 www.kidney-international.org KDIGO
+    2024 Clinical Practice Guideline for the Evaluation and Management of Chronic
+    Kidney Disea
+ncdc-lassa-2018:
+  bytes: 1349657
+  sha256: f7ffd28f066ed0431531df8df2d5308949c00eaca6162128e79321b758bc491d
+  accessed: '2026-10-10'
+  content_type: application/pdf
+ncdc-protocol-360:
+  bytes: 433348
+  sha256: 184db596a90904db9ea787bc59663900e2f7cb39d05b69eac837c711435be561
+  accessed: '2026-10-10'
+  content_type: application/pdf
+  title_found: NCDC/HQ/ABJ/04/V.IV/43 9th March 2025 NEW PUBLIC ADVISORY ON LASSA
+    FEVER In line with our mandate, the NCDC continues to monitor the occurrence and
+    trend of sev
+ng-eml-2020:
+  bytes: 1251857
+  sha256: 05d7ac6aaa2560d4b5cf51c1bb1da4c81c2fdc3ba0033bd9b5b571a595196df3
+  accessed: '2026-10-10'
+  content_type: application/pdf
+  title_found: Nigeria Essential Medicines List 2020 7th Edition 2020 Federal Ministry
+    of Health. All rights reserved.
+ng-scd-2014:
+  bytes: 1503266
+  sha256: 12680a9e8f73c5599c4318879480afe0167602c34dd62bf40edd8039dcabd01c
+  accessed: '2026-10-10'
+  content_type: application/pdf
+  title_found: NATIONAL GUIDELINE FOR THE CONTROL AND MANAGEMENT OF SICKLE CELL DISEASE
+nhse-pews-0-11m:
+  bytes: 221422
+  sha256: 8f48e1f339751ed3d08b5a30e535bb046d0ad5647ec44f902b1fcfaf89d9e648
+  accessed: '2026-10-10'
+  content_type: application/pdf
+  title_found: 'SpO ≤91% 92% - 94% ≥95% 0 to 11 months Patient Name: Hospital No.
+    NHS No. Date of Birth: Consultant: National Paediatric Early Warning System Observation
+    and Es'
+nhse-pews-1-4y:
+  bytes: 223157
+  sha256: 46a14e6ee856ffea1a1c58564b41cf431606b4f4c5fdc621834b98e7a064dcce
+  accessed: '2026-10-10'
+  content_type: application/pdf
+  title_found: 'SpO ≤91% 92% - 94% ≥95% Patient Name: Hospital No. NHS No. Date of
+    Birth: Consultant: National Paediatric Early Warning System Observation and Escalation
+    Chart'
+nhse-pews-13y:
+  bytes: 230421
+  sha256: c0d3b8a95dbc2a0672e12c12f0b68f8027824a29123ee20dfcca531f3ee5c2b4
+  accessed: '2026-10-10'
+  content_type: application/pdf
+  title_found: 'SpO ≤91% 92% - 94% ≥95% Patient Name: Hospital No. NHS No. Date of
+    Birth: Consultant: National Paediatric Early Warning System Observation and Escalation
+    Chart'
+nhse-pews-5-12y:
+  bytes: 228808
+  sha256: 5440cee814d920c0fe24942ad7c663c7c79f80d495c6050001b5187ae46b316f
+  accessed: '2026-10-10'
+  content_type: application/pdf
+  title_found: 'SpO ≤91% 92% - 94% ≥95% Patient Name: Hospital No. NHS No. Date of
+    Birth: Consultant: National Paediatric Early Warning System Observation and Escalation
+    Chart'
+nigeria-ri-2021:
+  bytes: 154967
+  sha256: c279225303b397a885e1f5d25526cef18dbc810352961bcd6d410d5438d7f12a
+  accessed: '2026-10-10'
+  content_type: application/xml
+nphcda-immunization-ig:
+  bytes: 21034
+  sha256: 5ea5a46847aa4c3c2b3cfc6e6908ce6265024defdb84ca7be747339652165303
+  accessed: '2026-10-10'
+  content_type: text/html
+odili-2020-htn:
+  bytes: 121730
+  sha256: ac869c0161ef5d5be0020f9c60f0b6b1a55de97d94b3571e441c8da87f976f95
+  accessed: '2026-10-10'
+  content_type: application/xml
+onovo-2023-hiv:
+  bytes: 148627
+  sha256: e3ba2e959c447c105fe41ebd2d2628e893d51ad92dda95bf38b67785cfea8c3f
+  accessed: '2026-10-10'
+  content_type: application/xml
+oviedo-2023-malaria:
+  bytes: 90224
+  sha256: 84fac15997c3b4c8332a95ece03470d96ba5dc241291638129d1c25bda67cb98
+  accessed: '2026-10-10'
+  content_type: application/xml
+phq-manual:
+  bytes: 134493
+  sha256: 6ed2f00f97e438c1168cd702d38d31fc923031445c720653005f138aa424228a
+  accessed: '2026-10-10'
+  content_type: application/pdf
+  title_found: ''
+promis-10:
+  bytes: 44558
+  sha256: 1384d87a6918a6ede0e1b94cdc00e3d64b36ed507426d1c9cbaf2df51a5b1a54
+  accessed: '2026-10-10'
+  content_type: application/pdf
+  title_found: PROMIS® Scale v1.2 – Global Health 13 April 2018 © 2010-2018 PROMIS
+    Health Organization (PHO) Page 1 of 2 Global Health Please respond to each question
+    or state
+promis-gh-scoring-2024:
+  bytes: 1038358
+  sha256: 2674270e39e339aeda18d33bd9d9c2ba7070875605ccf0376e58f39960883bb6
+  accessed: '2026-10-10'
+  content_type: application/pdf
+  title_found: '8/30/2024 PROMIS – Global Health Page 1 GLOBAL HEALTH SCORING MANUAL
+    A brief guide to scoring the PROMIS® Global Health instruments: ADULT PEDIATRIC
+    EARLY CHILD'
+rcp-news2-2017:
+  bytes: 2588875
+  sha256: c5dad854ccf0d210142d71434317b3407b8601416c9613b9c528f7cbec24de18
+  accessed: '2026-10-10'
+  content_type: application/pdf
+  title_found: News Report
+rcpath-g158-critical-results:
+  bytes: 433383
+  sha256: 6361a154af0116ba6ea1d2f47b220fb5b5ca670c0dda35311f3634c0e465b347
+  accessed: '2026-10-10'
+  content_type: application/pdf
+  title_found: 'PGD 130526 1 V2 Final Best practice recommendations The communication
+    of critical and unexpected pathology results May 2026 Authors: Dr Bernie Croal
+    and Dr Ian'
+ssc-2021:
+  bytes: 859043
+  sha256: d2be2ebc4667315e15db145476d6a3f6ece077ea0c738f858b134633b78065f6
+  accessed: '2026-10-10'
+  content_type: application/xml
+uloko-2018-dm:
+  bytes: 66425
+  sha256: 210e563a652c3976ddf1ebd8256abfca864e3b5e947c20a6d209403682bc7c69
+  accessed: '2026-10-10'
+  content_type: application/xml
+who-anc-2016:
+  bytes: 3903602
+  sha256: 338300b76172d410b91048209305fac53e1166c3be295a18b3f2c0c7c6b54182
+  accessed: '2026-10-10'
+  content_type: application/pdf
+who-aware-2022:
+  bytes: 10323301
+  sha256: 4960ecc4fa5bab8281feda656a0da3176dafa1fd21971d87e3b2092d7dac562f
+  accessed: '2026-10-10'
+  content_type: application/pdf
+  title_found: The WHO AWaRe (Access, Watch, Reserve) antibiotic book
+who-eml-2025:
+  bytes: 1364687
+  sha256: 69daf7c8399b85978ba85e143d3af34e6ccf7f3d493b1e056daa7ef909d64eb2
+  accessed: '2026-10-10'
+  content_type: application/pdf
+  title_found: WHO EML 23rd List (2023)
+who-hb-2024:
+  bytes: 1423282
+  sha256: 315a402cb68eaa892b81ae02d41997c3bd4b3bb5d767a320fac544a30dbbab23
+  accessed: '2026-10-10'
+  content_type: application/pdf
+  title_found: Guideline on haemoglobin cutoffs to define anaemia in individuals and
+    populations
+who-hearts-d-2020:
+  bytes: 1248098
+  sha256: 71b216b19a227e73e0e624274974571a3530e30a0db37a3d10b6d179eefac008
+  accessed: '2026-10-10'
+  content_type: application/pdf
+  title_found: Diagnosis and Management of Type 2 Diabetes
+who-hearts-protocols-2018:
+  bytes: 1739448
+  sha256: c3f4d4f6d6309a0ad629621225b4f7152929fcdb4a9a302676bc6d5b97e4104b
+  accessed: '2026-10-10'
+  content_type: application/pdf
+  title_found: Technical package for cardiovascular disease management in primary
+    health care Evidence-based treatment protocols
+who-hiv-2021:
+  bytes: 10865116
+  sha256: 635c9653c9f6718a702f60faf7ce15c57c7674a44a7383528f73859bf26a0738
+  accessed: '2026-10-10'
+  content_type: application/pdf
+  title_found: 'GUIDELINES CONSOLIDATED GUIDELINES ON HIV PREVENTION, TESTING, TREATMENT,
+    SERVICE DELIVERY AND MONITORING: RECOMMENDATIONS FOR A PUBLIC HEALTH APPROACH
+    JULY 202'
+who-htn-2021:
+  bytes: 843539
+  sha256: 57f6376d5c9bc4ea6c44873625547c8a5443d5a6ad8c8c422733681563db05fb
+  accessed: '2026-10-10'
+  content_type: application/pdf
+  title_found: Guideline for the pharmacological treatment of hypertension in adults
+who-imai-dcm-2011-v1:
+  bytes: 2893192
+  sha256: a8f3aa5027575e93c94b3b7ff45634be64642b78dec010768d7260ad490e1b0b
+  accessed: '2026-10-10'
+  content_type: application/pdf
+  title_found: DCM-FINAL Vol. 1 CH-1-8
+who-imai-dcm-2011-v2:
+  bytes: 3908246
+  sha256: 5c4afbdf5ca5a5fa56dc4e8143a56384d4e7708ab2f2309d4cf9f54153fb590a
+  accessed: '2026-10-10'
+  content_type: application/pdf
+  title_found: DCM-FINAL Vol. 2 CH 9-21.indd
+who-malaria-2026:
+  bytes: 3544129
+  sha256: 4e2c67b2ec74124ee2f3e388c57915c4a42ff035c570bd4b5de39e2e588de43b
+  accessed: '2026-10-10'
+  content_type: application/pdf
+  title_found: WHO guidelines for malaria, 10 September 2026
+who-mhgap-2023:
+  bytes: 1103723
+  sha256: 90f1220536d6323b8d8493090a567be137ef042bc76bffc7fd391ba47cbd005b
+  accessed: '2026-10-10'
+  content_type: application/pdf
+  title_found: Mental Health Gap Action Programme (mhGAP) guideline for mental, neurological
+    and substance use disorders
+who-mhgap-ig-2016:
+  bytes: 3633801
+  sha256: 3cbe88544386ab6ae55cd6d48d6c06484a5425f1e875e4359f87f4e44a5e1fd6
+  accessed: '2026-10-10'
+  content_type: application/pdf
+  title_found: mhGAP Intervention Guide Mental Health Gap Action Programme Version
+    2.0 for mental, neurological and substance use disorders in non-specialized health
+    settings
+who-pe-2011:
+  bytes: 880024
+  sha256: b5ce563ad8bd662ba63483cb50073598730104f5c7a8800485f6fb0520bd6289
+  accessed: '2026-10-10'
+  content_type: application/pdf
+  title_found: WHO recommendations for Prevention and treatment of pre-eclampsia and
+    eclampsia
+who-pen-2020:
+  bytes: 2584724
+  sha256: a09cc0ea4b39fd6ebfceb4d73f20bee7c4a7baeb3ae60150160cad646d6ec7e6
+  accessed: '2026-10-10'
+  content_type: application/pdf
+  title_found: untitled
+who-pocketbook-children-2013:
+  bytes: 3103071
+  sha256: e17581cf0829bea6dd4711dda95a727cc298a4ffbd16d37fa2bb89a7b4b0fb65
+  accessed: '2026-10-10'
+  content_type: application/pdf
+  title_found: PB2_Prelims.indd
+who-tb-handbook-m4-2025:
+  bytes: 4274608
+  sha256: c3b42b5e0828c5b5454a08b9cde2de28b963f2d58df29b0109d872e91f9ef93a
+  accessed: '2026-10-10'
+  content_type: application/pdf
+  title_found: 'WHO operational handbook on tuberculosis. Module 4: treatment and
+    care'
+who-tb-m3-2025:
+  bytes: 3619007
+  sha256: c560e5d6276722d526d8137c491966352f87268b6ee9984b7775ac4495690929
+  accessed: '2026-10-10'
+  content_type: application/pdf
+  title_found: 'WHO consolidated guidelines on tuberculosis. Module 3: diagnosis'
+who-tb-m4-2026:
+  bytes: 6227476
+  sha256: a6092c81773c72f3b344b5e1d2abfe695c11ccbc726f8d4e65766b55c5b8a3fd
+  accessed: '2026-10-10'
+  content_type: application/pdf
+  title_found: 'WHO consolidated guidelines on tuberculosis. Module 4: treatment and
+    care'
+who-tb-report-2025:
+  bytes: 5200208
+  sha256: 18a4fdf066e848cbba7a6c786515aac7699c1a7cd0e3f6a2e50da526f0ebe3a9
+  accessed: '2026-10-10'
+  content_type: application/pdf
+  title_found: 2025 tuberculosis Global report

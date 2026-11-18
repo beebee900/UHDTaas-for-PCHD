@@ -1,0 +1,108 @@
+# Intravenous ribavirin for Lassa fever (NCDC 2018). Each phase gives mg/kg per dose, the
+# maximum per dose and the interval. A loading dose split in two gives 2/3 at once and 1/3 later.
+
+- id: dose.ribavirin_iv_mccormick
+  drug: ribavirin
+  atc: J05AP01
+  route: intravenous
+  duration_days: 10
+  phases:
+  - {phase: loading, mg_per_kg: 33, max_g: 2.64, schedule: stat}
+  - {phase: days_1_4, mg_per_kg: 16, max_g: 1.28, every_h: 6}
+  - {phase: days_5_10, mg_per_kg: 8, max_g: 0.64, every_h: 8}
+  dialysis: Give the dose 4 hours before a dialysis session.
+  provenance:
+    source: ncdc-lassa-2018
+    section: 3.2.1A Adults including non-pregnant adults (McCormick regimen)
+    page: 14
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: dose.ribavirin_iv_irrua
+  drug: ribavirin
+  atc: J05AP01
+  route: intravenous
+  duration_days: 10
+  phases:
+  - {phase: loading, mg_per_kg: 100, max_g: 7, schedule: two divided doses 8 hours apart}
+  - {phase: days_2_7, mg_per_kg: 25, doses_per_day: 1}
+  - {phase: days_8_10, mg_per_kg: 12.5, doses_per_day: 1}
+  provenance:
+    source: ncdc-lassa-2018
+    section: 3.2.1B Adults including non-pregnant adults (Irrua regimen)
+    page: 14
+    derived:
+      phases[*].doses_per_day: Text "Daily (single dose)".
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: dose.ribavirin_iv_pregnancy
+  drug: ribavirin
+  atc: J05AP01
+  route: intravenous
+  duration_days: 10
+  phases:
+  - {phase: loading_day_1, mg_per_kg: 100, schedule: two divided doses 8 hours apart}
+  - {phase: days_2_5, mg_per_kg: 16, every_h: 6}
+  - {phase: days_6_10, mg_per_kg: 8, every_h: 8}
+  administration: Slow intravenous push over 5 to 10 minutes.
+  provenance:
+    source: ncdc-lassa-2018
+    section: 3.3.1 ISTH Regimen for Pregnant women (Modified McCormick regimen)
+    page: 15
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: dose.ribavirin_iv_child
+  drug: ribavirin
+  atc: J05AP01
+  route: intravenous
+  duration_days: 10
+  phases:
+  - {phase: loading, mg_per_kg: 33, max_g: 2.64, schedule: stat}
+  - {phase: days_1_4, mg_per_kg: 16, max_g: 1.28, every_h: 6}
+  - {phase: days_5_10, mg_per_kg: 8, max_g: 0.64, every_h: 8}
+  provenance:
+    source: ncdc-lassa-2018
+    section: 3.4 Management of Lassa fever in Children
+    page: 20
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: dose.ribavirin_oral_pep
+  drug: ribavirin
+  atc: J05AP01
+  route: oral
+  mg: 500
+  every_h: 6
+  duration_days: 7
+  alternative_start: Intravenous 100 mg/kg once, then the oral regimen.
+  advice: Take with food.
+  provenance:
+    source: ncdc-lassa-2018
+    page: 45
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: dose.ribavirin_iv_pep_pregnancy
+  drug: ribavirin
+  atc: J05AP01
+  route: intravenous
+  duration_days: 7
+  phases:
+  - {phase: day_0_loading, mg_per_kg: 100, schedule: two divided doses 8 hours apart}
+  - {phase: days_1_4, mg_per_kg: 25, doses_per_day: 1}
+  - {phase: days_5_7, mg_per_kg: 12.5, doses_per_day: 1}
+  provenance:
+    source: ncdc-lassa-2018
+    page: 45
+    derived:
+      phases[*].doses_per_day: Text "Daily".
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified

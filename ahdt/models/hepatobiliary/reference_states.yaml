@@ -1,0 +1,26 @@
+# T3 reference-state items of the hepatobiliary twin (design 04, 4.5.3).
+- model_id: ahdt.hepatobiliary.gallbladder_and_biliary_tree
+  twin: hepatobiliary
+  intended_use: Cholestasis index and bile flow
+  instances:
+  - UBERON:0002107
+  variables:
+    cholestasis_index:
+      unit: '1'
+      ref: state.cholestasis_index
+      tau_h: 72
+      justification: Relaxation time constant of a T3 state; a modelling assumption (design 01, rule
+        R3)
+    bile_flow:
+      unit: '1'
+      ref: state.bile_flow
+      tau_h: 24
+      justification: Relaxation time constant of a T3 state; a modelling assumption (design 01, rule
+        R3)
+  couplings:
+  - input: bilirubin
+    from: field:1975-2
+    unit: umol/L
+    target: cholestasis_index
+    gain: coupling.hepatobiliary.gallbladder_and_biliary_tree.bilirubin.cholestasis_index.gain
+    reference: coupling.hepatobiliary.gallbladder_and_biliary_tree.bilirubin.cholestasis_index.reference

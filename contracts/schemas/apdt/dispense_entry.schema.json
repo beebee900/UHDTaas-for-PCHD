@@ -1,0 +1,60 @@
+{
+  "$id": "https://atra.local/schemas/apdt/dispense_entry.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "A medication the pharmacist hands over for the patient.",
+  "properties": {
+    "days_supply": {
+      "anyOf": [
+        {
+          "maximum": 365,
+          "minimum": 1,
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Days Supply"
+    },
+    "dose": {
+      "maxLength": 200,
+      "minLength": 1,
+      "title": "Dose",
+      "type": "string"
+    },
+    "medication": {
+      "maxLength": 200,
+      "minLength": 1,
+      "title": "Medication",
+      "type": "string"
+    },
+    "notes": {
+      "anyOf": [
+        {
+          "maxLength": 2000,
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Notes"
+    },
+    "quantity": {
+      "maxLength": 100,
+      "minLength": 1,
+      "title": "Quantity",
+      "type": "string"
+    }
+  },
+  "required": [
+    "medication",
+    "dose",
+    "quantity"
+  ],
+  "title": "DispenseEntry",
+  "type": "object"
+}

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Phone simulator</title>
+<style>
+:root{--bg:#f4f5f7;--phone:#1d2430;--screen:#e9f1e4;--ink:#17202a;--key:#2d3747;--key-ink:#fff;
+--muted:#5b6573;--sms:#ffffff}
+@media (prefers-color-scheme:dark){:root{--bg:#11151c;--screen:#203024;--ink:#e6efe2;
+--muted:#a7b0bc;--sms:#1b222c}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,sans-serif;
+display:flex;justify-content:center;padding:16px}
+main{width:min(340px,100%)}
+.phone{background:var(--phone);border-radius:28px;padding:20px}
+label{display:block;color:#cfd6df;font-size:14px;margin-bottom:4px}
+.screen{background:var(--screen);color:var(--ink);border-radius:8px;min-height:200px;padding:12px;
+white-space:pre-wrap;font-family:ui-monospace,monospace;font-size:14px}
+input{width:100%;box-sizing:border-box;margin:10px 0 0;padding:10px;font-size:16px;border-radius:6px;
+border:0}
+.keys{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:10px}
+button{padding:10px;border:0;border-radius:6px;background:var(--key);color:var(--key-ink);
+font-size:16px}
+.wide{width:100%;margin-top:8px}
+h2{font-size:16px;margin:20px 0 8px}
+ol{list-style:none;padding:0;margin:0}
+li{background:var(--sms);border-radius:8px;padding:8px 10px;margin-bottom:6px;font-size:14px}
+.muted{color:var(--muted);font-size:14px}
+</style>
+</head>
+<body>
+<main>
+<div class="phone">
+  <label for="phone">Phone number</label>
+  <input id="phone" data-testid="phone" value="+2340000000001" autocomplete="off">
+  <div class="screen" id="screen" data-testid="screen" role="status" aria-live="polite">Dial {{SERVICE_CODE}} to start.</div>
+  <input id="entry" data-testid="entry" aria-label="Reply" placeholder="Reply" autocomplete="off">
+  <div class="keys" id="keys"></div>
+  <button class="wide" id="send" data-testid="send">Send</button>
+  <button class="wide" id="dial" data-testid="dial">Dial {{SERVICE_CODE}}</button>
+</div>
+<h2>SMS messages</h2>
+<ol id="sms" data-testid="sms"></ol>
+<p class="muted" id="none">No messages yet.</p>
+</main>
+<script>
+const code = "{{SERVICE_CODE}}";
+let session = null, path = [];
+const $ = id => document.getElementById(id);
+async function inbox() {
+  const r = await fetch("/v1/simulator/inbox?phone=" + encodeURIComponent($("phone").value));
+  if (!r.ok) return;
+  const list = (await r.json()).messages;
+  $("sms").replaceChildren(...list.map(t => { const li = document.createElement("li");
+    li.textContent = t; return li; }));
+  $("none").hidden = list.length > 0;
+}
+async function ussd(text) {
+  const body = new URLSearchParams({sessionId: session, serviceCode: code,
+    phoneNumber: $("phone").value, networkCode: "99999", text});
+  const reply = await (await fetch("/v1/ussd", {method: "POST", body})).text();
+  $("screen").textContent = reply.slice(4);
+  if (reply.startsWith("END")) { session = null; path = []; await inbox(); }
+}
+function send() {
+  const v = $("entry").value.trim();
+  if (!session || !v) return;
+  path.push(v); $("entry").value = ""; ussd(path.join("*"));
+}
+for (const k of ["1","2","3","4","5","6","7","8","9","*","0","#"]) {
+  const b = document.createElement("button"); b.textContent = k;
+  b.setAttribute("aria-label", "Key " + k);
+  b.onclick = () => { $("entry").value += k; }; $("keys").appendChild(b);
+}
+$("dial").onclick = () => { session = crypto.randomUUID(); path = []; ussd(""); };
+$("send").onclick = send;
+$("entry").addEventListener("keydown", e => { if (e.key === "Enter") send(); });
+$("phone").addEventListener("change", inbox);
+inbox();
+</script>
+</body>
+</html>

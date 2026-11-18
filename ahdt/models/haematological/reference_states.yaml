@@ -1,0 +1,41 @@
+# T3 reference-state items of the haematological twin (design 04, 4.5.3).
+- model_id: ahdt.haematological.bone_marrow_and_erythrocytes.leukopoiesis
+  twin: haematological
+  intended_use: Neutrophil and lymphocyte output of the marrow (component of the bone marrow item)
+  instances:
+  - UBERON:0002371
+  variables:
+    neutrophil_output:
+      unit: '1'
+      ref: state.neutrophil_output
+      tau_h: 72
+      justification: Relaxation time constant of a T3 state; a modelling assumption (design 01, rule
+        R3)
+    lymphocyte_output:
+      unit: '1'
+      ref: state.lymphocyte_output
+      tau_h: 168
+      justification: Relaxation time constant of a T3 state; a modelling assumption (design 01, rule
+        R3)
+- model_id: ahdt.haematological.coagulation
+  twin: haematological
+  intended_use: INR state coupled to hepatic synthesis of clotting factors
+  instances:
+  - UBERON:0000178
+  variables:
+    inr:
+      unit: '{INR}'
+      ref: range.inr
+      tau_h: 24
+      justification: Relaxation time constant of a T3 state; a modelling assumption (design 01, rule
+        R3)
+  couplings:
+  - input: clotting_factor_synthesis
+    from: facet:UBERON:0002107/haematological#clotting_factor_synthesis
+    unit: '1'
+    target: inr
+    gain: coupling.haematological.coagulation.clotting_factor_synthesis.inr.gain
+    reference: coupling.haematological.coagulation.clotting_factor_synthesis.inr.reference
+  obs_map:
+    6301-6: inr
+    34714-6: inr

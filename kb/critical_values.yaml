@@ -1,0 +1,59 @@
+# Critical lab and vital values → urgency for clinical event routing (design 05, 5.4).
+# Each rule reads its cut-off from a sourced kb entry (`threshold` + `path`), so a value
+# lives in one place. `emergency` pages the responsible clinician at once with SMS
+# fallback; `urgent` pages within the response time of `news2.bands`.
+
+- id: critical.rules
+  rules:
+  - {id: hypoxaemia_child, field: spo2, op: lt, threshold: threshold.hypoxaemia_child, path: below, population: child, urgency: emergency}
+  - {id: pulmonary_oedema_spo2, field: spo2, op: lt, threshold: severity.malaria.falciparum, path: 'criteria[criterion=pulmonary_oedema].spo2_below_on_air', population: any, urgency: emergency}
+  - {id: hypoglycaemia_severe, field: glucose, op: le, threshold: threshold.hypoglycaemia_diabetes, path: severe_at_or_below, population: any, urgency: emergency}
+  - {id: hypoglycaemia_malaria, field: glucose, op: lt, threshold: severity.malaria.falciparum, path: 'criteria[criterion=hypoglycaemia].glucose_below_mmol_l', population: any, urgency: emergency}
+  - {id: hyperglycaemia_hyperosmolar, field: glucose, op: ge, threshold: threshold.hyperglycaemia_severe, path: hyperosmolar_at_or_above, population: any, urgency: emergency}
+  - {id: hyperglycaemia_severe, field: glucose, op: gt, threshold: threshold.hyperglycaemia_severe, path: above, population: any, urgency: urgent}
+  - {id: severe_anaemia_child, field: hb, op: le, threshold: severity.malaria.falciparum, path: 'criteria[criterion=severe_anaemia].hb_at_or_below_g_dl_child', population: child, urgency: emergency}
+  - {id: severe_anaemia_adult, field: hb, op: lt, threshold: severity.malaria.falciparum, path: 'criteria[criterion=severe_anaemia].hb_below_g_dl_adult', population: adult, urgency: emergency}
+  - {id: renal_impairment, field: creatinine, op: gt, threshold: severity.malaria.falciparum, path: 'criteria[criterion=renal_impairment].creatinine_above_umol_l', population: any, urgency: urgent}
+  - {id: jaundice, field: bilirubin, op: gt, threshold: severity.malaria.falciparum, path: 'criteria[criterion=jaundice].bilirubin_above_umol_l', population: any, urgency: urgent}
+  - {id: hyperparasitaemia, field: parasitaemia, op: gt, threshold: severity.malaria.falciparum, path: 'criteria[criterion=hyperparasitaemia].parasitaemia_above_percent', population: any, urgency: emergency}
+  - {id: shock_child, field: sbp, op: lt, threshold: severity.malaria.falciparum, path: 'criteria[criterion=decompensated_shock].sbp_below_child', population: child, urgency: emergency}
+  - {id: shock_adult, field: sbp, op: lt, threshold: threshold.shock_adult, path: systolic_bp_below, population: adult, urgency: emergency}
+  - {id: impaired_consciousness, field: gcs_total, op: lt, threshold: severity.malaria.falciparum, path: 'criteria[criterion=impaired_consciousness].gcs_below_adult', population: adult, urgency: emergency}
+  - {id: news2_high, field: news2, op: ge, threshold: news2.bands, path: 'bands[band=high].min_total', population: adult, urgency: emergency}
+  - {id: news2_medium, field: news2, op: ge, threshold: news2.bands, path: 'bands[band=medium].min_total', population: adult, urgency: urgent}
+  - {id: hyponatraemia, field: sodium, op: le, threshold: threshold.critical_lab, path: sodium.low, population: adult, urgency: emergency}
+  - {id: hyponatraemia_child, field: sodium, op: le, threshold: threshold.critical_lab, path: sodium.low_child, population: child, urgency: emergency}
+  - {id: hypernatraemia, field: sodium, op: ge, threshold: threshold.critical_lab, path: sodium.high, population: any, urgency: emergency}
+  - {id: hypokalaemia, field: potassium, op: le, threshold: threshold.critical_lab, path: potassium.low, population: any, urgency: emergency}
+  - {id: hyperkalaemia, field: potassium, op: ge, threshold: threshold.critical_lab, path: potassium.high, population: any, urgency: emergency}
+  - {id: hypoglycaemia_lab, field: glucose, op: le, threshold: threshold.critical_lab, path: glucose.low, population: any, urgency: emergency}
+  - {id: hyperglycaemia_child, field: glucose, op: ge, threshold: threshold.critical_lab, path: glucose.high_child, population: child, urgency: urgent}
+  - {id: creatinine_critical, field: creatinine, op: ge, threshold: threshold.critical_lab, path: creatinine.high, population: adult, urgency: urgent}
+  - {id: creatinine_critical_child, field: creatinine, op: ge, threshold: threshold.critical_lab, path: creatinine.high_child, population: child, urgency: urgent}
+  - {id: crp_critical, field: crp, op: ge, threshold: threshold.critical_lab, path: crp.high, population: adult, urgency: urgent}
+  - {id: inr_critical, field: inr, op: gt, threshold: threshold.critical_lab, path: inr.high, population: any, urgency: urgent}
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: The cut-offs come from the referenced, sourced entries. The urgency class of each rule is the builder's mapping (a criterion of severe disease or a high NEWS2 band pages at once; the rest within the medium-band response time) and needs clinical sign-off.
+
+# Laboratory cut-offs for rapid communication (RCPath G158, appendices A and B). Lower limits
+# apply at or below the value and upper limits at or above it; `_child` applies under 16 years.
+- id: threshold.critical_lab
+  sodium: {low: 120, low_child: 130, high: 160, unit: mmol/L}
+  potassium: {low: 2.5, high: 6.5, unit: mmol/L}
+  glucose: {low: 2.5, high_child: 15, unit: mmol/L}
+  creatinine: {high: 354, high_child: 200, unit: umol/L}
+  crp: {high: 300, unit: mg/L}
+  inr: {high: 6.5}
+  communication: Rapid communication within 2 hours, usually by telephone, in primary and secondary care.
+  provenance:
+    source: rcpath-g158-critical-results
+    section: Units Action limits a Communication type b Comments
+    also:
+    - {source: rcpath-g158-critical-results, section: Appendix A Clinical biochemistry}
+    - {source: rcpath-g158-critical-results, section: Coagulation}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified

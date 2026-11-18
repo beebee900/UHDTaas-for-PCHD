@@ -1,0 +1,295 @@
+{
+  "atra": {
+    "connector_purposes": {
+      "acid_base_resp": [
+        "care"
+      ],
+      "activity_plan": [
+        "care"
+      ],
+      "behaviour_summary": [
+        "care"
+      ],
+      "clinical_event": [
+        "care"
+      ],
+      "clinical_finding": [
+        "care"
+      ],
+      "cohort_contribution": [
+        "public_health"
+      ],
+      "deterioration_event": [
+        "care"
+      ],
+      "exposome": [
+        "care"
+      ],
+      "gas_exchange": [
+        "care"
+      ],
+      "glycaemia": [
+        "care"
+      ],
+      "gonadal_hormones": [
+        "care"
+      ],
+      "haemodynamics": [
+        "care"
+      ],
+      "hepatic_function": [
+        "care"
+      ],
+      "hpa_axis": [
+        "care"
+      ],
+      "infection_state": [
+        "care"
+      ],
+      "metabolic_stress_state": [
+        "care"
+      ],
+      "mobility": [
+        "care"
+      ],
+      "nutrient_absorption": [
+        "care"
+      ],
+      "oxygen_carriage": [
+        "care"
+      ],
+      "parasite_burden": [
+        "care"
+      ],
+      "population_norm": [
+        "care",
+        "public_health"
+      ],
+      "population_prior": [
+        "care",
+        "public_health"
+      ],
+      "referral": [
+        "care"
+      ],
+      "registry_case": [
+        "public_health"
+      ],
+      "renal_function": [
+        "care"
+      ],
+      "reproductive_state": [
+        "care"
+      ],
+      "sensory_status": [
+        "care"
+      ],
+      "social_context": [
+        "care"
+      ],
+      "support_need": [
+        "care"
+      ],
+      "system_summary": [
+        "care"
+      ],
+      "thermal_state": [
+        "care"
+      ]
+    },
+    "consent_categories": {
+      "body_models_and_simulation": [
+        "ahdt.model.calibrate",
+        "ahdt.model.cosimulate",
+        "ahdt.model.facet",
+        "ahdt.model.forecast",
+        "ahdt.model.simulate",
+        "ahdt.model.state"
+      ],
+      "conversation_and_speech": [
+        "ahdt.cognitive.converse",
+        "ahdt.cognitive.perceive",
+        "ahdt.cognitive.reason",
+        "ahdt.cognitive.request_data"
+      ],
+      "explanations": [
+        "ahdt.xai.causal_graph",
+        "ahdt.xai.explain"
+      ],
+      "genome": [
+        "ahdt.data.genome"
+      ],
+      "knowledge_graph_and_notes": [
+        "ahdt.data.documents",
+        "ahdt.data.graph_query",
+        "ahdt.data.knowledge"
+      ],
+      "laboratory_and_imaging": [
+        "ahdt.data.imaging"
+      ],
+      "medicines": [
+        "ahdt.data.medications"
+      ],
+      "vital_signs_and_device_data": [
+        "ahdt.data.observations",
+        "ahdt.data.timeseries"
+      ]
+    },
+    "purpose_hl7": {
+      "care": "TREAT",
+      "emergency": "ETREAT",
+      "operations": "HOPERAT",
+      "public_health": "PUBHLTH",
+      "research": "HRESCH",
+      "self_management": "PATRQT"
+    },
+    "range_guard": {
+      "core_temp": [
+        30.0,
+        43.0
+      ],
+      "glucose": [
+        1.5,
+        40.0
+      ],
+      "hb": [
+        3.0,
+        25.0
+      ]
+    },
+    "role_tools": {
+      "administrator": [
+        "ahdt.model.calibrate",
+        "ahdt.model.state"
+      ],
+      "carer": [
+        "ahdt.cognitive.converse",
+        "ahdt.data.observations",
+        "ahdt.model.forecast",
+        "ahdt.xai.explain"
+      ],
+      "clinical_safety_officer": [
+        "ahdt.model.calibrate",
+        "ahdt.model.state"
+      ],
+      "community_health_worker": [
+        "ahdt.cognitive.converse",
+        "ahdt.cognitive.request_data",
+        "ahdt.data.medications",
+        "ahdt.data.observations",
+        "ahdt.model.state",
+        "ahdt.xai.explain"
+      ],
+      "lab_scientist": [
+        "ahdt.cognitive.converse",
+        "ahdt.data.observations",
+        "ahdt.data.timeseries"
+      ],
+      "medical_officer": [
+        "ahdt.cognitive.converse",
+        "ahdt.cognitive.perceive",
+        "ahdt.cognitive.reason",
+        "ahdt.cognitive.request_data",
+        "ahdt.data.documents",
+        "ahdt.data.genome",
+        "ahdt.data.graph_query",
+        "ahdt.data.imaging",
+        "ahdt.data.knowledge",
+        "ahdt.data.medications",
+        "ahdt.data.observations",
+        "ahdt.data.timeseries",
+        "ahdt.model.cosimulate",
+        "ahdt.model.facet",
+        "ahdt.model.forecast",
+        "ahdt.model.simulate",
+        "ahdt.model.state",
+        "ahdt.xai.causal_graph",
+        "ahdt.xai.explain"
+      ],
+      "nurse": [
+        "ahdt.cognitive.converse",
+        "ahdt.cognitive.request_data",
+        "ahdt.data.medications",
+        "ahdt.data.observations",
+        "ahdt.data.timeseries",
+        "ahdt.model.forecast",
+        "ahdt.model.state",
+        "ahdt.xai.explain"
+      ],
+      "patient": [
+        "ahdt.cognitive.converse",
+        "ahdt.cognitive.perceive",
+        "ahdt.cognitive.request_data",
+        "ahdt.data.medications",
+        "ahdt.data.observations",
+        "ahdt.model.forecast",
+        "ahdt.xai.explain"
+      ],
+      "person": [
+        "ahdt.cognitive.converse",
+        "ahdt.cognitive.perceive",
+        "ahdt.cognitive.reason",
+        "ahdt.cognitive.request_data",
+        "ahdt.data.documents",
+        "ahdt.data.genome",
+        "ahdt.data.graph_query",
+        "ahdt.data.imaging",
+        "ahdt.data.knowledge",
+        "ahdt.data.medications",
+        "ahdt.data.observations",
+        "ahdt.data.timeseries",
+        "ahdt.model.forecast",
+        "ahdt.model.simulate",
+        "ahdt.model.state",
+        "ahdt.xai.explain"
+      ],
+      "pharmacist": [
+        "ahdt.cognitive.converse",
+        "ahdt.data.documents",
+        "ahdt.data.genome",
+        "ahdt.data.medications",
+        "ahdt.data.observations",
+        "ahdt.model.cosimulate",
+        "ahdt.model.facet",
+        "ahdt.model.simulate",
+        "ahdt.model.state",
+        "ahdt.xai.causal_graph",
+        "ahdt.xai.explain"
+      ],
+      "proxy": [
+        "ahdt.cognitive.converse",
+        "ahdt.cognitive.perceive",
+        "ahdt.cognitive.request_data",
+        "ahdt.data.medications",
+        "ahdt.data.observations",
+        "ahdt.model.forecast",
+        "ahdt.xai.explain"
+      ],
+      "public_health_official": [
+        "ahdt.data.cohort_extract"
+      ],
+      "radiologist": [
+        "ahdt.cognitive.converse",
+        "ahdt.cognitive.perceive",
+        "ahdt.data.documents",
+        "ahdt.data.graph_query",
+        "ahdt.data.imaging",
+        "ahdt.data.observations",
+        "ahdt.data.timeseries",
+        "ahdt.model.state",
+        "ahdt.xai.explain"
+      ],
+      "researcher": [
+        "ahdt.data.cohort_extract"
+      ],
+      "therapist": [
+        "ahdt.cognitive.converse",
+        "ahdt.data.observations",
+        "ahdt.data.timeseries",
+        "ahdt.model.forecast",
+        "ahdt.model.state",
+        "ahdt.xai.explain"
+      ]
+    }
+  }
+}

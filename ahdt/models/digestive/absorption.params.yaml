@@ -1,0 +1,17 @@
+# Gastric emptying and glucose absorption subsystem of Dalla Man et al. (2007).
+model_id: ahdt.digestive.stomach_and_intestine_absorption
+sources:
+- id: dallaman2007
+  citation: "Dalla Man C, Rizza RA, Cobelli C. Meal simulation model of the glucose-insulin
+    system. IEEE Trans Biomed Eng. 2007;54(10):1740-1749. doi:10.1109/TBME.2007.893506"
+  via: BioModels BIOMD0000000379 (curated SBML of the paper)
+  url: https://www.ebi.ac.uk/biomodels/BIOMD0000000379
+params:
+  BW: {value: 78, unit: kg, source: dallaman2007, note: body weight of the reference subject}
+  k_max: {value: 0.0558, unit: /min, source: dallaman2007}
+  k_min: {value: 0.008, unit: /min, source: dallaman2007}
+  k_abs: {value: 0.057, unit: /min, source: dallaman2007, calibrate: true, prior_cv: 0.4}
+  k_gri: {value: 0.0558, unit: /min, source: dallaman2007}
+  f: {value: 0.9, unit: '1', source: dallaman2007}
+  b: {value: 0.82, unit: '1', source: dallaman2007}
+  d: {value: 0.01, unit: '1', source: dallaman2007}

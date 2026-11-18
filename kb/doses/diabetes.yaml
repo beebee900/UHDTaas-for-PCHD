@@ -1,0 +1,29 @@
+# Glucose-lowering doses of the HEARTS-D protocol (Fig. 1, page 16).
+- id: dose.metformin
+  drug: metformin
+  atc: A10BA02
+  route: oral
+  steps:
+  - {mg: 500, doses_per_day: 1}
+  - {mg: 1000, doses_per_day: 1}
+  - {mg: 1000, doses_per_day: 2}
+  provenance:
+    source: who-hearts-d-2020
+    page: 16
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: dose.gliclazide
+  drug: gliclazide
+  atc: A10BB09
+  route: oral
+  steps:
+  - {mg: 80, doses_per_day: 1}
+  - {mg: 80, doses_per_day: 2}
+  provenance:
+    source: who-hearts-d-2020
+    page: 16
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified

@@ -1,0 +1,23 @@
+# One-compartment elimination half-lives of circulating hormones.
+model_id: ahdt.endocrine.hormone_kinetics
+sources:
+- id: brown1997
+  citation: "Brown EN, Choe Y, Shanahan TL, Czeisler CA. A mathematical model of diurnal
+    variations in human plasma melatonin levels. Am J Physiol. 1997;272(3 Pt 1):E506-E516.
+    doi:10.1152/ajpendo.1997.272.3.E506"
+- id: atra-assumption
+  citation: ATRA design 01 rule R5 assumption register
+params:
+  half_life_melatonin: {value: 23.67, unit: min, source: brown1997}
+  half_life_cortisol: {value: 66, unit: min, source: atra-assumption, verified: false,
+                       justification: "Plasma cortisol half-life of about an hour; needs a
+                         sourced value (shared with the HPA model)"}
+  half_life_t4: {value: 10080, unit: min, source: atra-assumption, verified: false,
+                 justification: "Thyroxine half-life of about 7 days; needs a sourced value"}
+  half_life_t3: {value: 1440, unit: min, source: atra-assumption, verified: false,
+                 justification: "Triiodothyronine half-life of about 1 day; needs a sourced
+                   value"}
+  half_life_tsh: {value: 60, unit: min, source: atra-assumption, verified: false,
+                  justification: "TSH half-life of about an hour; needs a sourced value"}
+  half_life_pth: {value: 4, unit: min, source: atra-assumption, verified: false,
+                  justification: "Intact PTH half-life of a few minutes; needs a sourced value"}

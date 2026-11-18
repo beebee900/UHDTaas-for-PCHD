@@ -1,0 +1,27 @@
+# Gagge two-node model of human thermoregulation.
+model_id: ahdt.integumentary.thermoregulation
+sources:
+- id: gagge1986
+  citation: "Gagge AP, Fobelets AP, Berglund LG. A standard predictive index of human response
+    to the thermal environment. ASHRAE Trans. 1986;92(2B):709-731"
+  via: "pythermalcomfort two_nodes_gagge implementation (Tartarini and Schiavon 2020,
+    SoftwareX 12:100578), read for the constants and update order"
+  url: https://pythermalcomfort.readthedocs.io/en/latest/_modules/pythermalcomfort/models/two_nodes_gagge.html
+- id: atra-assumption
+  citation: ATRA design 01 rule R5 assumption register
+params:
+  body_weight: {value: 70, unit: kg, source: gagge1986}
+  body_surface_area: {value: 1.8258, unit: m2, source: gagge1986}
+  met_factor: {value: 58.2, unit: W/m2, source: gagge1986, note: one met}
+  c_sw: {value: 170, unit: g/(m2.h.K), source: gagge1986, note: regulatory sweating coefficient}
+  c_dil: {value: 120, unit: L/(m2.h.K), source: gagge1986, note: vasodilation coefficient}
+  c_str: {value: 0.5, unit: /K, source: gagge1986, note: vasoconstriction coefficient}
+  t_skin_neutral: {value: 33.7, unit: Cel, source: gagge1986}
+  t_core_neutral: {value: 36.8, unit: Cel, source: gagge1986}
+  skin_blood_flow_neutral: {value: 6.3, unit: L/(m2.h), source: gagge1986}
+  max_skin_blood_flow: {value: 90, unit: L/(m2.h), source: gagge1986}
+  max_sweating: {value: 500, unit: g/(m2.h), source: gagge1986}
+  alfa0: {value: 0.1, unit: '1', source: gagge1986, note: skin fraction of body mass at neutral}
+  fever_gain: {value: 1.0, unit: '1', source: atra-assumption, assumption: true,
+               justification: "Fever modelled as an upward shift of the core set point equal to
+                 the fever input in kelvin"}

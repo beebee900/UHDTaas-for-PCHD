@@ -1,0 +1,119 @@
+{
+  "resourceType": "PlanDefinition",
+  "id": "hypertension",
+  "url": "https://atra.health/fhir/PlanDefinition/hypertension",
+  "version": "1.0.0",
+  "name": "hypertension",
+  "title": "Hypertension",
+  "type": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/plan-definition-type",
+        "code": "clinical-protocol"
+      }
+    ]
+  },
+  "status": "active",
+  "useContext": [
+    {
+      "code": {
+        "system": "http://terminology.hl7.org/CodeSystem/usage-context-type",
+        "code": "focus"
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "59621000"
+          }
+        ]
+      }
+    }
+  ],
+  "extension": [
+    {
+      "url": "https://atra.health/fhir/StructureDefinition/kb-entry",
+      "valueString": "cond.hypertension"
+    }
+  ],
+  "action": [
+    {
+      "id": "treat",
+      "title": "Choose treatment",
+      "selectionBehavior": "exactly-one",
+      "action": [
+        {
+          "id": "treat-uncontrolled",
+          "title": "Treat (uncontrolled)",
+          "condition": [
+            {
+              "kind": "applicability",
+              "expression": {
+                "language": "text/fhirpath",
+                "expression": "%severity = 'uncontrolled'"
+              }
+            }
+          ],
+          "selectionBehavior": "exactly-one",
+          "action": [
+            {
+              "id": "tx.hypertension.hearts_ccb_first",
+              "title": "amlodipine + telmisartan + chlorthalidone",
+              "selectionBehavior": "all",
+              "action": [
+                {
+                  "id": "dose.amlodipine",
+                  "title": "amlodipine",
+                  "definitionCanonical": "https://atra.health/fhir/ActivityDefinition/dose.amlodipine"
+                },
+                {
+                  "id": "dose.telmisartan",
+                  "title": "telmisartan",
+                  "definitionCanonical": "https://atra.health/fhir/ActivityDefinition/dose.telmisartan"
+                },
+                {
+                  "id": "dose.chlorthalidone",
+                  "title": "chlorthalidone",
+                  "definitionCanonical": "https://atra.health/fhir/ActivityDefinition/dose.chlorthalidone"
+                }
+              ],
+              "extension": [
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/kb-entry",
+                  "valueString": "tx.hypertension.hearts_ccb_first"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/preference",
+                  "valueCode": "first_line"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/eligibility",
+                  "valueString": "{\"patient_group\": \"adult\"}"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/exclusions",
+                  "valueString": "[\"ix.ras_blockers.pregnancy\"]"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "monitor",
+      "title": "Monitor with the early-warning score",
+      "extension": [
+        {
+          "url": "https://atra.health/fhir/StructureDefinition/kb-entry",
+          "valueString": "news2.monitoring"
+        }
+      ]
+    },
+    {
+      "id": "check-in",
+      "title": "Daily check-in",
+      "definitionCanonical": "https://atra.health/fhir/Questionnaire/check-in"
+    }
+  ]
+}

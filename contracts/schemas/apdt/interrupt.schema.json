@@ -1,0 +1,64 @@
+{
+  "$defs": {
+    "Role": {
+      "enum": [
+        "medical_officer",
+        "radiologist",
+        "pharmacist",
+        "nurse",
+        "lab_scientist",
+        "patient",
+        "proxy",
+        "community_health_worker",
+        "therapist",
+        "carer",
+        "clinical_safety_officer",
+        "administrator",
+        "researcher",
+        "public_health_official",
+        "person"
+      ],
+      "title": "Role",
+      "type": "string"
+    }
+  },
+  "$id": "https://atra.local/schemas/apdt/interrupt.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "allowed_decisions": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Allowed Decisions",
+      "type": "array"
+    },
+    "kind": {
+      "enum": [
+        "accept_diagnosis",
+        "verify_prescription",
+        "sign_prescription",
+        "approve_care_plan",
+        "patient_consent_to_treatment"
+      ],
+      "title": "Kind",
+      "type": "string"
+    },
+    "payload": {
+      "additionalProperties": true,
+      "title": "Payload",
+      "type": "object"
+    },
+    "required_role": {
+      "$ref": "#/$defs/Role"
+    }
+  },
+  "required": [
+    "kind",
+    "payload",
+    "allowed_decisions",
+    "required_role"
+  ],
+  "title": "Interrupt",
+  "type": "object"
+}

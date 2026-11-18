@@ -1,0 +1,832 @@
+# Findings: symptoms (question), signs (exam), measurements and lab results.
+# A measurement finding is present when its field crosses the threshold entry in `derive`.
+
+- id: find.fever
+  name: Fever
+  hpo: 'HP:0001945'
+  snomed: '386661006'
+  capture: measurement
+  derive: {field: temperature, threshold: threshold.fever}
+  provenance:
+    source: snomed-ct
+    section: 'SNOMED CT 386661006'
+    also:
+    - {source: hpo, section: 'HP:0001945'}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: find.fever_history
+  name: History of fever
+  hpo: 'HP:0001945'
+  snomed: '386661006'
+  capture: question
+  provenance:
+    source: snomed-ct
+    section: 'SNOMED CT 386661006'
+    also:
+    - {source: hpo, section: 'HP:0001945'}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: find.chills
+  name: Chills
+  hpo: 'HP:0025143'
+  snomed: '43724002'
+  capture: question
+  provenance:
+    source: snomed-ct
+    section: 'SNOMED CT 43724002'
+    also:
+    - {source: hpo, section: 'HP:0025143'}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: find.headache
+  name: Headache
+  hpo: 'HP:0002315'
+  snomed: '25064002'
+  capture: question
+  provenance:
+    source: snomed-ct
+    section: 'SNOMED CT 25064002'
+    also:
+    - {source: hpo, section: 'HP:0002315'}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: find.myalgia
+  name: Muscle pain
+  hpo: 'HP:0003326'
+  snomed: '68962001'
+  capture: question
+  provenance:
+    source: snomed-ct
+    section: 'SNOMED CT 68962001'
+    also:
+    - {source: hpo, section: 'HP:0003326'}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: find.vomiting
+  name: Vomiting
+  hpo: 'HP:0002013'
+  snomed: '422400008'
+  capture: question
+  provenance:
+    source: snomed-ct
+    section: 'SNOMED CT 422400008'
+    also:
+    - {source: hpo, section: 'HP:0002013'}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: find.diarrhoea
+  name: Diarrhoea
+  hpo: 'HP:0002014'
+  snomed: '62315008'
+  capture: question
+  provenance:
+    source: snomed-ct
+    section: 'SNOMED CT 62315008'
+    also:
+    - {source: hpo, section: 'HP:0002014'}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: find.abdominal_pain
+  name: Abdominal pain
+  hpo: 'HP:0002027'
+  snomed: '21522001'
+  capture: question
+  provenance:
+    source: snomed-ct
+    section: 'SNOMED CT 21522001'
+    also:
+    - {source: hpo, section: 'HP:0002027'}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: find.cough
+  name: Cough
+  hpo: 'HP:0012735'
+  snomed: '49727002'
+  capture: question
+  provenance:
+    source: snomed-ct
+    section: 'SNOMED CT 49727002'
+    also:
+    - {source: hpo, section: 'HP:0012735'}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: find.cough_2_weeks
+  name: Cough for two weeks or more
+  hpo: 'HP:0034315'
+  snomed: '68154008'
+  capture: question
+  provenance:
+    source: snomed-ct
+    section: 'SNOMED CT 68154008'
+    also:
+    - {source: hpo, section: 'HP:0034315'}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: find.haemoptysis
+  name: Haemoptysis
+  hpo: 'HP:0002105'
+  snomed: '66857006'
+  capture: question
+  provenance:
+    source: snomed-ct
+    section: 'SNOMED CT 66857006'
+    also:
+    - {source: hpo, section: 'HP:0002105'}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: find.night_sweats
+  name: Night sweats
+  hpo: 'HP:0030166'
+  snomed: '42984000'
+  capture: question
+  provenance:
+    source: snomed-ct
+    section: 'SNOMED CT 42984000'
+    also:
+    - {source: hpo, section: 'HP:0030166'}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: find.weight_loss
+  name: Weight loss
+  hpo: 'HP:0001824'
+  snomed: '262285001'
+  capture: question
+  provenance:
+    source: snomed-ct
+    section: 'SNOMED CT 262285001'
+    also:
+    - {source: hpo, section: 'HP:0001824'}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: find.dysuria
+  name: Dysuria
+  hpo: 'HP:0100518'
+  snomed: '49650001'
+  capture: question
+  provenance:
+    source: snomed-ct
+    section: 'SNOMED CT 49650001'
+    also:
+    - {source: hpo, section: 'HP:0100518'}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: find.urinary_frequency
+  name: Frequent urination
+  hpo: 'HP:0100515'
+  snomed: '300471006'
+  capture: question
+  provenance:
+    source: snomed-ct
+    section: 'SNOMED CT 300471006'
+    also:
+    - {source: hpo, section: 'HP:0100515'}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: find.flank_pain
+  name: Flank pain
+  hpo: 'HP:0030157'
+  snomed: '247355005'
+  capture: question
+  provenance:
+    source: snomed-ct
+    section: 'SNOMED CT 247355005'
+    also:
+    - {source: hpo, section: 'HP:0030157'}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: find.chest_pain
+  name: Chest pain
+  hpo: 'HP:0100749'
+  snomed: '29857009'
+  capture: question
+  provenance:
+    source: snomed-ct
+    section: 'SNOMED CT 29857009'
+    also:
+    - {source: hpo, section: 'HP:0100749'}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: find.dyspnoea
+  name: Breathlessness
+  hpo: 'HP:0002094'
+  snomed: '267036007'
+  capture: question
+  provenance:
+    source: snomed-ct
+    section: 'SNOMED CT 267036007'
+    also:
+    - {source: hpo, section: 'HP:0002094'}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: find.wheeze
+  name: Wheeze
+  hpo: 'HP:0030828'
+  snomed: '56018004'
+  capture: exam
+  provenance:
+    source: snomed-ct
+    section: 'SNOMED CT 56018004'
+    also:
+    - {source: hpo, section: 'HP:0030828'}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: find.bleeding
+  name: Abnormal bleeding
+  hpo: 'HP:0001892'
+  snomed: '131148009'
+  capture: exam
+  provenance:
+    source: snomed-ct
+    section: 'SNOMED CT 131148009'
+    also:
+    - {source: hpo, section: 'HP:0001892'}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: find.sore_throat
+  name: Sore throat
+  snomed: '267102003'
+  capture: question
+  provenance:
+    source: snomed-ct
+    section: 'SNOMED CT 267102003'
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: find.facial_oedema
+  name: Facial swelling
+  hpo: 'HP:0000282'
+  snomed: '278528006'
+  capture: exam
+  provenance:
+    source: snomed-ct
+    section: 'SNOMED CT 278528006'
+    also:
+    - {source: hpo, section: 'HP:0000282'}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: find.hearing_loss
+  name: Hearing loss
+  hpo: 'HP:0000365'
+  snomed: '15188001'
+  capture: question
+  provenance:
+    source: snomed-ct
+    section: 'SNOMED CT 15188001'
+    also:
+    - {source: hpo, section: 'HP:0000365'}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: find.bone_pain
+  name: Bone pain
+  hpo: 'HP:0002653'
+  snomed: '12584003'
+  capture: question
+  provenance:
+    source: snomed-ct
+    section: 'SNOMED CT 12584003'
+    also:
+    - {source: hpo, section: 'HP:0002653'}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: find.joint_pain
+  name: Joint pain
+  hpo: 'HP:0002829'
+  snomed: '57676002'
+  capture: question
+  provenance:
+    source: snomed-ct
+    section: 'SNOMED CT 57676002'
+    also:
+    - {source: hpo, section: 'HP:0002829'}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: find.low_mood
+  name: Depressed mood
+  hpo: 'HP:0000716'
+  snomed: '366979004'
+  capture: question
+  provenance:
+    source: snomed-ct
+    section: 'SNOMED CT 366979004'
+    also:
+    - {source: hpo, section: 'HP:0000716'}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: find.anhedonia
+  name: Loss of interest or pleasure
+  hpo: 'HP:0012154'
+  snomed: '28669007'
+  capture: question
+  provenance:
+    source: snomed-ct
+    section: 'SNOMED CT 28669007'
+    also:
+    - {source: hpo, section: 'HP:0012154'}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: find.excessive_worry
+  name: Excessive worry
+  hpo: 'HP:0000739'
+  snomed: '79015004'
+  capture: question
+  provenance:
+    source: snomed-ct
+    section: 'SNOMED CT 79015004'
+    also:
+    - {source: hpo, section: 'HP:0000739'}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: find.polyuria
+  name: Polyuria
+  hpo: 'HP:0000103'
+  snomed: '28442001'
+  capture: question
+  provenance:
+    source: snomed-ct
+    section: 'SNOMED CT 28442001'
+    also:
+    - {source: hpo, section: 'HP:0000103'}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: find.polydipsia
+  name: Excessive thirst
+  hpo: 'HP:0001959'
+  snomed: '17173007'
+  capture: question
+  provenance:
+    source: snomed-ct
+    section: 'SNOMED CT 17173007'
+    also:
+    - {source: hpo, section: 'HP:0001959'}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: find.palpitations
+  name: Palpitations
+  hpo: 'HP:0001962'
+  snomed: '80313002'
+  capture: question
+  provenance:
+    source: snomed-ct
+    section: 'SNOMED CT 80313002'
+    also:
+    - {source: hpo, section: 'HP:0001962'}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: find.visual_disturbance
+  name: Visual disturbance
+  hpo: 'HP:0000505'
+  snomed: '63102001'
+  capture: question
+  provenance:
+    source: snomed-ct
+    section: 'SNOMED CT 63102001'
+    also:
+    - {source: hpo, section: 'HP:0000505'}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: find.epigastric_pain
+  name: Epigastric pain
+  hpo: 'HP:0410019'
+  snomed: '79922009'
+  capture: question
+  provenance:
+    source: snomed-ct
+    section: 'SNOMED CT 79922009'
+    also:
+    - {source: hpo, section: 'HP:0410019'}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: find.reduced_fetal_movements
+  name: Reduced fetal movements
+  hpo: 'HP:0001558'
+  snomed: '276369006'
+  capture: question
+  provenance:
+    source: snomed-ct
+    section: 'SNOMED CT 276369006'
+    also:
+    - {source: hpo, section: 'HP:0001558'}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: find.impaired_consciousness
+  name: Impaired consciousness
+  hpo: 'HP:0004372'
+  snomed: '443371007'
+  capture: exam
+  provenance:
+    source: snomed-ct
+    section: 'SNOMED CT 443371007'
+    also:
+    - {source: hpo, section: 'HP:0004372'}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: find.prostration
+  name: Prostration (unable to sit, stand or walk unaided)
+  hpo: 'HP:0003324'
+  snomed: '282966001'
+  capture: exam
+  provenance:
+    source: snomed-ct
+    section: 'SNOMED CT 282966001'
+    also:
+    - {source: hpo, section: 'HP:0003324'}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: find.convulsions
+  name: Convulsions
+  hpo: 'HP:0001250'
+  snomed: '91175000'
+  capture: exam
+  provenance:
+    source: snomed-ct
+    section: 'SNOMED CT 91175000'
+    also:
+    - {source: hpo, section: 'HP:0001250'}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: find.respiratory_distress
+  name: Respiratory distress
+  hpo: 'HP:0002098'
+  snomed: '271825005'
+  capture: exam
+  provenance:
+    source: snomed-ct
+    section: 'SNOMED CT 271825005'
+    also:
+    - {source: hpo, section: 'HP:0002098'}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: find.jaundice
+  name: Jaundice
+  hpo: 'HP:0000952'
+  snomed: '18165001'
+  capture: exam
+  provenance:
+    source: snomed-ct
+    section: 'SNOMED CT 18165001'
+    also:
+    - {source: hpo, section: 'HP:0000952'}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: find.pallor
+  name: Pallor
+  hpo: 'HP:0000980'
+  snomed: '398979000'
+  capture: exam
+  provenance:
+    source: snomed-ct
+    section: 'SNOMED CT 398979000'
+    also:
+    - {source: hpo, section: 'HP:0000980'}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: find.shock
+  name: Shock
+  hpo: 'HP:0031273'
+  snomed: '27942005'
+  capture: exam
+  provenance:
+    source: snomed-ct
+    section: 'SNOMED CT 27942005'
+    also:
+    - {source: hpo, section: 'HP:0031273'}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: find.splenomegaly
+  name: Splenomegaly
+  hpo: 'HP:0001744'
+  snomed: '16294009'
+  capture: exam
+  provenance:
+    source: snomed-ct
+    section: 'SNOMED CT 16294009'
+    also:
+    - {source: hpo, section: 'HP:0001744'}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: find.hepatomegaly
+  name: Hepatomegaly
+  hpo: 'HP:0002240'
+  snomed: '80515008'
+  capture: exam
+  provenance:
+    source: snomed-ct
+    section: 'SNOMED CT 80515008'
+    also:
+    - {source: hpo, section: 'HP:0002240'}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: find.crackles
+  name: Crackles on auscultation
+  hpo: 'HP:0030830'
+  snomed: '48409008'
+  capture: exam
+  provenance:
+    source: snomed-ct
+    section: 'SNOMED CT 48409008'
+    also:
+    - {source: hpo, section: 'HP:0030830'}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: find.neck_stiffness
+  name: Neck stiffness
+  hpo: 'HP:0031179'
+  snomed: '161882006'
+  capture: exam
+  provenance:
+    source: snomed-ct
+    section: 'SNOMED CT 161882006'
+    also:
+    - {source: hpo, section: 'HP:0031179'}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: find.costovertebral_tenderness
+  name: Costovertebral angle tenderness
+  hpo: 'HP:6000106'
+  snomed: '102830001'
+  capture: exam
+  provenance:
+    source: snomed-ct
+    section: 'SNOMED CT 102830001'
+    also:
+    - {source: hpo, section: 'HP:6000106'}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: find.oedema
+  name: Oedema
+  hpo: 'HP:0000969'
+  snomed: '267038008'
+  capture: exam
+  provenance:
+    source: snomed-ct
+    section: 'SNOMED CT 267038008'
+    also:
+    - {source: hpo, section: 'HP:0000969'}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: find.hypoglycaemia
+  name: Hypoglycaemia
+  hpo: 'HP:0001943'
+  snomed: '302866003'
+  capture: measurement
+  derive: {field: glucose, threshold: threshold.hypoglycaemia_diabetes}
+  provenance:
+    source: snomed-ct
+    section: 'SNOMED CT 302866003'
+    also:
+    - {source: hpo, section: 'HP:0001943'}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: find.hyperglycaemia
+  name: Severe hyperglycaemia
+  hpo: 'HP:0003074'
+  snomed: '80394007'
+  capture: measurement
+  derive: {field: glucose, threshold: threshold.hyperglycaemia_severe}
+  provenance:
+    source: snomed-ct
+    section: 'SNOMED CT 80394007'
+    also:
+    - {source: hpo, section: 'HP:0003074'}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: find.hypoxaemia
+  name: Hypoxaemia
+  hpo: 'HP:0012418'
+  snomed: '389087006'
+  capture: measurement
+  derive: {field: spo2, threshold: threshold.hypoxaemia_child}
+  provenance:
+    source: snomed-ct
+    section: 'SNOMED CT 389087006'
+    also:
+    - {source: hpo, section: 'HP:0012418'}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: find.fast_breathing
+  name: Fast breathing
+  hpo: 'HP:0002789'
+  snomed: '271823003'
+  capture: measurement
+  derive: {field: respiratory_rate, threshold: threshold.fast_breathing_child}
+  provenance:
+    source: snomed-ct
+    section: 'SNOMED CT 271823003'
+    also:
+    - {source: hpo, section: 'HP:0002789'}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: find.tachycardia
+  name: Tachycardia
+  hpo: 'HP:0001649'
+  snomed: '3424008'
+  capture: measurement
+  derive: {field: heart_rate, threshold: threshold.shock_adult}
+  provenance:
+    source: snomed-ct
+    section: 'SNOMED CT 3424008'
+    also:
+    - {source: hpo, section: 'HP:0001649'}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: find.hypotension
+  name: Hypotension
+  hpo: 'HP:0002615'
+  snomed: '45007003'
+  capture: measurement
+  derive: {field: sbp, threshold: threshold.shock_adult}
+  provenance:
+    source: snomed-ct
+    section: 'SNOMED CT 45007003'
+    also:
+    - {source: hpo, section: 'HP:0002615'}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: find.raised_bp
+  name: Raised blood pressure
+  hpo: 'HP:0000822'
+  snomed: '24184005'
+  capture: measurement
+  derive: {field: sbp, threshold: threshold.hypertension}
+  provenance:
+    source: snomed-ct
+    section: 'SNOMED CT 24184005'
+    also:
+    - {source: hpo, section: 'HP:0000822'}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: find.proteinuria
+  name: Proteinuria
+  hpo: 'HP:0000093'
+  snomed: '29738008'
+  capture: lab
+  provenance:
+    source: snomed-ct
+    section: 'SNOMED CT 29738008'
+    also:
+    - {source: hpo, section: 'HP:0000093'}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: find.haematuria
+  name: Haematuria
+  hpo: 'HP:0000790'
+  snomed: '34436003'
+  capture: lab
+  provenance:
+    source: snomed-ct
+    section: 'SNOMED CT 34436003'
+    also:
+    - {source: hpo, section: 'HP:0000790'}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: find.pyuria
+  name: Pyuria
+  hpo: 'HP:0012085'
+  snomed: '4800001'
+  capture: lab
+  provenance:
+    source: snomed-ct
+    section: 'SNOMED CT 4800001'
+    also:
+    - {source: hpo, section: 'HP:0012085'}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: find.anaemia
+  name: Anaemia
+  hpo: 'HP:0001903'
+  snomed: '271737000'
+  capture: lab
+  derive: {field: hb, threshold: severity.anaemia.who}
+  provenance:
+    source: snomed-ct
+    section: 'SNOMED CT 271737000'
+    also:
+    - {source: hpo, section: 'HP:0001903'}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: find.raised_creatinine
+  name: Serum creatinine above the reference range
+  snomed: '166717003'
+  capture: lab
+  derive: {field: creatinine, threshold: range.creatinine}
+  provenance:
+    source: snomed-ct
+    section: 'SNOMED CT 166717003'
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified

@@ -1,0 +1,34 @@
+{
+  "$id": "https://atra.local/schemas/tools/ahdt.cognitive.reason.args.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "hdt_id": {
+      "pattern": "^hdt-[0-9a-f]{12}$",
+      "title": "Hdt Id",
+      "type": "string"
+    },
+    "kind": {
+      "enum": [
+        "ontology",
+        "causal",
+        "probabilistic",
+        "temporal"
+      ],
+      "title": "Kind",
+      "type": "string"
+    },
+    "query": {
+      "minLength": 1,
+      "title": "Query",
+      "type": "string"
+    }
+  },
+  "required": [
+    "hdt_id",
+    "kind",
+    "query"
+  ],
+  "title": "ReasonArgs",
+  "type": "object"
+}

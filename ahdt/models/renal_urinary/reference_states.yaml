@@ -1,0 +1,27 @@
+# T3 reference-state items of the renal urinary twin (design 04, 4.5.3).
+- model_id: ahdt.renal_urinary.ureters_bladder_and_urethra
+  twin: renal_urinary
+  intended_use: Bladder volume, urinary tract obstruction and symptoms
+  instances:
+  - UBERON:0001255
+  - UBERON:0000056
+  - UBERON:0000057
+  variables:
+    bladder_volume:
+      unit: mL
+      ref: state.bladder_volume
+      tau_h: 2
+      justification: Relaxation time constant of a T3 state; a modelling assumption (design 01, rule
+        R3)
+    obstruction:
+      unit: '1'
+      ref: state.obstruction
+      tau_h: 72
+      justification: Relaxation time constant of a T3 state; a modelling assumption (design 01, rule
+        R3)
+    urinary_symptoms:
+      unit: '{score}'
+      ref: state.urinary_symptoms
+      tau_h: 48
+      justification: Relaxation time constant of a T3 state; a modelling assumption (design 01, rule
+        R3)

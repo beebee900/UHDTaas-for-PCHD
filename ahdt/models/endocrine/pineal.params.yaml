@@ -1,0 +1,19 @@
+# Plasma melatonin from pineal synthesis switched on and off by the circadian clock.
+model_id: ahdt.endocrine.pineal
+sources:
+- id: brown1997
+  citation: "Brown EN, Choe Y, Shanahan TL, Czeisler CA. A mathematical model of diurnal
+    variations in human plasma melatonin levels. Am J Physiol. 1997;272(3 Pt 1):E506-E516.
+    doi:10.1152/ajpendo.1997.272.3.E506"
+  via: BioModels BIOMD0000000672
+  url: https://www.ebi.ac.uk/biomodels/BIOMD0000000672
+params:
+  t_on: {value: 1316, unit: min, source: brown1997, calibrate: true, prior_cv: 0.05,
+         note: synthesis onset as minutes after midnight}
+  t_off: {value: 1794, unit: min, source: brown1997, calibrate: true, prior_cv: 0.05,
+          note: synthesis offset as minutes after the onset day's midnight}
+  A_max: {value: 6.51, unit: pmol/L/min, source: brown1997, calibrate: true, prior_cv: 0.4}
+  tau_I: {value: 2.82, unit: min, source: brown1997, note: pineal melatonin half-life}
+  tau_C: {value: 23.67, unit: min, source: brown1997, note: plasma melatonin half-life}
+  tau_alpha: {value: 25.92, unit: min, source: brown1997, note: synthesis decay half-life}
+  tau_lamda: {value: 24.04, unit: min, source: brown1997, note: synthesis rise half-life}

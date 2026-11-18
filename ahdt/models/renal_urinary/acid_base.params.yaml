@@ -1,0 +1,29 @@
+# Body water, sodium, potassium and acid-base balance.
+model_id: ahdt.renal_urinary.fluid_electrolyte_and_acid_base_balance
+sources:
+- id: edelman1958
+  citation: "Edelman IS, Leibman J, O'Meara MP, Birkenfeld LW. Interrelations between serum
+    sodium concentration, serum osmolarity and total exchangeable sodium, total exchangeable
+    potassium and total body water. J Clin Invest. 1958;37(9):1236-1256.
+    doi:10.1172/JCI103712"
+- id: west
+  citation: "West JB, Luks AM. West's Respiratory Physiology: The Essentials. 11th ed.
+    Wolters Kluwer; 2020. Chapter 6 (acid-base status)"
+- id: guyton
+  citation: "Hall JE, Hall ME. Guyton and Hall Textbook of Medical Physiology. 14th ed.
+    Elsevier; 2021. Body fluid compartments"
+- id: atra-assumption
+  citation: ATRA design 01 rule R5 assumption register
+params:
+  edelman_slope: {value: 1.11, unit: '1', source: edelman1958}
+  edelman_intercept: {value: -25.6, unit: mmol/L, source: edelman1958}
+  pk_bicarbonate: {value: 6.1, unit: '1', source: west}
+  co2_solubility: {value: 0.0307, unit: 'mmol/L/mm[Hg]', source: west, verified: false,
+                   justification: "CO2 solubility at 37 Cel as commonly stated (0.03 in West);
+                     value with three digits needs a page check"}
+  ecf_fraction: {value: 0.3333, unit: '1', source: guyton, verified: false,
+                 justification: "Extracellular fluid as one third of total body water as
+                   recalled from Guyton and Hall; needs a page check"}
+  hco3_tau: {value: 24, unit: h, source: atra-assumption, assumption: true,
+             justification: "Time constant of renal correction of bicarbonate towards its
+               baseline; no single published value"}

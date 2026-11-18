@@ -1,0 +1,268 @@
+{
+  "resourceType": "PlanDefinition",
+  "id": "pyelonephritis",
+  "url": "https://atra.health/fhir/PlanDefinition/pyelonephritis",
+  "version": "1.0.0",
+  "name": "pyelonephritis",
+  "title": "Upper urinary tract infection (acute pyelonephritis)",
+  "type": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/plan-definition-type",
+        "code": "clinical-protocol"
+      }
+    ]
+  },
+  "status": "active",
+  "useContext": [
+    {
+      "code": {
+        "system": "http://terminology.hl7.org/CodeSystem/usage-context-type",
+        "code": "focus"
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "36689008"
+          }
+        ]
+      }
+    }
+  ],
+  "extension": [
+    {
+      "url": "https://atra.health/fhir/StructureDefinition/kb-entry",
+      "valueString": "cond.pyelonephritis"
+    }
+  ],
+  "action": [
+    {
+      "id": "treat",
+      "title": "Choose treatment",
+      "selectionBehavior": "exactly-one",
+      "action": [
+        {
+          "id": "treat-mild",
+          "title": "Treat (mild)",
+          "condition": [
+            {
+              "kind": "applicability",
+              "expression": {
+                "language": "text/fhirpath",
+                "expression": "%severity = 'mild'"
+              }
+            }
+          ],
+          "selectionBehavior": "exactly-one",
+          "action": [
+            {
+              "id": "tx.pyelonephritis.adult_mild.ciprofloxacin",
+              "title": "ciprofloxacin oral adult",
+              "definitionCanonical": "https://atra.health/fhir/ActivityDefinition/dose.ciprofloxacin_oral_adult",
+              "extension": [
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/kb-entry",
+                  "valueString": "tx.pyelonephritis.adult_mild.ciprofloxacin"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/preference",
+                  "valueCode": "first_line"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/eligibility",
+                  "valueString": "{\"oral_intake\": true, \"patient_group\": \"adult\", \"pregnancy\": [\"none\"]}"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/exclusions",
+                  "valueString": "[\"ix.quinolones.pregnancy\"]"
+                }
+              ]
+            },
+            {
+              "id": "tx.pyelonephritis.child_mild.ciprofloxacin",
+              "title": "ciprofloxacin oral child",
+              "definitionCanonical": "https://atra.health/fhir/ActivityDefinition/dose.ciprofloxacin_oral_child",
+              "extension": [
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/kb-entry",
+                  "valueString": "tx.pyelonephritis.child_mild.ciprofloxacin"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/preference",
+                  "valueCode": "first_line"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/eligibility",
+                  "valueString": "{\"oral_intake\": true, \"patient_group\": \"child\"}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "treat-severe",
+          "title": "Treat (severe)",
+          "condition": [
+            {
+              "kind": "applicability",
+              "expression": {
+                "language": "text/fhirpath",
+                "expression": "%severity = 'severe'"
+              }
+            }
+          ],
+          "selectionBehavior": "exactly-one",
+          "action": [
+            {
+              "id": "tx.pyelonephritis.adult_severe.aminoglycoside",
+              "title": "amikacin iv + gentamicin iv adult",
+              "selectionBehavior": "all",
+              "action": [
+                {
+                  "id": "dose.amikacin_iv",
+                  "title": "amikacin iv",
+                  "definitionCanonical": "https://atra.health/fhir/ActivityDefinition/dose.amikacin_iv"
+                },
+                {
+                  "id": "dose.gentamicin_iv_adult",
+                  "title": "gentamicin iv adult",
+                  "definitionCanonical": "https://atra.health/fhir/ActivityDefinition/dose.gentamicin_iv_adult"
+                }
+              ],
+              "extension": [
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/kb-entry",
+                  "valueString": "tx.pyelonephritis.adult_severe.aminoglycoside"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/preference",
+                  "valueCode": "first_line"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/eligibility",
+                  "valueString": "{\"patient_group\": \"adult\", \"pregnancy\": [\"none\"]}"
+                }
+              ]
+            },
+            {
+              "id": "tx.pyelonephritis.adult_severe.third_generation_cephalosporin",
+              "title": "ceftriaxone iv adult uti + cefotaxime iv adult",
+              "selectionBehavior": "all",
+              "action": [
+                {
+                  "id": "dose.ceftriaxone_iv_adult_uti",
+                  "title": "ceftriaxone iv adult uti",
+                  "definitionCanonical": "https://atra.health/fhir/ActivityDefinition/dose.ceftriaxone_iv_adult_uti"
+                },
+                {
+                  "id": "dose.cefotaxime_iv_adult",
+                  "title": "cefotaxime iv adult",
+                  "definitionCanonical": "https://atra.health/fhir/ActivityDefinition/dose.cefotaxime_iv_adult"
+                }
+              ],
+              "extension": [
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/kb-entry",
+                  "valueString": "tx.pyelonephritis.adult_severe.third_generation_cephalosporin"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/preference",
+                  "valueCode": "first_line"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/eligibility",
+                  "valueString": "{\"patient_group\": \"adult\", \"pregnancy\": [\"none\"]}"
+                }
+              ]
+            },
+            {
+              "id": "tx.pyelonephritis.child_severe.third_generation_cephalosporin",
+              "title": "ceftriaxone iv child + cefotaxime iv child",
+              "selectionBehavior": "all",
+              "action": [
+                {
+                  "id": "dose.ceftriaxone_iv_child",
+                  "title": "ceftriaxone iv child",
+                  "definitionCanonical": "https://atra.health/fhir/ActivityDefinition/dose.ceftriaxone_iv_child"
+                },
+                {
+                  "id": "dose.cefotaxime_iv_child",
+                  "title": "cefotaxime iv child",
+                  "definitionCanonical": "https://atra.health/fhir/ActivityDefinition/dose.cefotaxime_iv_child"
+                }
+              ],
+              "extension": [
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/kb-entry",
+                  "valueString": "tx.pyelonephritis.child_severe.third_generation_cephalosporin"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/preference",
+                  "valueCode": "first_line"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/eligibility",
+                  "valueString": "{\"patient_group\": \"child\"}"
+                }
+              ]
+            },
+            {
+              "id": "tx.pyelonephritis.pregnancy.ceftriaxone",
+              "title": "ceftriaxone iv pregnancy pyelonephritis",
+              "definitionCanonical": "https://atra.health/fhir/ActivityDefinition/dose.ceftriaxone_iv_pregnancy_pyelonephritis",
+              "extension": [
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/kb-entry",
+                  "valueString": "tx.pyelonephritis.pregnancy.ceftriaxone"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/preference",
+                  "valueCode": "first_line"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/eligibility",
+                  "valueString": "{\"pregnancy\": [\"t1\", \"t2\", \"t3\"]}"
+                }
+              ]
+            },
+            {
+              "id": "tx.pyelonephritis.pregnancy.gentamicin",
+              "title": "gentamicin iv pregnancy pyelonephritis",
+              "definitionCanonical": "https://atra.health/fhir/ActivityDefinition/dose.gentamicin_iv_pregnancy_pyelonephritis",
+              "extension": [
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/kb-entry",
+                  "valueString": "tx.pyelonephritis.pregnancy.gentamicin"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/preference",
+                  "valueCode": "alternative"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/eligibility",
+                  "valueString": "{\"pregnancy\": [\"t1\", \"t2\", \"t3\"]}"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "monitor",
+      "title": "Monitor with the early-warning score",
+      "extension": [
+        {
+          "url": "https://atra.health/fhir/StructureDefinition/kb-entry",
+          "valueString": "news2.monitoring"
+        }
+      ]
+    },
+    {
+      "id": "check-in",
+      "title": "Daily check-in",
+      "definitionCanonical": "https://atra.health/fhir/Questionnaire/check-in"
+    }
+  ]
+}

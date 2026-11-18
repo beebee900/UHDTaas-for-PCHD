@@ -1,0 +1,44 @@
+# Type 2 diabetes (HEARTS-D). Each step applies when the glycaemic goal is not met at review.
+
+- id: tx.diabetes_type2.hearts_d
+  condition: cond.diabetes_type2
+  severity: [uncontrolled]
+  preference: first_line
+  regimen: [dose.metformin, dose.gliclazide]
+  steps:
+  - {action: start, drug: metformin, mg: 500, doses_per_day: 1, review_after_months: 3}
+  - {action: increase, drug: metformin, mg: 1000, doses_per_day: 1, review_after_months: 3}
+  - {action: increase, drug: metformin, mg: 1000, doses_per_day: 2, review_after_months: 3}
+  - {action: add, drug: gliclazide, mg: 80, doses_per_day: 1, review_after_months: 3}
+  - {action: increase, drug: gliclazide, mg: 80, doses_per_day: 2, review_after_months: 3}
+  - {action: refer_or_start_insulin}
+  first_review_after_months: 1
+  symptomatic_pathway: FPG at or above 15 mmol/L with symptoms, or FPG/RPG above 18 mmol/L, leads to
+    a urine ketone test; ketones 2+ or more are referred, otherwise metformin 1000 mg twice daily
+    and gliclazide 80 mg twice daily with review in 3 to 5 days.
+  eligibility: {patient_group: adult}
+  exclusions: [ix.metformin.contraindications, ix.glibenclamide.not_recommended]
+  provenance:
+    source: who-hearts-d-2020
+    page: 16
+    also:
+    - {source: who-hearts-d-2020, page: 15}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: tx.diabetes_type2.targets
+  condition: cond.diabetes_type2
+  hba1c_target_below_mmol_mol: 53
+  hba1c_relaxed_below_percent: 8
+  hba1c_relaxed_below_mmol_mol: 64
+  fpg_surrogate_at_or_below_mmol_l: 7.0
+  postprandial_surrogate_at_or_below_mmol_l: 9.0
+  bp_treatment_at_or_above: {systolic: 130, diastolic: 80}
+  statin_from_age_years: 40
+  provenance:
+    source: who-hearts-d-2020
+    page: 17
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified

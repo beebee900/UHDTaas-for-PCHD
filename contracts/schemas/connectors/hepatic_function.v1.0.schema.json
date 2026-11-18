@@ -1,0 +1,32 @@
+{
+  "$id": "https://atra.local/schemas/connectors/hepatic_function/v1.0",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "alt": {
+      "maximum": 5000,
+      "minimum": 1,
+      "type": "number",
+      "x-ucum": "U/L"
+    },
+    "bilirubin": {
+      "maximum": 800,
+      "minimum": 1,
+      "type": "number",
+      "x-ucum": "umol/L"
+    },
+    "clearance_factor": {
+      "maximum": 2,
+      "minimum": 0,
+      "type": "number",
+      "x-ucum": "1"
+    }
+  },
+  "required": [
+    "alt",
+    "bilirubin",
+    "clearance_factor"
+  ],
+  "title": "hepatic_function v1.0",
+  "type": "object"
+}

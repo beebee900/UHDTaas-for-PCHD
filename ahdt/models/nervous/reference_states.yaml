@@ -1,0 +1,66 @@
+# T3 reference-state items of the nervous twin (design 04, 4.5.3).
+- model_id: ahdt.nervous.brain_regions_spinal_cord_nerves_and_neural_tissue
+  twin: nervous
+  intended_use: Consciousness level, AVPU and GCS, and autonomic tone
+  instances:
+  - UBERON:0000955
+  variables:
+    consciousness_level:
+      unit: '1'
+      ref: state.consciousness_level
+      tau_h: 1
+      justification: Relaxation time constant of a T3 state; a modelling assumption (design 01, rule
+        R3)
+    avpu:
+      unit: '{code}'
+      ref: range.avpu
+      tau_h: 1
+      justification: Relaxation time constant of a T3 state; a modelling assumption (design 01, rule
+        R3)
+    gcs_total:
+      unit: '{score}'
+      ref: range.gcs_total
+      tau_h: 1
+      justification: Relaxation time constant of a T3 state; a modelling assumption (design 01, rule
+        R3)
+    autonomic_tone:
+      unit: '1'
+      ref: range.autonomic_tone
+      tau_h: 6
+      justification: Relaxation time constant of a T3 state; a modelling assumption (design 01, rule
+        R3)
+  couplings:
+  - input: core_temp
+    from: connector:InfectionNeuroConnector#core_temp
+    unit: Cel
+    target: gcs_total
+    gain: coupling.nervous.brain_regions_spinal_cord_nerves_and_neural_tissue.core_temp.gcs_total.gain
+    reference: coupling.nervous.brain_regions_spinal_cord_nerves_and_neural_tissue.core_temp.gcs_total.reference
+  - input: glucose
+    from: field:15074-8
+    unit: mmol/L
+    target: gcs_total
+    gain: coupling.nervous.brain_regions_spinal_cord_nerves_and_neural_tissue.glucose.gcs_total.gain
+    reference: coupling.nervous.brain_regions_spinal_cord_nerves_and_neural_tissue.glucose.gcs_total.reference
+  obs_map:
+    9269-2: gcs_total
+- model_id: ahdt.nervous.pain
+  twin: nervous
+  intended_use: Pain intensity from self-report coupled to inflammation
+  instances: []
+  variables:
+    pain_nrs:
+      unit: '{score}'
+      ref: range.pain_nrs
+      tau_h: 6
+      justification: Relaxation time constant of a T3 state; a modelling assumption (design 01, rule
+        R3)
+  couplings:
+  - input: inflammation_index
+    from: connector:InfectionNeuroConnector#inflammation_index
+    unit: '1'
+    target: pain_nrs
+    gain: coupling.nervous.pain.inflammation_index.pain_nrs.gain
+    reference: coupling.nervous.pain.inflammation_index.pain_nrs.reference
+  obs_map:
+    72514-3: pain_nrs

@@ -1,0 +1,15 @@
+{
+ "source_url": "https://developer.dexcom.com/docs/dexcom/authentication",
+ "retrieved": "2026-10-10",
+ "kind": "verbatim_sample",
+ "note": "Step Five, refresh token exchange: 'The response will look like'.",
+ "body": {
+  "access_token": "{your_access_token}",
+  "expires_in": 7200,
+  "token_type": "Bearer",
+  "refresh_token": "{your_refresh_token}",
+  "refresh_expires_in": 0,
+  "not-before-policy": "1726871301,",
+  "session_state": "65a415bf-25ad-4e0a-8381-1b78db6a8ea7"
+ }
+}

@@ -1,0 +1,9 @@
+pytest
+pytest-asyncio
+pytest-cov
+hypothesis
+onnx
+playwright
+ruff
+mypy
+datamodel-code-generator

@@ -1,0 +1,92 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: channels
+automountServiceAccountToken: false
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: channels
+  labels:
+    app.kubernetes.io/name: channels
+spec:
+  selector:
+    app.kubernetes.io/name: channels
+  ports:
+    - name: http
+      port: 8300
+      targetPort: http
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: channels
+  labels:
+    app.kubernetes.io/name: channels
+    atra.health/tier: app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: channels
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: channels
+        atra.health/tier: app
+      annotations:
+        linkerd.io/inject: enabled
+        config.linkerd.io/proxy-memory-limit: 64Mi
+        dapr.io/enabled: "true"
+        dapr.io/app-id: channels
+        dapr.io/app-port: "8300"
+        dapr.io/config: atra
+        dapr.io/sidecar-memory-limit: 128Mi
+    spec:
+      serviceAccountName: channels
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 10001
+        fsGroup: 10001
+        seccompProfile:
+          type: RuntimeDefault
+      containers:
+        - name: channels
+          image: atra-health
+          command: [python, -m, uvicorn, "channels.app:build_app", --factory, --host, 0.0.0.0,
+                    --port, "8300"]
+          ports:
+            - name: http
+              containerPort: 8300
+          envFrom:
+            - configMapRef:
+                name: atra-config
+            - secretRef:
+                name: atra-secrets
+                optional: true
+          readinessProbe:
+            httpGet: {path: /health, port: http}
+            periodSeconds: 10
+          livenessProbe:
+            httpGet: {path: /health, port: http}
+            initialDelaySeconds: 30
+            periodSeconds: 30
+          resources:
+            requests: {cpu: 100m, memory: 192Mi}
+            limits: {memory: 192Mi}
+          securityContext:
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
+            capabilities:
+              drop: [ALL]
+          volumeMounts:
+            - name: var
+              mountPath: /data
+            - name: tmp
+              mountPath: /tmp
+      volumes:
+        - name: var
+          emptyDir: {}
+        - name: tmp
+          emptyDir: {}

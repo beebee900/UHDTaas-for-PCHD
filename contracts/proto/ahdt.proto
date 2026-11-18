@@ -1,0 +1,81 @@
+// AHDT gRPC surfaces (design 03, section 3.15): observation streaming and ingestion
+// between the edge tier and the AHDT, and edge-model inference.
+syntax = "proto3";
+
+package atra.ahdt.v1;
+
+import "google/protobuf/struct.proto";
+import "google/protobuf/timestamp.proto";
+
+message Coding {
+  string system = 1;
+  string code = 2;
+  string display = 3;
+}
+
+message Waveform {
+  repeated double samples = 1;
+  double period_ms = 2;
+}
+
+// One value, as in the ObservationRecord contract (design 03, 3.3).
+message Observation {
+  string record_id = 1;
+  string hdt_id = 2;
+  string dt = 3;
+  Coding code = 4;
+  repeated Coding alt_codes = 5;
+  oneof value {
+    double number = 6;
+    string text = 7;
+    bool flag = 8;
+    Waveform waveform = 9;
+  }
+  string unit = 10;
+  google.protobuf.Timestamp effective_time = 11;
+  optional double sim_time = 12;
+  string device_id = 13;
+  string source = 14;
+  string quality = 15;
+  string consent_tag = 16;
+  string provenance_id = 17;
+  int64 version = 18;
+  string idempotency_key = 19;
+}
+
+message StreamRequest {
+  string hdt_id = 1;
+  repeated string codes = 2;
+  google.protobuf.Timestamp since = 3;
+}
+
+message IngestAck {
+  int64 accepted = 1;
+  int64 duplicates = 2;
+  int64 rejected = 3;
+  repeated string rejected_ids = 4;
+}
+
+message InferRequest {
+  string model_id = 1;
+  string version = 2;
+  string hdt_id = 3;
+  google.protobuf.Struct inputs = 4;
+}
+
+message InferResponse {
+  string output_id = 1;
+  string model_id = 2;
+  string version = 3;
+  google.protobuf.Struct values = 4;
+  google.protobuf.Struct uncertainty = 5;
+}
+
+service ObservationService {
+  rpc Stream(StreamRequest) returns (stream Observation);
+  rpc Ingest(stream Observation) returns (IngestAck);
+}
+
+service InferenceService {
+  rpc Infer(InferRequest) returns (InferResponse);
+}

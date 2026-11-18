@@ -1,0 +1,2775 @@
+{
+  "k": 5,
+  "modes": {
+    "chunkless": {
+      "pass_rate": 0.7666666666666667,
+      "rows": [
+        {
+          "q": "What is the first-line treatment for uncomplicated falciparum malaria?",
+          "pass": true,
+          "citations": [
+            {
+              "source": "who-imai-dcm-2011-v1",
+              "section_id": "s3655",
+              "number": "A",
+              "title": "A fi rst-line antimalarial",
+              "path": "A fi rst-line antimalarial",
+              "page": 400
+            },
+            {
+              "source": "who-pocketbook-children-2013",
+              "section_id": "s1254",
+              "number": null,
+              "title": "Uncomplicated P. falciparum malaria: Treat for 3 days with one of the recom-",
+              "path": "6. FEVER > Uncomplicated P. falciparum malaria: Treat for 3 days with one of the recom-",
+              "page": 188
+            },
+            {
+              "source": "who-imai-dcm-2011-v1",
+              "section_id": "s4931",
+              "number": "P",
+              "title": "P. falciparum malaria in",
+              "path": "P. falciparum malaria in",
+              "page": 454
+            },
+            {
+              "source": "who-malaria-2026",
+              "section_id": "s41",
+              "number": "5.2.1.4.5",
+              "title": "5.2.1.4.5 Uncomplicated hyperparasitaemia",
+              "path": "5. Case management > 5.1 Diagnosing malaria > 5.2.1 Treating uncomplicated malaria > 5.2.1.4 Special risk groups > 5.2.1.4.5 Uncomplicated hyperparasitaemia",
+              "page": 191
+            },
+            {
+              "source": "who-malaria-2026",
+              "section_id": "s34",
+              "number": "5.2.1.2",
+              "title": "5.2.1.2 Recurrent falciparum malaria",
+              "path": "5. Case management > 5.1 Diagnosing malaria > 5.2.1 Treating uncomplicated malaria > 5.2.1.2 Recurrent falciparum malaria",
+              "page": 179
+            }
+          ]
+        },
+        {
+          "q": "How is artemether-lumefantrine dosed by body weight?",
+          "pass": false,
+          "citations": [
+            {
+              "source": "who-pocketbook-children-2013",
+              "section_id": "s1255",
+              "number": null,
+              "title": "L50776 Artemether-lumefantrine: combined tablets containing 20 mg of",
+              "path": "6. FEVER > L50776 Artemether-lumefantrine: combined tablets containing 20 mg of",
+              "page": 188
+            },
+            {
+              "source": "who-imai-dcm-2011-v1",
+              "section_id": "s2979",
+              "number": "20",
+              "title": "20 mg artemether + 120 mg",
+              "path": "20 mg artemether + 120 mg",
+              "page": 372
+            },
+            {
+              "source": "who-imai-dcm-2011-v1",
+              "section_id": "s2980",
+              "number": null,
+              "title": "Oral: 80 mg artemether and 480",
+              "path": "20 mg artemether + 120 mg > Oral: 80 mg artemether and 480",
+              "page": 372
+            },
+            {
+              "source": "who-malaria-2026",
+              "section_id": "s38",
+              "number": "5.2.1.4.2",
+              "title": "5.2.1.4.2 Young children and infants",
+              "path": "5. Case management > 5.1 Diagnosing malaria > 5.2.1 Treating uncomplicated malaria > 5.2.1.4 Special risk groups > 5.2.1.4.2 Young children and infants",
+              "page": 188
+            },
+            {
+              "source": "ng-eml-2020",
+              "section_id": "s58",
+              "number": "5.7.1",
+              "title": "5.7.1 For treatment",
+              "path": "3. ANTICONVULSANTS/ANTI-EPILEPTICS > 5.6 Antileprosy medicines > 5.7.1 For treatment",
+              "page": 16
+            }
+          ]
+        },
+        {
+          "q": "Which antimalarial is recommended for pregnant women in the first trimester?",
+          "pass": true,
+          "citations": [
+            {
+              "source": "who-imai-dcm-2011-v2",
+              "section_id": "s3763",
+              "number": null,
+              "title": "Antimalarial treatment in pregnancy",
+              "path": "25 Guidelines for the treatment of malaria, 2 nd ed. WHO, 2010. Note: The WHO Global Malaria Programme with > 11.25.7 Malaria in pregnancy > Antimalarial treatment in pregnancy",
+              "page": 470
+            },
+            {
+              "source": "who-malaria-2026",
+              "section_id": "s37",
+              "number": "5.2.1.4.1",
+              "title": "5.2.1.4.1 Pregnant and lactating women",
+              "path": "5. Case management > 5.1 Diagnosing malaria > 5.2.1 Treating uncomplicated malaria > 5.2.1.4 Special risk groups > 5.2.1.4.1 Pregnant and lactating women",
+              "page": 182
+            },
+            {
+              "source": "who-imai-dcm-2011-v2",
+              "section_id": "s4785",
+              "number": null,
+              "title": "Recommended ART for patients with TB",
+              "path": "A new or recurrent WHO stage 4 condition b,c > 13.10 HIV/TB co-management > Recommended ART for patients with TB",
+              "page": 577
+            },
+            {
+              "source": "who-imai-dcm-2011-v1",
+              "section_id": "s478",
+              "number": null,
+              "title": "How to give emergency antimalarial treatment if falciparum",
+              "path": "10 litres/min 17 min > 1.6 mg/kg each day > How to give emergency antimalarial treatment if falciparum",
+              "page": 56
+            },
+            {
+              "source": "who-imai-dcm-2011-v2",
+              "section_id": "s4875",
+              "number": null,
+              "title": "\u00b0 An EFV-based regimen is preferred (after the fi rst trimester) for pregnant",
+              "path": "14. PMTCT, HIV prevention, care, and treatment > 14.1 HIV prevention, care, and treatment during pregnancy > 14.1.3 Offer ART or ARV prophylaxis 10 > \u00b0 An EFV-based regimen is preferred (after the fi rst trimester) for pregnant",
+              "page": 601
+            }
+          ]
+        },
+        {
+          "q": "What is the treatment of severe malaria with artesunate?",
+          "pass": true,
+          "citations": [
+            {
+              "source": "who-malaria-2026",
+              "section_id": "s46",
+              "number": "5.2.2.1",
+              "title": "5.2.2.1 Artesunate",
+              "path": "5. Case management > 5.1 Diagnosing malaria > 5.2.2 Treating severe malaria > 5.2.2.1 Artesunate",
+              "page": 216
+            },
+            {
+              "source": "who-imai-dcm-2011-v1",
+              "section_id": "s2973",
+              "number": null,
+              "title": "Pregnancy: Both artesunate and quinine may be considered",
+              "path": "14 days; > Pregnancy: Both artesunate and quinine may be considered",
+              "page": 372
+            },
+            {
+              "source": "who-imai-dcm-2011-v2",
+              "section_id": "s3742",
+              "number": null,
+              "title": "Treatment of severe malaria",
+              "path": "25 Guidelines for the treatment of malaria, 2 nd ed. WHO, 2010. Note: The WHO Global Malaria Programme with > 11.25.5 Management of severe malaria > Treatment of severe malaria",
+              "page": 465
+            },
+            {
+              "source": "who-malaria-2026",
+              "section_id": "s48",
+              "number": "5.2.2.3",
+              "title": "5.2.2.3 Pre-referral treatment options",
+              "path": "5. Case management > 5.1 Diagnosing malaria > 5.2.2 Treating severe malaria > 5.2.2.3 Pre-referral treatment options",
+              "page": 221
+            },
+            {
+              "source": "who-imai-dcm-2011-v1",
+              "section_id": "s2995",
+              "number": null,
+              "title": "Pregnancy/breastfeeding: Both artesunate and quinine",
+              "path": "3 days > Pregnancy/breastfeeding: Both artesunate and quinine",
+              "page": 373
+            }
+          ]
+        },
+        {
+          "q": "What pre-referral treatment is given for severe malaria when referral is delayed?",
+          "pass": true,
+          "citations": [
+            {
+              "source": "who-malaria-2026",
+              "section_id": "s48",
+              "number": "5.2.2.3",
+              "title": "5.2.2.3 Pre-referral treatment options",
+              "path": "5. Case management > 5.1 Diagnosing malaria > 5.2.2 Treating severe malaria > 5.2.2.3 Pre-referral treatment options",
+              "page": 221
+            },
+            {
+              "source": "who-imai-dcm-2011-v2",
+              "section_id": "s3742",
+              "number": null,
+              "title": "Treatment of severe malaria",
+              "path": "25 Guidelines for the treatment of malaria, 2 nd ed. WHO, 2010. Note: The WHO Global Malaria Programme with > 11.25.5 Management of severe malaria > Treatment of severe malaria",
+              "page": 465
+            },
+            {
+              "source": "who-malaria-2026",
+              "section_id": "s46",
+              "number": "5.2.2.1",
+              "title": "5.2.2.1 Artesunate",
+              "path": "5. Case management > 5.1 Diagnosing malaria > 5.2.2 Treating severe malaria > 5.2.2.1 Artesunate",
+              "page": 216
+            },
+            {
+              "source": "who-malaria-2026",
+              "section_id": "s40",
+              "number": "5.2.1.4.4",
+              "title": "5.2.1.4.4 Non-immune travellers",
+              "path": "5. Case management > 5.1 Diagnosing malaria > 5.2.1 Treating uncomplicated malaria > 5.2.1.4 Special risk groups > 5.2.1.4.4 Non-immune travellers",
+              "page": 191
+            },
+            {
+              "source": "who-malaria-2026",
+              "section_id": "s121",
+              "number": "5.2.2.3",
+              "title": "5.2.2.3. Pre-referral treatment options",
+              "path": "5. Case management > 5.1. Diagnosing malaria > 5.2.2. Treating severe malaria > 5.2.2.3. Pre-referral treatment options",
+              "page": 476
+            }
+          ]
+        },
+        {
+          "q": "How should a suspected malaria case be confirmed with a parasitological test?",
+          "pass": true,
+          "citations": [
+            {
+              "source": "who-imai-dcm-2011-v2",
+              "section_id": "s3726",
+              "number": "11.25.2",
+              "title": "11.25.2 Parasitological diagnosis of malaria",
+              "path": "5. Fill out the patient card. > 11.25 Malaria 25,26 > 11.25.2 Parasitological diagnosis of malaria",
+              "page": 458
+            },
+            {
+              "source": "ncdc-lassa-2018",
+              "section_id": "s43",
+              "number": "1.1.5",
+              "title": "1.1.5 Confirmed case",
+              "path": "1.1 Case Definition of Lassa Fever > 1.1.5 Confirmed case",
+              "page": 9
+            },
+            {
+              "source": "who-imai-dcm-2011-v2",
+              "section_id": "s3727",
+              "number": "25",
+              "title": "25 Guidelines for the treatment of malaria, 2 nd ed. WHO, 2010. Note: The WHO Global Malaria Programme with",
+              "path": "25 Guidelines for the treatment of malaria, 2 nd ed. WHO, 2010. Note: The WHO Global Malaria Programme with",
+              "page": 458
+            },
+            {
+              "source": "who-imai-dcm-2011-v2",
+              "section_id": "s3725",
+              "number": "11.25.1",
+              "title": "11.25.1 Suspicion of malaria",
+              "path": "5. Fill out the patient card. > 11.25 Malaria 25,26 > 11.25.1 Suspicion of malaria",
+              "page": 458
+            },
+            {
+              "source": "who-malaria-2026",
+              "section_id": "s29",
+              "number": "5.1",
+              "title": "5.1 Diagnosing malaria",
+              "path": "5. Case management > 5.1 Diagnosing malaria",
+              "page": 166
+            }
+          ]
+        },
+        {
+          "q": "How is uncomplicated hyperparasitaemia managed?",
+          "pass": true,
+          "citations": [
+            {
+              "source": "who-malaria-2026",
+              "section_id": "s41",
+              "number": "5.2.1.4.5",
+              "title": "5.2.1.4.5 Uncomplicated hyperparasitaemia",
+              "path": "5. Case management > 5.1 Diagnosing malaria > 5.2.1 Treating uncomplicated malaria > 5.2.1.4 Special risk groups > 5.2.1.4.5 Uncomplicated hyperparasitaemia",
+              "page": 191
+            },
+            {
+              "source": "who-imai-dcm-2011-v1",
+              "section_id": "s3066",
+              "number": null,
+              "title": "Uncomplicated genital",
+              "path": "1 drop (0.5% or 1% solution) up > Uncomplicated genital",
+              "page": 376
+            },
+            {
+              "source": "who-malaria-2026",
+              "section_id": "s103",
+              "number": "5.2.1",
+              "title": "5.2.1. Treating uncomplicated malaria",
+              "path": "5. Case management > 5.1. Diagnosing malaria > 5.2.1. Treating uncomplicated malaria",
+              "page": 432
+            },
+            {
+              "source": "who-pocketbook-children-2013",
+              "section_id": "s1249",
+              "number": "6.2.2",
+              "title": "6.2.2 Uncomplicated malaria",
+              "path": "6. FEVER > 6.2.2 Uncomplicated malaria",
+              "page": 187
+            },
+            {
+              "source": "who-imai-dcm-2011-v1",
+              "section_id": "s3391",
+              "number": null,
+              "title": "Uncomplicated gonorrhoea",
+              "path": "1 minute > Uncomplicated gonorrhoea",
+              "page": 390
+            }
+          ]
+        },
+        {
+          "q": "Single low dose primaquine to reduce transmission of falciparum malaria",
+          "pass": true,
+          "citations": [
+            {
+              "source": "who-malaria-2026",
+              "section_id": "s35",
+              "number": "5.2.1.3",
+              "title": "5.2.1.3 Reducing the transmissibility of treated P. falciparum infections in areas of low-intensity transmission",
+              "path": "5. Case management > 5.1 Diagnosing malaria > 5.2.1 Treating uncomplicated malaria > 5.2.1.3 Reducing the transmissibility of treated P. falciparum infections in areas of low-intensity transmission",
+              "page": 179
+            },
+            {
+              "source": "who-malaria-2026",
+              "section_id": "s50",
+              "number": "5.2.3.1",
+              "title": "5.2.3.1 Management of malaria cases in special situations",
+              "path": "5. Case management > 5.1 Diagnosing malaria > 5.2.3 Other considerations in treating malaria > 5.2.3.1 Management of malaria cases in special situations",
+              "page": 223
+            },
+            {
+              "source": "who-malaria-2026",
+              "section_id": "s23",
+              "number": "4.2.6.3",
+              "title": "4.2.6.3 MDA to reduce transmission of P. falciparum in very low to low transmission settings",
+              "path": "4. Prevention > 4.2 Preventive chemotherapies > 4.2.6 Mass drug administration (MDA) > 4.2.6.3 MDA to reduce transmission of P. falciparum in very low to low transmission settings",
+              "page": 139
+            },
+            {
+              "source": "who-malaria-2026",
+              "section_id": "s96",
+              "number": "4.2.6.3",
+              "title": "4.2.6.3. MDA to reduce transmission of P. falciparum in very low to low transmission settings",
+              "path": "3. Introduction > 4.2. Preventive chemotherapies > 4.2.6. Mass drug administration (MDA) > 4.2.6.3. MDA to reduce transmission of P. falciparum in very low to low transmission settings",
+              "page": 381
+            },
+            {
+              "source": "who-malaria-2026",
+              "section_id": "s2",
+              "number": null,
+              "title": "Summary of recommendations",
+              "path": "Summary of recommendations",
+              "page": 5
+            }
+          ]
+        },
+        {
+          "q": "Which antibiotic treats mild community-acquired pneumonia?",
+          "pass": false,
+          "citations": [
+            {
+              "source": "who-eml-2025",
+              "section_id": "s74",
+              "number": null,
+              "title": "- Community acquired pneumonia (mild to",
+              "path": "The selection and use of essential > WHO Model List of Essential Medicines 24th list > CORRIGENDA (20 October 2025) > - Community acquired pneumonia (mild to",
+              "page": 18
+            },
+            {
+              "source": "who-eml-2025",
+              "section_id": "s50",
+              "number": null,
+              "title": "- Community-acquired pneumonia (mild to",
+              "path": "The selection and use of essential > WHO Model List of Essential Medicines 24th list > CORRIGENDA (20 October 2025) > - Community-acquired pneumonia (mild to",
+              "page": 16
+            },
+            {
+              "source": "who-eml-2025",
+              "section_id": "s42",
+              "number": null,
+              "title": "- Community acquired pneumonia",
+              "path": "The selection and use of essential > WHO Model List of Essential Medicines 24th list > CORRIGENDA (20 October 2025) > - Community acquired pneumonia",
+              "page": 16
+            },
+            {
+              "source": "who-eml-2025",
+              "section_id": "s87",
+              "number": null,
+              "title": "- Community acquired pneumonia",
+              "path": "The selection and use of essential > WHO Model List of Essential Medicines 24th list > CORRIGENDA (20 October 2025) > - Community acquired pneumonia",
+              "page": 19
+            },
+            {
+              "source": "who-eml-2025",
+              "section_id": "s107",
+              "number": null,
+              "title": "- Community acquired pneumonia",
+              "path": "The selection and use of essential > WHO Model List of Essential Medicines 24th list > CORRIGENDA (20 October 2025) > - Community acquired pneumonia",
+              "page": 21
+            }
+          ]
+        },
+        {
+          "q": "What empiric antibiotics are used for severe community-acquired pneumonia?",
+          "pass": false,
+          "citations": [
+            {
+              "source": "who-eml-2025",
+              "section_id": "s107",
+              "number": null,
+              "title": "- Community acquired pneumonia",
+              "path": "The selection and use of essential > WHO Model List of Essential Medicines 24th list > CORRIGENDA (20 October 2025) > - Community acquired pneumonia",
+              "page": 21
+            },
+            {
+              "source": "who-eml-2025",
+              "section_id": "s101",
+              "number": null,
+              "title": "- Community acquired pneumonia",
+              "path": "The selection and use of essential > WHO Model List of Essential Medicines 24th list > CORRIGENDA (20 October 2025) > - Community acquired pneumonia",
+              "page": 20
+            },
+            {
+              "source": "who-eml-2025",
+              "section_id": "s59",
+              "number": null,
+              "title": "- Community acquired pneumonia",
+              "path": "The selection and use of essential > WHO Model List of Essential Medicines 24th list > CORRIGENDA (20 October 2025) > - Community acquired pneumonia",
+              "page": 17
+            },
+            {
+              "source": "who-eml-2025",
+              "section_id": "s77",
+              "number": null,
+              "title": "- Community acquired pneumonia",
+              "path": "The selection and use of essential > WHO Model List of Essential Medicines 24th list > CORRIGENDA (20 October 2025) > - Community acquired pneumonia",
+              "page": 18
+            },
+            {
+              "source": "who-eml-2025",
+              "section_id": "s53",
+              "number": null,
+              "title": "- Community acquired pneumonia",
+              "path": "The selection and use of essential > WHO Model List of Essential Medicines 24th list > CORRIGENDA (20 October 2025) > - Community acquired pneumonia",
+              "page": 17
+            }
+          ]
+        },
+        {
+          "q": "What is the antibiotic treatment of enteric fever?",
+          "pass": true,
+          "citations": [
+            {
+              "source": "who-aware-2022",
+              "section_id": "s21",
+              "number": "15",
+              "title": "15. Enteric fever",
+              "path": "15. Enteric fever",
+              "page": 201
+            },
+            {
+              "source": "who-imai-dcm-2011-v2",
+              "section_id": "s3087",
+              "number": null,
+              "title": "Treatment",
+              "path": "2. clindamycin 900 mg IV every 8 hours PLUS gentami- > 10.17 Disorders of the mouth and throat > 10.17.9 Pharyngitis > Treatment",
+              "page": 364
+            },
+            {
+              "source": "who-pocketbook-children-2013",
+              "section_id": "s729",
+              "number": null,
+              "title": "\u25a0 When empyema is present, fever persists despite antibiotic therapy, and the",
+              "path": "4. COUGH > 4.3 Complications of pneumonia > 4.3.1 Pleural effusion and empyema > \u25a0 When empyema is present, fever persists despite antibiotic therapy, and the",
+              "page": 112
+            },
+            {
+              "source": "who-eml-2025",
+              "section_id": "s109",
+              "number": null,
+              "title": "- Complicated intraabdominal",
+              "path": "The selection and use of essential > WHO Model List of Essential Medicines 24th list > CORRIGENDA (20 October 2025) > - Complicated intraabdominal",
+              "page": 21
+            },
+            {
+              "source": "who-imai-dcm-2011-v2",
+              "section_id": "s3911",
+              "number": null,
+              "title": "Treatment",
+              "path": "25 Guidelines for the treatment of malaria, 2 nd ed. WHO, 2010. Note: The WHO Global Malaria Programme with > 11.32 Rheumatic fever 31 > Treatment",
+              "page": 494
+            }
+          ]
+        },
+        {
+          "q": "Antibiotic choice for lower urinary tract infection (cystitis)",
+          "pass": true,
+          "citations": [
+            {
+              "source": "who-imai-dcm-2011-v2",
+              "section_id": "s4019",
+              "number": "11.44",
+              "title": "11.44 Urinary tract infection",
+              "path": "T. b. rhodesiense causes 5% of infections and is found in eastern and southern Africa. > 11.44 Urinary tract infection",
+              "page": 516
+            },
+            {
+              "source": "who-imai-dcm-2011-v2",
+              "section_id": "s2727",
+              "number": null,
+              "title": "Urinary tract",
+              "path": "10 mg orally daily for 10 to 14 days per month, if not trying > Urinary tract",
+              "page": 318
+            },
+            {
+              "source": "who-eml-2025",
+              "section_id": "s92",
+              "number": null,
+              "title": "- Lower urinary tract infections",
+              "path": "The selection and use of essential > WHO Model List of Essential Medicines 24th list > CORRIGENDA (20 October 2025) > - Lower urinary tract infections",
+              "page": 19
+            },
+            {
+              "source": "who-eml-2025",
+              "section_id": "s86",
+              "number": null,
+              "title": "- Lower urinary tract infections",
+              "path": "The selection and use of essential > WHO Model List of Essential Medicines 24th list > CORRIGENDA (20 October 2025) > - Lower urinary tract infections",
+              "page": 19
+            },
+            {
+              "source": "who-aware-2022",
+              "section_id": "s29",
+              "number": "23",
+              "title": "23. Lower urinary tract infection",
+              "path": "23. Lower urinary tract infection",
+              "page": 294
+            }
+          ]
+        },
+        {
+          "q": "How is acute pyelonephritis treated?",
+          "pass": true,
+          "citations": [
+            {
+              "source": "who-imai-dcm-2011-v2",
+              "section_id": "s1262",
+              "number": null,
+              "title": "Acute pyelonephritis",
+              "path": "A small elevated skin lesion containing pus > 10.7 Abdominal complaints > Acute pyelonephritis",
+              "page": 145
+            },
+            {
+              "source": "who-imai-dcm-2011-v1",
+              "section_id": "s3386",
+              "number": null,
+              "title": "Severe infections: acute",
+              "path": "1 minute > Severe infections: acute",
+              "page": 390
+            },
+            {
+              "source": "who-eml-2025",
+              "section_id": "s105",
+              "number": null,
+              "title": "- Pyelonephritis or prostatitis (mild to",
+              "path": "The selection and use of essential > WHO Model List of Essential Medicines 24th list > CORRIGENDA (20 October 2025) > - Pyelonephritis or prostatitis (mild to",
+              "page": 20
+            },
+            {
+              "source": "who-eml-2025",
+              "section_id": "s112",
+              "number": null,
+              "title": "- Pyelonephritis or prostatitis (mild to",
+              "path": "The selection and use of essential > WHO Model List of Essential Medicines 24th list > CORRIGENDA (20 October 2025) > - Pyelonephritis or prostatitis (mild to",
+              "page": 21
+            },
+            {
+              "source": "who-eml-2025",
+              "section_id": "s110",
+              "number": null,
+              "title": "- Pyelonephritis or prostatitis (severe)",
+              "path": "The selection and use of essential > WHO Model List of Essential Medicines 24th list > CORRIGENDA (20 October 2025) > - Pyelonephritis or prostatitis (severe)",
+              "page": 21
+            }
+          ]
+        },
+        {
+          "q": "Empiric antibiotics for sepsis in adults including septic shock",
+          "pass": true,
+          "citations": [
+            {
+              "source": "ssc-2021",
+              "section_id": "s32",
+              "number": null,
+              "title": "Recommendations 22. For adults with sepsis or septic shock at high risk of funga",
+              "path": "Infection > Antifungal therapy > Recommendations 22. For adults with sepsis or septic shock at high risk of funga",
+              "page": 1
+            },
+            {
+              "source": "ssc-2021",
+              "section_id": "s28",
+              "number": null,
+              "title": "Recommendations 17. For adults with sepsis or septic shock at high risk of methi",
+              "path": "Infection > Antimicrobial choice > Recommendations 17. For adults with sepsis or septic shock at high risk of methi",
+              "page": 1
+            },
+            {
+              "source": "ssc-2021",
+              "section_id": "s19",
+              "number": null,
+              "title": "Recommendation 11. For adults with suspected sepsis or septic shock but unconfir",
+              "path": "Infection > Diagnosis of infection > Recommendation 11. For adults with suspected sepsis or septic shock but unconfir",
+              "page": 1
+            },
+            {
+              "source": "ssc-2021",
+              "section_id": "s150",
+              "number": null,
+              "title": "Recommendation 82. For adults with sepsis or septic shock and their families, we",
+              "path": "Long-term outcomes and goals of care > Screening for economic or social support > Recommendation 82. For adults with sepsis or septic shock and their families, we",
+              "page": 1
+            },
+            {
+              "source": "ssc-2021",
+              "section_id": "s159",
+              "number": null,
+              "title": "Recommendations 85. For adults with sepsis and septic shock and their families, ",
+              "path": "Long-term outcomes and goals of care > Discharge planning > Recommendations 85. For adults with sepsis and septic shock and their families, ",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "q": "Antibiotics for sepsis in neonates and children",
+          "pass": false,
+          "citations": [
+            {
+              "source": "who-eml-2025",
+              "section_id": "s56",
+              "number": null,
+              "title": "- Sepsis in neonates and children [c]",
+              "path": "The selection and use of essential > WHO Model List of Essential Medicines 24th list > CORRIGENDA (20 October 2025) > - Sepsis in neonates and children [c]",
+              "page": 17
+            },
+            {
+              "source": "who-eml-2025",
+              "section_id": "s80",
+              "number": null,
+              "title": "- Sepsis in neonates and children [c]",
+              "path": "The selection and use of essential > WHO Model List of Essential Medicines 24th list > CORRIGENDA (20 October 2025) > - Sepsis in neonates and children [c]",
+              "page": 18
+            },
+            {
+              "source": "who-eml-2025",
+              "section_id": "s113",
+              "number": null,
+              "title": "- Sepsis in neonates and children [c]",
+              "path": "The selection and use of essential > WHO Model List of Essential Medicines 24th list > CORRIGENDA (20 October 2025) > - Sepsis in neonates and children [c]",
+              "page": 21
+            },
+            {
+              "source": "who-eml-2025",
+              "section_id": "s106",
+              "number": null,
+              "title": "- Sepsis in neonates and children [c]",
+              "path": "The selection and use of essential > WHO Model List of Essential Medicines 24th list > CORRIGENDA (20 October 2025) > - Sepsis in neonates and children [c]",
+              "page": 20
+            },
+            {
+              "source": "who-eml-2025",
+              "section_id": "s41",
+              "number": null,
+              "title": "- Sepsis in neonates and children [c]",
+              "path": "The selection and use of essential > WHO Model List of Essential Medicines 24th list > CORRIGENDA (20 October 2025) > - Sepsis in neonates and children [c]",
+              "page": 16
+            }
+          ]
+        },
+        {
+          "q": "How are the stages of acute kidney injury defined by creatinine and urine output?",
+          "pass": false,
+          "citations": [
+            {
+              "source": "kdigo-aki-2012",
+              "section_id": "s121",
+              "number": null,
+              "title": "ESRD 43 months",
+              "path": "K Urine volume o0.5ml/kg/h for 6 hours. > ESRD 43 months",
+              "page": 24
+            },
+            {
+              "source": "kdigo-aki-2012",
+              "section_id": "s99",
+              "number": null,
+              "title": "Damage",
+              "path": "K Urine volume o0.5ml/kg/h for 6 hours. > Damage",
+              "page": 23
+            },
+            {
+              "source": "kdigo-aki-2012",
+              "section_id": "s91",
+              "number": null,
+              "title": "AKD. 42,45 Circles on the horizontal axis depict stages in the",
+              "path": "K Urine volume o0.5ml/kg/h for 6 hours. > AKD. 42,45 Circles on the horizontal axis depict stages in the",
+              "page": 22
+            },
+            {
+              "source": "kdigo-aki-2012",
+              "section_id": "s57",
+              "number": null,
+              "title": "RIFLE criteria",
+              "path": "Chapter 1.1: Introduction > RIFLE criteria",
+              "page": 17
+            },
+            {
+              "source": "who-imai-dcm-2011-v2",
+              "section_id": "s3834",
+              "number": "11.31.2",
+              "title": "11.31.2 Acute kidney injury (AKI)",
+              "path": "25 Guidelines for the treatment of malaria, 2 nd ed. WHO, 2010. Note: The WHO Global Malaria Programme with > 11.31 Renal problems (kidney disease) > 11.31.2 Acute kidney injury (AKI)",
+              "page": 481
+            }
+          ]
+        },
+        {
+          "q": "How are the NEWS2 parameters scored?",
+          "pass": true,
+          "citations": [
+            {
+              "source": "rcp-news2-2017",
+              "section_id": "s1",
+              "number": null,
+              "title": "Contents",
+              "path": "Contents",
+              "page": 4
+            },
+            {
+              "source": "rcp-news2-2017",
+              "section_id": "s13",
+              "number": "4",
+              "title": "4 Update on the physiological parameters incorporated into the NEWS",
+              "path": "4 Update on the physiological parameters incorporated into the NEWS",
+              "page": 38
+            },
+            {
+              "source": "who-imai-dcm-2011-v1",
+              "section_id": "s3217",
+              "number": null,
+              "title": "Tablet (scored): 100 mg, 200 mg",
+              "path": "5 minutes titrated and adjusted > Tablet (scored): 100 mg, 200 mg",
+              "page": 382
+            },
+            {
+              "source": "ng-eml-2020",
+              "section_id": "s76",
+              "number": null,
+              "title": "Fixed dose combination tablet (scored): 300 mg + 25 mg +",
+              "path": "3. ANTICONVULSANTS/ANTI-EPILEPTICS > 5.10 Antituberculosis medicines > 5.11.1 Antiherpes medicines > Fixed dose combination tablet (scored): 300 mg + 25 mg +",
+              "page": 19
+            },
+            {
+              "source": "kdigo-aki-2012",
+              "section_id": "s491",
+              "number": "K",
+              "title": "K Determine clinical parameters (e.g., parameters of kidney",
+              "path": "K Determine clinical parameters (e.g., parameters of kidney",
+              "page": 97
+            }
+          ]
+        },
+        {
+          "q": "At what blood pressure should antihypertensive drug treatment start?",
+          "pass": true,
+          "citations": [
+            {
+              "source": "who-htn-2021",
+              "section_id": "s3",
+              "number": null,
+              "title": "Executive summary",
+              "path": "Executive summary",
+              "page": 9
+            },
+            {
+              "source": "who-hearts-protocols-2018",
+              "section_id": "s53",
+              "number": null,
+              "title": "Treatment adherence",
+              "path": "1 Hypertension detection and > Treatment adherence",
+              "page": 14
+            },
+            {
+              "source": "who-htn-2021",
+              "section_id": "s15",
+              "number": "3.1",
+              "title": "3.1 Blood pressure threshold for initiation of pharmacological treatment",
+              "path": "Fig. 1 Analytic framework for antihypertensive medication treatment > 3 Recommendations > 3.1 Blood pressure threshold for initiation of pharmacological treatment",
+              "page": 19
+            },
+            {
+              "source": "who-pe-2011",
+              "section_id": "s53",
+              "number": null,
+              "title": "Recommendations",
+              "path": "4. Evidence and > Recommendations",
+              "page": 35
+            },
+            {
+              "source": "who-htn-2021",
+              "section_id": "s4",
+              "number": "1",
+              "title": "1 Introduction",
+              "path": "Executive summary > 1 Introduction",
+              "page": 13
+            }
+          ]
+        },
+        {
+          "q": "What first-line antiretroviral regimen should be started in adults?",
+          "pass": true,
+          "citations": [
+            {
+              "source": "who-imai-dcm-2011-v2",
+              "section_id": "s4574",
+              "number": null,
+              "title": "Table: Defi nitions of treatment failure for patients on fi rst-line antiretroviral regimen",
+              "path": "B IRIS) and must be > 13.7 Second-line ART > Table: Defi nitions of treatment failure for patients on fi rst-line antiretroviral regimen",
+              "page": 560
+            },
+            {
+              "source": "who-pocketbook-children-2013",
+              "section_id": "s1690",
+              "number": null,
+              "title": "Table 25. First-line treatment regimens for children",
+              "path": "8. HIV/AIDS > Table 25. First-line treatment regimens for children",
+              "page": 258
+            },
+            {
+              "source": "who-hiv-2021",
+              "section_id": "s119",
+              "number": "4.6",
+              "title": "4.6 What to start",
+              "path": "4.6 What to start",
+              "page": 166
+            },
+            {
+              "source": "who-imai-dcm-2011-v2",
+              "section_id": "s5129",
+              "number": null,
+              "title": "First-line anti-tuberculosis drugs",
+              "path": "2 nd visit > 15.3 Treatment of TB > First-line anti-tuberculosis drugs",
+              "page": 641
+            },
+            {
+              "source": "who-hearts-protocols-2018",
+              "section_id": "s221",
+              "number": null,
+              "title": "Adapted example: CCB as first-line treatment",
+              "path": "1 Hypertension detection and > Adapted example: CCB as first-line treatment",
+              "page": 31
+            }
+          ]
+        },
+        {
+          "q": "How is the response to antiretroviral therapy monitored with viral load?",
+          "pass": true,
+          "citations": [
+            {
+              "source": "who-imai-dcm-2011-v2",
+              "section_id": "s4277",
+              "number": null,
+              "title": "Monitoring response to ART",
+              "path": "2 nd and 3 rd trimester. > 13.5 ART monitoring > Monitoring response to ART",
+              "page": 550
+            },
+            {
+              "source": "who-imai-dcm-2011-v2",
+              "section_id": "s4289",
+              "number": null,
+              "title": "Viral load",
+              "path": "2 nd and 3 rd trimester. > 13.5 ART monitoring > Viral load",
+              "page": 551
+            },
+            {
+              "source": "who-imai-dcm-2011-v2",
+              "section_id": "s886",
+              "number": null,
+              "title": "Viral load undetectable",
+              "path": "A small elevated skin lesion containing pus > 10.3 Weight loss and malnutrition > 10.3.2 Consider the likely cause of loss of weight > Viral load undetectable",
+              "page": 95
+            },
+            {
+              "source": "who-pocketbook-children-2013",
+              "section_id": "s1682",
+              "number": "8.2.1",
+              "title": "8.2.1 Antiretroviral drugs",
+              "path": "8. HIV/AIDS > 8.2.1 Antiretroviral drugs",
+              "page": 257
+            },
+            {
+              "source": "who-hiv-2021",
+              "section_id": "s120",
+              "number": "4.7",
+              "title": "4.7 Monitoring the response to ART",
+              "path": "4.7 Monitoring the response to ART",
+              "page": 190
+            }
+          ]
+        },
+        {
+          "q": "Hydroxyurea therapy for sickle cell disease",
+          "pass": true,
+          "citations": [
+            {
+              "source": "ng-scd-2014",
+              "section_id": "s189",
+              "number": "4.1",
+              "title": "4.1 Hydroxyurea Therapy for Sickle Cell Disease",
+              "path": "C. Aplastic Crisis > 4.1 Hydroxyurea Therapy for Sickle Cell Disease",
+              "page": 41
+            },
+            {
+              "source": "ng-scd-2014",
+              "section_id": "s25",
+              "number": "X",
+              "title": "X | National Guideline for the Control and Management of Sickle Cell Disease",
+              "path": "X | National Guideline for the Control and Management of Sickle Cell Disease",
+              "page": 10
+            },
+            {
+              "source": "ng-scd-2014",
+              "section_id": "s197",
+              "number": "4.1.3",
+              "title": "4.1.3 How Hydroxyurea Works in Sickle Cell Disease",
+              "path": "C. Aplastic Crisis > 4.1 Hydroxyurea Therapy for Sickle Cell Disease > 4.1.3 How Hydroxyurea Works in Sickle Cell Disease",
+              "page": 42
+            },
+            {
+              "source": "ng-scd-2014",
+              "section_id": "s26",
+              "number": null,
+              "title": "XI | National Guideline for the Control and Management of Sickle Cell Disease",
+              "path": "X | National Guideline for the Control and Management of Sickle Cell Disease > XI | National Guideline for the Control and Management of Sickle Cell Disease",
+              "page": 11
+            },
+            {
+              "source": "ng-scd-2014",
+              "section_id": "s199",
+              "number": "4.2",
+              "title": "4.2 Prophylaxis and Antimicrobial Therapy",
+              "path": "C. Aplastic Crisis > 4.2 Prophylaxis and Antimicrobial Therapy",
+              "page": 42
+            }
+          ]
+        },
+        {
+          "q": "What is the case definition of a suspected Lassa fever case?",
+          "pass": true,
+          "citations": [
+            {
+              "source": "ncdc-lassa-2018",
+              "section_id": "s38",
+              "number": "1.1",
+              "title": "1.1 Case Definition of Lassa Fever",
+              "path": "1.1 Case Definition of Lassa Fever",
+              "page": 8
+            },
+            {
+              "source": "ncdc-lassa-2018",
+              "section_id": "s3",
+              "number": null,
+              "title": "Table of Contents",
+              "path": "Table of Contents",
+              "page": 3
+            },
+            {
+              "source": "ncdc-lassa-2018",
+              "section_id": "s4",
+              "number": null,
+              "title": "Clinical SCREENING AND TRIAGING FOR Lassa fever .......................................... 10",
+              "path": "Table of Contents > Clinical SCREENING AND TRIAGING FOR Lassa fever .......................................... 10",
+              "page": 3
+            },
+            {
+              "source": "ncdc-lassa-2018",
+              "section_id": "s40",
+              "number": "1.1.2",
+              "title": "1.1.2 Suspected case",
+              "path": "1.1 Case Definition of Lassa Fever > 1.1.2 Suspected case",
+              "page": 8
+            },
+            {
+              "source": "ncdc-lassa-2018",
+              "section_id": "s104",
+              "number": "3.5",
+              "title": "3.5 Management of Suspected cases awaiting lab",
+              "path": "3.5 Management of Suspected cases awaiting lab",
+              "page": 20
+            }
+          ]
+        },
+        {
+          "q": "Which drug regimen treats drug-susceptible pulmonary tuberculosis?",
+          "pass": true,
+          "citations": [
+            {
+              "source": "who-tb-m4-2026",
+              "section_id": "s47",
+              "number": null,
+              "title": "4-month regimen of isoniazid, rifapentine, moxifloxacin and pyrazinamide for drug-susceptible pulmonary TB",
+              "path": "Recommendations > A6. Monitoring and evaluation > 4-month regimen of isoniazid, rifapentine, moxifloxacin and pyrazinamide for drug-susceptible pulmonary TB",
+              "page": 61
+            },
+            {
+              "source": "who-tb-m4-2026",
+              "section_id": "s24",
+              "number": null,
+              "title": "Summary of WHO recommendations on drug-susceptible TB treatment",
+              "path": "Introduction > Summary of WHO recommendations on drug-susceptible TB treatment",
+              "page": 32
+            },
+            {
+              "source": "who-tb-m4-2026",
+              "section_id": "s26",
+              "number": null,
+              "title": "A1. Treatment of drug-susceptible TB using a 6-month regimen",
+              "path": "Recommendations > A1. Treatment of drug-susceptible TB using a 6-month regimen",
+              "page": 35
+            },
+            {
+              "source": "who-tb-m4-2026",
+              "section_id": "s15",
+              "number": null,
+              "title": "Drug-resistant TB treatment (Chapter 2)",
+              "path": "Executive summary > What is new in this edition > Drug-resistant TB treatment (Chapter 2)",
+              "page": 17
+            },
+            {
+              "source": "who-tb-handbook-m4-2025",
+              "section_id": "s2",
+              "number": null,
+              "title": "Abbreviations and acronyms",
+              "path": "Abbreviations and acronyms",
+              "page": 10
+            }
+          ]
+        },
+        {
+          "q": "Rapid molecular test for detection of TB and rifampicin resistance",
+          "pass": false,
+          "citations": [
+            {
+              "source": "who-tb-m3-2025",
+              "section_id": "s11",
+              "number": "1.3.1",
+              "title": "1.3.1 Initial tests for TB diagnosis with drug resistance detection",
+              "path": "1. Introduction > 1.3. Testing classes and products > 1.3.1 Initial tests for TB diagnosis with drug resistance detection",
+              "page": 20
+            },
+            {
+              "source": "who-tb-m3-2025",
+              "section_id": "s4",
+              "number": null,
+              "title": "Executive summary",
+              "path": "Executive summary",
+              "page": 12
+            },
+            {
+              "source": "who-imai-dcm-2011-v2",
+              "section_id": "s5051",
+              "number": null,
+              "title": "Case of MDR-TB",
+              "path": "1 Treatment of tuberculosis: guidelines. 4 th edition. WHO, 2010. Available at http://whqlibdoc.who.int/ > 15.2 Diagnose TB > Case of MDR-TB",
+              "page": 631
+            },
+            {
+              "source": "who-tb-m3-2025",
+              "section_id": "s13",
+              "number": "1.3.4",
+              "title": "1.3.4 Tests for TB infection",
+              "path": "1. Introduction > 1.3. Testing classes and products > 1.3.4 Tests for TB infection",
+              "page": 22
+            },
+            {
+              "source": "who-tb-m3-2025",
+              "section_id": "s10",
+              "number": "1.3",
+              "title": "1.3. Testing classes and products",
+              "path": "1. Introduction > 1.3. Testing classes and products",
+              "page": 19
+            }
+          ]
+        },
+        {
+          "q": "How is magnesium sulfate given for severe pre-eclampsia?",
+          "pass": false,
+          "citations": [
+            {
+              "source": "who-pe-2011",
+              "section_id": "s45",
+              "number": null,
+              "title": "Recommendations",
+              "path": "4. Evidence and > Recommendations",
+              "page": 31
+            },
+            {
+              "source": "who-pe-2011",
+              "section_id": "s60",
+              "number": null,
+              "title": "Monitoring and evaluating the",
+              "path": "7. Applicability issues > Monitoring and evaluating the",
+              "page": 38
+            },
+            {
+              "source": "who-pe-2011",
+              "section_id": "s8",
+              "number": "4",
+              "title": "4. Evidence and recommendations",
+              "path": "4. Evidence and recommendations",
+              "page": 7
+            },
+            {
+              "source": "who-pe-2011",
+              "section_id": "s16",
+              "number": "1",
+              "title": "1 WHO Handbook for guideline development. Geneva,",
+              "path": "1 WHO Handbook for guideline development. Geneva,",
+              "page": 9
+            },
+            {
+              "source": "who-pe-2011",
+              "section_id": "s59",
+              "number": "7",
+              "title": "7. Applicability issues",
+              "path": "7. Applicability issues",
+              "page": 38
+            }
+          ]
+        },
+        {
+          "q": "Haemoglobin cutoffs that define anaemia and its severity",
+          "pass": true,
+          "citations": [
+            {
+              "source": "who-hb-2024",
+              "section_id": "s48",
+              "number": null,
+              "title": "Table 3. Haemoglobin cutoffs to define anaemia severity in individuals",
+              "path": "1. Haemoglobin cutoffs to define anaemia > Table 3. Haemoglobin cutoffs to define anaemia severity in individuals",
+              "page": 13
+            },
+            {
+              "source": "who-hb-2024",
+              "section_id": "s138",
+              "number": null,
+              "title": "Table 3. Haemoglobin cutoffs to define anaemia severity in individuals",
+              "path": "5. Cutoffs to define the public health significance of anaemia > Table 3. Haemoglobin cutoffs to define anaemia severity in individuals",
+              "page": 31
+            },
+            {
+              "source": "who-hb-2024",
+              "section_id": "s7",
+              "number": null,
+              "title": "What should be the haemoglobin cutoffs to define anaemia in individuals and in populations?",
+              "path": "Guideline on > What should be the haemoglobin cutoffs to define anaemia in individuals and in populations?",
+              "page": 5
+            },
+            {
+              "source": "who-hb-2024",
+              "section_id": "s337",
+              "number": null,
+              "title": "\u2022 There is a lack of good quality evidence from the systematic reviews in haemoglobin cutoffs",
+              "path": "Annex 1. GRADE summary of findings tables 45 > Annex 3. Summary of judgements > \u2022 There is a lack of good quality evidence from the systematic reviews in haemoglobin cutoffs",
+              "page": 72
+            },
+            {
+              "source": "who-hb-2024",
+              "section_id": "s150",
+              "number": null,
+              "title": "Summary of judgements",
+              "path": "5. Cutoffs to define the public health significance of anaemia > Summary of judgements",
+              "page": 32
+            }
+          ]
+        },
+        {
+          "q": "How do I score the PHQ-9 and grade depression severity?",
+          "pass": true,
+          "citations": [
+            {
+              "source": "phq-manual",
+              "section_id": "s15",
+              "number": null,
+              "title": "PHQ-9 Depression Severity. This is calculated by assigning scores of 0, 1, 2, and 3, to the",
+              "path": "INSTRUCTION MANUAL Instructions for Patient Health Questionnaire (PHQ) and GAD-7 Measures > Purposes > PHQ-9 Depression Severity. This is calculated by assigning scores of 0, 1, 2, and 3, to the",
+              "page": 6
+            },
+            {
+              "source": "phq-manual",
+              "section_id": "s14",
+              "number": null,
+              "title": "PHQ-9 Depression Severity. This is calculated by assigning scores of 0, 1, 2, and 3, to the",
+              "path": "INSTRUCTION MANUAL Instructions for Patient Health Questionnaire (PHQ) and GAD-7 Measures > Purposes > PHQ-9 Depression Severity. This is calculated by assigning scores of 0, 1, 2, and 3, to the",
+              "page": 5
+            },
+            {
+              "source": "phq-manual",
+              "section_id": "s17",
+              "number": null,
+              "title": "PHQ-2 and GAD-2 Severity. These consist of the first two items of the PHQ-9 and GAD-7",
+              "path": "INSTRUCTION MANUAL Instructions for Patient Health Questionnaire (PHQ) and GAD-7 Measures > Purposes > PHQ-2 and GAD-2 Severity. These consist of the first two items of the PHQ-9 and GAD-7",
+              "page": 6
+            },
+            {
+              "source": "phq-manual",
+              "section_id": "s3",
+              "number": null,
+              "title": "CODING AND SCORING",
+              "path": "INSTRUCTION MANUAL Instructions for Patient Health Questionnaire (PHQ) and GAD-7 Measures > CODING AND SCORING",
+              "page": 2
+            },
+            {
+              "source": "phq-manual",
+              "section_id": "s21",
+              "number": null,
+              "title": "Table 4. PHQ-9 Scores and Proposed Treatment Actions *",
+              "path": "INSTRUCTION MANUAL Instructions for Patient Health Questionnaire (PHQ) and GAD-7 Measures > Table 4. PHQ-9 Scores and Proposed Treatment Actions *",
+              "page": 7
+            }
+          ]
+        },
+        {
+          "q": "What is the starting dose of fluoxetine for depression?",
+          "pass": true,
+          "citations": [
+            {
+              "source": "who-imai-dcm-2011-v2",
+              "section_id": "s2161",
+              "number": null,
+              "title": "Fluoxetine for chronic anxiety disorders - same dosing as for depression (see Section 10.11.6 for cautions and",
+              "path": "4. Assess coping resources and activate psychosocial support > 10.11.7 Anxiety > Fluoxetine for chronic anxiety disorders - same dosing as for depression (see Section 10.11.6 for cautions and",
+              "page": 263
+            },
+            {
+              "source": "who-imai-dcm-2011-v2",
+              "section_id": "s2142",
+              "number": null,
+              "title": "Fluoxetine for depression",
+              "path": "4. Assess coping resources and activate psychosocial support > 10.11.6 Sad or low mood including depression 2 > Fluoxetine for depression",
+              "page": 259
+            },
+            {
+              "source": "who-imai-dcm-2011-v2",
+              "section_id": "s2110",
+              "number": null,
+              "title": "Mental health problems",
+              "path": "4. Assess coping resources and activate psychosocial support > 10.11.5 Bipolar disorder 2 > Mental health problems",
+              "page": 249
+            },
+            {
+              "source": "who-mhgap-2023",
+              "section_id": "s351",
+              "number": null,
+              "title": "DEP1. Are antidepressants (tricyclic antidepressants [TCAs]",
+              "path": "2. Methods > 3.6 Depression (DEP) > DEP1. Are antidepressants (tricyclic antidepressants [TCAs]",
+              "page": 90
+            },
+            {
+              "source": "who-hearts-protocols-2018",
+              "section_id": "s84",
+              "number": null,
+              "title": "PRESCRIBE starting dose of CCB **",
+              "path": "1 Hypertension detection and > PRESCRIBE starting dose of CCB **",
+              "page": 19
+            }
+          ]
+        },
+        {
+          "q": "Management of an acute asthma exacerbation in primary care",
+          "pass": true,
+          "citations": [
+            {
+              "source": "who-pen-2020",
+              "section_id": "s487",
+              "number": null,
+              "title": "MANAGEMENT OF EXACERBATION OF ASTHMA",
+              "path": "2 years thereafter, or as per ophthalmologist recommendation > 2.3 CHRONIC RESPIRATORY DISEASES > MANAGEMENT OF EXACERBATION OF ASTHMA",
+              "page": 42
+            },
+            {
+              "source": "who-imai-dcm-2011-v2",
+              "section_id": "s1180",
+              "number": null,
+              "title": "Between 60-80% <60%",
+              "path": "A small elevated skin lesion containing pus > 10.6 Chest symptoms: cough and shortness of breath > 10.6.4 Asthma > Between 60-80% <60%",
+              "page": 133
+            },
+            {
+              "source": "who-pen-2020",
+              "section_id": "s87",
+              "number": null,
+              "title": "Management of asthma",
+              "path": "2. COMPONENTS OF WHO PEN > Management of asthma",
+              "page": 13
+            },
+            {
+              "source": "who-imai-dcm-2011-v1",
+              "section_id": "s1027",
+              "number": null,
+              "title": "Section 15)",
+              "path": "2 ml/kg/hour. > 3.2 Severely ill patient with diffi culty breathing > 3.2.1 Approach to severely ill patient with diffi culty breathing > Section 15)",
+              "page": 116
+            },
+            {
+              "source": "who-imai-dcm-2011-v1",
+              "section_id": "s2950",
+              "number": null,
+              "title": "Severe acute exacerbation of hepatitis",
+              "path": "14 days; > Severe acute exacerbation of hepatitis",
+              "page": 371
+            }
+          ]
+        },
+        {
+          "q": "Managing complications and delaying progression of chronic kidney disease",
+          "pass": true,
+          "citations": [
+            {
+              "source": "kdigo-ckd-2024-full",
+              "section_id": "s219",
+              "number": null,
+              "title": "3: Delaying CKD progression and managing its complications",
+              "path": "mk8 > 1: Evaluation of CKD > 3: Delaying CKD progression and managing its complications",
+              "page": 90
+            },
+            {
+              "source": "kdigo-ckd-2024-full",
+              "section_id": "s67",
+              "number": null,
+              "title": "3: Delaying CKD progression and managing its complications",
+              "path": "mk8 > 3: Delaying CKD progression and managing its complications",
+              "page": 41
+            },
+            {
+              "source": "kdigo-ckd-2024-full",
+              "section_id": "s5",
+              "number": null,
+              "title": "Supplementary Material",
+              "path": "KDIGO 2024 Clinical Practice Guideline for the Evaluation and Management of Chronic Kidney Disease > Supplementary Material",
+              "page": 7
+            },
+            {
+              "source": "kdigo-ckd-2024-full",
+              "section_id": "s2",
+              "number": null,
+              "title": "flink1",
+              "path": "KDIGO 2024 Clinical Practice Guideline for the Evaluation and Management of Chronic Kidney Disease > flink1",
+              "page": 3
+            },
+            {
+              "source": "kdigo-ckd-2024-full",
+              "section_id": "s385",
+              "number": null,
+              "title": "Literature searches and article selection",
+              "path": "mk8 > 1: Evaluation of CKD > Methods for guideline development > Literature searches and article selection",
+              "page": 159
+            }
+          ]
+        }
+      ]
+    },
+    "graph": {
+      "pass_rate": 0.9666666666666667,
+      "rows": [
+        {
+          "q": "What is the first-line treatment for uncomplicated falciparum malaria?",
+          "pass": true,
+          "citations": [
+            {
+              "source": "who-malaria-2026",
+              "section_id": "s37",
+              "number": "5.2.1.4.1",
+              "title": "5.2.1.4.1 Pregnant and lactating women",
+              "path": "5. Case management > 5.1 Diagnosing malaria > 5.2.1 Treating uncomplicated malaria > 5.2.1.4 Special risk groups > 5.2.1.4.1 Pregnant and lactating women",
+              "page": 182
+            },
+            {
+              "source": "who-imai-dcm-2011-v1",
+              "section_id": "s3655",
+              "number": "A",
+              "title": "A fi rst-line antimalarial",
+              "path": "A fi rst-line antimalarial",
+              "page": 400
+            },
+            {
+              "source": "who-malaria-2026",
+              "section_id": "s31",
+              "number": "5.2.1.1",
+              "title": "5.2.1.1 Artemisinin-based combination therapy",
+              "path": "5. Case management > 5.1 Diagnosing malaria > 5.2.1 Treating uncomplicated malaria > 5.2.1.1 Artemisinin-based combination therapy",
+              "page": 170
+            },
+            {
+              "source": "who-pocketbook-children-2013",
+              "section_id": "s1254",
+              "number": null,
+              "title": "Uncomplicated P. falciparum malaria: Treat for 3 days with one of the recom-",
+              "path": "6. FEVER > Uncomplicated P. falciparum malaria: Treat for 3 days with one of the recom-",
+              "page": 188
+            },
+            {
+              "source": "who-malaria-2026",
+              "section_id": "s29",
+              "number": "5.1",
+              "title": "5.1 Diagnosing malaria",
+              "path": "5. Case management > 5.1 Diagnosing malaria",
+              "page": 166
+            }
+          ]
+        },
+        {
+          "q": "How is artemether-lumefantrine dosed by body weight?",
+          "pass": true,
+          "citations": [
+            {
+              "source": "who-malaria-2026",
+              "section_id": "s33",
+              "number": "5.2.1.1.2",
+              "title": "5.2.1.1.2 Dosing of ACTs",
+              "path": "5. Case management > 5.1 Diagnosing malaria > 5.2.1 Treating uncomplicated malaria > 5.2.1.1 Artemisinin-based combination therapy > 5.2.1.1.2 Dosing of ACTs",
+              "page": 175
+            },
+            {
+              "source": "who-pocketbook-children-2013",
+              "section_id": "s1255",
+              "number": null,
+              "title": "L50776 Artemether-lumefantrine: combined tablets containing 20 mg of",
+              "path": "6. FEVER > L50776 Artemether-lumefantrine: combined tablets containing 20 mg of",
+              "page": 188
+            },
+            {
+              "source": "who-imai-dcm-2011-v1",
+              "section_id": "s2979",
+              "number": "20",
+              "title": "20 mg artemether + 120 mg",
+              "path": "20 mg artemether + 120 mg",
+              "page": 372
+            },
+            {
+              "source": "who-imai-dcm-2011-v1",
+              "section_id": "s2980",
+              "number": null,
+              "title": "Oral: 80 mg artemether and 480",
+              "path": "20 mg artemether + 120 mg > Oral: 80 mg artemether and 480",
+              "page": 372
+            },
+            {
+              "source": "who-malaria-2026",
+              "section_id": "s38",
+              "number": "5.2.1.4.2",
+              "title": "5.2.1.4.2 Young children and infants",
+              "path": "5. Case management > 5.1 Diagnosing malaria > 5.2.1 Treating uncomplicated malaria > 5.2.1.4 Special risk groups > 5.2.1.4.2 Young children and infants",
+              "page": 188
+            }
+          ]
+        },
+        {
+          "q": "Which antimalarial is recommended for pregnant women in the first trimester?",
+          "pass": true,
+          "citations": [
+            {
+              "source": "who-imai-dcm-2011-v2",
+              "section_id": "s3763",
+              "number": null,
+              "title": "Antimalarial treatment in pregnancy",
+              "path": "25 Guidelines for the treatment of malaria, 2 nd ed. WHO, 2010. Note: The WHO Global Malaria Programme with > 11.25.7 Malaria in pregnancy > Antimalarial treatment in pregnancy",
+              "page": 470
+            },
+            {
+              "source": "who-malaria-2026",
+              "section_id": "s37",
+              "number": "5.2.1.4.1",
+              "title": "5.2.1.4.1 Pregnant and lactating women",
+              "path": "5. Case management > 5.1 Diagnosing malaria > 5.2.1 Treating uncomplicated malaria > 5.2.1.4 Special risk groups > 5.2.1.4.1 Pregnant and lactating women",
+              "page": 182
+            },
+            {
+              "source": "who-imai-dcm-2011-v2",
+              "section_id": "s4785",
+              "number": null,
+              "title": "Recommended ART for patients with TB",
+              "path": "A new or recurrent WHO stage 4 condition b,c > 13.10 HIV/TB co-management > Recommended ART for patients with TB",
+              "page": 577
+            },
+            {
+              "source": "who-imai-dcm-2011-v1",
+              "section_id": "s478",
+              "number": null,
+              "title": "How to give emergency antimalarial treatment if falciparum",
+              "path": "10 litres/min 17 min > 1.6 mg/kg each day > How to give emergency antimalarial treatment if falciparum",
+              "page": 56
+            },
+            {
+              "source": "who-imai-dcm-2011-v2",
+              "section_id": "s4875",
+              "number": null,
+              "title": "\u00b0 An EFV-based regimen is preferred (after the fi rst trimester) for pregnant",
+              "path": "14. PMTCT, HIV prevention, care, and treatment > 14.1 HIV prevention, care, and treatment during pregnancy > 14.1.3 Offer ART or ARV prophylaxis 10 > \u00b0 An EFV-based regimen is preferred (after the fi rst trimester) for pregnant",
+              "page": 601
+            }
+          ]
+        },
+        {
+          "q": "What is the treatment of severe malaria with artesunate?",
+          "pass": true,
+          "citations": [
+            {
+              "source": "who-malaria-2026",
+              "section_id": "s46",
+              "number": "5.2.2.1",
+              "title": "5.2.2.1 Artesunate",
+              "path": "5. Case management > 5.1 Diagnosing malaria > 5.2.2 Treating severe malaria > 5.2.2.1 Artesunate",
+              "page": 216
+            },
+            {
+              "source": "who-malaria-2026",
+              "section_id": "s48",
+              "number": "5.2.2.3",
+              "title": "5.2.2.3 Pre-referral treatment options",
+              "path": "5. Case management > 5.1 Diagnosing malaria > 5.2.2 Treating severe malaria > 5.2.2.3 Pre-referral treatment options",
+              "page": 221
+            },
+            {
+              "source": "who-imai-dcm-2011-v1",
+              "section_id": "s2973",
+              "number": null,
+              "title": "Pregnancy: Both artesunate and quinine may be considered",
+              "path": "14 days; > Pregnancy: Both artesunate and quinine may be considered",
+              "page": 372
+            },
+            {
+              "source": "who-imai-dcm-2011-v2",
+              "section_id": "s3742",
+              "number": null,
+              "title": "Treatment of severe malaria",
+              "path": "25 Guidelines for the treatment of malaria, 2 nd ed. WHO, 2010. Note: The WHO Global Malaria Programme with > 11.25.5 Management of severe malaria > Treatment of severe malaria",
+              "page": 465
+            },
+            {
+              "source": "who-imai-dcm-2011-v1",
+              "section_id": "s2995",
+              "number": null,
+              "title": "Pregnancy/breastfeeding: Both artesunate and quinine",
+              "path": "3 days > Pregnancy/breastfeeding: Both artesunate and quinine",
+              "page": 373
+            }
+          ]
+        },
+        {
+          "q": "What pre-referral treatment is given for severe malaria when referral is delayed?",
+          "pass": true,
+          "citations": [
+            {
+              "source": "who-malaria-2026",
+              "section_id": "s48",
+              "number": "5.2.2.3",
+              "title": "5.2.2.3 Pre-referral treatment options",
+              "path": "5. Case management > 5.1 Diagnosing malaria > 5.2.2 Treating severe malaria > 5.2.2.3 Pre-referral treatment options",
+              "page": 221
+            },
+            {
+              "source": "who-imai-dcm-2011-v2",
+              "section_id": "s3742",
+              "number": null,
+              "title": "Treatment of severe malaria",
+              "path": "25 Guidelines for the treatment of malaria, 2 nd ed. WHO, 2010. Note: The WHO Global Malaria Programme with > 11.25.5 Management of severe malaria > Treatment of severe malaria",
+              "page": 465
+            },
+            {
+              "source": "who-malaria-2026",
+              "section_id": "s46",
+              "number": "5.2.2.1",
+              "title": "5.2.2.1 Artesunate",
+              "path": "5. Case management > 5.1 Diagnosing malaria > 5.2.2 Treating severe malaria > 5.2.2.1 Artesunate",
+              "page": 216
+            },
+            {
+              "source": "who-malaria-2026",
+              "section_id": "s40",
+              "number": "5.2.1.4.4",
+              "title": "5.2.1.4.4 Non-immune travellers",
+              "path": "5. Case management > 5.1 Diagnosing malaria > 5.2.1 Treating uncomplicated malaria > 5.2.1.4 Special risk groups > 5.2.1.4.4 Non-immune travellers",
+              "page": 191
+            },
+            {
+              "source": "who-malaria-2026",
+              "section_id": "s121",
+              "number": "5.2.2.3",
+              "title": "5.2.2.3. Pre-referral treatment options",
+              "path": "5. Case management > 5.1. Diagnosing malaria > 5.2.2. Treating severe malaria > 5.2.2.3. Pre-referral treatment options",
+              "page": 476
+            }
+          ]
+        },
+        {
+          "q": "How should a suspected malaria case be confirmed with a parasitological test?",
+          "pass": true,
+          "citations": [
+            {
+              "source": "who-imai-dcm-2011-v2",
+              "section_id": "s3726",
+              "number": "11.25.2",
+              "title": "11.25.2 Parasitological diagnosis of malaria",
+              "path": "5. Fill out the patient card. > 11.25 Malaria 25,26 > 11.25.2 Parasitological diagnosis of malaria",
+              "page": 458
+            },
+            {
+              "source": "ncdc-lassa-2018",
+              "section_id": "s43",
+              "number": "1.1.5",
+              "title": "1.1.5 Confirmed case",
+              "path": "1.1 Case Definition of Lassa Fever > 1.1.5 Confirmed case",
+              "page": 9
+            },
+            {
+              "source": "who-imai-dcm-2011-v2",
+              "section_id": "s3727",
+              "number": "25",
+              "title": "25 Guidelines for the treatment of malaria, 2 nd ed. WHO, 2010. Note: The WHO Global Malaria Programme with",
+              "path": "25 Guidelines for the treatment of malaria, 2 nd ed. WHO, 2010. Note: The WHO Global Malaria Programme with",
+              "page": 458
+            },
+            {
+              "source": "who-imai-dcm-2011-v2",
+              "section_id": "s3725",
+              "number": "11.25.1",
+              "title": "11.25.1 Suspicion of malaria",
+              "path": "5. Fill out the patient card. > 11.25 Malaria 25,26 > 11.25.1 Suspicion of malaria",
+              "page": 458
+            },
+            {
+              "source": "who-malaria-2026",
+              "section_id": "s29",
+              "number": "5.1",
+              "title": "5.1 Diagnosing malaria",
+              "path": "5. Case management > 5.1 Diagnosing malaria",
+              "page": 166
+            }
+          ]
+        },
+        {
+          "q": "How is uncomplicated hyperparasitaemia managed?",
+          "pass": true,
+          "citations": [
+            {
+              "source": "who-malaria-2026",
+              "section_id": "s41",
+              "number": "5.2.1.4.5",
+              "title": "5.2.1.4.5 Uncomplicated hyperparasitaemia",
+              "path": "5. Case management > 5.1 Diagnosing malaria > 5.2.1 Treating uncomplicated malaria > 5.2.1.4 Special risk groups > 5.2.1.4.5 Uncomplicated hyperparasitaemia",
+              "page": 191
+            },
+            {
+              "source": "who-imai-dcm-2011-v1",
+              "section_id": "s3066",
+              "number": null,
+              "title": "Uncomplicated genital",
+              "path": "1 drop (0.5% or 1% solution) up > Uncomplicated genital",
+              "page": 376
+            },
+            {
+              "source": "who-malaria-2026",
+              "section_id": "s103",
+              "number": "5.2.1",
+              "title": "5.2.1. Treating uncomplicated malaria",
+              "path": "5. Case management > 5.1. Diagnosing malaria > 5.2.1. Treating uncomplicated malaria",
+              "page": 432
+            },
+            {
+              "source": "who-pocketbook-children-2013",
+              "section_id": "s1249",
+              "number": "6.2.2",
+              "title": "6.2.2 Uncomplicated malaria",
+              "path": "6. FEVER > 6.2.2 Uncomplicated malaria",
+              "page": 187
+            },
+            {
+              "source": "who-imai-dcm-2011-v1",
+              "section_id": "s3391",
+              "number": null,
+              "title": "Uncomplicated gonorrhoea",
+              "path": "1 minute > Uncomplicated gonorrhoea",
+              "page": 390
+            }
+          ]
+        },
+        {
+          "q": "Single low dose primaquine to reduce transmission of falciparum malaria",
+          "pass": true,
+          "citations": [
+            {
+              "source": "who-malaria-2026",
+              "section_id": "s35",
+              "number": "5.2.1.3",
+              "title": "5.2.1.3 Reducing the transmissibility of treated P. falciparum infections in areas of low-intensity transmission",
+              "path": "5. Case management > 5.1 Diagnosing malaria > 5.2.1 Treating uncomplicated malaria > 5.2.1.3 Reducing the transmissibility of treated P. falciparum infections in areas of low-intensity transmission",
+              "page": 179
+            },
+            {
+              "source": "who-malaria-2026",
+              "section_id": "s108",
+              "number": "5.2.1.3",
+              "title": "5.2.1.3. Reducing the transmissibility of treated P. falciparum infections in areas of low-intensity transmission",
+              "path": "5. Case management > 5.1. Diagnosing malaria > 5.2.1. Treating uncomplicated malaria > 5.2.1.3. Reducing the transmissibility of treated P. falciparum infections in areas of low-intensity transmission",
+              "page": 454
+            },
+            {
+              "source": "who-malaria-2026",
+              "section_id": "s29",
+              "number": "5.1",
+              "title": "5.1 Diagnosing malaria",
+              "path": "5. Case management > 5.1 Diagnosing malaria",
+              "page": 166
+            },
+            {
+              "source": "who-malaria-2026",
+              "section_id": "s50",
+              "number": "5.2.3.1",
+              "title": "5.2.3.1 Management of malaria cases in special situations",
+              "path": "5. Case management > 5.1 Diagnosing malaria > 5.2.3 Other considerations in treating malaria > 5.2.3.1 Management of malaria cases in special situations",
+              "page": 223
+            },
+            {
+              "source": "who-malaria-2026",
+              "section_id": "s23",
+              "number": "4.2.6.3",
+              "title": "4.2.6.3 MDA to reduce transmission of P. falciparum in very low to low transmission settings",
+              "path": "4. Prevention > 4.2 Preventive chemotherapies > 4.2.6 Mass drug administration (MDA) > 4.2.6.3 MDA to reduce transmission of P. falciparum in very low to low transmission settings",
+              "page": 139
+            }
+          ]
+        },
+        {
+          "q": "Which antibiotic treats mild community-acquired pneumonia?",
+          "pass": true,
+          "citations": [
+            {
+              "source": "who-aware-2022",
+              "section_id": "s18",
+              "number": "12",
+              "title": "12. Community-acquired pneumonia \u2013 mild",
+              "path": "12. Community-acquired pneumonia \u2013 mild",
+              "page": 163
+            },
+            {
+              "source": "who-aware-2022",
+              "section_id": "s34",
+              "number": "27",
+              "title": "27. Community-acquired pneumonia \u2013 severe",
+              "path": "27. Community-acquired pneumonia \u2013 severe",
+              "page": 378
+            },
+            {
+              "source": "who-eml-2025",
+              "section_id": "s74",
+              "number": null,
+              "title": "- Community acquired pneumonia (mild to",
+              "path": "The selection and use of essential > WHO Model List of Essential Medicines 24th list > CORRIGENDA (20 October 2025) > - Community acquired pneumonia (mild to",
+              "page": 18
+            },
+            {
+              "source": "who-eml-2025",
+              "section_id": "s50",
+              "number": null,
+              "title": "- Community-acquired pneumonia (mild to",
+              "path": "The selection and use of essential > WHO Model List of Essential Medicines 24th list > CORRIGENDA (20 October 2025) > - Community-acquired pneumonia (mild to",
+              "page": 16
+            },
+            {
+              "source": "who-aware-2022",
+              "section_id": "s21",
+              "number": "15",
+              "title": "15. Enteric fever",
+              "path": "15. Enteric fever",
+              "page": 201
+            }
+          ]
+        },
+        {
+          "q": "What empiric antibiotics are used for severe community-acquired pneumonia?",
+          "pass": true,
+          "citations": [
+            {
+              "source": "who-aware-2022",
+              "section_id": "s34",
+              "number": "27",
+              "title": "27. Community-acquired pneumonia \u2013 severe",
+              "path": "27. Community-acquired pneumonia \u2013 severe",
+              "page": 378
+            },
+            {
+              "source": "who-aware-2022",
+              "section_id": "s18",
+              "number": "12",
+              "title": "12. Community-acquired pneumonia \u2013 mild",
+              "path": "12. Community-acquired pneumonia \u2013 mild",
+              "page": 163
+            },
+            {
+              "source": "who-aware-2022",
+              "section_id": "s32",
+              "number": "25",
+              "title": "25. Sepsis in neonates (< 28 days) and children (28 days\u201312 years)",
+              "path": "25. Sepsis in neonates (< 28 days) and children (28 days\u201312 years)",
+              "page": 335
+            },
+            {
+              "source": "who-eml-2025",
+              "section_id": "s107",
+              "number": null,
+              "title": "- Community acquired pneumonia",
+              "path": "The selection and use of essential > WHO Model List of Essential Medicines 24th list > CORRIGENDA (20 October 2025) > - Community acquired pneumonia",
+              "page": 21
+            },
+            {
+              "source": "who-eml-2025",
+              "section_id": "s101",
+              "number": null,
+              "title": "- Community acquired pneumonia",
+              "path": "The selection and use of essential > WHO Model List of Essential Medicines 24th list > CORRIGENDA (20 October 2025) > - Community acquired pneumonia",
+              "page": 20
+            }
+          ]
+        },
+        {
+          "q": "What is the antibiotic treatment of enteric fever?",
+          "pass": true,
+          "citations": [
+            {
+              "source": "who-aware-2022",
+              "section_id": "s21",
+              "number": "15",
+              "title": "15. Enteric fever",
+              "path": "15. Enteric fever",
+              "page": 201
+            },
+            {
+              "source": "who-aware-2022",
+              "section_id": "s41",
+              "number": "34",
+              "title": "34. Upper urinary tract infection",
+              "path": "34. Upper urinary tract infection",
+              "page": 490
+            },
+            {
+              "source": "who-imai-dcm-2011-v2",
+              "section_id": "s3087",
+              "number": null,
+              "title": "Treatment",
+              "path": "2. clindamycin 900 mg IV every 8 hours PLUS gentami- > 10.17 Disorders of the mouth and throat > 10.17.9 Pharyngitis > Treatment",
+              "page": 364
+            },
+            {
+              "source": "who-imai-dcm-2011-v2",
+              "section_id": "s4017",
+              "number": null,
+              "title": "Treatment",
+              "path": "T. b. rhodesiense causes 5% of infections and is found in eastern and southern Africa. > 11.43 Typhoid fever > Treatment",
+              "page": 516
+            },
+            {
+              "source": "who-pocketbook-children-2013",
+              "section_id": "s729",
+              "number": null,
+              "title": "\u25a0 When empyema is present, fever persists despite antibiotic therapy, and the",
+              "path": "4. COUGH > 4.3 Complications of pneumonia > 4.3.1 Pleural effusion and empyema > \u25a0 When empyema is present, fever persists despite antibiotic therapy, and the",
+              "page": 112
+            }
+          ]
+        },
+        {
+          "q": "Antibiotic choice for lower urinary tract infection (cystitis)",
+          "pass": true,
+          "citations": [
+            {
+              "source": "who-imai-dcm-2011-v2",
+              "section_id": "s4019",
+              "number": "11.44",
+              "title": "11.44 Urinary tract infection",
+              "path": "T. b. rhodesiense causes 5% of infections and is found in eastern and southern Africa. > 11.44 Urinary tract infection",
+              "page": 516
+            },
+            {
+              "source": "who-aware-2022",
+              "section_id": "s29",
+              "number": "23",
+              "title": "23. Lower urinary tract infection",
+              "path": "23. Lower urinary tract infection",
+              "page": 294
+            },
+            {
+              "source": "who-aware-2022",
+              "section_id": "s41",
+              "number": "34",
+              "title": "34. Upper urinary tract infection",
+              "path": "34. Upper urinary tract infection",
+              "page": 490
+            },
+            {
+              "source": "who-imai-dcm-2011-v2",
+              "section_id": "s4020",
+              "number": null,
+              "title": "Key clinical features",
+              "path": "T. b. rhodesiense causes 5% of infections and is found in eastern and southern Africa. > 11.44 Urinary tract infection > Key clinical features",
+              "page": 516
+            },
+            {
+              "source": "who-imai-dcm-2011-v2",
+              "section_id": "s4026",
+              "number": null,
+              "title": "Complications of upper urinary tract infection (pyelonephritis)",
+              "path": "T. b. rhodesiense causes 5% of infections and is found in eastern and southern Africa. > 11.44 Urinary tract infection > Complications of upper urinary tract infection (pyelonephritis)",
+              "page": 517
+            }
+          ]
+        },
+        {
+          "q": "How is acute pyelonephritis treated?",
+          "pass": true,
+          "citations": [
+            {
+              "source": "who-imai-dcm-2011-v2",
+              "section_id": "s1262",
+              "number": null,
+              "title": "Acute pyelonephritis",
+              "path": "A small elevated skin lesion containing pus > 10.7 Abdominal complaints > Acute pyelonephritis",
+              "page": 145
+            },
+            {
+              "source": "who-imai-dcm-2011-v1",
+              "section_id": "s3386",
+              "number": null,
+              "title": "Severe infections: acute",
+              "path": "1 minute > Severe infections: acute",
+              "page": 390
+            },
+            {
+              "source": "who-eml-2025",
+              "section_id": "s105",
+              "number": null,
+              "title": "- Pyelonephritis or prostatitis (mild to",
+              "path": "The selection and use of essential > WHO Model List of Essential Medicines 24th list > CORRIGENDA (20 October 2025) > - Pyelonephritis or prostatitis (mild to",
+              "page": 20
+            },
+            {
+              "source": "who-eml-2025",
+              "section_id": "s112",
+              "number": null,
+              "title": "- Pyelonephritis or prostatitis (mild to",
+              "path": "The selection and use of essential > WHO Model List of Essential Medicines 24th list > CORRIGENDA (20 October 2025) > - Pyelonephritis or prostatitis (mild to",
+              "page": 21
+            },
+            {
+              "source": "who-eml-2025",
+              "section_id": "s110",
+              "number": null,
+              "title": "- Pyelonephritis or prostatitis (severe)",
+              "path": "The selection and use of essential > WHO Model List of Essential Medicines 24th list > CORRIGENDA (20 October 2025) > - Pyelonephritis or prostatitis (severe)",
+              "page": 21
+            }
+          ]
+        },
+        {
+          "q": "Empiric antibiotics for sepsis in adults including septic shock",
+          "pass": true,
+          "citations": [
+            {
+              "source": "who-aware-2022",
+              "section_id": "s31",
+              "number": "24",
+              "title": "24. Sepsis in adults (including septic shock)",
+              "path": "24. Sepsis in adults (including septic shock)",
+              "page": 311
+            },
+            {
+              "source": "ssc-2021",
+              "section_id": "s32",
+              "number": null,
+              "title": "Recommendations 22. For adults with sepsis or septic shock at high risk of funga",
+              "path": "Infection > Antifungal therapy > Recommendations 22. For adults with sepsis or septic shock at high risk of funga",
+              "page": 1
+            },
+            {
+              "source": "ssc-2021",
+              "section_id": "s1",
+              "number": null,
+              "title": "Introduction",
+              "path": "Introduction",
+              "page": 1
+            },
+            {
+              "source": "ssc-2021",
+              "section_id": "s28",
+              "number": null,
+              "title": "Recommendations 17. For adults with sepsis or septic shock at high risk of methi",
+              "path": "Infection > Antimicrobial choice > Recommendations 17. For adults with sepsis or septic shock at high risk of methi",
+              "page": 1
+            },
+            {
+              "source": "who-aware-2022",
+              "section_id": "s32",
+              "number": "25",
+              "title": "25. Sepsis in neonates (< 28 days) and children (28 days\u201312 years)",
+              "path": "25. Sepsis in neonates (< 28 days) and children (28 days\u201312 years)",
+              "page": 335
+            }
+          ]
+        },
+        {
+          "q": "Antibiotics for sepsis in neonates and children",
+          "pass": true,
+          "citations": [
+            {
+              "source": "who-aware-2022",
+              "section_id": "s32",
+              "number": "25",
+              "title": "25. Sepsis in neonates (< 28 days) and children (28 days\u201312 years)",
+              "path": "25. Sepsis in neonates (< 28 days) and children (28 days\u201312 years)",
+              "page": 335
+            },
+            {
+              "source": "who-aware-2022",
+              "section_id": "s31",
+              "number": "24",
+              "title": "24. Sepsis in adults (including septic shock)",
+              "path": "24. Sepsis in adults (including septic shock)",
+              "page": 311
+            },
+            {
+              "source": "who-eml-2025",
+              "section_id": "s56",
+              "number": null,
+              "title": "- Sepsis in neonates and children [c]",
+              "path": "The selection and use of essential > WHO Model List of Essential Medicines 24th list > CORRIGENDA (20 October 2025) > - Sepsis in neonates and children [c]",
+              "page": 17
+            },
+            {
+              "source": "who-eml-2025",
+              "section_id": "s80",
+              "number": null,
+              "title": "- Sepsis in neonates and children [c]",
+              "path": "The selection and use of essential > WHO Model List of Essential Medicines 24th list > CORRIGENDA (20 October 2025) > - Sepsis in neonates and children [c]",
+              "page": 18
+            },
+            {
+              "source": "who-imai-dcm-2011-v2",
+              "section_id": "s339",
+              "number": null,
+              "title": "Bacteraemic sepsis",
+              "path": "10. Acute and subacute by symptom > 10.1 Fever > 10.1.2 Consider likely differential diagnosis using the DDx tables > Bacteraemic sepsis",
+              "page": 39
+            }
+          ]
+        },
+        {
+          "q": "How are the stages of acute kidney injury defined by creatinine and urine output?",
+          "pass": true,
+          "citations": [
+            {
+              "source": "kdigo-aki-2012",
+              "section_id": "s87",
+              "number": null,
+              "title": "Definition and staging of AKI",
+              "path": "Chapter 2.1: Definition and classification of AKI > Definition and staging of AKI",
+              "page": 22
+            },
+            {
+              "source": "kdigo-aki-2012",
+              "section_id": "s121",
+              "number": null,
+              "title": "ESRD 43 months",
+              "path": "K Urine volume o0.5ml/kg/h for 6 hours. > ESRD 43 months",
+              "page": 24
+            },
+            {
+              "source": "kdigo-aki-2012",
+              "section_id": "s99",
+              "number": null,
+              "title": "Damage",
+              "path": "K Urine volume o0.5ml/kg/h for 6 hours. > Damage",
+              "page": 23
+            },
+            {
+              "source": "kdigo-aki-2012",
+              "section_id": "s91",
+              "number": null,
+              "title": "AKD. 42,45 Circles on the horizontal axis depict stages in the",
+              "path": "K Urine volume o0.5ml/kg/h for 6 hours. > AKD. 42,45 Circles on the horizontal axis depict stages in the",
+              "page": 22
+            },
+            {
+              "source": "kdigo-aki-2012",
+              "section_id": "s57",
+              "number": null,
+              "title": "RIFLE criteria",
+              "path": "Chapter 1.1: Introduction > RIFLE criteria",
+              "page": 17
+            }
+          ]
+        },
+        {
+          "q": "How are the NEWS2 parameters scored?",
+          "pass": true,
+          "citations": [
+            {
+              "source": "rcp-news2-2017",
+              "section_id": "s1",
+              "number": null,
+              "title": "Contents",
+              "path": "Contents",
+              "page": 4
+            },
+            {
+              "source": "rcp-news2-2017",
+              "section_id": "s13",
+              "number": "4",
+              "title": "4 Update on the physiological parameters incorporated into the NEWS",
+              "path": "4 Update on the physiological parameters incorporated into the NEWS",
+              "page": 38
+            },
+            {
+              "source": "who-imai-dcm-2011-v1",
+              "section_id": "s3217",
+              "number": null,
+              "title": "Tablet (scored): 100 mg, 200 mg",
+              "path": "5 minutes titrated and adjusted > Tablet (scored): 100 mg, 200 mg",
+              "page": 382
+            },
+            {
+              "source": "ng-eml-2020",
+              "section_id": "s76",
+              "number": null,
+              "title": "Fixed dose combination tablet (scored): 300 mg + 25 mg +",
+              "path": "3. ANTICONVULSANTS/ANTI-EPILEPTICS > 5.10 Antituberculosis medicines > 5.11.1 Antiherpes medicines > Fixed dose combination tablet (scored): 300 mg + 25 mg +",
+              "page": 19
+            },
+            {
+              "source": "kdigo-aki-2012",
+              "section_id": "s491",
+              "number": "K",
+              "title": "K Determine clinical parameters (e.g., parameters of kidney",
+              "path": "K Determine clinical parameters (e.g., parameters of kidney",
+              "page": 97
+            }
+          ]
+        },
+        {
+          "q": "At what blood pressure should antihypertensive drug treatment start?",
+          "pass": true,
+          "citations": [
+            {
+              "source": "who-htn-2021",
+              "section_id": "s3",
+              "number": null,
+              "title": "Executive summary",
+              "path": "Executive summary",
+              "page": 9
+            },
+            {
+              "source": "who-hearts-protocols-2018",
+              "section_id": "s53",
+              "number": null,
+              "title": "Treatment adherence",
+              "path": "1 Hypertension detection and > Treatment adherence",
+              "page": 14
+            },
+            {
+              "source": "who-htn-2021",
+              "section_id": "s15",
+              "number": "3.1",
+              "title": "3.1 Blood pressure threshold for initiation of pharmacological treatment",
+              "path": "Fig. 1 Analytic framework for antihypertensive medication treatment > 3 Recommendations > 3.1 Blood pressure threshold for initiation of pharmacological treatment",
+              "page": 19
+            },
+            {
+              "source": "who-pe-2011",
+              "section_id": "s53",
+              "number": null,
+              "title": "Recommendations",
+              "path": "4. Evidence and > Recommendations",
+              "page": 35
+            },
+            {
+              "source": "who-htn-2021",
+              "section_id": "s4",
+              "number": "1",
+              "title": "1 Introduction",
+              "path": "Executive summary > 1 Introduction",
+              "page": 13
+            }
+          ]
+        },
+        {
+          "q": "What first-line antiretroviral regimen should be started in adults?",
+          "pass": true,
+          "citations": [
+            {
+              "source": "who-imai-dcm-2011-v2",
+              "section_id": "s4574",
+              "number": null,
+              "title": "Table: Defi nitions of treatment failure for patients on fi rst-line antiretroviral regimen",
+              "path": "B IRIS) and must be > 13.7 Second-line ART > Table: Defi nitions of treatment failure for patients on fi rst-line antiretroviral regimen",
+              "page": 560
+            },
+            {
+              "source": "who-pocketbook-children-2013",
+              "section_id": "s1690",
+              "number": null,
+              "title": "Table 25. First-line treatment regimens for children",
+              "path": "8. HIV/AIDS > Table 25. First-line treatment regimens for children",
+              "page": 258
+            },
+            {
+              "source": "who-hiv-2021",
+              "section_id": "s119",
+              "number": "4.6",
+              "title": "4.6 What to start",
+              "path": "4.6 What to start",
+              "page": 166
+            },
+            {
+              "source": "who-imai-dcm-2011-v2",
+              "section_id": "s5129",
+              "number": null,
+              "title": "First-line anti-tuberculosis drugs",
+              "path": "2 nd visit > 15.3 Treatment of TB > First-line anti-tuberculosis drugs",
+              "page": 641
+            },
+            {
+              "source": "who-hearts-protocols-2018",
+              "section_id": "s221",
+              "number": null,
+              "title": "Adapted example: CCB as first-line treatment",
+              "path": "1 Hypertension detection and > Adapted example: CCB as first-line treatment",
+              "page": 31
+            }
+          ]
+        },
+        {
+          "q": "How is the response to antiretroviral therapy monitored with viral load?",
+          "pass": true,
+          "citations": [
+            {
+              "source": "who-imai-dcm-2011-v2",
+              "section_id": "s4277",
+              "number": null,
+              "title": "Monitoring response to ART",
+              "path": "2 nd and 3 rd trimester. > 13.5 ART monitoring > Monitoring response to ART",
+              "page": 550
+            },
+            {
+              "source": "who-imai-dcm-2011-v2",
+              "section_id": "s4289",
+              "number": null,
+              "title": "Viral load",
+              "path": "2 nd and 3 rd trimester. > 13.5 ART monitoring > Viral load",
+              "page": 551
+            },
+            {
+              "source": "who-imai-dcm-2011-v2",
+              "section_id": "s886",
+              "number": null,
+              "title": "Viral load undetectable",
+              "path": "A small elevated skin lesion containing pus > 10.3 Weight loss and malnutrition > 10.3.2 Consider the likely cause of loss of weight > Viral load undetectable",
+              "page": 95
+            },
+            {
+              "source": "who-pocketbook-children-2013",
+              "section_id": "s1682",
+              "number": "8.2.1",
+              "title": "8.2.1 Antiretroviral drugs",
+              "path": "8. HIV/AIDS > 8.2.1 Antiretroviral drugs",
+              "page": 257
+            },
+            {
+              "source": "who-hiv-2021",
+              "section_id": "s120",
+              "number": "4.7",
+              "title": "4.7 Monitoring the response to ART",
+              "path": "4.7 Monitoring the response to ART",
+              "page": 190
+            }
+          ]
+        },
+        {
+          "q": "Hydroxyurea therapy for sickle cell disease",
+          "pass": true,
+          "citations": [
+            {
+              "source": "ng-scd-2014",
+              "section_id": "s189",
+              "number": "4.1",
+              "title": "4.1 Hydroxyurea Therapy for Sickle Cell Disease",
+              "path": "C. Aplastic Crisis > 4.1 Hydroxyurea Therapy for Sickle Cell Disease",
+              "page": 41
+            },
+            {
+              "source": "ng-scd-2014",
+              "section_id": "s25",
+              "number": "X",
+              "title": "X | National Guideline for the Control and Management of Sickle Cell Disease",
+              "path": "X | National Guideline for the Control and Management of Sickle Cell Disease",
+              "page": 10
+            },
+            {
+              "source": "ng-scd-2014",
+              "section_id": "s197",
+              "number": "4.1.3",
+              "title": "4.1.3 How Hydroxyurea Works in Sickle Cell Disease",
+              "path": "C. Aplastic Crisis > 4.1 Hydroxyurea Therapy for Sickle Cell Disease > 4.1.3 How Hydroxyurea Works in Sickle Cell Disease",
+              "page": 42
+            },
+            {
+              "source": "ng-scd-2014",
+              "section_id": "s26",
+              "number": null,
+              "title": "XI | National Guideline for the Control and Management of Sickle Cell Disease",
+              "path": "X | National Guideline for the Control and Management of Sickle Cell Disease > XI | National Guideline for the Control and Management of Sickle Cell Disease",
+              "page": 11
+            },
+            {
+              "source": "ng-scd-2014",
+              "section_id": "s199",
+              "number": "4.2",
+              "title": "4.2 Prophylaxis and Antimicrobial Therapy",
+              "path": "C. Aplastic Crisis > 4.2 Prophylaxis and Antimicrobial Therapy",
+              "page": 42
+            }
+          ]
+        },
+        {
+          "q": "What is the case definition of a suspected Lassa fever case?",
+          "pass": true,
+          "citations": [
+            {
+              "source": "ncdc-lassa-2018",
+              "section_id": "s40",
+              "number": "1.1.2",
+              "title": "1.1.2 Suspected case",
+              "path": "1.1 Case Definition of Lassa Fever > 1.1.2 Suspected case",
+              "page": 8
+            },
+            {
+              "source": "ncdc-lassa-2018",
+              "section_id": "s104",
+              "number": "3.5",
+              "title": "3.5 Management of Suspected cases awaiting lab",
+              "path": "3.5 Management of Suspected cases awaiting lab",
+              "page": 20
+            },
+            {
+              "source": "ncdc-lassa-2018",
+              "section_id": "s281",
+              "number": null,
+              "title": "\u2022 The index case must be tested for Lassa fever, with cessation of ribavirin if",
+              "path": "5. NOTE: Consider additional fluid boluses if required and no contraindication. > 6.1 Who is a contact? > \u2022 The index case must be tested for Lassa fever, with cessation of ribavirin if",
+              "page": 45
+            },
+            {
+              "source": "ncdc-lassa-2018",
+              "section_id": "s100",
+              "number": "3.4",
+              "title": "3.4 Management of Lassa fever in Children",
+              "path": "3.4 Management of Lassa fever in Children",
+              "page": 19
+            },
+            {
+              "source": "ncdc-lassa-2018",
+              "section_id": "s75",
+              "number": "3.3",
+              "title": "3.3 Management of Lassa fever in Pregnant Women",
+              "path": "3.3 Management of Lassa fever in Pregnant Women",
+              "page": 15
+            }
+          ]
+        },
+        {
+          "q": "Which drug regimen treats drug-susceptible pulmonary tuberculosis?",
+          "pass": true,
+          "citations": [
+            {
+              "source": "who-tb-m4-2026",
+              "section_id": "s27",
+              "number": null,
+              "title": "Recommendation A1.1",
+              "path": "Recommendations > A1. Treatment of drug-susceptible TB using a 6-month regimen > Recommendation A1.1",
+              "page": 35
+            },
+            {
+              "source": "who-tb-m4-2026",
+              "section_id": "s47",
+              "number": null,
+              "title": "4-month regimen of isoniazid, rifapentine, moxifloxacin and pyrazinamide for drug-susceptible pulmonary TB",
+              "path": "Recommendations > A6. Monitoring and evaluation > 4-month regimen of isoniazid, rifapentine, moxifloxacin and pyrazinamide for drug-susceptible pulmonary TB",
+              "page": 61
+            },
+            {
+              "source": "who-tb-handbook-m4-2025",
+              "section_id": "s13",
+              "number": "8",
+              "title": "8. Treatment of DS-TB in special situations",
+              "path": "Chapter 1 Drug-susceptible TB treatment > 8. Treatment of DS-TB in special situations",
+              "page": 51
+            },
+            {
+              "source": "who-tb-m4-2026",
+              "section_id": "s24",
+              "number": null,
+              "title": "Summary of WHO recommendations on drug-susceptible TB treatment",
+              "path": "Introduction > Summary of WHO recommendations on drug-susceptible TB treatment",
+              "page": 32
+            },
+            {
+              "source": "who-tb-m3-2025",
+              "section_id": "s18",
+              "number": "2.1.1",
+              "title": "2.1.1 LC-aNAATs for detection of TB and resistance to rifampicin",
+              "path": "2. Recommendations for diagnosis of TB disease > 2.1. Initial diagnostic tests for diagnosis of TB with drug-resistance detection > 2.1.1 LC-aNAATs for detection of TB and resistance to rifampicin",
+              "page": 25
+            }
+          ]
+        },
+        {
+          "q": "Rapid molecular test for detection of TB and rifampicin resistance",
+          "pass": false,
+          "citations": [
+            {
+              "source": "who-tb-m3-2025",
+              "section_id": "s11",
+              "number": "1.3.1",
+              "title": "1.3.1 Initial tests for TB diagnosis with drug resistance detection",
+              "path": "1. Introduction > 1.3. Testing classes and products > 1.3.1 Initial tests for TB diagnosis with drug resistance detection",
+              "page": 20
+            },
+            {
+              "source": "who-tb-m3-2025",
+              "section_id": "s4",
+              "number": null,
+              "title": "Executive summary",
+              "path": "Executive summary",
+              "page": 12
+            },
+            {
+              "source": "who-imai-dcm-2011-v2",
+              "section_id": "s5051",
+              "number": null,
+              "title": "Case of MDR-TB",
+              "path": "1 Treatment of tuberculosis: guidelines. 4 th edition. WHO, 2010. Available at http://whqlibdoc.who.int/ > 15.2 Diagnose TB > Case of MDR-TB",
+              "page": 631
+            },
+            {
+              "source": "who-tb-m3-2025",
+              "section_id": "s13",
+              "number": "1.3.4",
+              "title": "1.3.4 Tests for TB infection",
+              "path": "1. Introduction > 1.3. Testing classes and products > 1.3.4 Tests for TB infection",
+              "page": 22
+            },
+            {
+              "source": "who-tb-m3-2025",
+              "section_id": "s10",
+              "number": "1.3",
+              "title": "1.3. Testing classes and products",
+              "path": "1. Introduction > 1.3. Testing classes and products",
+              "page": 19
+            }
+          ]
+        },
+        {
+          "q": "How is magnesium sulfate given for severe pre-eclampsia?",
+          "pass": true,
+          "citations": [
+            {
+              "source": "who-imai-dcm-2011-v1",
+              "section_id": "s257",
+              "number": null,
+              "title": "\u0084 Trauma to head/",
+              "path": "30 kg (see p. 28). > 3.1.2 and 10.7. > \u0084 Trauma to head/",
+              "page": 36
+            },
+            {
+              "source": "who-imai-dcm-2011-v1",
+              "section_id": "s617",
+              "number": null,
+              "title": "How to give magnesium sulfate",
+              "path": "3 litres of IV > How to give magnesium sulfate",
+              "page": 70
+            },
+            {
+              "source": "who-pe-2011",
+              "section_id": "s17",
+              "number": "1",
+              "title": "1. Background",
+              "path": "1. Background",
+              "page": 12
+            },
+            {
+              "source": "who-pe-2011",
+              "section_id": "s45",
+              "number": null,
+              "title": "Recommendations",
+              "path": "4. Evidence and > Recommendations",
+              "page": 31
+            },
+            {
+              "source": "who-pe-2011",
+              "section_id": "s60",
+              "number": null,
+              "title": "Monitoring and evaluating the",
+              "path": "7. Applicability issues > Monitoring and evaluating the",
+              "page": 38
+            }
+          ]
+        },
+        {
+          "q": "Haemoglobin cutoffs that define anaemia and its severity",
+          "pass": true,
+          "citations": [
+            {
+              "source": "who-hb-2024",
+              "section_id": "s39",
+              "number": "1",
+              "title": "1. Haemoglobin cutoffs to define anaemia",
+              "path": "1. Haemoglobin cutoffs to define anaemia",
+              "page": 12
+            },
+            {
+              "source": "who-hb-2024",
+              "section_id": "s40",
+              "number": null,
+              "title": "What should be the haemoglobin cutoffs to define anaemia in individuals and in populations?",
+              "path": "1. Haemoglobin cutoffs to define anaemia > What should be the haemoglobin cutoffs to define anaemia in individuals and in populations?",
+              "page": 12
+            },
+            {
+              "source": "who-hb-2024",
+              "section_id": "s44",
+              "number": null,
+              "title": "Table 2. Haemoglobin cutoffs to define anaemia in individuals and populations",
+              "path": "1. Haemoglobin cutoffs to define anaemia > Table 2. Haemoglobin cutoffs to define anaemia in individuals and populations",
+              "page": 12
+            },
+            {
+              "source": "who-hb-2024",
+              "section_id": "s43",
+              "number": null,
+              "title": "Normative statement 1.a Haemoglobin cutoffs to define any anaemia",
+              "path": "1. Haemoglobin cutoffs to define anaemia > Normative statement 1.a Haemoglobin cutoffs to define any anaemia",
+              "page": 12
+            },
+            {
+              "source": "who-hb-2024",
+              "section_id": "s47",
+              "number": null,
+              "title": "Normative statement 1.b Anaemia severity",
+              "path": "1. Haemoglobin cutoffs to define anaemia > Normative statement 1.b Anaemia severity",
+              "page": 13
+            }
+          ]
+        },
+        {
+          "q": "How do I score the PHQ-9 and grade depression severity?",
+          "pass": true,
+          "citations": [
+            {
+              "source": "who-mhgap-ig-2016",
+              "section_id": "s156",
+              "number": null,
+              "title": "Does the person have depression?",
+              "path": "DEPRESSION > DEP Quick Overview > Does the person have depression?",
+              "page": 29
+            },
+            {
+              "source": "phq-manual",
+              "section_id": "s15",
+              "number": null,
+              "title": "PHQ-9 Depression Severity. This is calculated by assigning scores of 0, 1, 2, and 3, to the",
+              "path": "INSTRUCTION MANUAL Instructions for Patient Health Questionnaire (PHQ) and GAD-7 Measures > Purposes > PHQ-9 Depression Severity. This is calculated by assigning scores of 0, 1, 2, and 3, to the",
+              "page": 6
+            },
+            {
+              "source": "who-mhgap-ig-2016",
+              "section_id": "s160",
+              "number": null,
+              "title": "Depression is unlikely",
+              "path": "DEPRESSION > DEP 1 Assessment > Depression is unlikely",
+              "page": 29
+            },
+            {
+              "source": "phq-manual",
+              "section_id": "s14",
+              "number": null,
+              "title": "PHQ-9 Depression Severity. This is calculated by assigning scores of 0, 1, 2, and 3, to the",
+              "path": "INSTRUCTION MANUAL Instructions for Patient Health Questionnaire (PHQ) and GAD-7 Measures > Purposes > PHQ-9 Depression Severity. This is calculated by assigning scores of 0, 1, 2, and 3, to the",
+              "page": 5
+            },
+            {
+              "source": "who-mhgap-ig-2016",
+              "section_id": "s195",
+              "number": null,
+              "title": "Depression",
+              "path": "DEPRESSION > DEP 1 Assessment > DEP 2 > Depression",
+              "page": 34
+            }
+          ]
+        },
+        {
+          "q": "What is the starting dose of fluoxetine for depression?",
+          "pass": true,
+          "citations": [
+            {
+              "source": "who-mhgap-ig-2016",
+              "section_id": "s230",
+              "number": null,
+              "title": "FLUOXETINE",
+              "path": "DEPRESSION > 2.5 Consider antidepressants > FLUOXETINE",
+              "page": 37
+            },
+            {
+              "source": "who-mhgap-ig-2016",
+              "section_id": "s224",
+              "number": null,
+              "title": "WOMEN WHO ARE PREGNANT OR BREASTFEEDING",
+              "path": "DEPRESSION > 2.5 Consider antidepressants > WOMEN WHO ARE PREGNANT OR BREASTFEEDING",
+              "page": 36
+            },
+            {
+              "source": "who-mhgap-ig-2016",
+              "section_id": "s223",
+              "number": null,
+              "title": "ADOLESCENTS 12 YEARS OF AGE OR OLDER",
+              "path": "DEPRESSION > 2.5 Consider antidepressants > ADOLESCENTS 12 YEARS OF AGE OR OLDER",
+              "page": 36
+            },
+            {
+              "source": "who-imai-dcm-2011-v2",
+              "section_id": "s2161",
+              "number": null,
+              "title": "Fluoxetine for chronic anxiety disorders - same dosing as for depression (see Section 10.11.6 for cautions and",
+              "path": "4. Assess coping resources and activate psychosocial support > 10.11.7 Anxiety > Fluoxetine for chronic anxiety disorders - same dosing as for depression (see Section 10.11.6 for cautions and",
+              "page": 263
+            },
+            {
+              "source": "who-imai-dcm-2011-v2",
+              "section_id": "s2142",
+              "number": null,
+              "title": "Fluoxetine for depression",
+              "path": "4. Assess coping resources and activate psychosocial support > 10.11.6 Sad or low mood including depression 2 > Fluoxetine for depression",
+              "page": 259
+            }
+          ]
+        },
+        {
+          "q": "Management of an acute asthma exacerbation in primary care",
+          "pass": true,
+          "citations": [
+            {
+              "source": "who-pen-2020",
+              "section_id": "s487",
+              "number": null,
+              "title": "MANAGEMENT OF EXACERBATION OF ASTHMA",
+              "path": "2 years thereafter, or as per ophthalmologist recommendation > 2.3 CHRONIC RESPIRATORY DISEASES > MANAGEMENT OF EXACERBATION OF ASTHMA",
+              "page": 42
+            },
+            {
+              "source": "who-pen-2020",
+              "section_id": "s499",
+              "number": null,
+              "title": "FACTORS THAT MAY TRIGGER OR WORSEN ASTHMA",
+              "path": "2 years thereafter, or as per ophthalmologist recommendation > 2.3 CHRONIC RESPIRATORY DISEASES > FACTORS THAT MAY TRIGGER OR WORSEN ASTHMA",
+              "page": 42
+            },
+            {
+              "source": "who-imai-dcm-2011-v2",
+              "section_id": "s1180",
+              "number": null,
+              "title": "Between 60-80% <60%",
+              "path": "A small elevated skin lesion containing pus > 10.6 Chest symptoms: cough and shortness of breath > 10.6.4 Asthma > Between 60-80% <60%",
+              "page": 133
+            },
+            {
+              "source": "who-pen-2020",
+              "section_id": "s509",
+              "number": null,
+              "title": "Knows what to do if the asthma gets worse",
+              "path": "2 years thereafter, or as per ophthalmologist recommendation > 2.3 CHRONIC RESPIRATORY DISEASES > Knows what to do if the asthma gets worse",
+              "page": 43
+            },
+            {
+              "source": "who-pen-2020",
+              "section_id": "s87",
+              "number": null,
+              "title": "Management of asthma",
+              "path": "2. COMPONENTS OF WHO PEN > Management of asthma",
+              "page": 13
+            }
+          ]
+        },
+        {
+          "q": "Managing complications and delaying progression of chronic kidney disease",
+          "pass": true,
+          "citations": [
+            {
+              "source": "kdigo-ckd-2024",
+              "section_id": "s3",
+              "number": null,
+              "title": "Clarifying definition and classification",
+              "path": "Executive summary of the KDIGO 2024 Clinical Practice Guideline for the Evaluation and Management of Chronic Kidney Disease ... > Qualifying statements, key concepts, special considerations, Chronic Kidney Disease Prognosis Consortium (CKD-PC) > Clarifying definition and classification",
+              "page": 2
+            },
+            {
+              "source": "kdigo-ckd-2024-full",
+              "section_id": "s219",
+              "number": null,
+              "title": "3: Delaying CKD progression and managing its complications",
+              "path": "mk8 > 1: Evaluation of CKD > 3: Delaying CKD progression and managing its complications",
+              "page": 90
+            },
+            {
+              "source": "kdigo-aki-2012",
+              "section_id": "s87",
+              "number": null,
+              "title": "Definition and staging of AKI",
+              "path": "Chapter 2.1: Definition and classification of AKI > Definition and staging of AKI",
+              "page": 22
+            },
+            {
+              "source": "kdigo-ckd-2024-full",
+              "section_id": "s67",
+              "number": null,
+              "title": "3: Delaying CKD progression and managing its complications",
+              "path": "mk8 > 3: Delaying CKD progression and managing its complications",
+              "page": 41
+            },
+            {
+              "source": "who-malaria-2026",
+              "section_id": "s31",
+              "number": "5.2.1.1",
+              "title": "5.2.1.1 Artemisinin-based combination therapy",
+              "path": "5. Case management > 5.1 Diagnosing malaria > 5.2.1 Treating uncomplicated malaria > 5.2.1.1 Artemisinin-based combination therapy",
+              "page": 170
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

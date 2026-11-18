@@ -1,0 +1,33 @@
+{
+  "$id": "https://atra.local/schemas/tools/ahdt.data.timeseries.response.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "t": {
+      "items": {
+        "format": "date-time",
+        "type": "string"
+      },
+      "title": "T",
+      "type": "array"
+    },
+    "unit": {
+      "title": "Unit",
+      "type": "string"
+    },
+    "v": {
+      "items": {
+        "type": "number"
+      },
+      "title": "V",
+      "type": "array"
+    }
+  },
+  "required": [
+    "t",
+    "v",
+    "unit"
+  ],
+  "title": "TimeseriesData",
+  "type": "object"
+}

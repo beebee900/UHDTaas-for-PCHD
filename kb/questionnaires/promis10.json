@@ -1,0 +1,796 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "promis10",
+  "url": "https://atra.health/fhir/Questionnaire/promis10",
+  "version": "1.0.0",
+  "status": "active",
+  "title": "PROMIS Scale v1.2, Global Health (PROMIS-10)",
+  "item": [
+    {
+      "linkId": "items",
+      "text": "Please respond to each question or statement by marking one box per row.",
+      "type": "group",
+      "item": [
+        {
+          "linkId": "Global01",
+          "text": "In general, would you say your health is:",
+          "type": "choice",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "5",
+                "display": "Excellent"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 5
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "4",
+                "display": "Very good"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 4
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "3",
+                "display": "Good"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 3
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "2",
+                "display": "Fair"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 2
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "Poor"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "linkId": "Global02",
+          "text": "In general, would you say your quality of life is:",
+          "type": "choice",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "5",
+                "display": "Excellent"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 5
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "4",
+                "display": "Very good"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 4
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "3",
+                "display": "Good"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 3
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "2",
+                "display": "Fair"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 2
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "Poor"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "linkId": "Global03",
+          "text": "In general, how would you rate your physical health?",
+          "type": "choice",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "5",
+                "display": "Excellent"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 5
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "4",
+                "display": "Very good"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 4
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "3",
+                "display": "Good"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 3
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "2",
+                "display": "Fair"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 2
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "Poor"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "linkId": "Global04",
+          "text": "In general, how would you rate your mental health, including your mood and your ability to think?",
+          "type": "choice",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "5",
+                "display": "Excellent"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 5
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "4",
+                "display": "Very good"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 4
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "3",
+                "display": "Good"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 3
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "2",
+                "display": "Fair"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 2
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "Poor"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "linkId": "Global05",
+          "text": "In general, how would you rate your satisfaction with your social activities and relationships?",
+          "type": "choice",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "5",
+                "display": "Excellent"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 5
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "4",
+                "display": "Very good"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 4
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "3",
+                "display": "Good"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 3
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "2",
+                "display": "Fair"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 2
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "Poor"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "linkId": "Global09r",
+          "text": "In general, please rate how well you carry out your usual social activities and roles. (This includes activities at home, at work and in your community, and responsibilities as a parent, child, spouse, employee, friend, etc.)",
+          "type": "choice",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "5",
+                "display": "Excellent"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 5
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "4",
+                "display": "Very good"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 4
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "3",
+                "display": "Good"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 3
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "2",
+                "display": "Fair"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 2
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "Poor"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "linkId": "Global06",
+          "text": "To what extent are you able to carry out your everyday physical activities such as walking, climbing stairs, carrying groceries, or moving a chair?",
+          "type": "choice",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "5",
+                "display": "Completely"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 5
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "4",
+                "display": "Mostly"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 4
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "3",
+                "display": "Moderately"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 3
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "2",
+                "display": "A little"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 2
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "Not at all"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "linkId": "Global10r",
+          "text": "How often have you been bothered by emotional problems such as feeling anxious, depressed or irritable?",
+          "type": "choice",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "5",
+                "display": "Never"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 5
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "4",
+                "display": "Rarely"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 4
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "3",
+                "display": "Sometimes"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 3
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "2",
+                "display": "Often"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 2
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "Always"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 1
+                }
+              ]
+            }
+          ],
+          "prefix": "In the past 7 days..."
+        },
+        {
+          "linkId": "Global08r",
+          "text": "How would you rate your fatigue on average?",
+          "type": "choice",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "5",
+                "display": "None"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 5
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "4",
+                "display": "Mild"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 4
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "3",
+                "display": "Moderate"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 3
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "2",
+                "display": "Severe"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 2
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "Very severe"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 1
+                }
+              ]
+            }
+          ],
+          "prefix": "In the past 7 days..."
+        },
+        {
+          "linkId": "Global07r",
+          "text": "How would you rate your pain on average?",
+          "type": "choice",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "0",
+                "display": "0 No pain"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 5
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "1"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 4
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "2",
+                "display": "2"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 4
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "3",
+                "display": "3"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 4
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "4",
+                "display": "4"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 3
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "5",
+                "display": "5"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 3
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "6",
+                "display": "6"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 3
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "7",
+                "display": "7"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 2
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "8",
+                "display": "8"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 2
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "9",
+                "display": "9"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 2
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "10",
+                "display": "10 Worst pain imaginable"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 1
+                }
+              ]
+            }
+          ],
+          "prefix": "In the past 7 days..."
+        }
+      ]
+    },
+    {
+      "linkId": "global_physical",
+      "text": "Global Physical Health T-score",
+      "type": "decimal",
+      "readOnly": true,
+      "code": [
+        {
+          "system": "http://loinc.org",
+          "code": "71971-6"
+        }
+      ]
+    },
+    {
+      "linkId": "global_mental",
+      "text": "Global Mental Health T-score",
+      "type": "decimal",
+      "readOnly": true,
+      "code": [
+        {
+          "system": "http://loinc.org",
+          "code": "71969-0"
+        }
+      ]
+    }
+  ]
+}

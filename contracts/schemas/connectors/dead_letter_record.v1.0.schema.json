@@ -1,0 +1,74 @@
+{
+  "$id": "https://atra.local/schemas/connectors/dead_letter_record.v1.0.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "A refused message as published to `<topic>.dlq`.",
+  "properties": {
+    "connector": {
+      "title": "Connector",
+      "type": "string"
+    },
+    "direction": {
+      "enum": [
+        "in",
+        "out"
+      ],
+      "title": "Direction",
+      "type": "string"
+    },
+    "message": {
+      "anyOf": [
+        {
+          "additionalProperties": true,
+          "type": "object"
+        },
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Inbound refusals: the received envelope, or its text if unreadable",
+      "title": "Message"
+    },
+    "reason": {
+      "title": "Reason",
+      "type": "string"
+    },
+    "source_state": {
+      "anyOf": [
+        {
+          "additionalProperties": true,
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Outbound refusals: the state the connector tried to send",
+      "title": "Source State"
+    },
+    "t": {
+      "description": "Unix time of the refusal",
+      "title": "T",
+      "type": "number"
+    },
+    "topic": {
+      "description": "The topic the message was refused on",
+      "title": "Topic",
+      "type": "string"
+    }
+  },
+  "required": [
+    "t",
+    "connector",
+    "topic",
+    "direction",
+    "reason"
+  ],
+  "title": "DeadLetterRecord",
+  "type": "object"
+}

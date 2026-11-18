@@ -1,0 +1,107 @@
+{
+  "$defs": {
+    "SourcedItem": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "title": "Kind",
+          "type": "string"
+        },
+        "label": {
+          "title": "Label",
+          "type": "string"
+        },
+        "ref": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Ref"
+        },
+        "source": {
+          "enum": [
+            "apdt",
+            "ahdt"
+          ],
+          "title": "Source",
+          "type": "string"
+        },
+        "time": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Time"
+        },
+        "unit": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Unit"
+        },
+        "value": {
+          "default": null,
+          "title": "Value"
+        }
+      },
+      "required": [
+        "source",
+        "kind",
+        "label"
+      ],
+      "title": "SourcedItem",
+      "type": "object"
+    }
+  },
+  "$id": "https://atra.local/schemas/apdt/unified_view.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "degraded": {
+      "default": false,
+      "title": "Degraded",
+      "type": "boolean"
+    },
+    "episode_id": {
+      "title": "Episode Id",
+      "type": "string"
+    },
+    "items": {
+      "items": {
+        "$ref": "#/$defs/SourcedItem"
+      },
+      "title": "Items",
+      "type": "array"
+    },
+    "missing_evidence": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Missing Evidence",
+      "type": "array"
+    }
+  },
+  "required": [
+    "episode_id",
+    "items"
+  ],
+  "title": "UnifiedView",
+  "type": "object"
+}

@@ -1,0 +1,90 @@
+kind: renal_urinary
+name: Renal and Urinary DT
+referent: Kidneys, ureters, bladder and urethra
+fields:
+- name: creatinine
+  loinc: 14682-9
+  ucum: umol/L
+  ref: range.creatinine
+  source:
+  - lab
+- name: egfr
+  loinc: 98979-8
+  ucum: mL/min/{1.73_m2}
+  ref: range.egfr
+  source:
+  - derived
+- name: sodium
+  loinc: 2951-2
+  ucum: mmol/L
+  ref: range.sodium
+  source:
+  - lab
+- name: potassium
+  loinc: 2823-3
+  ucum: mmol/L
+  ref: range.potassium
+  source:
+  - lab
+- name: urine_output
+  ucum: mL/h
+  ref: range.urine_output
+  source:
+  - monitor
+  - manual
+- name: aki_stage
+  ucum: '1'
+  ref: range.aki_stage
+  source:
+  - derived
+models:
+- ahdt.renal_urinary.kidney_and_renal_function
+- ahdt.renal_urinary.ureters_bladder_and_urethra
+- ahdt.renal_urinary.fluid_electrolyte_and_acid_base_balance
+owns_instances:
+- UBERON:0002113
+- UBERON:0001255
+- UBERON:0000056
+- UBERON:0000057
+reads_facets:
+- instance: UBERON:0000948
+  facet: haemodynamics
+- instance: UBERON:0002048
+  facet: gas_exchange
+- instance: UBERON:0000947
+  facet: vascular
+standing_goals:
+- id: ren.function_current
+  text: Keep eGFR and electrolytes current
+  check:
+    kind: freshness
+    params:
+      fields:
+      - egfr
+      - sodium
+      - potassium
+      max_age_s: 604800
+- id: ren.aki_alert
+  text: Alert on acute kidney injury
+  check:
+    kind: threshold
+    params:
+      field: aki_stage
+      at_least:
+        kb: goal.ren.aki_stage
+- id: ren.dosing_flag
+  text: Flag renal dosing advice
+  check:
+    kind: threshold
+    params:
+      field: egfr
+      below:
+        kb: goal.ren.dosing_egfr
+connectors_out:
+- RenalClearanceConnector
+- RenalHepatobiliaryConnector
+- SystemToWholeBodyConnector
+connectors_in:
+- GlucoseRenalConnector
+- NormsConnector
+- RespiratoryRenalConnector

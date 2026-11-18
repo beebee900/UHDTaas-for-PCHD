@@ -1,0 +1,114 @@
+{
+  "$defs": {
+    "AutonomyLevel": {
+      "enum": [
+        "inform",
+        "recommend",
+        "prepare_for_signature",
+        "act_with_approval",
+        "act",
+        "never"
+      ],
+      "title": "AutonomyLevel",
+      "type": "string"
+    }
+  },
+  "$id": "https://atra.local/schemas/apdt/recommendation.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "autonomy_level": {
+      "$ref": "#/$defs/AutonomyLevel"
+    },
+    "bundle_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Bundle Id"
+    },
+    "confidence": {
+      "anyOf": [
+        {
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Confidence"
+    },
+    "created_by_agent": {
+      "title": "Created By Agent",
+      "type": "string"
+    },
+    "episode_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Episode Id"
+    },
+    "hdt_id": {
+      "title": "Hdt Id",
+      "type": "string"
+    },
+    "kind": {
+      "enum": [
+        "diagnosis",
+        "test",
+        "treatment",
+        "care",
+        "lifestyle",
+        "data_request"
+      ],
+      "title": "Kind",
+      "type": "string"
+    },
+    "payload": {
+      "additionalProperties": true,
+      "title": "Payload",
+      "type": "object"
+    },
+    "recommendation_id": {
+      "title": "Recommendation Id",
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "proposed",
+        "accepted",
+        "edited",
+        "overridden",
+        "declined",
+        "signed"
+      ],
+      "title": "Status",
+      "type": "string"
+    }
+  },
+  "required": [
+    "recommendation_id",
+    "hdt_id",
+    "kind",
+    "payload",
+    "status",
+    "autonomy_level",
+    "created_by_agent"
+  ],
+  "title": "Recommendation",
+  "type": "object"
+}

@@ -1,0 +1,151 @@
+{
+  "$defs": {
+    "CareTeamMember": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "role": {
+          "$ref": "#/$defs/Role"
+        }
+      },
+      "required": [
+        "id",
+        "role"
+      ],
+      "title": "CareTeamMember",
+      "type": "object"
+    },
+    "Episode": {
+      "additionalProperties": false,
+      "properties": {
+        "care_team": {
+          "items": {
+            "$ref": "#/$defs/CareTeamMember"
+          },
+          "title": "Care Team",
+          "type": "array"
+        },
+        "closed_at": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Closed At"
+        },
+        "episode_id": {
+          "title": "Episode Id",
+          "type": "string"
+        },
+        "goal_text": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Goal Text"
+        },
+        "hdt_id": {
+          "title": "Hdt Id",
+          "type": "string"
+        },
+        "opened_at": {
+          "format": "date-time",
+          "title": "Opened At",
+          "type": "string"
+        },
+        "reason": {
+          "title": "Reason",
+          "type": "string"
+        },
+        "responsible_clinician": {
+          "title": "Responsible Clinician",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "open",
+            "closed"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "tenant_id": {
+          "title": "Tenant Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "episode_id",
+        "tenant_id",
+        "hdt_id",
+        "status",
+        "opened_at",
+        "reason",
+        "responsible_clinician"
+      ],
+      "title": "Episode",
+      "type": "object"
+    },
+    "Role": {
+      "enum": [
+        "medical_officer",
+        "radiologist",
+        "pharmacist",
+        "nurse",
+        "lab_scientist",
+        "patient",
+        "proxy",
+        "community_health_worker",
+        "therapist",
+        "carer",
+        "clinical_safety_officer",
+        "administrator",
+        "researcher",
+        "public_health_official",
+        "person"
+      ],
+      "title": "Role",
+      "type": "string"
+    }
+  },
+  "$id": "https://atra.local/schemas/apdt/episode_view.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "episode": {
+      "$ref": "#/$defs/Episode"
+    },
+    "episode_of_care": {
+      "additionalProperties": true,
+      "title": "Episode Of Care",
+      "type": "object"
+    },
+    "resources": {
+      "items": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "title": "Resources",
+      "type": "array"
+    }
+  },
+  "required": [
+    "episode",
+    "episode_of_care"
+  ],
+  "title": "EpisodeView",
+  "type": "object"
+}

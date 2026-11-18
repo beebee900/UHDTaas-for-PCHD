@@ -1,0 +1,78 @@
+- id: tx.asthma.exacerbation
+  condition: cond.asthma
+  severity: [exacerbation_mild, exacerbation_severe]
+  preference: first_line
+  regimen: [dose.prednisolone_asthma_exacerbation, dose.salbutamol_exacerbation]
+  second_line: Increase salbutamol frequency or continuous nebulization; in children add nebulized
+    ipratropium if available.
+  provenance:
+    source: who-pen-2020
+    page: 42
+    also:
+    - {source: who-pen-2020, page: 43}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: tx.copd.exacerbation
+  condition: cond.copd_exacerbation
+  severity: [severe]
+  preference: first_line
+  regimen: [dose.prednisolone_copd_exacerbation, dose.salbutamol_exacerbation]
+  oxygen: Through a mask that limits the concentration to 24% or 28%.
+  provenance:
+    source: who-pen-2020
+    page: 45
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: tx.hypoglycaemia.child
+  condition: cond.hypoglycaemia
+  severity: [mild, severe]
+  preference: first_line
+  regimen: dose.glucose_10pc_child_hypoglycaemia
+  eligibility: {patient_group: child}
+  empirical_allowed: true
+  provenance:
+    source: who-pocketbook-children-2013
+    page: 40
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: tx.hypoglycaemia.adult
+  condition: cond.hypoglycaemia
+  severity: [mild, severe]
+  preference: first_line
+  regimen: dose.hypoglycaemia_adult
+  eligibility: {patient_group: adult}
+  empirical_allowed: true
+  provenance:
+    source: who-hearts-d-2020
+    page: 19
+    also:
+    - {source: who-hearts-d-2020, page: 18}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: tx.hyperglycaemic_crisis.refer
+  condition: cond.hyperglycaemic_crisis
+  severity: [ketoacidosis, hyperosmolar]
+  preference: first_line
+  regimen: null
+  action: refer_urgently
+  criteria:
+    dka: {glucose_at_or_above_mmol_l: 13.9, ketones: positive}
+    hhs: {glucose_at_or_above_mmol_l: 33.3, ketones: negative or weakly positive}
+  note: Life-threatening; refer to a higher level of care. Urine ketones 2+ or more in a severely
+    hyperglycaemic person lead to referral.
+  provenance:
+    source: who-hearts-d-2020
+    page: 19
+    also:
+    - {source: who-hearts-d-2020, page: 16}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified

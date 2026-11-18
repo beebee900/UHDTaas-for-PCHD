@@ -1,0 +1,41 @@
+# Infection response: within-host malaria, HIV and tuberculosis slow states.
+model_id: ahdt.immune_lymphatic.infection_response
+sources:
+- id: hoshen2000
+  citation: "Hoshen MB, Heinrich R, Stein WD, Ginsburg H. Mathematical modelling of the
+    within-host dynamics of Plasmodium falciparum. Parasitology. 2000;121(3):227-235.
+    doi:10.1017/S0031182099006368"
+  via: "Equations 1a-1c and the values used for Figures 1 and 2; the merozoite kill rate is
+    the estimate quoted from Anderson, May and Gupta (1989)"
+  url: https://edoc.hu-berlin.de/18452/22439
+- id: perelson1993
+  citation: "Perelson AS, Kirschner DE, De Boer R. Dynamics of HIV infection of CD4+ T cells.
+    Math Biosci. 1993;114(1):81-125. doi:10.1016/0025-5564(93)90043-a"
+  via: BioModels BIOMD0000000874 (model A)
+  url: https://www.ebi.ac.uk/biomodels/BIOMD0000000874
+- id: atra-assumption
+  citation: ATRA design 01 rule R5 assumption register
+params:
+  mal_beta: {value: 70, unit: /d, source: hoshen2000, note: merozoite invasion rate}
+  mal_r: {value: 16, unit: '1', source: hoshen2000, note: merozoites per ruptured cell}
+  mal_delta: {value: 72, unit: /d, source: hoshen2000, note: free merozoite loss rate}
+  mal_alpha: {value: 0.05, unit: /d, source: hoshen2000, calibrate: true, prior_cv: 0.5,
+              note: infected red cell kill rate before treatment}
+  mal_tau: {value: 2, unit: d, source: hoshen2000, note: asexual cycle length}
+  mal_rbc_lifespan: {value: 120, unit: d, source: hoshen2000}
+  hiv_s: {value: 10, unit: /mm3/d, source: perelson1993}
+  hiv_r: {value: 0.03, unit: /d, source: perelson1993}
+  hiv_T_max: {value: 1500, unit: /mm3, source: perelson1993}
+  hiv_mu_T: {value: 0.02, unit: /d, source: perelson1993}
+  hiv_k_1: {value: 2.4e-5, unit: mm3/d, source: perelson1993, calibrate: true, prior_cv: 0.5}
+  hiv_k_2: {value: 0.003, unit: /d, source: perelson1993}
+  hiv_mu_b: {value: 0.24, unit: /d, source: perelson1993}
+  hiv_mu_V: {value: 2.4, unit: /d, source: perelson1993}
+  hiv_N: {value: 1000, unit: '1', source: perelson1993}
+  tb_tau_active: {value: 60, unit: d, source: atra-assumption, assumption: true,
+                  justification: "Time constant of the rise of the TB activity state in
+                    untreated active disease; no computable published within-host model fits
+                    the laptop build"}
+  tb_tau_treated: {value: 60, unit: d, source: atra-assumption, assumption: true,
+                   justification: "Time constant of the fall of the TB activity state on
+                     effective treatment; to be replaced by a sourced response time"}

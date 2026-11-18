@@ -1,0 +1,103 @@
+# USSD menu tree (design 05, 5.10.1). Text is plain ASCII: Africa's Talking advises that
+# telcos may not render special characters. Strings are keyed by locale; a locale without
+# a string falls back to English until a reviewed translation is added.
+
+service_code: "*347#"
+session_timeout_s: 180
+languages: [en, yo, ha, ig, pcm]
+
+strings:
+  greeting: {en: "Welcome to your health service"}
+  menu.language: {en: "Language / Ede / Harshe / Asusu / Language (Pidgin)"}
+  menu.care_plan: {en: "My care plan today"}
+  menu.check_in: {en: "Report how I feel (check-in)"}
+  menu.reminders: {en: "Medicine reminders"}
+  menu.consent: {en: "Consent: who can use my data"}
+  menu.ask: {en: "Ask my care team a question"}
+  menu.exit: {en: "Exit"}
+  goodbye: {en: "Thank you. Goodbye."}
+  invalid: {en: "Invalid choice. Please dial again."}
+  timeout: {en: "Your session has ended. Please dial again."}
+  unknown_phone: {en: "This phone number is not registered with a health facility."}
+  language.choose: {en: "Choose your language"}
+  lang.en: {en: "English"}
+  lang.yo: {en: "Yoruba"}
+  lang.ha: {en: "Hausa"}
+  lang.ig: {en: "Igbo"}
+  lang.pcm: {en: "Pidgin"}
+  language.saved: {en: "Your language is saved."}
+  care_plan.none: {en: "You have no care tasks today."}
+  reminders.none: {en: "You have no medicine reminders."}
+  check_in.yes: {en: "Yes"}
+  check_in.no: {en: "No"}
+  check_in.done: {en: "Thank you. Your care team will see your answers."}
+  consent.intro: {en: "Your record is used to care for you. Choose who can use each part of it."}
+  consent.continue: {en: "Continue"}
+  consent.allow: {en: "Allow"}
+  consent.withhold: {en: "Withhold"}
+  consent.summary_none: {en: "You allow all uses."}
+  consent.summary: {en: "You withhold:"}
+  consent.confirm: {en: "Confirm"}
+  consent.cancel: {en: "Cancel"}
+  consent.saved: {en: "Your choices are saved. You will get an SMS."}
+  consent.cancelled: {en: "Nothing was changed."}
+  consent.sms: {en: "Your data choices are saved."}
+  consent.item.care: {en: "Use my record for my care, including emergencies"}
+  consent.item.vital_signs_and_device_data: {en: "Vital signs and device data"}
+  consent.item.laboratory_and_imaging: {en: "Laboratory and imaging"}
+  consent.item.medicines: {en: "Medicines"}
+  consent.item.genome: {en: "Genome"}
+  consent.item.knowledge_graph_and_notes: {en: "Health knowledge graph and notes"}
+  consent.item.body_models_and_simulation: {en: "Body models and simulation"}
+  consent.item.explanations: {en: "Explanations"}
+  consent.item.conversation_and_speech: {en: "Conversation and speech"}
+  consent.item.research_public_health: {en: "Research and public health use"}
+  ask.prompt: {en: "Type your question for your care team"}
+  ask.sent: {en: "Your care team has your question. They will reply by SMS."}
+  voice.use_sms: {en: "Please send your question by SMS to this number."}
+  failed: {en: "The service is not available now. Please try again later."}
+
+# The 3.13 consent categories in the order they are asked. `purposes` items grant purposes
+# of use; `category` items withhold that category's tools when the patient says Withhold.
+consent_items:
+  - {id: care, purposes: [care, emergency, self_management]}
+  - {id: vital_signs_and_device_data, category: vital_signs_and_device_data}
+  - {id: laboratory_and_imaging, category: laboratory_and_imaging}
+  - {id: medicines, category: medicines}
+  - {id: genome, category: genome}
+  - {id: knowledge_graph_and_notes, category: knowledge_graph_and_notes}
+  - {id: body_models_and_simulation, category: body_models_and_simulation}
+  - {id: explanations, category: explanations}
+  - {id: conversation_and_speech, category: conversation_and_speech}
+  - {id: research_public_health, purposes: [public_health, research]}
+
+menus:
+  main:
+    text: greeting
+    options:
+      - {key: "1", label: menu.language, next: language}
+      - {key: "2", label: menu.care_plan, action: care_plan}
+      - {key: "3", label: menu.check_in, next: check_in}
+      - {key: "4", label: menu.reminders, action: reminders}
+      - {key: "5", label: menu.consent, next: consent}
+      - {key: "6", label: menu.ask, next: ask}
+      - {key: "0", label: menu.exit, end: goodbye}
+  language:
+    text: language.choose
+    options:
+      - {key: "1", label: lang.en, set_language: en, next: main}
+      - {key: "2", label: lang.yo, set_language: yo, next: main}
+      - {key: "3", label: lang.ha, set_language: ha, next: main}
+      - {key: "4", label: lang.ig, set_language: ig, next: main}
+      - {key: "5", label: lang.pcm, set_language: pcm, next: main}
+  check_in:
+    kind: questionnaire
+    questionnaire: check-in
+    action: check_in
+  consent:
+    kind: consent
+    action: consent
+  ask:
+    kind: free_text
+    text: ask.prompt
+    action: ask

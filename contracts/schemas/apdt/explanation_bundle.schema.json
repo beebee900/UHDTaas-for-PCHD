@@ -1,0 +1,475 @@
+{
+  "$defs": {
+    "Alternative": {
+      "additionalProperties": false,
+      "properties": {
+        "score": {
+          "title": "Score",
+          "type": "number"
+        },
+        "text": {
+          "title": "Text",
+          "type": "string"
+        },
+        "why_lower": {
+          "title": "Why Lower",
+          "type": "string"
+        }
+      },
+      "required": [
+        "text",
+        "score",
+        "why_lower"
+      ],
+      "title": "Alternative",
+      "type": "object"
+    },
+    "BundleCounterfactual": {
+      "additionalProperties": false,
+      "properties": {
+        "change": {
+          "title": "Change",
+          "type": "string"
+        },
+        "delta": {
+          "title": "Delta",
+          "type": "number"
+        },
+        "new_top": {
+          "title": "New Top",
+          "type": "string"
+        }
+      },
+      "required": [
+        "change",
+        "new_top",
+        "delta"
+      ],
+      "title": "BundleCounterfactual",
+      "type": "object"
+    },
+    "BundleRecommendation": {
+      "additionalProperties": false,
+      "properties": {
+        "code": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Code"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "confidence": {
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Confidence",
+          "type": "number"
+        },
+        "conformal_set": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Conformal Set"
+        },
+        "interval": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Interval"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "text": {
+          "title": "Text",
+          "type": "string"
+        }
+      },
+      "required": [
+        "text",
+        "confidence"
+      ],
+      "title": "BundleRecommendation",
+      "type": "object"
+    },
+    "Citation": {
+      "additionalProperties": false,
+      "properties": {
+        "kb_entry_id": {
+          "title": "Kb Entry Id",
+          "type": "string"
+        },
+        "section": {
+          "title": "Section",
+          "type": "string"
+        },
+        "source_title": {
+          "title": "Source Title",
+          "type": "string"
+        },
+        "url": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Url"
+        }
+      },
+      "required": [
+        "kb_entry_id",
+        "source_title",
+        "section"
+      ],
+      "title": "Citation",
+      "type": "object"
+    },
+    "Code": {
+      "additionalProperties": false,
+      "properties": {
+        "code": {
+          "title": "Code",
+          "type": "string"
+        },
+        "display": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Display"
+        },
+        "system": {
+          "title": "System",
+          "type": "string"
+        }
+      },
+      "required": [
+        "system",
+        "code"
+      ],
+      "title": "Code",
+      "type": "object"
+    },
+    "EvidenceItem": {
+      "additionalProperties": false,
+      "properties": {
+        "ahdt_explanation_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Ahdt Explanation Id"
+        },
+        "item": {
+          "title": "Item",
+          "type": "string"
+        },
+        "source": {
+          "enum": [
+            "apdt",
+            "ahdt"
+          ],
+          "title": "Source",
+          "type": "string"
+        },
+        "value": {
+          "default": null,
+          "title": "Value"
+        },
+        "weight": {
+          "title": "Weight",
+          "type": "number"
+        }
+      },
+      "required": [
+        "source",
+        "item",
+        "weight"
+      ],
+      "title": "EvidenceItem",
+      "type": "object"
+    },
+    "Interval": {
+      "additionalProperties": false,
+      "properties": {
+        "level": {
+          "title": "Level",
+          "type": "number"
+        },
+        "lower": {
+          "title": "Lower",
+          "type": "number"
+        },
+        "upper": {
+          "title": "Upper",
+          "type": "number"
+        }
+      },
+      "required": [
+        "lower",
+        "upper",
+        "level"
+      ],
+      "title": "Interval",
+      "type": "object"
+    },
+    "ModelRef": {
+      "additionalProperties": false,
+      "properties": {
+        "model_id": {
+          "title": "Model Id",
+          "type": "string"
+        },
+        "version": {
+          "title": "Version",
+          "type": "string"
+        }
+      },
+      "required": [
+        "model_id",
+        "version"
+      ],
+      "title": "ModelRef",
+      "type": "object"
+    },
+    "PatientSummary": {
+      "additionalProperties": false,
+      "properties": {
+        "audio_ref": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Audio Ref"
+        },
+        "language": {
+          "enum": [
+            "en",
+            "yo",
+            "ha",
+            "ig",
+            "pcm"
+          ],
+          "title": "Language",
+          "type": "string"
+        },
+        "text": {
+          "title": "Text",
+          "type": "string"
+        }
+      },
+      "required": [
+        "language",
+        "text"
+      ],
+      "title": "PatientSummary",
+      "type": "object"
+    },
+    "Sensitivity": {
+      "additionalProperties": false,
+      "properties": {
+        "S1": {
+          "title": "S1",
+          "type": "number"
+        },
+        "ST": {
+          "title": "St",
+          "type": "number"
+        },
+        "param": {
+          "title": "Param",
+          "type": "string"
+        }
+      },
+      "required": [
+        "param",
+        "S1",
+        "ST"
+      ],
+      "title": "Sensitivity",
+      "type": "object"
+    },
+    "SimulationTrace": {
+      "additionalProperties": false,
+      "properties": {
+        "assumptions": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Assumptions",
+          "type": "array"
+        },
+        "fork_id": {
+          "title": "Fork Id",
+          "type": "string"
+        },
+        "output_id": {
+          "title": "Output Id",
+          "type": "string"
+        },
+        "sensitivity": {
+          "items": {
+            "$ref": "#/$defs/Sensitivity"
+          },
+          "title": "Sensitivity",
+          "type": "array"
+        },
+        "summary": {
+          "title": "Summary",
+          "type": "string"
+        }
+      },
+      "required": [
+        "output_id",
+        "fork_id",
+        "summary",
+        "assumptions"
+      ],
+      "title": "SimulationTrace",
+      "type": "object"
+    }
+  },
+  "$id": "https://atra.local/schemas/apdt/explanation_bundle.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "alternatives": {
+      "items": {
+        "$ref": "#/$defs/Alternative"
+      },
+      "title": "Alternatives",
+      "type": "array"
+    },
+    "audience_views": {
+      "additionalProperties": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "propertyNames": {
+        "enum": [
+          "medical_officer",
+          "pharmacist",
+          "nurse",
+          "radiologist",
+          "patient"
+        ]
+      },
+      "title": "Audience Views",
+      "type": "object"
+    },
+    "bundle_id": {
+      "title": "Bundle Id",
+      "type": "string"
+    },
+    "citations": {
+      "items": {
+        "$ref": "#/$defs/Citation"
+      },
+      "title": "Citations",
+      "type": "array"
+    },
+    "counterfactuals": {
+      "items": {
+        "$ref": "#/$defs/BundleCounterfactual"
+      },
+      "title": "Counterfactuals",
+      "type": "array"
+    },
+    "created_at": {
+      "format": "date-time",
+      "title": "Created At",
+      "type": "string"
+    },
+    "evidence_against": {
+      "items": {
+        "$ref": "#/$defs/EvidenceItem"
+      },
+      "title": "Evidence Against",
+      "type": "array"
+    },
+    "evidence_for": {
+      "items": {
+        "$ref": "#/$defs/EvidenceItem"
+      },
+      "title": "Evidence For",
+      "type": "array"
+    },
+    "model_versions": {
+      "items": {
+        "$ref": "#/$defs/ModelRef"
+      },
+      "title": "Model Versions",
+      "type": "array"
+    },
+    "patient_summary": {
+      "$ref": "#/$defs/PatientSummary"
+    },
+    "recommendation": {
+      "$ref": "#/$defs/BundleRecommendation"
+    },
+    "recommendation_id": {
+      "title": "Recommendation Id",
+      "type": "string"
+    },
+    "simulation_trace": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/SimulationTrace"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    }
+  },
+  "required": [
+    "bundle_id",
+    "recommendation_id",
+    "recommendation",
+    "evidence_for",
+    "evidence_against",
+    "citations",
+    "counterfactuals",
+    "alternatives",
+    "patient_summary",
+    "audience_views",
+    "created_at",
+    "model_versions"
+  ],
+  "title": "ExplanationBundle",
+  "type": "object"
+}

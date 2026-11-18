@@ -1,0 +1,44 @@
+# T3 reference-state items of the endocrine twin (design 04, 4.5.3).
+- model_id: ahdt.endocrine.thyroid_and_parathyroids
+  twin: endocrine
+  intended_use: TSH, free T4, PTH and calcium state against reference ranges
+  instances:
+  - UBERON:0002046
+  - UBERON:0001132
+  - UBERON:0000007
+  variables:
+    tsh:
+      unit: m[IU]/L
+      ref: range.tsh
+      tau_h: 168
+      justification: Relaxation time constant of a T3 state; a modelling assumption (design 01, rule
+        R3)
+    tsh_drive:
+      unit: '1'
+      ref: state.tsh_drive
+      tau_h: 24
+      justification: Relaxation time constant of a T3 state; a modelling assumption (design 01, rule
+        R3)
+    ft4:
+      unit: pmol/L
+      ref: state.ft4
+      tau_h: 168
+      justification: Relaxation time constant of a T3 state; a modelling assumption (design 01, rule
+        R3)
+    pth:
+      unit: pmol/L
+      ref: state.pth
+      tau_h: 24
+      justification: Relaxation time constant of a T3 state; a modelling assumption (design 01, rule
+        R3)
+    calcium:
+      unit: mmol/L
+      ref: state.calcium
+      tau_h: 24
+      justification: Relaxation time constant of a T3 state; a modelling assumption (design 01, rule
+        R3)
+  obs_map:
+    3016-3: tsh
+    3024-7: ft4
+    2731-8: pth
+    17861-6: calcium

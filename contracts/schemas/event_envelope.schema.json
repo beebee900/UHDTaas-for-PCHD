@@ -1,0 +1,92 @@
+{
+  "$id": "https://atra.local/schemas/event_envelope.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "episode_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Episode Id"
+    },
+    "event_id": {
+      "title": "Event Id",
+      "type": "string"
+    },
+    "event_type": {
+      "pattern": "^[a-z_]+\\.[a-z_]+$",
+      "title": "Event Type",
+      "type": "string"
+    },
+    "hdt_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Hdt Id"
+    },
+    "payload": {
+      "additionalProperties": true,
+      "title": "Payload",
+      "type": "object"
+    },
+    "sim_time": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Sim Time"
+    },
+    "source": {
+      "title": "Source",
+      "type": "string"
+    },
+    "tenant_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Tenant Id"
+    },
+    "trace_id": {
+      "title": "Trace Id",
+      "type": "string"
+    },
+    "wall_time": {
+      "format": "date-time",
+      "title": "Wall Time",
+      "type": "string"
+    }
+  },
+  "required": [
+    "event_id",
+    "event_type",
+    "source",
+    "wall_time",
+    "trace_id",
+    "payload"
+  ],
+  "title": "EventEnvelope",
+  "type": "object"
+}

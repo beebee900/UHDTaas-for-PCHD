@@ -1,0 +1,22 @@
+# Age-related sensory decline curves, fitted to the synthetic cohort (WP02).
+model_id: ahdt.sensory.sensory_decline
+sources:
+- id: atra-cohort-fit
+  citation: "ATRA synthetic cohort fit (WP02): power-law decline after an onset age"
+params:
+  hearing_base: {value: 5, unit: dB, source: atra-cohort-fit, assumption: true,
+                 justification: "Placeholder until the WP02 cohort fit; replaced by fit()"}
+  hearing_onset: {value: 30, unit: a, source: atra-cohort-fit, assumption: true,
+                  justification: "Placeholder until the WP02 cohort fit; replaced by fit()"}
+  hearing_rate: {value: 0.01, unit: dB, source: atra-cohort-fit, assumption: true,
+                 justification: "Placeholder until the WP02 cohort fit; replaced by fit()"}
+  hearing_power: {value: 2.0, unit: '1', source: atra-cohort-fit, assumption: true,
+                  justification: "Placeholder until the WP02 cohort fit; replaced by fit()"}
+  vision_base: {value: 0.0, unit: '{logMAR}', source: atra-cohort-fit, assumption: true,
+                justification: "Placeholder until the WP02 cohort fit; replaced by fit()"}
+  vision_onset: {value: 40, unit: a, source: atra-cohort-fit, assumption: true,
+                 justification: "Placeholder until the WP02 cohort fit; replaced by fit()"}
+  vision_rate: {value: 0.0002, unit: '{logMAR}', source: atra-cohort-fit, assumption: true,
+                justification: "Placeholder until the WP02 cohort fit; replaced by fit()"}
+  vision_power: {value: 2.0, unit: '1', source: atra-cohort-fit, assumption: true,
+                 justification: "Placeholder until the WP02 cohort fit; replaced by fit()"}

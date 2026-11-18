@@ -1,0 +1,27 @@
+# Open datasets
+
+Generated from `evaluation/datasets/datasets.yaml` by `python -m evaluation.datasets.fetch --doc`. A dataset is used only after its status is `approved`.
+
+| Dataset | Use | Size | Licence | Status | Citation |
+|---|---|---|---|---|---|
+| [MIT-BIH Arrhythmia Database 1.0.0](https://physionet.org/content/mitdb/1.0.0/) | Arrhythmia beat classifier | 77 MB | Open Data Commons Attribution License v1.0 | approved | Moody GB, Mark RG. The impact of the MIT-BIH Arrhythmia Database. IEEE Eng Med Biol 2001;20(3):45-50. |
+| [PTB-XL, a large publicly available electrocardiography dataset 1.0.3](https://physionet.org/content/ptb-xl/1.0.3/) | AF rhythm classifier, ECG replay | 1,840 MB | Creative Commons Attribution 4.0 | approved | Wagner P, Strodthoff N, Bousseljot R, Samek W, Schaeffter T. PTB-XL, a large publicly available electrocardiography dataset (version 1.0.3). PhysioNet, 2022. https://doi.org/10.13026/kfzx-aw45 |
+| [Sleep-EDF Database Expanded 1.0.0](https://physionet.org/content/sleep-edfx/1.0.0/) | Sleep staging, EEG replay | 8,715 MB | Open Data Commons Attribution License v1.0 | approved | Kemp B, Zwinderman AH, Tuk B, Kamphuisen HAC, Oberye JJL. Analysis of a sleep-dependent neuronal feedback loop: the slow-wave microcontinuity of the EEG. IEEE-BME 2000;47(9):1185-94. |
+| [WESAD (Wearable Stress and Affect Detection)](https://ubi29.informatik.uni-siegen.de/usi/data_wesad.html) | Stress model | not stated | Academic, non-commercial use (terms on the landing page) | approved | Schmidt P, Reiss A, Duerichen R, Marberger C, Van Laerhoven K. Introducing WESAD, a multimodal dataset for wearable stress and affect detection. ICMI 2018. |
+| [NIH/NLM malaria cell images (thin blood smear)](https://lhncbc.nlm.nih.gov/LHC-research/LHC-projects/image-processing/malaria-datasheet.html) | Microscopy second reader | 353 MB | to confirm | pending | Rajaraman S, Antani SK, Poostchi Mohammadabadi M, et al. Pre-trained convolutional neural networks as feature extractors toward improved malaria parasite detection in thin blood smear images. PeerJ 2018;6:e4568. |
+| [MENYO-20k Yoruba-English parallel corpus](https://github.com/uds-lsv/menyo-20k_MT) | LoRA language adapter data (Yoruba) | not stated | Creative Commons Attribution-NonCommercial 4.0 International | approved | Adelani DI, Ruiter D, Alabi JO, et al. The effect of domain and diacritics in Yoruba-English neural machine translation. MT Summit 2021. |
+| [MAFAND-MT English to Hausa, Igbo, Nigerian Pidgin and Yoruba news translations](https://github.com/masakhane-io/lafand-mt) | LoRA language adapter data and held-out translation test (Hausa, Igbo, Pidgin, Yoruba) | not stated | Creative Commons Attribution-NonCommercial 4.0 International (dataset card) | approved | Adelani D, Alabi J, Fan A, et al. A few thousand translations go a long way! Leveraging pre-trained models for African news translation. NAACL 2022. https://doi.org/10.18653/v1/2022.naacl-main.223 |
+| [Google WaxalNLP Igbo text-to-speech recordings (ibo_tts)](https://huggingface.co/datasets/google/WaxalNLP) | Fine-tune the Igbo MMS-TTS voice from mms-tts-yor | 742 MB | CC-BY-SA-4.0 (Media Trust, per the dataset card TTS table) | approved | Google Research. WaxalNLP, African language speech datasets. Hugging Face, 2025. |
+| Public chest X-ray samples for the imaging demo studies | Imaging demo studies (matched to TorchXRayVision labels) | not stated | to confirm | pending |  |
+| [MediaPipe Pose Landmarker (lite), float16 version 1](https://ai.google.dev/edge/mediapipe/solutions/vision/pose_landmarker) | Phone video pose landmarks for gait features | 6 MB | Apache License 2.0 (Model Card BlazePose GHUM 3D) | approved | Bazarevsky V, Grishchenko I, Raveendran K, Zhu T, Zhang F, Grundmann M. BlazePose: on-device real-time body pose tracking. arXiv:2006.10204, 2020. |
+| [Treadmill walking at belt speeds 0.5, 1.0 and 1.5 m/s (additional file 1)](https://commons.wikimedia.org/wiki/File:A-novel-walking-speed-estimation-scheme-and-its-application-to-treadmill-control-for-gait-1743-0003-9-62-S1.ogv) | Test clip for the phone video gait pipeline | 4 MB | Creative Commons Attribution 2.0 | approved | Yoon J, Park H, Damiano D. A novel walking speed estimation scheme and its application to treadmill control for gait rehabilitation. J NeuroEng Rehabil 2012;9:62. https://doi.org/10.1186/1743-0003-9-62 |
+
+Notes:
+
+- wesad: The download is a shared folder link; the size is shown only on the provider page.
+- nih-malaria-cells: The datasheet names no licence; the terms are to be confirmed before use.
+- menyo-20k: Fetched on the Oracle VM by evaluation.language.fetch (WP14d); sizes and hashes are in downloads.json of the VM out folder.
+- mafand-mt: Fetched on the Oracle VM by evaluation.language.fetch (WP14d) from raw.githubusercontent.com/masakhane-io/lafand-mt/main/data/json_files. The repository code is GPL-3.0; the data card states CC BY-NC 4.0.
+- waxal-ibo-tts: Fetched on the Oracle VM by evaluation.language.fetch (WP14d); train part 0, validation and test parquet files of data/TTS/ibo.
+- chest-xray-samples: The source is chosen at download approval; until then imaging studies carry generated test pixels.
+- yoon-2012-treadmill: Side view, 45 s at 29.97 frames/s, 720 x 480. On-screen labels: walking (1.0 s), 0.5 m/s (4.5 s), 1.0 m/s (12.0 s), 1.5 m/s (19.5 s), 1.0 m/s (28.5 s), 0.5 m/s (35.5 s), stop (42.5 s).

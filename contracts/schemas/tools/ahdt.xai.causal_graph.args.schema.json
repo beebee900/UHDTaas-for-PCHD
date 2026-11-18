@@ -1,0 +1,22 @@
+{
+  "$id": "https://atra.local/schemas/tools/ahdt.xai.causal_graph.args.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "hdt_id": {
+      "pattern": "^hdt-[0-9a-f]{12}$",
+      "title": "Hdt Id",
+      "type": "string"
+    },
+    "output_id": {
+      "title": "Output Id",
+      "type": "string"
+    }
+  },
+  "required": [
+    "hdt_id",
+    "output_id"
+  ],
+  "title": "CausalGraphArgs",
+  "type": "object"
+}

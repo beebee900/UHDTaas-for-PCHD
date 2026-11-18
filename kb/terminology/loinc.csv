@@ -1,0 +1,55 @@
+code,display,version,via
+103719-1,Lassa virus RNA [Presence] in Blood by NAA with non-probe detection,2.82,tx.fhir.org
+14631-6,Bilirubin.total [Moles/volume] in Serum or Plasma,2.82,tx.fhir.org
+14682-9,Creatinine [Moles/volume] in Serum or Plasma,2.82,tx.fhir.org
+14743-9,Glucose [Moles/volume] in Capillary blood by Glucometer,2.82,tx.fhir.org
+15074-8,Glucose [Moles/volume] in Blood,2.82,tx.fhir.org
+1742-6,Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma,2.82,tx.fhir.org
+1751-7,Albumin [Mass/volume] in Serum or Plasma,2.82,tx.fhir.org
+1920-8,Aspartate aminotransferase [Enzymatic activity/volume] in Serum or Plasma,2.82,tx.fhir.org
+1988-5,C reactive protein [Mass/volume] in Serum or Plasma,2.82,tx.fhir.org
+19935-6,Maximum expiratory gas flow Respiratory system airway by Peak flow meter,2.82,tx.fhir.org
+20150-9,FEV1,2.82,tx.fhir.org
+24467-3,CD3+CD4+ (T4 helper) cells [#/volume] in Blood,2.82,tx.fhir.org
+2514-8,Ketones [Presence] in Urine by Test strip,2.82,tx.fhir.org
+2823-3,Potassium [Moles/volume] in Serum or Plasma,2.82,tx.fhir.org
+29463-7,Body weight,2.82,tx.fhir.org
+2951-2,Sodium [Moles/volume] in Serum or Plasma,2.82,tx.fhir.org
+3016-3,Thyrotropin [Units/volume] in Serum or Plasma,2.82,tx.fhir.org
+3150-0,Inhaled oxygen concentration,2.82,tx.fhir.org
+32206-5,Plasmodium sp identified in Blood by Light microscopy,2.82,tx.fhir.org
+32782-5,Leukocyte esterase+Nitrite [Presence] in Urine by Test strip,2.82,tx.fhir.org
+33634-7,Mycobacterium tuberculosis rifAMPin resistance gene [Identifier] in Sputum by NAA with probe detection,2.82,tx.fhir.org
+39106-0,Temperature of Skin,2.82,tx.fhir.org
+39156-5,Body mass index (BMI) [Ratio],2.82,tx.fhir.org
+41950-7,Number of steps in 24 hour Measured,2.82,tx.fhir.org
+44261-6,Patient Health Questionnaire 9 item (PHQ-9) total score [Reported],2.82,tx.fhir.org
+4548-4,Hemoglobin A1c/Hemoglobin.total in Blood,2.82,tx.fhir.org
+49051-6,Gestational age in weeks,2.82,tx.fhir.org
+59408-5,Oxygen saturation in Arterial blood by Pulse oximetry,2.82,tx.fhir.org
+600-7,Bacteria identified in Blood by Culture,2.82,tx.fhir.org
+630-4,Bacteria identified in Urine by Culture,2.82,tx.fhir.org
+6301-6,INR in Platelet poor plasma by Coagulation assay,2.82,tx.fhir.org
+6690-2,Leukocytes [#/volume] in Blood by Automated count,2.82,tx.fhir.org
+70241-5,HIV 1 RNA [#/volume] (viral load) in Plasma by Probe and target amplification method detection limit = 20 copies/mL,2.82,tx.fhir.org
+70274-6,Generalized anxiety disorder 7 item (GAD-7) total score [Reported.PHQ],2.82,tx.fhir.org
+718-7,Hemoglobin [Mass/volume] in Blood,2.82,tx.fhir.org
+71969-0,PROMIS-10 Global Mental Health (GMH) score T-score,2.82,tx.fhir.org
+71971-6,PROMIS-10 Global Physical Health (GPH) score T-score,2.82,tx.fhir.org
+72514-3,Pain severity - 0-10 verbal numeric rating [Score] - Reported,2.82,tx.fhir.org
+76772-3,Plasmodium falciparum Ag [Presence] in Blood by Rapid immunoassay,2.82,tx.fhir.org
+777-3,Platelets [#/volume] in Blood by Automated count,2.82,tx.fhir.org
+80387-4,"HIV 1+2 Ab [Presence] in Serum, Plasma or Blood by Rapid immunoassay",2.82,tx.fhir.org
+8280-0,Waist Circumference at umbilicus by Tape measure,2.82,tx.fhir.org
+8302-2,Body height,2.82,tx.fhir.org
+8310-5,Body temperature,2.82,tx.fhir.org
+8462-4,Diastolic blood pressure,2.82,tx.fhir.org
+8478-0,Mean blood pressure,2.82,tx.fhir.org
+8480-6,Systolic blood pressure,2.82,tx.fhir.org
+85362-2,Mycobacterium tuberculosis complex DNA [Presence] in Sputum or Bronchial by NAA with probe detection,2.82,tx.fhir.org
+85524-7,PROMIS short form - global - version 1.2,2.82,tx.fhir.org
+8867-4,Heart rate,2.82,tx.fhir.org
+9269-2,Glasgow coma score total,2.82,tx.fhir.org
+9279-1,Respiratory rate,2.82,tx.fhir.org
+93832-4,Sleep duration,2.82,tx.fhir.org
+98979-8,"Glomerular filtration rate [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (CKD-EPI 2021)/1.73 sq M",2.82,tx.fhir.org

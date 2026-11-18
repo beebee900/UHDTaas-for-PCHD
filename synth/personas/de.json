@@ -1,0 +1,3937 @@
+{
+ "age_years": 58,
+ "episodes": [],
+ "facts": {
+  "conditions": [
+   "cond.hypertension",
+   "cond.diabetes_type2",
+   "cond.ckd"
+  ],
+  "medications": [
+   {
+    "atc": "C08CA01",
+    "name": "amlodipine",
+    "twin": "cardiovascular"
+   },
+   {
+    "atc": "C09AA03",
+    "name": "lisinopril",
+    "twin": "cardiovascular"
+   },
+   {
+    "atc": "A10BA02",
+    "name": "metformin",
+    "twin": "endocrine"
+   }
+  ],
+  "observations": [
+   {
+    "code": "8480-6",
+    "field": "sbp",
+    "unit": "mm[Hg]",
+    "value": 162
+   },
+   {
+    "code": "8462-4",
+    "field": "dbp",
+    "unit": "mm[Hg]",
+    "value": 98
+   },
+   {
+    "code": "14682-9",
+    "field": "creatinine",
+    "unit": "umol/L",
+    "value": 180
+   }
+  ]
+ },
+ "findings": [
+  "find.hyperglycaemia",
+  "find.raised_bp"
+ ],
+ "hdt_id": "hdt-bf604cf7a075",
+ "initials": "D.E.",
+ "key": "de",
+ "labs": [
+  {
+   "code": {
+    "code": "14682-9",
+    "system": "http://loinc.org"
+   },
+   "device_id": null,
+   "effective_time": "2026-01-31T00:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "lab-hdt-bf604cf7a075-creatinine-0",
+   "record_id": "lab-hdt-bf604cf7a075-creatinine-0",
+   "source": "manual",
+   "unit": "umol/L",
+   "value": 116.77
+  },
+  {
+   "code": {
+    "code": "718-7",
+    "system": "http://loinc.org"
+   },
+   "device_id": null,
+   "effective_time": "2026-01-31T00:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "lab-hdt-bf604cf7a075-hb-1",
+   "record_id": "lab-hdt-bf604cf7a075-hb-1",
+   "source": "manual",
+   "unit": "g/dL",
+   "value": 13.98
+  }
+ ],
+ "language": "pcm",
+ "notes": [
+  {
+   "date": "2026-09-28T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "synthetic": true,
+   "text": "History of Present Illness: 58-year-old male presenting with severe hyperglycaemia, raised blood pressure.\nAssessment: Hypertension.\nPlan: treat per guideline and review in 48 hours.",
+   "type": "note",
+   "writer": "template"
+  }
+ ],
+ "observations": [
+  {
+   "code": {
+    "code": "8462-4",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-01-01T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-dbp-0",
+   "record_id": "dev-hdt-bf604cf7a075-dbp-0",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 127
+  },
+  {
+   "code": {
+    "code": "8480-6",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-01-08T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-sbp-1",
+   "record_id": "dev-hdt-bf604cf7a075-sbp-1",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 164
+  },
+  {
+   "code": {
+    "code": "8462-4",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-01-08T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-dbp-2",
+   "record_id": "dev-hdt-bf604cf7a075-dbp-2",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 128
+  },
+  {
+   "code": {
+    "code": "8480-6",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-01-15T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-sbp-3",
+   "record_id": "dev-hdt-bf604cf7a075-sbp-3",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 163
+  },
+  {
+   "code": {
+    "code": "8462-4",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-01-15T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-dbp-4",
+   "record_id": "dev-hdt-bf604cf7a075-dbp-4",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 124
+  },
+  {
+   "code": {
+    "code": "8480-6",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-01-22T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-sbp-5",
+   "record_id": "dev-hdt-bf604cf7a075-sbp-5",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 163
+  },
+  {
+   "code": {
+    "code": "8462-4",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-01-22T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-dbp-6",
+   "record_id": "dev-hdt-bf604cf7a075-dbp-6",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 133
+  },
+  {
+   "code": {
+    "code": "8480-6",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-01-29T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-sbp-7",
+   "record_id": "dev-hdt-bf604cf7a075-sbp-7",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 162
+  },
+  {
+   "code": {
+    "code": "8462-4",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-01-29T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-dbp-8",
+   "record_id": "dev-hdt-bf604cf7a075-dbp-8",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 128
+  },
+  {
+   "code": {
+    "code": "8480-6",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-02-05T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-sbp-9",
+   "record_id": "dev-hdt-bf604cf7a075-sbp-9",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 161
+  },
+  {
+   "code": {
+    "code": "8462-4",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-02-05T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-dbp-10",
+   "record_id": "dev-hdt-bf604cf7a075-dbp-10",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 132
+  },
+  {
+   "code": {
+    "code": "8480-6",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-02-12T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-sbp-11",
+   "record_id": "dev-hdt-bf604cf7a075-sbp-11",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 158
+  },
+  {
+   "code": {
+    "code": "8462-4",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-02-12T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-dbp-12",
+   "record_id": "dev-hdt-bf604cf7a075-dbp-12",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 122
+  },
+  {
+   "code": {
+    "code": "8480-6",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-02-19T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-sbp-13",
+   "record_id": "dev-hdt-bf604cf7a075-sbp-13",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 161
+  },
+  {
+   "code": {
+    "code": "8462-4",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-02-19T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-dbp-14",
+   "record_id": "dev-hdt-bf604cf7a075-dbp-14",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 132
+  },
+  {
+   "code": {
+    "code": "8480-6",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-02-26T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-sbp-15",
+   "record_id": "dev-hdt-bf604cf7a075-sbp-15",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 162
+  },
+  {
+   "code": {
+    "code": "8462-4",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-02-26T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-dbp-16",
+   "record_id": "dev-hdt-bf604cf7a075-dbp-16",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 126
+  },
+  {
+   "code": {
+    "code": "8480-6",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-03-05T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-sbp-17",
+   "record_id": "dev-hdt-bf604cf7a075-sbp-17",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 160
+  },
+  {
+   "code": {
+    "code": "8462-4",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-03-05T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-dbp-18",
+   "record_id": "dev-hdt-bf604cf7a075-dbp-18",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 128
+  },
+  {
+   "code": {
+    "code": "8480-6",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-03-12T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-sbp-19",
+   "record_id": "dev-hdt-bf604cf7a075-sbp-19",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 168
+  },
+  {
+   "code": {
+    "code": "8462-4",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-03-12T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-dbp-20",
+   "record_id": "dev-hdt-bf604cf7a075-dbp-20",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 126
+  },
+  {
+   "code": {
+    "code": "8480-6",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-03-19T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-sbp-21",
+   "record_id": "dev-hdt-bf604cf7a075-sbp-21",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 166
+  },
+  {
+   "code": {
+    "code": "8462-4",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-03-19T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-dbp-22",
+   "record_id": "dev-hdt-bf604cf7a075-dbp-22",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 130
+  },
+  {
+   "code": {
+    "code": "8480-6",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-03-26T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-sbp-23",
+   "record_id": "dev-hdt-bf604cf7a075-sbp-23",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 167
+  },
+  {
+   "code": {
+    "code": "8462-4",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-03-26T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-dbp-24",
+   "record_id": "dev-hdt-bf604cf7a075-dbp-24",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 133
+  },
+  {
+   "code": {
+    "code": "8480-6",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-04-02T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-sbp-25",
+   "record_id": "dev-hdt-bf604cf7a075-sbp-25",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 158
+  },
+  {
+   "code": {
+    "code": "8462-4",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-04-02T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-dbp-26",
+   "record_id": "dev-hdt-bf604cf7a075-dbp-26",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 129
+  },
+  {
+   "code": {
+    "code": "8480-6",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-04-09T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-sbp-27",
+   "record_id": "dev-hdt-bf604cf7a075-sbp-27",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 160
+  },
+  {
+   "code": {
+    "code": "8462-4",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-04-09T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-dbp-28",
+   "record_id": "dev-hdt-bf604cf7a075-dbp-28",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 132
+  },
+  {
+   "code": {
+    "code": "8480-6",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-04-16T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-sbp-29",
+   "record_id": "dev-hdt-bf604cf7a075-sbp-29",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 164
+  },
+  {
+   "code": {
+    "code": "8480-6",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-04-23T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-sbp-30",
+   "record_id": "dev-hdt-bf604cf7a075-sbp-30",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 160
+  },
+  {
+   "code": {
+    "code": "8462-4",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-04-23T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-dbp-31",
+   "record_id": "dev-hdt-bf604cf7a075-dbp-31",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 127
+  },
+  {
+   "code": {
+    "code": "8480-6",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-04-30T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-sbp-32",
+   "record_id": "dev-hdt-bf604cf7a075-sbp-32",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 155
+  },
+  {
+   "code": {
+    "code": "8462-4",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-04-30T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-dbp-33",
+   "record_id": "dev-hdt-bf604cf7a075-dbp-33",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 127
+  },
+  {
+   "code": {
+    "code": "8480-6",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-05-07T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-sbp-34",
+   "record_id": "dev-hdt-bf604cf7a075-sbp-34",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 168
+  },
+  {
+   "code": {
+    "code": "8462-4",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-05-07T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-dbp-35",
+   "record_id": "dev-hdt-bf604cf7a075-dbp-35",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 131
+  },
+  {
+   "code": {
+    "code": "8480-6",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-05-14T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-sbp-36",
+   "record_id": "dev-hdt-bf604cf7a075-sbp-36",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 163
+  },
+  {
+   "code": {
+    "code": "8462-4",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-05-14T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-dbp-37",
+   "record_id": "dev-hdt-bf604cf7a075-dbp-37",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 126
+  },
+  {
+   "code": {
+    "code": "8480-6",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-05-21T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-sbp-38",
+   "record_id": "dev-hdt-bf604cf7a075-sbp-38",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 160
+  },
+  {
+   "code": {
+    "code": "8462-4",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-05-21T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-dbp-39",
+   "record_id": "dev-hdt-bf604cf7a075-dbp-39",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 129
+  },
+  {
+   "code": {
+    "code": "8480-6",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-05-28T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-sbp-40",
+   "record_id": "dev-hdt-bf604cf7a075-sbp-40",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 157
+  },
+  {
+   "code": {
+    "code": "8462-4",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-05-28T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-dbp-41",
+   "record_id": "dev-hdt-bf604cf7a075-dbp-41",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 129
+  },
+  {
+   "code": {
+    "code": "8480-6",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-06-04T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-sbp-42",
+   "record_id": "dev-hdt-bf604cf7a075-sbp-42",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 160
+  },
+  {
+   "code": {
+    "code": "8462-4",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-06-04T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-dbp-43",
+   "record_id": "dev-hdt-bf604cf7a075-dbp-43",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 126
+  },
+  {
+   "code": {
+    "code": "8480-6",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-06-11T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-sbp-44",
+   "record_id": "dev-hdt-bf604cf7a075-sbp-44",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 160
+  },
+  {
+   "code": {
+    "code": "8462-4",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-06-11T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-dbp-45",
+   "record_id": "dev-hdt-bf604cf7a075-dbp-45",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 135
+  },
+  {
+   "code": {
+    "code": "8480-6",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-06-18T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-sbp-46",
+   "record_id": "dev-hdt-bf604cf7a075-sbp-46",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 160
+  },
+  {
+   "code": {
+    "code": "8462-4",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-06-18T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-dbp-47",
+   "record_id": "dev-hdt-bf604cf7a075-dbp-47",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 125
+  },
+  {
+   "code": {
+    "code": "8480-6",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-06-25T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-sbp-48",
+   "record_id": "dev-hdt-bf604cf7a075-sbp-48",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 164
+  },
+  {
+   "code": {
+    "code": "8462-4",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-06-25T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-dbp-49",
+   "record_id": "dev-hdt-bf604cf7a075-dbp-49",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 132
+  },
+  {
+   "code": {
+    "code": "8480-6",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-07-02T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-sbp-50",
+   "record_id": "dev-hdt-bf604cf7a075-sbp-50",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 163
+  },
+  {
+   "code": {
+    "code": "8462-4",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-07-02T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-dbp-51",
+   "record_id": "dev-hdt-bf604cf7a075-dbp-51",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 128
+  },
+  {
+   "code": {
+    "code": "8480-6",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-07-09T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-sbp-52",
+   "record_id": "dev-hdt-bf604cf7a075-sbp-52",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 161
+  },
+  {
+   "code": {
+    "code": "8462-4",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-07-09T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-dbp-53",
+   "record_id": "dev-hdt-bf604cf7a075-dbp-53",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 128
+  },
+  {
+   "code": {
+    "code": "8480-6",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-07-16T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-sbp-54",
+   "record_id": "dev-hdt-bf604cf7a075-sbp-54",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 163
+  },
+  {
+   "code": {
+    "code": "8462-4",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-07-16T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-dbp-55",
+   "record_id": "dev-hdt-bf604cf7a075-dbp-55",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 132
+  },
+  {
+   "code": {
+    "code": "8480-6",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-07-23T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-sbp-56",
+   "record_id": "dev-hdt-bf604cf7a075-sbp-56",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 154
+  },
+  {
+   "code": {
+    "code": "8462-4",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-07-23T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-dbp-57",
+   "record_id": "dev-hdt-bf604cf7a075-dbp-57",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 121
+  },
+  {
+   "code": {
+    "code": "8480-6",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-07-30T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-sbp-58",
+   "record_id": "dev-hdt-bf604cf7a075-sbp-58",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 161
+  },
+  {
+   "code": {
+    "code": "8462-4",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-07-30T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-dbp-59",
+   "record_id": "dev-hdt-bf604cf7a075-dbp-59",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 134
+  },
+  {
+   "code": {
+    "code": "8462-4",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-08-06T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-dbp-60",
+   "record_id": "dev-hdt-bf604cf7a075-dbp-60",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 131
+  },
+  {
+   "code": {
+    "code": "8480-6",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-08-13T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-sbp-61",
+   "record_id": "dev-hdt-bf604cf7a075-sbp-61",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 155
+  },
+  {
+   "code": {
+    "code": "8480-6",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-08-20T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-sbp-62",
+   "record_id": "dev-hdt-bf604cf7a075-sbp-62",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 166
+  },
+  {
+   "code": {
+    "code": "8462-4",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-08-20T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-dbp-63",
+   "record_id": "dev-hdt-bf604cf7a075-dbp-63",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 128
+  },
+  {
+   "code": {
+    "code": "8480-6",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-08-27T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-sbp-64",
+   "record_id": "dev-hdt-bf604cf7a075-sbp-64",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 163
+  },
+  {
+   "code": {
+    "code": "8462-4",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-08-27T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-dbp-65",
+   "record_id": "dev-hdt-bf604cf7a075-dbp-65",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 130
+  },
+  {
+   "code": {
+    "code": "8480-6",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-09-03T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-sbp-66",
+   "record_id": "dev-hdt-bf604cf7a075-sbp-66",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 157
+  },
+  {
+   "code": {
+    "code": "8462-4",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-09-03T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-dbp-67",
+   "record_id": "dev-hdt-bf604cf7a075-dbp-67",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 130
+  },
+  {
+   "code": {
+    "code": "8462-4",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-09-10T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-dbp-68",
+   "record_id": "dev-hdt-bf604cf7a075-dbp-68",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 134
+  },
+  {
+   "code": {
+    "code": "8480-6",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-09-17T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-sbp-69",
+   "record_id": "dev-hdt-bf604cf7a075-sbp-69",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 165
+  },
+  {
+   "code": {
+    "code": "8462-4",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-09-17T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-dbp-70",
+   "record_id": "dev-hdt-bf604cf7a075-dbp-70",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 130
+  },
+  {
+   "code": {
+    "code": "8480-6",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-09-24T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-sbp-71",
+   "record_id": "dev-hdt-bf604cf7a075-sbp-71",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 161
+  },
+  {
+   "code": {
+    "code": "8462-4",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-09-24T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-dbp-72",
+   "record_id": "dev-hdt-bf604cf7a075-dbp-72",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 128
+  },
+  {
+   "code": {
+    "code": "8480-6",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-10-01T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-sbp-73",
+   "record_id": "dev-hdt-bf604cf7a075-sbp-73",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 167
+  },
+  {
+   "code": {
+    "code": "8462-4",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-10-01T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-dbp-74",
+   "record_id": "dev-hdt-bf604cf7a075-dbp-74",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 122
+  },
+  {
+   "code": {
+    "code": "8480-6",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-10-08T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-sbp-75",
+   "record_id": "dev-hdt-bf604cf7a075-sbp-75",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 154
+  },
+  {
+   "code": {
+    "code": "8462-4",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-10-08T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-dbp-76",
+   "record_id": "dev-hdt-bf604cf7a075-dbp-76",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 127
+  },
+  {
+   "code": {
+    "code": "8480-6",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-10-15T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-sbp-77",
+   "record_id": "dev-hdt-bf604cf7a075-sbp-77",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 158
+  },
+  {
+   "code": {
+    "code": "8462-4",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-10-15T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-dbp-78",
+   "record_id": "dev-hdt-bf604cf7a075-dbp-78",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 131
+  },
+  {
+   "code": {
+    "code": "8480-6",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-10-22T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-sbp-79",
+   "record_id": "dev-hdt-bf604cf7a075-sbp-79",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 160
+  },
+  {
+   "code": {
+    "code": "8462-4",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-10-22T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-dbp-80",
+   "record_id": "dev-hdt-bf604cf7a075-dbp-80",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 128
+  },
+  {
+   "code": {
+    "code": "8480-6",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-10-29T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-sbp-81",
+   "record_id": "dev-hdt-bf604cf7a075-sbp-81",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 163
+  },
+  {
+   "code": {
+    "code": "8462-4",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-10-29T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-dbp-82",
+   "record_id": "dev-hdt-bf604cf7a075-dbp-82",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 122
+  },
+  {
+   "code": {
+    "code": "8480-6",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-11-05T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-sbp-83",
+   "record_id": "dev-hdt-bf604cf7a075-sbp-83",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 161
+  },
+  {
+   "code": {
+    "code": "8462-4",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-11-05T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-dbp-84",
+   "record_id": "dev-hdt-bf604cf7a075-dbp-84",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 125
+  },
+  {
+   "code": {
+    "code": "8480-6",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-11-12T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-sbp-85",
+   "record_id": "dev-hdt-bf604cf7a075-sbp-85",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 163
+  },
+  {
+   "code": {
+    "code": "8462-4",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-11-12T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-dbp-86",
+   "record_id": "dev-hdt-bf604cf7a075-dbp-86",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 129
+  },
+  {
+   "code": {
+    "code": "8480-6",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-11-19T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-sbp-87",
+   "record_id": "dev-hdt-bf604cf7a075-sbp-87",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 158
+  },
+  {
+   "code": {
+    "code": "8462-4",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-11-19T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-dbp-88",
+   "record_id": "dev-hdt-bf604cf7a075-dbp-88",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 127
+  },
+  {
+   "code": {
+    "code": "8480-6",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-11-26T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-sbp-89",
+   "record_id": "dev-hdt-bf604cf7a075-sbp-89",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 161
+  },
+  {
+   "code": {
+    "code": "8462-4",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-11-26T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-dbp-90",
+   "record_id": "dev-hdt-bf604cf7a075-dbp-90",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 130
+  },
+  {
+   "code": {
+    "code": "8480-6",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-12-03T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-sbp-91",
+   "record_id": "dev-hdt-bf604cf7a075-sbp-91",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 160
+  },
+  {
+   "code": {
+    "code": "8462-4",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-12-03T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-dbp-92",
+   "record_id": "dev-hdt-bf604cf7a075-dbp-92",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 133
+  },
+  {
+   "code": {
+    "code": "8480-6",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-12-10T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-sbp-93",
+   "record_id": "dev-hdt-bf604cf7a075-sbp-93",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 164
+  },
+  {
+   "code": {
+    "code": "8462-4",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-12-10T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-dbp-94",
+   "record_id": "dev-hdt-bf604cf7a075-dbp-94",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 134
+  },
+  {
+   "code": {
+    "code": "8480-6",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-12-17T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-sbp-95",
+   "record_id": "dev-hdt-bf604cf7a075-sbp-95",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 165
+  },
+  {
+   "code": {
+    "code": "8462-4",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-12-17T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-dbp-96",
+   "record_id": "dev-hdt-bf604cf7a075-dbp-96",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 121
+  },
+  {
+   "code": {
+    "code": "8480-6",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-12-24T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-sbp-97",
+   "record_id": "dev-hdt-bf604cf7a075-sbp-97",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 156
+  },
+  {
+   "code": {
+    "code": "8462-4",
+    "system": "http://loinc.org"
+   },
+   "device_id": "bp_cuff-f7a075",
+   "effective_time": "2026-12-24T07:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-dbp-98",
+   "record_id": "dev-hdt-bf604cf7a075-dbp-98",
+   "source": "device",
+   "unit": "mm[Hg]",
+   "value": 125
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-01-01T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-99",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-99",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.6
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-01-03T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-100",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-100",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.6
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-01-05T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-101",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-101",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.0
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-01-07T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-102",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-102",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.8
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-01-09T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-103",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-103",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.6
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-01-11T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-104",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-104",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.5
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-01-13T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-105",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-105",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 11.0
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-01-17T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-106",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-106",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.1
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-01-19T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-107",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-107",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.7
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-01-21T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-108",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-108",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.6
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-01-23T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-109",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-109",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.4
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-01-25T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-110",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-110",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.1
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-01-27T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-111",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-111",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.2
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-01-29T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-112",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-112",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.3
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-01-31T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-113",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-113",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.8
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-02-02T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-114",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-114",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.4
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-02-04T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-115",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-115",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.5
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-02-06T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-116",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-116",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.3
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-02-08T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-117",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-117",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.5
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-02-10T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-118",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-118",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.5
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-02-12T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-119",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-119",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.5
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-02-14T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-120",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-120",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.3
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-02-16T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-121",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-121",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.1
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-02-18T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-122",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-122",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.6
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-02-20T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-123",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-123",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.0
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-02-22T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-124",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-124",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 11.0
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-02-24T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-125",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-125",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.7
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-02-26T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-126",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-126",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.3
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-02-28T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-127",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-127",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.6
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-03-02T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-128",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-128",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.4
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-03-04T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-129",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-129",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.3
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-03-06T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-130",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-130",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.4
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-03-08T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-131",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-131",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.5
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-03-10T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-132",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-132",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 11.0
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-03-12T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-133",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-133",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.4
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-03-14T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-134",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-134",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 9.8
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-03-16T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-135",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-135",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.2
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-03-18T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-136",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-136",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.4
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-03-20T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-137",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-137",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.2
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-03-22T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-138",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-138",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.6
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-03-24T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-139",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-139",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.6
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-03-26T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-140",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-140",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.4
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-03-28T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-141",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-141",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.7
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-03-30T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-142",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-142",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.4
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-04-01T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-143",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-143",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.0
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-04-03T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-144",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-144",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.7
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-04-05T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-145",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-145",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.0
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-04-07T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-146",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-146",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.3
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-04-09T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-147",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-147",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.4
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-04-11T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-148",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-148",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.5
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-04-13T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-149",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-149",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.5
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-04-15T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-150",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-150",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.7
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-04-17T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-151",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-151",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.0
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-04-19T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-152",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-152",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.8
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-04-23T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-153",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-153",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.0
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-04-25T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-154",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-154",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.3
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-04-27T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-155",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-155",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.3
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-04-29T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-156",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-156",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.3
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-05-01T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-157",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-157",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.5
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-05-03T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-158",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-158",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.6
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-05-05T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-159",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-159",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.5
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-05-07T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-160",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-160",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.1
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-05-09T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-161",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-161",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.1
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-05-11T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-162",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-162",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.2
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-05-13T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-163",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-163",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 11.2
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-05-15T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-164",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-164",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.2
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-05-17T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-165",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-165",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.8
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-05-19T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-166",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-166",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.4
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-05-21T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-167",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-167",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.8
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-05-23T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-168",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-168",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.6
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-05-27T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-169",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-169",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.0
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-05-29T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-170",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-170",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.8
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-05-31T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-171",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-171",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.3
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-06-02T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-172",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-172",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.9
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-06-04T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-173",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-173",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 11.0
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-06-06T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-174",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-174",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.6
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-06-08T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-175",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-175",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.4
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-06-10T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-176",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-176",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.5
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-06-12T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-177",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-177",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 11.0
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-06-14T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-178",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-178",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.9
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-06-16T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-179",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-179",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 11.1
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-06-18T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-180",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-180",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.8
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-06-20T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-181",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-181",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.7
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-06-22T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-182",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-182",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.7
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-06-24T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-183",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-183",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.5
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-06-26T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-184",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-184",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 11.2
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-06-28T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-185",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-185",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.9
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-06-30T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-186",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-186",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.2
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-07-02T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-187",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-187",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.7
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-07-04T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-188",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-188",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.2
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-07-06T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-189",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-189",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.7
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-07-08T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-190",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-190",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.5
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-07-10T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-191",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-191",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.2
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-07-12T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-192",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-192",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.0
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-07-14T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-193",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-193",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.3
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-07-16T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-194",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-194",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.6
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-07-20T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-195",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-195",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.6
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-07-22T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-196",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-196",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.7
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-07-26T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-197",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-197",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.9
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-07-28T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-198",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-198",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 11.0
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-07-30T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-199",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-199",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.3
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-08-01T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-200",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-200",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.3
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-08-03T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-201",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-201",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.4
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-08-07T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-202",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-202",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.0
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-08-09T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-203",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-203",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.7
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-08-11T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-204",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-204",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.7
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-08-13T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-205",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-205",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.8
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-08-15T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-206",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-206",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.9
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-08-17T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-207",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-207",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.2
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-08-19T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-208",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-208",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.3
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-08-21T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-209",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-209",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.3
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-08-23T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-210",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-210",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.4
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-08-25T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-211",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-211",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.1
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-08-27T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-212",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-212",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.3
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-08-29T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-213",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-213",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.4
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-09-02T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-214",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-214",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 11.0
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-09-04T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-215",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-215",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 11.2
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-09-06T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-216",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-216",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.9
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-09-08T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-217",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-217",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.6
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-09-10T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-218",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-218",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.7
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-09-12T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-219",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-219",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.6
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-09-14T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-220",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-220",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.5
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-09-16T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-221",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-221",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.6
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-09-18T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-222",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-222",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.2
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-09-20T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-223",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-223",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.5
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-09-22T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-224",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-224",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.3
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-09-24T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-225",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-225",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.1
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-09-26T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-226",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-226",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 11.4
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-09-28T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-227",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-227",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.2
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-09-30T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-228",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-228",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.9
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-10-02T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-229",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-229",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.3
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-10-04T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-230",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-230",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.7
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-10-06T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-231",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-231",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.8
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-10-08T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-232",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-232",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.4
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-10-10T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-233",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-233",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.7
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-10-12T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-234",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-234",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.4
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-10-14T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-235",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-235",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.6
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-10-16T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-236",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-236",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 9.9
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-10-18T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-237",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-237",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.3
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-10-20T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-238",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-238",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.3
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-10-22T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-239",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-239",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.4
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-10-24T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-240",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-240",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.5
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-10-26T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-241",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-241",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.3
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-10-28T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-242",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-242",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.2
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-10-30T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-243",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-243",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 11.0
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-11-01T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-244",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-244",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.2
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-11-03T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-245",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-245",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.2
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-11-05T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-246",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-246",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.9
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-11-07T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-247",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-247",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.4
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-11-09T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-248",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-248",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.4
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-11-11T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-249",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-249",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.3
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-11-13T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-250",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-250",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.2
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-11-15T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-251",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-251",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.2
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-11-17T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-252",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-252",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.7
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-11-19T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-253",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-253",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.7
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-11-21T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-254",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-254",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 9.9
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-11-23T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-255",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-255",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.6
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-11-25T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-256",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-256",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.6
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-11-29T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-257",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-257",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 11.0
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-12-01T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-258",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-258",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.9
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-12-03T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-259",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-259",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.6
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-12-05T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-260",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-260",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.8
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-12-07T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-261",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-261",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.7
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-12-09T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-262",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-262",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.2
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-12-11T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-263",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-263",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.3
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-12-13T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-264",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-264",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.3
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-12-15T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-265",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-265",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.2
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-12-17T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-266",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-266",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.4
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-12-19T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-267",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-267",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.4
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-12-21T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-268",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-268",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 11.0
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-12-23T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-269",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-269",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.1
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-12-25T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-270",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-270",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.4
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-12-27T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-271",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-271",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.4
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-12-29T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-272",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-272",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.9
+  },
+  {
+   "code": {
+    "code": "15074-8",
+    "system": "http://loinc.org"
+   },
+   "device_id": "glucometer-f7a075",
+   "effective_time": "2026-12-31T09:00:00+00:00",
+   "hdt_id": "hdt-bf604cf7a075",
+   "idempotency_key": "dev-hdt-bf604cf7a075-glucose-273",
+   "record_id": "dev-hdt-bf604cf7a075-glucose-273",
+   "source": "device",
+   "unit": "mmol/L",
+   "value": 10.8
+  }
+ ],
+ "scenario": "hypertension, type 2 diabetes and CKD stage 3",
+ "sex": "male",
+ "tenant_id": "fac-b"
+}

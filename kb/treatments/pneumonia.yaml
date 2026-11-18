@@ -1,0 +1,144 @@
+# Community-acquired pneumonia. Adults: AWaRe chapter 12 (page 166); children: page 168.
+# Severity for adults follows CURB-65 (severity.pneumonia.curb65).
+
+- id: tx.pneumonia.adult_mild.amoxicillin
+  condition: cond.pneumonia_community
+  severity: mild
+  preference: first_line
+  regimen: dose.amoxicillin_oral_adult_cap
+  duration_days: 5
+  eligibility: {patient_group: adult, oral_intake: true}
+  provenance:
+    source: who-aware-2022
+    section: 12. Community-acquired pneumonia – mild
+    page: 166
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: tx.pneumonia.adult_mild.phenoxymethylpenicillin
+  condition: cond.pneumonia_community
+  severity: mild
+  preference: first_line
+  regimen: dose.phenoxymethylpenicillin_oral_adult_cap
+  duration_days: 5
+  eligibility: {patient_group: adult, oral_intake: true}
+  provenance:
+    source: who-aware-2022
+    section: 12. Community-acquired pneumonia – mild
+    page: 166
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: tx.pneumonia.adult_mild.amoxicillin_clavulanate
+  condition: cond.pneumonia_community
+  severity: mild
+  preference: second_line
+  regimen: dose.amoxicillin_clavulanate_oral_adult_cap
+  duration_days: 5
+  eligibility: {patient_group: adult, oral_intake: true}
+  provenance:
+    source: who-aware-2022
+    section: 12. Community-acquired pneumonia – mild
+    page: 166
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: tx.pneumonia.adult_mild.doxycycline
+  condition: cond.pneumonia_community
+  severity: mild
+  preference: second_line
+  regimen: dose.doxycycline_oral_adult
+  duration_days: 5
+  eligibility: {patient_group: adult, oral_intake: true, pregnancy: [none]}
+  exclusions: [ix.tetracyclines.pregnancy]
+  provenance:
+    source: who-aware-2022
+    section: 12. Community-acquired pneumonia – mild
+    page: 166
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: tx.pneumonia.adult_severe.third_generation_cephalosporin
+  condition: cond.pneumonia_community
+  severity: severe
+  preference: first_line
+  regimen: [dose.cefotaxime_iv_adult_severe, dose.ceftriaxone_iv_adult_severe]
+  duration_days: 5
+  eligibility: {patient_group: adult}
+  add_on: {regimen: dose.clarithromycin_adult, when: CURB-65 score of 2 or more}
+  provenance:
+    source: who-aware-2022
+    section: 12. Community-acquired pneumonia – mild
+    page: 166
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: tx.pneumonia.adult_severe.amoxicillin_clavulanate
+  condition: cond.pneumonia_community
+  severity: severe
+  preference: second_line
+  regimen: dose.amoxicillin_clavulanate_iv_adult
+  duration_days: 5
+  eligibility: {patient_group: adult}
+  add_on: {regimen: dose.clarithromycin_adult, when: CURB-65 score of 2 or more}
+  provenance:
+    source: who-aware-2022
+    section: 12. Community-acquired pneumonia – mild
+    page: 166
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: tx.pneumonia.child_mild.amoxicillin
+  condition: cond.pneumonia_community
+  severity: mild
+  preference: first_line
+  regimen: dose.amoxicillin_oral_child_cap
+  duration_days_by_setting:
+  - {setting: low HIV prevalence and no chest indrawing, days: 3}
+  - {setting: high HIV prevalence and chest indrawing, days: 5}
+  eligibility: {patient_group: child, oral_intake: true}
+  provenance:
+    source: who-aware-2022
+    section: 12. Community-acquired pneumonia – mild
+    page: 168
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: tx.pneumonia.child_severe.penicillin_gentamicin
+  condition: cond.pneumonia_community
+  severity: severe
+  preference: first_line
+  regimen: [dose.amoxicillin_parenteral_child, dose.ampicillin_parenteral_child,
+            dose.benzylpenicillin_iv_child]
+  combined_with: dose.gentamicin_iv_child
+  add_on: {regimen: dose.cotrimoxazole_child_pcp, when: HIV positive and under 1 year of age}
+  eligibility: {patient_group: child}
+  provenance:
+    source: who-aware-2022
+    section: 12. Community-acquired pneumonia – mild
+    page: 168
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: tx.pneumonia.child_severe.third_generation_cephalosporin
+  condition: cond.pneumonia_community
+  severity: severe
+  preference: second_line
+  regimen: [dose.cefotaxime_iv_child, dose.ceftriaxone_iv_child]
+  when: No clinical response to first choice after 48 to 72 hours.
+  eligibility: {patient_group: child}
+  provenance:
+    source: who-aware-2022
+    section: 12. Community-acquired pneumonia – mild
+    page: 168
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified

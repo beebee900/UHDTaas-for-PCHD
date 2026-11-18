@@ -1,0 +1,109 @@
+# Open datasets of design 06, 6.5. `bytes` was measured with an HTTP HEAD request before any
+# download. `status: approved` datasets may be fetched; every other dataset waits for
+# approval (size and terms). Hetionet and the OBO ontologies are fetched by WP13.
+- id: mitdb
+  title: MIT-BIH Arrhythmia Database 1.0.0
+  use: Arrhythmia beat classifier
+  landing: https://physionet.org/content/mitdb/1.0.0/
+  url: https://physionet.org/static/published-projects/mitdb/mit-bih-arrhythmia-database-1.0.0.zip
+  bytes: 77030320
+  licence: Open Data Commons Attribution License v1.0
+  citation: Moody GB, Mark RG. The impact of the MIT-BIH Arrhythmia Database. IEEE Eng Med Biol 2001;20(3):45-50.
+  status: approved
+- id: ptb-xl
+  title: PTB-XL, a large publicly available electrocardiography dataset 1.0.3
+  use: AF rhythm classifier, ECG replay
+  landing: https://physionet.org/content/ptb-xl/1.0.3/
+  url: https://physionet.org/static/published-projects/ptb-xl/ptb-xl-a-large-publicly-available-electrocardiography-dataset-1.0.3.zip
+  bytes: 1839504686
+  licence: Creative Commons Attribution 4.0
+  citation: 'Wagner P, Strodthoff N, Bousseljot R, Samek W, Schaeffter T. PTB-XL, a large publicly available electrocardiography dataset (version 1.0.3). PhysioNet, 2022. https://doi.org/10.13026/kfzx-aw45'
+  status: approved
+- id: sleep-edfx
+  title: Sleep-EDF Database Expanded 1.0.0
+  use: Sleep staging, EEG replay
+  landing: https://physionet.org/content/sleep-edfx/1.0.0/
+  url: https://physionet.org/static/published-projects/sleep-edfx/sleep-edf-database-expanded-1.0.0.zip
+  bytes: 8715317980
+  licence: Open Data Commons Attribution License v1.0
+  citation: 'Kemp B, Zwinderman AH, Tuk B, Kamphuisen HAC, Oberye JJL. Analysis of a sleep-dependent neuronal feedback loop: the slow-wave microcontinuity of the EEG. IEEE-BME 2000;47(9):1185-94.'
+  status: approved
+- id: wesad
+  title: WESAD (Wearable Stress and Affect Detection)
+  use: Stress model
+  landing: https://ubi29.informatik.uni-siegen.de/usi/data_wesad.html
+  url: https://uni-siegen.sciebo.de/s/HGdUkoNlW1Ub0Gx
+  bytes: null
+  licence: Academic, non-commercial use (terms on the landing page)
+  citation: Schmidt P, Reiss A, Duerichen R, Marberger C, Van Laerhoven K. Introducing WESAD, a multimodal dataset for wearable stress and affect detection. ICMI 2018.
+  status: approved
+  note: The download is a shared folder link; the size is shown only on the provider page.
+- id: nih-malaria-cells
+  title: NIH/NLM malaria cell images (thin blood smear)
+  use: Microscopy second reader
+  landing: https://lhncbc.nlm.nih.gov/LHC-research/LHC-projects/image-processing/malaria-datasheet.html
+  url: https://data.lhncbc.nlm.nih.gov/public/Malaria/cell_images.zip
+  bytes: 353452851
+  licence: null
+  citation: Rajaraman S, Antani SK, Poostchi Mohammadabadi M, et al. Pre-trained convolutional neural networks as feature extractors toward improved malaria parasite detection in thin blood smear images. PeerJ 2018;6:e4568.
+  status: pending
+  note: The datasheet names no licence; the terms are to be confirmed before use.
+- id: menyo-20k
+  title: MENYO-20k Yoruba-English parallel corpus
+  use: LoRA language adapter data (Yoruba)
+  landing: https://github.com/uds-lsv/menyo-20k_MT
+  url: https://github.com/uds-lsv/menyo-20k_MT/archive/refs/heads/master.zip
+  bytes: null
+  licence: Creative Commons Attribution-NonCommercial 4.0 International
+  citation: Adelani DI, Ruiter D, Alabi JO, et al. The effect of domain and diacritics in Yoruba-English neural machine translation. MT Summit 2021.
+  status: approved
+  note: Fetched on the Oracle VM by evaluation.language.fetch (WP14d); sizes and hashes are in downloads.json of the VM out folder.
+- id: mafand-mt
+  title: MAFAND-MT English to Hausa, Igbo, Nigerian Pidgin and Yoruba news translations
+  use: LoRA language adapter data and held-out translation test (Hausa, Igbo, Pidgin, Yoruba)
+  landing: https://github.com/masakhane-io/lafand-mt
+  url: null
+  bytes: null
+  licence: Creative Commons Attribution-NonCommercial 4.0 International (dataset card)
+  citation: Adelani D, Alabi J, Fan A, et al. A few thousand translations go a long way! Leveraging pre-trained models for African news translation. NAACL 2022. https://doi.org/10.18653/v1/2022.naacl-main.223
+  status: approved
+  note: Fetched on the Oracle VM by evaluation.language.fetch (WP14d) from raw.githubusercontent.com/masakhane-io/lafand-mt/main/data/json_files. The repository code is GPL-3.0; the data card states CC BY-NC 4.0.
+- id: waxal-ibo-tts
+  title: Google WaxalNLP Igbo text-to-speech recordings (ibo_tts)
+  use: Fine-tune the Igbo MMS-TTS voice from mms-tts-yor
+  landing: https://huggingface.co/datasets/google/WaxalNLP
+  url: null
+  bytes: 741921562
+  licence: CC-BY-SA-4.0 (Media Trust, per the dataset card TTS table)
+  citation: Google Research. WaxalNLP, African language speech datasets. Hugging Face, 2025.
+  status: approved
+  note: Fetched on the Oracle VM by evaluation.language.fetch (WP14d); train part 0, validation and test parquet files of data/TTS/ibo.
+- id: chest-xray-samples
+  title: Public chest X-ray samples for the imaging demo studies
+  use: Imaging demo studies (matched to TorchXRayVision labels)
+  landing: null
+  url: null
+  bytes: null
+  licence: null
+  citation: null
+  status: pending
+  note: The source is chosen at download approval; until then imaging studies carry generated test pixels.
+- id: mediapipe-pose-lite
+  title: MediaPipe Pose Landmarker (lite), float16 version 1
+  use: Phone video pose landmarks for gait features
+  landing: https://ai.google.dev/edge/mediapipe/solutions/vision/pose_landmarker
+  url: https://storage.googleapis.com/mediapipe-models/pose_landmarker/pose_landmarker_lite/float16/1/pose_landmarker_lite.task
+  bytes: 5777746
+  licence: Apache License 2.0 (Model Card BlazePose GHUM 3D)
+  citation: 'Bazarevsky V, Grishchenko I, Raveendran K, Zhu T, Zhang F, Grundmann M. BlazePose: on-device real-time body pose tracking. arXiv:2006.10204, 2020.'
+  status: approved
+- id: yoon-2012-treadmill
+  title: Treadmill walking at belt speeds 0.5, 1.0 and 1.5 m/s (additional file 1)
+  use: Test clip for the phone video gait pipeline
+  landing: https://commons.wikimedia.org/wiki/File:A-novel-walking-speed-estimation-scheme-and-its-application-to-treadmill-control-for-gait-1743-0003-9-62-S1.ogv
+  url: https://upload.wikimedia.org/wikipedia/commons/1/1d/A-novel-walking-speed-estimation-scheme-and-its-application-to-treadmill-control-for-gait-1743-0003-9-62-S1.ogv
+  bytes: 3798720
+  licence: Creative Commons Attribution 2.0
+  citation: 'Yoon J, Park H, Damiano D. A novel walking speed estimation scheme and its application to treadmill control for gait rehabilitation. J NeuroEng Rehabil 2012;9:62. https://doi.org/10.1186/1743-0003-9-62'
+  status: approved
+  note: 'Side view, 45 s at 29.97 frames/s, 720 x 480. On-screen labels: walking (1.0 s), 0.5 m/s (4.5 s), 1.0 m/s (12.0 s), 1.5 m/s (19.5 s), 1.0 m/s (28.5 s), 0.5 m/s (35.5 s), stop (42.5 s).'

@@ -1,0 +1,33 @@
+# Scripted guideline questions (WP21 acceptance). A question passes when one of the top-5
+# citations is from `source` and its section title contains `section` (case-insensitive), or
+# matches one of the `accept` pairs: other guideline sections that answer the question.
+- {q: "What is the first-line treatment for uncomplicated falciparum malaria?", source: who-malaria-2026, section: artemisinin-based combination therapy, accept: [[who-pocketbook-children-2013, uncomplicated p. falciparum malaria]]}
+- {q: "How is artemether-lumefantrine dosed by body weight?", source: who-malaria-2026, section: dosing of acts}
+- {q: "Which antimalarial is recommended for pregnant women in the first trimester?", source: who-malaria-2026, section: pregnant and lactating women}
+- {q: "What is the treatment of severe malaria with artesunate?", source: who-malaria-2026, section: artesunate}
+- {q: "What pre-referral treatment is given for severe malaria when referral is delayed?", source: who-malaria-2026, section: pre-referral}
+- {q: "How should a suspected malaria case be confirmed with a parasitological test?", source: who-malaria-2026, section: diagnosing malaria}
+- {q: "How is uncomplicated hyperparasitaemia managed?", source: who-malaria-2026, section: hyperparasitaemia}
+- {q: "Single low dose primaquine to reduce transmission of falciparum malaria", source: who-malaria-2026, section: transmissibility}
+- {q: "Which antibiotic treats mild community-acquired pneumonia?", source: who-aware-2022, section: community-acquired pneumonia}
+- {q: "What empiric antibiotics are used for severe community-acquired pneumonia?", source: who-aware-2022, section: community-acquired pneumonia – severe}
+- {q: "What is the antibiotic treatment of enteric fever?", source: who-aware-2022, section: enteric fever}
+- {q: "Antibiotic choice for lower urinary tract infection (cystitis)", source: who-aware-2022, section: lower urinary tract infection}
+- {q: "How is acute pyelonephritis treated?", source: who-aware-2022, section: upper urinary tract infection, accept: [[who-imai-dcm-2011-v2, acute pyelonephritis]]}
+- {q: "Empiric antibiotics for sepsis in adults including septic shock", source: who-aware-2022, section: sepsis in adults, accept: [[ssc-2021, adults with sepsis]]}
+- {q: "Antibiotics for sepsis in neonates and children", source: who-aware-2022, section: sepsis in neonates}
+- {q: "How are the stages of acute kidney injury defined by creatinine and urine output?", source: kdigo-aki-2012, section: staging of aki}
+- {q: "How are the NEWS2 parameters scored?", source: rcp-news2-2017, section: news}
+- {q: "At what blood pressure should antihypertensive drug treatment start?", source: who-htn-2021, section: blood pressure threshold}
+- {q: "What first-line antiretroviral regimen should be started in adults?", source: who-hiv-2021, section: what to start}
+- {q: "How is the response to antiretroviral therapy monitored with viral load?", source: who-hiv-2021, section: monitoring the response to art}
+- {q: "Hydroxyurea therapy for sickle cell disease", source: ng-scd-2014, section: hydroxyurea}
+- {q: "What is the case definition of a suspected Lassa fever case?", source: ncdc-lassa-2018, section: suspected case}
+- {q: "Which drug regimen treats drug-susceptible pulmonary tuberculosis?", source: who-tb-m4-2026, section: regimen}
+- {q: "Rapid molecular test for detection of TB and rifampicin resistance", source: who-tb-m3-2025, section: lc-anaat, accept: [[who-tb-m3-2025, initial tests for tb diagnosis with drug]]}
+- {q: "How is magnesium sulfate given for severe pre-eclampsia?", source: who-imai-dcm-2011-v1, section: magnesium sulfate}
+- {q: "Haemoglobin cutoffs that define anaemia and its severity", source: who-hb-2024, section: anaemia}
+- {q: "How do I score the PHQ-9 and grade depression severity?", source: phq-manual, section: phq-9}
+- {q: "What is the starting dose of fluoxetine for depression?", source: who-mhgap-ig-2016, section: fluoxetine, accept: [[who-imai-dcm-2011-v2, fluoxetine for depression]]}
+- {q: "Management of an acute asthma exacerbation in primary care", source: who-pen-2020, section: asthma}
+- {q: "Managing complications and delaying progression of chronic kidney disease", source: kdigo-ckd-2024, section: delaying ckd progression, accept: [[kdigo-ckd-2024-full, delaying ckd progression]]}

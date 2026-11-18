@@ -1,0 +1,110 @@
+{
+  "resourceType": "PlanDefinition",
+  "id": "tb-pulmonary",
+  "url": "https://atra.health/fhir/PlanDefinition/tb_pulmonary",
+  "version": "1.0.0",
+  "name": "tb_pulmonary",
+  "title": "Pulmonary tuberculosis",
+  "type": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/plan-definition-type",
+        "code": "clinical-protocol"
+      }
+    ]
+  },
+  "status": "active",
+  "useContext": [
+    {
+      "code": {
+        "system": "http://terminology.hl7.org/CodeSystem/usage-context-type",
+        "code": "focus"
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "154283005"
+          }
+        ]
+      }
+    }
+  ],
+  "extension": [
+    {
+      "url": "https://atra.health/fhir/StructureDefinition/kb-entry",
+      "valueString": "cond.tb_pulmonary"
+    }
+  ],
+  "action": [
+    {
+      "id": "treat",
+      "title": "Choose treatment",
+      "selectionBehavior": "exactly-one",
+      "action": [
+        {
+          "id": "treat-drug_susceptible",
+          "title": "Treat (drug susceptible)",
+          "condition": [
+            {
+              "kind": "applicability",
+              "expression": {
+                "language": "text/fhirpath",
+                "expression": "%severity = 'drug_susceptible'"
+              }
+            }
+          ],
+          "selectionBehavior": "exactly-one",
+          "action": [
+            {
+              "id": "tx.tb.ds.six_month_hrze",
+              "title": "hrze fdc adult + hr fdc adult",
+              "selectionBehavior": "all",
+              "action": [
+                {
+                  "id": "dose.hrze_fdc_adult",
+                  "title": "hrze fdc adult",
+                  "definitionCanonical": "https://atra.health/fhir/ActivityDefinition/dose.hrze_fdc_adult"
+                },
+                {
+                  "id": "dose.hr_fdc_adult",
+                  "title": "hr fdc adult",
+                  "definitionCanonical": "https://atra.health/fhir/ActivityDefinition/dose.hr_fdc_adult"
+                }
+              ],
+              "extension": [
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/kb-entry",
+                  "valueString": "tx.tb.ds.six_month_hrze"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/preference",
+                  "valueCode": "first_line"
+                },
+                {
+                  "url": "https://atra.health/fhir/StructureDefinition/eligibility",
+                  "valueString": "{\"patient_group\": \"adult\", \"pregnancy\": [\"none\", \"t1\", \"t2\", \"t3\"]}"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "monitor",
+      "title": "Monitor with the early-warning score",
+      "extension": [
+        {
+          "url": "https://atra.health/fhir/StructureDefinition/kb-entry",
+          "valueString": "news2.monitoring"
+        }
+      ]
+    },
+    {
+      "id": "check-in",
+      "title": "Daily check-in",
+      "definitionCanonical": "https://atra.health/fhir/Questionnaire/check-in"
+    }
+  ]
+}

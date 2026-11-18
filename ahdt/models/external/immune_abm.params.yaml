@@ -1,0 +1,66 @@
+# Within-host immune response agent-based model. Every rate is an assumption of this model;
+# only the memory fraction follows a published measurement.
+model_id: ahdt.immune_lymphatic.t_cell_b_cell_and_macrophage
+sources:
+- id: murali-krishna1998
+  citation: "Murali-Krishna K, Altman JD, Suresh M, Sourdive DJ, Zajac AJ, Miller JD,
+    Slansky J, Ahmed R. Counting antigen-specific CD8 T cells: a reevaluation of bystander
+    activation during viral infection. Immunity. 1998;8:177-187.
+    doi:10.1016/s1074-7613(00)80470-7"
+- id: atra-assumption
+  citation: ATRA design 01 rule R5 assumption register
+params:
+  grid_size: {value: 30, unit: '{cells}', source: atra-assumption, assumption: true,
+    justification: "Lymph node section of 30 x 30 grid cells at 100 micrometres each (3 mm square); the size keeps one run under a minute"}
+  naive_t: {value: 1000, unit: '{cells}', source: atra-assumption, assumption: true,
+    justification: "Population of the modelled section, sized so that dendritic cell contacts occur on the hour scale; not a body-wide count"}
+  naive_b: {value: 300, unit: '{cells}', source: atra-assumption, assumption: true,
+    justification: "Population of the modelled section, one third of the naive T cell number"}
+  macrophages: {value: 60, unit: '{cells}', source: atra-assumption, assumption: true,
+    justification: "Resident antigen-clearing cells of the modelled section"}
+  p_activation: {value: 0.05, unit: '1', source: atra-assumption, assumption: true,
+    justification: "No published per-tick contact outcome matches this grid; chosen so that priming takes a few days"}
+  division_ticks: {value: 16, unit: '{ticks}', source: atra-assumption, assumption: true,
+    justification: "A tick is 30 minutes, so 16 ticks is 8 hours; the interval is an assumption of this model"}
+  effector_limit: {value: 2500, unit: '{cells}', source: atra-assumption, assumption: true,
+    justification: "Caps clonal expansion at the modelled section size; the peak magnitude is not calibrated to data"}
+  effector_death_rate: {value: 0.005, unit: '1', source: atra-assumption, assumption: true,
+    justification: "Sets contraction over days after clearance; the rate is an assumption"}
+  memory_fraction: {value: 0.05, unit: '1', source: murali-krishna1998, note: "fraction of contracting effector cells that become memory cells",
+    verified: false, justification: "The paper reports memory cells at about 5 percent of the peak effector number; the value was not re-checked against the figure data"}
+  p_b_activation: {value: 0.02, unit: '1', source: atra-assumption, assumption: true,
+    justification: "T cell help is required; the rate is an assumption"}
+  antibody_secretion: {value: 0.002, unit: '1', source: atra-assumption, assumption: true,
+    justification: "Arbitrary antibody units; scaled with the neutralisation rate"}
+  plasma_death_rate: {value: 0.0015, unit: '1', source: atra-assumption, assumption: true,
+    justification: "Short-lived plasma cells; the rate is an assumption"}
+  neutralisation: {value: 0.0004, unit: '1', source: atra-assumption, assumption: true,
+    justification: "Arbitrary units paired with antibody_secretion"}
+  antibody_half_life_ticks: {value: 1008, unit: '{ticks}', source: atra-assumption, assumption: true,
+    justification: "1008 ticks is 21 days, the half-life of IgG in blood; applied to the modelled section"}
+  uptake_resting: {value: 0.0005, unit: '1', source: atra-assumption, assumption: true,
+    justification: "Resting macrophages clear slowly; the rate is an assumption"}
+  uptake_active: {value: 0.004, unit: '1', source: atra-assumption, assumption: true,
+    justification: "Activation by effector T cells raises uptake several fold; the factor is an assumption"}
+  uptake_half: {value: 50, unit: '1', source: atra-assumption, assumption: true,
+    justification: "Saturating uptake; the level is an assumption"}
+  dendritic_arrival: {value: 0.1, unit: '{cells}', source: atra-assumption, assumption: true,
+    justification: "Antigen-driven recruitment; the rate is an assumption"}
+  dendritic_lifetime_ticks: {value: 100, unit: '{ticks}', source: atra-assumption, assumption: true,
+    justification: "100 ticks is about 2 days of antigen presentation; an assumption"}
+  antigen_growth: {value: 0.02, unit: '1', source: atra-assumption, assumption: true,
+    justification: "Growth per 30-minute tick of a replicating pathogen, about 2.6 fold per day; set so that antigen peaks on day 2 to 3 and clears within a week"}
+  antigen_ceiling: {value: 100000.0, unit: '1', source: atra-assumption, assumption: true,
+    justification: "Arbitrary units"}
+  antigen_half: {value: 100, unit: '1', source: atra-assumption, assumption: true,
+    justification: "Arbitrary units"}
+  antigen_floor: {value: 0.5, unit: '1', source: atra-assumption, assumption: true,
+    justification: "Arbitrary units; removes a numerical tail"}
+  antigen_clearance_threshold: {value: 1, unit: '1', source: atra-assumption, assumption: true,
+    justification: "Arbitrary units"}
+  effector_kill: {value: 0.03, unit: '1', source: atra-assumption, assumption: true,
+    justification: "Maximum fraction of antigen removed per tick by effector T cells; tuned so that clearance follows the effector expansion over days"}
+  effector_kill_half: {value: 300, unit: '{cells}', source: atra-assumption, assumption: true,
+    justification: "Effector number at half the maximum kill rate; the value is an assumption"}
+  p_memory_recall: {value: 0.2, unit: '1', source: atra-assumption, assumption: true,
+    justification: "Faster secondary response; the rate is an assumption"}

@@ -1,0 +1,42 @@
+# CKD drug recommendations (KDIGO 2024, chapter 3). Drug classes; the agent and dose follow the
+# local formulary.
+
+- id: tx.ckd.ras_inhibitor
+  condition: cond.ckd
+  severity: [G1, G2, G3a, G3b, G4]
+  preference: first_line
+  regimen: null
+  drug_class: ACE inhibitor or ARB at the highest approved tolerated dose
+  indications:
+  - diabetes with albuminuria A2 or A3 (recommended)
+  - no diabetes with albuminuria A3 (recommended) or A2 (suggested)
+  continue_below_egfr: 30
+  avoid: Any combination of ACE inhibitor, ARB and direct renin inhibitor.
+  exclusions: [ix.ras_blockers.pregnancy]
+  provenance:
+    source: kdigo-ckd-2024
+    section: "3: Delaying CKD progression and managing complications"
+    page: 11
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: tx.ckd.sglt2_inhibitor
+  condition: cond.ckd
+  severity: [G1, G2, G3a, G3b, G4]
+  preference: first_line
+  regimen: null
+  drug_class: SGLT2 inhibitor
+  indications:
+  - {with: type 2 diabetes, egfr_at_or_above: 20, strength: recommended}
+  - {egfr_at_or_above: 20, acr_at_or_above_mg_g: 200, strength: recommended}
+  - {with: heart failure, strength: recommended}
+  - {egfr_from: 20, egfr_to: 45, acr_below_mg_g: 200, strength: suggested}
+  continue_when_egfr_falls_below: 20
+  provenance:
+    source: kdigo-ckd-2024
+    section: "3: Delaying CKD progression and managing complications"
+    page: 11
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified

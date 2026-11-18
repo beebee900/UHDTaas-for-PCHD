@@ -1,0 +1,457 @@
+{
+ "lang": "pcm",
+ "translation": {
+  "n": 40,
+  "n_base": 16,
+  "chrf_adapter": 55.08902642940552,
+  "chrf_base": 19.564550008677003,
+  "reference_source": "MAFAND-MT test",
+  "items": [
+   {
+    "english": "Solid minerals and natural resources have no business staying a day longer in the Exclusive list.",
+    "reference": "Solid minerals and natural resource dem no get any business to stay pass one day inside Exclusive list.",
+    "adapter": "Solid mineral and natural resource don no business stay a day longer in di Exclusive list.",
+    "base": "Kwesu kuma, kwesu kuma, nipa kwa mbaa waa ku sida ahayi."
+   },
+   {
+    "english": "The courts may also adapt to recognise electronic transactions in the absence of legislation or private contract.",
+    "reference": "Di court fit also adapt to recognise electronic transaction for di absence of legislation or private contract.",
+    "adapter": "Di court dey fit adapt tok say e don recognize electronic transaction wey no di law or private contract",
+    "base": "Kwesu kuma, kwa mba n'imele naa kwa kwesu kuma, kwa mba n'imele naa kwa kwesu kuma."
+   },
+   {
+    "english": "He said, Our Christian neighbours know well that Shariah is the Allah-given fundamental human right of Muslims.",
+    "reference": "He tok say di christian dem know say shariah na di right wey Allah don carry dash Muslims.",
+    "adapter": "He say, we Christian neighbour dey know well di Shariah be di Allah-given fundamental human right of Muslim.",
+    "base": "Kuchun, Muslim ahadithin ni kuma kuma shariah ni kuma Allah-ga-dan fahimniyan human righti Muslim ahadithin ni kuma shariah."
+   },
+   {
+    "english": "The prefectures of Hokkaido, Okayama and Hiroshima were likely to be under the measure from Sunday to the end of May, Economic Revitalisation Minister, Yasutoshi Nishimura, told reporters.",
+    "reference": "Di prefecture for inside Hokkaido, Okayama and Hiroshima dey likely to get di measure from Sunday go enter end of May, as Economic Revitalisation Minister, Yasutoshi Nishimura, tell news pipo.",
+    "adapter": "Di prefecti wey di prefects tok say for Hokkai, Okayama and Hiroshima dey likely go dey under di measure from Sunday to di end of May, Economic Revitalisation Minister, Yasutoshi Nishimura tell reporter.",
+    "base": "Hokkaido, Okayama, dan Hiroshima akan diperbolehkan untuk mengalami perubahan dari Sabtu hingga akhir Mei, Menteri Ekonomi itu, Yasutoshi Nishimura, menyatakan kepada berita."
+   },
+   {
+    "english": "Israeli president holds talks in search for new govt",
+    "reference": "President for Israel don hold tok to take find new govt",
+    "adapter": "Israeli president hold talk for find new govt",
+    "base": "Israeli president, kuma, gaba naa, ka madiyaa googu googa da isticmaan."
+   },
+   {
+    "english": "But because Nigeria was the target, he pointedly left it out from his itinerary.",
+    "reference": "But bikos Nigeria na di target, he pointedly komot am from im itinerary.",
+    "adapter": "But because Nigeria be di target, hin pointe leave dia itinerary.",
+    "base": "But niyanin ni gari ni ni ni ni ni ni ni ni ni ni ni ni ni ni ni ni ni ni ni ni ni ni ni ni ni ni ni ni ni ni ni ni ni ni ni ni ni ni ni ni ni ni ni ni ni ni ni ni ni ni ni ni ni ni ni ni ni ni ni ni ni ni ni ni ni ni ni ni ni ni ni ni ni"
+   },
+   {
+    "english": "The inconvenience is huge.",
+    "reference": "Di inconvenience plenty.",
+    "adapter": "Di inconvenience be huge.",
+    "base": "Kun fahimma ni, kuma."
+   },
+   {
+    "english": "The Americans also have a drone base in Niger.",
+    "reference": "Di America pipo also get drone base for inside Niger.",
+    "adapter": "Di americans don dey have drone base for Niger",
+    "base": "Akan iya, Amerika ta da drone ba bade Niger."
+   },
+   {
+    "english": "This cowardly act is calculated to instigate Nigerians against each other, particularly Northerners, against the Igbo living outside the South East.",
+    "reference": "Di coward act na to instigate Naija pipo make dem for face each oda, make northerners for face Igbo pipo wey dey live outside South East",
+    "adapter": "This cowardly act na calculate to instigate Nigerians against each other, particularly northerners, against di Igbo living outside di South East.",
+    "base": "Igbo niyan oye, kuma nipa niyan oye. Oke, iyi niyan oye."
+   },
+   {
+    "english": "Citing similar offenses in the past, the FA decided to punish Chelsea.",
+    "reference": "Wit di same kind of offence for di past, di FA decide say dem go punish Chelsea.",
+    "adapter": "Cite similar offense wey dem make before, di FA decide punish Chelsea.",
+    "base": "Kuti kuma kuma, FA ni gba ba ba gbo chibin' bayanuwa n'iyan."
+   },
+   {
+    "english": "Combatting them will be very difficult so long as the Malian state does not exercise full sovereignty over these regions, he said.",
+    "reference": "He tok say to fight dem go dey very difficult as long say Mali as a kontri no get full charge ova di region dem.",
+    "adapter": "Combatin dem hard so long as di Malian state don tok no full sovereignty over dis region, say dem",
+    "base": "Mamadi ni Mabira, mbaa da malan kuma malan n'oma da yana da gari da kuma malan n'oma da gari da."
+   },
+   {
+    "english": "Every day was, and is, a gift, considering the recent statistics of increased Covid-19 cases.",
+    "reference": "Every day na, and e still be gift, to consider di recent statistics of increased Covid-19 cases.",
+    "adapter": "Every day wey na and be, consider di recent statistic of increase for Covid-19 case.",
+    "base": "Akan kuma, iya, niyan, n'ekun yaya, waniyin niyan, niyan niyan, niyan niyan, niyan niyan, niyan niyan, niyan niyan, niyan niyan, niyan niyan, niyan niyan, niyan niyan, niyan niyan, niyan niyan,"
+   },
+   {
+    "english": "Moral teachings have given way to materialistic Pentecostalism.",
+    "reference": "Moral teachingdon komt for materialistic Pentecostalism to enter.",
+    "adapter": "Moral teachings don give way to materialistic Pentecostalism.",
+    "base": "Moral teachings have been replaced by materialistic Pentecostalism."
+   },
+   {
+    "english": "This piece is an executive summary of a report on the National Livestock Transformation Plan (NLTP) and how to hasten its implementation, published by the International Crisis Group.",
+    "reference": "Dis na executive summary of di report on top di National Livestock Transformation Plan (NLTP) and how dia work go fast, na International Crisis Group publish am",
+    "adapter": "This piece be an executive summary of a report on di National Livestock Transformation Plan (NLTP) and how to hasten its implementation, publish by di International Crisis Group.",
+    "base": "Iyi, niyanin ti gbaa jirma ahoyi naa. Iyi, niyanin ti gbaa jirma ahoyi naa."
+   },
+   {
+    "english": "Toyota Hilux with white color; and a Lexus RX 330 with golden Color.",
+    "reference": "Toyota Hilux wey dem paint white, and one Lexus 330, wey dem paint gold.",
+    "adapter": "Toyota Hilux wit white color, and Lexus RX 330 wit golden color",
+    "base": "Toyota Hilux wani white kodo; Lexus RX 330 wani golden kodo."
+   },
+   {
+    "english": "but it was never comfortable, with Valladolid taking a shock early lead.",
+    "reference": "But no be say e dey comfortable, as Valladolid take early lead.",
+    "adapter": "but no comfort, with Valladolid take shock early lead",
+    "base": "But it was never comfy, Valladolid took a shock early lead."
+   },
+   {
+    "english": "About 70 per cent of Nigerias workforce earns an income through agriculture.",
+    "reference": "About 70 percent pipo wey dey work for Nigeria dey get moni from Agriculture",
+    "adapter": "About 70 per cent of Nigerias workforce earn income through agriculture."
+   },
+   {
+    "english": "Nigeria is our country and our home.",
+    "reference": "Nigeria na awa kontri and home.",
+    "adapter": "Nigga wey dey be di kontri and di kontri wey dey be our home."
+   },
+   {
+    "english": "The Minister of Agriculture and Rural Development, Sabo Nanono, made this known at the capacity building workshop on GIs for public sector/policymakers in Nigeria in Abuja.",
+    "reference": "Di Minister of Agriculture and Rural Development, wey be Sabo Nanono tok this one for inside di capacity building workshop on top GIs for public sector /policymakers for Nigeria in Abuja.",
+    "adapter": "Di Minister of Agriculture and Rural Development, Sabo Nanono, make di know for di capacity building workshop on GIs for public sector/policymakers wey dey Nigeria for Abuja"
+   },
+   {
+    "english": "Other challenges contributing to low yields and harvest losses to the potato value chain include diseases such as blight and bacterial wilt as well as poor seedlings.",
+    "reference": "Oda challenge wey dey contribute to low yield and loss for harvest to di potato value chain include disease like blight and bacterial wilt, plus poor seedlings.",
+    "adapter": "Other challenge for potato value chain include disease like blight and bacterial wilt, also poor seedling."
+   },
+   {
+    "english": "She said the suspects have provided useful information on the activities of their syndicate.",
+    "reference": "She tok say di suspect dem don give beta informate on di things wey dem do for dem group..",
+    "adapter": "She tok say di suspect don provide useful informaion oda di activity of dis syndicate"
+   },
+   {
+    "english": "Geographical Indication will promote diversification of economy FG",
+    "reference": "FG tok say Geographical Indication go promote diversification of economy",
+    "adapter": "Geographical Indication go promote diversification of economy"
+   },
+   {
+    "english": "I am very happy for both Ndidi and Iheanacho.",
+    "reference": "I dey veri hapi for Ndidi and Iheanacho",
+    "adapter": "I be very happy for both ndidi and iheanacho."
+   },
+   {
+    "english": "Cynthia, an Idoma native of Otukpo origin, suddenly went missing while her wedding plans were underway.",
+    "reference": "Cynthia na Idoma, and na Otukpo she for come, just miss wen dem be dey plan her marriage.",
+    "adapter": "Cynthia, an Idoma native of Otukpo origin, suddenly go missin while his wedding plan wey dey am."
+   },
+   {
+    "english": "Daily Trust gathered that the farm also has a fishery unit, with about 50,000 fishes inside the pond.",
+    "reference": "Daily Trust hear say di farm also get fishery unit, with about 50,000 fish inside di pond.",
+    "adapter": "Daily trust gather say di farm dey have fishery unit wit about 50,000 fishes inside di pond."
+   },
+   {
+    "english": "We must confront the enemies of the people with a view to neutralising them.",
+    "reference": "We must face di enemy of di pipo, to see say we komot power for dem hand.",
+    "adapter": "We don tok confront di enemy wey dem be for dis way wey dem dey neutralize dem."
+   },
+   {
+    "english": "Why he was in Owerri",
+    "reference": "Why im dey for Owerri",
+    "adapter": "Why hin dey for Owerri"
+   },
+   {
+    "english": "The members of the army who are called to the transition government are discharged from all military duties, the charter said.",
+    "reference": "Di charter tok say dem don free all member of army wey dem call to di transitional goment from all military work.",
+    "adapter": "Di member wey dey call di govt say dis govt don tokin discharge dem from all military duty, di charter tokin say."
+   },
+   {
+    "english": "We are establishing an integrated farm estate in Ebonyi like we are doing in other States.",
+    "reference": "we dey establish an intergrated farm estate for Ebonyi state as we dey do am for oda states",
+    "adapter": "We dey establish integrale farm estate for Ebonyi like we dey do for oda state"
+   },
+   {
+    "english": "I was upset that I couldn't meet my parents, relatives, or friends to share the joy of welcoming a new member in the family.",
+    "reference": "I be dey vex say I no fit meet my parents, relatives, or friends to take share di joy of say I welkom new member inside di family.",
+    "adapter": "I don write say I be upset wey I no fit meet dem, relatives and friend wey dey go share di joy of welcomein di family."
+   },
+   {
+    "english": "Ikenga, who added that the bodies of the two killed policemen have been deposited at a nearby morgue, said investigation into the matter has begun.",
+    "reference": "Ikenga, wey add say di bodi of di two police don dey for nearby morgue, he tok say dem don start investigation on top di matter.",
+    "adapter": "Ikenga, wey dey add say di body of two policeman wey dey kill don tok deposit for dem nearby morgue, wey investigate about di matter begin."
+   },
+   {
+    "english": "The teams were given a clear instruction to identify and apprehend the perpetrators of the act with a view of bringing them to justice.",
+    "reference": "DI instruction wey dem give di team be say make dem catch di pipo wey do di thing, make dem fit face justice.",
+    "adapter": "Di team wey dey give dem clear instrucin say dem go identify and apprehend di perpetrators wit view of bring dem to justice."
+   },
+   {
+    "english": "Seqenenre Tao II, who reigned over Upper Egypt around 1,600 BCE, led the parade, while Ramses IX, who ruled in the 12th century BCE, brought up the rear.",
+    "reference": "Seqenenre Tao II wey rule Upper Egypt around 1,600 BCE, lead di parade, as Ramses ix, wey rule for di 12th century BCE bring up di rear.",
+    "adapter": "Seqenenre Tao II, who reigned over Upper Egypt around 1,600 BCE, led di parade, while Ramses IX, wey rule in di 12th century BCE, bring dem behind."
+   },
+   {
+    "english": "The stolen funds were pandemic relief fund designed by the Washington State for people who might have suffered job losses as a result of the COVID-19 pandemic.",
+    "reference": "Di money wey dem tif na relief money for pandemic wey Washington state design for pipo wey fit don loss dem job bikos of di COVID-19 pandemic.",
+    "adapter": "Di stolen funds wey dem dey pandemic relief fund design by di Washington state for pipo wey don get job loss as a result of di COVID-19 pandemic."
+   },
+   {
+    "english": "We believe that the rain have stabilised.",
+    "reference": "We believe say di rain don stabilise.",
+    "adapter": "We think di rain dey stabilise."
+   },
+   {
+    "english": "During the COVID-19 lockdown in Nigeria, cybercriminals patterned their frauds along the interventions from government and private sectors and scammed many and some of these schemes still exist till date.",
+    "reference": "During di COVID-19 lockdown for inside Nigeria, cybercriminals dey do dem frauds along di interventions from goment and private sectors and scamm plenty and some of di scheme dem still dey till date.",
+    "adapter": "During di COVID-19 lockdown wey Nigeria don dey, cybercriminals pipo dem go fit pattern dem frauds along di intervention from government and private sector and scam many and some of dem scheme still exist till date."
+   },
+   {
+    "english": "Gwagwalada branch, Barrister David Aigbefoh.",
+    "reference": "Gwagwalada branch, Barrister David Aigbefoh.",
+    "adapter": "Gwagwalada branch, barrister David Aigbefoh"
+   },
+   {
+    "english": "On Wednesday, the government ordered an internet blackout until further notice, a day after banning all social media and messaging apps.",
+    "reference": "For Wednesday, di goment order say make dem block internet till further notice, a day afta dem ban all social media and messagin app dem.",
+    "adapter": "On Wednesday, di govt order internet blackout untill further notice, wey ban social media and messaging app"
+   },
+   {
+    "english": "A commentator on the Facebook link of the story published by Daily Trust, Ifeanyi Maduako, while describing Gulak death as distasteful, linked the incident with politics.",
+    "reference": "One pesin wey comment for di Facebook link wey carry di tori wey Daily Trust publish, Ifeanyi Maduako, as e tok say di death of Gulak dey bitter, kom link am with politics.",
+    "adapter": "A commentator on di Facebook link wey di story publish by Daily Trust, ifeanyi maduako, while describe Gulak death as distasteful, link di incident wit politics."
+   },
+   {
+    "english": "The early political leaders in South East, remind these reckless police officers that Biafra is bigger than IPOB the better for them.",
+    "reference": "Di early political leaders dem for South East, dey remind dis reckless police officers say Biafra big pas IPOB, di better for dem.",
+    "adapter": "Di early politiican wey dem be say for South East, don tok say reek of reckless police officer for Biafra be biger than IPOB"
+   }
+  ]
+ },
+ "dialogue": {
+  "n": 30,
+  "chrf_adapter": 94.2142923550397,
+  "chrf_base": 16.01330153624873,
+  "items": [
+   {
+    "id": "d0328-3",
+    "kind": "explain",
+    "reference": "Take your medicine as your doctor talk and come for your next appointment. Contact your care team if you get question.",
+    "english": "Take your medicines as your doctor told you and come to your next appointment. Contact your care team if you have questions.",
+    "adapter": "Take your medicine as your doctor talk and come for your next appointment. Contact your care team if you get question.",
+    "base": "I'm sorry, but I can't assist with that."
+   },
+   {
+    "id": "d0307-3",
+    "kind": "explain",
+    "reference": "Take your medicine as your doctor talk and come for your next appointment. Contact your care team if you get question.",
+    "english": "Take your medicines as your doctor told you and come to your next appointment. Contact your care team if you have questions.",
+    "adapter": "Take your medicine as your doctor talk and come for your next appointment. Contact your care team if you get question.",
+    "base": "Yes, wetin urin. That's normal when you have an infection. Just drink plenty of water and rest to help your body fight it off. If symptoms persist, call your doctor again."
+   },
+   {
+    "id": "d0358-4",
+    "kind": "checkin",
+    "reference": "Thank you for telling me. How many days you don get am?",
+    "english": "Thank you for telling me. How many days have you had it?",
+    "adapter": "Thank you for telling me. How many days you don get am?",
+    "base": "I see that you're feeling unwell. Try to stay hydrated and rest. If symptoms persist, please seek medical attention."
+   },
+   {
+    "id": "d0144-2",
+    "kind": "checkin",
+    "reference": "Sorry o. You get worry wey you no fit control?",
+    "english": "I am sorry to hear that. Do you have worry that you cannot control?",
+    "adapter": "Sorry o. You get bone pain?",
+    "base": "I'm sorry to hear that. Let's talk more about what might help improve your condition."
+   },
+   {
+    "id": "d0005-4",
+    "kind": "checkin",
+    "reference": "Thank you for telling me. How many days you don get am?",
+    "english": "Thank you for telling me. How many days have you had it?",
+    "adapter": "Thank you for telling me. How many days you don get am?",
+    "base": "That's good to hear. It could be due to dehydration or kidney issues. Let me check if there's anything wrong with your diet and fluid intake."
+   },
+   {
+    "id": "d0192-4",
+    "kind": "checkin",
+    "reference": "Thank you. I don write am for your record. Abeg tell me if anything change.",
+    "english": "Thank you. I have written that in your record. Please tell me if anything changes.",
+    "adapter": "Thank you. I don write am for your record. Abeg tell me if anything change.",
+    "base": "Oh, that's good to hear. If you're still feeling unwell, please let me know."
+   },
+   {
+    "id": "d0122-2",
+    "kind": "support",
+    "reference": "I go tell your care team. Dem go contact you.",
+    "english": "I will tell your care team. They will contact you.",
+    "adapter": "I go tell your care team. Dem go contact you.",
+    "base": "Na, abeg. I'll check it out."
+   },
+   {
+    "id": "d0160-2",
+    "kind": "vaccine",
+    "reference": "You fit get am for your nearest health centre. Bring your pikin immunisation card.",
+    "english": "You can get it at your nearest health centre. Bring your child's immunisation card.",
+    "adapter": "You fit get am for your nearest health centre. Bring your pikin immunisation card.",
+    "base": "I'm sorry, but I can't assist with that."
+   },
+   {
+    "id": "d0258-1",
+    "kind": "explain",
+    "reference": "Enteric na health wahala wey your care team don write for your record. Your doctor or nurse fit tell you more about am.",
+    "english": "Enteric is a health condition that your care team has recorded for you. Your doctor or nurse can tell you more about it.",
+    "adapter": "Enteric fever na health wahala wey your care team don write for your record. Your doctor or nurse fit tell you more about am.",
+    "base": "Entirely normal! It's just a fancy way of saying you have an intestinal infection."
+   },
+   {
+    "id": "d0255-2",
+    "kind": "vaccine",
+    "reference": "You fit get am for your nearest health centre. Bring your pikin immunisation card.",
+    "english": "You can get it at your nearest health centre. Bring your child's immunisation card.",
+    "adapter": "You fit get am for your nearest health centre. Bring your pikin immunisation card.",
+    "base": "I'm sorry, but I can't assist with that."
+   },
+   {
+    "id": "d0089-3",
+    "kind": "explain",
+    "reference": "Take your medicine as your doctor talk and come for your next appointment. Contact your care team if you get question.",
+    "english": "Take your medicines as your doctor told you and come to your next appointment. Contact your care team if you have questions.",
+    "adapter": "Take your medicine as your doctor talk and come for your next appointment. Contact your care team if you get question.",
+    "base": "Yes, wetin anaemia means you have less red blood cells than normal. It's important to eat lots of iron-rich foods and talk with your doctor about treatment options."
+   },
+   {
+    "id": "d0243-1",
+    "kind": "explain",
+    "reference": "Enteric na health wahala wey your care team don write for your record. Your doctor or nurse fit tell you more about am.",
+    "english": "Enteric is a health condition that your care team has recorded for you. Your doctor or nurse can tell you more about it.",
+    "adapter": "Enteric is a way of storing food in the stomach and intestines. You wan take your medicine every time you go to the clinic.",
+    "base": "Be wetin be enteric, yah!"
+   },
+   {
+    "id": "d0110-2",
+    "kind": "support",
+    "reference": "I go tell your care team. Dem go contact you.",
+    "english": "I will tell your care team. They will contact you.",
+    "adapter": "I go tell your care team. Dem go contact you."
+   },
+   {
+    "id": "d0258-3",
+    "kind": "explain",
+    "reference": "Take your medicine as your doctor talk and come for your next appointment. Contact your care team if you get question.",
+    "english": "Take your medicines as your doctor told you and come to your next appointment. Contact your care team if you have questions.",
+    "adapter": "Take your medicine as your doctor talk and come for your next appointment. Contact your care team if you get question."
+   },
+   {
+    "id": "d0087-6",
+    "kind": "checkin",
+    "reference": "I don write am for your record for your care team. If e worse, go the nearest clinic or hospital.",
+    "english": "I have written this in your record for your care team. If it gets worse, go to the nearest clinic or hospital.",
+    "adapter": "I don write am for your record for your care team. If e worse, go the nearest clinic or hospital."
+   },
+   {
+    "id": "d0243-3",
+    "kind": "explain",
+    "reference": "Take your medicine as your doctor talk and come for your next appointment. Contact your care team if you get question.",
+    "english": "Take your medicines as your doctor told you and come to your next appointment. Contact your care team if you have questions.",
+    "adapter": "Take your medicine as your doctor talk and come for your next appointment. Contact your care team if you get question."
+   },
+   {
+    "id": "d0005-6",
+    "kind": "checkin",
+    "reference": "I don write am for your record for your care team. If e worse, go the nearest clinic or hospital.",
+    "english": "I have written this in your record for your care team. If it gets worse, go to the nearest clinic or hospital.",
+    "adapter": "I don write am for your record for your care team. If e worse, go the nearest clinic or hospital."
+   },
+   {
+    "id": "d0358-2",
+    "kind": "checkin",
+    "reference": "Sorry o. You get cough?",
+    "english": "I am sorry to hear that. Do you have cough?",
+    "adapter": "Sorry o. You get bone pain?"
+   },
+   {
+    "id": "d0221-6",
+    "kind": "checkin",
+    "reference": "I don write am for your record for your care team. If e worse, go the nearest clinic or hospital.",
+    "english": "I have written this in your record for your care team. If it gets worse, go to the nearest clinic or hospital.",
+    "adapter": "I don write am for your record for your care team. If e worse, go the nearest clinic or hospital."
+   },
+   {
+    "id": "d0298-2",
+    "kind": "vaccine",
+    "reference": "You fit get am for your nearest health centre. Bring your pikin immunisation card.",
+    "english": "You can get it at your nearest health centre. Bring your child's immunisation card.",
+    "adapter": "You fit get am for your nearest health centre. Bring your pikin immunisation card."
+   },
+   {
+    "id": "d0129-6",
+    "kind": "checkin",
+    "reference": "I don write am for your record for your care team. If e worse, go the nearest clinic or hospital.",
+    "english": "I have written this in your record for your care team. If it gets worse, go to the nearest clinic or hospital.",
+    "adapter": "I don write am for your record for your care team. If e worse, go the nearest clinic or hospital."
+   },
+   {
+    "id": "d0358-6",
+    "kind": "checkin",
+    "reference": "I don write am for your record for your care team. If e worse, go the nearest clinic or hospital.",
+    "english": "I have written this in your record for your care team. If it gets worse, go to the nearest clinic or hospital.",
+    "adapter": "I don write am for your record for your care team. If e worse, go the nearest clinic or hospital."
+   },
+   {
+    "id": "d0077-4",
+    "kind": "checkin",
+    "reference": "Thank you. I don write am for your record. Abeg tell me if anything change.",
+    "english": "Thank you. I have written that in your record. Please tell me if anything changes.",
+    "adapter": "Thank you. I don write am for your record. Abeg tell me if anything change."
+   },
+   {
+    "id": "d0231-4",
+    "kind": "checkin",
+    "reference": "Thank you for telling me. How many days you don get am?",
+    "english": "Thank you for telling me. How many days have you had it?",
+    "adapter": "Thank you for telling me. How many days you don get am?"
+   },
+   {
+    "id": "d0058-3",
+    "kind": "explain",
+    "reference": "Take your medicine as your doctor talk and come for your next appointment. Contact your care team if you get question.",
+    "english": "Take your medicines as your doctor told you and come to your next appointment. Contact your care team if you have questions.",
+    "adapter": "Take your medicine as your doctor talk and come for your next appointment. Contact your care team if you get question."
+   },
+   {
+    "id": "d0281-2",
+    "kind": "checkin",
+    "reference": "Sorry o. You get joint pain?",
+    "english": "I am sorry to hear that. Do you have joint pain?",
+    "adapter": "Sorry o. You get bone pain?"
+   },
+   {
+    "id": "d0221-4",
+    "kind": "checkin",
+    "reference": "Thank you for telling me. How many days you don get am?",
+    "english": "Thank you for telling me. How many days have you had it?",
+    "adapter": "Thank you for telling me. How many days you don get am?"
+   },
+   {
+    "id": "d0087-4",
+    "kind": "checkin",
+    "reference": "Thank you for telling me. How many days you don get am?",
+    "english": "Thank you for telling me. How many days have you had it?",
+    "adapter": "Thank you for telling me. How many days you don get am?"
+   },
+   {
+    "id": "d0057-4",
+    "kind": "checkin",
+    "reference": "Thank you. I don write am for your record. Abeg tell me if anything change.",
+    "english": "Thank you. I have written that in your record. Please tell me if anything changes.",
+    "adapter": "Thank you. I don write am for your record. Abeg tell me if anything change."
+   },
+   {
+    "id": "d0105-2",
+    "kind": "vaccine",
+    "reference": "You fit get am for your nearest health centre. Bring your pikin immunisation card.",
+    "english": "You can get it at your nearest health centre. Bring your child's immunisation card.",
+    "adapter": "You fit get am for your nearest health centre. Bring your pikin immunisation card."
+   }
+  ]
+ }
+}

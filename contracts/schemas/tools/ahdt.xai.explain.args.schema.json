@@ -1,0 +1,34 @@
+{
+  "$id": "https://atra.local/schemas/tools/ahdt.xai.explain.args.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "audience": {
+      "default": "clinician",
+      "enum": [
+        "clinician",
+        "patient",
+        "pharmacist",
+        "nurse",
+        "radiologist"
+      ],
+      "title": "Audience",
+      "type": "string"
+    },
+    "hdt_id": {
+      "pattern": "^hdt-[0-9a-f]{12}$",
+      "title": "Hdt Id",
+      "type": "string"
+    },
+    "output_id": {
+      "title": "Output Id",
+      "type": "string"
+    }
+  },
+  "required": [
+    "hdt_id",
+    "output_id"
+  ],
+  "title": "ExplainArgs",
+  "type": "object"
+}

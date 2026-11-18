@@ -1,0 +1,34 @@
+# Severity bands of the PHQ-9 (0 to 27) and GAD-7 (0 to 21) total scores. A band starts at its
+# cutpoint and runs to the next one.
+- id: severity.phq9
+  score_range: [0, 27]
+  bands:
+  - {band: minimal, from: 0}
+  - {band: mild, from: 5}
+  - {band: moderate, from: 10}
+  - {band: moderately_severe, from: 15}
+  - {band: severe, from: 20}
+  further_evaluation_from: 10
+  provenance:
+    source: phq-manual
+    page: 6
+    also:
+    - {source: phq-manual, page: 2}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: severity.gad7
+  score_range: [0, 21]
+  bands:
+  - {band: minimal, from: 0}
+  - {band: mild, from: 5}
+  - {band: moderate, from: 10}
+  - {band: severe, from: 15}
+  further_evaluation_from: 10
+  provenance:
+    source: phq-manual
+    page: 6
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified

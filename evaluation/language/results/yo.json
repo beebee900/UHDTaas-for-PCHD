@@ -1,0 +1,605 @@
+{
+ "lang": "yo",
+ "translation": {
+  "n": 40,
+  "n_base": 16,
+  "chrf_adapter": 14.02047785024004,
+  "chrf_base": 10.373012789709223,
+  "reference_source": "MENYO-20k test",
+  "items": [
+   {
+    "english": "He quickly ended the call.",
+    "reference": "Ó yára fi òpin sí ìpè náà.",
+    "adapter": "Àwọn ìjọ̀ àti ń tó ẹ̀rò rẹ̀.",
+    "base": "Ékọ ní ọ̀rọlọwọ nínú ní ìjọ́n àti ń ṣe nípa àwọn kò ní ẹ̀dè."
+   },
+   {
+    "english": "The many lies of a presidential aide",
+    "reference": "Ọ̀pọ̀lọpọ̀ irọ́ olùrànlọ́wọ́ ààrẹ",
+    "adapter": "Àwọn ìdègbéyí lọ́wọ́ àti ẹ̀rìnú tàbí máa ṣeùríà",
+    "base": "Líkọ ọdún náà jẹ́ pẹ̀lẹ̀ àti pẹ̀lẹ̀ bíyàn tí ìjọ́n bíyàn."
+   },
+   {
+    "english": "Is that altercation I had with the neighbor down the block going to turn into a violent episode that will end my life or my family's life?",
+    "reference": "Ṣé èdè-àìyedè yẹn tí mo ní pẹ̀lu aráalé mi tó wà nísálẹ̀ ò ní di rògbòdìyàn tí yóò gba èmí mi tàbí èmi ẹbí mi?",
+    "adapter": "Àwọn ìgbà àti ẹ̀rọ̀ láti ṣe ní ń tó ńṣònú tí wọ́n ẹ̀rọ̀ lórílẹ̀ máa ẹ̀rọ̀ lórílẹ̀ bí ẹ̀rọ̀ lórílẹ̀ bí ẹ",
+    "base": "Oluwa nipa ni oye, kò tó ìlú sí òrọ̀kòmọ̀ àwọn ń ṣe ẹ̀yàn. Àwọn ń ṣe ọdún ń ṣe ọ̀nà ń ṣe ọ̀pọ̀r"
+   },
+   {
+    "english": "Another calf, Ayeyar Maung, endured a similar ordeal.",
+    "reference": "Ọ̀dọ́ erin mìíràn, Ayeyar Maung náà rí nǹkan.",
+    "adapter": "Àwọn àwọn lọ́wọ́n, ìṣẹ̀rìlẹ̀ Ayeyar Maung, ń ṣe nígbà tí wọ́n tó ń bá ẹjú.",
+    "base": "Ogun, ayeyar maung, eyi o sọ n'omu n'omu."
+   },
+   {
+    "english": "Actually, writing them down, and keeping them somewhere like your wallet, is useful so you'll at least know if your written passwords go missing or get stolen.",
+    "reference": "Lóòótọ́, kò burú bí a bá kọ ọ́ sílẹ̀, kí a sì fi pamọ́ síbìkan bí àsùnwọ̀n ìkówósí àfisápò rẹ, èyí yóò ta ọ́ jí b'ọ́rọ̀-ìfiwọlé tí o kọ sílẹ̀ bá di àwátì tàbí bí wọ́n bá jí i.",
+    "adapter": "Àwọn ìjọ̀rọ̀ àti ń tó ẹ̀lú nípa, ó ṣe ń wà lágbáyé tí ẹ̀rèn lórílẹ́sì fún ẹ̀ròfùn àwọn bí, èdè ẹ̀rèn k",
+    "base": "Eyi, wọn nipa, iṣẹlọwọ niyan ti o ṣe ọrọ. Iyi, yoo niyan ti o ṣe ọrọ. O ṣe ọrọ, iṣẹlọwọ niyan ti o ṣe ọrọ."
+   },
+   {
+    "english": "Conservative segments of society also question the intention behind the choice of that question:",
+    "reference": "Ọ̀wọ́ àwọn alẹ́nulọ́rọ̀ láwùjọ náà tún rí wí sí ìpinnu àti ṣètò irú ìbéèrè báyìí:",
+    "adapter": "Bí ìwòsì lọ́wọ́, ó tó ń ṣe òrùn àti wọn tí wà láti jẹ́ ìdèlẹ̀ rẹ̀.",
+    "base": "Conservadores también preguntan qué intención hay detrás de esa pregunta."
+   },
+   {
+    "english": "President Muhammadu Buhari has congratulated British Prime Minister, Boris Johnson following his discharge from the hospital over COVID-19.",
+    "reference": "Ààrẹ Nàìjíríà Muhammadu Buhari kí adarí ìjọba Gè̩é̩sì, Boris Johnson kóorííre lé̩yìn tí wó̩n yò̩nda rè̩ níléèwòsàn nítorí kòrónà.",
+    "adapter": "Àwọn ìjọ̀lú Ẹ̀gbéyí Muhammadu Buhari àti ṣe nígbà wá ẹ́gbèrìí Boris Johnson tí ń tó ńṣòfún ẹ̀gbéyí lórílẹ̀-èdè Nigeria.",
+    "base": "President Buhari má ìlú òrọ Ìgbẹ́kọ̀ Óyíjọ́n jẹ́ Òríí ìdáíjọ́ ní Ọ̀rọ̀ Nàbò́. Ó ṣe ìtó ìmọ̀ rẹ̀ àti ì"
+   },
+   {
+    "english": "Yes. I put it to you that Alamu's evidence at the probe was taken under duress.",
+    "reference": "Bẹ́ẹ̀ ni. Mò ń sọ pé ìwádìí yin gba ọ̀rọ̀ lẹ́nu Àlàmú tipátipá.",
+    "adapter": "Àwọn ìdènà ẹ̀rọ̀ àti ṣe nígbé òmọ́tọ́n tó ń bá ẹjú jẹ́ alámu.",
+    "base": "نعم, Lagos' testimonies were taken under pressure."
+   },
+   {
+    "english": "Also in North Macedonia, right-wing propagandists expressed support to the church.",
+    "reference": "Ní North Macedonia, àwọn tí ó ń mú ṣe ti ìlànà-ìsìn náà ní kò sí aburú nínú ìlànà iléèjọsìn náà.",
+    "adapter": "Àwọn ìjọ̀lú Makedána, àti ń ṣe nígbà tó ẹ̀rọ̀-èdè Málta.",
+    "base": "En Etiyọlẹ, Ṣùgbájú ní ń ṣe ńṣe ń ṣe ńṣe ńṣe ńṣe ńṣe ńṣe ńṣe ńṣe ńṣe ńṣe ńṣe ńṣe ń"
+   },
+   {
+    "english": "For 17 years, the DCMA has worked tirelessly to promote and protect Zanzibar's rich heritage and traditions through music.",
+    "reference": "Fún ọdún mẹ́tàdínlógún, DCMA ti ṣiṣẹ́ àṣekúdórógbó nípa lílo orin ṣe ìgbélárugẹ tòun ìpamọ́ ọ̀rọ̀ àjogúnbá àti àṣà Zanzibar.",
+    "adapter": "Àwọn ìjọ̀lú ń ṣe ẹ̀rè 17 yáyí, DCMA àti wà nínú àwọn òdún lórílẹ̀-èdè Zanzibar tí oṣùn rẹ̀-èdè ń tó ọ̀sì",
+    "base": "For décades, DCMA a travaillé avec détermination pour promouvoir et protéger les richesses culturelles et traditionnelles de Zanzibar en utilisant la musique."
+   },
+   {
+    "english": "Luis Enrique has signed a two-year contract.",
+    "reference": "Luis Enrique tọwọ́ bọ àdéhùn ọdún méjì.",
+    "adapter": "Luis Enrique àwọn ìjọ̀rọ̀ ọ̀nìí.",
+    "base": "Luis Enrique, nípa ọ̀rọ̀lẹ̀, jẹ́ ọ̀pọ̀dùn àwọn ọmọ̀kọ́jú ní ìtáìyà."
+   },
+   {
+    "english": "President Muhammadu Buhari is in New York, to attend the 74th session of the United Nations General Assembly UNGA.",
+    "reference": "Ààrẹ orílẹ̀-èdè Nàìjíríà Muhammadu Buhari wà ní New York, fún Àpérò Àjọ Ìṣòkan Àgbáyé tí ó jẹ́ ìkẹrìnléláàdọ́rin (74) ìpàdé àpérò irú rẹ̀.",
+    "adapter": "Àwọn ìjọ́n àti ń ṣe ò ní Ẹ̀rèlẹ̀ Muhammadu Buhari àìsàn ń ṣe ò ní 74-èdè Ìgbà Ñú Ígún Ìgbà Òyé ìtò ì",
+    "base": "President Buhari àlọrokan ń ìjọrọ ń 74-ṣeṣẹ ń Ụyẹ́nú ń Ọ̀kọ̀dù ń Ẹgbẹ́."
+   },
+   {
+    "english": "Consequently, the second case was cleared of the virus and was discharged to go home on 13th of March 2020, states the NCDC.",
+    "reference": "Ẹnìkejì yìí ò ní àrùn náà mọ́, wọ́n sì ti fi í sílẹ̀ kí ó máa lọ sílé ní ọjọ́ 13 oṣù Ẹrẹ́na, ọdún 2020, gẹ́gẹ́ bíi àjọ NCDC ṣe sọ.",
+    "adapter": "Bí àwọn ìdènà ọ̀rọ̀ ẹ̀lú nígbé ṣe tó ń bá ọ̀rọ̀ ẹ̀lú nígbé, ó sì ọ̀sàn 13-árọ̀ 2020, wọ́n ni NCDC",
+    "base": "Kwesẹlẹ nipa ni oṣiọ nipa ni oṣeju ni oṣeju ni oṣeju ni oṣeju ni oṣeju ni oṣeju ni oṣeju ni oṣeju ni oṣeju ni oṣeju ni oṣeju ni oṣeju ni oṣeju"
+   },
+   {
+    "english": "It is a statement made by the current front-runner for the Republican nomination for US President, Donald Trump.",
+    "reference": "Ọ̀rọ̀ kan tí ẹni tó ń léwájú lọ́wọ́lọ́wọ́ fún ìfàkalẹ̀ Republican fún Ààrẹ ilẹ̀ US, Donald Trump sọ.",
+    "adapter": "Àwọn ìjọ̀lú àti ń tó ẹ̀rínà nígbé Ẹ́ẹ̀ẹ́ẹ̀-èdè Ẹ́ẹ̀ẹ́ẹ̀-èdè Ẹ́ẹ̀ẹ́ẹ̀-èdè Ẹ́ẹ̀ẹ́ẹ̀-èdè Ẹ",
+    "base": "Eyi iroyin oye ni oye ni oye ni oye ni oye ni oye ni oye ni oye ni oye ni oye ni oye ni oye ni oye ni oye ni oye ni oye ni oye ni oye ni oye ni oye ni oye ni oye ni oye ni oye ni oye ni"
+   },
+   {
+    "english": "It is a blasphemy to believe that the virus can be transmitted by receiving Holy Communion.",
+    "reference": "Ọ̀rọ̀-òdì sí Olúwa ni láti ní ìgbàgbọ́ wí pé ènìyàn lè tara Jíjẹ ara-àti-mímu-ẹ̀jẹ̀ Olúwa kó ààrùn.",
+    "adapter": "Àwọn ìgbà àti ẹ̀rọ̀ tó ń ṣe ẹ̀rọ̀ àìsàn ní ìṣùn-èdè ìjúlẹ́yìn.",
+    "base": "Eyi gba nipa ni mọ sọ n'omu o pataki iroyin ọrọ, ṣe ọ̀nọ̀ri àwọn ṣùgbọ́n ní Ọ̀rọ̀ Nàjú."
+   },
+   {
+    "english": "Spokesman to the Vice President, Laolu Akande, shared this on Tuesday via his twitter handle @akandeoj.",
+    "reference": "Agbẹnusọ igbákejì ààrẹ, Láolú Àkàndé, ló sọ̀rọ̀ yìí lọ́jọ́ Ìṣẹ́gun láti orí ẹ̀rọ twitter rẹ̀ @akandeoj.",
+    "adapter": "Àwọn ṣeuné àti Ẹ̀gbà ìjọ́n, Ṣiṣẹ̀lẹ̀-èdè Ìrìyí Náà, wọ́n àwọn òmọ̀ nínú àti Ẹ̀gbà ìjọ́n àwọn ì",
+    "base": "Spokesman à la Vice-Presidential, Laju Akande, a réitéré ce mardi via son compte Twitter (@akandeoj) sur cette information."
+   },
+   {
+    "english": "\"Nigerian writer Adaobi Tricia Nwaubani explained to The World, a public radio show co-produced by the BBC, that Trump's \"\"tough guy image\"\" strikes a chord in Africa's most populous country:\"",
+    "reference": "\"Òǹkọ̀wé tí í ṣe ọmọ bíbí orílẹ̀-èdèe Nàìjíríà Adaobi Tricia Nwaubani làdíi rẹ̀ fún àgbáyé lórí ètò ẹ̀rọ agbóhùnsáfẹ́fẹ́ kan tí ó jẹ́ àbáṣepọ̀ pẹ̀lú BBC, wípé ìrísíi Trump gẹ́gẹ́ bí \"\"ọkùnrin alágídí\"\" mú kí àwọn ọmọ orílẹ̀-èdè tí ó kún fún ènìyàn jù lọ ní Ilẹ̀-Adúláwọ̀ ó fẹ́ràn-an rẹ̀ dé góńgó:\"",
+    "adapter": "\"Àwọn ṣeuní ń tọ́jú àti ìṣẹ̀rìn kan náà, wọ́n ṣeuní ń tọ́jú àti òdún lórílẹ̀-èdè Nigeria, wọ́n ṣeuní ń t"
+   },
+   {
+    "english": "And then the trigger was when all of a sudden, international aid decreased.",
+    "reference": "Okùnfà náà ni ìgbà tó jẹ́ wí pé lójijì, ìrànwọ́ látókèrè dínkù.",
+    "adapter": "Àwọn ìjọ̀rọ̀ àti ń ṣe nígbà tó ẹ̀lú lè sì ẹ̀lú jẹ́."
+   },
+   {
+    "english": "But banks quickly discovered that it also was cheaper to open new branches, and the number of bank branches increased by about 40 percent in the same time period.",
+    "reference": "Ṣùgbọ́n àwọn ilé-ìfowópamọ́ padà ri wí pé ó rọjú láti ṣí ẹ̀ka tuntun, iye ẹ̀ka ilé-ìfowópamọ́ lékún pẹ̀lú bíi ìdá ogójì ní àsìkò kan náà.",
+    "adapter": "Àwọn àkọsílẹ̀ nígbà tó ń ṣe ìjọ́n jẹ́ ẹ̀rè lórí, ó sì tí ń ṣe ìjọ́n jẹ́ ẹ̀rè lórí, ó sì tí ń ṣe �"
+   },
+   {
+    "english": "The mouth-trap never misses.",
+    "reference": "Ẹ̀bìtì ẹnu ò tàsé.",
+    "adapter": "Àwọn ìdènà ń tọ́jú."
+   },
+   {
+    "english": "Achievements The immediate past President of the College, Professor King-David Yawe highlighted some of the achievements of WACS especially with regards to free medical outreaches to several Nigerian communities.",
+    "reference": "Ọ̀jọ̀gbọ́n King-David Yawe, tó jẹ́ ààrẹ ilé-ẹ̀kọ́ náà tẹ́lẹ̀rí sàlàyé nípa àwọn aseyọrí tí WACS ti ṣe pàápàá jùlọ nípa àwọn ìwòsàn ọ̀fẹ́ tí wọ́n ti ṣe ní púpọ̀ nínú àwọn agbègbè tó wà lórílẹ̀ èdè Nàìjíríà.",
+    "adapter": "Àwọn ìdèlẹ̀-àgbáyé Ẹ̀rìí Ìjọ́nú àti ń ṣe ò nípa ìtòsàn tó ń ṣe ò nípa ìtòsàn tó ń ṣe ò nípa"
+   },
+   {
+    "english": "History has repeatedly offered an answer to that paradox.",
+    "reference": "Ìtàn ti ń fún wa ní ìdáhùn sí ajọ̀ró-ṣòótọ́ yẹn ní tẹ̀lé-ń-tẹ̀lé.",
+    "adapter": "Àwọn ìjọ̀ sílẹ̀ àti ń ṣe nígbà tí wọ́n tó ń ṣe nígbà."
+   },
+   {
+    "english": "There have been 28 cases in Romania and six in Bulgaria.",
+    "reference": "Ó ti tó ẹni 28 tó ti kó o ní Romania, mẹ́fà ní Bulgaria.",
+    "adapter": "Àwọn ìjọ̀rọ̀ àti ọ̀sì ní Rómã, ó ṣe ẹ̀lú ọ̀sì ní Bulgaria."
+   },
+   {
+    "english": "So clearly, technology can eliminate jobs.",
+    "reference": "Ó fojú hàn kedere, ìmọ̀-ẹ̀rọ lè pa iṣẹ́.",
+    "adapter": "Àwọn ìjọ̀n àti ń ṣe ẹ̀rèlẹ̀ láti gba tó ń ṣe ẹ̀rèlẹ̀."
+   },
+   {
+    "english": "When I was growing up, I didn't even know that wildlife conservation was a career.",
+    "reference": "Nígbà tí mò ń dàgbà, mi ò tiẹ̀ mọ̀ wí pé iṣẹ́-ìṣe ni ìkópamọ́ àwọn ẹranko igbó.",
+    "adapter": "Àwọn ìjọ̀ ń ṣe àwọn òrìí lórílẹ̀ tí wọ́n tó ń bá ń ṣe ẹ̀rè̀."
+   },
+   {
+    "english": "Personally, my favorite goal is number 17: partnerships for the goals.",
+    "reference": "Fún èmi, ìpinnu kẹtà-dín-lógún ni mo fẹ́ràn jù: àjọṣepọ̀ fún ìpinnu náà.",
+    "adapter": "Àwọn ìjọ̀lẹ̀ àti ń ọ̀rọ̀ 17: oṣùn tó ń ṣe ẹ̀rè nígbà."
+   },
+   {
+    "english": "The Country's Information and Culture Minister made the clarification in Abuja, Nigeria's capital, while briefing journalists on the controversies surrounding the proposed loan for the projects.",
+    "reference": "\"Mínísítà fún ètò ìròyìn àti àsà s\"\"ọ̀rọ̀ náà nígbàtí ó ń bá akọ̀ròyìn s\"\"ọ̀rọ̀ nílùú Àbújá, tí ṣe olú-ìlú orílẹ̀-èdè Nàìjíríà lórí àhesọ ọ̀rọ̀ lórí owó tí wọ́n fẹ́ yá ọ̀hún fún àwọn iṣẹ́ àkànṣe.\"",
+    "adapter": "Àwọn ìdènà ń ṣe nígbé àti ẹ̀rọ̀-èdè òjúlẹ̀-èdè Ìṣùnì, wọ́n tó ń ṣe nígbé àti ẹ̀rọ̀-èdè òj"
+   },
+   {
+    "english": "Then, when I was digging, this map is what I followed.",
+    "reference": "Nígbà yẹn, nígbà tí mò ń wa ilẹ̀, àwòrán-ìtọ́nà yìí ni mo tẹ̀lé.",
+    "adapter": "Àwọn ìjọ̀lẹ̀ àti ń ṣe nígbà, ó tó ń ṣe nígbà láti máa bá tí wọ́n."
+   },
+   {
+    "english": "---Senate probes GSM operators over drop calls",
+    "reference": "---Ìgbìmọ̀ aṣòfin yóò ṣe ìwádìí bí ilé-iṣẹ́ ẹ̀rọ ìbánisọ̀rọ̀ alágbèéká ṣe ń ja Nàìjíríà lólè lórí ìpè.",
+    "adapter": "--- Senyí náà ẹ̀rọ̀ ń ṣe ìwòsì àti Ẹlẹ́nàírííà"
+   },
+   {
+    "english": "--- Mourinho welcomed me back to Premier League- Ranieri",
+    "reference": "--- Mourinho kí mi káàbọ̀ padà sínú ìdíje Premier League - Ranieri",
+    "adapter": "--- ìwòsì àti ẹ̀rọ̀lú Premier League- Ranniri"
+   },
+   {
+    "english": "On hot, humid, summer days, I would dash across the floor and stick my face in front of her only air conditioner.",
+    "reference": "Ní àwọn ọjọ́ tó bá gbóná, lásìkò ooru, mo máa sáré kọjá nílẹ̀ ma sì gbójú mi síwájú ẹ̀rọ amúlétutù wọn kan ṣoṣo.",
+    "adapter": "Àwọn ọ̀kùn àti ṣe ìjẹ́ jẹ́, wọ́n ń tó ọ̀rọ̀ nígbà yìí, ó sọ̀sàn ẹ̀lẹ̀ láti ẹ̀yìn àwọn ọ̀kùn àti ṣe"
+   },
+   {
+    "english": "If you think about it, isn't it kind of self-evident that once we get sufficiently productive at something, we've basically worked our way out of a job?",
+    "reference": "Tí ẹ bá ronú nípa ẹ̀, ṣé kò fojú hàn pé tí a bá ti rí nǹkan ṣe, a ti wá ọ̀nà wa jáde kúrò níbi iṣẹ́ yẹn?",
+    "adapter": "Àwọn ìdènà ń ṣe àwọn ẹ̀rọ̀ nípa, wọ́n tó ń ṣe ń ṣe ń ṣe ń ṣe ń ṣe ń ṣe ń ṣe ń �"
+   },
+   {
+    "english": "\"\"\"Ugba also said Nigeria commend thisfans has they have travelled to Russia to honor the Super Eagles in Russia.\"",
+    "reference": "\"\"\"\"\"Ugba tún sọ pé orílẹ̀-èdè Nàìjíríà gbóṣùbà fún àwọn olólùfẹ́ yìí bí wọ́n ṣe lọ sí orílẹ̀-èdè Russia láti lo yẹ àwọn Super Eagles sí lorílẹ̀-èdè Russia.\"",
+    "adapter": "\"\"\"Ugbé ìwòsì ẹ̀lú nígbà àti ṣe ń tọ́jú lè ṣe ẹ̀lú nígbà àti ṣe ń tọ́jú lè ṣe ẹ̀lú nígbà àti ṣ"
+   },
+   {
+    "english": "Tinu gave her no problem, the little girl was full of life and spirit, she herself had been blessed with good health.",
+    "reference": "Tinú ò sì fún un ní wàhálà kankan, ọmọbìnrin kékeré náà kúnfún ìyè, ẹ̀mí àlàáfìà tó péye ni Ọlọ́run fi jíǹkí òun fún ara rẹ̀.",
+    "adapter": "Tinu tó ọ̀rọ̀ àwọn ìjẹ̀lẹ̀, lọ́wọ́ tí wà nígbà, ó ṣe ò fún ń bá ẹ̀yàn, ó sì wọ́n wọ́n wọ́n wọ́n wọ́n w"
+   },
+   {
+    "english": "I'd like to see exactly WHERE in Nigeria this survey was conducted.",
+    "reference": "Ó hùn mí láti mọ IBI tí wọ́n ti ṣe ìwádìí-àyẹ̀wò yìí ní Nàìjíríà.",
+    "adapter": "Àwọn ìjọ̀lẹ̀ ń ṣe ń tó ńṣònú àti ń ṣe ń tó ńṣònú àti ńṣònú àti ńṣònú àti ńṣònú àti ńṣònú àti"
+   },
+   {
+    "english": "For example, all masks are made in China.",
+    "reference": "Fún àpẹẹrẹ, China ni wọ́n ti ń ṣe gbogbo ìbòmú.",
+    "adapter": "Àwọn àwọn máa ṣe ń tọ́jú ní ìṣẹ̀rìn."
+   },
+   {
+    "english": "The very near future will tell us. Meanwhile, the boat is sinking.",
+    "reference": "Ó di ọjọ́ iwájú kí á tó mọ̀. Ní báyìí ṣá, ọkọ̀ ojú omi ti ń ré.",
+    "adapter": "Àwọn ìdènà ní àwọn tó ń ṣe. Àwọn tí wọ́n jẹ́ láti ẹ̀rò rẹ."
+   },
+   {
+    "english": "Check out Global Voices’ special coverage of the global impact of COVID-19.",
+    "reference": "Yẹ àkànṣe iṣẹ́ tí Ohùn Àgbáyé’ ti ṣe lórí ipa tí kòkòrò àìfojúrí kòrónà COVID-19 ń kó lágbàáyé",
+    "adapter": "Àwọn ìjọ̀lú Ẹ̀gbèrìí, ṣe àwọn òdún ẹ̀gbéyàn tó ń bá ẹ̀gbèrìí máa ẹ̀gbéyàn tí wà láti ẹ̀gbéyàn máa ẹ̀gbéy"
+   },
+   {
+    "english": "He prays that God Almighty will repose his soul.",
+    "reference": "Ààrẹ wá gbàdúrà pé kí ọlọ́run tẹ́ olóògbé náà sí afẹ́fẹ́ ire.",
+    "adapter": "Àwọn ìdèlẹ̀ ń ṣe ò tó Ẹjọ́n Ìrìí."
+   },
+   {
+    "english": "The cause was the video clip that the Nigerians are sending about the wrong deeds to the Nigerians living in China.",
+    "reference": "Okùnfà ni fídíò kan tí àwo̩n o̩mo̩ Nàìjíríà fihàn káàkiri, tó ń s̩àfihàn ohun búburú tí àwo̩n o̩mo̩ China fojú wa rí ló̩hùn-ún.",
+    "adapter": "Àwọn ìjọ̀rọ̀ àti ẹ̀lẹ̀-èdè Nígerá, ṣe ń tó ẹ̀lẹ̀-èdè Nígerá kan jẹ́ ẹ̀lẹ̀-èdè Chínà."
+   }
+  ]
+ },
+ "dialogue": {
+  "n": 50,
+  "chrf_adapter": 49.555129647746696,
+  "chrf_base": 8.783055059693105,
+  "items": [
+   {
+    "id": "d0008-2",
+    "kind": "checkin",
+    "reference": "Ó dùn mí gan-an láti gbọ́ bẹ́ẹ̀.",
+    "english": "I am sorry to hear that. Do you have worry that you cannot control?",
+    "adapter": "Ó dùn mí láti gbọ́ èyí. Ṣé o ní ń bá ọ̀sì?",
+    "base": "Mo ti gba tí sí àti nípa máàtì tí kò tàbí dára. Mo ti gba tí sí àti nípa máàtì tí kò tàbí dára."
+   },
+   {
+    "id": "d0221-2",
+    "kind": "checkin",
+    "reference": "Ó dùn mí láti gbọ́ bẹ́ẹ̀.",
+    "english": "I am sorry to hear that. Do you have weight loss?",
+    "adapter": "Ó dùn mí láti gbọ́ èyí.",
+    "base": "Ópọ̀lọpọ̀ náà sí ókún tí ó kò tàbí láti máàtú sí."
+   },
+   {
+    "id": "d0255-2",
+    "kind": "vaccine",
+    "reference": "O lè lọ sí ilé ìwòsàn tó sún mọ́ ẹ jù lọ, kó o sì mú káàdì ìdènà ọmọ rẹ wá.",
+    "english": "You can get it at your nearest health centre. Bring your child's immunisation card.",
+    "adapter": "O lè lọ sí ilé ìwòsàn tó sún mọ́ ẹ jù lọ, kó o sì mú káàdì ìdènà ọmọ rẹ wá.",
+    "base": "Mo ti lè rí i gbà, ṣùgbọ́n nínú ní ìlú òrọ̀kọ́pọ̀ àti ọ̀dún ọ̀pọ̀rọ̀rọ̀ ní ọ̀pọ̀rọ̀rọ̀ àti ọ̀dún ọ"
+   },
+   {
+    "id": "d0259-2",
+    "kind": "checkin",
+    "reference": "Ó dùn mí gan-an láti gbọ́ bẹ́ẹ̀.",
+    "english": "I am sorry to hear that. Do you have worry that you cannot control?",
+    "adapter": "Ó dùn mí láti gbọ́ èyí.",
+    "base": "Ópọ̀lọpọ̀ náà sí ókún tí ó kò tàbí láti máàtú sí."
+   },
+   {
+    "id": "d0072-4",
+    "kind": "checkin",
+    "reference": "O ṣeun, mo ti kọ èyí sínú àkọsílẹ̀ rẹ. jọ̀wọ́ sọ fún mi bí nǹkan bá yí padà.",
+    "english": "Thank you. I have written that in your record. Please tell me if anything changes.",
+    "adapter": "O ṣeun, mo ti kọ èyí sínú àkọsílẹ̀ rẹ. jọ̀wọ́ sọ fún mi bí nǹkan bá yí padà.",
+    "base": "Mo ti gba tí àlán tí ó tàbí tí ó lórí."
+   },
+   {
+    "id": "d0262-2",
+    "kind": "support",
+    "reference": "Èmi yóò sọ fún àwùjọ tó ń bójú tó ọ, wọ́n á sì kàn sí ọ.",
+    "english": "I will tell your care team. They will contact you.",
+    "adapter": "Èmi yóò sọ fún àwùjọ tó ń bójú tó ọ, wọ́n á sì kàn sí ọ.",
+    "base": "Ọ̀rọ̀ nínú àwọn òlú ìṣeìkọ̀ wà ìdábáí. Àwọn òlú ìṣeìkọ̀ wà ìdábáí àwọn ń sọsọ nípa ọ̀pọ̀rọ̀."
+   },
+   {
+    "id": "d0144-2",
+    "kind": "checkin",
+    "reference": "Ó dùn mí gan-an láti gbọ́ bẹ́ẹ̀.",
+    "english": "I am sorry to hear that. Do you have worry that you cannot control?",
+    "adapter": "Ó dùn mí láti gbọ́ èyí. Ṣé o ní ń bá ọ̀sì?",
+    "base": "Mo ti gba tí sí àti nípa máàtì tí kò tàbí dára. Mo ti gba tí sí àti nípa máàtì tí kò tàbí dára."
+   },
+   {
+    "id": "d0307-3",
+    "kind": "explain",
+    "reference": "Máa lo àwọn oògùn rẹ bó ṣe sọ fún ọ lẹ́nu dókítà, kó o sì wá síbi ìpàdé tó o bá dé.",
+    "english": "Take your medicines as your doctor told you and come to your next appointment. Contact your care team if you have questions.",
+    "adapter": "Máa lo àwọn oògùn rẹ bó ṣe sọ púpọ̀, kó o sọ fún ọ.",
+    "base": "Ẹgbé láti nípa tí ó nípa tí ó nípa."
+   },
+   {
+    "id": "d0328-3",
+    "kind": "explain",
+    "reference": "Máa lo àwọn oògùn rẹ bó ṣe sọ fún ọ lẹ́nu dókítà, kó o sì wá síbi ìpàdé tó o bá dé.",
+    "english": "Take your medicines as your doctor told you and come to your next appointment. Contact your care team if you have questions.",
+    "adapter": "Máa lo àwọn oògùn rẹ bó ṣe sọ fún ọ lẹ́nu rẹ, kó oṣù rẹ ti kàn sí ilé ìrànlọ́wọ́ ọ.",
+    "base": "Ẹ ṣe báyìí, Ṣùgbọ́n tí o ṣe ẹ̀wọ́n àti ẹ̀wọ́n àwọn ẹ̀wọ́n tí ó ṣe ẹ̀wọ́n àwọn ẹ̀wọ́n àṣa."
+   },
+   {
+    "id": "d0189-4",
+    "kind": "checkin",
+    "reference": "O ṣeun pé o sọ fún mi.",
+    "english": "Thank you for telling me. How many days have you had it?",
+    "adapter": "O ṣeun pé o sọ fún mi.",
+    "base": "Ó ókọ̀ tí ó ní ìrórà sí ó nípa tí ó kò tí. Àwọn òdún tí ó ní ìrórà sí ó nípa tí ó kò tí."
+   },
+   {
+    "id": "d0045-1",
+    "kind": "explain",
+    "reference": "Àìsàn tó ń ṣe ọpọlọ tó ń fa àrùn jẹjẹrẹ ni àìsàn tó ń ṣe ọpọlọ tó wà lára ẹ, tí àwọn tó ń tọ́jú rẹ sì ti ṣàkọsílẹ̀ rẹ̀ fún ẹ.",
+    "english": "Enteric is a health condition that your care team has recorded for you. Your doctor or nurse can tell you more about it.",
+    "adapter": "Àìsàn tó ń bójú àwọn ìrànlọ́wọ́ nípa ṣàkọsílẹ̀ rẹ, kó o sọ fún ọ lẹ́nu ọmọ rẹ ti ń tọ́jú rẹ.",
+    "base": "Ójú ní ìlú ñáí sí ó ṣeíí tí ó òrọ̀kòtì sí ìdàtí àwọn ìbáyí."
+   },
+   {
+    "id": "d0114-6",
+    "kind": "checkin",
+    "reference": "Mo ti kọ èyí sínú àkọsílẹ̀ rẹ fún àwùjọ tó ń bójú tó ẹ, tó bá wá burú sí i, lọ sí ilé ìwòsàn tó sún mọ́ ẹ jù lọ tàbí ilé ìwòsàn.",
+    "english": "I have written this in your record for your care team. If it gets worse, go to the nearest clinic or hospital.",
+    "adapter": "Mo ti kọ èyí sínú àkọsílẹ̀ rẹ. jọ̀wọ́ sọ fún mi bí nǹkan bá yí padà.",
+    "base": "Mo ní ẹ̀lẹ̀ sí ó náà tí ó nípa àwọn kò tàbí."
+   },
+   {
+    "id": "d0358-2",
+    "kind": "checkin",
+    "reference": "Ó dùn mí láti gbọ́ èyí.",
+    "english": "I am sorry to hear that. Do you have cough?",
+    "adapter": "Ó dùn mí láti gbọ́ èyí.",
+    "base": "Ópọ̀lọpọ̀ náà sí ókún tí ó kò tàbí láti máàtú sí."
+   },
+   {
+    "id": "d0269-2",
+    "kind": "vaccine",
+    "reference": "O lè lọ sí ilé ìwòsàn tó sún mọ́ ẹ jù lọ, kó o sì mú káàdì ìdènà ọmọ rẹ wá.",
+    "english": "You can get it at your nearest health centre. Bring your child's immunisation card.",
+    "adapter": "O lè lọ sí ilé ìwòsàn tó sún mọ́ ẹ jù lọ, kó o sì mú káàdì ìdènà ọmọ rẹ wá.",
+    "base": "Mo ti lè rí i gbà àwọn ìlú ògbà, ṣe ọ̀rọ̀ nínú ìtàn ìlú Ìgbà. Mo ti lè rí i gbà àwọn ìlú Ìgbà, ṣe ọ̀rọ̀ nín"
+   },
+   {
+    "id": "d0056-2",
+    "kind": "support",
+    "reference": "Èmi yóò sọ fún àwùjọ tó ń bójú tó ọ, wọ́n á sì kàn sí ọ.",
+    "english": "I will tell your care team. They will contact you.",
+    "adapter": "Èmi yóò sọ fún àwùjọ tó ń bójú tó ọ, wọ́n á sì kàn sí ọ.",
+    "base": "Ọ̀rọ̀ nínú àwọn òlú ìṣeìkọ̀ wà ìdábáí. Àwọn òlú ìṣeìkọ̀ wà ìdábáí àwọn ń sọsọ nípa ọ̀pọ̀rọ̀."
+   },
+   {
+    "id": "d0030-3",
+    "kind": "explain",
+    "reference": "Máa lo àwọn oògùn rẹ bó ṣe sọ fún ọ lẹ́nu dókítà, kó o sì wá síbi ìpàdé tó o bá dé.",
+    "english": "Take your medicines as your doctor told you and come to your next appointment. Contact your care team if you have questions.",
+    "adapter": "Máa lo àwọn oògùn rẹ bó ṣe sọ fún ọ lẹ́nu rẹ, kó oṣù rẹ ti kàn sí ilé ìrànlọ́wọ́ ọ.",
+    "base": "Ẹ ṣe báyìí, Ṣùgbọ́n tí o ṣe ẹ̀wọ́n àti ẹ̀wọ́n àwọn ẹ̀wọ́n tí ó ṣe ẹ̀wọ́n àwọn ẹ̀wọ́n àṣa."
+   },
+   {
+    "id": "d0057-4",
+    "kind": "checkin",
+    "reference": "O ṣeun, mo ti kọ èyí sínú àkọsílẹ̀ rẹ. jọ̀wọ́ sọ fún mi bí nǹkan bá yí padà.",
+    "english": "Thank you. I have written that in your record. Please tell me if anything changes.",
+    "adapter": "O ṣeun, mo ti kọ èyí sínú àkọsílẹ̀ rẹ. jọ̀wọ́ sọ fún mi bí nǹkan bá yí padà.",
+    "base": "Mo ní àwọn ìrórọ̀ nípa ìrọ̀rùn tí ó ní ìrora ọpọlọ. Mo ní àwọn ìrórọ̀ nípa ìrọ̀rùn tí ó ní ìrórọ̀ nípa ìrọ̀r"
+   },
+   {
+    "id": "d0192-4",
+    "kind": "checkin",
+    "reference": "O ṣeun, mo ti kọ èyí sínú àkọsílẹ̀ rẹ. jọ̀wọ́ sọ fún mi bí nǹkan bá yí padà.",
+    "english": "Thank you. I have written that in your record. Please tell me if anything changes.",
+    "adapter": "O ṣeun, mo ti kọ èyí sínú àkọsílẹ̀ rẹ. jọ̀wọ́ sọ fún mi bí nǹkan bá yí padà.",
+    "base": "Ó ò ní polyuria àwọn ọ̀rọ̀ nípa ìlú sí ó ṣe nípa ìlú sí tí."
+   },
+   {
+    "id": "d0189-6",
+    "kind": "checkin",
+    "reference": "Mo ti kọ èyí sínú àkọsílẹ̀ rẹ fún àwùjọ tó ń bójú tó ẹ, tó bá wá burú sí i, lọ sí ilé ìwòsàn tó sún mọ́ ẹ jù lọ tàbí ilé ìwòsàn.",
+    "english": "I have written this in your record for your care team. If it gets worse, go to the nearest clinic or hospital.",
+    "adapter": "Mo ti kọ èyí sínú àkọsílẹ̀ rẹ. jọ̀wọ́ sọ fún mi bí nǹkan bá yí padà.",
+    "base": "Ẹlẹ̀ sí ó nípa tí ó nípa tí."
+   },
+   {
+    "id": "d0281-4",
+    "kind": "checkin",
+    "reference": "O ṣeun pé o sọ fún mi.",
+    "english": "Thank you for telling me. How many days have you had it?",
+    "adapter": "O ṣeun pé o sọ fún mi.",
+    "base": "Ó ókọ̀ tí ó ní ìrórà sí ó nípa tí ó kò tí. Àwọn òdún tí ó ní ìrórà sí ó nípa tí ó kò tí."
+   },
+   {
+    "id": "d0058-3",
+    "kind": "explain",
+    "reference": "Máa lo àwọn oògùn rẹ bó ṣe sọ fún ọ lẹ́nu dókítà, kó o sì wá síbi ìpàdé tó o bá dé.",
+    "english": "Take your medicines as your doctor told you and come to your next appointment. Contact your care team if you have questions.",
+    "adapter": "Máa lo àwọn oògùn rẹ bó ṣe sọ fún ọ lẹ́nu rẹ, kó o sọ fún ọ lẹ́nu rẹ."
+   },
+   {
+    "id": "d0089-3",
+    "kind": "explain",
+    "reference": "Máa lo àwọn oògùn rẹ bó ṣe sọ fún ọ lẹ́nu dókítà, kó o sì wá síbi ìpàdé tó o bá dé.",
+    "english": "Take your medicines as your doctor told you and come to your next appointment. Contact your care team if you have questions.",
+    "adapter": "Máa lo àwọn oògùn rẹ bó ṣe sọ púpọ̀ ni kí oògùn rẹ un ìdènà ẹ, yóò sọ fún ọ."
+   },
+   {
+    "id": "d0156-1",
+    "kind": "explain",
+    "reference": "Àjẹsára jẹ́ àìsàn kan tí àwọn tó ń tọ́jú rẹ ti ṣàkọsílẹ̀ fún ẹ.",
+    "english": "Anaemia is a health condition that your care team has recorded for you. Your doctor or nurse can tell you more about it.",
+    "adapter": "Àìjẹunjẹ tàbí nọ́ọ̀sì rẹ lè sọ fún ọ."
+   },
+   {
+    "id": "d0072-2",
+    "kind": "checkin",
+    "reference": "Ó dùn mí láti gbọ́ èyí.",
+    "english": "I am sorry to hear that. Do you have cough?",
+    "adapter": "Ó dùn mí láti gbọ́ èyí. Ṣé o ní ń bá ọ̀sì?"
+   },
+   {
+    "id": "d0144-4",
+    "kind": "checkin",
+    "reference": "O ṣeun, mo ti kọ èyí sínú àkọsílẹ̀ rẹ. jọ̀wọ́ sọ fún mi bí nǹkan bá yí padà.",
+    "english": "Thank you. I have written that in your record. Please tell me if anything changes.",
+    "adapter": "O ṣeun, mo ti kọ èyí sínú àkọsílẹ̀ rẹ. jọ̀wọ́ sọ fún mi bí nǹkan bá yí padà."
+   },
+   {
+    "id": "d0284-1",
+    "kind": "explain",
+    "reference": "Àìsàn tó ń ṣe ọpọlọ tó ń fa àrùn jẹjẹrẹ ni àìsàn tó ń ṣe ọpọlọ tó wà lára ẹ, tí àwọn tó ń tọ́jú rẹ sì ti ṣàkọsílẹ̀ rẹ̀ fún ẹ.",
+    "english": "Enteric is a health condition that your care team has recorded for you. Your doctor or nurse can tell you more about it.",
+    "adapter": "Àwọn tó ń tọ́jú rẹ lè ìrànlọ́wọ́ fún ẹ, kó o sọ fún ọ̀sì ọ̀sì ń tọ́jú rẹ lè ìrànlọ́wọ́ fún ẹ."
+   },
+   {
+    "id": "d0243-1",
+    "kind": "explain",
+    "reference": "Àìsàn tó ń ṣe ọpọlọ tó ń fa àrùn jẹjẹrẹ ni àìsàn tó ń ṣe ọpọlọ tó wà lára ẹ, tí àwọn tó ń tọ́jú rẹ sì ti ṣàkọsílẹ̀ rẹ̀ fún ẹ.",
+    "english": "Enteric is a health condition that your care team has recorded for you. Your doctor or nurse can tell you more about it.",
+    "adapter": "Àìsàn tó ń bójú àwọn ìrànlọ́wọ́ nípa ṣàkọsílẹ̀ rẹ, kó o sọ fún ọ lẹ́nu ọmọ rẹ ti ń tọ́jú rẹ."
+   },
+   {
+    "id": "d0114-2",
+    "kind": "checkin",
+    "reference": "Ó dùn mí gan-an láti gbọ́ bẹ́ẹ̀.",
+    "english": "I am sorry to hear that. Do you have worry that you cannot control?",
+    "adapter": "Ó dùn mí láti gbọ́ èyí."
+   },
+   {
+    "id": "d0005-2",
+    "kind": "checkin",
+    "reference": "Ó dùn mí láti gbọ́ èyí.",
+    "english": "I am sorry to hear that. Do you have polyuria?",
+    "adapter": "Ó dùn mí láti gbọ́ èyí. Ṣé o ní ń bá ọ̀sì?"
+   },
+   {
+    "id": "d0089-1",
+    "kind": "explain",
+    "reference": "Àjẹsára jẹ́ àìsàn kan tí àwọn tó ń tọ́jú rẹ ti ṣàkọsílẹ̀ fún ẹ.",
+    "english": "Anaemia is a health condition that your care team has recorded for you. Your doctor or nurse can tell you more about it.",
+    "adapter": "Àwọn àwọn tó ń fa ìrànlọ́wọ́, kó o fẹ́ ìrànlọ́wọ́ rẹ."
+   },
+   {
+    "id": "d0316-2",
+    "kind": "vaccine",
+    "reference": "O lè lọ sí ilé ìwòsàn tó sún mọ́ ẹ jù lọ, kó o sì mú káàdì ìdènà ọmọ rẹ wá.",
+    "english": "You can get it at your nearest health centre. Bring your child's immunisation card.",
+    "adapter": "O lè lọ sí ilé ìwòsàn tó sún mọ́ ẹ jù lọ, kó o sì mú káàdì ìdènà ọmọ rẹ wá."
+   },
+   {
+    "id": "d0087-4",
+    "kind": "checkin",
+    "reference": "O ṣeun pé o sọ fún mi.",
+    "english": "Thank you for telling me. How many days have you had it?",
+    "adapter": "O ṣeun pé o sọ fún mi."
+   },
+   {
+    "id": "d0179-2",
+    "kind": "checkin",
+    "reference": "Ó dùn mí láti gbọ́ èyí.",
+    "english": "I am sorry to hear that. Do you have polyuria?",
+    "adapter": "Ó dùn mí láti gbọ́ èyí."
+   },
+   {
+    "id": "d0277-4",
+    "kind": "checkin",
+    "reference": "O ṣeun pé o sọ fún mi.",
+    "english": "Thank you for telling me. How many days have you had it?",
+    "adapter": "O ṣeun pé o sọ fún mi."
+   },
+   {
+    "id": "d0281-2",
+    "kind": "checkin",
+    "reference": "Ó dùn mí láti gbọ́ èyí. Ṣé o ní ìrora ìrọ̀rùn?",
+    "english": "I am sorry to hear that. Do you have joint pain?",
+    "adapter": "Ó dùn mí láti gbọ́ èyí."
+   },
+   {
+    "id": "d0129-2",
+    "kind": "checkin",
+    "reference": "Ó dùn mí láti gbọ́ èyí.",
+    "english": "I am sorry to hear that. Do you have polyuria?",
+    "adapter": "Ó dùn mí láti gbọ́ èyí. Ṣé o ní ń bá ọ̀sì?"
+   },
+   {
+    "id": "d0231-6",
+    "kind": "checkin",
+    "reference": "Mo ti kọ èyí sínú àkọsílẹ̀ rẹ fún àwùjọ tó ń bójú tó ẹ, tó bá wá burú sí i, lọ sí ilé ìwòsàn tó sún mọ́ ẹ jù lọ tàbí ilé ìwòsàn.",
+    "english": "I have written this in your record for your care team. If it gets worse, go to the nearest clinic or hospital.",
+    "adapter": "Mo ti kọ èyí sínú àkọsílẹ̀ rẹ. jọ̀wọ́ sọ fún mi bí nǹkan bá yí padà."
+   },
+   {
+    "id": "d0192-2",
+    "kind": "checkin",
+    "reference": "Ó dùn mí láti gbọ́ èyí.",
+    "english": "I am sorry to hear that. Do you have polyuria?",
+    "adapter": "Ó dùn mí láti gbọ́ èyí. Ṣé o ní ń bá ọ̀sì?"
+   },
+   {
+    "id": "d0110-2",
+    "kind": "support",
+    "reference": "Èmi yóò sọ fún àwùjọ tó ń bójú tó ọ, wọ́n á sì kàn sí ọ.",
+    "english": "I will tell your care team. They will contact you.",
+    "adapter": "Èmi yóò sọ fún àwùjọ tó ń bójú tó ọ, wọ́n á sì kàn sí ọ."
+   },
+   {
+    "id": "d0114-4",
+    "kind": "checkin",
+    "reference": "O ṣeun pé o sọ fún mi.",
+    "english": "Thank you for telling me. How many days have you had it?",
+    "adapter": "O ṣeun pé o sọ fún mi."
+   },
+   {
+    "id": "d0221-6",
+    "kind": "checkin",
+    "reference": "Mo ti kọ èyí sínú àkọsílẹ̀ rẹ fún àwùjọ tó ń bójú tó ẹ, tó bá wá burú sí i, lọ sí ilé ìwòsàn tó sún mọ́ ẹ jù lọ tàbí ilé ìwòsàn.",
+    "english": "I have written this in your record for your care team. If it gets worse, go to the nearest clinic or hospital.",
+    "adapter": "Mo ti kọ èyí sínú àkọsílẹ̀ rẹ. jọ̀wọ́ sọ fún mi bí nǹkan bá yí padà."
+   },
+   {
+    "id": "d0008-4",
+    "kind": "checkin",
+    "reference": "O ṣeun pé o sọ fún mi.",
+    "english": "Thank you for telling me. How many days have you had it?",
+    "adapter": "O ṣeun pé o sọ fún mi."
+   },
+   {
+    "id": "d0008-6",
+    "kind": "checkin",
+    "reference": "Mo ti kọ èyí sínú àkọsílẹ̀ rẹ fún àwùjọ tó ń bójú tó ẹ, tó bá wá burú sí i, lọ sí ilé ìwòsàn tó sún mọ́ ẹ jù lọ tàbí ilé ìwòsàn.",
+    "english": "I have written this in your record for your care team. If it gets worse, go to the nearest clinic or hospital.",
+    "adapter": "Mo ti kọ èyí sínú àkọsílẹ̀ rẹ. jọ̀wọ́ sọ fún mi bí nǹkan bá yí padà."
+   },
+   {
+    "id": "d0042-2",
+    "kind": "checkin",
+    "reference": "Ó dùn mí gan-an láti gbọ́ bẹ́ẹ̀.",
+    "english": "I am sorry to hear that. Do you have worry that you cannot control?",
+    "adapter": "Ó dùn mí láti gbọ́ èyí."
+   },
+   {
+    "id": "d0343-4",
+    "kind": "checkin",
+    "reference": "O ṣeun pé o sọ fún mi.",
+    "english": "Thank you for telling me. How many days have you had it?",
+    "adapter": "O ṣeun pé o sọ fún mi."
+   },
+   {
+    "id": "d0057-2",
+    "kind": "checkin",
+    "reference": "Ó dùn mí láti gbọ́ èyí. Ṣé o ní ìrora ìrọ̀rùn?",
+    "english": "I am sorry to hear that. Do you have joint pain?",
+    "adapter": "Ó dùn mí láti gbọ́ èyí. Ṣé o ní ń bá ọ̀sì?"
+   },
+   {
+    "id": "d0077-4",
+    "kind": "checkin",
+    "reference": "O ṣeun, mo ti kọ èyí sínú àkọsílẹ̀ rẹ. jọ̀wọ́ sọ fún mi bí nǹkan bá yí padà.",
+    "english": "Thank you. I have written that in your record. Please tell me if anything changes.",
+    "adapter": "O ṣeun, mo ti kọ èyí sínú àkọsílẹ̀ rẹ. jọ̀wọ́ sọ fún mi bí nǹkan bá yí padà."
+   },
+   {
+    "id": "d0221-4",
+    "kind": "checkin",
+    "reference": "O ṣeun pé o sọ fún mi.",
+    "english": "Thank you for telling me. How many days have you had it?",
+    "adapter": "O ṣeun pé o sọ fún mi."
+   },
+   {
+    "id": "d0005-6",
+    "kind": "checkin",
+    "reference": "Mo ti kọ èyí sínú àkọsílẹ̀ rẹ fún àwùjọ tó ń bójú tó ẹ, tó bá wá burú sí i, lọ sí ilé ìwòsàn tó sún mọ́ ẹ jù lọ tàbí ilé ìwòsàn.",
+    "english": "I have written this in your record for your care team. If it gets worse, go to the nearest clinic or hospital.",
+    "adapter": "Mo ti kọ èyí sínú àkọsílẹ̀ rẹ. jọ̀wọ́ sọ fún mi bí nǹkan bá yí padà."
+   },
+   {
+    "id": "d0343-2",
+    "kind": "checkin",
+    "reference": "Ó dùn mí gan-an láti gbọ́ bẹ́ẹ̀.",
+    "english": "I am sorry to hear that. Do you have worry that you cannot control?",
+    "adapter": "Ó dùn mí láti gbọ́ èyí. Ṣé o ní ń bá ọ̀sì?"
+   }
+  ]
+ }
+}

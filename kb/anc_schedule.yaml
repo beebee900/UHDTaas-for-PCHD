@@ -1,0 +1,20 @@
+# WHO ANC model: a minimum of eight contacts, with the gestational age (weeks) of each contact.
+- id: anc.schedule
+  contacts:
+  - {contact: 1, up_to_week: 12}
+  - {contact: 2, week: 20}
+  - {contact: 3, week: 26}
+  - {contact: 4, week: 30}
+  - {contact: 5, week: 34}
+  - {contact: 6, week: 36}
+  - {contact: 7, week: 38}
+  - {contact: 8, week: 40}
+  provenance:
+    source: who-anc-2016
+    section: 4. Implementation of the ANC guideline and recommendations
+    page: 123
+    also:
+    - {source: who-anc-2016, page: 18}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified

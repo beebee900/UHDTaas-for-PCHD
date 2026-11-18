@@ -1,0 +1,27 @@
+# Individual mobility: exploration and preferential return (Song et al. 2010).
+model_id: ahdt.social.mobility
+sources:
+- id: song2010
+  citation: "Song C, Koren T, Wang P, Barabasi AL. Modelling the scaling properties of human
+    mobility. Nat Phys. 2010;6:818-823. doi:10.1038/nphys1760"
+  via: "arXiv:1010.0436v1, text read for the model definition and the parameter estimates"
+  url: https://arxiv.org/abs/1010.0436
+- id: atra-assumption
+  citation: ATRA design 01 rule R5 assumption register
+params:
+  rho: {value: 0.6, unit: '1', source: song2010, calibrate: true, prior_cv: 0.3,
+        note: "mean of P(rho) over the mobile phone users of the study"}
+  gamma: {value: 0.21, unit: '1', source: song2010, calibrate: true, prior_cv: 0.3,
+          note: "exploration exponent, 0.21 +/- 0.02"}
+  alpha: {value: 0.55, unit: '1', source: song2010, note: "jump size exponent, 0.55 +/- 0.05"}
+  beta: {value: 0.8, unit: '1', source: song2010, note: "waiting time exponent, 0.8 +/- 0.1"}
+  min_jump_km: {value: 0.1, unit: km, source: atra-assumption, assumption: true,
+                justification: "Lower cut-off of the jump size density; the paper gives the
+                  exponent, not the cut-offs. Stay points closer than this are one place"}
+  max_jump_km: {value: 100, unit: km, source: atra-assumption, assumption: true,
+                justification: "Upper cut-off of the jump size density, a regional travel limit"}
+  min_wait_h: {value: 1, unit: h, source: atra-assumption, assumption: true,
+               justification: "Lower cut-off of the waiting time density; the sampling interval
+                 of one stay point per hour"}
+  max_wait_h: {value: 168, unit: h, source: atra-assumption, assumption: true,
+               justification: "Upper cut-off of the waiting time density, one week"}

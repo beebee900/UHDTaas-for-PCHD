@@ -1,0 +1,17 @@
+test,on_site,price_ngn,turnaround_h
+test.blood_culture,True,20300,1
+test.cd4,True,15600,1
+test.creatinine,True,13300,24
+test.glucose_capillary,True,19100,24
+test.haemoglobin,True,22000,24
+test.hiv_rapid_test,True,13800,24
+test.hiv_viral_load,True,13000,1
+test.lassa_rt_pcr,True,23100,24
+test.malaria_microscopy,True,28600,24
+test.malaria_rdt_hrp2,True,18500,1
+test.malaria_rdt_pldh,True,7700,24
+test.tb_lc_anaat,True,22800,4
+test.typhoid_rdt,True,17400,1
+test.urine_culture,True,24400,2
+test.urine_dipstick,True,16900,1
+test.urine_ketones,True,3200,24

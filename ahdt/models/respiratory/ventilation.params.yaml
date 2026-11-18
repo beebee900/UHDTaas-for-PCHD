@@ -1,0 +1,34 @@
+# Chemoreflex control of ventilation, closed through the gas exchange equations.
+model_id: ahdt.respiratory.ventilation_control
+sources:
+- id: kana2010
+  citation: "Kana M. Mathematical models of cardiovascular control by the autonomic nervous
+    system. Doctoral thesis, Czech Technical University in Prague; 2010. Table 2.4.2,
+    chemoreceptor constants from Ursino M, Magosso E. Am J Physiol Heart Circ Physiol.
+    2000;279(1):H149-H165"
+  url: https://arxiv.org/abs/1901.05071
+- id: west
+  citation: "West JB, Luks AM. West's Respiratory Physiology: The Essentials. 11th ed.
+    Wolters Kluwer; 2020. Chapter 8 (control of ventilation)"
+- id: atra-assumption
+  citation: ATRA design 01 rule R5 assumption register
+params:
+  tau_c: {value: 2, unit: s, source: kana2010}
+  k_ac: {value: 29.27, unit: 'mm[Hg]', source: kana2010}
+  f_ac_min: {value: 1.16, unit: Hz, source: kana2010}
+  f_ac_max: {value: 17.07, unit: Hz, source: kana2010}
+  pao2_n: {value: 45, unit: 'mm[Hg]', source: kana2010}
+  ve_rest: {value: 7.0, unit: L/min, source: west, verified: false,
+            justification: "Resting minute ventilation as recalled from West; needs a page
+              check"}
+  paco2_set: {value: 40, unit: 'mm[Hg]', source: west, verified: false,
+              justification: "Normal arterial PCO2 as recalled from West; needs a page check"}
+  central_gain: {value: 2.5, unit: 'L/min/mm[Hg]', source: west, verified: false,
+                 calibrate: true, prior_cv: 0.4,
+                 justification: "Ventilatory response to CO2 within the 2 to 5 L/min/mmHg range
+                   recalled from West; needs a page check and per-person calibration"}
+  peripheral_gain: {value: 0.5, unit: L/min/Hz, source: atra-assumption, assumption: true,
+                    justification: "Ventilation added per unit of chemoreceptor firing above
+                      its resting rate; no published gain for this reduced controller"}
+  tau_ve: {value: 60, unit: s, source: atra-assumption, assumption: true,
+           justification: "Time constant of the ventilatory response; to be sourced"}

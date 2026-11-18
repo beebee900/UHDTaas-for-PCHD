@@ -1,0 +1,98 @@
+kind: respiratory
+name: Respiratory DT
+referent: Airways, lungs and ventilation control
+fields:
+- name: respiratory_rate
+  loinc: 9279-1
+  mdc: MDC_RESP_RATE
+  ucum: /min
+  ref: range.respiratory_rate
+  sample_period_s: 60
+  source:
+  - wearable
+  - monitor
+  - manual
+- name: spo2
+  loinc: 59408-5
+  mdc: MDC_PULS_OXIM_SAT_O2
+  ucum: '%'
+  ref: range.spo2
+  sample_period_s: 60
+  source:
+  - wearable
+  - device
+  - monitor
+  - manual
+- name: pef
+  loinc: 19935-6
+  mdc: MDC_FLOW_AWAY_EXP_FORCED_PEAK
+  ucum: L/min
+  ref: range.pef
+  source:
+  - device
+- name: fev1
+  loinc: 20150-9
+  ucum: L
+  ref: range.fev1
+  source:
+  - device
+- name: fio2
+  loinc: 3150-0
+  ucum: '%'
+  ref: range.fio2
+  source:
+  - monitor
+  - manual
+- name: cough_events
+  ucum: /h
+  ref: range.cough_events
+  source:
+  - derived
+models:
+- ahdt.respiratory.lungs_and_gas_exchange
+- ahdt.respiratory.trachea_bronchial_tree_upper_airway_and_larynx
+- ahdt.respiratory.diaphragm
+- ahdt.respiratory.airway_epithelium
+- ahdt.respiratory.ventilation_control
+- ahdt.respiratory.spo2_desaturation_detection
+- ahdt.respiratory.exacerbation_risk
+owns_instances:
+- UBERON:0002048
+reads_facets:
+- instance: UBERON:0000948
+  facet: haemodynamics
+- instance: UBERON:0000178
+  facet: oxygen_carriage
+standing_goals:
+- id: resp.ventilation_current
+  text: Keep ventilation and SpO2 estimates current
+  check:
+    kind: freshness
+    params:
+      fields:
+      - respiratory_rate
+      - spo2
+      max_age_s: 900
+- id: resp.desaturation
+  text: Detect desaturation
+  check:
+    kind: model_flag
+    params:
+      model: ahdt.respiratory.spo2_desaturation_detection
+      threshold:
+        kb: goal.resp.desaturation_probability
+- id: resp.exacerbation
+  text: Flag exacerbation risk
+  check:
+    kind: model_flag
+    params:
+      model: ahdt.respiratory.exacerbation_risk
+      threshold:
+        kb: goal.resp.exacerbation_risk
+connectors_out:
+- RespiratoryRenalConnector
+- SystemToWholeBodyConnector
+connectors_in:
+- CardiovascularRespiratoryConnector
+- ExposomeConnector
+- NormsConnector

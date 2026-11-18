@@ -1,0 +1,36 @@
+# WHO haemoglobin cutoffs for anaemia and its severity, in g/L. A group's anaemia is mild from
+# `mild_at_or_above` up to the anaemia cutoff, moderate from `moderate_at_or_above`, and severe
+# below `severe_below`. Ages are in months; adult rows apply from 15 to 65 years.
+- id: severity.anaemia.who
+  unit: g/L
+  groups:
+  - {group: children_6_23_months, age_from_months: 6, age_below_months: 24, anaemia_below: 105,
+     mild_at_or_above: 95, moderate_at_or_above: 70, severe_below: 70}
+  - {group: children_24_59_months, age_from_months: 24, age_below_months: 60, anaemia_below: 110,
+     mild_at_or_above: 100, moderate_at_or_above: 70, severe_below: 70}
+  - {group: children_5_11_years, age_from_months: 60, age_below_months: 144, anaemia_below: 115,
+     mild_at_or_above: 110, moderate_at_or_above: 80, severe_below: 80}
+  - {group: children_12_14_years, age_from_months: 144, age_below_months: 180, anaemia_below: 120,
+     mild_at_or_above: 110, moderate_at_or_above: 80, severe_below: 80}
+  - {group: women_nonpregnant, sex: female, age_from_months: 180, age_below_months: 792,
+     anaemia_below: 120, mild_at_or_above: 110, moderate_at_or_above: 80, severe_below: 80}
+  - {group: men, sex: male, age_from_months: 180, age_below_months: 792, anaemia_below: 130,
+     mild_at_or_above: 110, moderate_at_or_above: 80, severe_below: 80}
+  - {group: pregnancy_t1, pregnancy: t1, anaemia_below: 110, mild_at_or_above: 100,
+     moderate_at_or_above: 70, severe_below: 70}
+  - {group: pregnancy_t2, pregnancy: t2, anaemia_below: 105, mild_at_or_above: 95,
+     moderate_at_or_above: 70, severe_below: 70}
+  - {group: pregnancy_t3, pregnancy: t3, anaemia_below: 110, mild_at_or_above: 100,
+     moderate_at_or_above: 70, severe_below: 70}
+  provenance:
+    source: who-hb-2024
+    section: Normative statement 1.b Anaemia severity
+    page: 13
+    also:
+    - {source: who-hb-2024, page: 12}
+    derived:
+      groups[*].age_from_months: Table age bands in years or months, converted to months.
+      groups[*].age_below_months: Table age bands in years or months, converted to months.
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified

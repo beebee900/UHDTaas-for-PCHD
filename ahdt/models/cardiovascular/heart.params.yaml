@@ -1,0 +1,60 @@
+# Smith, Chase, Nokes, Shaw and Wake (2004) minimal haemodynamic system model.
+model_id: ahdt.cardiovascular.heart_chambers_and_valves
+sources:
+- id: smith2004
+  citation: "Smith BW, Chase JG, Nokes RI, Shaw GM, Wake G. Minimal haemodynamic system model
+    including ventricular interaction and valve dynamics. Med Eng Phys. 2004;26(2):131-139.
+    doi:10.1016/j.medengphy.2003.10.001"
+  via: "Physiome Model Repository, smith_chase_nokes_shaw_wake_2004.cellml. The file labels
+    pressures as kPa; the values are in mmHg, as in the paper."
+  url: https://models.physiomeproject.org/workspace/smith_chase_nokes_shaw_wake_2004
+params:
+  R_mt: {value: 0.0158, unit: 'mm[Hg].s/mL', source: smith2004}
+  R_av: {value: 0.0180, unit: 'mm[Hg].s/mL', source: smith2004}
+  R_tc: {value: 0.0237, unit: 'mm[Hg].s/mL', source: smith2004}
+  R_pv: {value: 0.0055, unit: 'mm[Hg].s/mL', source: smith2004}
+  R_pul: {value: 0.1552, unit: 'mm[Hg].s/mL', source: smith2004}
+  R_sys: {value: 1.0889, unit: 'mm[Hg].s/mL', source: smith2004, calibrate: true, prior_cv: 0.3}
+  L_tc: {value: 8.0093e-5, unit: 'mm[Hg].s2/mL', source: smith2004}
+  L_pv: {value: 1.4868e-4, unit: 'mm[Hg].s2/mL', source: smith2004}
+  L_mt: {value: 7.6968e-5, unit: 'mm[Hg].s2/mL', source: smith2004}
+  L_av: {value: 1.2189e-4, unit: 'mm[Hg].s2/mL', source: smith2004}
+  P_th: {value: -4, unit: 'mm[Hg]', source: smith2004, note: intrathoracic pressure}
+  A: {value: 1, unit: '1', source: smith2004}
+  B: {value: 80, unit: /s2, source: smith2004}
+  C: {value: 0.375, unit: s, source: smith2004}
+  period: {value: 0.75, unit: s, source: smith2004}
+  P_0_pcd: {value: 0.5003, unit: 'mm[Hg]', source: smith2004}
+  V_0_pcd: {value: 200, unit: mL, source: smith2004}
+  lambda_pcd: {value: 0.03, unit: /mL, source: smith2004}
+  E_es_lvf: {value: 2.8798, unit: 'mm[Hg]/mL', source: smith2004, calibrate: true, prior_cv: 0.3}
+  V_d_lvf: {value: 0, unit: mL, source: smith2004}
+  P_0_lvf: {value: 0.1203, unit: 'mm[Hg]', source: smith2004}
+  lambda_lvf: {value: 0.033, unit: /mL, source: smith2004}
+  V_0_lvf: {value: 0, unit: mL, source: smith2004}
+  E_es_rvf: {value: 0.585, unit: 'mm[Hg]/mL', source: smith2004}
+  V_d_rvf: {value: 0, unit: mL, source: smith2004}
+  P_0_rvf: {value: 0.2157, unit: 'mm[Hg]', source: smith2004}
+  lambda_rvf: {value: 0.023, unit: /mL, source: smith2004}
+  V_0_rvf: {value: 0, unit: mL, source: smith2004}
+  E_es_spt: {value: 48.754, unit: 'mm[Hg]/mL', source: smith2004}
+  V_d_spt: {value: 2, unit: mL, source: smith2004}
+  P_0_spt: {value: 1.1101, unit: 'mm[Hg]', source: smith2004}
+  lambda_spt: {value: 0.435, unit: /mL, source: smith2004}
+  V_0_spt: {value: 2, unit: mL, source: smith2004}
+  E_es_pa: {value: 0.369, unit: 'mm[Hg]/mL', source: smith2004}
+  V_d_pa: {value: 0, unit: mL, source: smith2004}
+  E_es_pu: {value: 0.0073, unit: 'mm[Hg]/mL', source: smith2004}
+  V_d_pu: {value: 0, unit: mL, source: smith2004}
+  E_es_ao: {value: 0.6913, unit: 'mm[Hg]/mL', source: smith2004}
+  V_d_ao: {value: 0, unit: mL, source: smith2004}
+  E_es_vc: {value: 0.0059, unit: 'mm[Hg]/mL', source: smith2004}
+  V_d_vc: {value: 0, unit: mL, source: smith2004}
+  V_lv0: {value: 94.6812, unit: mL, source: smith2004, note: initial state}
+  V_rv0: {value: 90.7302, unit: mL, source: smith2004, note: initial state}
+  V_pa0: {value: 43.0123, unit: mL, source: smith2004, note: initial state}
+  V_pu0: {value: 808.4579, unit: mL, source: smith2004, note: initial state}
+  V_ao0: {value: 133.3381, unit: mL, source: smith2004, note: initial state}
+  V_vc0: {value: 329.7803, unit: mL, source: smith2004, note: initial state}
+  Q_mt0: {value: 245.5813, unit: mL/s, source: smith2004, note: initial state}
+  Q_tc0: {value: 190.0661, unit: mL/s, source: smith2004, note: initial state}

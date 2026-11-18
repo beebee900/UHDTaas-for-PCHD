@@ -1,0 +1,100 @@
+{
+  "$defs": {
+    "MedicationEntry": {
+      "additionalProperties": false,
+      "properties": {
+        "adherence": {
+          "anyOf": [
+            {
+              "maximum": 1,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Adherence"
+        },
+        "atc": {
+          "title": "Atc",
+          "type": "string"
+        },
+        "display": {
+          "title": "Display",
+          "type": "string"
+        },
+        "dose": {
+          "title": "Dose",
+          "type": "string"
+        },
+        "end": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "End"
+        },
+        "frequency": {
+          "title": "Frequency",
+          "type": "string"
+        },
+        "route": {
+          "title": "Route",
+          "type": "string"
+        },
+        "rxnorm": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Rxnorm"
+        },
+        "start": {
+          "format": "date-time",
+          "title": "Start",
+          "type": "string"
+        }
+      },
+      "required": [
+        "atc",
+        "display",
+        "dose",
+        "route",
+        "frequency",
+        "start"
+      ],
+      "title": "MedicationEntry",
+      "type": "object"
+    }
+  },
+  "$id": "https://atra.local/schemas/tools/ahdt.data.medications.response.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "medications": {
+      "items": {
+        "$ref": "#/$defs/MedicationEntry"
+      },
+      "title": "Medications",
+      "type": "array"
+    }
+  },
+  "required": [
+    "medications"
+  ],
+  "title": "MedicationsData",
+  "type": "object"
+}

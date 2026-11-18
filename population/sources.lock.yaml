@@ -1,0 +1,17 @@
+# Local copies of the parameter sources of the population models (var/wp14e/sources/<id>.jats).
+smith2007:
+  url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC1802755/fullTextXML
+  doi: 10.1371/journal.pbio.0050042
+  licence: CC0 1.0
+  bytes: 167045
+  sha256: 8adc1ad84e29bf0a8775033322dfa4f99301b425b40d12a560f860c5f4f4c430
+  accessed: '2026-10-11'
+smith2012:
+  url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3320609/fullTextXML
+  doi: 10.1371/journal.ppat.1002588
+  licence: CC0 1.0
+  bytes: 193578
+  sha256: c54c71e9fcccd6af52c49e8202af0062c81826f684eb0c11564bd0c934c5b606
+  accessed: '2026-10-11'
+  equations: Box 7 and the vectorial capacity and R0 formulas are images in the JATS
+    (ppat.1002588.e012, e013, e015 on the PMC CDN); they were read from the images.

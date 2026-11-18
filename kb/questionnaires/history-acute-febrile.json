@@ -1,0 +1,196 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "history-acute-febrile",
+  "url": "https://atra.health/fhir/Questionnaire/history-acute-febrile",
+  "version": "1.0.0",
+  "status": "active",
+  "title": "History: acute febrile",
+  "item": [
+    {
+      "linkId": "onset_days",
+      "text": "How many days ago did this illness start?",
+      "type": "integer",
+      "required": true
+    },
+    {
+      "linkId": "find.abdominal_pain",
+      "text": "Abdominal pain?",
+      "type": "boolean",
+      "code": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "21522001",
+          "display": "Abdominal pain"
+        }
+      ]
+    },
+    {
+      "linkId": "find.chest_pain",
+      "text": "Chest pain?",
+      "type": "boolean",
+      "code": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "29857009",
+          "display": "Chest pain"
+        }
+      ]
+    },
+    {
+      "linkId": "find.cough",
+      "text": "Cough?",
+      "type": "boolean",
+      "code": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "49727002",
+          "display": "Cough"
+        }
+      ]
+    },
+    {
+      "linkId": "find.diarrhoea",
+      "text": "Diarrhoea?",
+      "type": "boolean",
+      "code": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "62315008",
+          "display": "Diarrhoea"
+        }
+      ]
+    },
+    {
+      "linkId": "find.dyspnoea",
+      "text": "Breathlessness?",
+      "type": "boolean",
+      "code": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "267036007",
+          "display": "Breathlessness"
+        }
+      ]
+    },
+    {
+      "linkId": "find.dysuria",
+      "text": "Dysuria?",
+      "type": "boolean",
+      "code": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "49650001",
+          "display": "Dysuria"
+        }
+      ]
+    },
+    {
+      "linkId": "find.fever_history",
+      "text": "History of fever?",
+      "type": "boolean",
+      "code": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "386661006",
+          "display": "History of fever"
+        }
+      ]
+    },
+    {
+      "linkId": "find.flank_pain",
+      "text": "Flank pain?",
+      "type": "boolean",
+      "code": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "247355005",
+          "display": "Flank pain"
+        }
+      ]
+    },
+    {
+      "linkId": "find.headache",
+      "text": "Headache?",
+      "type": "boolean",
+      "code": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "25064002",
+          "display": "Headache"
+        }
+      ]
+    },
+    {
+      "linkId": "find.hearing_loss",
+      "text": "Hearing loss?",
+      "type": "boolean",
+      "code": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "15188001",
+          "display": "Hearing loss"
+        }
+      ]
+    },
+    {
+      "linkId": "find.joint_pain",
+      "text": "Joint pain?",
+      "type": "boolean",
+      "code": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "57676002",
+          "display": "Joint pain"
+        }
+      ]
+    },
+    {
+      "linkId": "find.myalgia",
+      "text": "Muscle pain?",
+      "type": "boolean",
+      "code": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "68962001",
+          "display": "Muscle pain"
+        }
+      ]
+    },
+    {
+      "linkId": "find.sore_throat",
+      "text": "Sore throat?",
+      "type": "boolean",
+      "code": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "267102003",
+          "display": "Sore throat"
+        }
+      ]
+    },
+    {
+      "linkId": "find.urinary_frequency",
+      "text": "Frequent urination?",
+      "type": "boolean",
+      "code": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "300471006",
+          "display": "Frequent urination"
+        }
+      ]
+    },
+    {
+      "linkId": "find.vomiting",
+      "text": "Vomiting?",
+      "type": "boolean",
+      "code": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "422400008",
+          "display": "Vomiting"
+        }
+      ]
+    }
+  ]
+}

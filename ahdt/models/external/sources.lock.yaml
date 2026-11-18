@@ -1,0 +1,74 @@
+# Local copies of the external model files and tools (var/wp14c/sources/<id>).
+# `python -m ahdt.models.external.sources` downloads missing files and verifies sha256.
+biomodels-341:
+  file: BIOMD0000000341.xml
+  url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000341?filename=BIOMD0000000341_url.xml
+  what: Topp et al. (2000) beta-cell mass, insulin and glucose kinetics (SBML L2V4)
+  doi: 10.1006/jtbi.2000.2150
+  licence: CC0 1.0
+  curation: curated
+  bytes: 10143
+  sha256: e86507d1dc05cbc37d5145eaaafb0ac627ba6f71d69652b3c72a9d129e15851a
+  accessed: '2026-10-12'
+biomodels-633:
+  file: BIOMD0000000633.xml
+  url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000633?filename=BIOMD0000000633_url.xml
+  what: Bulik et al. (2016) regulation of hepatic glucose metabolism, rat hepatocyte (SBML L2V4)
+  doi: 10.1186/s12915-016-0237-6
+  licence: CC0 1.0
+  curation: curated
+  bytes: 236990
+  sha256: ca360484d69831e4e334562b000e3113fa93cbe70617ca1d06298e2efee6a538
+  accessed: '2026-10-12'
+biomodels-494:
+  file: BIOMD0000000494.xml
+  url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000494?filename=BIOMD0000000494_url.xml
+  what: Roeblitz et al. (2013) menstrual cycle model with GnRH analogues (SBML L2V4)
+  doi: 10.1016/j.jtbi.2012.11.020
+  licence: CC0 1.0
+  curation: curated
+  bytes: 449771
+  sha256: 7eb01f255157c04ff346d8df279283b5735bee751f9167c31948d3fbfeaf81fe
+  accessed: '2026-10-12'
+biomodels-916:
+  file: BIOMD0000000916.xml
+  url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000916?filename=Kraan1992.xml
+  what: Kraan et al. (1992) kinetics of cortisol metabolism and excretion (SBML L2V4)
+  doi: 10.1016/0960-0760(92)90025-E
+  licence: CC0 1.0
+  curation: curated
+  bytes: 36644
+  sha256: f16b05b77ce9a873421cb06079e02d5ab6e19319502a457446cfcf1c516d2cb9
+  accessed: '2026-10-12'
+roeblitz-zib-11-16:
+  file: ZR_11_16.pdf
+  url: https://opus4.kobv.de/opus4-matheon/files/956/ZR_11_16.pdf
+  what: Roeblitz et al. ZIB report 11-16, the preprint of the 2013 menstrual cycle paper (units and cycle length)
+  licence: author preprint, read only
+  bytes: 1068524
+  sha256: 7469ec041af24b09318bb8a18fd3dc6f35875f0505f8900e7af5692546f0a586
+  accessed: '2026-10-12'
+gait2392:
+  file: gait2392_thelen2003muscle.osim
+  url: https://raw.githubusercontent.com/opensim-org/opensim-models/d9b05d470b1a481c222372c85b75772faf8f7792/Models/Gait2392_Simbody/gait2392_thelen2003muscle.osim
+  what: OpenSim gait2392 generic musculoskeletal model, Thelen 2003 muscles (opensim-models commit d9b05d4)
+  licence: CC BY 3.0 (stated in the model credits)
+  bytes: 576084
+  sha256: 3af1ca20aa87bc88b0b8cd54f2504331afa2aa03537cc868f1175fa1f50f3c0f
+  accessed: '2026-10-12'
+opencarp-appimage:
+  file: openCARP-v20.0-x86_64_AppImage.tar.gz
+  url: https://git.opencarp.org/api/v4/projects/16/packages/generic/opencarp-appimage/v20.0/openCARP-v20.0-x86_64_AppImage.tar.gz
+  what: openCARP v20.0 simulator and meshtool (AppImage), ionic models under APL 1.1
+  licence: openCARP Academic Public Licence 1.1 for the ionic models; build scripts Apache-2.0
+  bytes: 53714175
+  sha256: 7957a10b8edbc3b28a09be954ffd2e297949b15dfaf8c80da2cea2f077c883ff
+  accessed: '2026-10-12'
+icrp-89:
+  file: icrp89.pdf
+  url: https://lappd.uchicago.edu/Simulation/icrpp89.pdf
+  what: ICRP Publication 89 (2002), reference anatomical and physiological data; Tables 2.8, 2.9, 2.39, 2.40 and Section 8.2 were read for the PBPK physiology
+  licence: copyright ICRP, read only for parameter extraction
+  bytes: 7336668
+  sha256: 2d832efb2b39290cf72133be441f37f15b340f3d5dc1e589fe7ece75fac82692
+  accessed: '2026-10-12'

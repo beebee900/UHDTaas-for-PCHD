@@ -1,0 +1,23 @@
+# CURB-65 severity score for adult community-acquired pneumonia (1 point per criterion).
+- id: severity.pneumonia.curb65
+  criteria:
+  - {criterion: new_confusion}
+  - {criterion: urea, above_mmol_l: 7}
+  - {criterion: respiratory_rate, above: 30}
+  - {criterion: blood_pressure, systolic_below: 90, diastolic_at_or_below: 60}
+  - {criterion: age, at_or_above_years: 65}
+  actions:
+  - {score_from: 0, score_to: 1, action: consider_outpatient}
+  - {score_from: 2, score_to: 2, action: consider_inpatient, consider_adding: clarithromycin}
+  - {score_from: 3, action: inpatient_consider_icu, consider_adding: clarithromycin}
+  note: Not extensively validated in low-income settings; CRB-65 (without urea) is read the same.
+  provenance:
+    source: who-aware-2022
+    section: 12. Community-acquired pneumonia – mild
+    page: 166
+    derived:
+      criteria[4].at_or_above_years: The age threshold is printed on the page but absent from
+        its text layer; read from the rendered page.
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified

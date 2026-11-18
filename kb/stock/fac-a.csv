@@ -1,0 +1,60 @@
+atc,drug,units_on_hand,reorder_level
+A10BA02,metformin,226,30
+A10BB09,gliclazide,343,30
+A12AA,calcium (elemental),265,30
+A12CC02,magnesium sulfate,62,30
+B01AC06,acetylsalicylic acid,260,30
+B05BA03,glucose 10% solution,384,30
+C03AA03,hydrochlorothiazide,297,30
+C03BA04,chlorthalidone,145,30
+C03BA11,indapamide,395,30
+C08CA01,amlodipine,41,30
+C09AA03,lisinopril,300,30
+C09AA04,perindopril,90,30
+C09AA05,ramipril,146,30
+C09CA01,losartan,352,30
+C09CA07,telmisartan,198,30
+H02AB06,prednisolone,25,30
+J01AA02,doxycycline,380,30
+J01CA01,ampicillin,317,30
+J01CA04,amoxicillin,0,30
+J01CE01,benzylpenicillin,386,30
+J01CE02,phenoxymethylpenicillin,124,30
+J01CF02,cloxacillin,110,30
+J01CR02,amoxicillin + clavulanic acid,84,30
+J01DD01,cefotaxime,116,30
+J01DD04,ceftriaxone,254,30
+J01EA01,trimethoprim,396,30
+J01EE01,sulfamethoxazole + trimethoprim,300,30
+J01FA09,clarithromycin,60,30
+J01FA10,azithromycin,211,30
+J01GB03,gentamicin,225,30
+J01GB06,amikacin,133,30
+J01MA02,ciprofloxacin,69,30
+J01XE01,nitrofurantoin,38,30
+J04AM02,isoniazid + rifampicin,29,30
+J04AM06,isoniazid + rifampicin + pyrazinamide + ethambutol,320,30
+J05AP01,ribavirin,258,30
+J05AR27,dolutegravir + tenofovir disoproxil + lamivudine,78,30
+L01XX05,hydroxycarbamide,186,30
+M01AB05,diclofenac,90,30
+M01AE01,ibuprofen,196,30
+N02AA01,morphine,385,30
+N02AA08,dihydrocodeine,117,30
+N02AD01,pentazocine,101,30
+N02AX02,tramadol,378,30
+N02BE01,paracetamol,215,30
+N05AB04,prochlorperazine,171,30
+N06AA09,amitriptyline,21,30
+N06AB03,fluoxetine,121,30
+P01BA03,primaquine,119,30
+P01BB01,proguanil,0,30
+P01BD51,sulfadoxine + pyrimethamine,237,30
+P01BE03,artesunate,40,30
+P01BF01,artemether + lumefantrine,347,30
+P01BF02,artesunate + mefloquine,84,30
+P01BF03,artesunate + amodiaquine,85,30
+P01BF05,dihydroartemisinin + piperaquine,0,30
+P01BF09,artesunate + sulfadoxine-pyrimethamine,333,30
+R03AC02,salbutamol,55,30
+R06AE03,cyclizine,272,30

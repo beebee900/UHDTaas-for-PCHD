@@ -1,0 +1,16 @@
+# Autonomy level per action class for the AHDT (design 03, section 3.14, AHDT column).
+# Classes the table marks n/a for the AHDT are `never`.
+# `approver_roles` may approve an `act_with_approval` action.
+# `agents` limits an action class to the named agents.
+# `kb_source_required` classes need a kb reference on every proposed action.
+twin: ahdt
+approver_roles: [medical_officer, nurse, therapist]
+actions:
+  show_data: {level: inform}
+  clinical_option: {level: never}
+  lifestyle_suggestion: {level: recommend, kb_source_required: true}
+  clinical_record: {level: never}
+  drive_actuator: {level: act_with_approval}
+  routine_action: {level: act}
+  sign_order_dispense: {level: never}
+  pause_orchestrator: {level: act, agents: [ahdt-conductor]}

@@ -1,0 +1,124 @@
+{
+  "$defs": {
+    "Decider": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "role": {
+          "$ref": "#/$defs/Role"
+        }
+      },
+      "required": [
+        "id",
+        "role"
+      ],
+      "title": "Decider",
+      "type": "object"
+    },
+    "Role": {
+      "enum": [
+        "medical_officer",
+        "radiologist",
+        "pharmacist",
+        "nurse",
+        "lab_scientist",
+        "patient",
+        "proxy",
+        "community_health_worker",
+        "therapist",
+        "carer",
+        "clinical_safety_officer",
+        "administrator",
+        "researcher",
+        "public_health_official",
+        "person"
+      ],
+      "title": "Role",
+      "type": "string"
+    }
+  },
+  "$id": "https://atra.local/schemas/apdt/clinical_decision.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "decided_by": {
+      "$ref": "#/$defs/Decider"
+    },
+    "decision": {
+      "enum": [
+        "accept",
+        "edit",
+        "reject",
+        "sign",
+        "verify",
+        "query",
+        "consent",
+        "decline"
+      ],
+      "title": "Decision",
+      "type": "string"
+    },
+    "decision_id": {
+      "title": "Decision Id",
+      "type": "string"
+    },
+    "edited_payload": {
+      "anyOf": [
+        {
+          "additionalProperties": true,
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Edited Payload"
+    },
+    "override_reason": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Override Reason"
+    },
+    "recommendation_id": {
+      "title": "Recommendation Id",
+      "type": "string"
+    },
+    "signature": {
+      "title": "Signature",
+      "type": "string"
+    },
+    "signed_at": {
+      "anyOf": [
+        {
+          "format": "date-time",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Signed At"
+    }
+  },
+  "required": [
+    "decision_id",
+    "recommendation_id",
+    "decided_by",
+    "decision",
+    "signature"
+  ],
+  "title": "ClinicalDecision",
+  "type": "object"
+}

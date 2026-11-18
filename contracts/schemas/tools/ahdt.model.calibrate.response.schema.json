@@ -1,0 +1,32 @@
+{
+  "$id": "https://atra.local/schemas/tools/ahdt.model.calibrate.response.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "fit_after": {
+      "title": "Fit After",
+      "type": "number"
+    },
+    "fit_before": {
+      "title": "Fit Before",
+      "type": "number"
+    },
+    "instance_id": {
+      "title": "Instance Id",
+      "type": "string"
+    },
+    "revision": {
+      "minimum": 0,
+      "title": "Revision",
+      "type": "integer"
+    }
+  },
+  "required": [
+    "instance_id",
+    "revision",
+    "fit_before",
+    "fit_after"
+  ],
+  "title": "CalibrateData",
+  "type": "object"
+}

@@ -1,0 +1,92 @@
+# Lassa fever (NCDC 2018). Ribavirin starts for probable cases while PCR is awaited.
+
+- id: tx.lassa.adult.ribavirin_mccormick
+  condition: cond.lassa_fever
+  severity: [suspected, confirmed]
+  preference: first_line
+  regimen: dose.ribavirin_iv_mccormick
+  eligibility: {patient_group: adult, pregnancy: [none]}
+  empirical_allowed: true
+  provenance:
+    source: ncdc-lassa-2018
+    section: 2.1.2 Probable Case
+    page: 12
+    also:
+    - {source: ncdc-lassa-2018, section: 3.2 Drug Treatment of Lassa fever, page: 14}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: tx.lassa.adult.ribavirin_irrua
+  condition: cond.lassa_fever
+  severity: [suspected, confirmed]
+  preference: first_line
+  regimen: dose.ribavirin_iv_irrua
+  eligibility: {patient_group: adult, pregnancy: [none]}
+  empirical_allowed: true
+  provenance:
+    source: ncdc-lassa-2018
+    section: 3.2 Drug Treatment of Lassa fever
+    page: 14
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: tx.lassa.pregnancy.ribavirin
+  condition: cond.lassa_fever
+  severity: [suspected, confirmed]
+  preference: first_line
+  regimen: dose.ribavirin_iv_pregnancy
+  eligibility: {pregnancy: [t1, t2, t3]}
+  empirical_allowed: true
+  note: Managed in a dedicated Lassa fever treatment centre, irrespective of gestational age.
+  provenance:
+    source: ncdc-lassa-2018
+    section: 3.3 Management of Lassa fever in Pregnant Women
+    page: 15
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: tx.lassa.child.ribavirin
+  condition: cond.lassa_fever
+  severity: [suspected, confirmed]
+  preference: first_line
+  regimen: dose.ribavirin_iv_child
+  eligibility: {patient_group: child}
+  empirical_allowed: true
+  provenance:
+    source: ncdc-lassa-2018
+    section: 3.4 Management of Lassa fever in Children
+    page: 19
+    also:
+    - {source: ncdc-lassa-2018, page: 20}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: tx.lassa.contact.pep
+  condition: cond.lassa_fever
+  severity: [high_risk_contact]
+  preference: first_line
+  regimen: dose.ribavirin_oral_pep
+  eligibility: {pregnancy: [none]}
+  provenance:
+    source: ncdc-lassa-2018
+    page: 45
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: tx.lassa.contact.pep_pregnancy
+  condition: cond.lassa_fever
+  severity: [high_risk_contact]
+  preference: first_line
+  regimen: dose.ribavirin_iv_pep_pregnancy
+  eligibility: {pregnancy: [t1, t2, t3]}
+  provenance:
+    source: ncdc-lassa-2018
+    page: 45
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified

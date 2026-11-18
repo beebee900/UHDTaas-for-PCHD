@@ -1,0 +1,40 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "history-respiratory",
+  "url": "https://atra.health/fhir/Questionnaire/history-respiratory",
+  "version": "1.0.0",
+  "status": "active",
+  "title": "History: respiratory",
+  "item": [
+    {
+      "linkId": "onset_days",
+      "text": "How many days ago did this illness start?",
+      "type": "integer",
+      "required": true
+    },
+    {
+      "linkId": "find.cough",
+      "text": "Cough?",
+      "type": "boolean",
+      "code": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "49727002",
+          "display": "Cough"
+        }
+      ]
+    },
+    {
+      "linkId": "find.dyspnoea",
+      "text": "Breathlessness?",
+      "type": "boolean",
+      "code": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "267036007",
+          "display": "Breathlessness"
+        }
+      ]
+    }
+  ]
+}

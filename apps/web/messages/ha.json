@@ -1,0 +1,950 @@
+{
+  "app": {
+    "title": "ATRA Health",
+    "language": "Harshe",
+    "tagline": "Tagwayen dijital na mara lafiya da na ɗan adam masu wakilai"
+  },
+  "locale": {
+    "en": "English",
+    "yo": "Yorùbá",
+    "ha": "Hausa",
+    "ig": "Igbo",
+    "pcm": "Naijá"
+  },
+  "login": {
+    "title": "Shiga",
+    "username": "Sunan mai amfani",
+    "password": "Kalmar sirri",
+    "submit": "Shiga",
+    "failed": "Sunan mai amfani ko kalmar sirri ba daidai ba ne.",
+    "overline": "ATRA Health",
+    "headline": "Tagwayen dijital da ke tallafa wa kulawa, tare da likita a kan kowane hukunci",
+    "about": "Kowane mutum yana da tagwayen ɗan adam na tsawon rayuwa mai ƙunshe da tagwayen membobi 17. Kowane lamarin kulawa a cibiya yana buɗe tagwayen mara lafiya. Wakilai suna shirya aikin, likitoci kuma suna yanke hukunci.",
+    "demo": "Shigar gwaji",
+    "demoAbout": "Zaɓi sunan mai amfani don cike shi. Kalmomin sirri suna cikin takardar shigar gwaji.",
+    "groups": {
+      "clinical": "Ma'aikatan asibiti",
+      "patients": "Marasa lafiya, masu mallaka da masu kulawa",
+      "governance": "Shugabanci",
+      "population": "Bincike da lafiyar jama'a"
+    }
+  },
+  "dashboard": {
+    "signOut": "Fita",
+    "worklist": "Jerin ayyuka",
+    "worklistEmpty": "Babu wani aiki da ke buɗe.",
+    "unavailable": "Wannan bayanin ba ya samuwa yanzu.",
+    "open": "Buɗe wurin aiki",
+    "openFor": "Buɗe wurin aiki don {title}"
+  },
+  "status": {
+    "normal": "Daidai",
+    "watch": "A kula",
+    "alert": "Gargaɗi",
+    "unavailable": "Babu"
+  },
+  "twin": {
+    "cardiovascular": "Zuciya da jijiyoyin jini",
+    "respiratory": "Numfashi",
+    "nervous": "Ƙwaƙwalwa da jijiyoyi",
+    "sensory": "Gaɓoɓin ji",
+    "digestive": "Narkewar abinci",
+    "hepatobiliary": "Hanta",
+    "renal_urinary": "Ƙoda da mafitsara",
+    "endocrine": "Sinadaran hormone da sukarin jini",
+    "immune_lymphatic": "Garkuwar jiki",
+    "haematological": "Jini",
+    "musculoskeletal": "Tsoka da ƙashi",
+    "integumentary": "Fata",
+    "reproductive": "Lafiyar haihuwa",
+    "whole_body": "Jiki gaba ɗaya",
+    "behavioural_cognitive": "Hankali da ɗabi'a",
+    "social": "Rayuwar zamantakewa",
+    "population": "Al'umma"
+  },
+  "workbench": {
+    "title": "Wurin aikin likita",
+    "back": "Allon bayanai",
+    "episode": "Lamari {id}",
+    "reason": "Dalili: {reason}",
+    "clinician": "Likita: {name}",
+    "episodeStatus": {
+      "open": "A buɗe",
+      "closed": "An rufe"
+    },
+    "degradedTitle": "Wasu shaidu sun ɓace",
+    "degraded": "AHDT bai iya samar da dukkan shaidunsa ba. Shawarwarin suna amfani da bayanan da ake da su.",
+    "missing": "Abin da ya ɓace: {items}.",
+    "differential": "Cututtukan da ka iya kasancewa",
+    "noDifferential": "Babu jerin cututtukan da ka iya kasancewa tukuna.",
+    "probability": "Yiwuwa {value}",
+    "tests": "Gwaje-gwajen da aka ba da shawara",
+    "noTests": "Ba a ba da shawarar wani gwaji ba.",
+    "treatments": "Zaɓuɓɓukan magani",
+    "noTreatments": "Babu zaɓuɓɓukan magani tukuna.",
+    "noSafetyIssues": "Ba a sami wata matsalar tsaro ba.",
+    "unified": "Haɗaɗɗen bayani",
+    "noUnified": "Babu sakamako tukuna.",
+    "source": {
+      "apdt": "APDT",
+      "ahdt": "AHDT"
+    },
+    "twins": "Tagwayen dijital na ɗan adam",
+    "openTwin": "Buɗe tagwayen {twin}",
+    "patientExplanation": "Bayani ga mara lafiya",
+    "decision": {
+      "title": "Hukunci",
+      "starting": "Ana shirya hukuncin.",
+      "none": "Babu hukuncin da ke jira.",
+      "accept": "Karɓa",
+      "edit": "Gyara",
+      "reject": "Ƙi",
+      "recorded": "An rubuta hukunci: {decision}.",
+      "needsRole": "Matsayinka bai ba ka damar yanke wannan hukunci ba.",
+      "failed": "Ba a iya aika hukuncin ba.",
+      "editLabel": "Canjinka",
+      "reasonLabel": "Dalili",
+      "cancel": "Soke",
+      "confirm": "Tabbatar",
+      "onlyMo": "Jami'in lafiya ne ke yanke hukunci kan ganewar cuta.",
+      "start": {
+        "diagnosis": "Shirya hukuncin ganewar cuta",
+        "treatment": "Shirya takardar magani",
+        "care": "Shirya tsarin kulawa"
+      },
+      "waitingFor": "Wannan mataki yana jiran {role}: {step}.",
+      "yourStep": "Matakinka: {step}.",
+      "step": {
+        "accept_diagnosis": "karɓar ganewar cutar na wucin gadi",
+        "sign_prescription": "sa hannu a takardar magani",
+        "verify_prescription": "tabbatar da takardar magani",
+        "approve_care_plan": "amince da tsarin kulawa",
+        "patient_consent_to_treatment": "yarda da maganin"
+      },
+      "sign": "Sa hannu",
+      "verify": "Tabbatar",
+      "consent": "Yarda",
+      "query": "Yi tambaya",
+      "decline": "Ƙi",
+      "dialog": {
+        "edit": "Gyara shawarar",
+        "query": "Yi tambaya kan takardar magani",
+        "reject": "Ƙi shawarar",
+        "decline": "Ƙi"
+      }
+    },
+    "twinsLoading": "Ana loda tagwayen...",
+    "about": "Shawarwarin mai nazari kan wannan lamari. Wakilai suna shirya kowane mataki, likita da aka sani kuma yana yanke kowane hukunci.",
+    "patientWho": "{initials}, {sex}, {age}, yana jin {language}",
+    "openedAt": "An buɗe {time}",
+    "tabs": {
+      "label": "Ra'ayoyin lamari",
+      "review": "Dubawa",
+      "twins": "Tagwaye da wakilai",
+      "ask": "Tambayi tagwayen",
+      "activity": "Ayyuka"
+    },
+    "noRecsTitle": "Babu shawarwari tukuna",
+    "noRecs": "Sakamakon da aka rubuta bai goyi bayan wata ganewar cuta ba tukuna. Rubuta ƙarin sakamako don samun shawarwari.",
+    "differentialAbout": "Cututtukan da aka jera da yiwuwarsu. Buɗe Me ya sa? don ganin shaida da madogara.",
+    "testsAbout": "Gwaje-gwajen da aka jera bisa yadda za su canza ganewar cuta, da farashinsu a wannan cibiya.",
+    "treatmentsAbout": "Zaɓuɓɓukan magani da aka duba don mu'amalar magunguna, aikin ƙoda da juna biyu, aka kuma kwaikwaya a kan tagwayen mara lafiya.",
+    "care": "Tsarin kulawa",
+    "careAbout": "Bibiya, tunatarwa da tallafi ga mara lafiya.",
+    "noCare": "Babu tsarin kulawa tukuna.",
+    "decisionAbout": "Wakilan ganewar cuta suna tsayawa a nan suna jiran jami'in lafiya.",
+    "unifiedAbout": "Bayanan lamarin da karatun tagwayen ɗan adam a jeri ɗaya.",
+    "twinsAbout": "Halin yanzu na kowane tagwayen memba. Buɗe tagwaye don hasashensa da wakilansa.",
+    "openTwinsAndAgents": "Tagwaye da wakilai",
+    "recStatus": {
+      "proposed": "An ba da shawara",
+      "accepted": "An karɓa",
+      "edited": "An gyara",
+      "overridden": "An soke",
+      "declined": "An ƙi",
+      "signed": "An sa hannu"
+    }
+  },
+  "why": {
+    "button": "Me ya sa?",
+    "title": "Dalilin wannan shawara",
+    "recommendation": "Shawara",
+    "confidence": "Tabbaci {value}",
+    "evidenceFor": "Shaidar da ke goyon baya",
+    "evidenceAgainst": "Shaidar da ke adawa",
+    "citations": "Madogara",
+    "counterfactuals": "Abin da zai canza ta",
+    "counterfactual": "Idan {change}, babbar cutar da ake zato za ta zama {top}",
+    "change": "Canji {value}",
+    "simulation": "Kwaikwayo",
+    "noSimulation": "Ba a yi kwaikwayo ba.",
+    "assumptions": "Zato: {items}",
+    "alternatives": "Sauran yiwuwa",
+    "patientSummary": "Taƙaitawa ga mara lafiya",
+    "models": "Samfuran da aka yi amfani da su",
+    "none": "Babu abin da za a nuna.",
+    "close": "Rufe"
+  },
+  "drill": {
+    "back": "Dukkan tagwaye",
+    "state": "Yanayin yanzu",
+    "updated": "An sabunta {time}",
+    "variable": "Abin da aka auna",
+    "value": "Ƙima",
+    "noState": "Wannan tagwaye ba shi da yanayi tukuna.",
+    "forecast": "Hasashe",
+    "forecastOf": "Hasashen {variable} tare da tazarar {level}%",
+    "chartLabel": "Jadawalin hasashen {variable}",
+    "noForecast": "Babu isassun bayanai don hasashe tukuna.",
+    "denied": "Mutumin nan ya hana wannan tagwayen ko kuma matsayinka ba zai iya karanta shi ba.",
+    "forecastAbout": "Yadda abubuwa za su kasance cikin sa'o'i 24 masu zuwa, tare da iyakar rashin tabbas."
+  },
+  "explain": {
+    "title": "Bayanin sakamakonka",
+    "shownIn": "An nuna wannan bayani da harshen {language}."
+  },
+  "agents": {
+    "title": "Wakilai",
+    "run": "Kunna wakilai",
+    "runConductor": "Kunna mai jagoranci",
+    "conductorTitle": "Burin kulawa",
+    "conductorGoal": "Sarrafa hawan jini, ciwon sukari na nau'i na 2 da cutar ƙoda ta mataki na 3 cikin aminci",
+    "steps": "Matakan wakilai",
+    "noSteps": "Babu matakan wakilai tukuna.",
+    "tools": "Kayan aiki: {tools}",
+    "noTools": "Ba a kira wani kayan aiki ba.",
+    "missing": "Shaidar da ta ɓace: {items}",
+    "goals": "Manufofi",
+    "noGoals": "Ba a duba wata manufa ba.",
+    "goalStatus": {
+      "met": "An cimma",
+      "unmet": "Ba a cimma ba",
+      "not_evaluated": "Ba a tantance ba"
+    },
+    "stepStatus": {
+      "ok": "An gama",
+      "degraded": "Bai cika ba",
+      "failed": "Ya gaza"
+    },
+    "toolCalls": "Kiran kayan aiki",
+    "noToolCalls": "Ba a kira wani kayan aiki ba.",
+    "proposals": "Shawarwari",
+    "noProposals": "Babu shawarwari.",
+    "explanations": "Bayanai",
+    "denials": "Ayyukan da aka hana",
+    "noDenials": "Ba a hana wani aiki ba.",
+    "needsRole": "Matsayinka bai ba ka damar kunna wakilai ba.",
+    "failed": "Ba a iya kunna wakilai ba.",
+    "about": "Mai tsarawa na wannan tagwayen yana ji, yana sabunta hali, yana duba manufofin tagwayen, yana tsarawa, yana aiki cikin matakin ikonsa, yana bayani kuma yana bayar da rahoto.",
+    "goalLabel": "Burin kulawa",
+    "goalHelp": "Burin da ba shi da samfurin buri ana ba da rahoton cewa bai dace ba."
+  },
+  "shell": {
+    "signedInAs": "An shiga a matsayin",
+    "openMenu": "Buɗe jerin zaɓi",
+    "roleAt": "{role} a {facility}"
+  },
+  "nav": {
+    "label": "Babban jagora",
+    "home": "Allon bayanai",
+    "episodes": "Lamurra",
+    "newEpisode": "Sabon lamari",
+    "myCare": "Kulawata",
+    "myTwin": "Tagwayena",
+    "cared": "Mutanen da nake kulawa da su",
+    "population": "Al'umma",
+    "audit": "Littafin bincike",
+    "models": "Rajistar samfura",
+    "system": "Yadda ATRA ke aiki"
+  },
+  "role": {
+    "medical_officer": "Jami'in lafiya",
+    "radiologist": "Likitan hoton ciki",
+    "pharmacist": "Likitan magunguna",
+    "nurse": "Nas",
+    "lab_scientist": "Masanin dakin gwaji",
+    "patient": "Mara lafiya",
+    "proxy": "Wakili",
+    "community_health_worker": "Ma'aikacin lafiyar al'umma",
+    "therapist": "Likitan jinya",
+    "carer": "Mai kulawa",
+    "clinical_safety_officer": "Jami'in tsaron asibiti",
+    "administrator": "Mai gudanarwa",
+    "researcher": "Mai bincike",
+    "public_health_official": "Jami'in lafiyar jama'a",
+    "person": "Mai mallakar tagwaye"
+  },
+  "facility": {
+    "fac-a": "Cibiya A, asibitin matsakaici",
+    "fac-b": "Cibiya B, cibiyar lafiya ta matakin farko"
+  },
+  "sex": {
+    "female": "Mace",
+    "male": "Namiji"
+  },
+  "home": {
+    "title": "Allon bayanai na {role}",
+    "intro": {
+      "medical_officer": "Duba abin da mai nazari ya ba da shawara, yanke hukunci, ka bi tagwayen kowane mara lafiya.",
+      "radiologist": "Duba lamurran cibiyarka da shaidar hoto na kowane mara lafiya.",
+      "pharmacist": "Tabbatar da takardun magani da jami'an lafiya suka sa wa hannu. Waɗanda aka tare su ne farko.",
+      "nurse": "Bi tsare-tsaren kulawa, buɗe sabbin lamurra, ka kuma kula da tagwayen kowane mara lafiya.",
+      "lab_scientist": "Duba lamurran cibiyarka da gwaje-gwajen da mai nazari ya ba da shawara.",
+      "community_health_worker": "Buɗe lamurra a cikin al'umma ka bi karatun kowane mara lafiya.",
+      "therapist": "Bi tagwayen marasa lafiyarka da ci gabansu cikin lokaci.",
+      "administrator": "Duba wanda ya yi me a cibiyarka, ka kuma sarrafa rajistar samfura.",
+      "clinical_safety_officer": "Duba littafin bincike, kowane aikin da aka ƙi, da matakin kowane samfuri."
+    },
+    "openEpisodes": "Lamurra a buɗe",
+    "worklistItems": "Abubuwa a jerin ayyukanka",
+    "blocked": "An tare saboda binciken tsaro",
+    "blockedHint": "Takardun magani da ba za a iya sa musu hannu ba sai an canza su",
+    "blockedChip": "An tare",
+    "worklistAbout": {
+      "medical_officer": "Sabbin lamurra da za a tantance da shawarwarin da za a duba.",
+      "radiologist": "Cibiyarka ba ta da jerin ayyukan hoto tukuna.",
+      "pharmacist": "Takardun magani da za a tabbatar.",
+      "nurse": "Tsare-tsaren kulawa da za a bi.",
+      "lab_scientist": "Cibiyarka ba ta da jerin ayyukan dakin gwaji tukuna.",
+      "community_health_worker": "Cibiyarka ba ta da jerin ayyukan al'umma tukuna.",
+      "therapist": "Cibiyarka ba ta da jerin ayyukan jinya tukuna."
+    },
+    "patients": "Lamurra a buɗe a cibiyarka",
+    "patientsAbout": "Kowane lamari yana da wurin aiki da bayanin tagwayen membobi 17 na mara lafiya.",
+    "allEpisodes": "Dukkan lamurra",
+    "explore": "Bincika tsarin",
+    "exploreAbout": "Duba yadda tagwaye, wakilai da binciken tsaro ke aiki tare.",
+    "governanceTools": "Kayan shugabanci"
+  },
+  "worklistKind": {
+    "triage": "Sabon lamari",
+    "review_diagnosis": "Ganewar cuta da za a duba",
+    "review_test": "Gwaje-gwajen da za a umarta",
+    "review_care": "Tsarin kulawa",
+    "review_treatment": "Takardar magani da za a tabbatar"
+  },
+  "episodes": {
+    "title": "Lamurran kulawa",
+    "about": "Lamari shi ne wani lokaci na kulawa ga matsala ɗaya a wannan cibiya. Buɗe ɗaya don duba shawarwarin mai nazari da tagwayen mara lafiya.",
+    "none": "Babu lamarin da ya dace.",
+    "patient": "Mara lafiya",
+    "reason": "Dalili",
+    "opened": "An buɗe",
+    "status": "Matsayi",
+    "actions": "Buɗe",
+    "who": "{sex}, {age}",
+    "workbench": "Wurin aiki",
+    "twins": "Tagwaye da wakilai",
+    "filter": {
+      "open": "Lamurra a buɗe",
+      "closed": "Lamurra a rufe",
+      "all": "Dukkan lamurra"
+    }
+  },
+  "newEpisode": {
+    "title": "Sabon lamari",
+    "about": "Buɗe lamari ga mara lafiyar wannan cibiya ka rubuta abin da ka gano. Sai mai nazari ya ba da shawarar cututtuka masu yiwuwa, gwaje-gwaje, magani da tsarin kulawa.",
+    "who": "Mara lafiya da dalili",
+    "whoAbout": "Shekaru da jinsin mara lafiya suna fitowa daga jerin marasa lafiyar cibiyar.",
+    "patient": "Mara lafiya",
+    "patientOption": "{initials}, {sex}, {age}, {language}",
+    "reason": "Dalilin ziyara",
+    "reasonHint": "Misali: Zazzaɓi na kwana uku",
+    "encounter": "Nau'in ziyara",
+    "weight": "Nauyi",
+    "avpu": "Matakin sani",
+    "pregnancy": "Juna biyu",
+    "measurements": "Auna",
+    "measurementsAbout": "Bar fili babu komai idan ba a auna ba.",
+    "findings": "Sakamako",
+    "findingsAbout": "Saka alama a kowane sakamakon da ke akwai. Sakamakon da ba a saka wa alama ba ana rubuta shi a matsayin wanda ba a sani ba.",
+    "capture": {
+      "question": "Alamomin cuta",
+      "exam": "Bincike a jiki",
+      "lab": "Sakamakon dakin gwaji"
+    },
+    "tests": "Sakamakon gwaji",
+    "testsAbout": "Rubuta gwaje-gwajen da aka riga aka yi.",
+    "notDone": "Ba a yi ba",
+    "positive": "Yana nan",
+    "negative": "Babu",
+    "submit": "Buɗe lamarin",
+    "next": "Wurin aiki zai buɗe da shawarwarin mai nazari.",
+    "role": "Matsayinka bai ba ka damar buɗe lamurra ba.",
+    "failed": "Ba a iya buɗe lamarin ba."
+  },
+  "encounter": {
+    "AMB": "Mara lafiya na waje",
+    "EMER": "Gaggawa",
+    "IMP": "Mara lafiya a kwance",
+    "HH": "Ziyarar gida",
+    "VR": "Daga nesa"
+  },
+  "avpu": {
+    "A": "A farke",
+    "V": "Yana amsa murya",
+    "P": "Yana amsa zafi",
+    "U": "Ba ya amsawa"
+  },
+  "pregnancy": {
+    "none": "Ba ta da juna biyu",
+    "t1": "Watanni uku na farko",
+    "t2": "Watanni uku na biyu",
+    "t3": "Watanni uku na uku"
+  },
+  "measure": {
+    "temperature": "Zafin jiki",
+    "heart_rate": "Bugun zuciya",
+    "respiratory_rate": "Yawan numfashi",
+    "sbp": "Hawan jini na sama",
+    "dbp": "Hawan jini na ƙasa",
+    "spo2": "Iskar oxygen a jini",
+    "glucose": "Sukarin jini",
+    "hb": "Haemoglobin",
+    "creatinine": "Creatinine"
+  },
+  "episodeActions": {
+    "refer": "Tura",
+    "close": "Rufe lamari",
+    "failed": "Ba a iya kammala aikin ba.",
+    "referred": "Turawa {id} {status}.",
+    "status": {
+      "sent": "an aika",
+      "queued": "yana jiran aikawa"
+    },
+    "closed": "An rufe lamarin.",
+    "referTitle": "Tura zuwa {facility}",
+    "closeTitle": "Rufe lamarin",
+    "urgency": "Gaggawa",
+    "urgencies": {
+      "routine": "Na yau da kullum",
+      "urgent": "Mai gaggawa",
+      "emergency": "Gaggawa ta musamman"
+    },
+    "reason": "Dalilin turawa",
+    "outcome": "Sakamakon lamarin",
+    "cancel": "Soke",
+    "send": "Aika da turawa",
+    "confirmClose": "Rufe lamari"
+  },
+  "twins": {
+    "members": "Tagwayen membobi",
+    "membersAbout": "Kowane tayal tagwayen memba ne na tagwayen ɗan adam na mutumin, tare da halinsa a yanzu. Buɗe tayal don halinsa, hasashensa da wakilansa.",
+    "conductorAbout": "Mai jagoranci yana haɗa burin kulawa da samfurin buri, yana tafiyar da masu tsarawa na tagwayen membobi bisa fifikon asibiti, yana kuma warware saɓani tsakanin tsare-tsarensu."
+  },
+  "coupling": {
+    "title": "Yadda tagwaye ke haɗuwa",
+    "about": "Masu haɗawa suna isar da ƙima tsakanin tagwayen membobi, misali fitar zuciya zuwa ƙoda.",
+    "notRunning": "Tagwayen wannan mutum bai fara aiki ba tukuna. Yana farawa idan aka fara karanta tagwaye.",
+    "count": "Masu haɗawa {count} tsakanin tagwayen membobi."
+  },
+  "twinAbout": {
+    "cardiovascular": "Bugun zuciya, hawan jini da fitar zuciya.",
+    "respiratory": "Yawan numfashi, iska da aikin huhu.",
+    "nervous": "Sani, farfaɗiya da aikin jijiyoyi.",
+    "sensory": "Gani da ji.",
+    "digestive": "Ciki, hanji da abinci mai gina jiki.",
+    "hepatobiliary": "Aikin hanta da bilirubin.",
+    "renal_urinary": "Aikin ƙoda, ruwan jiki da fitsari.",
+    "endocrine": "Sukari, insulin da sinadaran hormone.",
+    "immune_lymphatic": "Kamuwa da cuta, zazzaɓi da kumburi.",
+    "haematological": "Haemoglobin, ƙwayoyin jini da daskarewar jini.",
+    "musculoskeletal": "Tsoka, ƙashi, gaɓoɓi da motsi.",
+    "integumentary": "Fata, raunuka da wuraren da matsi ke cutarwa.",
+    "reproductive": "Juna biyu da lafiyar haihuwa.",
+    "whole_body": "Zafin jiki, nauyi da daidaiton kuzari.",
+    "behavioural_cognitive": "Yanayin zuciya, barci, damuwa da tunani.",
+    "social": "Tallafi, kuɗin shiga da samun kulawa.",
+    "population": "Yadda kowace cuta ta zama ruwan dare tsakanin mutane masu kama."
+  },
+  "ask": {
+    "title": "Tambayi tagwayen",
+    "chat": "Tattaunawa",
+    "aboutClinician": "Yi tambaya kan sabbin karatun wannan mara lafiya. Tagwayen yana amsa daga bayanan mara lafiyar da kansa.",
+    "titleOwn": "Tambayi tagwayena",
+    "aboutPatient": "Yi tambaya kan karatunka da harshenka.",
+    "aboutPerson": "Yi tambaya kan karatunka da harshenka. Tagwayenka yana amsa daga bayananka.",
+    "aboutCarer": "Yi tambaya kan karatun mutumin da kake kulawa da shi.",
+    "empty": "Babu saƙonni tukuna.",
+    "answeredBy": "{backend}: {model}",
+    "backend": {
+      "ollama": "Samfurin kan yanar gizo",
+      "openai": "Samfurin kan yanar gizo",
+      "slm": "Ƙaramin samfuri na gida",
+      "offline": "Amsa ba tare da yanar gizo ba"
+    },
+    "thinking": "Tagwayen yana amsawa",
+    "language": "Harshe",
+    "message": "Tambayarka",
+    "placeholder": "Misali: Yaya hawan jinina yake?",
+    "send": "Aika",
+    "role": "Matsayinka bai ba ka damar magana da wannan tagwayen ba.",
+    "failed": "Tagwayen bai iya amsawa ba."
+  },
+  "language": {
+    "title": "Yadda tagwayen ke amsawa",
+    "about": "Tattaunawar tana gwada kowane samfurin harshe bisa wannan jerin. Ana amfani da wanda ya fara amsawa.",
+    "backend": {
+      "ollama": "Samfurin kan yanar gizo (Ollama)",
+      "openai": "Samfurin kan yanar gizo (mai jituwa da OpenAI)",
+      "slm": "Ƙaramin samfuri na gida",
+      "offline": "Amsa ba tare da yanar gizo ba"
+    },
+    "hostedDetail": "{model}, {keys, plural, one {mabuɗi #} other {mabuɗai # masu juyawa}}",
+    "backendAbout": {
+      "slm": "Yana aiki a wannan sabar tare da adaftar harshe ga kowane harshe.",
+      "offline": "Yana faɗa a fili cewa babu samfurin da ya amsa.",
+      "ollama": "Samfurin kan yanar gizo.",
+      "openai": "Samfurin kan yanar gizo."
+    },
+    "calls": "{count, plural, one {kira #} other {kira #}}",
+    "failures": "{count, plural, one {gazawa #} other {gazawa #}}",
+    "unavailable": "Halin harshe ba ya samuwa yanzu."
+  },
+  "audit": {
+    "title": "Littafin bincike",
+    "about": "Kowace buƙata, hukunci da aikin wakili a wannan cibiya, sabbi na farko. Kowane rikodi yana ɗauke da hash na rikodin da ya gabace shi, don haka canji a kowane rikodi yana karya sarkar.",
+    "records": "Rikodi",
+    "recordsHint": "Sabbin rikodin wannan cibiya",
+    "denied": "An ƙi",
+    "deniedHint": "Buƙatu da ayyukan wakilai da manufa ta ƙi",
+    "chain": "Sarkar hash",
+    "intact": "Tana nan lafiya",
+    "broken": "An karya ta",
+    "chainHint": "Kowane rikodi yana haɗe da wanda ya gabace shi",
+    "agentActions": "Ayyukan wakilai",
+    "agentHint": "Ayyukan da wakili ya yi ƙoƙari",
+    "show": {
+      "all": "Dukkan rikodi",
+      "denied": "Waɗanda aka ƙi kawai"
+    },
+    "none": "Babu rikodi.",
+    "seq": "Rikodi",
+    "time": "Lokaci",
+    "actor": "Wane",
+    "action": "Me",
+    "episode": "Lamari",
+    "outcome": "Sakamako",
+    "viaAgent": "{agent} don {role}",
+    "outcomes": {
+      "ok": "An yarda",
+      "denied": "An ƙi",
+      "degraded": "Bai cika ba",
+      "error": "Kuskure"
+    },
+    "episodeTitle": "Ayyuka",
+    "trail": "Ayyuka kan wannan mara lafiya",
+    "episodeAbout": "Kowace buƙata, hukunci da aikin wakili da ya shafi wannan mara lafiya, sabbi na farko."
+  },
+  "models": {
+    "overline": "Mataki na 4",
+    "title": "Rajistar samfura",
+    "about": "Kowane samfurin tagwayen tare da matakin amincinsa da matakin fitarwarsa.",
+    "tier": {
+      "T1": "Samfuran da aka horar",
+      "T2": "Samfuran aikin jiki",
+      "T3": "Samfuran yanayin tunani"
+    },
+    "tierAbout": {
+      "T1": "An horar ko an daidaita su a kan bayanai, tare da ma'aunin tabbatarwa.",
+      "T2": "Ma'auni da aka buga tare da sigogin da aka buga, an keɓance su ta daidaitawa.",
+      "T3": "Yanayin tunani masu iyaka, waɗanda masu haɗawa da karatu ke jagoranta."
+    },
+    "registry": "Samfuran da aka yi wa rajista",
+    "stagerAbout": "Mayar da sigar zuwa Staging, sannan zuwa Production. Jami'in tsaron asibiti ne kaɗai zai iya fitarwa zuwa Production.",
+    "viewerAbout": "Matsayinka zai iya karanta rajistar. Jami'in tsaron asibiti yana sarrafa fitarwa.",
+    "model": "Samfuri",
+    "twin": "Tagwaye",
+    "tierLabel": "Mataki",
+    "stage": "Matsayi",
+    "actions": "Fitarwa",
+    "stages": {
+      "None": "Ba a saka a matsayi ba",
+      "Staging": "Staging",
+      "Production": "Production",
+      "Archived": "An ajiye"
+    },
+    "to": {
+      "Staging": "Zuwa staging",
+      "Production": "Fitar",
+      "Archived": "Ajiye"
+    },
+    "rollback": "Mayar da baya",
+    "roleRefused": "Matsayinka bai iya yin wannan canji ba.",
+    "failed": "Ba a yi canjin ba."
+  },
+  "population": {
+    "title": "Tagwayen al'umma",
+    "about": "Abin da ya zama ruwan dare tsakanin mutane irin mara lafiya. Mai nazarin ganewar cuta yana amfani da waɗannan ƙididdiga da ma'auni, masu bincike kuma za su iya fitar da ƙungiyoyi marasa sunaye.",
+    "priors": "Ƙididdigar yawan cuta",
+    "priorsAbout": "Yadda kowace cuta ta zama ruwan dare ga shekaru, jinsi, yanki da lokacin shekara, daga wallafaffun tushe da sabuntawar haɗin gwiwa.",
+    "norms": "Ma'aunin yau da kullum",
+    "normsAbout": "Iyakar yau da kullum ta kowane aunawa ga shekaru da jinsi.",
+    "cohort": "Ƙungiya marar sunaye",
+    "cohortAbout": "Karatun duk waɗanda suka yarda a yi amfani da bayanansu don bincike ko lafiyar jama'a. Differential privacy yana ƙara hayaniya da aka daidaita kuma yana cinye kasafin sirrinka. k-anonymity (ɓoye mutum cikin ƙungiya) yana ɓoye kowace ƙungiya da ta gaza k.",
+    "age": "Shekaru",
+    "sex": "Jinsi",
+    "female": "Mace",
+    "male": "Namiji",
+    "region": "Yankin Legas",
+    "regions": {
+      "island_and_coast": "Tsibiri da gaɓar teku",
+      "mainland_core": "Tsakiyar babban ƙasa",
+      "north_west": "Arewa maso yamma",
+      "west_and_ikorodu": "Yamma da Ikorodu"
+    },
+    "season": "Lokacin shekara",
+    "rainy": "Damina",
+    "dry": "Rani",
+    "show": "Nuna",
+    "privacy": "Hanyar sirri",
+    "dp": "Differential privacy",
+    "k": "k-anonymity",
+    "epsilon": "Epsilon",
+    "kValue": "k",
+    "extract": "Fitar",
+    "privacyReport": "Rahoton sirri",
+    "aggregates": "Jimillolli"
+  },
+  "care": {
+    "title": "Kulawata",
+    "about": "Lamurran kulawarka, abin da likitocinka suka gano, da zaɓinka kan bayananka.",
+    "aboutProxy": "Lamurran kulawar mutumin da kake wakilta.",
+    "episodes": "Lamurra",
+    "since": "Tun {date}, tare da {clinician}",
+    "open": "Buɗe",
+    "none": "Babu lamurra tukuna.",
+    "episodeAbout": "Abin da ƙungiyar kulawarka ta gano da abin da zai biyo baya.",
+    "resultsAbout": "Kowane sakamako da kalmomi masu sauƙi. Likitanka yana duba kowace shawara kafin a yi amfani da ita.",
+    "kind": {
+      "diagnosis": "Ganewar cuta",
+      "test": "Gwaje-gwaje",
+      "treatment": "Magani",
+      "care": "Tsarin kulawa"
+    },
+    "status": {
+      "proposed": "Likitanka yana duba wannan",
+      "accepted": "Likitanka ya amince",
+      "edited": "Likitanka ya canza shi",
+      "overridden": "Likitanka ya canza shi",
+      "declined": "Ba a yi amfani da shi ba",
+      "signed": "Likitanka ya sa hannu"
+    },
+    "noResults": "Babu sakamako tukuna."
+  },
+  "consent": {
+    "title": "Yardata",
+    "about": "Zaɓi abin da tagwayenka zai iya rabawa da kuma don waɗanne dalilai.",
+    "purposes": "Na yarda a yi amfani da bayanaina don",
+    "purpose": {
+      "care": "Kulawata",
+      "emergency": "Gaggawa",
+      "self_management": "Kula da lafiyata da kaina",
+      "public_health": "Lafiyar jama'a",
+      "research": "Bincike"
+    },
+    "categories": "Tagwayena zai iya amfani da",
+    "categoriesAbout": "Kashe wani nau'in bayani don hana shi ga kowane likita da wakili.",
+    "category": {
+      "vital_signs_and_device_data": "Alamomin rayuwa da bayanan na'ura",
+      "laboratory_and_imaging": "Sakamakon dakin gwaji da hotuna",
+      "medicines": "Magunguna",
+      "genome": "Halittar jiki (genome)",
+      "knowledge_graph_and_notes": "Bayanan lafiya da rubuce-rubuce",
+      "body_models_and_simulation": "Samfuran jiki da kwaikwayo",
+      "explanations": "Bayanai",
+      "conversation_and_speech": "Tattaunawa da magana"
+    },
+    "save": "Ajiye yardata",
+    "saved": "An ajiye yardarka.",
+    "failed": "Ba a iya ajiye yardarka ba."
+  },
+  "preferences": {
+    "title": "Zaɓuɓɓukana",
+    "about": "Gaya wa ƙungiyar kulawarka abin da ke da muhimmanci a gare ka. Ana jera zaɓuɓɓukan magani da waɗannan amsoshi.",
+    "prioritiesAbout": "Ba kowanne lamba daga 1 (ba shi da muhimmanci sosai) zuwa 5 (shi ne mafi muhimmanci).",
+    "save": "Ajiye zaɓuɓɓukana",
+    "saved": "An ajiye zaɓuɓɓukanka.",
+    "failed": "Ba a iya ajiye zaɓuɓɓukanka ba.",
+    "option": {
+      "app": "App",
+      "sms": "Saƙon rubutu",
+      "ussd": "USSD",
+      "voice": "Kiran murya"
+    }
+  },
+  "message": {
+    "title": "Aika saƙo ga ƙungiyar kulawata",
+    "about": "Ƙungiyar kulawarka tana karanta saƙonka.",
+    "label": "Saƙonka",
+    "send": "Aika",
+    "failed": "Ba a iya aika saƙonka ba."
+  },
+  "twinHome": {
+    "overline": "Tagwayen ɗan adam na tsawon rayuwa",
+    "title": "Tagwayena",
+    "about": "Tagwayenka yana adana bayanan jikinka, samfura da yanayi har tsawon rayuwa. Naka ne ko kana rashin lafiya ko babu.",
+    "download": "Zazzage jadawalin ilimin lafiyata",
+    "lifelong": "Likitoci suna ganin tagwayenka ne kawai don dalilan da ka yarda da su."
+  },
+  "cared": {
+    "title": "Mutanen da nake kulawa da su",
+    "about": "Karatun kowane mutumin da ya ba ka dama.",
+    "none": "Babu wanda ya ba ka dama tukuna.",
+    "person": "Mutum {n}",
+    "personAbout": "Karatun makon da ya wuce."
+  },
+  "readings": {
+    "denied": "Mutumin nan bai raba karatunsa da kai ba.",
+    "none": "Babu karatu daga makon da ya wuce.",
+    "chart": "Karatun {measure}"
+  },
+  "system": {
+    "overline": "Game da tsarin",
+    "title": "Yadda ATRA ke aiki",
+    "about": "ATRA Health yana haɗa tagwayen dijital biyu ga kowane mutum. Wakilai suna shirya aikin asibiti a cikin kowane tagwaye, likitoci da aka sani kuma suna yanke kowane hukunci.",
+    "twins": {
+      "ahdt": {
+        "short": "AHDT",
+        "name": "Tagwayen Dijital na Ɗan Adam Mai Wakilai",
+        "about": "Na tsawon rayuwa. Yana mallakar bayanan jikin mutum, samfura da yanayi ta tagwayen membobi 17, daga zuciya zuwa rayuwar zamantakewa. Yana wanzuwa ko mutum yana rashin lafiya ko babu."
+      },
+      "apdt": {
+        "short": "APDT",
+        "name": "Tagwayen Dijital na Mara Lafiya Mai Wakilai",
+        "about": "Ana buɗe shi idan lamarin kulawa ya fara a cibiya, a rufe shi idan ya ƙare. Yana mallakar tarihi, bincike a jiki, gwaje-gwaje, ganewar cuta, takardun magani da hukunce-hukuncen lamarin."
+      }
+    },
+    "workflow": "Daga isowa zuwa hukunci",
+    "workflowAbout": "Abin da ke faruwa ga mara lafiya ɗaya, mataki bayan mataki.",
+    "steps": {
+      "open": {
+        "title": "Likita yana buɗe lamari",
+        "about": "Jami'in lafiya, nas ko ma'aikacin lafiyar al'umma yana zaɓar mara lafiya da dalilin ziyara."
+      },
+      "intake": {
+        "title": "Ana rubuta bayanan shigowa",
+        "about": "Alamomin cuta, sakamakon bincike a jiki, auna da sakamakon gwaji su zama rikodin FHIR na lamarin."
+      },
+      "reason": {
+        "title": "Mai nazari yana ba da shawara",
+        "about": "Yana jera cututtuka masu yiwuwa, yana zaɓar gwaje-gwaje bisa amfani da farashi, yana duba lafiyar magunguna, yana kuma kwaikwayonsu a kan tagwayen mara lafiya. Kowace shawara tana da ƙunshin bayani tare da shaida da madogara."
+      },
+      "agents": {
+        "title": "Wakilai suna shirya kowane hukunci",
+        "about": "Masu tsarawa na ganewar cuta, magani da kulawa suna tara shaida daga tagwayen ɗan adam, su tsaya a kowane matsayin hukunci."
+      },
+      "decide": {
+        "title": "Jami'in lafiya yana yanke hukunci",
+        "about": "Karɓa, gyara ko ƙi ganewar cuta. Sa hannu a takardar magani. Ba za a iya sa hannu a takardar magani mai matsalar tsaro mai tarewa ba sai an canza ta."
+      },
+      "verify": {
+        "title": "Likitan magunguna yana tabbatarwa",
+        "about": "Takardar magani da aka sa wa hannu tana isa jerin ayyukan likitan magunguna a gudu ɗaya, don tabbatarwa, tambaya ko ƙi."
+      },
+      "explain": {
+        "title": "Mara lafiya yana ganin bayani",
+        "about": "Kowane sakamako da kalmomi masu sauƙi da harshen mara lafiya, tare da ikon yarda da zaɓi."
+      },
+      "twin": {
+        "title": "Tagwayen ɗan adam yana ci gaba da koyo",
+        "about": "Karatu daga na'urori da cibiya suna sabunta tagwayen membobi, waɗanda wakilansu ke lura da manufofinsu."
+      }
+    },
+    "layers": "Matakan ATRA takwas",
+    "layersAbout": "Matakan ƙasa suna tallafa wa na sama.",
+    "layer": {
+      "1": {
+        "name": "Zahiri",
+        "about": "Mutum, na'urorinsa da masu aiki, da likitocin da ke shigar da bayanai."
+      },
+      "2": {
+        "name": "Hanyar sadarwa da haɗin cloud",
+        "about": "Sabis na gefe a kowace cibiya ko gida, hanyoyin na'ura da adanawa-kafin-aikawa."
+      },
+      "3": {
+        "name": "Karɓar bayanai",
+        "about": "Tabbatarwa, daidaita ma'auni, ɓoye suna, wuraren ajiyar bayanai da jadawalin ilimi."
+      },
+      "4": {
+        "name": "Samfura",
+        "about": "Samfuran aikin jiki, samfuran koyon inji da aka horar, da samfuran harshe da murya."
+      },
+      "5": {
+        "name": "AI mai bayani",
+        "about": "Mai bayani ga kowane sakamakon samfuri."
+      },
+      "6": {
+        "name": "Sabis",
+        "about": "Bayanai, samfura da kwaikwayo, bayanai, ayyukan fahimta da haɗin kai tsakanin tagwaye."
+      },
+      "7": {
+        "name": "Wakilai",
+        "about": "Wakilan ma'aikata, masu tsarawa, mai jagoranci da API na waje."
+      },
+      "8": {
+        "name": "Aikace-aikace",
+        "about": "Wannan manhajar yanar gizo, manhajojin waya, SMS, USSD da murya."
+      }
+    },
+    "ahdtAgents": "Wakilan tagwayen ɗan adam",
+    "ahdtAgentsAbout": "Ma'aikata suna yin aiki ɗaya, mai tsarawa yana tafiyar da kowane tagwayen memba, mai jagoranci kuma yana daidaita su.",
+    "apdtAgents": "Wakilan tagwayen mara lafiya",
+    "apdtAgentsAbout": "Suna shirya aikin asibiti. Kowane hukunci yana hannun likita da aka sani.",
+    "agent": {
+      "monitoring": {
+        "name": "Sa ido",
+        "about": "Yana karanta halin tagwayen da lokacin da aka lura da kowane fili na ƙarshe."
+      },
+      "anomaly": {
+        "name": "Sabon abu",
+        "about": "Yana auna tsananin halin tagwayen."
+      },
+      "forecasting": {
+        "name": "Hasashe",
+        "about": "Yana yin hasashen da manufofin tagwayen ke buƙata."
+      },
+      "explanation": {
+        "name": "Bayani",
+        "about": "Yana bayyana manufofin da ba a cimma ba da sakamako a matakin kula ko gargaɗi."
+      },
+      "recommendation": {
+        "name": "Shawara",
+        "about": "Yana ba da shawarar ayyukan tallafi da ke cikin ma'ajiyar ilimi, kowanne da madogararsa."
+      },
+      "orchestrator": {
+        "name": "Mai tsarawa na tagwaye",
+        "about": "Yana ji, yana sabunta hali, yana duba manufofi, yana tsarawa, yana aiki, yana bayani kuma yana bayar da rahoto ga tagwayen memba ɗaya."
+      },
+      "conductor": {
+        "name": "Mai jagoranci",
+        "about": "Yana mayar da burin kulawa na mutum zuwa ƙananan manufofi, yana jera masu tsarawa, yana kuma yanke hukunci tsakanin tsare-tsarensu."
+      },
+      "history": {
+        "name": "Ɗaukar tarihi",
+        "about": "Yana lissafa bayanan da lamarin ke buƙata har yanzu."
+      },
+      "evidence": {
+        "name": "Tara shaida",
+        "about": "Yana tara karatu, magunguna, halin tagwaye da bayanai daga tagwayen ɗan adam."
+      },
+      "differential": {
+        "name": "Ganewar cuta mai yiwuwa",
+        "about": "Yana jera cututtuka kuma yana gina ƙunshin bayaninsu."
+      },
+      "investigation": {
+        "name": "Bincike",
+        "about": "Yana zaɓar gwaje-gwajen da za su fi canza ganewar cuta bisa farashinsu."
+      },
+      "treatment": {
+        "name": "Tsara magani",
+        "about": "Yana lissafa zaɓuɓɓuka kuma yana kwaikwayon na farko uku a kan tagwayen mara lafiya."
+      },
+      "pharmacotherapy": {
+        "name": "Maganin magunguna",
+        "about": "Yana duba mu'amalar magunguna, ƙoda, juna biyu da halittar jiki ga kowane adadi."
+      },
+      "guard": {
+        "name": "Mai tsaron aminci da yarda",
+        "about": "Yana duba kowane aikin wakili kafin ya gudana."
+      }
+    },
+    "safety": "Yadda tsarin ke barin likitoci a kan gaba",
+    "safetyAbout": "Bincike biyu masu zaman kansu suna hana wakili yanke hukuncin asibiti.",
+    "safetyItem": {
+      "guard": {
+        "name": "Matakan 'yanci",
+        "about": "Kowane nau'in aiki yana da matakin da aka kayyade, daga sanar zuwa ba a taɓa ba. Ba a taɓa yarda wakili ya sa hannu, ya umarta ko ya raba magani ba."
+      },
+      "human": {
+        "name": "Mutum a kowane hukunci",
+        "about": "API yana karɓar hukunci ne kawai daga mutum mai matsayin da matakin ke buƙata, ba daga wakili ko sabis ba."
+      },
+      "consent": {
+        "name": "Yarda",
+        "about": "Mutum zai iya hana kowane nau'in bayani. Kowane kiran kayan aiki yana fara duba yardar mutumin."
+      },
+      "audit": {
+        "name": "Bincike",
+        "about": "Ana rubuta kowace buƙata, hukunci da ƙi a littafin bincike mai sarkar hash."
+      }
+    },
+    "members": "Tagwayen membobi 17",
+    "membersAbout": "Tagwayen ɗan adam haɗin gwiwar waɗannan tagwaye ne. Kowanne yana da samfuransa da manufofinsa.",
+    "models": "Samfura",
+    "modelsAbout": "Kowane samfuri yana da matakin aminci da ke nuna yadda aka gina shi.",
+    "modelCount": {
+      "T2": "43",
+      "T3": "24",
+      "T1": "19"
+    },
+    "services": "Sabis masu gudana",
+    "servicesAbout": "Sabis ɗin da ke bayan wannan manhaja da ko kowanne yana amsawa yanzu.",
+    "service": {
+      "apdt": {
+        "name": "Tagwayen mara lafiya",
+        "about": "Lamurra, mai nazari da hukunce-hukunce"
+      },
+      "ahdt": {
+        "name": "Tagwayen ɗan adam",
+        "about": "Tagwayen membobi, samfura, wakilai da harshe"
+      },
+      "population": {
+        "name": "Tagwayen al'umma",
+        "about": "Ƙididdiga, ma'auni da ƙungiyoyi"
+      },
+      "edge": {
+        "name": "Gefe",
+        "about": "Na'urori da samfura a cikin na'ura"
+      },
+      "channels": {
+        "name": "Hanyoyi",
+        "about": "SMS, USSD da murya"
+      },
+      "opa": {
+        "name": "Injin manufa",
+        "about": "Dokokin matsayi, cibiya da yarda"
+      }
+    },
+    "up": "Yana gudana",
+    "down": "Ba ya amsawa",
+    "personas": "Marasa lafiyar gwaji",
+    "personasAbout": "Marasa lafiya shida na kwaikwayo. Babu ko ɗaya mutum na gaske.",
+    "persona": "Mara lafiya",
+    "facility": "Cibiya",
+    "scenario": "Yanayi",
+    "tests": "Abin da yake nunawa",
+    "persona_": {
+      "ao": {
+        "who": "A.O., mace, 47",
+        "scenario": "Zazzaɓin cizon sauro (malaria) mara tsanani",
+        "shows": "Misalin aiki: cututtuka masu yiwuwa, gwaje-gwaje, magani da bayani"
+      },
+      "bm": {
+        "who": "B.M., namiji, 8",
+        "scenario": "Zazzaɓin cizon sauro mai tsanani tare da raguwar sani da ƙarancin sukarin jini",
+        "shows": "Taɓarɓarewa, ma'aunin gargaɗin farko na yara da wakili"
+      },
+      "cn": {
+        "who": "C.N., mace, 29",
+        "scenario": "Kamuwar ƙoda a makonni 22 na juna biyu",
+        "shows": "Zaɓuɓɓukan magani da ke canzawa a lokacin juna biyu"
+      },
+      "de": {
+        "who": "D.E., namiji, 58",
+        "scenario": "Hawan jini, ciwon sukari na nau'i na 2 da cutar ƙoda",
+        "shows": "Adadin magani da aka daidaita ga ƙoda da burin kulawa na mai jagoranci"
+      },
+      "ef": {
+        "who": "E.F., mace, 19",
+        "scenario": "Matsanancin ciwon sikila (sickle cell)",
+        "shows": "Samfurin haɗarin ciwon da bayanin mara lafiya"
+      },
+      "gh": {
+        "who": "G.H., namiji, 35",
+        "scenario": "Binciken tarin fuka akan maganin antiretroviral",
+        "shows": "Layin likitan magunguna, mu'amalar magani mai tarewa da halittar jiki da aka hana"
+      }
+    }
+  }
+}

@@ -1,0 +1,138 @@
+# Treatment options for P. falciparum malaria. The rule engine offers an option when every
+# eligibility condition holds and no exclusion applies. `preference` orders options that are
+# eligible together. Pregnancy states: none, t1, t2, t3 (trimesters).
+
+- id: tx.malaria.uncomplicated.artemether_lumefantrine
+  condition: cond.malaria_falciparum
+  severity: uncomplicated
+  preference: first_line
+  regimen: dose.artemether_lumefantrine
+  eligibility: {oral_intake: true, pregnancy: [none, t1, t2, t3]}
+  note: The recommended ACT in the first trimester of pregnancy.
+  provenance:
+    source: who-malaria-2026
+    section: 5.2.1.4.1 Pregnant and lactating women
+    page: 183
+    also:
+    - {source: who-malaria-2026, section: 5.2.1.1 Artemisinin-based combination therapy,
+       page: 171}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: tx.malaria.uncomplicated.artesunate_amodiaquine
+  condition: cond.malaria_falciparum
+  severity: uncomplicated
+  preference: first_line
+  regimen: dose.artesunate_amodiaquine
+  eligibility: {oral_intake: true, pregnancy: [none, t2, t3]}
+  exclusions: [ix.amodiaquine.zidovudine, ix.amodiaquine.efavirenz, ix.amodiaquine.cotrimoxazole]
+  provenance:
+    source: who-malaria-2026
+    section: 5.2.1.1 Artemisinin-based combination therapy
+    page: 171
+    also:
+    - {source: who-malaria-2026, section: 5.2.1.4.1 Pregnant and lactating women, page: 183}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: tx.malaria.uncomplicated.artesunate_mefloquine
+  condition: cond.malaria_falciparum
+  severity: uncomplicated
+  preference: first_line
+  regimen: dose.artesunate_mefloquine
+  eligibility: {oral_intake: true, pregnancy: [none, t2, t3]}
+  provenance:
+    source: who-malaria-2026
+    section: 5.2.1.1 Artemisinin-based combination therapy
+    page: 171
+    also:
+    - {source: who-malaria-2026, section: 5.2.1.4.1 Pregnant and lactating women, page: 183}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: tx.malaria.uncomplicated.dihydroartemisinin_piperaquine
+  condition: cond.malaria_falciparum
+  severity: uncomplicated
+  preference: first_line
+  regimen: dose.dihydroartemisinin_piperaquine
+  eligibility: {oral_intake: true, pregnancy: [none, t2, t3]}
+  provenance:
+    source: who-malaria-2026
+    section: 5.2.1.1 Artemisinin-based combination therapy
+    page: 171
+    also:
+    - {source: who-malaria-2026, section: 5.2.1.4.1 Pregnant and lactating women, page: 183}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: tx.malaria.uncomplicated.artesunate_sp
+  condition: cond.malaria_falciparum
+  severity: uncomplicated
+  preference: alternative
+  regimen: dose.artesunate_sp
+  eligibility: {oral_intake: true, pregnancy: [none, t2, t3]}
+  exclusions: [ix.sp.folic_acid_high_dose]
+  note: SP resistance makes this ACT unsuitable in many areas.
+  provenance:
+    source: who-malaria-2026
+    section: 5.2.1.4.1 Pregnant and lactating women
+    page: 183
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: tx.malaria.uncomplicated.artesunate_pyronaridine
+  condition: cond.malaria_falciparum
+  severity: uncomplicated
+  preference: first_line
+  regimen: null
+  eligibility: {oral_intake: true, pregnancy: [none, t2, t3]}
+  exclusions: [ix.pyronaridine.liver_disease]
+  note: The source recommends this ACT but gives no weight-band table, so the engine does not
+    offer it until a sourced regimen is added.
+  provenance:
+    source: who-malaria-2026
+    section: 5.2.1.1 Artemisinin-based combination therapy
+    page: 172
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: tx.malaria.severe.artesunate
+  condition: cond.malaria_falciparum
+  severity: severe
+  preference: first_line
+  regimen: dose.artesunate_parenteral
+  eligibility: {pregnancy: [none, t1, t2, t3]}
+  empirical_allowed: true
+  note: Start parenteral treatment without delay when severe malaria is possible, before
+    confirmation.
+  provenance:
+    source: who-malaria-2026
+    section: 5.2.2.1 Artesunate
+    page: 216
+    also:
+    - {source: who-malaria-2026, section: 5.2.2 Treating severe malaria, page: 212}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: tx.malaria.severe.prereferral_rectal_artesunate
+  condition: cond.malaria_falciparum
+  severity: severe
+  preference: pre_referral
+  regimen: dose.artesunate_rectal_prereferral
+  eligibility: {age_below_years: 6, intramuscular_available: false}
+  empirical_allowed: true
+  then: Refer immediately to a facility with parenteral treatment.
+  provenance:
+    source: who-malaria-2026
+    section: 5.2.2.3 Pre-referral treatment options
+    page: 222
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified

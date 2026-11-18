@@ -1,0 +1,40 @@
+# Profile p2: security (design 02, 2.2 and design 07, 7.1).
+name: atra-p2
+
+services:
+  keycloak:
+    image: quay.io/keycloak/keycloak:26.4
+    command: ["start-dev", "--import-realm", "--http-port=8180"]
+    ports: ["8180:8180"]
+    environment:
+      KC_BOOTSTRAP_ADMIN_USERNAME: admin
+      KC_BOOTSTRAP_ADMIN_PASSWORD: ${ATRA_KEYCLOAK_ADMIN_PASSWORD:?set in .env}
+      JAVA_OPTS_APPEND: "-Xmx512m"
+    volumes: ["../keycloak:/opt/keycloak/data/import:ro"]
+    mem_limit: 768m
+
+  kong:
+    image: kong:3.9
+    ports: ["8000:8000", "8443:8443", "8001:8001"]
+    environment:
+      KONG_DATABASE: "off"
+      KONG_DECLARATIVE_CONFIG: /kong/kong.yml
+      KONG_ADMIN_LISTEN: 0.0.0.0:8001
+    volumes: ["../kong:/kong:ro"]
+    mem_limit: 256m
+
+  opa:
+    image: openpolicyagent/opa:1.21.1
+    command: ["run", "--server", "--addr", ":8181", "/policies"]
+    ports: ["8181:8181"]
+    volumes: ["../../policies/opa:/policies:ro"]
+    mem_limit: 64m
+
+  vault:
+    image: hashicorp/vault:1.20
+    command: ["server", "-dev", "-dev-listen-address=0.0.0.0:8250"]
+    ports: ["8250:8250"]
+    environment:
+      VAULT_DEV_ROOT_TOKEN_ID: ${ATRA_VAULT_TOKEN:?set in .env}
+    cap_add: ["IPC_LOCK"]
+    mem_limit: 128m

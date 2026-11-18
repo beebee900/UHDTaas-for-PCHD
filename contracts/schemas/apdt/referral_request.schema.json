@@ -1,0 +1,41 @@
+{
+  "$id": "https://atra.local/schemas/apdt/referral_request.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "episode_id": {
+      "pattern": "^ep-\\d{4}-\\d{6}$",
+      "title": "Episode Id",
+      "type": "string"
+    },
+    "reason": {
+      "title": "Reason",
+      "type": "string"
+    },
+    "to_tenant": {
+      "enum": [
+        "fac-a",
+        "fac-b"
+      ],
+      "title": "To Tenant",
+      "type": "string"
+    },
+    "urgency": {
+      "default": "routine",
+      "enum": [
+        "routine",
+        "urgent",
+        "emergency"
+      ],
+      "title": "Urgency",
+      "type": "string"
+    }
+  },
+  "required": [
+    "episode_id",
+    "to_tenant",
+    "reason"
+  ],
+  "title": "ReferralRequest",
+  "type": "object"
+}

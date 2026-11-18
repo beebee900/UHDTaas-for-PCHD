@@ -1,0 +1,17 @@
+{
+  "$id": "https://atra.local/schemas/apdt/preferences.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "answers": {
+      "additionalProperties": true,
+      "title": "Answers",
+      "type": "object"
+    }
+  },
+  "required": [
+    "answers"
+  ],
+  "title": "Preferences",
+  "type": "object"
+}

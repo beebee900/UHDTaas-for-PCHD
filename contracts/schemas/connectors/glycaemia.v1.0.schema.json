@@ -1,0 +1,24 @@
+{
+  "$id": "https://atra.local/schemas/connectors/glycaemia/v1.0",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "glucose": {
+      "maximum": 40,
+      "minimum": 1,
+      "type": "number",
+      "x-ucum": "mmol/L"
+    },
+    "hba1c": {
+      "maximum": 20,
+      "minimum": 3,
+      "type": "number",
+      "x-ucum": "%"
+    }
+  },
+  "required": [
+    "glucose"
+  ],
+  "title": "glycaemia v1.0",
+  "type": "object"
+}

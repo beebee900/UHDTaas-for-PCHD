@@ -1,0 +1,22 @@
+# Topics are the event types of design 03, 3.8 (`ingest.<twin>`, `observation.ingested`, ...).
+# Each app consumes under its own app ID. Linkerd encrypts the broker connection, so the
+# Kafka listener itself is plain.
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: atra-pubsub
+spec:
+  type: pubsub.kafka
+  version: v1
+  metadata:
+    - name: brokers
+      value: "kafka-0.kafka:9092"
+    - name: authType
+      value: "none"
+    - name: disableTls
+      value: "true"
+scopes:
+  - edge
+  - ahdt
+  - population
+  - apdt

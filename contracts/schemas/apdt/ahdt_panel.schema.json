@@ -1,0 +1,188 @@
+{
+  "$defs": {
+    "DTKind": {
+      "description": "The 17 peer DTs of the federated Human Digital Twin, plus the Patient DT (APDT).",
+      "enum": [
+        "cardiovascular",
+        "respiratory",
+        "nervous",
+        "sensory",
+        "digestive",
+        "hepatobiliary",
+        "renal_urinary",
+        "endocrine",
+        "immune_lymphatic",
+        "haematological",
+        "musculoskeletal",
+        "integumentary",
+        "reproductive",
+        "whole_body",
+        "behavioural_cognitive",
+        "social",
+        "population",
+        "patient"
+      ],
+      "title": "DTKind",
+      "type": "string"
+    },
+    "SourcedItem": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "title": "Kind",
+          "type": "string"
+        },
+        "label": {
+          "title": "Label",
+          "type": "string"
+        },
+        "ref": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Ref"
+        },
+        "source": {
+          "enum": [
+            "apdt",
+            "ahdt"
+          ],
+          "title": "Source",
+          "type": "string"
+        },
+        "time": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Time"
+        },
+        "unit": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Unit"
+        },
+        "value": {
+          "default": null,
+          "title": "Value"
+        }
+      },
+      "required": [
+        "source",
+        "kind",
+        "label"
+      ],
+      "title": "SourcedItem",
+      "type": "object"
+    },
+    "TwinTile": {
+      "additionalProperties": false,
+      "properties": {
+        "dt": {
+          "$ref": "#/$defs/DTKind"
+        },
+        "headline": {
+          "title": "Headline",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "normal",
+            "watch",
+            "alert",
+            "unavailable"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "updated_at": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Updated At"
+        }
+      },
+      "required": [
+        "dt",
+        "status",
+        "headline"
+      ],
+      "title": "TwinTile",
+      "type": "object"
+    }
+  },
+  "$id": "https://atra.local/schemas/apdt/ahdt_panel.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "degraded": {
+      "default": false,
+      "title": "Degraded",
+      "type": "boolean"
+    },
+    "forecast": {
+      "anyOf": [
+        {
+          "additionalProperties": true,
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Forecast"
+    },
+    "hdt_id": {
+      "title": "Hdt Id",
+      "type": "string"
+    },
+    "tiles": {
+      "items": {
+        "$ref": "#/$defs/TwinTile"
+      },
+      "title": "Tiles",
+      "type": "array"
+    },
+    "vitals": {
+      "additionalProperties": {
+        "$ref": "#/$defs/SourcedItem"
+      },
+      "title": "Vitals",
+      "type": "object"
+    }
+  },
+  "required": [
+    "hdt_id",
+    "tiles",
+    "vitals"
+  ],
+  "title": "AHDTPanel",
+  "type": "object"
+}

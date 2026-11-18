@@ -1,0 +1,166 @@
+{
+  "$defs": {
+    "Actor": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "role": {
+          "title": "Role",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "role"
+      ],
+      "title": "Actor",
+      "type": "object"
+    }
+  },
+  "$id": "https://atra.local/schemas/audit_record.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "action": {
+      "title": "Action",
+      "type": "string"
+    },
+    "actor": {
+      "$ref": "#/$defs/Actor"
+    },
+    "agent": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Agent"
+    },
+    "detail_ref": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Detail Ref"
+    },
+    "episode_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Episode Id"
+    },
+    "hash": {
+      "title": "Hash",
+      "type": "string"
+    },
+    "hdt_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Hdt Id"
+    },
+    "outcome": {
+      "enum": [
+        "ok",
+        "denied",
+        "degraded",
+        "error"
+      ],
+      "title": "Outcome",
+      "type": "string"
+    },
+    "prev_hash": {
+      "title": "Prev Hash",
+      "type": "string"
+    },
+    "purpose": {
+      "title": "Purpose",
+      "type": "string"
+    },
+    "reason": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Reason"
+    },
+    "seq": {
+      "minimum": 0,
+      "title": "Seq",
+      "type": "integer"
+    },
+    "service": {
+      "title": "Service",
+      "type": "string"
+    },
+    "t": {
+      "format": "date-time",
+      "title": "T",
+      "type": "string"
+    },
+    "target": {
+      "title": "Target",
+      "type": "string"
+    },
+    "tenant_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Tenant Id"
+    },
+    "trace_id": {
+      "title": "Trace Id",
+      "type": "string"
+    }
+  },
+  "required": [
+    "seq",
+    "prev_hash",
+    "hash",
+    "t",
+    "service",
+    "actor",
+    "action",
+    "target",
+    "purpose",
+    "outcome",
+    "trace_id"
+  ],
+  "title": "AuditRecord",
+  "type": "object"
+}

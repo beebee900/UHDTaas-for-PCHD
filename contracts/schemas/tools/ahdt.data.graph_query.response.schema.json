@@ -1,0 +1,117 @@
+{
+  "$defs": {
+    "GraphCitation": {
+      "additionalProperties": false,
+      "properties": {
+        "doc_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Doc Id"
+        },
+        "label": {
+          "title": "Label",
+          "type": "string"
+        },
+        "node_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Node Id"
+        },
+        "path": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Path"
+        }
+      },
+      "required": [
+        "label"
+      ],
+      "title": "GraphCitation",
+      "type": "object"
+    },
+    "Subgraph": {
+      "additionalProperties": false,
+      "properties": {
+        "edges": {
+          "items": {
+            "additionalProperties": true,
+            "type": "object"
+          },
+          "title": "Edges",
+          "type": "array"
+        },
+        "nodes": {
+          "items": {
+            "additionalProperties": true,
+            "type": "object"
+          },
+          "title": "Nodes",
+          "type": "array"
+        }
+      },
+      "required": [
+        "nodes",
+        "edges"
+      ],
+      "title": "Subgraph",
+      "type": "object"
+    }
+  },
+  "$id": "https://atra.local/schemas/tools/ahdt.data.graph_query.response.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "answer": {
+      "title": "Answer",
+      "type": "string"
+    },
+    "citations": {
+      "items": {
+        "$ref": "#/$defs/GraphCitation"
+      },
+      "title": "Citations",
+      "type": "array"
+    },
+    "subgraph": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Subgraph"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    }
+  },
+  "required": [
+    "answer",
+    "citations"
+  ],
+  "title": "GraphQueryData",
+  "type": "object"
+}

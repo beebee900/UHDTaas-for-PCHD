@@ -1,0 +1,129 @@
+# Parameters of the synthetic population (design 06, 6.4.1). Every block names its source or
+# is marked `assumption: true` with a justification; assumptions are listed for sign-off.
+# Prevalence seeds come from kb/priors.yaml and PGx allele frequencies from the CPIC
+# population frequency view (kb source cpic-frequencies); they are not repeated here.
+
+lgas:
+  values: [Agege, Ajeromi-Ifelodun, Alimosho, Amuwo-Odofin, Apapa, Badagry, Epe, Eti-Osa,
+           Ibeju-Lekki, Ifako-Ijaiye, Ikeja, Ikorodu, Kosofe, Lagos Island, Lagos Mainland,
+           Mushin, Ojo, Oshodi-Isolo, Shomolu, Surulere]
+  source: Lagos State local government areas (list checked 2026-10-10 against public directories)
+  weights: equal
+  assumption: true
+  justification: No population count per LGA was downloaded; persons are spread evenly.
+
+age_bands:
+  # share of persons per age band (years, upper bound exclusive)
+  values: {'0-5': 0.16, '5-15': 0.26, '15-30': 0.27, '30-45': 0.16, '45-60': 0.09,
+           '60-75': 0.05, '75-90': 0.01}
+  assumption: true
+  justification: A young population pyramid typical of Nigerian household surveys; the NDHS
+    household age table is the intended source once its download is approved.
+
+sex_female_share: {value: 0.5, assumption: true, justification: Equal split; no sourced table.}
+
+household_size:
+  values: {1: 0.08, 2: 0.10, 3: 0.14, 4: 0.17, 5: 0.17, 6: 0.14, 7: 0.10, 8: 0.10}
+  assumption: true
+  justification: Mean near 5 persons per household; replaced by the NDHS household size table.
+
+network:
+  model: watts_strogatz
+  k: 6
+  p: 0.1
+  assumption: true
+  justification: Small-world ties within each LGA community plus household cliques (design).
+
+sdoh:
+  income_band: {values: {low: 0.45, middle: 0.4, high: 0.15}}
+  education: {values: {none: 0.12, primary: 0.2, secondary: 0.45, tertiary: 0.23}}
+  improved_water: {value: 0.8}
+  improved_sanitation: {value: 0.6}
+  nhia_insured: {value: 0.1}
+  assumption: true
+  justification: Placeholder shares for an urban Lagos population; each is a parameter of the
+    exposome and access models, not a clinical value, and awaits sourced survey tables.
+
+malaria_episodes:
+  mean_duration_d: 14
+  rainy_months: [apr, may, jun, jul, aug, sep, oct]
+  dry_season_factor: 0.6
+  prepatent_d: 10
+  treatment_after_onset_d: 2
+  merozoite_release: 0.02
+  antimalarial_kill: 4.0
+  assumption: true
+  justification: Episode incidence is derived from point prevalence with P = I x D (mean
+    duration D); the survey months are August to December only, so dry-season months use a
+    fixed factor of the rainy-season rate. The infection model's parasitaemia reaches the
+    RDT detection limit about 10 days after inoculation with this release rate, so symptom
+    onset is placed there; treatment starts 2 days later with the kill rate of the model's
+    own reference test.
+
+glucose:
+  sensitivity_decline_per_year: 10000
+  meal_carbs_g: 75
+  assumption: true
+  justification: The glycaemic deterioration driver strength at which the glucose model
+    gives a 2-hour value above 11.1 mmol/L after a 75 g carbohydrate meal.
+
+blood_pressure:
+  resistance_factor_hypertension: {mean: 1.35, sd: 0.1}
+  resistance_factor_normal: {mean: 1.0, sd: 0.06}
+  assumption: true
+  justification: The heart model runs with its published parameters and a person-specific
+    systemic resistance factor; individual draws of every heart parameter gave implausible
+    pressures (75/38 mmHg). Values are tuned so that hypertensive persons sit above 140/90.
+
+devices:
+  # measurement noise (SD, field unit), dropout probability, quantisation step
+  bp_cuff: {fields: [sbp, dbp], sd: 4.0, dropout: 0.05, step: 1}
+  thermometer: {fields: [temperature], sd: 0.15, dropout: 0.03, step: 0.1}
+  glucometer: {fields: [glucose], sd: 0.3, dropout: 0.05, step: 0.1}
+  pulse_oximeter: {fields: [spo2, heart_rate], sd: 1.0, dropout: 0.05, step: 1}
+  scale: {fields: [weight], sd: 0.3, dropout: 0.02, step: 0.1}
+  assumption: true
+  justification: Typical consumer device accuracy; replaced by device specification sheets in
+    WP10 (device simulators).
+
+device_streams:
+  # true values of the fields no truth-mode model produces yet; each field unit as registered
+  weight_kg: {female: 68.0, male: 72.0, sd: 8.0}
+  height_cm: {female: 158.0, male: 170.0, sd: 6.0}
+  pef_l_min: {female: 380.0, male: 500.0, sd: 50.0}
+  fev1_l: {female: 2.6, male: 3.4, sd: 0.3}
+  hrv_rmssd_ms: {mean: 35.0, sd: 8.0}
+  cadence_per_min: {mean: 105.0, sd: 6.0}
+  active_minutes_per_h: {mean: 6.0, sd: 3.0}
+  screen_time_min_per_d: {mean: 240.0, sd: 60.0}
+  cough_events_per_h: {healthy: 0.0, respiratory: 24.0}
+  pm25_ugm3: {mean: 45.0, sd: 10.0}
+  insulin: {basal_u_per_h: 0.5, meal_bolus_u: 4.0, meal_hours: [7, 13, 19]}
+  questionnaire_answer_weights: [0.55, 0.25, 0.12, 0.08]
+  assumption: true
+  justification: Round adult values to drive the device simulators (WP10) until the body size,
+    spirometry, activity, exposure and insulin models run in truth mode; air temperature and
+    humidity reuse the clinic air of synth/truth.py. Each is a simulator input, not a
+    clinical reference value.
+
+labs:
+  assay_cv: {hb: 0.02, creatinine: 0.05, glucose: 0.03}
+  rdt_detection_parasitaemia_percent: 0.002
+  assumption: true
+  justification: Analytical variation of common analysers and an RDT detection limit near 100
+    parasites/uL (0.002 % at 5 x 10^6 red cells/uL); to be replaced by assay data sheets.
+
+treatment_cohort:
+  persons: 2000
+  true_effect: {intercept: -12.0, per_decade_age: 1.0, severe: -4.0}
+  assumption: true
+  justification: A known heterogeneous effect (mmHg change in systolic pressure) so that
+    DoWhy/EconML estimates can be checked against the truth (design 6.4.1).
+
+therapy_trajectories:
+  visits: 12
+  dose_effect_on_resistance: 0.07
+  behaviour_noise: 0.2
+  assumption: true
+  justification: Monthly titration with a guideline-like behaviour policy plus noise; the
+    dose effect is a simulator parameter, not a dosing recommendation.

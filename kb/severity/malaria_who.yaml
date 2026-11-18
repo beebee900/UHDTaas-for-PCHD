@@ -1,0 +1,37 @@
+# WHO definition of severe falciparum malaria: one or more criteria, with P. falciparum asexual
+# parasitaemia and no identified alternative cause. A child here is under 12 years of age.
+- id: severity.malaria.falciparum
+  child_age_below_years: 12
+  criteria:
+  - {criterion: impaired_consciousness, gcs_below_adult: 11, blantyre_below_child: 3}
+  - {criterion: prostration}
+  - {criterion: multiple_convulsions, more_than: 2, within_h: 24}
+  - {criterion: acidosis, base_deficit_above_meq_l: 8, bicarbonate_below_mmol_l: 15,
+     lactate_at_or_above_mmol_l: 5}
+  - {criterion: hypoglycaemia, glucose_below_mmol_l: 2.2}
+  - {criterion: severe_anaemia, hb_at_or_below_g_dl_child: 5, haematocrit_at_or_below_child: 15,
+     hb_below_g_dl_adult: 7, haematocrit_below_adult: 20, parasite_count_above_per_ul: 10000}
+  - {criterion: renal_impairment, creatinine_above_umol_l: 265, urea_above_mmol_l: 20}
+  - {criterion: jaundice, bilirubin_above_umol_l: 50, parasite_count_above_per_ul: 100000}
+  - {criterion: pulmonary_oedema, spo2_below_on_air: 92, respiratory_rate_above: 30}
+  - {criterion: significant_bleeding}
+  - {criterion: compensated_shock, capillary_refill_at_or_above_s: 3}
+  - {criterion: decompensated_shock, sbp_below_child: 70, sbp_below_adult: 80}
+  - {criterion: hyperparasitaemia, parasitaemia_above_percent: 10}
+  provenance:
+    source: who-malaria-2026
+    section: 5.2.2 Treating severe malaria
+    page: 212
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: severity.malaria.uncomplicated_hyperparasitaemia
+  parasitaemia_at_or_above_percent: 4
+  provenance:
+    source: who-malaria-2026
+    section: 5.2.1.4.5 Uncomplicated hyperparasitaemia
+    page: 191
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified

@@ -1,0 +1,46 @@
+{
+  "$id": "https://atra.local/schemas/tools/ahdt.data.cohort_extract.response.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "aggregates": {
+      "anyOf": [
+        {
+          "additionalProperties": true,
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Aggregates"
+    },
+    "privacy_report": {
+      "additionalProperties": true,
+      "title": "Privacy Report",
+      "type": "object"
+    },
+    "rows": {
+      "anyOf": [
+        {
+          "items": {
+            "additionalProperties": true,
+            "type": "object"
+          },
+          "type": "array"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Rows"
+    }
+  },
+  "required": [
+    "privacy_report"
+  ],
+  "title": "CohortExtractData",
+  "type": "object"
+}

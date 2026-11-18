@@ -1,0 +1,1021 @@
+{
+  "app": {
+    "title": "ATRA Health",
+    "language": "Language",
+    "tagline": "Agentic patient and human digital twins"
+  },
+  "locale": {
+    "en": "English",
+    "yo": "Yorùbá",
+    "ha": "Hausa",
+    "ig": "Igbo",
+    "pcm": "Naijá"
+  },
+  "login": {
+    "title": "Sign in",
+    "username": "Username",
+    "password": "Password",
+    "submit": "Sign in",
+    "failed": "The username or password is not correct.",
+    "overline": "ATRA Health",
+    "headline": "Digital twins that support care, with a clinician in charge of every decision",
+    "about": "Each person has a lifelong human twin of 17 member twins. Each care episode at a facility opens a patient twin. Agents prepare the work, and clinicians decide.",
+    "demo": "Demo sign-ins",
+    "demoAbout": "Choose a user name to fill it in. The passwords are in the demo login sheet.",
+    "groups": {
+      "clinical": "Clinical staff",
+      "patients": "Patients, owners and carers",
+      "governance": "Governance",
+      "population": "Research and public health"
+    }
+  },
+  "dashboard": {
+    "signOut": "Sign out",
+    "worklist": "Worklist",
+    "worklistEmpty": "No open items.",
+    "unavailable": "This information is not available now.",
+    "open": "Open workbench",
+    "openFor": "Open the workbench for {title}"
+  },
+  "status": {
+    "normal": "Normal",
+    "watch": "Watch",
+    "alert": "Alert",
+    "unavailable": "Unavailable"
+  },
+  "twin": {
+    "cardiovascular": "Heart and blood vessels",
+    "respiratory": "Breathing",
+    "nervous": "Brain and nerves",
+    "sensory": "Senses",
+    "digestive": "Digestion",
+    "hepatobiliary": "Liver",
+    "renal_urinary": "Kidneys and bladder",
+    "endocrine": "Hormones and glucose",
+    "immune_lymphatic": "Immune system",
+    "haematological": "Blood",
+    "musculoskeletal": "Muscles and bones",
+    "integumentary": "Skin",
+    "reproductive": "Reproductive health",
+    "whole_body": "Whole body",
+    "behavioural_cognitive": "Mind and behaviour",
+    "social": "Social life",
+    "population": "Population"
+  },
+  "workbench": {
+    "title": "Clinician workbench",
+    "back": "Dashboard",
+    "episode": "Episode {id}",
+    "reason": "Reason: {reason}",
+    "clinician": "Clinician: {name}",
+    "episodeStatus": {
+      "open": "Open",
+      "closed": "Closed"
+    },
+    "degradedTitle": "Some evidence is missing",
+    "degraded": "The AHDT could not supply all of its evidence. The recommendations use the data that is available.",
+    "missing": "Missing: {items}.",
+    "differential": "Differential diagnosis",
+    "noDifferential": "There is no differential yet.",
+    "probability": "Probability {value}",
+    "tests": "Recommended tests",
+    "noTests": "No tests are recommended.",
+    "treatments": "Treatment options",
+    "noTreatments": "No treatment options yet.",
+    "noSafetyIssues": "No safety issues found.",
+    "unified": "Unified view",
+    "noUnified": "No findings yet.",
+    "source": {
+      "apdt": "APDT",
+      "ahdt": "AHDT"
+    },
+    "twins": "Human digital twin",
+    "openTwin": "Open the {twin} twin",
+    "patientExplanation": "Patient explanation",
+    "decision": {
+      "title": "Decision",
+      "starting": "Preparing the decision.",
+      "none": "No decision is waiting.",
+      "accept": "Accept",
+      "edit": "Edit",
+      "reject": "Reject",
+      "recorded": "Decision recorded: {decision}.",
+      "needsRole": "Your role cannot make this decision.",
+      "failed": "The decision could not be sent.",
+      "editLabel": "Your change",
+      "reasonLabel": "Reason",
+      "cancel": "Cancel",
+      "confirm": "Confirm",
+      "onlyMo": "A medical officer decides on the diagnosis.",
+      "start": {
+        "diagnosis": "Prepare the diagnosis decision",
+        "treatment": "Prepare the prescription",
+        "care": "Prepare the care plan"
+      },
+      "waitingFor": "This step waits for a {role}: {step}.",
+      "yourStep": "Your step: {step}.",
+      "step": {
+        "accept_diagnosis": "accept the working diagnosis",
+        "sign_prescription": "sign the prescription",
+        "verify_prescription": "verify the prescription",
+        "approve_care_plan": "approve the care plan",
+        "patient_consent_to_treatment": "consent to the treatment"
+      },
+      "sign": "Sign",
+      "verify": "Verify",
+      "consent": "Consent",
+      "query": "Query",
+      "decline": "Decline",
+      "dialog": {
+        "edit": "Edit the recommendation",
+        "query": "Query the prescription",
+        "reject": "Reject the recommendation",
+        "decline": "Decline"
+      }
+    },
+    "twinsLoading": "Loading the twins...",
+    "about": "The reasoner's proposals for this episode. Agents prepare each step and a named clinician makes every decision.",
+    "patientWho": "{initials}, {sex}, {age}, speaks {language}",
+    "openedAt": "Opened {time}",
+    "tabs": {
+      "label": "Episode views",
+      "review": "Review",
+      "twins": "Twins and agents",
+      "ask": "Ask the twin",
+      "activity": "Activity"
+    },
+    "noRecsTitle": "No proposals yet",
+    "noRecs": "The recorded findings support no diagnosis yet. Record more findings to get proposals.",
+    "differentialAbout": "Ranked diagnoses with their probability. Open Why? for the evidence and the sources.",
+    "testsAbout": "Tests ranked by how much they would change the diagnosis, and by their price at this facility.",
+    "treatmentsAbout": "Treatment options checked for interactions, kidney function and pregnancy, and simulated on the patient's twin.",
+    "care": "Care plan",
+    "careAbout": "Follow-up, reminders and support for the patient.",
+    "noCare": "No care plan yet.",
+    "decisionAbout": "The diagnosis agents stop here and wait for the medical officer.",
+    "unifiedAbout": "The episode's own records and the human twin's readings in one list.",
+    "twinsAbout": "The current state of each member twin. Open a twin for its forecast and its agents.",
+    "openTwinsAndAgents": "Twins and agents",
+    "recStatus": {
+      "proposed": "Proposed",
+      "accepted": "Accepted",
+      "edited": "Edited",
+      "overridden": "Overridden",
+      "declined": "Declined",
+      "signed": "Signed"
+    }
+  },
+  "why": {
+    "button": "Why?",
+    "title": "Why this recommendation",
+    "recommendation": "Recommendation",
+    "confidence": "Confidence {value}",
+    "evidenceFor": "Evidence for",
+    "evidenceAgainst": "Evidence against",
+    "citations": "Citations",
+    "counterfactuals": "What would change it",
+    "counterfactual": "If {change}, the top diagnosis becomes {top}",
+    "change": "Change {value}",
+    "simulation": "Simulation",
+    "noSimulation": "No simulation was run.",
+    "assumptions": "Assumptions: {items}",
+    "alternatives": "Other possibilities",
+    "patientSummary": "Summary for the patient",
+    "models": "Models used",
+    "none": "Nothing to show.",
+    "close": "Close"
+  },
+  "drill": {
+    "back": "All twins",
+    "state": "Current state",
+    "updated": "Updated {time}",
+    "variable": "Variable",
+    "value": "Value",
+    "noState": "This twin has no state yet.",
+    "forecast": "Forecast",
+    "forecastOf": "Forecast of {variable} with a {level}% interval",
+    "chartLabel": "Forecast chart of {variable}",
+    "noForecast": "There is not enough data for a forecast yet.",
+    "denied": "This person has withheld this twin or your role cannot read it.",
+    "forecastAbout": "The expected course over the next 24 hours, with its uncertainty band."
+  },
+  "explain": {
+    "title": "Your results explained",
+    "shownIn": "This explanation is shown in {language}."
+  },
+  "agents": {
+    "title": "Agents",
+    "run": "Run agents",
+    "runConductor": "Run conductor",
+    "conductorTitle": "Care goal",
+    "conductorGoal": "Control hypertension, type 2 diabetes and CKD stage 3 safely",
+    "steps": "Agent steps",
+    "noSteps": "No agent steps yet.",
+    "tools": "Tools: {tools}",
+    "noTools": "No tools called.",
+    "missing": "Missing evidence: {items}",
+    "goals": "Goals",
+    "noGoals": "No goals were checked.",
+    "goalStatus": {
+      "met": "Met",
+      "unmet": "Unmet",
+      "not_evaluated": "Not evaluated"
+    },
+    "stepStatus": {
+      "ok": "Done",
+      "degraded": "Degraded",
+      "failed": "Failed"
+    },
+    "toolCalls": "Tool calls",
+    "noToolCalls": "No tools were called.",
+    "proposals": "Proposals",
+    "noProposals": "No proposals.",
+    "explanations": "Explanations",
+    "denials": "Denied actions",
+    "noDenials": "No actions were denied.",
+    "needsRole": "Your role cannot run agents.",
+    "failed": "The agents could not be run.",
+    "about": "The orchestrator of this twin senses, updates the state, checks the twin's standing goals, plans, acts within its autonomy level, explains and reports.",
+    "goalLabel": "Care goal",
+    "goalHelp": "A goal without a goal template is reported as unmatched."
+  },
+  "shell": {
+    "signedInAs": "Signed in as",
+    "openMenu": "Open the menu",
+    "roleAt": "{role} at {facility}"
+  },
+  "nav": {
+    "label": "Main navigation",
+    "home": "Dashboard",
+    "episodes": "Episodes",
+    "newEpisode": "New episode",
+    "myCare": "My care",
+    "myTwin": "My twin",
+    "cared": "People I care for",
+    "population": "Population",
+    "audit": "Audit log",
+    "models": "Model registry",
+    "system": "How ATRA works"
+  },
+  "role": {
+    "medical_officer": "Medical officer",
+    "radiologist": "Radiologist",
+    "pharmacist": "Pharmacist",
+    "nurse": "Nurse",
+    "lab_scientist": "Laboratory scientist",
+    "patient": "Patient",
+    "proxy": "Proxy",
+    "community_health_worker": "Community health worker",
+    "therapist": "Therapist",
+    "carer": "Carer",
+    "clinical_safety_officer": "Clinical safety officer",
+    "administrator": "Administrator",
+    "researcher": "Researcher",
+    "public_health_official": "Public health official",
+    "person": "Twin owner"
+  },
+  "facility": {
+    "fac-a": "Facility A, secondary hospital",
+    "fac-b": "Facility B, primary health centre"
+  },
+  "sex": {
+    "female": "Female",
+    "male": "Male"
+  },
+  "home": {
+    "title": "{role} dashboard",
+    "intro": {
+      "medical_officer": "Review what the reasoner proposes, decide, and follow each patient's twin.",
+      "radiologist": "See the episodes of your facility and the imaging evidence of each patient.",
+      "pharmacist": "Verify the prescriptions that medical officers sign. Blocked prescriptions come first.",
+      "nurse": "Follow care plans, open new episodes and watch each patient's twin.",
+      "lab_scientist": "See the episodes of your facility and the tests the reasoner recommends.",
+      "community_health_worker": "Open episodes in the community and follow each patient's readings.",
+      "therapist": "Follow your patients' twins and their progress over time.",
+      "administrator": "Check who did what in your facility and manage the model registry.",
+      "clinical_safety_officer": "Check the audit trail, every refused action, and the stage of every model."
+    },
+    "openEpisodes": "Open episodes",
+    "worklistItems": "Items on your worklist",
+    "blocked": "Blocked by a safety check",
+    "blockedHint": "Prescriptions that cannot be signed until they are changed",
+    "blockedChip": "Blocked",
+    "worklistAbout": {
+      "medical_officer": "New episodes to triage and proposals to review.",
+      "radiologist": "Your facility has no radiology worklist yet.",
+      "pharmacist": "Prescriptions to verify and to dispense.",
+      "nurse": "Care plans to follow and care to give.",
+      "lab_scientist": "Your facility has no laboratory worklist yet.",
+      "community_health_worker": "Your facility has no community worklist yet.",
+      "therapist": "Your facility has no therapy worklist yet."
+    },
+    "patients": "Open episodes at your facility",
+    "patientsAbout": "Each episode has a workbench and a view of the patient's 17 member twins.",
+    "allEpisodes": "All episodes",
+    "explore": "Explore the system",
+    "exploreAbout": "See how the twins, agents and safety checks work together.",
+    "governanceTools": "Governance tools"
+  },
+  "worklistKind": {
+    "triage": "New episode",
+    "review_diagnosis": "Diagnosis to review",
+    "review_test": "Tests to order",
+    "review_care": "Care plan",
+    "review_treatment": "Prescription to verify",
+    "dispense": "Medication to dispense",
+    "administration": "Care to give"
+  },
+  "episodes": {
+    "title": "Episodes of care",
+    "about": "An episode is one period of care for one problem at this facility. Open one to review the reasoner's proposals and the patient's twins.",
+    "none": "No episodes match.",
+    "patient": "Patient",
+    "reason": "Reason",
+    "opened": "Opened",
+    "status": "Status",
+    "actions": "Open",
+    "who": "{sex}, {age}",
+    "workbench": "Workbench",
+    "twins": "Twins and agents",
+    "filter": {
+      "open": "Open episodes",
+      "closed": "Closed episodes",
+      "all": "All episodes"
+    }
+  },
+  "newEpisode": {
+    "title": "New episode",
+    "about": "Open an episode for a patient of this facility and record what you found. The reasoner then proposes a differential, tests, a treatment and a care plan.",
+    "who": "Patient and reason",
+    "whoAbout": "The patient's age and sex come from the facility's patient list.",
+    "patient": "Patient",
+    "patientOption": "{initials}, {sex}, {age}, {language}",
+    "reason": "Reason for the visit",
+    "reasonHint": "For example: Fever for three days",
+    "encounter": "Encounter",
+    "weight": "Weight",
+    "avpu": "Level of consciousness",
+    "pregnancy": "Pregnancy",
+    "measurements": "Measurements",
+    "measurementsAbout": "Leave a field empty if it was not measured.",
+    "findings": "Findings",
+    "findingsAbout": "Tick each finding that is present. A finding that is not ticked is recorded as not known.",
+    "capture": {
+      "question": "Symptoms",
+      "exam": "Examination",
+      "lab": "Laboratory findings"
+    },
+    "tests": "Test results",
+    "testsAbout": "Record the tests already done.",
+    "notDone": "Not done",
+    "positive": "Positive",
+    "negative": "Negative",
+    "submit": "Open the episode",
+    "next": "The workbench opens with the reasoner's proposals.",
+    "role": "Your role cannot open episodes.",
+    "failed": "The episode could not be opened."
+  },
+  "encounter": {
+    "AMB": "Outpatient",
+    "EMER": "Emergency",
+    "IMP": "Inpatient",
+    "HH": "Home visit",
+    "VR": "Remote"
+  },
+  "avpu": {
+    "A": "Alert",
+    "V": "Responds to voice",
+    "P": "Responds to pain",
+    "U": "Unresponsive"
+  },
+  "pregnancy": {
+    "none": "Not pregnant",
+    "t1": "First trimester",
+    "t2": "Second trimester",
+    "t3": "Third trimester"
+  },
+  "measure": {
+    "temperature": "Temperature",
+    "heart_rate": "Heart rate",
+    "respiratory_rate": "Breathing rate",
+    "sbp": "Systolic blood pressure",
+    "dbp": "Diastolic blood pressure",
+    "spo2": "Oxygen saturation",
+    "glucose": "Blood glucose",
+    "hb": "Haemoglobin",
+    "creatinine": "Creatinine"
+  },
+  "episodeActions": {
+    "refer": "Refer",
+    "close": "Close episode",
+    "failed": "The action could not be completed.",
+    "referred": "Referral {id} is {status}.",
+    "status": {
+      "sent": "sent",
+      "queued": "queued for sending"
+    },
+    "closed": "The episode is closed.",
+    "referTitle": "Refer to {facility}",
+    "closeTitle": "Close the episode",
+    "urgency": "Urgency",
+    "urgencies": {
+      "routine": "Routine",
+      "urgent": "Urgent",
+      "emergency": "Emergency"
+    },
+    "reason": "Reason for the referral",
+    "outcome": "Outcome of the episode",
+    "cancel": "Cancel",
+    "send": "Send referral",
+    "confirmClose": "Close episode"
+  },
+  "twins": {
+    "members": "Member twins",
+    "membersAbout": "Each tile is one member twin of the person's human twin, with its status now. Open a tile for its state, its forecast and its agents.",
+    "conductorAbout": "The conductor matches a care goal to a goal template, runs the member twins' orchestrators in clinical-priority order and settles conflicts between their plans."
+  },
+  "coupling": {
+    "title": "How the twins connect",
+    "about": "Connectors pass values between member twins, for example the heart's output to the kidneys.",
+    "notRunning": "This person's twin is not running yet. It starts when a twin is first read.",
+    "count": "{count} connectors between the member twins."
+  },
+  "twinAbout": {
+    "cardiovascular": "Heart rate, blood pressure and the heart's output.",
+    "respiratory": "Breathing rate, oxygen and lung function.",
+    "nervous": "Consciousness, seizures and nerve function.",
+    "sensory": "Sight and hearing.",
+    "digestive": "Stomach, bowel and nutrition.",
+    "hepatobiliary": "Liver function and bilirubin.",
+    "renal_urinary": "Kidney function, fluids and urine.",
+    "endocrine": "Glucose, insulin and hormones.",
+    "immune_lymphatic": "Infection, fever and inflammation.",
+    "haematological": "Haemoglobin, blood cells and clotting.",
+    "musculoskeletal": "Muscles, bones, joints and movement.",
+    "integumentary": "Skin, wounds and pressure areas.",
+    "reproductive": "Pregnancy and reproductive health.",
+    "whole_body": "Body temperature, weight and energy balance.",
+    "behavioural_cognitive": "Mood, sleep, stress and thinking.",
+    "social": "Support, income and access to care.",
+    "population": "How common each condition is among similar people."
+  },
+  "ask": {
+    "title": "Ask the twin",
+    "chat": "Conversation",
+    "aboutClinician": "Ask about this patient's latest readings. The twin answers from the patient's own data.",
+    "titleOwn": "Ask my twin",
+    "aboutPatient": "Ask about your readings in your own language.",
+    "aboutPerson": "Ask about your readings in your own language. Your twin answers from your own data.",
+    "aboutCarer": "Ask about the readings of the person you care for.",
+    "empty": "No messages yet.",
+    "answeredBy": "{backend}: {model}",
+    "backend": {
+      "ollama": "Hosted model",
+      "openai": "Hosted model",
+      "slm": "Local small model",
+      "offline": "Offline fallback"
+    },
+    "thinking": "The twin is answering",
+    "language": "Language",
+    "message": "Your question",
+    "placeholder": "For example: How is my blood pressure?",
+    "send": "Send",
+    "role": "Your role cannot talk to this twin.",
+    "failed": "The twin could not answer."
+  },
+  "language": {
+    "title": "How the twin answers",
+    "about": "The conversation tries each language model in this order. The first that answers is used.",
+    "backend": {
+      "ollama": "Hosted model (Ollama)",
+      "openai": "Hosted model (OpenAI-compatible)",
+      "slm": "Local small model",
+      "offline": "Offline fallback"
+    },
+    "hostedDetail": "{model}, {keys, plural, one {# key} other {# keys that take turns}}",
+    "backendAbout": {
+      "slm": "Runs on this server with a language adapter for each language.",
+      "offline": "Says plainly that no model answered.",
+      "ollama": "A hosted model.",
+      "openai": "A hosted model."
+    },
+    "calls": "{count, plural, one {# call} other {# calls}}",
+    "failures": "{count, plural, one {# failure} other {# failures}}",
+    "unavailable": "The language status is not available now."
+  },
+  "audit": {
+    "title": "Audit log",
+    "about": "Every request, decision and agent action in this facility, newest first. Each record holds the hash of the record before it, so a change to any record breaks the chain.",
+    "records": "Records",
+    "recordsHint": "The latest records of this facility",
+    "denied": "Refused",
+    "deniedHint": "Requests and agent actions the policy refused",
+    "chain": "Hash chain",
+    "intact": "Intact",
+    "broken": "Broken",
+    "chainHint": "Each record links to the one before it",
+    "agentActions": "Agent actions",
+    "agentHint": "Actions that an agent attempted",
+    "show": {
+      "all": "All records",
+      "denied": "Refused only"
+    },
+    "none": "No records.",
+    "seq": "Record",
+    "time": "Time",
+    "actor": "Who",
+    "action": "What",
+    "episode": "Episode",
+    "outcome": "Outcome",
+    "viaAgent": "{agent} for {role}",
+    "outcomes": {
+      "ok": "Allowed",
+      "denied": "Refused",
+      "degraded": "Degraded",
+      "error": "Error"
+    },
+    "episodeTitle": "Activity",
+    "trail": "Activity for this patient",
+    "episodeAbout": "Every request, decision and agent action that concerns this patient, newest first."
+  },
+  "models": {
+    "overline": "Layer 4",
+    "title": "Model registry",
+    "about": "Every model of the twins with its fidelity tier and its release stage.",
+    "tier": {
+      "T1": "Trained models",
+      "T2": "Mechanistic models",
+      "T3": "Reference-state models"
+    },
+    "tierAbout": {
+      "T1": "Trained or calibrated on data, with a validation metric.",
+      "T2": "Published equations with published parameters, personalised by calibration.",
+      "T3": "Reference states with ranges, driven by connectors and readings."
+    },
+    "registry": "Registered models",
+    "stagerAbout": "Move a version to Staging, then to Production. Only a clinical safety officer may release to Production.",
+    "viewerAbout": "Your role can read the registry. A clinical safety officer manages releases.",
+    "model": "Model",
+    "twin": "Twin",
+    "tierLabel": "Tier",
+    "stage": "Stage",
+    "actions": "Release",
+    "stages": {
+      "None": "Not staged",
+      "Staging": "Staging",
+      "Production": "Production",
+      "Archived": "Archived"
+    },
+    "to": {
+      "Staging": "To staging",
+      "Production": "Release",
+      "Archived": "Archive"
+    },
+    "rollback": "Roll back",
+    "roleRefused": "Your role cannot make this change.",
+    "failed": "The change was not made."
+  },
+  "population": {
+    "title": "Population twin",
+    "about": "What is common among people like a patient. The diagnosis reasoner uses these priors and norms, and researchers can extract de-identified cohorts.",
+    "priors": "Prevalence priors",
+    "priorsAbout": "How common each condition is for an age, sex, region and season, from published sources and federated updates.",
+    "norms": "Reference norms",
+    "normsAbout": "The usual range of each measurement for an age and sex.",
+    "cohort": "De-identified cohort",
+    "cohortAbout": "Readings of everyone who consented to research or public health use. Differential privacy adds calibrated noise and charges your privacy budget. k-anonymity hides every group smaller than k.",
+    "age": "Age",
+    "sex": "Sex",
+    "female": "Female",
+    "male": "Male",
+    "region": "Region of Lagos",
+    "regions": {
+      "island_and_coast": "Island and coast",
+      "mainland_core": "Mainland core",
+      "north_west": "North-west",
+      "west_and_ikorodu": "West and Ikorodu"
+    },
+    "season": "Season",
+    "rainy": "Rainy",
+    "dry": "Dry",
+    "show": "Show",
+    "privacy": "Privacy method",
+    "dp": "Differential privacy",
+    "k": "k-anonymity",
+    "epsilon": "Epsilon",
+    "kValue": "k",
+    "extract": "Extract",
+    "privacyReport": "Privacy report",
+    "aggregates": "Aggregates"
+  },
+  "care": {
+    "title": "My care",
+    "about": "Your episodes of care, what your clinicians found, and your choices about your data.",
+    "aboutProxy": "The episodes of care of the person you act for.",
+    "episodes": "Episodes",
+    "since": "Since {date}, with {clinician}",
+    "open": "Open",
+    "none": "There are no episodes yet.",
+    "episodeAbout": "What your care team found and what happens next.",
+    "resultsAbout": "Each result in plain words. Your clinician reviews every proposal before it is used.",
+    "kind": {
+      "diagnosis": "Diagnosis",
+      "test": "Tests",
+      "treatment": "Treatment",
+      "care": "Care plan"
+    },
+    "status": {
+      "proposed": "Your clinician is reviewing this",
+      "accepted": "Agreed by your clinician",
+      "edited": "Changed by your clinician",
+      "overridden": "Changed by your clinician",
+      "declined": "Not used",
+      "signed": "Signed by your clinician"
+    },
+    "noResults": "There are no results yet."
+  },
+  "consent": {
+    "title": "My consent",
+    "about": "Choose what your twin may share and for which purposes.",
+    "purposes": "I allow my data to be used for",
+    "purpose": {
+      "care": "My care",
+      "emergency": "Emergencies",
+      "self_management": "Managing my own health",
+      "public_health": "Public health",
+      "research": "Research"
+    },
+    "categories": "My twin may use",
+    "categoriesAbout": "Switch off a kind of data to withhold it from every clinician and agent.",
+    "category": {
+      "vital_signs_and_device_data": "Vital signs and device data",
+      "laboratory_and_imaging": "Laboratory results and imaging",
+      "medicines": "Medicines",
+      "genome": "Genome",
+      "knowledge_graph_and_notes": "Health records and notes",
+      "body_models_and_simulation": "Body models and simulations",
+      "explanations": "Explanations",
+      "conversation_and_speech": "Conversation and speech"
+    },
+    "save": "Save my consent",
+    "saved": "Your consent is saved.",
+    "failed": "Your consent could not be saved."
+  },
+  "preferences": {
+    "title": "My preferences",
+    "about": "Tell your care team what matters to you. Treatment options are ranked with these answers.",
+    "prioritiesAbout": "Give each a number from 1 (matters little) to 5 (matters most).",
+    "save": "Save my preferences",
+    "saved": "Your preferences are saved.",
+    "failed": "Your preferences could not be saved.",
+    "option": {
+      "app": "App",
+      "sms": "Text message",
+      "ussd": "USSD",
+      "voice": "Voice call"
+    }
+  },
+  "message": {
+    "title": "Message my care team",
+    "about": "Your care team reads your message.",
+    "label": "Your message",
+    "send": "Send",
+    "failed": "Your message could not be sent."
+  },
+  "twinHome": {
+    "overline": "Lifelong human twin",
+    "title": "My twin",
+    "about": "Your twin keeps your body data, models and context for life. It is yours whether or not you are ill.",
+    "download": "Download my health knowledge graph",
+    "lifelong": "Clinicians see your twin only for the purposes you consent to."
+  },
+  "cared": {
+    "title": "People I care for",
+    "about": "The readings of each person who gave you access.",
+    "none": "No one has given you access yet.",
+    "person": "Person {n}",
+    "personAbout": "Readings of the past week."
+  },
+  "readings": {
+    "denied": "This person has not shared their readings with you.",
+    "none": "There are no readings from the past week.",
+    "chart": "Readings of {measure}"
+  },
+  "system": {
+    "overline": "About the system",
+    "title": "How ATRA works",
+    "about": "ATRA Health pairs two digital twins for every person. Agents prepare the clinical work inside each twin, and named clinicians make every decision.",
+    "twins": {
+      "ahdt": {
+        "short": "AHDT",
+        "name": "Agentic Human Digital Twin",
+        "about": "Lifelong. It owns the person's body data, models and context through 17 member twins, from the heart to social life. It exists whether or not the person is ill."
+      },
+      "apdt": {
+        "short": "APDT",
+        "name": "Agentic Patient Digital Twin",
+        "about": "Opened when a care episode starts at a facility and closed when it ends. It owns the history, examination, tests, diagnoses, prescriptions and decisions of that episode."
+      }
+    },
+    "workflow": "From arrival to decision",
+    "workflowAbout": "What happens to one patient, step by step.",
+    "steps": {
+      "open": {
+        "title": "A clinician opens an episode",
+        "about": "A medical officer, nurse or community health worker chooses the patient and the reason for the visit."
+      },
+      "intake": {
+        "title": "The intake is recorded",
+        "about": "Symptoms, examination findings, measurements and test results become FHIR records of the episode."
+      },
+      "reason": {
+        "title": "The reasoner proposes",
+        "about": "It ranks the differential diagnosis, chooses tests by value and price, checks treatments for safety and simulates them on the patient's twin. Every proposal has an explanation bundle with its evidence and sources."
+      },
+      "agents": {
+        "title": "Agents prepare each decision",
+        "about": "The diagnosis, treatment and care orchestrators gather evidence from the human twin and stop at each decision point."
+      },
+      "decide": {
+        "title": "The medical officer decides",
+        "about": "Accept, edit or reject the diagnosis. Sign the prescription. A prescription with a blocking safety issue cannot be signed until it is changed."
+      },
+      "verify": {
+        "title": "The pharmacist verifies",
+        "about": "The signed prescription reaches the pharmacist's worklist in the same run, to verify, query or reject."
+      },
+      "explain": {
+        "title": "The patient sees an explanation",
+        "about": "Each result in plain words in the patient's own language, with consent and preference controls."
+      },
+      "twin": {
+        "title": "The human twin keeps learning",
+        "about": "Readings from devices and the facility update the member twins, whose agents watch their standing goals."
+      }
+    },
+    "layers": "The eight ATRA layers",
+    "layersAbout": "Lower layers support higher ones.",
+    "layer": {
+      "1": {
+        "name": "Physical",
+        "about": "The person, their devices and actuators, and the clinicians who enter data."
+      },
+      "2": {
+        "name": "Network and cloud integration",
+        "about": "The edge service at each facility or home, device transports and store-and-forward."
+      },
+      "3": {
+        "name": "Data ingestion",
+        "about": "Validation, unit harmonisation, pseudonymisation, the data stores and the knowledge graphs."
+      },
+      "4": {
+        "name": "Model",
+        "about": "Mechanistic body models, trained machine-learning models, and language and speech models."
+      },
+      "5": {
+        "name": "Explainable AI",
+        "about": "An explainer for every model output."
+      },
+      "6": {
+        "name": "Service",
+        "about": "Data, models and simulation, explanations, cognitive services and the connections between twins."
+      },
+      "7": {
+        "name": "Agentic",
+        "about": "Worker agents, orchestrators, the conductor and the external API."
+      },
+      "8": {
+        "name": "Application",
+        "about": "This web app, the mobile apps, SMS, USSD and voice."
+      }
+    },
+    "ahdtAgents": "Agents of the human twin",
+    "ahdtAgentsAbout": "Workers do one job, an orchestrator runs each member twin, and the conductor coordinates them.",
+    "apdtAgents": "Agents of the patient twin",
+    "apdtAgentsAbout": "They prepare the clinical work. Every decision stays with a named clinician.",
+    "agent": {
+      "monitoring": {
+        "name": "Monitoring",
+        "about": "Reads the twin's state and when each field was last observed."
+      },
+      "anomaly": {
+        "name": "Anomaly",
+        "about": "Rates how severe the twin's state is."
+      },
+      "forecasting": {
+        "name": "Forecasting",
+        "about": "Runs the forecasts that the twin's goals need."
+      },
+      "explanation": {
+        "name": "Explanation",
+        "about": "Explains unmet goals and outputs at watch or alert level."
+      },
+      "recommendation": {
+        "name": "Recommendation",
+        "about": "Proposes support actions listed in the knowledge base, each with its source."
+      },
+      "orchestrator": {
+        "name": "Twin orchestrator",
+        "about": "Senses, updates the state, checks goals, plans, acts, explains and reports for one member twin."
+      },
+      "conductor": {
+        "name": "Conductor",
+        "about": "Turns a person's care goal into sub-goals, orders the orchestrators and arbitrates between their plans."
+      },
+      "history": {
+        "name": "History taking",
+        "about": "Lists the inputs the episode still needs."
+      },
+      "evidence": {
+        "name": "Evidence assembly",
+        "about": "Gathers readings, medicines, twin states and explanations from the human twin."
+      },
+      "differential": {
+        "name": "Differential diagnosis",
+        "about": "Ranks the diagnoses and builds their explanation bundles."
+      },
+      "investigation": {
+        "name": "Investigation",
+        "about": "Chooses the tests that would change the diagnosis most for their price."
+      },
+      "treatment": {
+        "name": "Treatment planning",
+        "about": "Lists the options and simulates the first three on the patient's twin."
+      },
+      "pharmacotherapy": {
+        "name": "Pharmacotherapy",
+        "about": "Checks interactions, kidney function, pregnancy and genome for each dose."
+      },
+      "guard": {
+        "name": "Safety and consent guard",
+        "about": "Checks every agent action before it runs."
+      }
+    },
+    "safety": "How the system keeps clinicians in charge",
+    "safetyAbout": "Two independent checks stop an agent from deciding a clinical matter.",
+    "safetyItem": {
+      "guard": {
+        "name": "Autonomy levels",
+        "about": "Each kind of action has a fixed level, from inform to never. Signing, ordering and dispensing are never allowed for an agent."
+      },
+      "human": {
+        "name": "A human at every decision",
+        "about": "The API accepts a decision only from a person with the role the step needs, never from an agent or a service."
+      },
+      "consent": {
+        "name": "Consent",
+        "about": "A person can withhold any kind of data. Every tool call checks the person's consent first."
+      },
+      "audit": {
+        "name": "Audit",
+        "about": "Every request, decision and refusal is written to a hash-chained audit log."
+      }
+    },
+    "members": "The 17 member twins",
+    "membersAbout": "The human twin is a federation of these twins. Each owns its models and its standing goals.",
+    "models": "Models",
+    "modelsAbout": "Every model has a fidelity tier that says how it was built.",
+    "modelCount": {
+      "T2": "43",
+      "T3": "24",
+      "T1": "19"
+    },
+    "services": "Running services",
+    "servicesAbout": "The services behind this app and whether each answers now.",
+    "service": {
+      "apdt": {
+        "name": "Patient twin",
+        "about": "Episodes, the reasoner and decisions"
+      },
+      "ahdt": {
+        "name": "Human twin",
+        "about": "Member twins, models, agents and language"
+      },
+      "population": {
+        "name": "Population twin",
+        "about": "Priors, norms and cohorts"
+      },
+      "edge": {
+        "name": "Edge",
+        "about": "Devices and on-device models"
+      },
+      "channels": {
+        "name": "Channels",
+        "about": "SMS, USSD and voice"
+      },
+      "opa": {
+        "name": "Policy engine",
+        "about": "Role, facility and consent rules"
+      }
+    },
+    "up": "Running",
+    "down": "Not answering",
+    "personas": "The demo patients",
+    "personasAbout": "Six synthetic patients. None is a real person.",
+    "persona": "Patient",
+    "facility": "Facility",
+    "scenario": "Scenario",
+    "tests": "What it shows",
+    "persona_": {
+      "ao": {
+        "who": "A.O., female, 47",
+        "scenario": "Uncomplicated malaria",
+        "shows": "The worked example: differential, tests, treatment and explanation"
+      },
+      "bm": {
+        "who": "B.M., male, 8",
+        "scenario": "Severe malaria with falling consciousness and hypoglycaemia",
+        "shows": "Deterioration, the children's early warning score and a proxy"
+      },
+      "cn": {
+        "who": "C.N., female, 29",
+        "scenario": "Pyelonephritis at 22 weeks of pregnancy",
+        "shows": "Treatment options that change in pregnancy"
+      },
+      "de": {
+        "who": "D.E., male, 58",
+        "scenario": "Hypertension, type 2 diabetes and kidney disease",
+        "shows": "Kidney-adjusted doses and the conductor's care goal"
+      },
+      "ef": {
+        "who": "E.F., female, 19",
+        "scenario": "Sickle cell crisis",
+        "shows": "The crisis risk model and the patient explanation"
+      },
+      "gh": {
+        "who": "G.H., male, 35",
+        "scenario": "Tuberculosis work-up on antiretroviral therapy",
+        "shows": "The pharmacist's queue, a blocking interaction and a withheld genome"
+      }
+    }
+  },
+  "record": {
+    "diagnosisSheet": "Clinician's diagnosis",
+    "diagnosisSheetAbout": "The diagnosis the medical officer makes. It can follow an APDT proposal or differ from it.",
+    "dispensing": "Dispensing record",
+    "dispensingAbout": "The medications the pharmacist dispensed for this patient.",
+    "careGiven": "Care given",
+    "careGivenAbout": "The medications the nurse gave and the care the nurse carried out under the care plan.",
+    "noDiagnosis": "No diagnosis is recorded yet.",
+    "noDispense": "No medication is dispensed yet.",
+    "noCareGiven": "No care is recorded yet.",
+    "by": "{role} {id}, {time}",
+    "submit": {
+      "diagnosis": "Record diagnosis",
+      "dispense": "Record dispense",
+      "administration": "Record care given"
+    },
+    "saved": {
+      "diagnosis": "The diagnosis is recorded.",
+      "dispense": "The dispense is recorded.",
+      "administration": "The care given is recorded."
+    },
+    "failed": "The entry could not be recorded.",
+    "role": "Your role cannot make this entry.",
+    "field": {
+      "condition": "Diagnosis",
+      "status": "Status",
+      "basis": "Basis for the diagnosis",
+      "medication": "Medication",
+      "directions": "Dose and directions",
+      "quantity": "Quantity dispensed",
+      "daysSupply": "Days of supply",
+      "dispenseNotes": "Notes and counselling",
+      "kind": "Type of care",
+      "medicationGiven": "Medication given",
+      "activity": "Care activity",
+      "doseGiven": "Dose given",
+      "route": "Route",
+      "givenAt": "Time given",
+      "careNotes": "Notes and the patient's response"
+    },
+    "help": {
+      "condition": "Choose an APDT proposal or type your own diagnosis.",
+      "prescribed": "Choose a prescribed medication or type another.",
+      "activity": "For example tepid sponging, wound dressing or vital signs."
+    },
+    "placeholder": {
+      "quantity": "For example 24 tablets"
+    },
+    "status": {
+      "confirmed": "Confirmed",
+      "provisional": "Provisional"
+    },
+    "kind": {
+      "medication": "Medication",
+      "care": "Care activity"
+    },
+    "route": {
+      "oral": "Oral",
+      "intravenous": "Intravenous",
+      "intramuscular": "Intramuscular",
+      "subcutaneous": "Subcutaneous",
+      "topical": "Topical",
+      "inhaled": "Inhaled",
+      "rectal": "Rectal",
+      "other": "Other"
+    },
+    "timesPerDay": "{n, plural, one {once a day} other {# times a day}}",
+    "forDays": "{n, plural, one {for # day} other {for # days}}"
+  }
+}

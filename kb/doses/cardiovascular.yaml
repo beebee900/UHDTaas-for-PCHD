@@ -1,0 +1,72 @@
+# Antihypertensive doses of the HEARTS protocols (once daily unless stated).
+
+- id: dose.amlodipine
+  drug: amlodipine
+  atc: C08CA01
+  route: oral
+  doses_per_day: 1
+  steps_mg: [5, 10]
+  small_frail_start_mg: 2.5
+  provenance:
+    source: who-hearts-protocols-2018
+    section: "Adapted example: CCB as first-line treatment"
+    page: 31
+    derived:
+      doses_per_day: Once-daily single-pill regimen of the protocol.
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: dose.telmisartan
+  drug: telmisartan
+  atc: C09CA07
+  route: oral
+  doses_per_day: 1
+  steps_mg: [40, 80]
+  provenance:
+    source: who-hearts-protocols-2018
+    page: 31
+    derived:
+      doses_per_day: Once-daily regimen of the protocol.
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: dose.chlorthalidone
+  drug: chlorthalidone
+  atc: C03BA04
+  route: oral
+  doses_per_day: 1
+  steps_mg: [12.5, 25]
+  alternatives:
+  - {drug: indapamide, atc: C03BA11, steps_mg: [1.25, 2.5]}
+  - {drug: indapamide sustained release, atc: C03BA11, steps_mg: [1.5]}
+  - {drug: hydrochlorothiazide, atc: C03AA03, steps_mg: [25, 50]}
+  monitoring: Check potassium; hypokalaemia is more common at full diuretic dose.
+  provenance:
+    source: who-hearts-protocols-2018
+    page: 31
+    derived:
+      doses_per_day: Once-daily regimen of the protocol.
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: dose.ras_blocker_alternatives
+  drug: angiotensin receptor blocker or ACE inhibitor
+  route: oral
+  doses_per_day: 1
+  options:
+  - {drug: losartan, atc: C09CA01, mg: 50}
+  - {drug: lisinopril, atc: C09AA03, mg: 20}
+  - {drug: ramipril, atc: C09AA05, mg: 5}
+  - {drug: perindopril, atc: C09AA04, mg: 4}
+  monitoring: Check serum creatinine and potassium before and several weeks after starting.
+  provenance:
+    source: who-hearts-protocols-2018
+    page: 31
+    derived:
+      doses_per_day: Text "once-daily".
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified

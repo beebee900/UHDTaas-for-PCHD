@@ -1,0 +1,950 @@
+{
+  "app": {
+    "title": "ATRA Health",
+    "language": "Asụsụ",
+    "tagline": "Ejima dijitalụ onye ọrịa na nke mmadụ nwere ndị nnọchite"
+  },
+  "locale": {
+    "en": "English",
+    "yo": "Yorùbá",
+    "ha": "Hausa",
+    "ig": "Igbo",
+    "pcm": "Naijá"
+  },
+  "login": {
+    "title": "Banye",
+    "username": "Aha njirimara",
+    "password": "Okwuntughe",
+    "submit": "Banye",
+    "failed": "Aha njirimara ma ọ bụ okwuntughe ezighi ezi.",
+    "overline": "ATRA Health",
+    "headline": "Ejima dijitalụ na-akwado nlekọta, dọkịta na-ejikwa mkpebi ọ bụla",
+    "about": "Onye ọ bụla nwere ejima mmadụ nke ndụ ya niile nwere ejima ndị otu iri na asaa. Ihe omume nlekọta ọ bụla n'ụlọ ọgwụ na-emepe ejima onye ọrịa. Ndị nnọchite na-akwado ọrụ ahụ, ndị dọkịta na-ekpebi.",
+    "demo": "Ntinye nke nnwale",
+    "demoAbout": "Họrọ aha onye ọrụ ka e dejupụta ya. Okwuntughe dị n'akwụkwọ ntinye nke nnwale.",
+    "groups": {
+      "clinical": "Ndị ọrụ ụlọ ọgwụ",
+      "patients": "Ndị ọrịa, ndị nwe na ndị nlekọta",
+      "governance": "Ọchịchị",
+      "population": "Nyocha na ahụike ọha"
+    }
+  },
+  "dashboard": {
+    "signOut": "Pụọ",
+    "worklist": "Ndepụta ọrụ",
+    "worklistEmpty": "Ọ dịghị ihe mepere emepe.",
+    "unavailable": "Ozi a adịghị ugbu a.",
+    "open": "Mepee ebe ọrụ",
+    "openFor": "Mepee ebe ọrụ maka {title}"
+  },
+  "status": {
+    "normal": "Nkịtị",
+    "watch": "Lezie anya",
+    "alert": "Ịdọ aka ná ntị",
+    "unavailable": "Adịghị"
+  },
+  "twin": {
+    "cardiovascular": "Obi na akwara ọbara",
+    "respiratory": "Iku ume",
+    "nervous": "Ụbụrụ na akwara",
+    "sensory": "Mmetụta ahụ",
+    "digestive": "Mgbari nri",
+    "hepatobiliary": "Imeju",
+    "renal_urinary": "Akụrụ na akpa mmamịrị",
+    "endocrine": "Homonụ na shuga ọbara",
+    "immune_lymphatic": "Usoro nchekwa ahụ",
+    "haematological": "Ọbara",
+    "musculoskeletal": "Akwara na ọkpụkpụ",
+    "integumentary": "Akpụkpọ ahụ",
+    "reproductive": "Ahụike ọmụmụ",
+    "whole_body": "Ahụ niile",
+    "behavioural_cognitive": "Uche na omume",
+    "social": "Ndụ mmekọrịta",
+    "population": "Ọha mmadụ"
+  },
+  "workbench": {
+    "title": "Ebe ọrụ dọkịta",
+    "back": "Ihu nchịkọta",
+    "episode": "Ihe omume {id}",
+    "reason": "Ihe kpatara ya: {reason}",
+    "clinician": "Dọkịta: {name}",
+    "episodeStatus": {
+      "open": "Mepere emepe",
+      "closed": "Emechiri"
+    },
+    "degradedTitle": "Ụfọdụ ihe akaebe adịghị",
+    "degraded": "AHDT enweghị ike inye ihe akaebe ya niile. Ndụmọdụ ndị a na-eji data dị.",
+    "missing": "Ihe na-adịghị: {items}.",
+    "differential": "Ọrịa ndị ọ nwere ike ịbụ",
+    "noDifferential": "Enweghị ndepụta ọrịa ndị ọ nwere ike ịbụ ugbu a.",
+    "probability": "Ohere {value}",
+    "tests": "Nnwale a tụrụ aro",
+    "noTests": "Ọ dịghị nnwale a tụrụ aro.",
+    "treatments": "Nhọrọ ọgwụgwọ",
+    "noTreatments": "Enweghị nhọrọ ọgwụgwọ ugbu a.",
+    "noSafetyIssues": "Ahụghị nsogbu nchekwa ọ bụla.",
+    "unified": "Nlele jikọtara ọnụ",
+    "noUnified": "Enweghị nchọpụta ugbu a.",
+    "source": {
+      "apdt": "APDT",
+      "ahdt": "AHDT"
+    },
+    "twins": "Ejima dijitalụ mmadụ",
+    "openTwin": "Mepee ejima {twin}",
+    "patientExplanation": "Nkọwa maka onye ọrịa",
+    "decision": {
+      "title": "Mkpebi",
+      "starting": "A na-akwado mkpebi ahụ.",
+      "none": "Ọ dịghị mkpebi na-echere.",
+      "accept": "Nabata",
+      "edit": "Dezie",
+      "reject": "Jụ",
+      "recorded": "Edekọla mkpebi: {decision}.",
+      "needsRole": "Ọrụ gị anaghị ekwe gị ime mkpebi a.",
+      "failed": "Enweghị ike iziga mkpebi ahụ.",
+      "editLabel": "Mgbanwe gị",
+      "reasonLabel": "Ihe kpatara ya",
+      "cancel": "Kagbuo",
+      "confirm": "Kwado",
+      "onlyMo": "Onye ọrụ ahụike bụ onye na-ekpebi banyere nchọpụta ọrịa.",
+      "start": {
+        "diagnosis": "Kwadebe mkpebi nchọpụta ọrịa",
+        "treatment": "Kwadebe akwụkwọ ọgwụ",
+        "care": "Kwadebe atụmatụ nlekọta"
+      },
+      "waitingFor": "Nzọụkwụ a na-eche {role}: {step}.",
+      "yourStep": "Nzọụkwụ gị: {step}.",
+      "step": {
+        "accept_diagnosis": "nabata nchọpụta ọrịa nwa oge",
+        "sign_prescription": "bịanye aka n'akwụkwọ ọgwụ",
+        "verify_prescription": "kwado akwụkwọ ọgwụ",
+        "approve_care_plan": "kwenye na atụmatụ nlekọta",
+        "patient_consent_to_treatment": "kwenye na ọgwụgwọ ahụ"
+      },
+      "sign": "Bịanye aka",
+      "verify": "Kwado",
+      "consent": "Kwenye",
+      "query": "Jụọ ajụjụ",
+      "decline": "Jụ",
+      "dialog": {
+        "edit": "Dezie ndụmọdụ ahụ",
+        "query": "Jụọ ajụjụ banyere akwụkwọ ọgwụ",
+        "reject": "Jụ ndụmọdụ ahụ",
+        "decline": "Jụ"
+      }
+    },
+    "twinsLoading": "A na-ebubata ejima ndị ahụ...",
+    "about": "Ndụmọdụ onye nyocha maka ihe omume a. Ndị nnọchite na-akwado nzọụkwụ ọ bụla, dọkịta e kwuru aha ya na-ekpebikwa mkpebi ọ bụla.",
+    "patientWho": "{initials}, {sex}, {age}, na-asụ {language}",
+    "openedAt": "Emepere {time}",
+    "tabs": {
+      "label": "Echiche banyere ihe omume",
+      "review": "Nlele",
+      "twins": "Ejima na ndị nnọchite",
+      "ask": "Jụọ ejima ahụ",
+      "activity": "Ọrụ"
+    },
+    "noRecsTitle": "Enweghị ndụmọdụ ugbu a",
+    "noRecs": "Nchọpụta edere edere akwadoghị nchọpụta ọrịa ọ bụla ugbu a. Dee ọtụtụ nchọpụta ka ị nweta ndụmọdụ.",
+    "differentialAbout": "Ọrịa ndị e depụtara na ohere ha. Mepee Gịnị kpatara? maka ihe akaebe na isi mmalite.",
+    "testsAbout": "Nnwale ndị e depụtara dị ka ha ga-esi gbanwee nchọpụta ọrịa, na ọnụ ahịa ha n'ụlọ ọgwụ a.",
+    "treatmentsAbout": "Nhọrọ ọgwụgwọ ndị e lebara anya maka mmekọrịta ọgwụ, ọrụ akụrụ na ime, ma mee nṅomi na ejima onye ọrịa.",
+    "care": "Atụmatụ nlekọta",
+    "careAbout": "Nlekọta ọzọ, ihe ncheta na nkwado maka onye ọrịa.",
+    "noCare": "Enweghị atụmatụ nlekọta ugbu a.",
+    "decisionAbout": "Ndị nnọchite nchọpụta ọrịa kwụsịrị ebe a ma na-eche onye ọrụ ahụike.",
+    "unifiedAbout": "Ndekọ ihe omume a na ihe ejima mmadụ gụrụ n'otu ndepụta.",
+    "twinsAbout": "Ọnọdụ ugbu a nke ejima ndị otu ọ bụla. Mepee ejima maka amụma ya na ndị nnọchite ya.",
+    "openTwinsAndAgents": "Ejima na ndị nnọchite",
+    "recStatus": {
+      "proposed": "A tụrụ aro",
+      "accepted": "Anabatara",
+      "edited": "Edeziri",
+      "overridden": "Agbanweela",
+      "declined": "Ajụrụ",
+      "signed": "Ebinyela aka"
+    }
+  },
+  "why": {
+    "button": "Gịnị kpatara?",
+    "title": "Ihe kpatara ndụmọdụ a",
+    "recommendation": "Ndụmọdụ",
+    "confidence": "Ntụkwasị obi {value}",
+    "evidenceFor": "Ihe akaebe na-akwado ya",
+    "evidenceAgainst": "Ihe akaebe na-emegide ya",
+    "citations": "Ebe e si nweta ya",
+    "counterfactuals": "Ihe ga-agbanwe ya",
+    "counterfactual": "Ọ bụrụ na {change}, ọrịa mbụ ga-abụ {top}",
+    "change": "Mgbanwe {value}",
+    "simulation": "Nṅomi",
+    "noSimulation": "A meghị nṅomi ọ bụla.",
+    "assumptions": "Echiche e weere: {items}",
+    "alternatives": "Ihe ndị ọzọ ọ nwere ike ịbụ",
+    "patientSummary": "Nchịkọta maka onye ọrịa",
+    "models": "Ụdị ndị e jiri mee ihe",
+    "none": "Ọ dịghị ihe a ga-egosi.",
+    "close": "Mechie"
+  },
+  "drill": {
+    "back": "Ejima niile",
+    "state": "Ọnọdụ ugbu a",
+    "updated": "Emelitere {time}",
+    "variable": "Ihe a tụrụ",
+    "value": "Uru",
+    "noState": "Ejima a enweghị ọnọdụ ugbu a.",
+    "forecast": "Amụma",
+    "forecastOf": "Amụma {variable} nwere oke {level}%",
+    "chartLabel": "Eserese amụma {variable}",
+    "noForecast": "Data ezughị maka amụma ugbu a.",
+    "denied": "Onye a egbochila ejima a ma ọ bụ ọrụ gị enweghị ike ịgụ ya.",
+    "forecastAbout": "Ihe a tụrụ anya n'ime awa 24 ndị na-abịa, na oke ejighị n'aka ya."
+  },
+  "explain": {
+    "title": "Nkọwa nsonaazụ gị",
+    "shownIn": "E gosipụtara nkọwa a n'asụsụ {language}."
+  },
+  "agents": {
+    "title": "Ndị nnọchite",
+    "run": "Malite ndị nnọchite",
+    "runConductor": "Malite onye nhazi",
+    "conductorTitle": "Ebumnuche nlekọta",
+    "conductorGoal": "Jikwaa ọbara mgbali elu, ọrịa shuga ụdị nke abụọ na ọrịa akụrụ ọkwa nke atọ n'enweghị nsogbu",
+    "steps": "Usoro ndị nnọchite",
+    "noSteps": "Enweghị usoro ndị nnọchite ugbu a.",
+    "tools": "Ngwaọrụ: {tools}",
+    "noTools": "Akpọghị ngwaọrụ ọ bụla.",
+    "missing": "Ihe akaebe na-adịghị: {items}",
+    "goals": "Ebumnuche",
+    "noGoals": "Enyochaghị ebumnuche ọ bụla.",
+    "goalStatus": {
+      "met": "Emezuru",
+      "unmet": "Emezughị",
+      "not_evaluated": "Enyochabeghị ya"
+    },
+    "stepStatus": {
+      "ok": "Emechara",
+      "degraded": "Ezughị oke",
+      "failed": "Ọ dara"
+    },
+    "toolCalls": "Oku ngwaọrụ",
+    "noToolCalls": "Akpọghị ngwaọrụ ọ bụla.",
+    "proposals": "Atụmatụ",
+    "noProposals": "Enweghị atụmatụ.",
+    "explanations": "Nkọwa",
+    "denials": "Omume a jụrụ",
+    "noDenials": "Ọ dịghị omume a jụrụ.",
+    "needsRole": "Ọrụ gị anaghị ekwe gị ịmalite ndị nnọchite.",
+    "failed": "Enweghị ike ịmalite ndị nnọchite.",
+    "about": "Onye ndozi nke ejima a na-ahụ, na-emelite ọnọdụ, na-elele ebumnuche ejima ahụ, na-eme atụmatụ, na-arụ ọrụ n'ime ọkwa nnwere onwe ya, na-akọwa ma na-akọ akụkọ.",
+    "goalLabel": "Ebumnuche nlekọta",
+    "goalHelp": "A na-akọ ebumnuche na-enweghị ịtụnye ebumnuche dị ka nke na-adabaghị."
+  },
+  "shell": {
+    "signedInAs": "Banyere dị ka",
+    "openMenu": "Mepee ndepụta",
+    "roleAt": "{role} na {facility}"
+  },
+  "nav": {
+    "label": "Isi nduzi",
+    "home": "Ihu nchịkọta",
+    "episodes": "Ihe omume",
+    "newEpisode": "Ihe omume ọhụrụ",
+    "myCare": "Nlekọta m",
+    "myTwin": "Ejima m",
+    "cared": "Ndị m na-elekọta",
+    "population": "Ọha mmadụ",
+    "audit": "Ndekọ nyocha",
+    "models": "Ndebanye aha ụdị",
+    "system": "Otu ATRA si arụ ọrụ"
+  },
+  "role": {
+    "medical_officer": "Onye ọrụ ahụike",
+    "radiologist": "Onye ọkachamara onyonyo ahụike",
+    "pharmacist": "Onye ọgwụ",
+    "nurse": "Nọọsụ",
+    "lab_scientist": "Onye sayensị ụlọ nnwale",
+    "patient": "Onye ọrịa",
+    "proxy": "Onye nnọchite",
+    "community_health_worker": "Onye ọrụ ahụike obodo",
+    "therapist": "Onye ọgwụgwọ",
+    "carer": "Onye nlekọta",
+    "clinical_safety_officer": "Onye ọrụ nchekwa ụlọ ọgwụ",
+    "administrator": "Onye nchịkwa",
+    "researcher": "Onye nyocha",
+    "public_health_official": "Onye ọrụ ahụike ọha",
+    "person": "Onye nwe ejima"
+  },
+  "facility": {
+    "fac-a": "Ụlọ ọgwụ A, ụlọ ọgwụ etiti",
+    "fac-b": "Ụlọ ọgwụ B, ụlọ ahụike mbụ"
+  },
+  "sex": {
+    "female": "Nwanyị",
+    "male": "Nwoke"
+  },
+  "home": {
+    "title": "Ihu nchịkọta {role}",
+    "intro": {
+      "medical_officer": "Lelee ihe onye nyocha tụrụ aro, kpebie, ma soro ejima onye ọrịa ọ bụla.",
+      "radiologist": "Hụ ihe omume nke ụlọ ọgwụ gị na ihe akaebe onyonyo nke onye ọrịa ọ bụla.",
+      "pharmacist": "Kwado akwụkwọ ọgwụ ndị ọrụ ahụike bịanyere aka. Ndị a gbochiri bụ nke mbụ.",
+      "nurse": "Soro atụmatụ nlekọta, mepee ihe omume ọhụrụ, ma na-ele ejima onye ọrịa ọ bụla.",
+      "lab_scientist": "Hụ ihe omume nke ụlọ ọgwụ gị na nnwale onye nyocha tụrụ aro.",
+      "community_health_worker": "Mepee ihe omume n'obodo ma soro ihe onye ọrịa ọ bụla gụrụ.",
+      "therapist": "Soro ejima ndị ọrịa gị na ọganihu ha n'oge.",
+      "administrator": "Lelee onye mere ihe n'ụlọ ọgwụ gị ma jikwaa ndebanye aha ụdị.",
+      "clinical_safety_officer": "Lelee ndekọ nyocha, omume ọ bụla a jụrụ, na ọkwa ụdị ọ bụla."
+    },
+    "openEpisodes": "Ihe omume mepere emepe",
+    "worklistItems": "Ihe dị na ndepụta ọrụ gị",
+    "blocked": "Nyocha nchekwa gbochiri ya",
+    "blockedHint": "Akwụkwọ ọgwụ enweghị ike ibinye aka na ya ruo mgbe e gbanwere ya",
+    "blockedChip": "A gbochiri ya",
+    "worklistAbout": {
+      "medical_officer": "Ihe omume ọhụrụ ka a nyochaa na ndụmọdụ ka a lelee.",
+      "radiologist": "Ụlọ ọgwụ gị enweghị ndepụta ọrụ onyonyo ugbu a.",
+      "pharmacist": "Akwụkwọ ọgwụ ka a kwado.",
+      "nurse": "Atụmatụ nlekọta ka a soro.",
+      "lab_scientist": "Ụlọ ọgwụ gị enweghị ndepụta ọrụ ụlọ nnwale ugbu a.",
+      "community_health_worker": "Ụlọ ọgwụ gị enweghị ndepụta ọrụ obodo ugbu a.",
+      "therapist": "Ụlọ ọgwụ gị enweghị ndepụta ọrụ ọgwụgwọ ugbu a."
+    },
+    "patients": "Ihe omume mepere emepe n'ụlọ ọgwụ gị",
+    "patientsAbout": "Ihe omume ọ bụla nwere ebe ọrụ na nlele nke ejima ndị otu iri na asaa nke onye ọrịa.",
+    "allEpisodes": "Ihe omume niile",
+    "explore": "Nyochaa sistemu ahụ",
+    "exploreAbout": "Hụ ka ejima, ndị nnọchite na nyocha nchekwa si arụkọ ọrụ.",
+    "governanceTools": "Ngwaọrụ ọchịchị"
+  },
+  "worklistKind": {
+    "triage": "Ihe omume ọhụrụ",
+    "review_diagnosis": "Nchọpụta ọrịa ka a lelee",
+    "review_test": "Nnwale ka e nye iwu",
+    "review_care": "Atụmatụ nlekọta",
+    "review_treatment": "Akwụkwọ ọgwụ ka a kwado"
+  },
+  "episodes": {
+    "title": "Ihe omume nlekọta",
+    "about": "Ihe omume bụ otu oge nlekọta maka otu nsogbu n'ụlọ ọgwụ a. Mepee otu ka ị lelee ndụmọdụ onye nyocha na ejima onye ọrịa.",
+    "none": "Ọ dịghị ihe omume kwekọrọ.",
+    "patient": "Onye ọrịa",
+    "reason": "Ihe kpatara ya",
+    "opened": "Emepere",
+    "status": "Ọnọdụ",
+    "actions": "Mepee",
+    "who": "{sex}, {age}",
+    "workbench": "Ebe ọrụ",
+    "twins": "Ejima na ndị nnọchite",
+    "filter": {
+      "open": "Ihe omume mepere emepe",
+      "closed": "Ihe omume emechiri",
+      "all": "Ihe omume niile"
+    }
+  },
+  "newEpisode": {
+    "title": "Ihe omume ọhụrụ",
+    "about": "Mepee ihe omume maka onye ọrịa nke ụlọ ọgwụ a ma dee ihe ị chọpụtara. Onye nyocha ga-atụ aro ọrịa ndị ọ nwere ike ịbụ, nnwale, ọgwụgwọ na atụmatụ nlekọta.",
+    "who": "Onye ọrịa na ihe kpatara ya",
+    "whoAbout": "Afọ na nwoke ma ọ bụ nwanyị nke onye ọrịa si na ndepụta ndị ọrịa nke ụlọ ọgwụ.",
+    "patient": "Onye ọrịa",
+    "patientOption": "{initials}, {sex}, {age}, {language}",
+    "reason": "Ihe kpatara nleta",
+    "reasonHint": "Dịka ọmụmaatụ: Ahụ ọkụ ụbọchị atọ",
+    "encounter": "Ụdị nleta",
+    "weight": "Arọ",
+    "avpu": "Ọkwa nghọta",
+    "pregnancy": "Ime",
+    "measurements": "Ihe e tụrụ",
+    "measurementsAbout": "Hapụ ebe ahụ efu ma ọ bụrụ na etụghị ya.",
+    "findings": "Nchọpụta",
+    "findingsAbout": "Tinye akara na nchọpụta ọ bụla dị. A na-edekọ nchọpụta enweghị akara dị ka nke amaghị.",
+    "capture": {
+      "question": "Ihe mgbaàmà",
+      "exam": "Nyocha ahụ",
+      "lab": "Nchọpụta ụlọ nnwale"
+    },
+    "tests": "Nsonaazụ nnwale",
+    "testsAbout": "Dee nnwale e mechara.",
+    "notDone": "Emebeghị ya",
+    "positive": "Ọ dị",
+    "negative": "Ọ dịghị",
+    "submit": "Mepee ihe omume ahụ",
+    "next": "Ebe ọrụ ga-emepe na ndụmọdụ onye nyocha.",
+    "role": "Ọrụ gị anaghị ekwe gị mepee ihe omume.",
+    "failed": "Enweghị ike imepe ihe omume ahụ."
+  },
+  "encounter": {
+    "AMB": "Onye ọrịa na-abịa ma laa",
+    "EMER": "Ihe mberede",
+    "IMP": "Onye ọrịa dina n'ụlọ ọgwụ",
+    "HH": "Nleta ụlọ",
+    "VR": "Site n'ebe dị anya"
+  },
+  "avpu": {
+    "A": "Ọ na-ama ihe",
+    "V": "Ọ na-aza olu",
+    "P": "Ọ na-aza mgbu",
+    "U": "Ọ naghị aza"
+  },
+  "pregnancy": {
+    "none": "Ọ nweghị ime",
+    "t1": "Ọnwa atọ mbụ",
+    "t2": "Ọnwa atọ nke abụọ",
+    "t3": "Ọnwa atọ nke atọ"
+  },
+  "measure": {
+    "temperature": "Ọkụ ahụ",
+    "heart_rate": "Ọsọ obi",
+    "respiratory_rate": "Ọsọ iku ume",
+    "sbp": "Ọbara mgbali elu nke elu",
+    "dbp": "Ọbara mgbali elu nke ala",
+    "spo2": "Oxygen n'ọbara",
+    "glucose": "Shuga ọbara",
+    "hb": "Haemoglobin",
+    "creatinine": "Creatinine"
+  },
+  "episodeActions": {
+    "refer": "Zipu",
+    "close": "Mechie ihe omume",
+    "failed": "Enweghị ike imecha omume ahụ.",
+    "referred": "Mmezipụ {id} bụ {status}.",
+    "status": {
+      "sent": "ezigara",
+      "queued": "na-eche izipu"
+    },
+    "closed": "Emechiri ihe omume ahụ.",
+    "referTitle": "Zipu na {facility}",
+    "closeTitle": "Mechie ihe omume ahụ",
+    "urgency": "Ọkwa ngwa ngwa",
+    "urgencies": {
+      "routine": "Nke kwa ụbọchị",
+      "urgent": "Ngwa ngwa",
+      "emergency": "Ihe mberede"
+    },
+    "reason": "Ihe kpatara mmezipụ",
+    "outcome": "Nsonaazụ ihe omume ahụ",
+    "cancel": "Kagbuo",
+    "send": "Zipu mmezipụ",
+    "confirmClose": "Mechie ihe omume"
+  },
+  "twins": {
+    "members": "Ejima ndị otu",
+    "membersAbout": "Igbe ọ bụla bụ ejima otu onye nke ejima mmadụ, na ọnọdụ ya ugbu a. Mepee igbe maka ọnọdụ ya, amụma ya na ndị nnọchite ya.",
+    "conductorAbout": "Onye nhazi na-ejikọta ebumnuche nlekọta na ịtụnye ebumnuche, na-eme ka ndị ndozi nke ejima ndị otu na-arụ ọrụ dị ka ihe ụlọ ọgwụ buru ụzọ, ma na-edozi esemokwu dị n'etiti atụmatụ ha."
+  },
+  "coupling": {
+    "title": "Otu ejima si ejikọta",
+    "about": "Ndị njikọ na-ebufe uru site n'ejima otu gaa na nke ọzọ, dịka mmepụta obi gaa n'akụrụ.",
+    "notRunning": "Ejima onye a anaghị arụ ọrụ ugbu a. Ọ na-amalite mgbe a gụrụ ejima nke mbụ.",
+    "count": "Ndị njikọ {count} n'etiti ejima ndị otu."
+  },
+  "twinAbout": {
+    "cardiovascular": "Ọsọ obi, ọbara mgbali elu na mmepụta obi.",
+    "respiratory": "Ọsọ iku ume, oxygen na ọrụ ngụgụ.",
+    "nervous": "Nghọta, ọdịdọ na ọrụ akwara.",
+    "sensory": "Ịhụ ụzọ na ịnụ ihe.",
+    "digestive": "Afọ, eriri afọ na nri.",
+    "hepatobiliary": "Ọrụ imeju na bilirubin.",
+    "renal_urinary": "Ọrụ akụrụ, mmiri ahụ na mmamịrị.",
+    "endocrine": "Shuga, insulin na homonụ.",
+    "immune_lymphatic": "Ọrịa, ahụ ọkụ na mbufụt.",
+    "haematological": "Haemoglobin, mkpụrụ ọbara na ịkpụkọta ọbara.",
+    "musculoskeletal": "Akwara, ọkpụkpụ, nkwonkwo na mmegharị.",
+    "integumentary": "Akpụkpọ ahụ, ọnya na ebe nrụgide na-emerụ ahụ.",
+    "reproductive": "Ime na ahụike ọmụmụ.",
+    "whole_body": "Ọkụ ahụ, arọ na nguzozi ike.",
+    "behavioural_cognitive": "Obi, ụra, nrụgide na echiche.",
+    "social": "Nkwado, ego nweta na ohere nlekọta.",
+    "population": "Otú ọrịa ọ bụla si dị na-adị n'etiti ndị yiri ya."
+  },
+  "ask": {
+    "title": "Jụọ ejima ahụ",
+    "chat": "Mkparịta ụka",
+    "aboutClinician": "Jụọ banyere ihe ọhụrụ e gụrụ maka onye ọrịa a. Ejima ahụ na-aza site na data onye ọrịa n'onwe ya.",
+    "titleOwn": "Jụọ ejima m",
+    "aboutPatient": "Jụọ banyere ihe i gụrụ n'asụsụ gị.",
+    "aboutPerson": "Jụọ banyere ihe i gụrụ n'asụsụ gị. Ejima gị na-aza site na data gị.",
+    "aboutCarer": "Jụọ banyere ihe e gụrụ maka onye ị na-elekọta.",
+    "empty": "Enweghị ozi ugbu a.",
+    "answeredBy": "{backend}: {model}",
+    "backend": {
+      "ollama": "Ụdị dị n'ịntanetị",
+      "openai": "Ụdị dị n'ịntanetị",
+      "slm": "Obere ụdị mpaghara",
+      "offline": "Nzaghachi n'enweghị ịntanetị"
+    },
+    "thinking": "Ejima ahụ na-aza",
+    "language": "Asụsụ",
+    "message": "Ajụjụ gị",
+    "placeholder": "Dịka ọmụmaatụ: Kedu ka ọbara mgbali m dị?",
+    "send": "Zipu",
+    "role": "Ọrụ gị anaghị ekwe gị gwa ejima a okwu.",
+    "failed": "Ejima ahụ enweghị ike ịza."
+  },
+  "language": {
+    "title": "Otu ejima si aza",
+    "about": "Mkparịta ụka na-anwale ụdị asụsụ ọ bụla n'usoro a. A na-eji nke mbụ zara.",
+    "backend": {
+      "ollama": "Ụdị dị n'ịntanetị (Ollama)",
+      "openai": "Ụdị dị n'ịntanetị (kwekọrọ na OpenAI)",
+      "slm": "Obere ụdị mpaghara",
+      "offline": "Nzaghachi n'enweghị ịntanetị"
+    },
+    "hostedDetail": "{model}, {keys, plural, one {igodo #} other {igodo # na-agbanwe agbanwe}}",
+    "backendAbout": {
+      "slm": "Ọ na-aga n'ihu na sava a na ihe mgbanwe asụsụ maka asụsụ ọ bụla.",
+      "offline": "Ọ na-ekwu n'ụzọ doro anya na ụdị ọ bụla azaghị.",
+      "ollama": "Ụdị dị n'ịntanetị.",
+      "openai": "Ụdị dị n'ịntanetị."
+    },
+    "calls": "{count, plural, one {oku #} other {oku #}}",
+    "failures": "{count, plural, one {ọdịda #} other {ọdịda #}}",
+    "unavailable": "Ọnọdụ asụsụ adịghị ugbu a."
+  },
+  "audit": {
+    "title": "Ndekọ nyocha",
+    "about": "Arịrịọ ọ bụla, mkpebi na omume onye nnọchite n'ụlọ ọgwụ a, nke ọhụrụ buru ụzọ. Ndekọ ọ bụla nwere hash nke ndekọ gara aga, ya mere mgbanwe na ndekọ ọ bụla na-agbaji eriri ahụ.",
+    "records": "Ndekọ",
+    "recordsHint": "Ndekọ kacha ọhụrụ nke ụlọ ọgwụ a",
+    "denied": "Ajụrụ",
+    "deniedHint": "Arịrịọ na omume ndị nnọchite iwu jụrụ",
+    "chain": "Eriri hash",
+    "intact": "Dị mma",
+    "broken": "Agbajiri",
+    "chainHint": "Ndekọ ọ bụla jikọtara na nke gara aga",
+    "agentActions": "Omume ndị nnọchite",
+    "agentHint": "Omume onye nnọchite nwara",
+    "show": {
+      "all": "Ndekọ niile",
+      "denied": "Nke ajụrụ naanị"
+    },
+    "none": "Enweghị ndekọ.",
+    "seq": "Ndekọ",
+    "time": "Oge",
+    "actor": "Onye",
+    "action": "Gịnị",
+    "episode": "Ihe omume",
+    "outcome": "Nsonaazụ",
+    "viaAgent": "{agent} maka {role}",
+    "outcomes": {
+      "ok": "Ekwere",
+      "denied": "Ajụrụ",
+      "degraded": "Ezughị oke",
+      "error": "Njehie"
+    },
+    "episodeTitle": "Ọrụ",
+    "trail": "Ọrụ maka onye ọrịa a",
+    "episodeAbout": "Arịrịọ ọ bụla, mkpebi na omume onye nnọchite metụtara onye ọrịa a, nke ọhụrụ buru ụzọ."
+  },
+  "models": {
+    "overline": "Ọkwa 4",
+    "title": "Ndebanye aha ụdị",
+    "about": "Ụdị ọ bụla nke ejima ya na ọkwa ntụkwasị obi ya na ọkwa mwepụta ya.",
+    "tier": {
+      "T1": "Ụdị a zụrụ azụ",
+      "T2": "Ụdị usoro ahụ",
+      "T3": "Ụdị ọnọdụ ntụaka"
+    },
+    "tierAbout": {
+      "T1": "E zụrụ ma ọ bụ hazie ha na data, na ihe ntụle nkwado.",
+      "T2": "Akụkụ e bipụtara na ihe ndị e bipụtara, ahaziri maka onye ọ bụla site na nhazi.",
+      "T3": "Ọnọdụ ntụaka nwere oke, ndị njikọ na ihe a gụrụ na-eduzi."
+    },
+    "registry": "Ụdị edebanyere aha",
+    "stagerAbout": "Kwaga ụdị gaa na Staging, wee gaa na Production. Naanị onye ọrụ nchekwa ụlọ ọgwụ nwere ike ịhapụ ya na Production.",
+    "viewerAbout": "Ọrụ gị nwere ike ịgụ ndebanye aha. Onye ọrụ nchekwa ụlọ ọgwụ na-ejikwa mwepụta.",
+    "model": "Ụdị",
+    "twin": "Ejima",
+    "tierLabel": "Ọkwa",
+    "stage": "Nkebi",
+    "actions": "Mwepụta",
+    "stages": {
+      "None": "Akwadoghị na nkebi",
+      "Staging": "Staging",
+      "Production": "Production",
+      "Archived": "Echekwara"
+    },
+    "to": {
+      "Staging": "Gaa staging",
+      "Production": "Hapụ",
+      "Archived": "Chekwaa"
+    },
+    "rollback": "Laghachi azụ",
+    "roleRefused": "Ọrụ gị enweghị ike ime mgbanwe a.",
+    "failed": "Emeghị mgbanwe ahụ."
+  },
+  "population": {
+    "title": "Ejima ọha mmadụ",
+    "about": "Ihe na-adịkarị n'etiti ndị yiri onye ọrịa. Onye nyocha nchọpụta ọrịa na-eji nkwupụta na ụkpụrụ ndị a, ndị nyocha nwekwara ike wepụta otu ndị ewepụrụ aha.",
+    "priors": "Nkwenye mbụ banyere ọrịa",
+    "priorsAbout": "Otú ọrịa ọ bụla si dị na-adị maka afọ, nwoke ma ọ bụ nwanyị, mpaghara na oge afọ, site n'isi mmalite e bipụtara na mmelite jikọtara ọnụ.",
+    "norms": "Ụkpụrụ ntụaka",
+    "normsAbout": "Oke nkịtị nke ihe e tụrụ ọ bụla maka afọ na nwoke ma ọ bụ nwanyị.",
+    "cohort": "Otu ewepụrụ aha",
+    "cohortAbout": "Ihe e gụrụ nke onye ọ bụla kwere ka e jiri maka nyocha ma ọ bụ ahụike ọha. Differential privacy na-agbakwunye mkpọtụ ahaziri ma na-eri mmefu nzuzo gị. k-anonymity (izo onye n'otu) na-ezo otu ọ bụla pere mpe karịa k.",
+    "age": "Afọ",
+    "sex": "Nwoke ma ọ bụ nwanyị",
+    "female": "Nwanyị",
+    "male": "Nwoke",
+    "region": "Mpaghara Eko",
+    "regions": {
+      "island_and_coast": "Agwaetiti na ụsọ oké osimiri",
+      "mainland_core": "Etiti ala ukwu",
+      "north_west": "Ugwu ọdịda anyanwụ",
+      "west_and_ikorodu": "Ọdịda anyanwụ na Ikorodu"
+    },
+    "season": "Oge afọ",
+    "rainy": "Oge mmiri",
+    "dry": "Oge kpọrọ nkụ",
+    "show": "Gosi",
+    "privacy": "Ụzọ nzuzo",
+    "dp": "Differential privacy",
+    "k": "k-anonymity",
+    "epsilon": "Epsilon",
+    "kValue": "k",
+    "extract": "Wepụta",
+    "privacyReport": "Akụkọ nzuzo",
+    "aggregates": "Nchikota"
+  },
+  "care": {
+    "title": "Nlekọta m",
+    "about": "Ihe omume nlekọta gị, ihe ndị dọkịta gị chọpụtara, na nhọrọ gị banyere data gị.",
+    "aboutProxy": "Ihe omume nlekọta nke onye ị na-anọchite.",
+    "episodes": "Ihe omume",
+    "since": "Site na {date}, na {clinician}",
+    "open": "Mepee",
+    "none": "Enweghị ihe omume ugbu a.",
+    "episodeAbout": "Ihe ndị otu nlekọta gị chọpụtara na ihe na-esote.",
+    "resultsAbout": "Nsonaazụ ọ bụla n'okwu doro anya. Dọkịta gị na-elele ndụmọdụ ọ bụla tupu a jiri ya.",
+    "kind": {
+      "diagnosis": "Nchọpụta ọrịa",
+      "test": "Nnwale",
+      "treatment": "Ọgwụgwọ",
+      "care": "Atụmatụ nlekọta"
+    },
+    "status": {
+      "proposed": "Dọkịta gị na-elele nke a",
+      "accepted": "Dọkịta gị kwetara",
+      "edited": "Dọkịta gị gbanwere ya",
+      "overridden": "Dọkịta gị gbanwere ya",
+      "declined": "Ejighị ya",
+      "signed": "Dọkịta gị bịanyere aka"
+    },
+    "noResults": "Enweghị nsonaazụ ugbu a."
+  },
+  "consent": {
+    "title": "Nkwenye m",
+    "about": "Họrọ ihe ejima gị nwere ike ikesa na maka ebumnuche ndị ọ bụla.",
+    "purposes": "Ana m ekwe ka e jiri data m maka",
+    "purpose": {
+      "care": "Nlekọta m",
+      "emergency": "Ihe mberede",
+      "self_management": "Ijikwa ahụike m",
+      "public_health": "Ahụike ọha",
+      "research": "Nyocha"
+    },
+    "categories": "Ejima m nwere ike iji",
+    "categoriesAbout": "Gbanyụọ ụdị data ka ịzụ ya n'aka dọkịta na onye nnọchite ọ bụla.",
+    "category": {
+      "vital_signs_and_device_data": "Ihe ngosi ndụ na data ngwa",
+      "laboratory_and_imaging": "Nsonaazụ ụlọ nnwale na onyonyo",
+      "medicines": "Ọgwụ",
+      "genome": "Mkpụrụ ndụ ihe nketa (genome)",
+      "knowledge_graph_and_notes": "Ndekọ ahụike na ihe e dere",
+      "body_models_and_simulation": "Ụdị ahụ na nṅomi",
+      "explanations": "Nkọwa",
+      "conversation_and_speech": "Mkparịta ụka na okwu"
+    },
+    "save": "Chekwaa nkwenye m",
+    "saved": "Echekwala nkwenye gị.",
+    "failed": "Enweghị ike ichekwa nkwenye gị."
+  },
+  "preferences": {
+    "title": "Mmasị m",
+    "about": "Gwa ndị otu nlekọta gị ihe dị gị mkpa. A na-ahazi nhọrọ ọgwụgwọ site na azịza ndị a.",
+    "prioritiesAbout": "Nye nke ọ bụla nọmba site na 1 (ọ dịghị mkpa nke ukwuu) ruo 5 (ọ kacha mkpa).",
+    "save": "Chekwaa mmasị m",
+    "saved": "Echekwala mmasị gị.",
+    "failed": "Enweghị ike ichekwa mmasị gị.",
+    "option": {
+      "app": "App",
+      "sms": "Ozi ederede",
+      "ussd": "USSD",
+      "voice": "Oku olu"
+    }
+  },
+  "message": {
+    "title": "Zipụ ozi ndị otu nlekọta m",
+    "about": "Ndị otu nlekọta gị na-agụ ozi gị.",
+    "label": "Ozi gị",
+    "send": "Zipu",
+    "failed": "Enweghị ike izipu ozi gị."
+  },
+  "twinHome": {
+    "overline": "Ejima mmadụ nke ndụ niile",
+    "title": "Ejima m",
+    "about": "Ejima gị na-edebe data ahụ gị, ụdị na ọnọdụ gị ogologo ndụ gị. Ọ bụ nke gị n'agbanyeghị ma ị na-arịa ọrịa ma ọ bụ na ị naghị arịa.",
+    "download": "Budata eserese ihe ọmụma ahụike m",
+    "lifelong": "Ndị dọkịta na-ahụ ejima gị naanị maka ebumnuche ị kwenyere."
+  },
+  "cared": {
+    "title": "Ndị m na-elekọta",
+    "about": "Ihe e gụrụ nke onye ọ bụla nyere gị ohere.",
+    "none": "Onye ọ bụla enyebeghị gị ohere ugbu a.",
+    "person": "Onye {n}",
+    "personAbout": "Ihe e gụrụ n'izu gara aga."
+  },
+  "readings": {
+    "denied": "Onye a ekesaghị gị ihe ọ gụrụ.",
+    "none": "Enweghị ihe e gụrụ n'izu gara aga.",
+    "chart": "Ihe e gụrụ nke {measure}"
+  },
+  "system": {
+    "overline": "Banyere sistemu ahụ",
+    "title": "Otu ATRA si arụ ọrụ",
+    "about": "ATRA Health na-ejikọta ejima dijitalụ abụọ maka onye ọ bụla. Ndị nnọchite na-akwado ọrụ ụlọ ọgwụ n'ime ejima ọ bụla, ndị dọkịta e kwuru aha ha na-ekpebikwa mkpebi ọ bụla.",
+    "twins": {
+      "ahdt": {
+        "short": "AHDT",
+        "name": "Ejima Dijitalụ Mmadụ nwere Ndị Nnọchite",
+        "about": "Nke ndụ niile. Ọ nwere data ahụ onye ahụ, ụdị na ọnọdụ site na ejima ndị otu iri na asaa, site n'obi ruo ndụ mmekọrịta. Ọ dị n'agbanyeghị ma onye ahụ na-arịa ọrịa ma ọ bụ na ọ naghị arịa."
+      },
+      "apdt": {
+        "short": "APDT",
+        "name": "Ejima Dijitalụ Onye Ọrịa nwere Ndị Nnọchite",
+        "about": "A na-emepe ya mgbe ihe omume nlekọta malitere n'ụlọ ọgwụ ma mechie ya mgbe ọ kwụsịrị. Ọ nwere akụkọ, nyocha ahụ, nnwale, nchọpụta ọrịa, akwụkwọ ọgwụ na mkpebi nke ihe omume ahụ."
+      }
+    },
+    "workflow": "Site na ọbịbịa ruo mkpebi",
+    "workflowAbout": "Ihe na-eme otu onye ọrịa, nzọụkwụ site na nzọụkwụ.",
+    "steps": {
+      "open": {
+        "title": "Dọkịta na-emepe ihe omume",
+        "about": "Onye ọrụ ahụike, nọọsụ ma ọ bụ onye ọrụ ahụike obodo na-ahọrọ onye ọrịa na ihe kpatara nleta."
+      },
+      "intake": {
+        "title": "A na-edekọ ihe ntinye",
+        "about": "Ihe mgbaàmà, nchọpụta nyocha ahụ, ihe e tụrụ na nsonaazụ nnwale na-aghọ ndekọ FHIR nke ihe omume ahụ."
+      },
+      "reason": {
+        "title": "Onye nyocha na-atụ aro",
+        "about": "Ọ na-ahazi ọrịa ndị ọ nwere ike ịbụ, na-ahọrọ nnwale site n'uru na ọnụ ahịa, na-elele nchekwa ọgwụgwọ, ma na-eme nṅomi ha na ejima onye ọrịa. Ndụmọdụ ọ bụla nwere ngwugwu nkọwa na ihe akaebe na isi mmalite ya."
+      },
+      "agents": {
+        "title": "Ndị nnọchite na-akwado mkpebi ọ bụla",
+        "about": "Ndị ndozi nchọpụta ọrịa, ọgwụgwọ na nlekọta na-anakọta ihe akaebe site n'ejima mmadụ ma kwụsị n'oge mkpebi ọ bụla."
+      },
+      "decide": {
+        "title": "Onye ọrụ ahụike na-ekpebi",
+        "about": "Nabata, dezie ma ọ bụ jụ nchọpụta ọrịa. Bịanye aka n'akwụkwọ ọgwụ. Enweghị ike ibinye aka n'akwụkwọ ọgwụ nwere nsogbu nchekwa na-egbochi ya ruo mgbe e gbanwere ya."
+      },
+      "verify": {
+        "title": "Onye ọgwụ na-akwado",
+        "about": "Akwụkwọ ọgwụ e bịanyere aka na ya na-erute ndepụta ọrụ onye ọgwụ n'otu ọsọ ahụ, ka ọ kwado, jụọ ajụjụ ma ọ bụ jụ."
+      },
+      "explain": {
+        "title": "Onye ọrịa na-ahụ nkọwa",
+        "about": "Nsonaazụ ọ bụla n'okwu doro anya n'asụsụ onye ọrịa, na nchịkwa nkwenye na mmasị."
+      },
+      "twin": {
+        "title": "Ejima mmadụ na-amụ ihe n'ihu",
+        "about": "Ihe e gụrụ site na ngwa na ụlọ ọgwụ na-emelite ejima ndị otu, ndị nnọchite ha na-ele ebumnuche ha anya."
+      }
+    },
+    "layers": "Ọkwa ATRA asatọ",
+    "layersAbout": "Ọkwa ndị dị ala na-akwado ndị dị elu.",
+    "layer": {
+      "1": {
+        "name": "Anụ ahụ",
+        "about": "Onye ahụ, ngwa ya na ndị na-eme ihe, na ndị dọkịta na-etinye data."
+      },
+      "2": {
+        "name": "Netwọk na njikọ cloud",
+        "about": "Ọrụ n'akụkụ n'ụlọ ọgwụ ma ọ bụ n'ụlọ ọ bụla, ụzọ ngwa na ichekwa-tupu-izipu."
+      },
+      "3": {
+        "name": "Inweta data",
+        "about": "Nkwado, ịkwado nkeji, izo aha, ebe a na-echekwa data na eserese ihe ọmụma."
+      },
+      "4": {
+        "name": "Ụdị",
+        "about": "Ụdị usoro ahụ, ụdị mmụta igwe a zụrụ, na ụdị asụsụ na olu."
+      },
+      "5": {
+        "name": "AI nwere ike ịkọwa",
+        "about": "Onye nkọwa maka mmepụta ụdị ọ bụla."
+      },
+      "6": {
+        "name": "Ọrụ",
+        "about": "Data, ụdị na nṅomi, nkọwa, ọrụ nghọta na njikọ n'etiti ejima."
+      },
+      "7": {
+        "name": "Ndị nnọchite",
+        "about": "Ndị nnọchite ọrụ, ndị ndozi, onye nhazi na API nke mpụga."
+      },
+      "8": {
+        "name": "Ngwa",
+        "about": "Ngwa weebụ a, ngwa ekwentị, SMS, USSD na olu."
+      }
+    },
+    "ahdtAgents": "Ndị nnọchite nke ejima mmadụ",
+    "ahdtAgentsAbout": "Ndị ọrụ na-arụ otu ọrụ, onye ndozi na-eduzi ejima otu ọ bụla, onye nhazi na-ejikọtakwa ha.",
+    "apdtAgents": "Ndị nnọchite nke ejima onye ọrịa",
+    "apdtAgentsAbout": "Ha na-akwado ọrụ ụlọ ọgwụ. Mkpebi ọ bụla dịkwa n'aka dọkịta e kwuru aha ya.",
+    "agent": {
+      "monitoring": {
+        "name": "Nleba anya",
+        "about": "Ọ na-agụ ọnọdụ ejima na oge e lebara oghere ọ bụla anya ikpeazụ."
+      },
+      "anomaly": {
+        "name": "Ihe dị iche",
+        "about": "Ọ na-atụ ka ọnọdụ ejima si dị njọ."
+      },
+      "forecasting": {
+        "name": "Amụma",
+        "about": "Ọ na-eme amụma ndị ebumnuche ejima chọrọ."
+      },
+      "explanation": {
+        "name": "Nkọwa",
+        "about": "Ọ na-akọwa ebumnuche emezughị na mmepụta n'ọkwa nleba anya ma ọ bụ ịdọ aka ná ntị."
+      },
+      "recommendation": {
+        "name": "Ndụmọdụ",
+        "about": "Ọ na-atụ aro omume nkwado edepụtara n'ebe nchekwa ihe ọmụma, nke ọ bụla na isi mmalite ya."
+      },
+      "orchestrator": {
+        "name": "Onye ndozi ejima",
+        "about": "Ọ na-ahụ, na-emelite ọnọdụ, na-elele ebumnuche, na-eme atụmatụ, na-arụ ọrụ, na-akọwa ma na-akọ akụkọ maka ejima otu."
+      },
+      "conductor": {
+        "name": "Onye nhazi",
+        "about": "Ọ na-eme ka ebumnuche nlekọta onye ghọọ obere ebumnuche, na-ahazi ndị ndozi, ma na-edozi esemokwu dị n'etiti atụmatụ ha."
+      },
+      "history": {
+        "name": "Ịnara akụkọ",
+        "about": "Ọ na-edepụta ihe ntinye ihe omume ahụ ka chọrọ."
+      },
+      "evidence": {
+        "name": "Ịnakọta ihe akaebe",
+        "about": "Ọ na-anakọta ihe e gụrụ, ọgwụ, ọnọdụ ejima na nkọwa site n'ejima mmadụ."
+      },
+      "differential": {
+        "name": "Nchọpụta ọrịa ndị ọ nwere ike ịbụ",
+        "about": "Ọ na-ahazi ọrịa ndị ahụ ma na-ewu ngwugwu nkọwa ha."
+      },
+      "investigation": {
+        "name": "Nyocha",
+        "about": "Ọ na-ahọrọ nnwale ga-agbanwe nchọpụta ọrịa kacha maka ọnụ ahịa ha."
+      },
+      "treatment": {
+        "name": "Ịhazi ọgwụgwọ",
+        "about": "Ọ na-edepụta nhọrọ ma na-eme nṅomi nke atọ mbụ na ejima onye ọrịa."
+      },
+      "pharmacotherapy": {
+        "name": "Ọgwụgwọ site n'ọgwụ",
+        "about": "Ọ na-elele mmekọrịta ọgwụ, akụrụ, ime na mkpụrụ ndụ ihe nketa maka ọgwụ ọ bụla."
+      },
+      "guard": {
+        "name": "Onye nche nchekwa na nkwenye",
+        "about": "Ọ na-elele omume onye nnọchite ọ bụla tupu o mee."
+      }
+    },
+    "safety": "Otu sistemu si ejide ndị dọkịta n'isi",
+    "safetyAbout": "Nyocha abụọ na-adabereghị na ibe ha na-egbochi onye nnọchite ịkpebi okwu ụlọ ọgwụ.",
+    "safetyItem": {
+      "guard": {
+        "name": "Ọkwa nnwere onwe",
+        "about": "Ụdị omume ọ bụla nwere ọkwa kwesịrị, site na ịma ọkwa ruo mgbe ọ bụla. A naghị ekwe ka onye nnọchite bịanye aka, nye iwu ma ọ bụ kesaa ọgwụ."
+      },
+      "human": {
+        "name": "Mmadụ na mkpebi ọ bụla",
+        "about": "API na-anabata mkpebi naanị site n'aka mmadụ nwere ọrụ nzọụkwụ chọrọ, ọ bụghị n'aka onye nnọchite ma ọ bụ ọrụ."
+      },
+      "consent": {
+        "name": "Nkwenye",
+        "about": "Mmadụ nwere ike igbochi ụdị data ọ bụla. Oku ngwaọrụ ọ bụla na-ebu ụzọ lelee nkwenye onye ahụ."
+      },
+      "audit": {
+        "name": "Nyocha",
+        "about": "A na-ede arịrịọ ọ bụla, mkpebi na mjụ na ndekọ nyocha nwere eriri hash."
+      }
+    },
+    "members": "Ejima ndị otu iri na asaa",
+    "membersAbout": "Ejima mmadụ bụ njikọta nke ejima ndị a. Nke ọ bụla nwere ụdị ya na ebumnuche ya.",
+    "models": "Ụdị",
+    "modelsAbout": "Ụdị ọ bụla nwere ọkwa ntụkwasị obi na-egosi ka e si wuo ya.",
+    "modelCount": {
+      "T2": "43",
+      "T3": "24",
+      "T1": "19"
+    },
+    "services": "Ọrụ na-agba ọsọ",
+    "servicesAbout": "Ọrụ ndị dị n'azụ ngwa a na ma nke ọ bụla na-aza ugbu a.",
+    "service": {
+      "apdt": {
+        "name": "Ejima onye ọrịa",
+        "about": "Ihe omume, onye nyocha na mkpebi"
+      },
+      "ahdt": {
+        "name": "Ejima mmadụ",
+        "about": "Ejima ndị otu, ụdị, ndị nnọchite na asụsụ"
+      },
+      "population": {
+        "name": "Ejima ọha mmadụ",
+        "about": "Nkwupụta, ụkpụrụ na otu"
+      },
+      "edge": {
+        "name": "Akụkụ",
+        "about": "Ngwa na ụdị dị n'ime ngwa"
+      },
+      "channels": {
+        "name": "Ụzọ",
+        "about": "SMS, USSD na olu"
+      },
+      "opa": {
+        "name": "Igwe iwu",
+        "about": "Iwu ọrụ, ụlọ ọgwụ na nkwenye"
+      }
+    },
+    "up": "Na-agba ọsọ",
+    "down": "Anaghị aza",
+    "personas": "Ndị ọrịa nnwale",
+    "personasAbout": "Ndị ọrịa isii e mere emere. Onweghị onye bụ mmadụ n'ezie.",
+    "persona": "Onye ọrịa",
+    "facility": "Ụlọ ọgwụ",
+    "scenario": "Ọnọdụ",
+    "tests": "Ihe ọ na-egosi",
+    "persona_": {
+      "ao": {
+        "who": "A.O., nwanyị, 47",
+        "scenario": "Ịba (malaria) na-adịghị njọ",
+        "shows": "Ọmụmaatụ ọrụ: ọrịa ndị ọ nwere ike ịbụ, nnwale, ọgwụgwọ na nkọwa"
+      },
+      "bm": {
+        "who": "B.M., nwoke, 8",
+        "scenario": "Ịba (malaria) siri ike na nghọta na-ebelata na shuga ọbara dị ala",
+        "shows": "Ọnọdụ na-akawanye njọ, akara ịdọ aka ná ntị mbụ nke ụmụaka na onye nnọchite"
+      },
+      "cn": {
+        "who": "C.N., nwanyị, 29",
+        "scenario": "Ọrịa akụrụ n'izu iri abụọ na abụọ nke ime",
+        "shows": "Nhọrọ ọgwụgwọ na-agbanwe n'oge ime"
+      },
+      "de": {
+        "who": "D.E., nwoke, 58",
+        "scenario": "Ọbara mgbali elu, ọrịa shuga ụdị nke abụọ na ọrịa akụrụ",
+        "shows": "Ọgwụ e hazigharịrị maka akụrụ na ebumnuche nlekọta nke onye nhazi"
+      },
+      "ef": {
+        "who": "E.F., nwanyị, 19",
+        "scenario": "Mgbu ọrịa sickle cell",
+        "shows": "Ụdị ihe ize ndụ mgbu na nkọwa onye ọrịa"
+      },
+      "gh": {
+        "who": "G.H., nwoke, 35",
+        "scenario": "Nyocha tuberculosis n'ọgwụgwọ antiretroviral",
+        "shows": "Ahịrị onye ọgwụ, mmekọrịta ọgwụ na-egbochi na genome ejidere"
+      }
+    }
+  }
+}

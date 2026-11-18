@@ -1,0 +1,85 @@
+code,display,version,via
+102830001,Renal angle tenderness,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org
+12584003,Bone pain,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org
+131148009,Bleeding,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org
+14669001,Acute kidney injury,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org
+15188001,Hearing loss,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org
+154283005,Pulmonary tuberculosis,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org
+161882006,Stiff neck,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org
+16294009,Splenomegaly,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org
+166717003,Serum creatinine above reference range,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org
+17173007,Excessive thirst,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org
+18165001,Jaundice,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org
+19065005,Lassa fever,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org
+195951007,Acute exacerbation of chronic obstructive pulmonary disease,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org
+195967001,Asthma,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org
+21522001,Abdominal pain,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org
+21897009,Generalized anxiety disorder,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org
+24184005,Increased blood pressure,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org
+247355005,Flank pain,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org
+25064002,Headache,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org
+262285001,Weight decreased,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org
+267036007,Dyspnea,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org
+267038008,Edema,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org
+267102003,Sore throat,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org
+271737000,Anemia,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org
+271823003,Tachypnea,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org
+271825005,Respiratory distress,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org
+276369006,Reduced fetal movement,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org
+278528006,Facial swelling,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org
+27942005,Shock,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org
+282966001,Unable to sit,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org
+28442001,Polyuria,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org
+28669007,Anhedonia,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org
+289908002,Pregnancy,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org
+29738008,Proteinuria,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org
+29857009,Chest pain,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org
+300471006,Finding of frequency of urination,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org
+302866003,Hypoglycemia,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org
+310505005,Hyperosmolar non-ketotic state due to diabetes mellitus,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org
+328383001,Chronic liver disease,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org
+34014006,Viral disease,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org
+3424008,Tachycardia,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org
+34436003,Blood in urine,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org
+35489007,Depressive disorder,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org
+36689008,Acute pyelonephritis,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org
+366979004,Depressed mood,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org
+372146004,Acute chest syndrome,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org
+385093006,Community acquired pneumonia,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org
+386661006,Fever,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org
+38822007,Cystitis,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org
+389087006,Hypoxemia,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org
+398254007,Pre-eclampsia,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org
+398979000,Pale complexion,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org
+417425009,Hemoglobin SS disease with crisis,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org
+420422005,Diabetic ketoacidosis,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org
+422400008,Vomiting,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org
+42984000,Night sweats,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org
+43724002,Chill,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org
+44054006,Type 2 diabetes mellitus,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org
+443371007,Decreased level of consciousness,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org
+45007003,Low blood pressure,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org
+4800001,Pyuria,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org
+4834000,Typhoid fever,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org
+48409008,Respiratory crackles,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org
+49436004,Atrial fibrillation,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org
+49650001,Dysuria,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org
+49727002,Cough,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org
+56018004,Wheezing,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org
+57676002,Pain of joint,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org
+59621000,Essential hypertension,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org
+62315008,Diarrhea,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org
+62676009,Falciparum malaria,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org
+63102001,Visual disturbance,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org
+66857006,Hemoptysis,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org
+68154008,Chronic cough,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org
+68962001,Muscle pain,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org
+709044004,Chronic kidney disease,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org
+79015004,Worried,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org
+79922009,Epigastric pain,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org
+80313002,Palpitations,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org
+80394007,Hyperglycemia,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org
+80515008,Large liver,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org
+86406008,Human immunodeficiency virus infection,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org
+91175000,Seizure,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org
+91302008,Sepsis,http://snomed.info/sct/900000000000207008/version/20250201,tx.fhir.org

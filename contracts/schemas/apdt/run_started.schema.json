@@ -1,0 +1,26 @@
+{
+  "$id": "https://atra.local/schemas/apdt/run_started.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "goal": {
+      "enum": [
+        "diagnosis",
+        "treatment",
+        "care"
+      ],
+      "title": "Goal",
+      "type": "string"
+    },
+    "run_id": {
+      "title": "Run Id",
+      "type": "string"
+    }
+  },
+  "required": [
+    "run_id",
+    "goal"
+  ],
+  "title": "RunStarted",
+  "type": "object"
+}

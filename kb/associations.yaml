@@ -1,0 +1,479 @@
+# Findings associated with each condition, as listed in the cited source: `defining` findings are
+# part of the definition; `in_favour` findings are listed as supporting the diagnosis. The
+# probabilities for each strength are one assumption entry (assoc.strength_probability).
+
+- id: assoc.malaria_falciparum
+  condition: cond.malaria_falciparum
+  findings:
+  - finding: find.fever
+    strength: defining
+  - finding: find.fever_history
+    strength: defining
+  provenance:
+    source: who-malaria-2026
+    section: 5.1 Diagnosing malaria
+    page: 166
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+- id: assoc.malaria_falciparum.severe
+  condition: cond.malaria_falciparum
+  severity: severe
+  findings:
+  - finding: find.impaired_consciousness
+    strength: in_favour
+  - finding: find.prostration
+    strength: in_favour
+  - finding: find.convulsions
+    strength: in_favour
+  - finding: find.respiratory_distress
+    strength: in_favour
+  - finding: find.hypoglycaemia
+    strength: in_favour
+  - finding: find.jaundice
+    strength: in_favour
+  - finding: find.bleeding
+    strength: in_favour
+  - finding: find.shock
+    strength: in_favour
+  - finding: find.anaemia
+    strength: in_favour
+  provenance:
+    source: who-malaria-2026
+    section: 5.2.2 Treating severe malaria
+    page: 212
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+- id: assoc.enteric_fever
+  condition: cond.enteric_fever
+  findings:
+  - finding: find.fever
+    strength: defining
+  - finding: find.headache
+    strength: in_favour
+  - finding: find.diarrhoea
+    strength: in_favour
+  - finding: find.abdominal_pain
+    strength: in_favour
+  - finding: find.hepatomegaly
+    strength: in_favour
+  - finding: find.splenomegaly
+    strength: in_favour
+  provenance:
+    source: who-imai-dcm-2011-v2
+    page: 39
+    also:
+    - source: who-aware-2022
+      section: 15. Enteric fever
+      page: 202
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+- id: assoc.sepsis
+  condition: cond.sepsis
+  findings:
+  - finding: find.hypotension
+    strength: in_favour
+  - finding: find.shock
+    strength: in_favour
+  - finding: find.impaired_consciousness
+    strength: in_favour
+  provenance:
+    source: who-imai-dcm-2011-v2
+    page: 39
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+- id: assoc.viral_febrile_illness
+  condition: cond.viral_febrile_illness
+  findings:
+  - finding: find.fever
+    strength: defining
+  - finding: find.headache
+    strength: in_favour
+  - finding: find.myalgia
+    strength: in_favour
+  - finding: find.joint_pain
+    strength: in_favour
+  - finding: find.sore_throat
+    strength: in_favour
+  - finding: find.cough
+    strength: in_favour
+  provenance:
+    source: who-imai-dcm-2011-v2
+    page: 40
+    also:
+    - source: who-imai-dcm-2011-v2
+      page: 39
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+- id: assoc.lassa_fever
+  condition: cond.lassa_fever
+  findings:
+  - finding: find.fever
+    strength: defining
+  - finding: find.vomiting
+    strength: in_favour
+  - finding: find.diarrhoea
+    strength: in_favour
+  - finding: find.sore_throat
+    strength: in_favour
+  - finding: find.myalgia
+    strength: in_favour
+  - finding: find.prostration
+    strength: in_favour
+  - finding: find.bleeding
+    strength: in_favour
+  - finding: find.abdominal_pain
+    strength: in_favour
+  - finding: find.hearing_loss
+    strength: in_favour
+  - finding: find.facial_oedema
+    strength: in_favour
+  - finding: find.convulsions
+    strength: in_favour
+  - finding: find.impaired_consciousness
+    strength: in_favour
+  - finding: find.hypotension
+    strength: in_favour
+  - finding: find.proteinuria
+    strength: in_favour
+  - finding: find.haematuria
+    strength: in_favour
+  provenance:
+    source: ncdc-lassa-2018
+    section: 1.1.2 Suspected case
+    page: 8
+    also:
+    - source: ncdc-lassa-2018
+      section: 1.1.3 Probable case (Clinical)
+      page: 9
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+- id: assoc.cystitis
+  condition: cond.cystitis
+  findings:
+  - finding: find.dysuria
+    strength: in_favour
+  - finding: find.urinary_frequency
+    strength: in_favour
+  - finding: find.haematuria
+    strength: in_favour
+  - finding: find.abdominal_pain
+    strength: in_favour
+  - finding: find.pyuria
+    strength: in_favour
+  provenance:
+    source: who-imai-dcm-2011-v2
+    page: 516
+    also:
+    - source: who-imai-dcm-2011-v2
+      page: 517
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+- id: assoc.pyelonephritis
+  condition: cond.pyelonephritis
+  findings:
+  - finding: find.fever
+    strength: in_favour
+  - finding: find.flank_pain
+    strength: in_favour
+  - finding: find.costovertebral_tenderness
+    strength: in_favour
+  - finding: find.vomiting
+    strength: in_favour
+  - finding: find.dysuria
+    strength: in_favour
+  - finding: find.pyuria
+    strength: in_favour
+  provenance:
+    source: who-aware-2022
+    section: 34. Upper urinary tract infection
+    page: 492
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+- id: assoc.pneumonia_community
+  condition: cond.pneumonia_community
+  findings:
+  - finding: find.cough
+    strength: in_favour
+  - finding: find.fever
+    strength: in_favour
+  - finding: find.dyspnoea
+    strength: in_favour
+  - finding: find.fast_breathing
+    strength: in_favour
+  - finding: find.hypoxaemia
+    strength: in_favour
+  - finding: find.crackles
+    strength: in_favour
+  - finding: find.chest_pain
+    strength: in_favour
+  - finding: find.impaired_consciousness
+    strength: in_favour
+  provenance:
+    source: who-aware-2022
+    section: 12. Community-acquired pneumonia – mild
+    page: 165
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+- id: assoc.tb_pulmonary
+  condition: cond.tb_pulmonary
+  findings:
+  - finding: find.cough
+    strength: in_favour
+  - finding: find.fever
+    strength: in_favour
+  - finding: find.weight_loss
+    strength: in_favour
+  - finding: find.night_sweats
+    strength: in_favour
+  - finding: find.haemoptysis
+    strength: in_favour
+  provenance:
+    source: who-hiv-2021
+    page: 30
+    also:
+    - source: who-tb-handbook-m4-2025
+      page: 40
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+- id: assoc.hypertension
+  condition: cond.hypertension
+  findings:
+  - finding: find.raised_bp
+    strength: defining
+  provenance:
+    source: who-htn-2021
+    section: 3.1 Blood pressure threshold for initiation of pharmacological treatment
+    page: 19
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+- id: assoc.diabetes_type2
+  condition: cond.diabetes_type2
+  findings:
+  - finding: find.polydipsia
+    strength: in_favour
+  - finding: find.polyuria
+    strength: in_favour
+  - finding: find.visual_disturbance
+    strength: in_favour
+  - finding: find.weight_loss
+    strength: in_favour
+  - finding: find.hyperglycaemia
+    strength: defining
+  provenance:
+    source: who-hearts-d-2020
+    page: 12
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+- id: assoc.hypoglycaemia
+  condition: cond.hypoglycaemia
+  findings:
+  - finding: find.hypoglycaemia
+    strength: defining
+  - finding: find.headache
+    strength: in_favour
+  - finding: find.pallor
+    strength: in_favour
+  - finding: find.convulsions
+    strength: in_favour
+  - finding: find.impaired_consciousness
+    strength: in_favour
+  provenance:
+    source: who-hearts-d-2020
+    page: 18
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+- id: assoc.hyperglycaemic_crisis
+  condition: cond.hyperglycaemic_crisis
+  findings:
+  - finding: find.hyperglycaemia
+    strength: defining
+  - finding: find.vomiting
+    strength: in_favour
+  - finding: find.abdominal_pain
+    strength: in_favour
+  - finding: find.impaired_consciousness
+    strength: in_favour
+  provenance:
+    source: who-hearts-d-2020
+    page: 19
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+- id: assoc.scd_crisis
+  condition: cond.scd_crisis
+  findings:
+  - finding: find.bone_pain
+    strength: in_favour
+  - finding: find.joint_pain
+    strength: in_favour
+  provenance:
+    source: ng-scd-2014
+    section: A. Painful (Vaso-Occlusive) Crisis
+    page: 31
+    also:
+    - source: ng-scd-2014
+      page: 34
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+- id: assoc.acute_chest_syndrome
+  condition: cond.acute_chest_syndrome
+  findings:
+  - finding: find.fever
+    strength: in_favour
+  - finding: find.cough
+    strength: in_favour
+  - finding: find.wheeze
+    strength: in_favour
+  - finding: find.dyspnoea
+    strength: in_favour
+  - finding: find.chest_pain
+    strength: in_favour
+  - finding: find.hypoxaemia
+    strength: in_favour
+  provenance:
+    source: ng-scd-2014
+    section: 3.3.3 Acute Chest Syndrome
+    page: 37
+    also:
+    - source: ng-scd-2014
+      page: 38
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+- id: assoc.anaemia
+  condition: cond.anaemia
+  findings:
+  - finding: find.anaemia
+    strength: defining
+  provenance:
+    source: who-hb-2024
+    section: Haemoglobin cutoffs to define anaemia
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+- id: assoc.depression
+  condition: cond.depression
+  findings:
+  - finding: find.low_mood
+    strength: defining
+  - finding: find.anhedonia
+    strength: defining
+  provenance:
+    source: who-mhgap-ig-2016
+    page: 29
+    also:
+    - source: who-mhgap-ig-2016
+      page: 24
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+- id: assoc.anxiety
+  condition: cond.anxiety
+  findings:
+  - finding: find.excessive_worry
+    strength: in_favour
+  provenance:
+    source: who-mhgap-ig-2016
+    page: 24
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+- id: assoc.pre_eclampsia
+  condition: cond.pre_eclampsia
+  findings:
+  - finding: find.raised_bp
+    strength: defining
+  - finding: find.proteinuria
+    strength: defining
+  - finding: find.headache
+    strength: in_favour
+  provenance:
+    source: who-imai-dcm-2011-v1
+    page: 36
+    also:
+    - source: who-pe-2011
+      section: 1. Background
+      page: 12
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+- id: assoc.aki
+  condition: cond.aki
+  findings:
+  - finding: find.raised_creatinine
+    strength: defining
+  provenance:
+    source: kdigo-aki-2012
+    section: Definition and staging of AKI
+    page: 22
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+- id: assoc.ckd
+  condition: cond.ckd
+  findings:
+  - finding: find.raised_creatinine
+    strength: in_favour
+  - finding: find.proteinuria
+    strength: in_favour
+  provenance:
+    source: kdigo-ckd-2024-full
+    section: Current Chronic Kidney Disease (CKD) Nomenclature
+    page: 11
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+- id: assoc.asthma
+  condition: cond.asthma
+  findings:
+  - finding: find.wheeze
+    strength: in_favour
+  - finding: find.dyspnoea
+    strength: in_favour
+  provenance:
+    source: who-pen-2020
+    page: 42
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+- id: assoc.copd_exacerbation
+  condition: cond.copd_exacerbation
+  findings:
+  - finding: find.dyspnoea
+    strength: in_favour
+  - finding: find.cough
+    strength: in_favour
+  - finding: find.wheeze
+    strength: in_favour
+  provenance:
+    source: who-pen-2020
+    page: 45
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+- id: assoc.strength_probability
+  value:
+    defining: 0.95
+    in_favour: 0.6
+    leak: 0.02
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: The sources list findings in favour of a condition without probabilities. These P(finding
+      | condition) values seed the noisy-OR network until it is fitted on the synthetic cohort (WP22)
+      and reviewed at sign-off.

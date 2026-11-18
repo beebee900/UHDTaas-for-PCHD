@@ -1,0 +1,131 @@
+# Thresholds that turn a measurement into a finding (findings.yaml `derive`).
+
+- id: threshold.fever_malaria_suspicion
+  field: temperature
+  at_or_above: 37.5
+  unit: Cel
+  provenance:
+    source: who-malaria-2026
+    section: 5.1 Diagnosing malaria
+    page: 166
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: threshold.fever
+  field: temperature
+  at_or_above: 38.0
+  unit: Cel
+  provenance:
+    source: who-aware-2022
+    section: 4. Bronchitis
+    page: 46
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: threshold.fast_breathing_child
+  field: respiratory_rate
+  unit: /min
+  by_age:
+  - {age_below_months: 2, at_or_above: 60}
+  - {age_from_months: 2, age_below_months: 12, at_or_above: 50}
+  - {age_from_months: 12, age_below_months: 60, at_or_above: 40}
+  provenance:
+    source: who-pocketbook-children-2013
+    page: 100
+    derived:
+      by_age[1].age_below_months: The "2-11 months" band ends at 12 months.
+      by_age[2].age_from_months: The "1-5 years" band starts at 12 months.
+      by_age[2].age_below_months: The "1-5 years" band ends at 60 months.
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: threshold.hypoxaemia_child
+  field: spo2
+  below: 90
+  unit: '%'
+  provenance:
+    source: who-pocketbook-children-2013
+    page: 104
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: threshold.qsofa
+  gcs_below: 15
+  respiratory_rate_at_or_above: 22
+  systolic_bp_at_or_below: 100
+  positive_at_or_above_criteria: 2
+  note: Not a stand-alone screening tool; the 2021 sepsis guideline advises against qSOFA alone
+    compared with SIRS, NEWS or MEWS.
+  provenance:
+    source: who-aware-2022
+    section: 24. Sepsis in adults (including septic shock)
+    page: 315
+    also:
+    - {source: ssc-2021, section: Screening for patients with sepsis and septic shock}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: threshold.shock_adult
+  systolic_bp_below: 90
+  pulse_above: 110
+  provenance:
+    source: who-imai-dcm-2011-v1
+    page: 32
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: threshold.hypertension
+  systolic_at_or_above: 140
+  diastolic_at_or_above: 90
+  unit: mm[Hg]
+  provenance:
+    source: who-htn-2021
+    section: 3.1 Blood pressure threshold for initiation of pharmacological treatment
+    page: 19
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: threshold.hypoglycaemia_diabetes
+  field: glucose
+  at_or_below: 3.9
+  severe_at_or_below: 2.8
+  unit: mmol/L
+  provenance:
+    source: who-hearts-d-2020
+    page: 18
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: threshold.hyperglycaemia_severe
+  field: glucose
+  above: 18
+  hyperosmolar_at_or_above: 33.3
+  unit: mmol/L
+  provenance:
+    source: who-hearts-d-2020
+    page: 19
+    also:
+    - {source: who-hearts-d-2020, page: 25}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: threshold.diabetes_diagnosis
+  fasting_glucose_at_or_above_mmol_l: 7.0
+  random_glucose_at_or_above_mmol_l: 11.1
+  hba1c_at_or_above_mmol_mol: 48
+  provenance:
+    source: who-hearts-d-2020
+    section: Table 3 Diagnostic criteria for diabetes
+    page: 13
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified

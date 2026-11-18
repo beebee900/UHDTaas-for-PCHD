@@ -1,0 +1,21 @@
+# Single-node K3s for trying the manifests: local image, demo credentials.
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - ../../base
+  - ../../spire
+images:
+  - name: atra-health
+    newTag: dev
+secretGenerator:
+  - name: atra-secrets
+    namespace: atra
+    options:
+      disableNameSuffixHash: true
+    literals:
+      - postgres-password=atra
+      - ATRA_INFRA__POSTGRES=postgresql://atra:atra@postgres:5432/atra
+      - influx-password=atra-influx
+      - influx-token=atra-local-token
+      - neo4j-auth=neo4j/atra-neo4j
+      - minio-password=atra-minio

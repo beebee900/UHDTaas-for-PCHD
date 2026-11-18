@@ -1,0 +1,59 @@
+{
+  "$id": "https://atra.local/schemas/apdt/patient_message.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "audio_ref": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Audio Ref"
+    },
+    "channel": {
+      "default": "app",
+      "enum": [
+        "app",
+        "sms",
+        "ussd",
+        "voice",
+        "web"
+      ],
+      "title": "Channel",
+      "type": "string"
+    },
+    "language": {
+      "enum": [
+        "en",
+        "yo",
+        "ha",
+        "ig",
+        "pcm"
+      ],
+      "title": "Language",
+      "type": "string"
+    },
+    "text": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Text"
+    }
+  },
+  "required": [
+    "language"
+  ],
+  "title": "PatientMessage",
+  "type": "object"
+}

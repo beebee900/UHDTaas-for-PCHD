@@ -1,0 +1,56 @@
+kind: integumentary
+name: Integumentary DT
+referent: Skin, hair, nails and glands
+fields:
+- name: skin_temp
+  loinc: 39106-0
+  ucum: Cel
+  ref: range.skin_temp
+  source:
+  - wearable
+- name: sweat_rate
+  ucum: '1'
+  ref: range.sweat_rate
+  source:
+  - derived
+- name: wound_area
+  ucum: cm2
+  ref: range.wound_area
+  source:
+  - manual
+- name: heat_index
+  ucum: Cel
+  ref: range.heat_index
+  source:
+  - derived
+models:
+- ahdt.integumentary.skin_hair_nails_sweat_and_sebaceous_glands
+- ahdt.integumentary.thermoregulation
+- ahdt.integumentary.heat_stress
+- ahdt.integumentary.wound_healing
+owns_instances:
+- UBERON:0002097
+reads_facets: []
+standing_goals:
+- id: integ.skin
+  text: Track skin integrity and wounds
+  check:
+    kind: freshness
+    params:
+      fields:
+      - wound_area
+      max_age_s: 86400
+- id: integ.heat_stress
+  text: Alert on heat stress
+  check:
+    kind: threshold
+    params:
+      field: heat_index
+      above:
+        kb: goal.integ.heat_index
+connectors_out:
+- IntegumentaryThermoConnector
+- SystemToWholeBodyConnector
+connectors_in:
+- ExposomeConnector
+- NormsConnector

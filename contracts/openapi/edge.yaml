@@ -1,0 +1,553 @@
+components:
+  schemas:
+    Device:
+      properties:
+        attested_at:
+          anyOf:
+          - format: date-time
+            type: string
+          - type: 'null'
+          title: Attested At
+        cert_fingerprint:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Cert Fingerprint
+        device_class:
+          enum:
+          - smartwatch
+          - ecg_patch
+          - bp_cuff
+          - glucometer
+          - cgm
+          - pulse_oximeter
+          - spirometer
+          - smart_scale
+          - thermometer
+          - insulin_pump
+          - cpap
+          - rehab_robot
+          - lab_analyser
+          - ecg_machine
+          - imaging
+          - genomics
+          - imu
+          - pressure_insoles
+          - phone
+          - self_report
+          - environmental
+          - lighting
+          - ventilation
+          - records
+          title: Device Class
+          type: string
+        device_id:
+          pattern: ^[a-z0-9-]{3,64}$
+          title: Device Id
+          type: string
+        firmware_version:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Firmware Version
+        hdt_id:
+          pattern: ^hdt-[0-9a-f]{12}$
+          title: Hdt Id
+          type: string
+        model:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Model
+        provisioned:
+          default: false
+          title: Provisioned
+          type: boolean
+        provisioned_at:
+          anyOf:
+          - format: date-time
+            type: string
+          - type: 'null'
+          title: Provisioned At
+        registered_at:
+          format: date-time
+          title: Registered At
+          type: string
+        topic:
+          title: Topic
+          type: string
+      required:
+      - device_id
+      - device_class
+      - hdt_id
+      - registered_at
+      - topic
+      title: Device
+      type: object
+    DeviceRegistration:
+      properties:
+        device_class:
+          enum:
+          - smartwatch
+          - ecg_patch
+          - bp_cuff
+          - glucometer
+          - cgm
+          - pulse_oximeter
+          - spirometer
+          - smart_scale
+          - thermometer
+          - insulin_pump
+          - cpap
+          - rehab_robot
+          - lab_analyser
+          - ecg_machine
+          - imaging
+          - genomics
+          - imu
+          - pressure_insoles
+          - phone
+          - self_report
+          - environmental
+          - lighting
+          - ventilation
+          - records
+          title: Device Class
+          type: string
+        device_id:
+          pattern: ^[a-z0-9-]{3,64}$
+          title: Device Id
+          type: string
+        firmware_version:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Firmware Version
+        hdt_id:
+          pattern: ^hdt-[0-9a-f]{12}$
+          title: Hdt Id
+          type: string
+        model:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Model
+      required:
+      - device_id
+      - device_class
+      - hdt_id
+      title: DeviceRegistration
+      type: object
+    EdgeAlert:
+      properties:
+        alert_id:
+          title: Alert Id
+          type: string
+        field:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Field
+        hdt_id:
+          title: Hdt Id
+          type: string
+        notified:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Notified
+        probability:
+          anyOf:
+          - type: number
+          - type: 'null'
+          title: Probability
+        rule:
+          title: Rule
+          type: string
+        sms:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Sms
+        source:
+          enum:
+          - rule
+          - model
+          title: Source
+          type: string
+        time:
+          format: date-time
+          title: Time
+          type: string
+        unit:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Unit
+        urgency:
+          enum:
+          - emergency
+          - urgent
+          - routine
+          title: Urgency
+          type: string
+        value:
+          anyOf:
+          - type: number
+          - type: 'null'
+          title: Value
+      required:
+      - alert_id
+      - hdt_id
+      - source
+      - rule
+      - urgency
+      - time
+      title: EdgeAlert
+      type: object
+    HTTPValidationError:
+      properties:
+        detail:
+          items:
+            $ref: '#/components/schemas/ValidationError'
+          title: Detail
+          type: array
+      title: HTTPValidationError
+      type: object
+    LinkChange:
+      properties:
+        profile:
+          $ref: '#/components/schemas/LinkProfile'
+      required:
+      - profile
+      title: LinkChange
+      type: object
+    LinkProfile:
+      enum:
+      - wifi
+      - 4g
+      - 2g
+      - offline
+      type: string
+    OutboxStatus:
+      properties:
+        acked:
+          default: 0
+          title: Acked
+          type: integer
+        link:
+          enum:
+          - up
+          - down
+          title: Link
+          type: string
+        oldest:
+          anyOf:
+          - format: date-time
+            type: string
+          - type: 'null'
+          title: Oldest
+        pending:
+          title: Pending
+          type: integer
+        profile:
+          $ref: '#/components/schemas/LinkProfile'
+          default: wifi
+        rejected:
+          default: 0
+          title: Rejected
+          type: integer
+      required:
+      - pending
+      - link
+      title: OutboxStatus
+      type: object
+    ProvisionRequest:
+      properties:
+        csr_pem:
+          description: PKCS#10 certificate signing request, PEM
+          title: Csr Pem
+          type: string
+        firmware_version:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Firmware Version
+      required:
+      - csr_pem
+      title: ProvisionRequest
+      type: object
+    Provisioned:
+      properties:
+        ca_pem:
+          title: Ca Pem
+          type: string
+        certificate_pem:
+          title: Certificate Pem
+          type: string
+        device:
+          $ref: '#/components/schemas/Device'
+      required:
+      - device
+      - certificate_pem
+      - ca_pem
+      title: Provisioned
+      type: object
+    Summary:
+      properties:
+        day:
+          format: date
+          title: Day
+          type: string
+        hdt_id:
+          title: Hdt Id
+          type: string
+        text:
+          title: Text
+          type: string
+      required:
+      - hdt_id
+      - day
+      - text
+      title: Summary
+      type: object
+    ValidationError:
+      properties:
+        ctx:
+          title: Context
+          type: object
+        input:
+          title: Input
+        loc:
+          items:
+            anyOf:
+            - type: string
+            - type: integer
+          title: Location
+          type: array
+        msg:
+          title: Message
+          type: string
+        type:
+          title: Error Type
+          type: string
+      required:
+      - loc
+      - msg
+      - type
+      title: ValidationError
+      type: object
+info:
+  description: 'Edge tier: device registry, buffering and edge inference'
+  title: Edge edge-fac-a
+  version: 1.0.0
+openapi: 3.1.0
+paths:
+  /.well-known/jwks.json:
+    get:
+      operationId: jwks__well_known_jwks_json_get
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                additionalProperties: true
+                title: Response Jwks  Well Known Jwks Json Get
+                type: object
+          description: Successful Response
+      summary: Jwks
+      tags:
+      - operations
+  /health:
+    get:
+      operationId: health_health_get
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                additionalProperties: true
+                title: Response Health Health Get
+                type: object
+          description: Successful Response
+      summary: Health
+      tags:
+      - operations
+  /v1/alerts:
+    get:
+      operationId: alerts_v1_alerts_get
+      parameters:
+      - in: query
+        name: limit
+        required: false
+        schema:
+          default: 50
+          maximum: 500
+          minimum: 1
+          title: Limit
+          type: integer
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/EdgeAlert'
+                title: Response Alerts V1 Alerts Get
+                type: array
+          description: Successful Response
+        '422':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Alerts
+      tags:
+      - alerts
+  /v1/devices:
+    get:
+      operationId: list_devices_v1_devices_get
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Device'
+                title: Response List Devices V1 Devices Get
+                type: array
+          description: Successful Response
+      summary: List Devices
+      tags:
+      - devices
+    post:
+      operationId: register_v1_devices_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DeviceRegistration'
+        required: true
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Device'
+          description: Successful Response
+        '422':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Register
+      tags:
+      - devices
+  /v1/devices/{device_id}/provision:
+    post:
+      operationId: provision_v1_devices__device_id__provision_post
+      parameters:
+      - in: path
+        name: device_id
+        required: true
+        schema:
+          title: Device Id
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ProvisionRequest'
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Provisioned'
+          description: Successful Response
+        '422':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Provision
+      tags:
+      - devices
+  /v1/link:
+    put:
+      operationId: set_link_v1_link_put
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LinkChange'
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OutboxStatus'
+          description: Successful Response
+        '422':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Set Link
+      tags:
+      - outbox
+  /v1/outbox:
+    get:
+      operationId: outbox_v1_outbox_get
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OutboxStatus'
+          description: Successful Response
+      summary: Outbox
+      tags:
+      - outbox
+  /v1/persons/{hdt_id}/summary:
+    get:
+      operationId: summary_v1_persons__hdt_id__summary_get
+      parameters:
+      - in: path
+        name: hdt_id
+        required: true
+        schema:
+          pattern: ^hdt-[0-9a-f]{12}$
+          title: Hdt Id
+          type: string
+      - in: query
+        name: day
+        required: false
+        schema:
+          anyOf:
+          - format: date
+            type: string
+          - type: 'null'
+          title: Day
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Summary'
+          description: Successful Response
+        '422':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Summary
+      tags:
+      - assistant

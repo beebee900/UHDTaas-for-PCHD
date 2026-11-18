@@ -1,0 +1,32 @@
+{
+  "$id": "https://atra.local/schemas/apdt/alert_ack.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "by": {
+      "title": "By",
+      "type": "string"
+    },
+    "observations": {
+      "anyOf": [
+        {
+          "items": {
+            "additionalProperties": true,
+            "type": "object"
+          },
+          "type": "array"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Observations"
+    }
+  },
+  "required": [
+    "by"
+  ],
+  "title": "AlertAck",
+  "type": "object"
+}

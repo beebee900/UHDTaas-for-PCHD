@@ -1,0 +1,290 @@
+{
+  "action_classes": {
+    "clinical_actuator": {
+      "level": "act_with_approval",
+      "text": "Drive a clinical actuator (insulin pump, CPAP, rehabilitation robot)"
+    },
+    "environment": {
+      "level": "act",
+      "text": "Smart-home lighting and ventilation"
+    },
+    "notification": {
+      "level": "act",
+      "text": "Reminders, data requests, scheduling, result routing, notifications"
+    }
+  },
+  "actuators": {
+    "carer": {
+      "channel": "channels service and an APDT task",
+      "class": "notification",
+      "limits": {
+        "body": {
+          "text": [
+            1,
+            1000
+          ]
+        },
+        "recipient_role": {
+          "choice": [
+            "carer",
+            "proxy",
+            "nurse",
+            "medical_officer",
+            "community_health_worker"
+          ]
+        }
+      },
+      "required": [
+        "recipient_role",
+        "body"
+      ],
+      "text": "Message to carer or clinician",
+      "topic": "act/{hdt_id}/carer/message"
+    },
+    "cpap": {
+      "channel": "MQTT",
+      "class": "clinical_actuator",
+      "device_classes": [
+        "cpap"
+      ],
+      "limits": {
+        "pressure_cmh2o": {
+          "range": [
+            4,
+            20
+          ],
+          "unit": "cm[H2O]"
+        }
+      },
+      "required": [
+        "pressure_cmh2o"
+      ],
+      "text": "CPAP pressure",
+      "topic": "act/{hdt_id}/{device_id}/therapy"
+    },
+    "haptic": {
+      "channel": "MQTT",
+      "class": "notification",
+      "device_classes": [
+        "smartwatch"
+      ],
+      "limits": {
+        "duration_ms": {
+          "range": [
+            50,
+            3000
+          ],
+          "unit": "ms"
+        },
+        "pattern": {
+          "choice": [
+            "pulse",
+            "double",
+            "long"
+          ]
+        }
+      },
+      "required": [
+        "pattern"
+      ],
+      "text": "Wearable haptic cue",
+      "topic": "act/{hdt_id}/{device_id}/haptic"
+    },
+    "insulin_pump": {
+      "channel": "MQTT",
+      "class": "clinical_actuator",
+      "device_classes": [
+        "insulin_pump"
+      ],
+      "limits": {
+        "basal_u_per_h": {
+          "range": [
+            0,
+            5
+          ],
+          "unit": "U/h"
+        },
+        "bolus_u": {
+          "range": [
+            0.05,
+            25
+          ],
+          "unit": "U"
+        },
+        "kind": {
+          "choice": [
+            "bolus",
+            "basal"
+          ]
+        }
+      },
+      "required": [
+        "kind"
+      ],
+      "text": "Insulin pump bolus or basal rate",
+      "topic": "act/{hdt_id}/{device_id}/therapy"
+    },
+    "lighting": {
+      "channel": "MQTT",
+      "class": "environment",
+      "device_classes": [
+        "lighting"
+      ],
+      "limits": {
+        "level_pct": {
+          "range": [
+            0,
+            100
+          ],
+          "unit": "%"
+        }
+      },
+      "required": [
+        "level_pct"
+      ],
+      "text": "Smart-home lighting",
+      "topic": "act/{hdt_id}/home/{device_id}"
+    },
+    "notify": {
+      "channel": "FCM or the in-app WebSocket",
+      "class": "notification",
+      "limits": {
+        "body": {
+          "text": [
+            1,
+            240
+          ]
+        },
+        "title": {
+          "text": [
+            1,
+            65
+          ]
+        }
+      },
+      "required": [
+        "title",
+        "body"
+      ],
+      "text": "Phone notification",
+      "topic": "act/{hdt_id}/phone/notify"
+    },
+    "rehab_robot": {
+      "approvers": [
+        "medical_officer",
+        "therapist"
+      ],
+      "channel": "MQTT",
+      "class": "clinical_actuator",
+      "device_classes": [
+        "rehab_robot"
+      ],
+      "limits": {
+        "assistance_pct": {
+          "range": [
+            0,
+            100
+          ],
+          "unit": "%"
+        },
+        "duration_min": {
+          "range": [
+            1,
+            60
+          ],
+          "unit": "min"
+        }
+      },
+      "required": [
+        "assistance_pct",
+        "duration_min"
+      ],
+      "text": "Rehabilitation robot session",
+      "topic": "act/{hdt_id}/{device_id}/therapy"
+    },
+    "sms": {
+      "channel": "channels service",
+      "class": "notification",
+      "limits": {
+        "body": {
+          "text": [
+            1,
+            459
+          ]
+        }
+      },
+      "required": [
+        "body"
+      ],
+      "text": "SMS",
+      "topic": "act/{hdt_id}/channels/sms"
+    },
+    "ussd": {
+      "channel": "channels service",
+      "class": "notification",
+      "limits": {
+        "menu": {
+          "text": [
+            1,
+            182
+          ]
+        }
+      },
+      "required": [
+        "menu"
+      ],
+      "text": "USSD prompt",
+      "topic": "act/{hdt_id}/channels/ussd"
+    },
+    "ventilation": {
+      "channel": "MQTT",
+      "class": "environment",
+      "device_classes": [
+        "ventilation"
+      ],
+      "limits": {
+        "fan_pct": {
+          "range": [
+            0,
+            100
+          ],
+          "unit": "%"
+        }
+      },
+      "required": [
+        "fan_pct"
+      ],
+      "text": "Smart-home ventilation",
+      "topic": "act/{hdt_id}/home/{device_id}"
+    },
+    "voice": {
+      "channel": "channels service",
+      "class": "notification",
+      "limits": {
+        "language": {
+          "choice": [
+            "en",
+            "yo",
+            "ig",
+            "ha",
+            "pcm"
+          ]
+        },
+        "script": {
+          "text": [
+            1,
+            1000
+          ]
+        }
+      },
+      "required": [
+        "script"
+      ],
+      "text": "Voice call",
+      "topic": "act/{hdt_id}/channels/voice"
+    }
+  },
+  "approvers": [
+    "medical_officer"
+  ]
+}

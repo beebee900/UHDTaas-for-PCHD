@@ -1,0 +1,30 @@
+# Fixed clinical priority for arbitration (design 04, 4.9.3) and the escalation limit.
+- id: arbitration.priority
+  order: [airway_breathing, circulation, neurological, organ_protection, function, comfort]
+  twin_class:
+    respiratory: airway_breathing
+    cardiovascular: circulation
+    haematological: circulation
+    nervous: neurological
+    renal_urinary: organ_protection
+    hepatobiliary: organ_protection
+    endocrine: organ_protection
+    immune_lymphatic: organ_protection
+    musculoskeletal: function
+    sensory: function
+    reproductive: function
+    behavioural_cognitive: function
+    digestive: comfort
+    integumentary: comfort
+  provenance:
+    assumption: true
+    justification: Design 04, 4.9.3 fixes the order of the classes. The assignment of each twin to a class is the implementer's and awaits clinical review. A twin not listed ranks last.
+    status: draft
+
+- id: conductor.escalation_risk
+  value: 0.3
+  unit: '1'
+  provenance:
+    assumption: true
+    justification: Design 04, 4.9.3 escalates a decision at a risk of 0.3 or more. No guideline source is attached yet.
+    status: draft

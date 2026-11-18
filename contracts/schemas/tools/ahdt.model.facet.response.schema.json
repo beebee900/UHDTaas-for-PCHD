@@ -1,0 +1,54 @@
+{
+  "$id": "https://atra.local/schemas/tools/ahdt.model.facet.response.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "anatomy": {
+      "title": "Anatomy",
+      "type": "string"
+    },
+    "facet": {
+      "title": "Facet",
+      "type": "string"
+    },
+    "fields": {
+      "additionalProperties": true,
+      "title": "Fields",
+      "type": "object"
+    },
+    "fork_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Fork Id"
+    },
+    "instance_id": {
+      "title": "Instance Id",
+      "type": "string"
+    },
+    "revision": {
+      "title": "Revision",
+      "type": "integer"
+    },
+    "uncertainty": {
+      "additionalProperties": true,
+      "title": "Uncertainty",
+      "type": "object"
+    }
+  },
+  "required": [
+    "instance_id",
+    "anatomy",
+    "facet",
+    "fields",
+    "revision"
+  ],
+  "title": "FacetView",
+  "type": "object"
+}

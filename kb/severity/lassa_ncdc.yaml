@@ -1,0 +1,33 @@
+# NCDC clinical case definitions of Lassa fever, for decisions in health facilities.
+- id: severity.lassa.case_definition
+  suspected:
+    fever_days: [3, 21]
+    temperature_at_or_above_c: 38
+    with_any: [find.vomiting, find.diarrhoea, find.sore_throat, find.myalgia, find.prostration,
+               find.bleeding, find.abdominal_pain]
+    raise_suspicion:
+    - No response to standard antimalarial and other treatment within 48 to 72 hours.
+    - Contact with a probable or confirmed case within 21 days of fever onset.
+    - Travel to a high-burden area.
+  probable:
+    complications_any: [find.hearing_loss, find.facial_oedema, find.convulsions,
+                        find.impaired_consciousness, find.hypotension, find.bleeding]
+    hypotension_sbp_below: {adult: 90, child: 70}
+    oliguria_below_ml_kg_h: 0.5
+    oliguria_hours: 6
+    supporting_lab_any:
+    - {finding: find.proteinuria}
+    - {finding: find.haematuria}
+    - {urea_at_or_above_mg_dl: 45}
+    - {creatinine_at_or_above_mg_dl: 2}
+    - {platelets_at_or_below_per_mm3: 90000}
+  confirmed: Suspected or probable case with a positive real-time PCR.
+  provenance:
+    source: ncdc-lassa-2018
+    section: 1.1.2 Suspected case
+    page: 8
+    also:
+    - {source: ncdc-lassa-2018, section: 1.1.3 Probable case (Clinical), page: 9}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified

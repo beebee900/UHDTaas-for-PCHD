@@ -1,0 +1,54 @@
+# Sickle cell disease (Nigerian national guideline 2014).
+
+- id: tx.scd_crisis.painful_crisis
+  condition: cond.scd_crisis
+  severity: [mild, moderate, severe]
+  preference: first_line
+  regimen: [dose.scd_pain_ladder, dose.scd_fluids_painful_crisis]
+  conditional: {regimen: dose.scd_transfusion_painful_crisis, when: transfusion criteria met}
+  note: Give analgesia within the first minutes of assessment, before full examination. If fever
+    or other infection signs are present, take samples, then start broad-spectrum antibiotics and,
+    in malaria-endemic areas, antimalarials.
+  provenance:
+    source: ng-scd-2014
+    section: A. Painful (Vaso-Occlusive) Crisis
+    page: 31
+    also:
+    - {source: ng-scd-2014, page: 32}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: tx.scd.hydroxyurea
+  condition: cond.scd_crisis
+  severity: [prevention]
+  preference: first_line
+  regimen: dose.hydroxyurea_scd
+  indications_any:
+  - more than 5 crises per year
+  - 3 to 4 crises per year with steady-state neutrophils above 10 x 10^9/L or platelets above 500 x 10^9/L
+  - abnormal transcranial Doppler velocity above 200 cm/s
+  - acute chest syndrome
+  - stroke
+  exclusions: [ix.hydroxyurea.contraindications]
+  provenance:
+    source: ng-scd-2014
+    section: 4.1 Hydroxyurea Therapy for Sickle Cell Disease
+    page: 41
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: tx.scd.prophylaxis
+  condition: cond.scd_crisis
+  severity: [prevention]
+  preference: first_line
+  regimen: [dose.proguanil_scd_prophylaxis, dose.penicillin_v_scd_prophylaxis]
+  provenance:
+    source: ng-scd-2014
+    page: 42
+    also:
+    - {source: ng-scd-2014, page: 43}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified

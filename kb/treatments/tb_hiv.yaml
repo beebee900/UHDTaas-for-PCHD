@@ -1,0 +1,37 @@
+# Drug-susceptible pulmonary TB and first-line ART.
+
+- id: tx.tb.ds.six_month_hrze
+  condition: cond.tb_pulmonary
+  severity: drug_susceptible
+  preference: first_line
+  regimen: [dose.hrze_fdc_adult, dose.hr_fdc_adult]
+  phases:
+  - {phase: intensive, months: 2, regimen: dose.hrze_fdc_adult}
+  - {phase: continuation, months: 4, regimen: dose.hr_fdc_adult}
+  eligibility: {patient_group: adult, pregnancy: [none, t1, t2, t3]}
+  note: Pregnant women are usually treated with the standard 6-month regimen.
+  provenance:
+    source: who-tb-m4-2026
+    section: Recommendation A1.1
+    page: 35
+    also:
+    - {source: who-tb-handbook-m4-2025, section: 8. Treatment of DS-TB in special situations,
+       page: 52}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: tx.hiv.adult.tld
+  condition: cond.hiv
+  severity: [stage_1, stage_2, stage_3, stage_4]
+  preference: first_line
+  regimen: dose.tld_adult
+  eligibility: {patient_group: adult}
+  adjustments: [ix.dolutegravir.rifampicin]
+  provenance:
+    source: who-hiv-2021
+    section: 4.6 What to start
+    page: 167
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified

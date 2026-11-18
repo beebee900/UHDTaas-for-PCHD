@@ -1,0 +1,29 @@
+# The ATRA services and their p1 data stores for the k8s profile (design 02, 2.4; design 04,
+# 4.2.3). `atra-health` is the application image: the repository at /app with its locked
+# environment. The Dapr resources come from deploy/dapr.
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: atra
+labels:
+  - pairs:
+      app.kubernetes.io/part-of: atra-health
+resources:
+  - namespace.yaml
+  - config.yaml
+  - network-policies.yaml
+  - apps/edge.yaml
+  - apps/ahdt.yaml
+  - apps/population.yaml
+  - apps/apdt.yaml
+  - apps/channels.yaml
+  - data/postgres.yaml
+  - data/kafka.yaml
+  - data/redis.yaml
+  - data/neo4j.yaml
+  - data/influxdb.yaml
+  - data/qdrant.yaml
+  - data/minio.yaml
+  - data/mosquitto.yaml
+  - data/hapi-fhir.yaml
+  - data/opa.yaml
+  - ../../dapr

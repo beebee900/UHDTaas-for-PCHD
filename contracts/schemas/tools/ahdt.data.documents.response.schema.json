@@ -1,0 +1,53 @@
+{
+  "$defs": {
+    "DocumentHit": {
+      "additionalProperties": false,
+      "properties": {
+        "doc_id": {
+          "title": "Doc Id",
+          "type": "string"
+        },
+        "score": {
+          "title": "Score",
+          "type": "number"
+        },
+        "section_path": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Section Path",
+          "type": "array"
+        },
+        "snippet": {
+          "title": "Snippet",
+          "type": "string"
+        }
+      },
+      "required": [
+        "doc_id",
+        "section_path",
+        "snippet",
+        "score"
+      ],
+      "title": "DocumentHit",
+      "type": "object"
+    }
+  },
+  "$id": "https://atra.local/schemas/tools/ahdt.data.documents.response.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "hits": {
+      "items": {
+        "$ref": "#/$defs/DocumentHit"
+      },
+      "title": "Hits",
+      "type": "array"
+    }
+  },
+  "required": [
+    "hits"
+  ],
+  "title": "DocumentsData",
+  "type": "object"
+}

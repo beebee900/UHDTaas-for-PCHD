@@ -1,0 +1,30 @@
+{
+  "$id": "https://atra.local/schemas/apdt/referral_result.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "bundle_ref": {
+      "title": "Bundle Ref",
+      "type": "string"
+    },
+    "referral_id": {
+      "title": "Referral Id",
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "sent",
+        "queued"
+      ],
+      "title": "Status",
+      "type": "string"
+    }
+  },
+  "required": [
+    "referral_id",
+    "bundle_ref",
+    "status"
+  ],
+  "title": "ReferralResult",
+  "type": "object"
+}

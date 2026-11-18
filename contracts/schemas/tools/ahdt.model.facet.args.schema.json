@@ -1,0 +1,27 @@
+{
+  "$id": "https://atra.local/schemas/tools/ahdt.model.facet.args.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "anatomy": {
+      "title": "Anatomy",
+      "type": "string"
+    },
+    "facet": {
+      "title": "Facet",
+      "type": "string"
+    },
+    "hdt_id": {
+      "pattern": "^hdt-[0-9a-f]{12}$",
+      "title": "Hdt Id",
+      "type": "string"
+    }
+  },
+  "required": [
+    "hdt_id",
+    "anatomy",
+    "facet"
+  ],
+  "title": "FacetArgs",
+  "type": "object"
+}

@@ -1,0 +1,80 @@
+kind: immune_lymphatic
+name: Immune and Lymphatic DT
+referent: Immune cells, lymphoid organs and inflammation
+fields:
+- name: temperature
+  loinc: 8310-5
+  mdc: MDC_TEMP_BODY
+  ucum: Cel
+  ref: range.temperature
+  source:
+  - device
+  - manual
+- name: wbc
+  loinc: 6690-2
+  ucum: 10*9/L
+  ref: range.wbc
+  source:
+  - lab
+- name: crp
+  loinc: 1988-5
+  ucum: mg/L
+  ref: range.crp
+  source:
+  - lab
+- name: parasitaemia
+  ucum: '%'
+  ref: range.parasitaemia
+  source:
+  - lab
+- name: cd4
+  ucum: /uL
+  ref: range.cd4
+  source:
+  - lab
+- name: viral_load
+  ucum: '{copies}/mL'
+  ref: range.viral_load
+  source:
+  - lab
+models:
+- ahdt.immune_lymphatic.spleen_thymus_lymph_nodes_and_tonsils
+- ahdt.immune_lymphatic.t_cell_b_cell_and_macrophage
+- ahdt.immune_lymphatic.inflammation
+- ahdt.immune_lymphatic.infection_response
+owns_instances:
+- UBERON:0002106
+- UBERON:0002370
+- UBERON:0000029
+- UBERON:0002372
+reads_facets:
+- instance: UBERON:0002371
+  facet: immune_output
+- instance: UBERON:0002097
+  facet: barrier
+- instance: atra:microbiome
+  facet: microbiome
+standing_goals:
+- id: imm.signs
+  text: Track inflammation and infection signs
+  check:
+    kind: freshness
+    params:
+      fields:
+      - temperature
+      - crp
+      max_age_s: 21600
+- id: imm.vaccination
+  text: Keep vaccination complete for age
+  check:
+    kind: composite
+    params:
+      schedule:
+        kb: vaccination.schedule
+connectors_out:
+- HaemolysisConnector
+- InfectionHaemodynamicsConnector
+- InfectionNeuroConnector
+- SystemToWholeBodyConnector
+connectors_in:
+- NormsConnector

@@ -1,0 +1,52 @@
+# Ross-Macdonald malaria transmission (Smith-McKenzie form) and its intervention scenarios.
+model_id: ahdt.population.epidemiological
+sources:
+- id: smith2012
+  citation: "Smith DL, Battle KE, Hay SI, Barker CM, Scott TW, McKenzie FE. Ross, Macdonald,
+    and a theory for the dynamics and control of mosquito-transmitted pathogens. PLoS Pathog.
+    2012;8(4):e1002588. doi:10.1371/journal.ppat.1002588"
+  via: "Box 7 (Smith-McKenzie equations), the vectorial capacity and R0 formulas of the
+    1950-1969 section, and Table 2 (latent periods v = 10, 15, 20 d)"
+  url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3320609/fullTextXML
+- id: smith2007
+  citation: "Smith DL, McKenzie FE, Snow RW, Hay SI. Revisiting the basic reproductive number
+    for malaria and its implications for malaria control. PLoS Biol. 2007;5(3):e42.
+    doi:10.1371/journal.pbio.0050042"
+  via: "Materials and Methods, Estimate 1 (1/g of 10 to 20 d; b/r of about 170 d) and
+    Results (stability index S = a/g of about 1)"
+  url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC1802755/fullTextXML
+- id: atra-assumption
+  citation: ATRA design 01 rule R5 assumption register
+params:
+  g: {value: 0.1, unit: /d, source: smith2007,
+      note: "mosquito death rate; 1/g = 10 d, the low end of the 10 to 20 d range"}
+  stability_index: {value: 1.0, unit: '1', source: smith2007,
+                    note: "S = a/g; the human feeding rate is a = S g"}
+  v: {value: 10, unit: d, source: smith2012,
+      note: "extrinsic incubation period, the shortest latent period of Table 2"}
+  b_over_r: {value: 170, unit: d, source: smith2007,
+             note: "infectivity of mosquitoes to humans times the duration of infection"}
+  r: {value: 0.005, unit: /d, source: atra-assumption, assumption: true,
+      justification: "Recovery rate of an untreated infection (mean duration 200 d). The
+        sources give b/r only; with b/r = 170 d this sets b = 0.85."}
+  c: {value: 0.2, unit: '1', source: atra-assumption, assumption: true,
+      justification: "Infectivity of humans to mosquitoes. Neither source gives a value. The
+        mosquito density is calibrated to the observed prevalence, so c changes the
+        mosquito infection level, not the human prevalence at baseline."}
+  dry_season_factor: {value: 0.6, unit: '1', source: atra-assumption, assumption: true,
+                      justification: "Mosquito density in the dry months relative to the
+                        rainy months (April to October); the same factor as the synthetic
+                        population generator. No Lagos entomological series was sourced."}
+  bednet_feeding_reduction: {value: 0.5, unit: '1', source: atra-assumption, assumption: true,
+                             justification: "Share of human bites prevented per person under
+                               a net at full coverage; a scenario parameter, not a measured
+                               efficacy."}
+  bednet_mortality_increase: {value: 0.3, unit: '1', source: atra-assumption, assumption: true,
+                              justification: "Relative rise of the mosquito death rate at full
+                                net coverage (insecticide); a scenario parameter."}
+  vaccine_efficacy: {value: 0.4, unit: '1', source: atra-assumption, assumption: true,
+                     justification: "Reduction of b in a vaccinated person; a scenario
+                       parameter, not a licensed vaccine's trial efficacy."}
+  treated_clearance_d: {value: 14, unit: d, source: atra-assumption, assumption: true,
+                        justification: "Mean time to clearance of a treated infection; the
+                          mean episode duration of the synthetic population generator."}

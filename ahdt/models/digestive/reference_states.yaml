@@ -1,0 +1,67 @@
+# T3 reference-state items of the digestive twin (design 04, 4.5.3).
+- model_id: ahdt.digestive.mouth_oesophagus_rectum_and_gut_epithelium
+  twin: digestive
+  intended_use: Oral intake, swallowing and bowel habit state
+  instances: []
+  variables:
+    oral_intake_ok:
+      unit: '1'
+      ref: range.oral_intake_ok
+      tau_h: 12
+      justification: Relaxation time constant of a T3 state; a modelling assumption (design 01, rule
+        R3)
+    dysphagia:
+      unit: '1'
+      ref: state.dysphagia
+      tau_h: 48
+      justification: Relaxation time constant of a T3 state; a modelling assumption (design 01, rule
+        R3)
+    stool_frequency:
+      unit: /d
+      ref: range.stool_frequency
+      tau_h: 48
+      justification: Relaxation time constant of a T3 state; a modelling assumption (design 01, rule
+        R3)
+- model_id: ahdt.digestive.exocrine_pancreas_facet
+  twin: digestive
+  intended_use: Exocrine pancreatic enzyme secretion index
+  instances:
+  - UBERON:0001264
+  variables:
+    enzyme_secretion:
+      unit: '1'
+      ref: state.enzyme_secretion
+      tau_h: 168
+      justification: Relaxation time constant of a T3 state; a modelling assumption (design 01, rule
+        R3)
+- model_id: ahdt.digestive.microbiome
+  twin: digestive
+  intended_use: Gut microbiome diversity and dysbiosis
+  instances:
+  - atra:microbiome
+  variables:
+    diversity_index:
+      unit: '1'
+      ref: state.diversity_index
+      tau_h: 336
+      justification: Relaxation time constant of a T3 state; a modelling assumption (design 01, rule
+        R3)
+    dysbiosis:
+      unit: '1'
+      ref: state.dysbiosis
+      tau_h: 336
+      justification: Relaxation time constant of a T3 state; a modelling assumption (design 01, rule
+        R3)
+  couplings:
+  - input: antibiotic_course
+    from: input:medications
+    unit: '1'
+    target: diversity_index
+    gain: coupling.digestive.microbiome.antibiotic_course.diversity_index.gain
+    reference: coupling.digestive.microbiome.antibiotic_course.diversity_index.reference
+  - input: antibiotic_course
+    from: input:medications
+    unit: '1'
+    target: dysbiosis
+    gain: coupling.digestive.microbiome.antibiotic_course.dysbiosis.gain
+    reference: coupling.digestive.microbiome.antibiotic_course.dysbiosis.reference

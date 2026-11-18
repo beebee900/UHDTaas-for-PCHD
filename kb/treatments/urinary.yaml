@@ -1,0 +1,205 @@
+# Urinary tract infection. Adults and children follow AWaRe (2022); pregnancy follows the IMAI
+# district clinician manual, which treats pyelonephritis in pregnancy as severe.
+
+- id: tx.cystitis.adult.amoxicillin_clavulanate
+  condition: cond.cystitis
+  severity: uncomplicated
+  preference: first_line
+  regimen: dose.amoxicillin_clavulanate_oral_adult_lower_uti
+  eligibility: {patient_group: adult, pregnancy: [none], oral_intake: true}
+  provenance:
+    source: who-aware-2022
+    section: 23. Lower urinary tract infection
+    page: 297
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: tx.cystitis.adult.cotrimoxazole
+  condition: cond.cystitis
+  severity: uncomplicated
+  preference: first_line
+  regimen: dose.cotrimoxazole_oral_adult_lower_uti
+  eligibility: {patient_group: adult, pregnancy: [none], oral_intake: true}
+  provenance:
+    source: who-aware-2022
+    section: 23. Lower urinary tract infection
+    page: 297
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: tx.cystitis.adult.nitrofurantoin
+  condition: cond.cystitis
+  severity: uncomplicated
+  preference: first_line
+  regimen: dose.nitrofurantoin_oral_adult_lower_uti
+  eligibility: {patient_group: adult, pregnancy: [none], oral_intake: true}
+  provenance:
+    source: who-aware-2022
+    section: 23. Lower urinary tract infection
+    page: 297
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: tx.cystitis.adult.trimethoprim
+  condition: cond.cystitis
+  severity: uncomplicated
+  preference: first_line
+  regimen: dose.trimethoprim_oral_adult_lower_uti
+  eligibility: {patient_group: adult, pregnancy: [none], oral_intake: true}
+  provenance:
+    source: who-aware-2022
+    section: 23. Lower urinary tract infection
+    page: 297
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: tx.cystitis.child.amoxicillin_clavulanate
+  condition: cond.cystitis
+  severity: uncomplicated
+  preference: first_line
+  regimen: dose.amoxicillin_clavulanate_oral_child
+  eligibility: {patient_group: child, oral_intake: true}
+  provenance:
+    source: who-aware-2022
+    section: 23. Lower urinary tract infection
+    page: 299
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: tx.cystitis.pregnancy.nitrofurantoin
+  condition: cond.cystitis
+  severity: uncomplicated
+  preference: first_line
+  regimen: dose.nitrofurantoin_oral_pregnancy
+  eligibility: {pregnancy: [t1, t2, t3], oral_intake: true}
+  provenance:
+    source: who-imai-dcm-2011-v2
+    page: 517
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: tx.cystitis.pregnancy.amoxicillin_clavulanate
+  condition: cond.cystitis
+  severity: uncomplicated
+  preference: first_line
+  regimen: dose.amoxicillin_clavulanate_oral_pregnancy
+  eligibility: {pregnancy: [t1, t2, t3], oral_intake: true}
+  provenance:
+    source: who-imai-dcm-2011-v2
+    page: 517
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: tx.pyelonephritis.adult_mild.ciprofloxacin
+  condition: cond.pyelonephritis
+  severity: mild
+  preference: first_line
+  regimen: dose.ciprofloxacin_oral_adult
+  duration_days: 7
+  eligibility: {patient_group: adult, pregnancy: [none], oral_intake: true}
+  exclusions: [ix.quinolones.pregnancy]
+  provenance:
+    source: who-aware-2022
+    section: 34. Upper urinary tract infection
+    page: 493
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: tx.pyelonephritis.adult_severe.third_generation_cephalosporin
+  condition: cond.pyelonephritis
+  severity: severe
+  preference: first_line
+  regimen: [dose.ceftriaxone_iv_adult_uti, dose.cefotaxime_iv_adult]
+  duration_days: 7
+  eligibility: {patient_group: adult, pregnancy: [none]}
+  add_on: {regimen: [dose.amikacin_iv, dose.gentamicin_iv_adult],
+           when: very sick patient or high local ESBL prevalence}
+  provenance:
+    source: who-aware-2022
+    section: 34. Upper urinary tract infection
+    page: 493
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: tx.pyelonephritis.adult_severe.aminoglycoside
+  condition: cond.pyelonephritis
+  severity: severe
+  preference: first_line
+  regimen: [dose.amikacin_iv, dose.gentamicin_iv_adult]
+  duration_days: 7
+  eligibility: {patient_group: adult, pregnancy: [none]}
+  note: Preferred where ESBL-producing isolates are highly prevalent.
+  provenance:
+    source: who-aware-2022
+    section: 34. Upper urinary tract infection
+    page: 493
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: tx.pyelonephritis.child_mild.ciprofloxacin
+  condition: cond.pyelonephritis
+  severity: mild
+  preference: first_line
+  regimen: dose.ciprofloxacin_oral_child
+  duration_days: 7
+  eligibility: {patient_group: child, oral_intake: true}
+  provenance:
+    source: who-aware-2022
+    page: 495
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: tx.pyelonephritis.child_severe.third_generation_cephalosporin
+  condition: cond.pyelonephritis
+  severity: severe
+  preference: first_line
+  regimen: [dose.ceftriaxone_iv_child, dose.cefotaxime_iv_child]
+  duration_days: 7
+  eligibility: {patient_group: child}
+  add_on: {regimen: [dose.amikacin_iv, dose.gentamicin_iv_child],
+           when: very sick patient or high local ESBL prevalence}
+  provenance:
+    source: who-aware-2022
+    page: 495
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: tx.pyelonephritis.pregnancy.ceftriaxone
+  condition: cond.pyelonephritis
+  severity: severe
+  preference: first_line
+  regimen: dose.ceftriaxone_iv_pregnancy_pyelonephritis
+  eligibility: {pregnancy: [t1, t2, t3]}
+  note: Pyelonephritis in pregnancy is managed as severe. Change to oral treatment once afebrile
+    for 24 hours and improving.
+  provenance:
+    source: who-imai-dcm-2011-v2
+    page: 517
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: tx.pyelonephritis.pregnancy.gentamicin
+  condition: cond.pyelonephritis
+  severity: severe
+  preference: alternative
+  regimen: dose.gentamicin_iv_pregnancy_pyelonephritis
+  eligibility: {pregnancy: [t1, t2, t3]}
+  provenance:
+    source: who-imai-dcm-2011-v2
+    page: 517
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified

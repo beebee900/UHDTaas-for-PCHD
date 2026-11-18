@@ -1,0 +1,62 @@
+kind: musculoskeletal
+name: Musculoskeletal DT
+referent: Bones, joints, muscles, tendons and cartilage
+fields:
+- name: gait_speed
+  ucum: m/s
+  ref: range.gait_speed
+  source:
+  - derived
+- name: cadence
+  ucum: /min
+  ref: range.cadence
+  source:
+  - derived
+- name: stride_time_cv
+  ucum: '%'
+  ref: range.stride_time_cv
+  source:
+  - derived
+- name: steps
+  loinc: 41950-7
+  ucum: /d
+  ref: range.steps
+  source:
+  - wearable
+- name: fall_risk
+  ucum: '1'
+  ref: range.fall_risk
+  source:
+  - derived
+models:
+- ahdt.musculoskeletal.skeletal_muscle_and_biomechanics
+- ahdt.musculoskeletal.skeleton_joints_tendons_and_cartilage
+- ahdt.musculoskeletal.bone_remodelling_and_density
+- ahdt.musculoskeletal.gait_and_fall_risk
+owns_instances:
+- UBERON:0001434
+- UBERON:0000982
+- UBERON:0014892
+- UBERON:0000043
+- UBERON:0002418
+reads_facets: []
+standing_goals:
+- id: msk.fall_risk
+  text: Flag fall risk
+  check:
+    kind: model_flag
+    params:
+      model: ahdt.musculoskeletal.gait_and_fall_risk
+      threshold:
+        kb: goal.msk.fall_risk
+- id: msk.rehab
+  text: Track rehabilitation plan progress
+  check:
+    kind: human_decision
+    params:
+      plan: rehabilitation
+connectors_out:
+- MusculoskeletalBehaviouralConnector
+- SystemToWholeBodyConnector
+connectors_in:
+- NormsConnector

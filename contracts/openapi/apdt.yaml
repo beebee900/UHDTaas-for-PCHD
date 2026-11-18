@@ -1,0 +1,3146 @@
+components:
+  schemas:
+    AHDTPanel:
+      additionalProperties: false
+      properties:
+        degraded:
+          default: false
+          title: Degraded
+          type: boolean
+        forecast:
+          anyOf:
+          - additionalProperties: true
+            type: object
+          - type: 'null'
+          title: Forecast
+        hdt_id:
+          title: Hdt Id
+          type: string
+        tiles:
+          items:
+            $ref: '#/components/schemas/TwinTile'
+          title: Tiles
+          type: array
+        vitals:
+          additionalProperties:
+            $ref: '#/components/schemas/SourcedItem'
+          title: Vitals
+          type: object
+      required:
+      - hdt_id
+      - tiles
+      - vitals
+      title: AHDTPanel
+      type: object
+    Actor:
+      additionalProperties: false
+      properties:
+        id:
+          title: Id
+          type: string
+        role:
+          title: Role
+          type: string
+      required:
+      - id
+      - role
+      title: Actor
+      type: object
+    AdministrationEntry:
+      additionalProperties: false
+      description: A medication the nurse gives, or a care activity the nurse carries out.
+      properties:
+        dose:
+          anyOf:
+          - maxLength: 200
+            type: string
+          - type: 'null'
+          title: Dose
+        given_at:
+          anyOf:
+          - format: date-time
+            type: string
+          - type: 'null'
+          title: Given At
+        item:
+          maxLength: 200
+          minLength: 1
+          title: Item
+          type: string
+        kind:
+          enum:
+          - medication
+          - care
+          title: Kind
+          type: string
+        notes:
+          anyOf:
+          - maxLength: 2000
+            type: string
+          - type: 'null'
+          title: Notes
+        route:
+          anyOf:
+          - enum:
+            - oral
+            - intravenous
+            - intramuscular
+            - subcutaneous
+            - topical
+            - inhaled
+            - rectal
+            - other
+            type: string
+          - type: 'null'
+          title: Route
+      required:
+      - kind
+      - item
+      title: AdministrationEntry
+      type: object
+    AlertAck:
+      additionalProperties: false
+      properties:
+        by:
+          title: By
+          type: string
+        observations:
+          anyOf:
+          - items:
+              additionalProperties: true
+              type: object
+            type: array
+          - type: 'null'
+          title: Observations
+      required:
+      - by
+      title: AlertAck
+      type: object
+    AlertAckResult:
+      additionalProperties: false
+      properties:
+        acknowledged_at:
+          format: date-time
+          title: Acknowledged At
+          type: string
+        acknowledged_by:
+          title: Acknowledged By
+          type: string
+        alert_id:
+          title: Alert Id
+          type: string
+      required:
+      - alert_id
+      - acknowledged_by
+      - acknowledged_at
+      title: AlertAckResult
+      type: object
+    Alternative:
+      additionalProperties: false
+      properties:
+        score:
+          title: Score
+          type: number
+        text:
+          title: Text
+          type: string
+        why_lower:
+          title: Why Lower
+          type: string
+      required:
+      - text
+      - score
+      - why_lower
+      title: Alternative
+      type: object
+    AuditRecord:
+      additionalProperties: false
+      properties:
+        action:
+          title: Action
+          type: string
+        actor:
+          $ref: '#/components/schemas/Actor'
+        agent:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Agent
+        detail_ref:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Detail Ref
+        episode_id:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Episode Id
+        hash:
+          title: Hash
+          type: string
+        hdt_id:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Hdt Id
+        outcome:
+          enum:
+          - ok
+          - denied
+          - degraded
+          - error
+          title: Outcome
+          type: string
+        prev_hash:
+          title: Prev Hash
+          type: string
+        purpose:
+          title: Purpose
+          type: string
+        reason:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Reason
+        seq:
+          minimum: 0.0
+          title: Seq
+          type: integer
+        service:
+          title: Service
+          type: string
+        t:
+          format: date-time
+          title: T
+          type: string
+        target:
+          title: Target
+          type: string
+        tenant_id:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Tenant Id
+        trace_id:
+          title: Trace Id
+          type: string
+      required:
+      - seq
+      - prev_hash
+      - hash
+      - t
+      - service
+      - actor
+      - action
+      - target
+      - purpose
+      - outcome
+      - trace_id
+      title: AuditRecord
+      type: object
+    AutonomyLevel:
+      enum:
+      - inform
+      - recommend
+      - prepare_for_signature
+      - act_with_approval
+      - act
+      - never
+      title: AutonomyLevel
+      type: string
+    BundleCounterfactual:
+      additionalProperties: false
+      properties:
+        change:
+          title: Change
+          type: string
+        delta:
+          title: Delta
+          type: number
+        new_top:
+          title: New Top
+          type: string
+      required:
+      - change
+      - new_top
+      - delta
+      title: BundleCounterfactual
+      type: object
+    BundleRecommendation:
+      additionalProperties: false
+      properties:
+        code:
+          anyOf:
+          - $ref: '#/components/schemas/Code'
+          - type: 'null'
+        confidence:
+          maximum: 1.0
+          minimum: 0.0
+          title: Confidence
+          type: number
+        conformal_set:
+          anyOf:
+          - items:
+              type: string
+            type: array
+          - type: 'null'
+          title: Conformal Set
+        interval:
+          anyOf:
+          - $ref: '#/components/schemas/Interval'
+          - type: 'null'
+        text:
+          title: Text
+          type: string
+      required:
+      - text
+      - confidence
+      title: BundleRecommendation
+      type: object
+    CareTeamMember:
+      additionalProperties: false
+      properties:
+        id:
+          title: Id
+          type: string
+        role:
+          $ref: '#/components/schemas/Role'
+      required:
+      - id
+      - role
+      title: CareTeamMember
+      type: object
+    Citation:
+      additionalProperties: false
+      properties:
+        kb_entry_id:
+          title: Kb Entry Id
+          type: string
+        section:
+          title: Section
+          type: string
+        source_title:
+          title: Source Title
+          type: string
+        url:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Url
+      required:
+      - kb_entry_id
+      - source_title
+      - section
+      title: Citation
+      type: object
+    ClinicalDecision:
+      additionalProperties: false
+      properties:
+        decided_by:
+          $ref: '#/components/schemas/Decider'
+        decision:
+          enum:
+          - accept
+          - edit
+          - reject
+          - sign
+          - verify
+          - query
+          - consent
+          - decline
+          title: Decision
+          type: string
+        decision_id:
+          title: Decision Id
+          type: string
+        edited_payload:
+          anyOf:
+          - additionalProperties: true
+            type: object
+          - type: 'null'
+          title: Edited Payload
+        override_reason:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Override Reason
+        recommendation_id:
+          title: Recommendation Id
+          type: string
+        signature:
+          title: Signature
+          type: string
+        signed_at:
+          anyOf:
+          - format: date-time
+            type: string
+          - type: 'null'
+          title: Signed At
+      required:
+      - decision_id
+      - recommendation_id
+      - decided_by
+      - decision
+      - signature
+      title: ClinicalDecision
+      type: object
+    ClinicalEntry:
+      additionalProperties: false
+      description: 'One entry of an episode''s clinical record: a diagnosis, a dispense or care given.
+
+        `resource` is the FHIR resource the entry is stored as.'
+      properties:
+        details:
+          items:
+            type: string
+          title: Details
+          type: array
+        entry_id:
+          title: Entry Id
+          type: string
+        kind:
+          enum:
+          - diagnosis
+          - dispense
+          - administration
+          title: Kind
+          type: string
+        recorded_at:
+          format: date-time
+          title: Recorded At
+          type: string
+        recorded_by:
+          $ref: '#/components/schemas/Actor'
+        resource:
+          additionalProperties: true
+          title: Resource
+          type: object
+        title:
+          title: Title
+          type: string
+      required:
+      - entry_id
+      - kind
+      - title
+      - recorded_by
+      - recorded_at
+      - resource
+      title: ClinicalEntry
+      type: object
+    Code:
+      additionalProperties: false
+      properties:
+        code:
+          title: Code
+          type: string
+        display:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Display
+        system:
+          title: System
+          type: string
+      required:
+      - system
+      - code
+      title: Code
+      type: object
+    ConsentData:
+      additionalProperties: false
+      properties:
+        consent_id:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Consent Id
+        hdt_id:
+          title: Hdt Id
+          type: string
+        purposes:
+          items:
+            $ref: '#/components/schemas/PurposeOfUse'
+          title: Purposes
+          type: array
+        refused_tools:
+          items:
+            type: string
+          title: Refused Tools
+          type: array
+      required:
+      - hdt_id
+      - purposes
+      - refused_tools
+      title: ConsentData
+      type: object
+    DTKind:
+      description: The 17 peer DTs of the federated Human Digital Twin, plus the Patient DT (APDT).
+      enum:
+      - cardiovascular
+      - respiratory
+      - nervous
+      - sensory
+      - digestive
+      - hepatobiliary
+      - renal_urinary
+      - endocrine
+      - immune_lymphatic
+      - haematological
+      - musculoskeletal
+      - integumentary
+      - reproductive
+      - whole_body
+      - behavioural_cognitive
+      - social
+      - population
+      - patient
+      title: DTKind
+      type: string
+    Decider:
+      additionalProperties: false
+      properties:
+        id:
+          title: Id
+          type: string
+        role:
+          $ref: '#/components/schemas/Role'
+      required:
+      - id
+      - role
+      title: Decider
+      type: object
+    DiagnosisEntry:
+      additionalProperties: false
+      description: 'The diagnosis the medical officer makes, in the medical officer''s own words.
+
+        `recommendation_id` names the APDT proposal it was taken from, if any.'
+      properties:
+        basis:
+          anyOf:
+          - maxLength: 2000
+            type: string
+          - type: 'null'
+          title: Basis
+        condition:
+          maxLength: 200
+          minLength: 1
+          title: Condition
+          type: string
+        recommendation_id:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Recommendation Id
+        status:
+          default: confirmed
+          enum:
+          - confirmed
+          - provisional
+          title: Status
+          type: string
+      required:
+      - condition
+      title: DiagnosisEntry
+      type: object
+    DispenseEntry:
+      additionalProperties: false
+      description: A medication the pharmacist hands over for the patient.
+      properties:
+        days_supply:
+          anyOf:
+          - maximum: 365.0
+            minimum: 1.0
+            type: integer
+          - type: 'null'
+          title: Days Supply
+        dose:
+          maxLength: 200
+          minLength: 1
+          title: Dose
+          type: string
+        medication:
+          maxLength: 200
+          minLength: 1
+          title: Medication
+          type: string
+        notes:
+          anyOf:
+          - maxLength: 2000
+            type: string
+          - type: 'null'
+          title: Notes
+        quantity:
+          maxLength: 100
+          minLength: 1
+          title: Quantity
+          type: string
+      required:
+      - medication
+      - dose
+      - quantity
+      title: DispenseEntry
+      type: object
+    Episode:
+      additionalProperties: false
+      properties:
+        care_team:
+          items:
+            $ref: '#/components/schemas/CareTeamMember'
+          title: Care Team
+          type: array
+        closed_at:
+          anyOf:
+          - format: date-time
+            type: string
+          - type: 'null'
+          title: Closed At
+        episode_id:
+          title: Episode Id
+          type: string
+        goal_text:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Goal Text
+        hdt_id:
+          title: Hdt Id
+          type: string
+        opened_at:
+          format: date-time
+          title: Opened At
+          type: string
+        reason:
+          title: Reason
+          type: string
+        responsible_clinician:
+          title: Responsible Clinician
+          type: string
+        status:
+          enum:
+          - open
+          - closed
+          title: Status
+          type: string
+        tenant_id:
+          title: Tenant Id
+          type: string
+      required:
+      - episode_id
+      - tenant_id
+      - hdt_id
+      - status
+      - opened_at
+      - reason
+      - responsible_clinician
+      title: Episode
+      type: object
+    EpisodeClose:
+      additionalProperties: false
+      properties:
+        discharge_summary_ref:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Discharge Summary Ref
+        outcome:
+          title: Outcome
+          type: string
+      required:
+      - outcome
+      title: EpisodeClose
+      type: object
+    EpisodeCreate:
+      additionalProperties: false
+      properties:
+        encounter_class:
+          default: AMB
+          enum:
+          - AMB
+          - EMER
+          - IMP
+          - HH
+          - VR
+          title: Encounter Class
+          type: string
+        hdt_id:
+          pattern: ^hdt-[0-9a-f]{12}$
+          title: Hdt Id
+          type: string
+        reason:
+          minLength: 1
+          title: Reason
+          type: string
+        responsible_clinician:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Responsible Clinician
+      required:
+      - hdt_id
+      - reason
+      title: EpisodeCreate
+      type: object
+    EpisodeListItem:
+      additionalProperties: false
+      properties:
+        episode:
+          $ref: '#/components/schemas/Episode'
+        patient:
+          anyOf:
+          - $ref: '#/components/schemas/PatientEntry'
+          - type: 'null'
+      required:
+      - episode
+      title: EpisodeListItem
+      type: object
+    EpisodeView:
+      additionalProperties: false
+      properties:
+        episode:
+          $ref: '#/components/schemas/Episode'
+        episode_of_care:
+          additionalProperties: true
+          title: Episode Of Care
+          type: object
+        resources:
+          items:
+            additionalProperties: true
+            type: object
+          title: Resources
+          type: array
+      required:
+      - episode
+      - episode_of_care
+      title: EpisodeView
+      type: object
+    EvidenceItem:
+      additionalProperties: false
+      properties:
+        ahdt_explanation_id:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Ahdt Explanation Id
+        item:
+          title: Item
+          type: string
+        source:
+          enum:
+          - apdt
+          - ahdt
+          title: Source
+          type: string
+        value:
+          title: Value
+        weight:
+          title: Weight
+          type: number
+      required:
+      - source
+      - item
+      - weight
+      title: EvidenceItem
+      type: object
+    ExplanationBundle:
+      additionalProperties: false
+      properties:
+        alternatives:
+          items:
+            $ref: '#/components/schemas/Alternative'
+          title: Alternatives
+          type: array
+        audience_views:
+          additionalProperties:
+            additionalProperties: true
+            type: object
+          propertyNames:
+            enum:
+            - medical_officer
+            - pharmacist
+            - nurse
+            - radiologist
+            - patient
+          title: Audience Views
+          type: object
+        bundle_id:
+          title: Bundle Id
+          type: string
+        citations:
+          items:
+            $ref: '#/components/schemas/Citation'
+          title: Citations
+          type: array
+        counterfactuals:
+          items:
+            $ref: '#/components/schemas/BundleCounterfactual'
+          title: Counterfactuals
+          type: array
+        created_at:
+          format: date-time
+          title: Created At
+          type: string
+        evidence_against:
+          items:
+            $ref: '#/components/schemas/EvidenceItem'
+          title: Evidence Against
+          type: array
+        evidence_for:
+          items:
+            $ref: '#/components/schemas/EvidenceItem'
+          title: Evidence For
+          type: array
+        model_versions:
+          items:
+            $ref: '#/components/schemas/ModelRef'
+          title: Model Versions
+          type: array
+        patient_summary:
+          $ref: '#/components/schemas/PatientSummary'
+        recommendation:
+          $ref: '#/components/schemas/BundleRecommendation'
+        recommendation_id:
+          title: Recommendation Id
+          type: string
+        simulation_trace:
+          anyOf:
+          - $ref: '#/components/schemas/SimulationTrace'
+          - type: 'null'
+      required:
+      - bundle_id
+      - recommendation_id
+      - recommendation
+      - evidence_for
+      - evidence_against
+      - citations
+      - counterfactuals
+      - alternatives
+      - patient_summary
+      - audience_views
+      - created_at
+      - model_versions
+      title: ExplanationBundle
+      type: object
+    HTTPValidationError:
+      properties:
+        detail:
+          items:
+            $ref: '#/components/schemas/ValidationError'
+          title: Detail
+          type: array
+      title: HTTPValidationError
+      type: object
+    IntakeCatalogue:
+      additionalProperties: false
+      description: 'What a clinician can record at intake: findings, tests and measurements from the KB.'
+      properties:
+        findings:
+          items:
+            $ref: '#/components/schemas/IntakeFinding'
+          title: Findings
+          type: array
+        measurements:
+          items:
+            $ref: '#/components/schemas/IntakeMeasurement'
+          title: Measurements
+          type: array
+        tests:
+          items:
+            $ref: '#/components/schemas/IntakeTest'
+          title: Tests
+          type: array
+      required:
+      - findings
+      - tests
+      - measurements
+      title: IntakeCatalogue
+      type: object
+    IntakeFinding:
+      additionalProperties: false
+      properties:
+        capture:
+          enum:
+          - question
+          - exam
+          - lab
+          title: Capture
+          type: string
+        id:
+          title: Id
+          type: string
+        name:
+          title: Name
+          type: string
+      required:
+      - id
+      - name
+      - capture
+      title: IntakeFinding
+      type: object
+    IntakeMeasurement:
+      additionalProperties: false
+      properties:
+        field:
+          title: Field
+          type: string
+        unit:
+          title: Unit
+          type: string
+      required:
+      - field
+      - unit
+      title: IntakeMeasurement
+      type: object
+    IntakeRecord:
+      additionalProperties: false
+      description: 'Findings (present or absent), test results (positive or negative) and measurements
+        of
+
+        one episode, keyed by KB id or field name, with the patient details the reasoner needs.'
+      properties:
+        avpu:
+          default: A
+          enum:
+          - A
+          - V
+          - P
+          - U
+          title: Avpu
+          type: string
+        findings:
+          additionalProperties:
+            type: boolean
+          title: Findings
+          type: object
+        measurements:
+          additionalProperties:
+            type: number
+          title: Measurements
+          type: object
+        pregnancy:
+          default: none
+          enum:
+          - none
+          - t1
+          - t2
+          - t3
+          title: Pregnancy
+          type: string
+        tests:
+          additionalProperties:
+            type: boolean
+          title: Tests
+          type: object
+        weight_kg:
+          anyOf:
+          - exclusiveMinimum: 0.0
+            maximum: 400.0
+            type: number
+          - type: 'null'
+          title: Weight Kg
+      title: IntakeRecord
+      type: object
+    IntakeTest:
+      additionalProperties: false
+      properties:
+        id:
+          title: Id
+          type: string
+        name:
+          title: Name
+          type: string
+      required:
+      - id
+      - name
+      title: IntakeTest
+      type: object
+    Interrupt:
+      additionalProperties: false
+      properties:
+        allowed_decisions:
+          items:
+            type: string
+          title: Allowed Decisions
+          type: array
+        kind:
+          enum:
+          - accept_diagnosis
+          - verify_prescription
+          - sign_prescription
+          - approve_care_plan
+          - patient_consent_to_treatment
+          title: Kind
+          type: string
+        payload:
+          additionalProperties: true
+          title: Payload
+          type: object
+        required_role:
+          $ref: '#/components/schemas/Role'
+      required:
+      - kind
+      - payload
+      - allowed_decisions
+      - required_role
+      title: Interrupt
+      type: object
+    Interval:
+      additionalProperties: false
+      properties:
+        level:
+          title: Level
+          type: number
+        lower:
+          title: Lower
+          type: number
+        upper:
+          title: Upper
+          type: number
+      required:
+      - lower
+      - upper
+      - level
+      title: Interval
+      type: object
+    LoginRequest:
+      properties:
+        password:
+          title: Password
+          type: string
+        username:
+          title: Username
+          type: string
+      required:
+      - username
+      - password
+      title: LoginRequest
+      type: object
+    ModelRef:
+      additionalProperties: false
+      properties:
+        model_id:
+          title: Model Id
+          type: string
+        version:
+          title: Version
+          type: string
+      required:
+      - model_id
+      - version
+      title: ModelRef
+      type: object
+    PatientEntry:
+      additionalProperties: false
+      description: A patient of a facility, as the demo patient directory lists them.
+      properties:
+        age_years:
+          minimum: 0.0
+          title: Age Years
+          type: integer
+        hdt_id:
+          title: Hdt Id
+          type: string
+        initials:
+          title: Initials
+          type: string
+        language:
+          enum:
+          - en
+          - yo
+          - ha
+          - ig
+          - pcm
+          title: Language
+          type: string
+        sex:
+          enum:
+          - female
+          - male
+          title: Sex
+          type: string
+        tenant_id:
+          enum:
+          - fac-a
+          - fac-b
+          title: Tenant Id
+          type: string
+      required:
+      - hdt_id
+      - initials
+      - sex
+      - age_years
+      - language
+      - tenant_id
+      title: PatientEntry
+      type: object
+    PatientMessage:
+      additionalProperties: false
+      properties:
+        audio_ref:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Audio Ref
+        channel:
+          default: app
+          enum:
+          - app
+          - sms
+          - ussd
+          - voice
+          - web
+          title: Channel
+          type: string
+        language:
+          enum:
+          - en
+          - yo
+          - ha
+          - ig
+          - pcm
+          title: Language
+          type: string
+        text:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Text
+      required:
+      - language
+      title: PatientMessage
+      type: object
+    PatientReply:
+      additionalProperties: false
+      properties:
+        audio_ref:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Audio Ref
+        grounded_on:
+          items:
+            type: string
+          title: Grounded On
+          type: array
+        language:
+          enum:
+          - en
+          - yo
+          - ha
+          - ig
+          - pcm
+          title: Language
+          type: string
+        reply:
+          title: Reply
+          type: string
+      required:
+      - reply
+      - language
+      title: PatientReply
+      type: object
+    PatientSummary:
+      additionalProperties: false
+      properties:
+        audio_ref:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Audio Ref
+        language:
+          enum:
+          - en
+          - yo
+          - ha
+          - ig
+          - pcm
+          title: Language
+          type: string
+        text:
+          title: Text
+          type: string
+      required:
+      - language
+      - text
+      title: PatientSummary
+      type: object
+    PopulateRequest:
+      properties:
+        hdt_id:
+          title: Hdt Id
+          type: string
+      required:
+      - hdt_id
+      title: PopulateRequest
+      type: object
+    PreferenceWeights:
+      additionalProperties: false
+      properties:
+        hdt_id:
+          title: Hdt Id
+          type: string
+        weights:
+          additionalProperties:
+            type: number
+          title: Weights
+          type: object
+      required:
+      - hdt_id
+      - weights
+      title: PreferenceWeights
+      type: object
+    Preferences:
+      additionalProperties: false
+      properties:
+        answers:
+          additionalProperties: true
+          title: Answers
+          type: object
+      required:
+      - answers
+      title: Preferences
+      type: object
+    PurposeOfUse:
+      enum:
+      - care
+      - emergency
+      - research
+      - public_health
+      - operations
+      - self_management
+      title: PurposeOfUse
+      type: string
+    Recommendation:
+      additionalProperties: false
+      properties:
+        autonomy_level:
+          $ref: '#/components/schemas/AutonomyLevel'
+        bundle_id:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Bundle Id
+        confidence:
+          anyOf:
+          - maximum: 1.0
+            minimum: 0.0
+            type: number
+          - type: 'null'
+          title: Confidence
+        created_by_agent:
+          title: Created By Agent
+          type: string
+        episode_id:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Episode Id
+        hdt_id:
+          title: Hdt Id
+          type: string
+        kind:
+          enum:
+          - diagnosis
+          - test
+          - treatment
+          - care
+          - lifestyle
+          - data_request
+          title: Kind
+          type: string
+        payload:
+          additionalProperties: true
+          title: Payload
+          type: object
+        recommendation_id:
+          title: Recommendation Id
+          type: string
+        status:
+          enum:
+          - proposed
+          - accepted
+          - edited
+          - overridden
+          - declined
+          - signed
+          title: Status
+          type: string
+      required:
+      - recommendation_id
+      - hdt_id
+      - kind
+      - payload
+      - status
+      - autonomy_level
+      - created_by_agent
+      title: Recommendation
+      type: object
+    ReferralRequest:
+      additionalProperties: false
+      properties:
+        episode_id:
+          pattern: ^ep-\d{4}-\d{6}$
+          title: Episode Id
+          type: string
+        reason:
+          title: Reason
+          type: string
+        to_tenant:
+          enum:
+          - fac-a
+          - fac-b
+          title: To Tenant
+          type: string
+        urgency:
+          default: routine
+          enum:
+          - routine
+          - urgent
+          - emergency
+          title: Urgency
+          type: string
+      required:
+      - episode_id
+      - to_tenant
+      - reason
+      title: ReferralRequest
+      type: object
+    ReferralResult:
+      additionalProperties: false
+      properties:
+        bundle_ref:
+          title: Bundle Ref
+          type: string
+        referral_id:
+          title: Referral Id
+          type: string
+        status:
+          enum:
+          - sent
+          - queued
+          title: Status
+          type: string
+      required:
+      - referral_id
+      - bundle_ref
+      - status
+      title: ReferralResult
+      type: object
+    Role:
+      enum:
+      - medical_officer
+      - radiologist
+      - pharmacist
+      - nurse
+      - lab_scientist
+      - patient
+      - proxy
+      - community_health_worker
+      - therapist
+      - carer
+      - clinical_safety_officer
+      - administrator
+      - researcher
+      - public_health_official
+      - person
+      title: Role
+      type: string
+    RunStarted:
+      additionalProperties: false
+      properties:
+        goal:
+          enum:
+          - diagnosis
+          - treatment
+          - care
+          title: Goal
+          type: string
+        run_id:
+          title: Run Id
+          type: string
+      required:
+      - run_id
+      - goal
+      title: RunStarted
+      type: object
+    RunStatus:
+      additionalProperties: false
+      properties:
+        interrupt:
+          anyOf:
+          - $ref: '#/components/schemas/Interrupt'
+          - type: 'null'
+        result:
+          anyOf:
+          - additionalProperties: true
+            type: object
+          - type: 'null'
+          title: Result
+        run_id:
+          title: Run Id
+          type: string
+        status:
+          enum:
+          - running
+          - waiting_for_human
+          - done
+          - failed
+          title: Status
+          type: string
+      required:
+      - run_id
+      - status
+      title: RunStatus
+      type: object
+    Sensitivity:
+      additionalProperties: false
+      properties:
+        S1:
+          title: S1
+          type: number
+        ST:
+          title: St
+          type: number
+        param:
+          title: Param
+          type: string
+      required:
+      - param
+      - S1
+      - ST
+      title: Sensitivity
+      type: object
+    SimulationTrace:
+      additionalProperties: false
+      properties:
+        assumptions:
+          items:
+            type: string
+          title: Assumptions
+          type: array
+        fork_id:
+          title: Fork Id
+          type: string
+        output_id:
+          title: Output Id
+          type: string
+        sensitivity:
+          items:
+            $ref: '#/components/schemas/Sensitivity'
+          title: Sensitivity
+          type: array
+        summary:
+          title: Summary
+          type: string
+      required:
+      - output_id
+      - fork_id
+      - summary
+      - assumptions
+      title: SimulationTrace
+      type: object
+    SourcedItem:
+      additionalProperties: false
+      properties:
+        kind:
+          title: Kind
+          type: string
+        label:
+          title: Label
+          type: string
+        ref:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Ref
+        source:
+          enum:
+          - apdt
+          - ahdt
+          title: Source
+          type: string
+        time:
+          anyOf:
+          - format: date-time
+            type: string
+          - type: 'null'
+          title: Time
+        unit:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Unit
+        value:
+          title: Value
+      required:
+      - source
+      - kind
+      - label
+      title: SourcedItem
+      type: object
+    TwinTile:
+      additionalProperties: false
+      properties:
+        dt:
+          $ref: '#/components/schemas/DTKind'
+        headline:
+          title: Headline
+          type: string
+        status:
+          enum:
+          - normal
+          - watch
+          - alert
+          - unavailable
+          title: Status
+          type: string
+        updated_at:
+          anyOf:
+          - format: date-time
+            type: string
+          - type: 'null'
+          title: Updated At
+      required:
+      - dt
+      - status
+      - headline
+      title: TwinTile
+      type: object
+    UnifiedView:
+      additionalProperties: false
+      properties:
+        degraded:
+          default: false
+          title: Degraded
+          type: boolean
+        episode_id:
+          title: Episode Id
+          type: string
+        items:
+          items:
+            $ref: '#/components/schemas/SourcedItem'
+          title: Items
+          type: array
+        missing_evidence:
+          items:
+            type: string
+          title: Missing Evidence
+          type: array
+      required:
+      - episode_id
+      - items
+      title: UnifiedView
+      type: object
+    ValidationError:
+      properties:
+        ctx:
+          title: Context
+          type: object
+        input:
+          title: Input
+        loc:
+          items:
+            anyOf:
+            - type: string
+            - type: integer
+          title: Location
+          type: array
+        msg:
+          title: Message
+          type: string
+        type:
+          title: Error Type
+          type: string
+      required:
+      - loc
+      - msg
+      - type
+      title: ValidationError
+      type: object
+    Worklist:
+      additionalProperties: false
+      properties:
+        items:
+          items:
+            $ref: '#/components/schemas/WorklistItem'
+          title: Items
+          type: array
+        role:
+          $ref: '#/components/schemas/Role'
+        tenant_id:
+          title: Tenant Id
+          type: string
+      required:
+      - role
+      - tenant_id
+      - items
+      title: Worklist
+      type: object
+    WorklistItem:
+      additionalProperties: false
+      properties:
+        due_by:
+          anyOf:
+          - format: date-time
+            type: string
+          - type: 'null'
+          title: Due By
+        episode_id:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Episode Id
+        hdt_id:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Hdt Id
+        item_id:
+          title: Item Id
+          type: string
+        kind:
+          title: Kind
+          type: string
+        priority:
+          default: 3
+          maximum: 5.0
+          minimum: 1.0
+          title: Priority
+          type: integer
+        title:
+          title: Title
+          type: string
+      required:
+      - item_id
+      - kind
+      - title
+      title: WorklistItem
+      type: object
+info:
+  description: 'Agentic Patient Digital Twin: clinical decision support API'
+  title: APDT
+  version: 1.0.0
+openapi: 3.1.0
+paths:
+  /.well-known/jwks.json:
+    get:
+      operationId: jwks__well_known_jwks_json_get
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                additionalProperties: true
+                title: Response Jwks  Well Known Jwks Json Get
+                type: object
+          description: Successful Response
+      summary: Jwks
+      tags:
+      - operations
+  /auth/token:
+    post:
+      operationId: token_auth_token_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LoginRequest'
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: {}
+          description: Successful Response
+        '422':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Token
+      tags:
+      - auth
+  /cds-services:
+    get:
+      operationId: cds_discovery_cds_services_get
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                additionalProperties: true
+                title: Response Cds Discovery Cds Services Get
+                type: object
+          description: Successful Response
+      summary: Cds Discovery
+      tags:
+      - cds-hooks
+  /cds-services/{service_id}:
+    post:
+      operationId: cds_service_cds_services__service_id__post
+      parameters:
+      - in: path
+        name: service_id
+        required: true
+        schema:
+          title: Service Id
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              additionalProperties: true
+              title: Body
+              type: object
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                additionalProperties: true
+                title: Response Cds Service Cds Services  Service Id  Post
+                type: object
+          description: Successful Response
+        '422':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Cds Service
+      tags:
+      - cds-hooks
+  /health:
+    get:
+      operationId: health_health_get
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                additionalProperties: true
+                title: Response Health Health Get
+                type: object
+          description: Successful Response
+      summary: Health
+      tags:
+      - operations
+  /smart/.well-known/smart-configuration:
+    get:
+      operationId: smart_configuration_smart__well_known_smart_configuration_get
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                additionalProperties: true
+                title: Response Smart Configuration Smart  Well Known Smart Configuration Get
+                type: object
+          description: Successful Response
+      summary: Smart Configuration
+      tags:
+      - smart
+  /smart/launch:
+    get:
+      operationId: smart_launch_smart_launch_get
+      parameters:
+      - in: query
+        name: iss
+        required: true
+        schema:
+          title: Iss
+          type: string
+      - in: query
+        name: launch
+        required: true
+        schema:
+          title: Launch
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                additionalProperties: true
+                title: Response Smart Launch Smart Launch Get
+                type: object
+          description: Successful Response
+        '422':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Smart Launch
+      tags:
+      - smart
+  /v1/t/{tenant_id}/alerts/{alert_id}/ack:
+    post:
+      operationId: ack_alert_v1_t__tenant_id__alerts__alert_id__ack_post
+      parameters:
+      - in: path
+        name: tenant_id
+        required: true
+        schema:
+          enum:
+          - fac-a
+          - fac-b
+          title: Tenant Id
+          type: string
+      - in: path
+        name: alert_id
+        required: true
+        schema:
+          title: Alert Id
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AlertAck'
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AlertAckResult'
+          description: Successful Response
+        '422':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Ack Alert
+      tags:
+      - apdt
+  /v1/t/{tenant_id}/audit:
+    get:
+      description: The facility's audit records, newest first.
+      operationId: get_audit_v1_t__tenant_id__audit_get
+      parameters:
+      - in: path
+        name: tenant_id
+        required: true
+        schema:
+          enum:
+          - fac-a
+          - fac-b
+          title: Tenant Id
+          type: string
+      - in: query
+        name: episode_id
+        required: false
+        schema:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Episode Id
+      - in: query
+        name: hdt_id
+        required: false
+        schema:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Hdt Id
+      - in: query
+        name: limit
+        required: false
+        schema:
+          default: 200
+          maximum: 1000
+          minimum: 1
+          title: Limit
+          type: integer
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/AuditRecord'
+                title: Response Get Audit V1 T  Tenant Id  Audit Get
+                type: array
+          description: Successful Response
+        '422':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Get Audit
+      tags:
+      - apdt
+  /v1/t/{tenant_id}/bundles/{bundle_id}:
+    get:
+      operationId: get_bundle_v1_t__tenant_id__bundles__bundle_id__get
+      parameters:
+      - in: path
+        name: tenant_id
+        required: true
+        schema:
+          enum:
+          - fac-a
+          - fac-b
+          title: Tenant Id
+          type: string
+      - in: path
+        name: bundle_id
+        required: true
+        schema:
+          title: Bundle Id
+          type: string
+      - in: query
+        name: audience
+        required: false
+        schema:
+          default: medical_officer
+          title: Audience
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ExplanationBundle'
+          description: Successful Response
+        '422':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Get Bundle
+      tags:
+      - apdt
+  /v1/t/{tenant_id}/episodes:
+    get:
+      operationId: list_episodes_v1_t__tenant_id__episodes_get
+      parameters:
+      - in: path
+        name: tenant_id
+        required: true
+        schema:
+          enum:
+          - fac-a
+          - fac-b
+          title: Tenant Id
+          type: string
+      - in: query
+        name: status
+        required: false
+        schema:
+          default: open
+          enum:
+          - open
+          - closed
+          - all
+          title: Status
+          type: string
+      - in: query
+        name: hdt_id
+        required: false
+        schema:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Hdt Id
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/EpisodeListItem'
+                title: Response List Episodes V1 T  Tenant Id  Episodes Get
+                type: array
+          description: Successful Response
+        '422':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: List Episodes
+      tags:
+      - apdt
+    post:
+      operationId: create_episode_v1_t__tenant_id__episodes_post
+      parameters:
+      - in: path
+        name: tenant_id
+        required: true
+        schema:
+          enum:
+          - fac-a
+          - fac-b
+          title: Tenant Id
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EpisodeCreate'
+        required: true
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EpisodeView'
+          description: Successful Response
+        '422':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Create Episode
+      tags:
+      - apdt
+  /v1/t/{tenant_id}/episodes/{episode_id}:
+    get:
+      operationId: get_episode_v1_t__tenant_id__episodes__episode_id__get
+      parameters:
+      - in: path
+        name: tenant_id
+        required: true
+        schema:
+          enum:
+          - fac-a
+          - fac-b
+          title: Tenant Id
+          type: string
+      - in: path
+        name: episode_id
+        required: true
+        schema:
+          title: Episode Id
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EpisodeView'
+          description: Successful Response
+        '422':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Get Episode
+      tags:
+      - apdt
+  /v1/t/{tenant_id}/episodes/{episode_id}/ahdt-panel:
+    get:
+      operationId: get_panel_v1_t__tenant_id__episodes__episode_id__ahdt_panel_get
+      parameters:
+      - in: path
+        name: tenant_id
+        required: true
+        schema:
+          enum:
+          - fac-a
+          - fac-b
+          title: Tenant Id
+          type: string
+      - in: path
+        name: episode_id
+        required: true
+        schema:
+          title: Episode Id
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AHDTPanel'
+          description: Successful Response
+        '422':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Get Panel
+      tags:
+      - apdt
+  /v1/t/{tenant_id}/episodes/{episode_id}/close:
+    post:
+      operationId: close_episode_v1_t__tenant_id__episodes__episode_id__close_post
+      parameters:
+      - in: path
+        name: tenant_id
+        required: true
+        schema:
+          enum:
+          - fac-a
+          - fac-b
+          title: Tenant Id
+          type: string
+      - in: path
+        name: episode_id
+        required: true
+        schema:
+          title: Episode Id
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EpisodeClose'
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Episode'
+          description: Successful Response
+        '422':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Close Episode
+      tags:
+      - apdt
+  /v1/t/{tenant_id}/episodes/{episode_id}/goals/care:
+    post:
+      operationId: start_care_v1_t__tenant_id__episodes__episode_id__goals_care_post
+      parameters:
+      - in: path
+        name: tenant_id
+        required: true
+        schema:
+          enum:
+          - fac-a
+          - fac-b
+          title: Tenant Id
+          type: string
+      - in: path
+        name: episode_id
+        required: true
+        schema:
+          title: Episode Id
+          type: string
+      responses:
+        '202':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RunStarted'
+          description: Successful Response
+        '422':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Start Care
+      tags:
+      - apdt
+  /v1/t/{tenant_id}/episodes/{episode_id}/goals/diagnosis:
+    post:
+      operationId: start_diagnosis_v1_t__tenant_id__episodes__episode_id__goals_diagnosis_post
+      parameters:
+      - in: path
+        name: tenant_id
+        required: true
+        schema:
+          enum:
+          - fac-a
+          - fac-b
+          title: Tenant Id
+          type: string
+      - in: path
+        name: episode_id
+        required: true
+        schema:
+          title: Episode Id
+          type: string
+      responses:
+        '202':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RunStarted'
+          description: Successful Response
+        '422':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Start Diagnosis
+      tags:
+      - apdt
+  /v1/t/{tenant_id}/episodes/{episode_id}/goals/treatment:
+    post:
+      operationId: start_treatment_v1_t__tenant_id__episodes__episode_id__goals_treatment_post
+      parameters:
+      - in: path
+        name: tenant_id
+        required: true
+        schema:
+          enum:
+          - fac-a
+          - fac-b
+          title: Tenant Id
+          type: string
+      - in: path
+        name: episode_id
+        required: true
+        schema:
+          title: Episode Id
+          type: string
+      responses:
+        '202':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RunStarted'
+          description: Successful Response
+        '422':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Start Treatment
+      tags:
+      - apdt
+  /v1/t/{tenant_id}/episodes/{episode_id}/intake:
+    post:
+      operationId: record_intake_v1_t__tenant_id__episodes__episode_id__intake_post
+      parameters:
+      - in: path
+        name: tenant_id
+        required: true
+        schema:
+          enum:
+          - fac-a
+          - fac-b
+          title: Tenant Id
+          type: string
+      - in: path
+        name: episode_id
+        required: true
+        schema:
+          title: Episode Id
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/IntakeRecord'
+        required: true
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EpisodeView'
+          description: Successful Response
+        '422':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Record Intake
+      tags:
+      - apdt
+  /v1/t/{tenant_id}/episodes/{episode_id}/recommendations:
+    get:
+      operationId: recommendations_v1_t__tenant_id__episodes__episode_id__recommendations_get
+      parameters:
+      - in: path
+        name: tenant_id
+        required: true
+        schema:
+          enum:
+          - fac-a
+          - fac-b
+          title: Tenant Id
+          type: string
+      - in: path
+        name: episode_id
+        required: true
+        schema:
+          title: Episode Id
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Recommendation'
+                title: Response Recommendations V1 T  Tenant Id  Episodes  Episode Id  Recommendations
+                  Get
+                type: array
+          description: Successful Response
+        '422':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Recommendations
+      tags:
+      - apdt
+  /v1/t/{tenant_id}/episodes/{episode_id}/record:
+    get:
+      description: The diagnoses, dispenses and care given that clinicians entered, newest first.
+      operationId: get_record_v1_t__tenant_id__episodes__episode_id__record_get
+      parameters:
+      - in: path
+        name: tenant_id
+        required: true
+        schema:
+          enum:
+          - fac-a
+          - fac-b
+          title: Tenant Id
+          type: string
+      - in: path
+        name: episode_id
+        required: true
+        schema:
+          title: Episode Id
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/ClinicalEntry'
+                title: Response Get Record V1 T  Tenant Id  Episodes  Episode Id  Record Get
+                type: array
+          description: Successful Response
+        '422':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Get Record
+      tags:
+      - apdt
+  /v1/t/{tenant_id}/episodes/{episode_id}/record/administration:
+    post:
+      description: A medication the nurse gave or care the nurse carried out.
+      operationId: record_administration_v1_t__tenant_id__episodes__episode_id__record_administration_post
+      parameters:
+      - in: path
+        name: tenant_id
+        required: true
+        schema:
+          enum:
+          - fac-a
+          - fac-b
+          title: Tenant Id
+          type: string
+      - in: path
+        name: episode_id
+        required: true
+        schema:
+          title: Episode Id
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AdministrationEntry'
+        required: true
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ClinicalEntry'
+          description: Successful Response
+        '422':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Record Administration
+      tags:
+      - apdt
+  /v1/t/{tenant_id}/episodes/{episode_id}/record/diagnosis:
+    post:
+      description: The medical officer's diagnosis.
+      operationId: record_diagnosis_v1_t__tenant_id__episodes__episode_id__record_diagnosis_post
+      parameters:
+      - in: path
+        name: tenant_id
+        required: true
+        schema:
+          enum:
+          - fac-a
+          - fac-b
+          title: Tenant Id
+          type: string
+      - in: path
+        name: episode_id
+        required: true
+        schema:
+          title: Episode Id
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DiagnosisEntry'
+        required: true
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ClinicalEntry'
+          description: Successful Response
+        '422':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Record Diagnosis
+      tags:
+      - apdt
+  /v1/t/{tenant_id}/episodes/{episode_id}/record/dispense:
+    post:
+      description: A medication the pharmacist dispensed.
+      operationId: record_dispense_v1_t__tenant_id__episodes__episode_id__record_dispense_post
+      parameters:
+      - in: path
+        name: tenant_id
+        required: true
+        schema:
+          enum:
+          - fac-a
+          - fac-b
+          title: Tenant Id
+          type: string
+      - in: path
+        name: episode_id
+        required: true
+        schema:
+          title: Episode Id
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DispenseEntry'
+        required: true
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ClinicalEntry'
+          description: Successful Response
+        '422':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Record Dispense
+      tags:
+      - apdt
+  /v1/t/{tenant_id}/episodes/{episode_id}/resources:
+    post:
+      operationId: add_resource_v1_t__tenant_id__episodes__episode_id__resources_post
+      parameters:
+      - in: path
+        name: tenant_id
+        required: true
+        schema:
+          enum:
+          - fac-a
+          - fac-b
+          title: Tenant Id
+          type: string
+      - in: path
+        name: episode_id
+        required: true
+        schema:
+          title: Episode Id
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              additionalProperties: true
+              title: Resource
+              type: object
+        required: true
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                additionalProperties: true
+                title: Response Add Resource V1 T  Tenant Id  Episodes  Episode Id  Resources Post
+                type: object
+          description: Successful Response
+        '422':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Add Resource
+      tags:
+      - apdt
+  /v1/t/{tenant_id}/episodes/{episode_id}/unified-view:
+    get:
+      operationId: get_unified_v1_t__tenant_id__episodes__episode_id__unified_view_get
+      parameters:
+      - in: path
+        name: tenant_id
+        required: true
+        schema:
+          enum:
+          - fac-a
+          - fac-b
+          title: Tenant Id
+          type: string
+      - in: path
+        name: episode_id
+        required: true
+        schema:
+          title: Episode Id
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UnifiedView'
+          description: Successful Response
+        '422':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Get Unified
+      tags:
+      - apdt
+  /v1/t/{tenant_id}/intake/catalogue:
+    get:
+      operationId: intake_catalogue_v1_t__tenant_id__intake_catalogue_get
+      parameters:
+      - in: path
+        name: tenant_id
+        required: true
+        schema:
+          enum:
+          - fac-a
+          - fac-b
+          title: Tenant Id
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/IntakeCatalogue'
+          description: Successful Response
+        '422':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Intake Catalogue
+      tags:
+      - apdt
+  /v1/t/{tenant_id}/integration/dicom-sr:
+    post:
+      operationId: from_dicom_sr_v1_t__tenant_id__integration_dicom_sr_post
+      parameters:
+      - in: path
+        name: tenant_id
+        required: true
+        schema:
+          title: Tenant Id
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                additionalProperties: true
+                title: Response From Dicom Sr V1 T  Tenant Id  Integration Dicom Sr Post
+                type: object
+          description: Successful Response
+        '422':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: From Dicom Sr
+      tags:
+      - integration
+  /v1/t/{tenant_id}/integration/fhir:
+    post:
+      operationId: from_fhir_v1_t__tenant_id__integration_fhir_post
+      parameters:
+      - in: path
+        name: tenant_id
+        required: true
+        schema:
+          title: Tenant Id
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                additionalProperties: true
+                title: Response From Fhir V1 T  Tenant Id  Integration Fhir Post
+                type: object
+          description: Successful Response
+        '422':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: From Fhir
+      tags:
+      - integration
+  /v1/t/{tenant_id}/integration/hl7v2:
+    post:
+      operationId: from_hl7v2_v1_t__tenant_id__integration_hl7v2_post
+      parameters:
+      - in: path
+        name: tenant_id
+        required: true
+        schema:
+          title: Tenant Id
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                additionalProperties: true
+                title: Response From Hl7V2 V1 T  Tenant Id  Integration Hl7V2 Post
+                type: object
+          description: Successful Response
+        '422':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: From Hl7V2
+      tags:
+      - integration
+  /v1/t/{tenant_id}/integration/referral:
+    post:
+      operationId: referral_v1_t__tenant_id__integration_referral_post
+      parameters:
+      - in: path
+        name: tenant_id
+        required: true
+        schema:
+          title: Tenant Id
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                additionalProperties: true
+                title: Response Referral V1 T  Tenant Id  Integration Referral Post
+                type: object
+          description: Successful Response
+        '422':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Referral
+      tags:
+      - integration
+  /v1/t/{tenant_id}/patients:
+    get:
+      operationId: list_patients_v1_t__tenant_id__patients_get
+      parameters:
+      - in: path
+        name: tenant_id
+        required: true
+        schema:
+          enum:
+          - fac-a
+          - fac-b
+          title: Tenant Id
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/PatientEntry'
+                title: Response List Patients V1 T  Tenant Id  Patients Get
+                type: array
+          description: Successful Response
+        '422':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: List Patients
+      tags:
+      - apdt
+  /v1/t/{tenant_id}/patients/{hdt_id}/consent:
+    get:
+      operationId: get_consent_v1_t__tenant_id__patients__hdt_id__consent_get
+      parameters:
+      - in: path
+        name: tenant_id
+        required: true
+        schema:
+          enum:
+          - fac-a
+          - fac-b
+          title: Tenant Id
+          type: string
+      - in: path
+        name: hdt_id
+        required: true
+        schema:
+          title: Hdt Id
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ConsentData'
+          description: Successful Response
+        '422':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Get Consent
+      tags:
+      - apdt
+    put:
+      operationId: put_consent_v1_t__tenant_id__patients__hdt_id__consent_put
+      parameters:
+      - in: path
+        name: tenant_id
+        required: true
+        schema:
+          enum:
+          - fac-a
+          - fac-b
+          title: Tenant Id
+          type: string
+      - in: path
+        name: hdt_id
+        required: true
+        schema:
+          title: Hdt Id
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              additionalProperties: true
+              title: Resource
+              type: object
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ConsentData'
+          description: Successful Response
+        '422':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Put Consent
+      tags:
+      - apdt
+  /v1/t/{tenant_id}/patients/{hdt_id}/messages:
+    post:
+      operationId: post_message_v1_t__tenant_id__patients__hdt_id__messages_post
+      parameters:
+      - in: path
+        name: tenant_id
+        required: true
+        schema:
+          enum:
+          - fac-a
+          - fac-b
+          title: Tenant Id
+          type: string
+      - in: path
+        name: hdt_id
+        required: true
+        schema:
+          title: Hdt Id
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatientMessage'
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PatientReply'
+          description: Successful Response
+        '422':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Post Message
+      tags:
+      - apdt
+  /v1/t/{tenant_id}/patients/{hdt_id}/preferences:
+    put:
+      operationId: put_preferences_v1_t__tenant_id__patients__hdt_id__preferences_put
+      parameters:
+      - in: path
+        name: tenant_id
+        required: true
+        schema:
+          enum:
+          - fac-a
+          - fac-b
+          title: Tenant Id
+          type: string
+      - in: path
+        name: hdt_id
+        required: true
+        schema:
+          title: Hdt Id
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Preferences'
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PreferenceWeights'
+          description: Successful Response
+        '422':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Put Preferences
+      tags:
+      - apdt
+  /v1/t/{tenant_id}/questionnaires/{qid}:
+    get:
+      operationId: get_questionnaire_v1_t__tenant_id__questionnaires__qid__get
+      parameters:
+      - in: path
+        name: tenant_id
+        required: true
+        schema:
+          title: Tenant Id
+          type: string
+      - in: path
+        name: qid
+        required: true
+        schema:
+          title: Qid
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                additionalProperties: true
+                title: Response Get Questionnaire V1 T  Tenant Id  Questionnaires  Qid  Get
+                type: object
+          description: Successful Response
+        '422':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Get Questionnaire
+      tags:
+      - questionnaires
+  /v1/t/{tenant_id}/questionnaires/{qid}/extract:
+    post:
+      operationId: extract_v1_t__tenant_id__questionnaires__qid__extract_post
+      parameters:
+      - in: path
+        name: tenant_id
+        required: true
+        schema:
+          title: Tenant Id
+          type: string
+      - in: path
+        name: qid
+        required: true
+        schema:
+          title: Qid
+          type: string
+      - in: query
+        name: episode_id
+        required: false
+        schema:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Episode Id
+      requestBody:
+        content:
+          application/json:
+            schema:
+              additionalProperties: true
+              title: Response
+              type: object
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                additionalProperties: true
+                title: Response Extract V1 T  Tenant Id  Questionnaires  Qid  Extract Post
+                type: object
+          description: Successful Response
+        '422':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Extract
+      tags:
+      - questionnaires
+  /v1/t/{tenant_id}/questionnaires/{qid}/populate:
+    post:
+      operationId: populate_v1_t__tenant_id__questionnaires__qid__populate_post
+      parameters:
+      - in: path
+        name: tenant_id
+        required: true
+        schema:
+          title: Tenant Id
+          type: string
+      - in: path
+        name: qid
+        required: true
+        schema:
+          title: Qid
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PopulateRequest'
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                additionalProperties: true
+                title: Response Populate V1 T  Tenant Id  Questionnaires  Qid  Populate Post
+                type: object
+          description: Successful Response
+        '422':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Populate
+      tags:
+      - questionnaires
+  /v1/t/{tenant_id}/referrals:
+    post:
+      operationId: post_referral_v1_t__tenant_id__referrals_post
+      parameters:
+      - in: path
+        name: tenant_id
+        required: true
+        schema:
+          enum:
+          - fac-a
+          - fac-b
+          title: Tenant Id
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ReferralRequest'
+        required: true
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ReferralResult'
+          description: Successful Response
+        '422':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Post Referral
+      tags:
+      - apdt
+  /v1/t/{tenant_id}/runs/{run_id}:
+    get:
+      operationId: get_run_v1_t__tenant_id__runs__run_id__get
+      parameters:
+      - in: path
+        name: tenant_id
+        required: true
+        schema:
+          enum:
+          - fac-a
+          - fac-b
+          title: Tenant Id
+          type: string
+      - in: path
+        name: run_id
+        required: true
+        schema:
+          title: Run Id
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RunStatus'
+          description: Successful Response
+        '422':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Get Run
+      tags:
+      - apdt
+  /v1/t/{tenant_id}/runs/{run_id}/resume:
+    post:
+      operationId: resume_run_v1_t__tenant_id__runs__run_id__resume_post
+      parameters:
+      - in: path
+        name: tenant_id
+        required: true
+        schema:
+          enum:
+          - fac-a
+          - fac-b
+          title: Tenant Id
+          type: string
+      - in: path
+        name: run_id
+        required: true
+        schema:
+          title: Run Id
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ClinicalDecision'
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RunStatus'
+          description: Successful Response
+        '422':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Resume Run
+      tags:
+      - apdt
+  /v1/t/{tenant_id}/worklists/{role}:
+    get:
+      operationId: get_worklist_v1_t__tenant_id__worklists__role__get
+      parameters:
+      - in: path
+        name: tenant_id
+        required: true
+        schema:
+          enum:
+          - fac-a
+          - fac-b
+          title: Tenant Id
+          type: string
+      - in: path
+        name: role
+        required: true
+        schema:
+          $ref: '#/components/schemas/Role'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Worklist'
+          description: Successful Response
+        '422':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Get Worklist
+      tags:
+      - apdt

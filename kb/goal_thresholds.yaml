@@ -1,0 +1,122 @@
+# Thresholds of the orchestrators' standing goals.
+# Draft placeholders written by WP01; WP21 fills and sources every value (design 06, 6.3.3).
+- id: goal.cv.arrhythmia_probability
+  value: null
+  unit: '1'
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Placeholder until WP21 sources this entry from a guideline or reference.
+- id: goal.cv.forecast_sbp
+  value: 140
+  unit: mm[Hg]
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Value stated in design 04, 4.9.2; WP21 replaces it with a sourced value.
+- id: goal.dig.association_p
+  value: null
+  unit: '1'
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Placeholder until WP21 sources this entry from a guideline or reference.
+- id: goal.endo.hyper
+  value: null
+  unit: mmol/L
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Placeholder until WP21 sources this entry from a guideline or reference.
+- id: goal.endo.hypo
+  value: null
+  unit: mmol/L
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Placeholder until WP21 sources this entry from a guideline or reference.
+- id: goal.haem.crisis_risk
+  value: 0.3
+  unit: '1'
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Value stated in design 04, 4.9.2; WP21 replaces it with a sourced value.
+- id: goal.haem.hb_by_sex
+  value: null
+  unit: g/dL
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Placeholder until WP21 sources this entry from a guideline or reference.
+- id: goal.hep.clearance_factor
+  value: 0.5
+  unit: '1'
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Value stated in design 04, 4.9.2; WP21 replaces it with a sourced value.
+- id: goal.integ.heat_index
+  value: null
+  unit: Cel
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Placeholder until WP21 sources this entry from a guideline or reference.
+- id: goal.msk.fall_risk
+  value: 0.3
+  unit: '1'
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Value stated in design 04, 4.9.2; WP21 replaces it with a sourced value.
+- id: goal.ren.aki_stage
+  value: 1
+  unit: '1'
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Value stated in design 04, 4.9.2; WP21 replaces it with a sourced value.
+- id: goal.ren.dosing_egfr
+  value: null
+  unit: mL/min/{1.73_m2}
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Placeholder until WP21 sources this entry from a guideline or reference.
+- id: goal.resp.desaturation_probability
+  value: null
+  unit: '1'
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Placeholder until WP21 sources this entry from a guideline or reference.
+- id: goal.resp.exacerbation_risk
+  value: 0.3
+  unit: '1'
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Value stated in design 04, 4.9.2; WP21 replaces it with a sourced value.
+- id: goal.sens.change
+  value: null
+  unit: '1'
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Placeholder until WP21 sources this entry from a guideline or reference.

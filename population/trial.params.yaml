@@ -1,0 +1,20 @@
+# In-silico antihypertensive trial on virtual twins of the heart model.
+model_id: ahdt.population.in_silico_trial
+sources:
+- id: atra-assumption
+  citation: ATRA design 01 rule R5 assumption register
+params:
+  resistance_factor_mean: {value: 1.35, unit: '1', source: atra-assumption, assumption: true,
+                           justification: "Systemic resistance factor of a hypertensive
+                             virtual twin; the value the synthetic population uses for
+                             persons with hypertension, tuned so that they sit above 140/90
+                             mmHg with the published heart parameters."}
+  resistance_factor_sd: {value: 0.1, unit: '1', source: atra-assumption, assumption: true,
+                         justification: "Spread of the resistance factor between virtual
+                           twins; the value of the synthetic population."}
+  treatment_resistance_reduction: {value: 0.14, unit: '1', source: atra-assumption,
+                                   assumption: true,
+                                   justification: "Relative fall of systemic resistance on
+                                     the trial drug; two titration steps of the synthetic
+                                     therapy trajectories. A simulator parameter, not a drug
+                                     effect."}

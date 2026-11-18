@@ -1,0 +1,83 @@
+kind: nervous
+name: Nervous DT
+referent: Brain, spinal cord, peripheral and autonomic nerves
+fields:
+- name: gcs_total
+  loinc: 9269-2
+  ucum: '{score}'
+  ref: range.gcs_total
+  source:
+  - manual
+- name: avpu
+  ucum: '1'
+  ref: range.avpu
+  source:
+  - manual
+- name: pain_nrs
+  loinc: 72514-3
+  ucum: '{score}'
+  ref: range.pain_nrs
+  source:
+  - self_report
+  - manual
+- name: sleep_duration
+  loinc: 93832-4
+  ucum: h
+  ref: range.sleep_duration
+  source:
+  - wearable
+  - self_report
+- name: autonomic_tone
+  ucum: '1'
+  ref: range.autonomic_tone
+  source:
+  - derived
+models:
+- ahdt.nervous.brain_regions_spinal_cord_nerves_and_neural_tissue
+- ahdt.nervous.neuron_and_circuit
+- ahdt.nervous.pain
+- ahdt.nervous.circadian_rhythm_and_sleep
+- ahdt.nervous.eeg_analysis_and_sleep_staging
+owns_instances:
+- UBERON:0000955
+reads_facets:
+- instance: UBERON:0001898
+  facet: neural
+- instance: UBERON:0001905
+  facet: circadian
+- instance: UBERON:0000947
+  facet: vascular
+- instance: UBERON:0002097
+  facet: thermal
+standing_goals:
+- id: nerv.signs_current
+  text: Keep sleep, pain and neurological signs current
+  check:
+    kind: freshness
+    params:
+      fields:
+      - avpu
+      - pain_nrs
+      max_age_s: 3600
+- id: nerv.circadian_daily
+  text: Update the circadian phase estimate daily
+  check:
+    kind: freshness
+    params:
+      fields:
+      - sleep_duration
+      max_age_s: 86400
+- id: nerv.avpu_alert
+  text: Alert when AVPU is not Alert
+  check:
+    kind: threshold
+    params:
+      field: avpu
+      not_equal: A
+connectors_out:
+- NeuroEndocrineConnector
+- SystemToWholeBodyConnector
+connectors_in:
+- InfectionNeuroConnector
+- IntegumentaryThermoConnector
+- NormsConnector

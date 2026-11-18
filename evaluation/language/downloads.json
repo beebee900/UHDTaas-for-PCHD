@@ -1,0 +1,548 @@
+{
+ "qwen/.gitattributes": {
+  "url": "https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct",
+  "revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+  "licence": "Apache-2.0",
+  "bytes": 1519,
+  "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361"
+ },
+ "qwen/config.json": {
+  "url": "https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct",
+  "revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+  "licence": "Apache-2.0",
+  "bytes": 659,
+  "sha256": "18e18afcaccafade98daf13a54092927904649e1dd4eba8299ab717d5d94ff45"
+ },
+ "qwen/generation_config.json": {
+  "url": "https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct",
+  "revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+  "licence": "Apache-2.0",
+  "bytes": 242,
+  "sha256": "e558847a8b4402616f1273797b015104dc266fe4b520056fca88823ba8f8ebe6"
+ },
+ "qwen/merges.txt": {
+  "url": "https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct",
+  "revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+  "licence": "Apache-2.0",
+  "bytes": 1671839,
+  "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3"
+ },
+ "qwen/model.safetensors": {
+  "url": "https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct",
+  "revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+  "licence": "Apache-2.0",
+  "bytes": 988097824,
+  "sha256": "fdf756fa7fcbe7404d5c60e26bff1a0c8b8aa1f72ced49e7dd0210fe288fb7fe"
+ },
+ "qwen/tokenizer.json": {
+  "url": "https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct",
+  "revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+  "licence": "Apache-2.0",
+  "bytes": 7031645,
+  "sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539"
+ },
+ "qwen/tokenizer_config.json": {
+  "url": "https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct",
+  "revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+  "licence": "Apache-2.0",
+  "bytes": 7305,
+  "sha256": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583"
+ },
+ "qwen/vocab.json": {
+  "url": "https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct",
+  "revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+  "licence": "Apache-2.0",
+  "bytes": 2776833,
+  "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+ },
+ "mms-asr/config.json": {
+  "url": "https://huggingface.co/facebook/mms-1b-all",
+  "revision": "3d33597edbdaaba14a8e858e2c8caa76e3cec0cd",
+  "licence": "CC-BY-NC-4.0",
+  "bytes": 2040,
+  "sha256": "ee172ef39a0e40c55403fb811fa0f56c6198c7ed21a2bdf5bd0e72e52c07a41c"
+ },
+ "mms-asr/model.safetensors": {
+  "url": "https://huggingface.co/facebook/mms-1b-all",
+  "revision": "3d33597edbdaaba14a8e858e2c8caa76e3cec0cd",
+  "licence": "CC-BY-NC-4.0",
+  "bytes": 3859521128,
+  "sha256": "0f1d95ce43d27e03d5d8dd56c697c805460f967c793dd2cbec2e8e8012deda98"
+ },
+ "mms-asr/vocab.json": {
+  "url": "https://huggingface.co/facebook/mms-1b-all",
+  "revision": "3d33597edbdaaba14a8e858e2c8caa76e3cec0cd",
+  "licence": "CC-BY-NC-4.0",
+  "bytes": 1340148,
+  "sha256": "0375a07a977a599040a7ff333b6974996965cd93754020619518c15db7691f01"
+ },
+ "mms-asr/tokenizer_config.json": {
+  "url": "https://huggingface.co/facebook/mms-1b-all",
+  "revision": "3d33597edbdaaba14a8e858e2c8caa76e3cec0cd",
+  "licence": "CC-BY-NC-4.0",
+  "bytes": 397,
+  "sha256": "42a65547cf0654d12263ece7c909c4b0c574b660c78658f806c772cc223bc01b"
+ },
+ "mms-asr/special_tokens_map.json": {
+  "url": "https://huggingface.co/facebook/mms-1b-all",
+  "revision": "3d33597edbdaaba14a8e858e2c8caa76e3cec0cd",
+  "licence": "CC-BY-NC-4.0",
+  "bytes": 96,
+  "sha256": "9046da57c270c8e74d0f38832b4adce269c9d914ef21d2a0925e7772152dd793"
+ },
+ "mms-asr/preprocessor_config.json": {
+  "url": "https://huggingface.co/facebook/mms-1b-all",
+  "revision": "3d33597edbdaaba14a8e858e2c8caa76e3cec0cd",
+  "licence": "CC-BY-NC-4.0",
+  "bytes": 254,
+  "sha256": "f724fdad65341e79bd9741888fe4e8ce1bb2e7b44fc8216c28c591afb1e202f4"
+ },
+ "mms-asr/adapter.yor.safetensors": {
+  "url": "https://huggingface.co/facebook/mms-1b-all",
+  "revision": "3d33597edbdaaba14a8e858e2c8caa76e3cec0cd",
+  "licence": "CC-BY-NC-4.0",
+  "bytes": 9121368,
+  "sha256": "43808f930def13dc4e0907c82f1780920860b0e35a0e1db7e8356b2360466449"
+ },
+ "mms-asr/adapter.hau.safetensors": {
+  "url": "https://huggingface.co/facebook/mms-1b-all",
+  "revision": "3d33597edbdaaba14a8e858e2c8caa76e3cec0cd",
+  "licence": "CC-BY-NC-4.0",
+  "bytes": 9070120,
+  "sha256": "a894e878a56d35bedd6be9e8224e43e18061fd8996d94754d8b8fecb44010cf5"
+ },
+ "mms-asr/adapter.ibo.safetensors": {
+  "url": "https://huggingface.co/facebook/mms-1b-all",
+  "revision": "3d33597edbdaaba14a8e858e2c8caa76e3cec0cd",
+  "licence": "CC-BY-NC-4.0",
+  "bytes": 9095740,
+  "sha256": "40cf96caceebe6acc7c62bf3c2b63960ef3bcdd308d60f99f07c014f588bfbfd"
+ },
+ "mms-tts-yor/config.json": {
+  "url": "https://huggingface.co/facebook/mms-tts-yor",
+  "revision": "d359e06b481cb5402e2e4215475b90c07a3f12e2",
+  "licence": "CC-BY-NC-4.0",
+  "bytes": 1641,
+  "sha256": "d0378ee0c78342b0e6ccaa43a2c7d93949ca93cd6e74ea5ede0937533c8d9b2a"
+ },
+ "mms-tts-yor/model.safetensors": {
+  "url": "https://huggingface.co/facebook/mms-tts-yor",
+  "revision": "d359e06b481cb5402e2e4215475b90c07a3f12e2",
+  "licence": "CC-BY-NC-4.0",
+  "bytes": 145231352,
+  "sha256": "aa4e892d1d4feecec41e60757a116de8beac58517a042849340861cfb17043c5"
+ },
+ "mms-tts-yor/vocab.json": {
+  "url": "https://huggingface.co/facebook/mms-tts-yor",
+  "revision": "d359e06b481cb5402e2e4215475b90c07a3f12e2",
+  "licence": "CC-BY-NC-4.0",
+  "bytes": 488,
+  "sha256": "2f95ef547f1aec1cabb7afd18c4a991c6dd4d504211fb86e5cca02decec996cf"
+ },
+ "mms-tts-yor/tokenizer_config.json": {
+  "url": "https://huggingface.co/facebook/mms-tts-yor",
+  "revision": "d359e06b481cb5402e2e4215475b90c07a3f12e2",
+  "licence": "CC-BY-NC-4.0",
+  "bytes": 287,
+  "sha256": "25adc57f7cc2f274c334e8c34eedc222737b5e6ea436d4b6fcf37a00c70d5111"
+ },
+ "mms-tts-yor/special_tokens_map.json": {
+  "url": "https://huggingface.co/facebook/mms-tts-yor",
+  "revision": "d359e06b481cb5402e2e4215475b90c07a3f12e2",
+  "licence": "CC-BY-NC-4.0",
+  "bytes": 47,
+  "sha256": "845f635933c404f060a1d7a2f4c4494bf4a91f8ebec99a41108778d026426dfc"
+ },
+ "mms-tts-hau/config.json": {
+  "url": "https://huggingface.co/facebook/mms-tts-hau",
+  "revision": "f0eb02aa37f7259f35349da63cafe0556cf93e3d",
+  "licence": "CC-BY-NC-4.0",
+  "bytes": 1641,
+  "sha256": "336d47b61b0b20c0a29bd76b7e25ac423b48bce4483c37f50308140df2626567"
+ },
+ "mms-tts-hau/model.safetensors": {
+  "url": "https://huggingface.co/facebook/mms-tts-hau",
+  "revision": "f0eb02aa37f7259f35349da63cafe0556cf93e3d",
+  "licence": "CC-BY-NC-4.0",
+  "bytes": 145224440,
+  "sha256": "8a68b8c658853a92fd50eca25fcfd76d069616052f99aa84719c5e40c133249d"
+ },
+ "mms-tts-hau/vocab.json": {
+  "url": "https://huggingface.co/facebook/mms-tts-hau",
+  "revision": "f0eb02aa37f7259f35349da63cafe0556cf93e3d",
+  "licence": "CC-BY-NC-4.0",
+  "bytes": 374,
+  "sha256": "5abb858d4b0f2641becb611a4d016437fb1d630a8d09c0256856117ff31bc6ba"
+ },
+ "mms-tts-hau/tokenizer_config.json": {
+  "url": "https://huggingface.co/facebook/mms-tts-hau",
+  "revision": "f0eb02aa37f7259f35349da63cafe0556cf93e3d",
+  "licence": "CC-BY-NC-4.0",
+  "bytes": 287,
+  "sha256": "12e47c65bf0f93c56ae0f207288d57f24dbc0a253dec58b7d71a40762a739cbf"
+ },
+ "mms-tts-hau/special_tokens_map.json": {
+  "url": "https://huggingface.co/facebook/mms-tts-hau",
+  "revision": "f0eb02aa37f7259f35349da63cafe0556cf93e3d",
+  "licence": "CC-BY-NC-4.0",
+  "bytes": 47,
+  "sha256": "4f1fb0d57b85d32ae624d33babc8b7505b714cf4dc5ec70d2bd2c8d0854ffcc1"
+ },
+ "mms-tts-eng/config.json": {
+  "url": "https://huggingface.co/facebook/mms-tts-eng",
+  "revision": "c71de0fe7204c83f1c10820a7d696d0b450048ba",
+  "licence": "CC-BY-NC-4.0",
+  "bytes": 1641,
+  "sha256": "c2a93c1dfbf33b640163f2ade16345b9a5194fa54de9a04a04272b76a97fe171"
+ },
+ "mms-tts-eng/model.safetensors": {
+  "url": "https://huggingface.co/facebook/mms-tts-eng",
+  "revision": "c71de0fe7204c83f1c10820a7d696d0b450048ba",
+  "licence": "CC-BY-NC-4.0",
+  "bytes": 145227512,
+  "sha256": "69cf8b651c1493f1801dfd2311c298d694a38357bc9a1e41f410491ea6f0e1be"
+ },
+ "mms-tts-eng/vocab.json": {
+  "url": "https://huggingface.co/facebook/mms-tts-eng",
+  "revision": "c71de0fe7204c83f1c10820a7d696d0b450048ba",
+  "licence": "CC-BY-NC-4.0",
+  "bytes": 413,
+  "sha256": "304f7e71c40d601f9b89d81904609512eebe96b2a941f0a251fc0c9f397bcc45"
+ },
+ "mms-tts-eng/tokenizer_config.json": {
+  "url": "https://huggingface.co/facebook/mms-tts-eng",
+  "revision": "c71de0fe7204c83f1c10820a7d696d0b450048ba",
+  "licence": "CC-BY-NC-4.0",
+  "bytes": 287,
+  "sha256": "77c74b93b1d36f29248926dbd7714bda59990159cd14cd7ba45fd0115bff905b"
+ },
+ "mms-tts-eng/special_tokens_map.json": {
+  "url": "https://huggingface.co/facebook/mms-tts-eng",
+  "revision": "c71de0fe7204c83f1c10820a7d696d0b450048ba",
+  "licence": "CC-BY-NC-4.0",
+  "bytes": 47,
+  "sha256": "87c02ba90dba0e0765358bd3aa2265714b2405429b069a89af51e292db9b8c3d"
+ },
+ "mms-tts-yor-disc/full_models/yor/D_100000.pth": {
+  "url": "https://huggingface.co/facebook/mms-tts",
+  "revision": "44cc7fb408064ef9ea6e7c59130d88cac1274671",
+  "licence": "CC-BY-NC-4.0",
+  "bytes": 561079264,
+  "sha256": "83968d8f97a16940ded68694ca69480bd30e787b9e5fd2d53f81889af1ddf054"
+ },
+ "mms-tts-yor-disc/full_models/yor/config.json": {
+  "url": "https://huggingface.co/facebook/mms-tts",
+  "revision": "44cc7fb408064ef9ea6e7c59130d88cac1274671",
+  "licence": "CC-BY-NC-4.0",
+  "bytes": 1887,
+  "sha256": "ec453d50be1976ddb3b501c7dc09128cdf360b83e5b0cf7dec68dc5caa460f49"
+ },
+ "whisper-small/.gitattributes": {
+  "url": "https://huggingface.co/Systran/faster-whisper-small",
+  "revision": "536b0662742c02347bc0e980a01041f333bce120",
+  "licence": "MIT",
+  "bytes": 1477,
+  "sha256": "db7c0371f46f0840b8f25794c1e3321c9b5820a8cb6ba9694a46fc64b8fae5a6"
+ },
+ "whisper-small/README.md": {
+  "url": "https://huggingface.co/Systran/faster-whisper-small",
+  "revision": "536b0662742c02347bc0e980a01041f333bce120",
+  "licence": "MIT",
+  "bytes": 1998,
+  "sha256": "329373481008c7c38654aff8ecdcf0163c211557cc7ba8e2ef6f2f84b4f75ec8"
+ },
+ "whisper-small/config.json": {
+  "url": "https://huggingface.co/Systran/faster-whisper-small",
+  "revision": "536b0662742c02347bc0e980a01041f333bce120",
+  "licence": "MIT",
+  "bytes": 2370,
+  "sha256": "b55496ac7940a7ae47d2c01eab40edfd8701feec1229d9cce3b40014383fb828"
+ },
+ "whisper-small/model.bin": {
+  "url": "https://huggingface.co/Systran/faster-whisper-small",
+  "revision": "536b0662742c02347bc0e980a01041f333bce120",
+  "licence": "MIT",
+  "bytes": 483546902,
+  "sha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671"
+ },
+ "whisper-small/tokenizer.json": {
+  "url": "https://huggingface.co/Systran/faster-whisper-small",
+  "revision": "536b0662742c02347bc0e980a01041f333bce120",
+  "licence": "MIT",
+  "bytes": 2203239,
+  "sha256": "fb7b63191e9bb045082c79fd742a3106a12c99513ab30df4a0d47fa6cb6fd0ab"
+ },
+ "whisper-small/vocabulary.txt": {
+  "url": "https://huggingface.co/Systran/faster-whisper-small",
+  "revision": "536b0662742c02347bc0e980a01041f333bce120",
+  "licence": "MIT",
+  "bytes": 459861,
+  "sha256": "34ce3fe1c5041027b3f8d42912270993f986dbc4bb34cf27f951e34a1e453913"
+ },
+ "nllb/config.json": {
+  "url": "https://huggingface.co/facebook/nllb-200-distilled-600M",
+  "revision": "f8d333a098d19b4fd9a8b18f94170487ad3f821d",
+  "licence": "CC-BY-NC-4.0",
+  "bytes": 846,
+  "sha256": "f9b4081d3d108e9d06532ea8d92b932c04ed3a15ff2f87e6982f8e14db51fbc5"
+ },
+ "nllb/generation_config.json": {
+  "url": "https://huggingface.co/facebook/nllb-200-distilled-600M",
+  "revision": "f8d333a098d19b4fd9a8b18f94170487ad3f821d",
+  "licence": "CC-BY-NC-4.0",
+  "bytes": 189,
+  "sha256": "0bb604cdb8392649176935a447ce994128f170a6908c135a17d0e3dfb8113cb2"
+ },
+ "nllb/pytorch_model.bin": {
+  "url": "https://huggingface.co/facebook/nllb-200-distilled-600M",
+  "revision": "f8d333a098d19b4fd9a8b18f94170487ad3f821d",
+  "licence": "CC-BY-NC-4.0",
+  "bytes": 2460457927,
+  "sha256": "c266c2cfd19758b6d09c1fc31ecdf1e485509035f6b51dfe84f1ada83eefcc42"
+ },
+ "nllb/sentencepiece.bpe.model": {
+  "url": "https://huggingface.co/facebook/nllb-200-distilled-600M",
+  "revision": "f8d333a098d19b4fd9a8b18f94170487ad3f821d",
+  "licence": "CC-BY-NC-4.0",
+  "bytes": 4852054,
+  "sha256": "14bb8dfb35c0ffdea7bc01e56cea38b9e3d5efcdcb9c251d6b40538e1aab555a"
+ },
+ "nllb/special_tokens_map.json": {
+  "url": "https://huggingface.co/facebook/nllb-200-distilled-600M",
+  "revision": "f8d333a098d19b4fd9a8b18f94170487ad3f821d",
+  "licence": "CC-BY-NC-4.0",
+  "bytes": 3548,
+  "sha256": "992bd4ed610d644d6823081937bcc91bb8878dd556cea4ae5327f2480361330e"
+ },
+ "nllb/tokenizer.json": {
+  "url": "https://huggingface.co/facebook/nllb-200-distilled-600M",
+  "revision": "f8d333a098d19b4fd9a8b18f94170487ad3f821d",
+  "licence": "CC-BY-NC-4.0",
+  "bytes": 17331176,
+  "sha256": "e316b82de11d0f951f370943b3c438311629547285129b0b81dadabd01bca665"
+ },
+ "nllb/tokenizer_config.json": {
+  "url": "https://huggingface.co/facebook/nllb-200-distilled-600M",
+  "revision": "f8d333a098d19b4fd9a8b18f94170487ad3f821d",
+  "licence": "CC-BY-NC-4.0",
+  "bytes": 564,
+  "sha256": "d1aa8c3697d3e35674f97b5b7e9c99d22b010f528e80140257d97316be90d044"
+ },
+ "bge-reranker/config.json": {
+  "url": "https://huggingface.co/BAAI/bge-reranker-base",
+  "revision": "2cfc18c9415c912f9d8155881c133215df768a70",
+  "licence": "MIT",
+  "bytes": 799,
+  "sha256": "289adf7ada1eb6b4afa7589a48a032d45a076cf2e46dcdb3b4cabc33be14f708"
+ },
+ "bge-reranker/model.safetensors": {
+  "url": "https://huggingface.co/BAAI/bge-reranker-base",
+  "revision": "2cfc18c9415c912f9d8155881c133215df768a70",
+  "licence": "MIT",
+  "bytes": 1112206140,
+  "sha256": "ced967c45fd1902eb92716c9ceeca7c95a936770ea9db611f5a841b926e33fbd"
+ },
+ "bge-reranker/sentencepiece.bpe.model": {
+  "url": "https://huggingface.co/BAAI/bge-reranker-base",
+  "revision": "2cfc18c9415c912f9d8155881c133215df768a70",
+  "licence": "MIT",
+  "bytes": 5069051,
+  "sha256": "cfc8146abe2a0488e9e2a0c56de7952f7c11ab059eca145a0a727afce0db2865"
+ },
+ "bge-reranker/special_tokens_map.json": {
+  "url": "https://huggingface.co/BAAI/bge-reranker-base",
+  "revision": "2cfc18c9415c912f9d8155881c133215df768a70",
+  "licence": "MIT",
+  "bytes": 279,
+  "sha256": "d5469a60db23249c7f8945013d78df30b44b6bf686c6bb4740f4223f77b1b535"
+ },
+ "bge-reranker/tokenizer.json": {
+  "url": "https://huggingface.co/BAAI/bge-reranker-base",
+  "revision": "2cfc18c9415c912f9d8155881c133215df768a70",
+  "licence": "MIT",
+  "bytes": 17098107,
+  "sha256": "9eb652ac4e40cc093272bbbe0f55d521cf67570060227109b5cdc20945a4489e"
+ },
+ "bge-reranker/tokenizer_config.json": {
+  "url": "https://huggingface.co/BAAI/bge-reranker-base",
+  "revision": "2cfc18c9415c912f9d8155881c133215df768a70",
+  "licence": "MIT",
+  "bytes": 443,
+  "sha256": "a1d6bc8734a6f635dc158508bef000f8e2e5a759c7d92f984b2c86e5ff53425b"
+ },
+ "biolord/1_Pooling/config.json": {
+  "url": "https://huggingface.co/FremyCompany/BioLORD-2023",
+  "revision": "167aab527b238a50ca65224e6319215d2ff4fc9f",
+  "licence": "other (see model card)",
+  "bytes": 190,
+  "sha256": "a37f83ada23e7887be6b88f4998927dbeac0038af301553c7cd5461413bf1a56"
+ },
+ "biolord/config.json": {
+  "url": "https://huggingface.co/FremyCompany/BioLORD-2023",
+  "revision": "167aab527b238a50ca65224e6319215d2ff4fc9f",
+  "licence": "other (see model card)",
+  "bytes": 649,
+  "sha256": "11e8f12f4e21c3e98381d89f06f26444a7c8988ea69a05080bdd87cbf25bb67c"
+ },
+ "biolord/config_sentence_transformers.json": {
+  "url": "https://huggingface.co/FremyCompany/BioLORD-2023",
+  "revision": "167aab527b238a50ca65224e6319215d2ff4fc9f",
+  "licence": "other (see model card)",
+  "bytes": 124,
+  "sha256": "69b09462ade8e34aa152a72971d728c5f00fb515b984043f475a7f40d44c9349"
+ },
+ "biolord/model.safetensors": {
+  "url": "https://huggingface.co/FremyCompany/BioLORD-2023",
+  "revision": "167aab527b238a50ca65224e6319215d2ff4fc9f",
+  "licence": "other (see model card)",
+  "bytes": 437971872,
+  "sha256": "f8c969586cc6b0fd393faa7d879de93d6cc532123956041fefd3474194322050"
+ },
+ "biolord/modules.json": {
+  "url": "https://huggingface.co/FremyCompany/BioLORD-2023",
+  "revision": "167aab527b238a50ca65224e6319215d2ff4fc9f",
+  "licence": "other (see model card)",
+  "bytes": 229,
+  "sha256": "8f4b264b80206c830bebbdcae377e137925650a433b689343a63bdc9b3145460"
+ },
+ "biolord/sentence_bert_config.json": {
+  "url": "https://huggingface.co/FremyCompany/BioLORD-2023",
+  "revision": "167aab527b238a50ca65224e6319215d2ff4fc9f",
+  "licence": "other (see model card)",
+  "bytes": 53,
+  "sha256": "70f4448f31320443fe3557cacea5abf2dcc4915dda8c80646bec9f3bb0aa5a1f"
+ },
+ "biolord/special_tokens_map.json": {
+  "url": "https://huggingface.co/FremyCompany/BioLORD-2023",
+  "revision": "167aab527b238a50ca65224e6319215d2ff4fc9f",
+  "licence": "other (see model card)",
+  "bytes": 280,
+  "sha256": "15a9b70f6a5defe4feac823a82e6412e5d5bfd8eab09d8dbcf5ac241f14a7756"
+ },
+ "biolord/tokenizer.json": {
+  "url": "https://huggingface.co/FremyCompany/BioLORD-2023",
+  "revision": "167aab527b238a50ca65224e6319215d2ff4fc9f",
+  "licence": "other (see model card)",
+  "bytes": 711831,
+  "sha256": "7b286b2f33574928f512b6756b3693930f6c31d0b6260c27c782524ff4c02e05"
+ },
+ "biolord/tokenizer_config.json": {
+  "url": "https://huggingface.co/FremyCompany/BioLORD-2023",
+  "revision": "167aab527b238a50ca65224e6319215d2ff4fc9f",
+  "licence": "other (see model card)",
+  "bytes": 1455,
+  "sha256": "287dafbe59b35d6a95ca812914d5d6c13576abd9e1bc844dc28d7cddddb1024b"
+ },
+ "biolord/vocab.txt": {
+  "url": "https://huggingface.co/FremyCompany/BioLORD-2023",
+  "revision": "167aab527b238a50ca65224e6319215d2ff4fc9f",
+  "licence": "other (see model card)",
+  "bytes": 231536,
+  "sha256": "dbd90cb94e2247bd4d4ccaecbf616d2290e66691d7d5e5bb81f063c2d0649ada"
+ },
+ "waxal-ibo/data/TTS/ibo/ibo-train-00000.parquet": {
+  "url": "https://huggingface.co/google/WaxalNLP",
+  "revision": "5f4d8ca24f2b9d168b2ee545f1febaaff4b40580",
+  "licence": "CC-BY-SA-4.0 / CC-BY-4.0 (see dataset card)",
+  "bytes": 551938795,
+  "sha256": "3c3469806c1a43c46bde9232e36794112962ef021d6afec01383a2e408d8b3f1"
+ },
+ "waxal-ibo/data/TTS/ibo/ibo-validation-00000.parquet": {
+  "url": "https://huggingface.co/google/WaxalNLP",
+  "revision": "5f4d8ca24f2b9d168b2ee545f1febaaff4b40580",
+  "licence": "CC-BY-SA-4.0 / CC-BY-4.0 (see dataset card)",
+  "bytes": 75804531,
+  "sha256": "305f558df15b5d65de5b0891fe8c50c6e1e13284ec7c63d7ff4935fbe32859e8"
+ },
+ "waxal-ibo/data/TTS/ibo/ibo-test-00000.parquet": {
+  "url": "https://huggingface.co/google/WaxalNLP",
+  "revision": "5f4d8ca24f2b9d168b2ee545f1febaaff4b40580",
+  "licence": "CC-BY-SA-4.0 / CC-BY-4.0 (see dataset card)",
+  "bytes": 114178236,
+  "sha256": "6ebbaab9764a53588f033d6393dbc64286529c6e9bcb03b203ae8537711b8174"
+ },
+ "mafand/en-pcm/train": {
+  "url": "https://raw.githubusercontent.com/masakhane-io/lafand-mt/main/data/json_files/en-pcm/train.json",
+  "licence": "CC-BY-NC-4.0",
+  "bytes": 1401994,
+  "sha256": "626f201900a9a95d3144b13d55ee7c8afbae70a8d65d73223e89be6a2303551f"
+ },
+ "mafand/en-pcm/dev": {
+  "url": "https://raw.githubusercontent.com/masakhane-io/lafand-mt/main/data/json_files/en-pcm/dev.json",
+  "licence": "CC-BY-NC-4.0",
+  "bytes": 457055,
+  "sha256": "6c2aef216115d19f26df311bbd3bd4d8eb00d6610e3a9595b2f7854f5dc33b8b"
+ },
+ "mafand/en-pcm/test": {
+  "url": "https://raw.githubusercontent.com/masakhane-io/lafand-mt/main/data/json_files/en-pcm/test.json",
+  "licence": "CC-BY-NC-4.0",
+  "bytes": 494006,
+  "sha256": "e57cc6894fdec342c30a86a6df0e40b32e90339e4fabf64d6b85ccc66a714dc8"
+ },
+ "mafand/en-yor/train": {
+  "url": "https://raw.githubusercontent.com/masakhane-io/lafand-mt/main/data/json_files/en-yor/train.json",
+  "licence": "CC-BY-NC-4.0",
+  "bytes": 2326814,
+  "sha256": "f19f64dd3990d1498d53c1ab68048a4c0c33e2285d618a406d3d3878e1a89c9d"
+ },
+ "mafand/en-yor/dev": {
+  "url": "https://raw.githubusercontent.com/masakhane-io/lafand-mt/main/data/json_files/en-yor/dev.json",
+  "licence": "CC-BY-NC-4.0",
+  "bytes": 630494,
+  "sha256": "924c236bcb64511d5b0152bd890f55294c17cfd8ce6514c0f85363a311b9e3dd"
+ },
+ "mafand/en-yor/test": {
+  "url": "https://raw.githubusercontent.com/masakhane-io/lafand-mt/main/data/json_files/en-yor/test.json",
+  "licence": "CC-BY-NC-4.0",
+  "bytes": 579507,
+  "sha256": "f465a1ad89c32e33997472ef35990bd63e240361f772e359270ea289b8be1910"
+ },
+ "mafand/en-hau/train": {
+  "url": "https://raw.githubusercontent.com/masakhane-io/lafand-mt/main/data/json_files/en-hau/train.json",
+  "licence": "CC-BY-NC-4.0",
+  "bytes": 2022048,
+  "sha256": "f9fcf143cfea270ac45f80ac718dfc93e4cab2cdde2ae42729663c5228574fb8"
+ },
+ "mafand/en-hau/dev": {
+  "url": "https://raw.githubusercontent.com/masakhane-io/lafand-mt/main/data/json_files/en-hau/dev.json",
+  "licence": "CC-BY-NC-4.0",
+  "bytes": 463539,
+  "sha256": "b45335649ee37dc7f9d5d38f6af74c21458a5dab73ac444143cf504ae2eaf73f"
+ },
+ "mafand/en-hau/test": {
+  "url": "https://raw.githubusercontent.com/masakhane-io/lafand-mt/main/data/json_files/en-hau/test.json",
+  "licence": "CC-BY-NC-4.0",
+  "bytes": 507281,
+  "sha256": "7e3ae974d87c8f2cbc504f1399ee12fb181b8244f5b3ad7eb9a877b07c57e08b"
+ },
+ "mafand/en-ibo/train": {
+  "url": "https://raw.githubusercontent.com/masakhane-io/lafand-mt/main/data/json_files/en-ibo/train.json",
+  "licence": "CC-BY-NC-4.0",
+  "bytes": 1952468,
+  "sha256": "cdf15fc769975b856da9a36fc42b05504d76c8466765b7e22ab2f94c28f2878f"
+ },
+ "mafand/en-ibo/dev": {
+  "url": "https://raw.githubusercontent.com/masakhane-io/lafand-mt/main/data/json_files/en-ibo/dev.json",
+  "licence": "CC-BY-NC-4.0",
+  "bytes": 328629,
+  "sha256": "829cf64df11b34431fdb1090a256afa92ff64987c463cc1ef36473576032af03"
+ },
+ "mafand/en-ibo/test": {
+  "url": "https://raw.githubusercontent.com/masakhane-io/lafand-mt/main/data/json_files/en-ibo/test.json",
+  "licence": "CC-BY-NC-4.0",
+  "bytes": 319970,
+  "sha256": "ea2fb956d138bf9f5ff36bdd7c737a50efe53c905d72a66458b950ebaeafb994"
+ },
+ "menyo-20k": {
+  "url": "https://github.com/uds-lsv/menyo-20k_MT/archive/refs/heads/master.zip",
+  "licence": "CC-BY-NC-4.0",
+  "bytes": 5573603,
+  "sha256": "ad33be8436be39d7e3216c3ecdf30eb1087f966c8cbbf6c03d495eebbba89579"
+ },
+ "finetune-hf-vits": {
+  "url": "https://github.com/ylacombe/finetune-hf-vits/archive/refs/heads/main.zip",
+  "licence": "MIT",
+  "bytes": 54751,
+  "sha256": "1aba7c324f924496eefc5e0624658b057279b3cd58656516d5fde8849aa9a23a"
+ }
+}

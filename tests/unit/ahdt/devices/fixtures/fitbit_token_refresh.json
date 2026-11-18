@@ -1,0 +1,12 @@
+{
+ "source_url": "https://dev.fitbit.com/build/reference/web-api/authorization/refresh-token/",
+ "retrieved": "2026-10-10",
+ "kind": "verbatim_sample",
+ "body": {
+  "access_token": "eyJhbGciOiJIUzI1...",
+  "expires_in": 28800,
+  "refresh_token": "c643a63c072f0f05478e9d18b991db80ef6061e...",
+  "token_type": "Bearer",
+  "user_id": "GGNJL9"
+ }
+}

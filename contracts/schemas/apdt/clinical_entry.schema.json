@@ -1,0 +1,76 @@
+{
+  "$defs": {
+    "Actor": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "role": {
+          "title": "Role",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "role"
+      ],
+      "title": "Actor",
+      "type": "object"
+    }
+  },
+  "$id": "https://atra.local/schemas/apdt/clinical_entry.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "One entry of an episode's clinical record: a diagnosis, a dispense or care given.\n`resource` is the FHIR resource the entry is stored as.",
+  "properties": {
+    "details": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Details",
+      "type": "array"
+    },
+    "entry_id": {
+      "title": "Entry Id",
+      "type": "string"
+    },
+    "kind": {
+      "enum": [
+        "diagnosis",
+        "dispense",
+        "administration"
+      ],
+      "title": "Kind",
+      "type": "string"
+    },
+    "recorded_at": {
+      "format": "date-time",
+      "title": "Recorded At",
+      "type": "string"
+    },
+    "recorded_by": {
+      "$ref": "#/$defs/Actor"
+    },
+    "resource": {
+      "additionalProperties": true,
+      "title": "Resource",
+      "type": "object"
+    },
+    "title": {
+      "title": "Title",
+      "type": "string"
+    }
+  },
+  "required": [
+    "entry_id",
+    "kind",
+    "title",
+    "recorded_by",
+    "recorded_at",
+    "resource"
+  ],
+  "title": "ClinicalEntry",
+  "type": "object"
+}

@@ -1,0 +1,85 @@
+# Parameters of the APDT Layer 4 models that the kb does not hold. Each entry is an
+# assumption with its reason. Clinical thresholds, doses, accuracies and prevalences are never
+# listed here; they come from the kb.
+
+default_prior:
+  value: 0.01
+  assumption: true
+  justification: A condition with no sourced prevalence in the kb or the Population twin gets
+    one small prior, so its rank depends on the findings and not on an invented prevalence.
+
+hard_gates:
+  value:
+    cond.scd_crisis: {hb_genotype: [HbSS, HbSC]}
+    cond.pregnancy: {sex: [female]}
+    cond.pre_eclampsia: {sex: [female], pregnancy: [t2, t3]}
+  assumption: true
+  justification: Definitional gates. A sickle cell crisis needs a sickle genotype, and
+    pregnancy and pre-eclampsia need a pregnant woman. A gated condition has probability 0
+    when the patient does not meet the gate.
+
+unknown_test_accuracy:
+  value: unscored
+  assumption: true
+  justification: A test whose kb entry gives no sensitivity and specificity cannot enter the
+    Bayesian network or the value-of-information ranking. It is listed, unscored.
+
+at_least_accuracy:
+  value: bound
+  assumption: true
+  justification: Where the kb gives only a lower bound on sensitivity or specificity
+    (`*_at_least`), the bound is used as the value, which understates the test.
+
+voi_weights:
+  value: {cost: 1.0, delay: 1.0, cost_unit_ngn: 1000.0, delay_unit_h: 24.0}
+  assumption: true
+  justification: Design 05 5.5.1 scores a test by VoI divided by a weighted sum of cost and
+    turnaround. Equal weights on cost per 1000 naira and delay per day are a neutral start for
+    the clinician to adjust per tenant.
+
+severity_rules:
+  value:
+    cond.pyelonephritis: {severe_when: [pregnant, shock_or_impaired_consciousness],
+                          default: mild}
+    cond.hypertension: {uncontrolled_when: measured_above_target}
+    cond.scd_crisis: {default: moderate}
+    cond.tb_pulmonary: {default: drug_susceptible}
+  assumption: true
+  justification: The kb treatment entries are keyed by a severity label that no kb entry
+    grades. The pyelonephritis rule follows the note of tx.pyelonephritis.pregnancy.ceftriaxone
+    (managed as severe in pregnancy). The other defaults pick the label the kb entry uses.
+
+extra_links:
+  value:
+    - {condition: cond.scd_crisis, finding: find.anaemia, strength: in_favour}
+  assumption: true
+  justification: Sickle cell disease is a chronic haemolytic anaemia, so a low haemoglobin in a
+    person with a sickle genotype is explained by the condition. The kb lists no anaemia
+    association for cond.scd_crisis; without this link anaemia alone outranks the crisis.
+
+route_burden:
+  value: {oral: 0.0, rectal: 0.3, subcutaneous: 0.5, intramuscular: 0.6, intravenous: 1.0}
+  assumption: true
+  justification: An ordinal burden score for the route criterion of the preference model, on
+    a 0 to 1 scale. It orders the routes by invasiveness and is replaced by the patient's own
+    paired choices when those are elicited.
+
+literacy_levels:
+  value: {low: [0, 1], medium: [2, 2], high: [3, 3]}
+  assumption: true
+  justification: A three-item screening question scores 0 to 3 correct answers. The mapping
+    of the score to a level is a starting point for the text-adaptation hook.
+
+listing_threshold:
+  value: 0.05
+  assumption: true
+  justification: A differential lists a candidate when its probability reaches this value or
+    when the symbolic layer forces it on as a condition to rule out. The kb gives no cut-off
+    for listing.
+
+anomaly:
+  value: {trees: 25, height: 8, window: 50, flag_score: 0.7, warmup: 50}
+  assumption: true
+  justification: River HalfSpaceTrees settings. The tree count, height and window are River's
+    defaults; the flag score and the warm-up length (values seen before scores count) are
+    starting values to tune on tenant lab trends.

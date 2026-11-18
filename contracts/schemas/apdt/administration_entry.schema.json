@@ -1,0 +1,89 @@
+{
+  "$id": "https://atra.local/schemas/apdt/administration_entry.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "A medication the nurse gives, or a care activity the nurse carries out.",
+  "properties": {
+    "dose": {
+      "anyOf": [
+        {
+          "maxLength": 200,
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Dose"
+    },
+    "given_at": {
+      "anyOf": [
+        {
+          "format": "date-time",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Given At"
+    },
+    "item": {
+      "maxLength": 200,
+      "minLength": 1,
+      "title": "Item",
+      "type": "string"
+    },
+    "kind": {
+      "enum": [
+        "medication",
+        "care"
+      ],
+      "title": "Kind",
+      "type": "string"
+    },
+    "notes": {
+      "anyOf": [
+        {
+          "maxLength": 2000,
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Notes"
+    },
+    "route": {
+      "anyOf": [
+        {
+          "enum": [
+            "oral",
+            "intravenous",
+            "intramuscular",
+            "subcutaneous",
+            "topical",
+            "inhaled",
+            "rectal",
+            "other"
+          ],
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Route"
+    }
+  },
+  "required": [
+    "kind",
+    "item"
+  ],
+  "title": "AdministrationEntry",
+  "type": "object"
+}

@@ -1,0 +1,731 @@
+# Every source of the knowledge base (design 06, 6.3.1).
+# `bytes` is the size measured before download. `sha256` and `accessed` are written by
+# `python -m atra.kbtools fetch`. Sources with `status: unavailable` have no retrievable
+# full text; entries that cite them carry `assumption: true` or a secondary source.
+# The local copy of every source lives at var/kb_sources/<id>.<format>.
+
+- id: who-malaria-2026
+  title: WHO guidelines for malaria, 10 September 2026
+  publisher: World Health Organization
+  year: 2026
+  edition: 10 September 2026
+  landing: https://hdl.handle.net/10665/387504
+  url: https://iris.who.int/server/api/core/bitstreams/d3c6488b-3ee6-41cb-960f-ddf0202cd74d/content
+  format: pdf
+  bytes: 3500000
+  licence: CC BY-NC-SA 3.0 IGO
+  pathways: [acute_febrile]
+- id: who-aware-2022
+  title: The WHO AWaRe (Access, Watch, Reserve) antibiotic book
+  publisher: World Health Organization
+  year: 2022
+  isbn: '9789240062382'
+  landing: https://hdl.handle.net/10665/365237
+  url: https://iris.who.int/server/api/core/bitstreams/61517f8b-3a34-413c-ae36-67a059ebe485/content
+  format: pdf
+  bytes: 10300000
+  licence: CC BY-NC-SA 3.0 IGO
+  pathways: [acute_febrile, respiratory]
+- id: who-imai-dcm-2011-v1
+  title: 'IMAI district clinician manual: hospital care for adolescents and adults, volume 1'
+  publisher: World Health Organization
+  year: 2011
+  isbn: '9789241548281'
+  landing: https://hdl.handle.net/10665/77751
+  url: https://iris.who.int/server/api/core/bitstreams/ebb5d5b5-7fb2-4163-a9dd-a3a8598ef13f/content
+  format: pdf
+  bytes: 2900000
+  licence: null
+  pathways: [acute_febrile, respiratory, renal, cross_cutting]
+- id: who-imai-dcm-2011-v2
+  title: 'IMAI district clinician manual: hospital care for adolescents and adults, volume 2'
+  publisher: World Health Organization
+  year: 2011
+  isbn: '9789241548290'
+  landing: https://hdl.handle.net/10665/77751
+  url: https://iris.who.int/server/api/core/bitstreams/8ca41728-72d6-4c6b-87cc-6c7c30fd1d17/content
+  format: pdf
+  bytes: 3900000
+  licence: null
+  pathways: [acute_febrile, cardiometabolic, chronic_infection]
+- id: who-pocketbook-children-2013
+  title: 'Pocket book of hospital care for children: guidelines for the management of common childhood illnesses, second edition'
+  publisher: World Health Organization
+  year: 2013
+  isbn: '9789241548373'
+  landing: https://hdl.handle.net/10665/81170
+  url: https://iris.who.int/server/api/core/bitstreams/8f110da0-22e6-4ef1-90e4-c9f1b7daa363/content
+  format: pdf
+  bytes: 3100000
+  licence: null
+  pathways: [acute_febrile, respiratory, haematology]
+- id: ncdc-lassa-2018
+  title: National guidelines for Lassa fever case management
+  publisher: Nigeria Centre for Disease Control
+  year: 2018
+  landing: https://ncdc.gov.ng/diseases/guidelines
+  url: https://www.ncdc.gov.ng/themes/common/docs/protocols/92_1547068532.pdf
+  format: pdf
+  bytes: 1349657
+  licence: null
+  pathways: [acute_febrile]
+- id: ncdc-protocol-360
+  title: NCDC protocol document 360 (title confirmed on fetch)
+  publisher: Nigeria Centre for Disease Control
+  year: 2025
+  url: https://ncdc.gov.ng/themes/common/docs/protocols/360_1741614804.pdf
+  format: pdf
+  bytes: 433348
+  licence: null
+  pathways: [acute_febrile]
+  note: Candidate newer Lassa fever document; kept only if the fetched title confirms it.
+- id: ssc-2021
+  title: 'Surviving sepsis campaign: international guidelines for management of sepsis and septic shock 2021'
+  publisher: Intensive Care Medicine
+  year: 2021
+  doi: 10.1007/s00134-021-06506-y
+  landing: https://europepmc.org/article/PMC/PMC8486643
+  url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8486643/fullTextXML
+  format: jats
+  bytes: 859043
+  licence: CC BY-NC 4.0
+  pathways: [acute_febrile]
+- id: who-htn-2021
+  title: Guideline for the pharmacological treatment of hypertension in adults
+  publisher: World Health Organization
+  year: 2021
+  isbn: '9789240033986'
+  landing: https://hdl.handle.net/10665/344424
+  url: https://iris.who.int/server/api/core/bitstreams/f062769d-f075-4a00-87af-0a2106e0bd04/content
+  format: pdf
+  bytes: 800000
+  licence: CC BY-NC-SA 3.0 IGO
+  pathways: [cardiometabolic]
+- id: who-hearts-protocols-2018
+  title: 'HEARTS technical package for cardiovascular disease management in primary health care: evidence-based treatment protocols'
+  publisher: World Health Organization
+  year: 2018
+  landing: https://hdl.handle.net/10665/260421
+  url: https://iris.who.int/server/api/core/bitstreams/21769583-367d-47f8-b1a3-4e1abc4a9639/content
+  format: pdf
+  bytes: 1700000
+  licence: CC BY-NC-SA 3.0 IGO
+  pathways: [cardiometabolic]
+- id: who-hearts-d-2020
+  title: 'HEARTS D: diagnosis and management of type 2 diabetes'
+  publisher: World Health Organization
+  year: 2020
+  landing: https://hdl.handle.net/10665/331710
+  url: https://iris.who.int/server/api/core/bitstreams/2a0b4f68-7155-4ad1-b543-945791e31830/content
+  format: pdf
+  bytes: 1200000
+  licence: CC BY-NC-SA 3.0 IGO
+  pathways: [cardiometabolic]
+- id: who-pen-2020
+  title: WHO package of essential noncommunicable (PEN) disease interventions for primary health care
+  publisher: World Health Organization
+  year: 2020
+  isbn: '9789240009226'
+  landing: https://hdl.handle.net/10665/334186
+  url: https://iris.who.int/server/api/core/bitstreams/b9f09202-a320-4c07-ba2c-afe0d1186339/content
+  format: pdf
+  bytes: 2600000
+  licence: CC BY-NC-SA 3.0 IGO
+  pathways: [cardiometabolic, respiratory]
+- id: gold-2025-pocket
+  title: 'Pocket guide to COPD diagnosis, management, and prevention: 2025 report'
+  publisher: Global Initiative for Chronic Obstructive Lung Disease
+  year: 2025
+  url: https://goldcopd.org/wp-content/uploads/2024/11/Pocket-Guide-2025-v1.1-NewFormat-21Nov24_WMV.pdf
+  format: pdf
+  bytes: 12531283
+  licence: GOLD copyright; read and paraphrased only
+  pathways: [respiratory]
+- id: kdigo-aki-2012
+  title: KDIGO clinical practice guideline for acute kidney injury
+  publisher: Kidney International Supplements
+  year: 2012
+  url: https://kdigo.org/wp-content/uploads/2016/10/KDIGO-2012-AKI-Guideline-English.pdf
+  format: pdf
+  bytes: 1650239
+  licence: KDIGO copyright; read and paraphrased only
+  pathways: [renal]
+- id: kdigo-ckd-2024-full
+  title: KDIGO 2024 clinical practice guideline for the evaluation and management of chronic kidney disease
+  publisher: Kidney International
+  year: 2024
+  url: https://kdigo.org/wp-content/uploads/2024/03/KDIGO-2024-CKD-Guideline.pdf
+  format: pdf
+  bytes: 5966902
+  licence: KDIGO copyright; read and paraphrased only
+  pathways: [renal]
+- id: who-tb-handbook-m4-2025
+  title: 'WHO consolidated operational handbook on tuberculosis: module 4: treatment and care'
+  publisher: World Health Organization
+  year: 2025
+  landing: https://hdl.handle.net/10665/381095
+  url: https://iris.who.int/server/api/core/bitstreams/3556af0b-860f-432d-a50d-8349ef636309/content
+  format: pdf
+  bytes: 4300000
+  licence: CC BY-NC-SA 3.0 IGO
+  pathways: [chronic_infection]
+- id: kdigo-ckd-2024
+  title: 'Executive summary of the KDIGO 2024 clinical practice guideline for the evaluation and management of chronic kidney disease'
+  publisher: Kidney International
+  year: 2024
+  url: https://kdigo.org/wp-content/uploads/2017/02/KDIGO-2024-CKD-Guideline-Executive-Summary.pdf
+  format: pdf
+  bytes: 889463
+  licence: KDIGO copyright; read and paraphrased only
+  pathways: [renal]
+- id: who-tb-m4-2026
+  title: 'WHO consolidated guidelines on tuberculosis: module 4: treatment and care'
+  publisher: World Health Organization
+  year: 2026
+  isbn: '9789240125124'
+  landing: https://hdl.handle.net/10665/387622
+  url: https://iris.who.int/server/api/core/bitstreams/fb7951ad-797f-4382-9792-c5a0b3136100/content
+  format: pdf
+  bytes: 6200000
+  licence: CC BY-NC-SA 3.0 IGO
+  pathways: [chronic_infection]
+- id: who-tb-m3-2025
+  title: 'WHO consolidated guidelines on tuberculosis: module 3: diagnosis'
+  publisher: World Health Organization
+  year: 2025
+  isbn: '9789240107984'
+  landing: https://hdl.handle.net/10665/381003
+  url: https://iris.who.int/server/api/core/bitstreams/ae20e43e-17fd-4951-b475-3e36e166e7ae/content
+  format: pdf
+  bytes: 3600000
+  licence: CC BY-NC-SA 3.0 IGO
+  pathways: [chronic_infection]
+- id: who-hiv-2021
+  title: 'Consolidated guidelines on HIV prevention, testing, treatment, service delivery and monitoring'
+  publisher: World Health Organization
+  year: 2021
+  isbn: '9789240031593'
+  landing: https://hdl.handle.net/10665/342899
+  url: https://iris.who.int/server/api/core/bitstreams/a4c03ed9-5446-4958-a26f-10e505c2679c/content
+  format: pdf
+  bytes: 10900000
+  licence: CC BY-NC-SA 3.0 IGO
+  pathways: [chronic_infection]
+- id: ng-scd-2014
+  title: National guideline for the control and management of sickle cell disease
+  publisher: Federal Ministry of Health, Nigeria
+  year: 2014
+  url: https://www.policyvault.africa/wp-content/uploads/policy/NGA60.pdf
+  format: pdf
+  bytes: 1503266
+  licence: null
+  pathways: [haematology]
+- id: who-hb-2024
+  title: Guideline on haemoglobin cutoffs to define anaemia in individuals and populations
+  publisher: World Health Organization
+  year: 2024
+  isbn: '9789240088542'
+  landing: https://hdl.handle.net/10665/376196
+  url: https://iris.who.int/server/api/core/bitstreams/f9f74397-1440-478d-a63c-26f29a01552f/content
+  format: pdf
+  bytes: 1400000
+  licence: CC BY-NC-SA 3.0 IGO
+  pathways: [haematology]
+- id: who-mhgap-ig-2016
+  title: mhGAP intervention guide for mental, neurological and substance use disorders in non-specialized health settings, version 2.0
+  publisher: World Health Organization
+  year: 2016
+  isbn: '9789241549790'
+  landing: https://hdl.handle.net/10665/250239
+  url: https://iris.who.int/server/api/core/bitstreams/6ded7ffd-9d69-493a-b48a-0b3e6250c173/content
+  format: pdf
+  bytes: 3600000
+  licence: null
+  pathways: [mental_health]
+- id: who-mhgap-2023
+  title: Mental Health Gap Action Programme (mhGAP) guideline for mental, neurological and substance use disorders
+  publisher: World Health Organization
+  year: 2023
+  isbn: '9789240084278'
+  landing: https://hdl.handle.net/10665/374250
+  url: https://iris.who.int/server/api/core/bitstreams/93e56376-0e64-4a08-bdd0-703313be5354/content
+  format: pdf
+  bytes: 1100000
+  licence: CC BY-NC-SA 3.0 IGO
+  pathways: [mental_health]
+- id: phq-manual
+  title: Instruction manual for the Patient Health Questionnaire (PHQ) and GAD-7 measures
+  publisher: Pfizer (via The Joint Commission measure manual)
+  year: 2010
+  url: https://manual.jointcommission.org/pub/BHCInstruments/RomInstr00054/instructions_PHQ.pdf
+  format: pdf
+  bytes: 134493
+  licence: Free to reproduce, translate, display and distribute
+  pathways: [mental_health]
+- id: who-tb-report-2025
+  title: Global tuberculosis report 2025
+  publisher: World Health Organization
+  year: 2025
+  isbn: '9789240116924'
+  landing: https://www.who.int/teams/global-programme-on-tuberculosis-and-lung-health/tb-reports/global-tuberculosis-report-2025
+  url: https://iris.who.int/server/api/core/bitstreams/e97dd6f4-b567-4396-8680-717bac6869a9/content
+  format: pdf
+  bytes: 5200208
+  licence: CC BY-NC-SA 3.0 IGO
+  pathways: [chronic_infection]
+- id: rcpath-g158-critical-results
+  title: The communication of critical and unexpected pathology results (G158)
+  publisher: The Royal College of Pathologists
+  year: 2026
+  landing: https://www.rcpath.org/resourceLibrary/g158-bpr-the-communication-of-critical-and-unexpected-pathology-results.html
+  url: https://www.rcpath.org/asset/BB86B370-1545-4C5A-B5826A2C431934F5/
+  format: pdf
+  bytes: 433383
+  licence: null
+  pathways: [cross_cutting]
+- id: adeloye-2021-htn
+  title: 'Prevalence, awareness, treatment, and control of hypertension in Nigeria in 1995 and 2020: a systematic analysis of current evidence'
+  publisher: Journal of Clinical Hypertension
+  year: 2021
+  doi: 10.1111/jch.14220
+  landing: https://europepmc.org/article/PMC/PMC8678849
+  url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8678849/fullTextXML
+  format: jats
+  bytes: 195583
+  licence: CC BY-NC 4.0
+  pathways: [cardiometabolic]
+- id: odili-2020-htn
+  title: 'Prevalence, awareness, treatment and control of hypertension in Nigeria: data from a nationwide survey 2017'
+  publisher: Global Heart
+  year: 2020
+  doi: 10.5334/gh.848
+  landing: https://europepmc.org/article/PMC/PMC7427662
+  url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7427662/fullTextXML
+  format: jats
+  bytes: 121730
+  licence: CC BY 4.0
+  pathways: [cardiometabolic]
+- id: uloko-2018-dm
+  title: 'Prevalence and risk factors for diabetes mellitus in Nigeria: a systematic review and meta-analysis'
+  publisher: Diabetes Therapy
+  year: 2018
+  doi: 10.1007/s13300-018-0441-1
+  landing: https://europepmc.org/article/PMC/PMC5984944
+  url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5984944/fullTextXML
+  format: jats
+  bytes: 66425
+  licence: CC BY-NC 4.0
+  pathways: [cardiometabolic]
+- id: issa-2025-scd
+  title: 'Prevalence of sickle cell disease and sickle cell traits among children and adolescents in Nigeria: a systematic review and meta-analysis'
+  publisher: Systematic Reviews
+  year: 2025
+  doi: 10.1186/s13643-025-03029-1
+  landing: https://europepmc.org/article/PMC/PMC12849485
+  url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12849485/fullTextXML
+  format: jats
+  bytes: 145074
+  licence: CC BY-NC-ND 4.0
+  pathways: [cross_cutting]
+- id: oviedo-2023-malaria
+  title: 'Plasmodium falciparum infection prevalence among children aged 6-59 months from independent DHS and HIV surveys: Nigeria, 2018'
+  publisher: Scientific Reports
+  year: 2023
+  doi: 10.1038/s41598-023-28257-0
+  landing: https://europepmc.org/article/PMC/PMC9898257
+  url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9898257/fullTextXML
+  format: jats
+  bytes: 90224
+  licence: CC BY 4.0
+  pathways: [acute_febrile]
+- id: onovo-2023-hiv
+  title: 'Estimation of HIV prevalence and burden in Nigeria: a Bayesian predictive modelling study'
+  publisher: EClinicalMedicine
+  year: 2023
+  doi: 10.1016/j.eclinm.2023.102098
+  landing: https://europepmc.org/article/PMC/PMC10393599
+  url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10393599/fullTextXML
+  format: jats
+  bytes: 148627
+  licence: CC BY-NC-ND 4.0
+  pathways: [chronic_infection]
+- id: gad7-form
+  title: Generalized Anxiety Disorder 7-item (GAD-7) scale, English
+  publisher: Pfizer (PHQ Screeners)
+  landing: https://www.phqscreeners.com/select-screener
+  url: https://www.phqscreeners.com/images/sites/g/files/g10060481/f/201412/GAD-7_English.pdf
+  format: pdf
+  bytes: 32952
+  licence: Free to reproduce, translate, display and distribute
+  pathways: [mental_health]
+- id: who-anc-2016
+  title: WHO recommendations on antenatal care for a positive pregnancy experience
+  publisher: World Health Organization
+  year: 2016
+  isbn: '9789241549912'
+  landing: https://hdl.handle.net/10665/250796
+  url: https://iris.who.int/server/api/core/bitstreams/9dccde13-3593-4a22-9237-61abe5a3c6b7/content
+  format: pdf
+  bytes: 3900000
+  licence: null
+  pathways: [maternal]
+- id: who-pe-2011
+  title: WHO recommendations for prevention and treatment of pre-eclampsia and eclampsia
+  publisher: World Health Organization
+  year: 2011
+  isbn: '9789241548335'
+  landing: https://hdl.handle.net/10665/44703
+  url: https://iris.who.int/server/api/core/bitstreams/02f76d6d-4f9f-4662-84fe-e23c186e1594/content
+  format: pdf
+  bytes: 900000
+  licence: null
+  pathways: [maternal]
+- id: nphcda-immunization-ig
+  title: NPHCDA immunization FHIR implementation guide, health interventions and recommendations
+  publisher: National Primary Health Care Development Agency, Nigeria FHIR Community
+  year: 2025
+  url: https://build.fhir.org/ig/Nigeria-FHIR-Community/NPHCDA-ImmunizationIG/health-interventions-recommendations.html
+  format: html
+  bytes: 21034
+  licence: null
+  pathways: [maternal, cross_cutting]
+- id: rcp-news2-2017
+  title: 'National Early Warning Score (NEWS) 2: standardising the assessment of acute-illness severity in the NHS'
+  publisher: Royal College of Physicians
+  year: 2017
+  url: https://www.rcp.ac.uk/media/a4ibkkbf/news2-final-report_0_0.pdf
+  format: pdf
+  bytes: 2588875
+  licence: No copyright restriction; RCP to be acknowledged
+  pathways: [cross_cutting]
+- id: nhse-pews-0-11m
+  title: 'National PEWS observation and escalation chart: 0 to 11 months'
+  publisher: NHS England
+  year: 2023
+  url: https://www.england.nhs.uk/wp-content/uploads/2023/11/pews-observation-and-escalation-chart-0-11-months-updated.pdf
+  format: pdf
+  bytes: 221422
+  licence: null
+  pathways: [cross_cutting]
+- id: nhse-pews-1-4y
+  title: 'National PEWS observation and escalation chart: 1 to 4 years'
+  publisher: NHS England
+  year: 2023
+  url: https://www.england.nhs.uk/wp-content/uploads/2023/11/pews-observation-and-escalation-chart-1-4-years-updated.pdf
+  format: pdf
+  bytes: 223157
+  licence: null
+  pathways: [cross_cutting]
+- id: nhse-pews-5-12y
+  title: 'National PEWS observation and escalation chart: 5 to 12 years'
+  publisher: NHS England
+  year: 2023
+  url: https://www.england.nhs.uk/wp-content/uploads/2023/11/pews-observation-and-escalation-chart-5-12-years-updated.pdf
+  format: pdf
+  bytes: 228808
+  licence: null
+  pathways: [cross_cutting]
+- id: nhse-pews-13y
+  title: 'National PEWS observation and escalation chart: 13 years and over'
+  publisher: NHS England
+  year: 2023
+  url: https://www.england.nhs.uk/wp-content/uploads/2023/11/pews-observation-and-escalation-chart-13-years-updated.pdf
+  format: pdf
+  bytes: 230421
+  licence: null
+  pathways: [cross_cutting]
+- id: ng-eml-2020
+  title: Nigeria essential medicines list, seventh edition
+  publisher: Federal Ministry of Health, Nigeria
+  year: 2020
+  url: https://www.policyvault.africa/wp-content/uploads/policy/NGA1425.pdf
+  format: pdf
+  bytes: 1251857
+  licence: null
+  pathways: [cross_cutting]
+- id: who-eml-2025
+  title: WHO model list of essential medicines, 24th list
+  publisher: World Health Organization
+  year: 2025
+  landing: https://hdl.handle.net/10665/382243
+  url: https://iris.who.int/server/api/core/bitstreams/17642505-ecd3-4940-a691-4f1dfa0d835a/content
+  format: pdf
+  bytes: 1400000
+  licence: CC BY-NC-SA 3.0 IGO
+  pathways: [cross_cutting]
+- id: karita-2009
+  title: CLSI-derived hematology and biochemistry reference intervals for healthy adults in eastern and southern Africa
+  publisher: PLoS ONE
+  year: 2009
+  doi: 10.1371/journal.pone.0004401
+  url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC2632744/fullTextXML
+  format: jats
+  bytes: 152065
+  licence: CC BY 4.0
+  pathways: [cross_cutting]
+- id: nigeria-ri-2021
+  title: Reference intervals of common clinical biochemistry analytes in young Nigerian adults
+  publisher: PLoS ONE
+  year: 2021
+  doi: 10.1371/journal.pone.0247672
+  url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7920356/fullTextXML
+  format: jats
+  bytes: 154967
+  licence: CC BY 4.0
+  pathways: [cross_cutting]
+- id: cpic-cyp2d6-2020
+  title: 'Standardizing CYP2D6 genotype to phenotype translation: consensus recommendations from the CPIC and DPWG'
+  publisher: Clinical and Translational Science
+  year: 2020
+  doi: 10.1111/cts.12692
+  url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6951851/fullTextXML
+  format: jats
+  bytes: 107302
+  licence: CC BY-NC 4.0
+  pathways: [cross_cutting]
+- id: cpic-api
+  title: CPIC database (allele functions, diplotype to phenotype, recommendations)
+  publisher: Clinical Pharmacogenetics Implementation Consortium
+  year: 2026
+  landing: https://cpicpgx.org
+  url: https://api.cpicpgx.org/v1/
+  format: json
+  bytes: null
+  licence: CC0 1.0
+  pathways: [cross_cutting]
+  note: Tables of CPIC guidelines whose papers are not open access (cpic-cyp2c19-2022, cpic-cyp2b6-2019, cpic-g6pd-2022).
+- id: cpic-frequencies
+  title: CPIC allele frequencies, Sub-Saharan African biogeographic group (population_frequency_view)
+  publisher: Clinical Pharmacogenetics Implementation Consortium
+  year: 2026
+  landing: https://cpicpgx.org
+  url: https://api.cpicpgx.org/v1/population_frequency_view?genesymbol=in.(CYP2D6,CYP2C19,CYP2B6,CYP2C9,G6PD)&population_group=eq.Sub-Saharan%20African&freq_weighted_avg=not.is.null
+  format: json
+  bytes: null
+  licence: CC0 1.0
+  pathways: [cross_cutting]
+- id: cpic-cyp2c19-2022
+  title: CPIC guideline for CYP2C19 genotype and clopidogrel therapy, 2022 update
+  publisher: Clinical Pharmacology & Therapeutics
+  year: 2022
+  doi: 10.1002/cpt.2526
+  format: json
+  data_via: cpic-api
+  licence: CC0 1.0 (CPIC data)
+  pathways: [cross_cutting]
+- id: cpic-cyp2b6-2019
+  title: CPIC guideline for CYP2B6 and efavirenz-containing antiretroviral therapy
+  publisher: Clinical Pharmacology & Therapeutics
+  year: 2019
+  doi: 10.1002/cpt.1477
+  format: json
+  data_via: cpic-api
+  licence: CC0 1.0 (CPIC data)
+  pathways: [cross_cutting]
+- id: cpic-cyp2d6-opioids-2021
+  title: CPIC guideline for CYP2D6, OPRM1 and COMT genotypes and select opioid therapy
+  publisher: Clinical Pharmacology & Therapeutics
+  year: 2021
+  doi: 10.1002/cpt.2149
+  format: json
+  data_via: cpic-api
+  licence: CC0 1.0 (CPIC data)
+  pathways: [cross_cutting]
+- id: cpic-g6pd-2022
+  title: Expanded CPIC guideline for medication use in the context of G6PD genotype
+  publisher: Clinical Pharmacology & Therapeutics
+  year: 2023
+  doi: 10.1002/cpt.2735
+  format: json
+  data_via: cpic-api
+  licence: CC0 1.0 (CPIC data)
+  pathways: [acute_febrile, cross_cutting]
+
+# Located but without retrievable full text.
+- id: ng-malaria-2020
+  title: National guidelines for diagnosis and treatment of malaria, fourth edition
+  publisher: National Malaria Elimination Programme, Nigeria
+  year: 2020
+  status: unavailable
+  note: No public full text found. WHO malaria guidelines are used; the national edition was not available.
+- id: pugh-1973
+  title: Transection of the oesophagus for bleeding oesophageal varices
+  publisher: British Journal of Surgery
+  year: 1973
+  doi: 10.1002/bjs.1800600817
+  status: unavailable
+  note: Paywalled. The Child-Pugh table is checked by hand against the cited table.
+- id: johnson-2010-cirrhosis
+  title: A semi-mechanistic model to predict the effects of liver cirrhosis on drug clearance
+  publisher: Clinical Pharmacokinetics
+  year: 2010
+  status: unavailable
+  note: Paywalled. Clearance fractions by Child-Pugh class stay assumptions.
+- id: kroenke-2001
+  title: 'The PHQ-9: validity of a brief depression severity measure'
+  publisher: Journal of General Internal Medicine
+  year: 2001
+  doi: 10.1046/j.1525-1497.2001.016009606.x
+  status: unavailable
+  note: Not in the open-access subset. The PHQ instruction manual (phq-manual) carries the same cut-points.
+- id: spitzer-2006
+  title: 'A brief measure for assessing generalized anxiety disorder: the GAD-7'
+  publisher: Archives of Internal Medicine
+  year: 2006
+  doi: 10.1001/archinte.166.10.1092
+  status: unavailable
+  note: Paywalled. The PHQ instruction manual (phq-manual) carries the same cut-points.
+- id: gina-2025
+  title: GINA summary guide for asthma management and prevention, 2025
+  publisher: Global Initiative for Asthma
+  year: 2025
+  status: unavailable
+  note: Download is behind a form on ginasthma.org. WHO PEN 2020 covers asthma for primary care.
+- id: esc-af-2024
+  title: 2024 ESC guidelines for the management of atrial fibrillation
+  publisher: European Heart Journal
+  year: 2024
+  doi: 10.1093/eurheartj/ehae176
+  status: unavailable
+  note: Publisher site blocks scripted download. Requested as a manual download.
+- id: eq5d-5l
+  title: EQ-5D-5L
+  publisher: EuroQol Research Foundation
+  status: unavailable
+  note: Use needs registration with EuroQol (person action). The questionnaire is not shipped until registered.
+- id: promis-10
+  title: PROMIS Scale v1.2, Global Health (13 April 2018)
+  publisher: HealthMeasures
+  year: 2018
+  landing: https://www.healthmeasures.net/index.php?option=com_instruments&view=measure&id=778
+  url: https://healthmeasures.net/pdfs/Global%20Health%20Scale%20v1.2%2013Apr2018.pdf
+  format: pdf
+  bytes: 44558
+  licence: HealthMeasures Terms of Use (accepted 2026-10-10)
+  pathways: [cross_cutting]
+- id: promis-gh-scoring-2024
+  title: PROMIS Global Health scoring manual, 30 August 2024
+  publisher: HealthMeasures
+  year: 2024
+  landing: https://www.healthmeasures.net/index.php?option=com_instruments&view=measure&id=778
+  url: https://healthmeasures.net/pdfs/PROMIS%20Global%20Health%20Scoring%20Manual_30Aug2024.pdf
+  format: pdf
+  bytes: 1038358
+  licence: HealthMeasures Terms of Use
+  pathways: [cross_cutting]
+
+# Code systems. Codes are looked up one by one (apdt/knowledge/terminology.py) and stored with
+# their official display in kb/terminology/<system>.csv.
+- id: snomed-ct
+  title: SNOMED CT International Edition
+  publisher: SNOMED International
+  year: 2025
+  landing: https://tx.fhir.org/r4
+  url: https://tx.fhir.org/r4/CodeSystem/$lookup
+  format: terminology
+  licence: SNOMED CT affiliate licence needed for production use (design 01, P10)
+  pathways: [cross_cutting]
+- id: icd11-mms
+  title: ICD-11 for Mortality and Morbidity Statistics
+  publisher: World Health Organization
+  year: 2026
+  landing: https://icd.who.int
+  url: https://tx.fhir.org/r4/CodeSystem/$lookup
+  format: terminology
+  licence: CC BY-ND 3.0 IGO
+  pathways: [cross_cutting]
+- id: loinc
+  title: LOINC
+  publisher: Regenstrief Institute
+  year: 2025
+  edition: '2.82'
+  landing: https://loinc.org
+  url: https://tx.fhir.org/r4/CodeSystem/$lookup
+  format: terminology
+  licence: LOINC licence (free, account needed for the full release)
+  pathways: [cross_cutting]
+- id: hpo
+  title: Human Phenotype Ontology
+  publisher: Monarch Initiative
+  landing: https://hpo.jax.org
+  url: var/ontologies/hp.obo
+  format: terminology
+  licence: HPO licence (free with attribution)
+  pathways: [cross_cutting]
+- id: uberon
+  title: Uberon anatomy ontology
+  publisher: OBO Foundry
+  landing: http://uberon.github.io
+  url: var/ontologies/uberon-basic.obo
+  format: terminology
+  licence: CC BY 3.0
+  pathways: [cross_cutting]
+- id: atc-index
+  title: ATC/DDD index
+  publisher: WHO Collaborating Centre for Drug Statistics Methodology
+  year: 2026
+  landing: https://atcddd.fhi.no/atc_ddd_index/
+  url: https://atcddd.fhi.no/atc_ddd_index/
+  format: terminology
+  licence: Free to use with attribution; no commercial redistribution of the full index
+  pathways: [cross_cutting]
+- id: rxnorm
+  title: RxNorm
+  publisher: US National Library of Medicine
+  landing: https://rxnav.nlm.nih.gov
+  url: https://rxnav.nlm.nih.gov/REST/
+  format: terminology
+  licence: Public domain (RxNorm normalized names and RxCUIs)
+  pathways: [cross_cutting]
+- id: mdc
+  title: ISO/IEEE 11073-10101 Medical Device Communications nomenclature (MDC)
+  publisher: IEEE; served by the HL7 FHIR terminology server
+  year: 2024
+  edition: '2024-12-05'
+  landing: https://tx.fhir.org/r4
+  url: https://tx.fhir.org/r4/CodeSystem/$lookup
+  format: terminology
+  licence: null
+  pathways: [cross_cutting]
+  note: Codes are context-free codes (partition × 65536 + term code). kb/terminology/mdc.csv
+    keeps the partition, term code and reference id of each, with the lookup URL that confirmed
+    it. Partition and term codes were first read from the Antidote IEEE 11073-20601 stack
+    (github.com/signove/antidote, src/dim/nomenclature.h and src/specializations/*.h).
+
+# Device specifications (design 04, 4.1.1). The device codecs in edge/devices cite them.
+- id: bt-gatt-supplement
+  title: GATT Specification Supplement
+  year: 2026
+  edition: '2026-09-09'
+  publisher: Bluetooth SIG
+  landing: https://www.bluetooth.com/specifications/gss/
+  url: https://btprodspecificationrefs.blob.core.windows.net/gatt-specification-supplement/GATT_Specification_Supplement.pdf
+  format: pdf
+  bytes: 612415
+  licence: null
+  pathways: [cross_cutting]
+- id: bt-plxs-1.0.1
+  title: Pulse Oximeter Service
+  publisher: Bluetooth SIG
+  year: 2022
+  edition: v1.0.1
+  landing: https://www.bluetooth.com/specifications/specs/pulse-oximeter-service-1-0-1/
+  url: https://www.bluetooth.com/wp-content/uploads/Files/Specification/HTML/PLXS_v1.0.1/out/en/index-en.html
+  format: html
+  bytes: 223895
+  licence: null
+  pathways: [cross_cutting]
+- id: antidote-11073
+  title: Antidote IEEE 11073-20601 manager and agent stack
+  edition: commit dbb27422 (2018-09-28)
+  year: 2018
+  publisher: Signove Tecnologia (LGPL 2.1)
+  landing: https://github.com/signove/antidote
+  url: https://github.com/signove/antidote/tree/master/src
+  licence: LGPL-2.1-or-later
+  pathways: [cross_cutting]
+  note: The 11073-20601 standard is paywalled. edge/devices/decode/phd follows the APDU
+    structures of src/asn1/phd_types.h and src/communication/parser/encoder_ASN1.c, the
+    medfloat rules of src/util/bytelib.c, the standard configurations of
+    src/specializations/*.c, and is tested against the Annex H example APDUs in
+    tests/resources/apdu.

@@ -1,0 +1,64 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "history-chronic-infection",
+  "url": "https://atra.health/fhir/Questionnaire/history-chronic-infection",
+  "version": "1.0.0",
+  "status": "active",
+  "title": "History: chronic infection",
+  "item": [
+    {
+      "linkId": "onset_days",
+      "text": "How many days ago did this illness start?",
+      "type": "integer",
+      "required": true
+    },
+    {
+      "linkId": "find.cough",
+      "text": "Cough?",
+      "type": "boolean",
+      "code": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "49727002",
+          "display": "Cough"
+        }
+      ]
+    },
+    {
+      "linkId": "find.haemoptysis",
+      "text": "Haemoptysis?",
+      "type": "boolean",
+      "code": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "66857006",
+          "display": "Haemoptysis"
+        }
+      ]
+    },
+    {
+      "linkId": "find.night_sweats",
+      "text": "Night sweats?",
+      "type": "boolean",
+      "code": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "42984000",
+          "display": "Night sweats"
+        }
+      ]
+    },
+    {
+      "linkId": "find.weight_loss",
+      "text": "Weight loss?",
+      "type": "boolean",
+      "code": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "262285001",
+          "display": "Weight loss"
+        }
+      ]
+    }
+  ]
+}

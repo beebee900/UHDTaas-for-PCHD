@@ -1,0 +1,40 @@
+# Cohort-component projection with Lagos-like rates (design 04, 4.5.3: demographic).
+# Every rate is an assumption: no Lagos life table, fertility or migration table was sourced.
+model_id: ahdt.population.demographic
+sources:
+- id: atra-assumption
+  citation: ATRA design 01 rule R5 assumption register
+params:
+  asfr_15_19: {value: 0.06, unit: /a, source: atra-assumption, assumption: true,
+               justification: "Births per woman per year at 15 to 19; the seven age-specific
+                 rates give a total fertility of 3.5, a Lagos-like urban level."}
+  asfr_20_24: {value: 0.15, unit: /a, source: atra-assumption, assumption: true,
+               justification: Part of the assumed total fertility of 3.5.}
+  asfr_25_29: {value: 0.17, unit: /a, source: atra-assumption, assumption: true,
+               justification: Part of the assumed total fertility of 3.5.}
+  asfr_30_34: {value: 0.15, unit: /a, source: atra-assumption, assumption: true,
+               justification: Part of the assumed total fertility of 3.5.}
+  asfr_35_39: {value: 0.11, unit: /a, source: atra-assumption, assumption: true,
+               justification: Part of the assumed total fertility of 3.5.}
+  asfr_40_44: {value: 0.05, unit: /a, source: atra-assumption, assumption: true,
+               justification: Part of the assumed total fertility of 3.5.}
+  asfr_45_49: {value: 0.01, unit: /a, source: atra-assumption, assumption: true,
+               justification: Part of the assumed total fertility of 3.5.}
+  male_birth_share: {value: 0.512, unit: '1', source: atra-assumption, assumption: true,
+                     justification: "Share of boys among births (105 boys per 100 girls)."}
+  mortality_0_4: {value: 0.02, unit: /a, source: atra-assumption, assumption: true,
+                  justification: "Annual death rate of under-fives; a high child mortality
+                    level placeholder until a Nigerian life table is sourced."}
+  mortality_5_14: {value: 0.002, unit: /a, source: atra-assumption, assumption: true,
+                   justification: Placeholder until a Nigerian life table is sourced.}
+  mortality_15_49: {value: 0.004, unit: /a, source: atra-assumption, assumption: true,
+                    justification: Placeholder until a Nigerian life table is sourced.}
+  mortality_50_64: {value: 0.012, unit: /a, source: atra-assumption, assumption: true,
+                    justification: Placeholder until a Nigerian life table is sourced.}
+  mortality_65_79: {value: 0.04, unit: /a, source: atra-assumption, assumption: true,
+                    justification: Placeholder until a Nigerian life table is sourced.}
+  mortality_80_plus: {value: 0.15, unit: /a, source: atra-assumption, assumption: true,
+                      justification: Placeholder until a Nigerian life table is sourced.}
+  net_migration_15_34: {value: 0.01, unit: /a, source: atra-assumption, assumption: true,
+                        justification: "Net in-migration per year at working ages 15 to 34,
+                          for a city that grows by migration; a placeholder."}

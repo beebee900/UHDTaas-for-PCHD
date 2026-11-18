@@ -1,0 +1,56 @@
+# T3 reference-state items of the sensory twin (design 04, 4.5.3).
+- model_id: ahdt.sensory.eye
+  twin: sensory
+  intended_use: Visual acuity and lens opacity state
+  instances:
+  - UBERON:0000970
+  variables:
+    visual_acuity_logmar:
+      unit: '{logMAR}'
+      ref: range.visual_acuity_logmar
+      tau_h: 4380
+      justification: Relaxation time constant of a T3 state; a modelling assumption (design 01, rule
+        R3)
+    lens_opacity:
+      unit: '1'
+      ref: state.lens_opacity
+      tau_h: 4380
+      justification: Relaxation time constant of a T3 state; a modelling assumption (design 01, rule
+        R3)
+- model_id: ahdt.sensory.ear
+  twin: sensory
+  intended_use: Hearing threshold and vestibular balance state
+  instances:
+  - UBERON:0001690
+  variables:
+    hearing_threshold:
+      unit: dB
+      ref: range.hearing_threshold
+      tau_h: 4380
+      justification: Relaxation time constant of a T3 state; a modelling assumption (design 01, rule
+        R3)
+    vestibular_score:
+      unit: '{score}'
+      ref: range.vestibular_score
+      tau_h: 168
+      justification: Relaxation time constant of a T3 state; a modelling assumption (design 01, rule
+        R3)
+- model_id: ahdt.sensory.olfactory_and_gustatory
+  twin: sensory
+  intended_use: Smell and taste function scores
+  instances:
+  - UBERON:0002268
+  - UBERON:0001727
+  variables:
+    olfaction_score:
+      unit: '{score}'
+      ref: state.olfaction_score
+      tau_h: 720
+      justification: Relaxation time constant of a T3 state; a modelling assumption (design 01, rule
+        R3)
+    taste_score:
+      unit: '{score}'
+      ref: state.taste_score
+      tau_h: 720
+      justification: Relaxation time constant of a T3 state; a modelling assumption (design 01, rule
+        R3)

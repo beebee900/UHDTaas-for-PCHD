@@ -1,0 +1,22 @@
+{
+  "$id": "https://atra.local/schemas/connectors/system_summary/v1.0",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "key_values": {
+      "type": "object"
+    },
+    "news2_components": {
+      "type": "object"
+    },
+    "status": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "status",
+    "key_values"
+  ],
+  "title": "system_summary v1.0",
+  "type": "object"
+}

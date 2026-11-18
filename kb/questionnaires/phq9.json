@@ -1,0 +1,533 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "phq9",
+  "url": "https://atra.health/fhir/Questionnaire/phq9",
+  "version": "1.0.0",
+  "status": "active",
+  "title": "Patient Health Questionnaire (PHQ-9)",
+  "item": [
+    {
+      "linkId": "items",
+      "text": "Over the last 2 weeks, how often have you been bothered by any of the following?",
+      "type": "group",
+      "item": [
+        {
+          "linkId": "a",
+          "text": "Little interest or pleasure in doing things",
+          "type": "choice",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "0",
+                "display": "Not at all"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 0
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "Several days"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 1
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "2",
+                "display": "More than half the days"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 2
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "3",
+                "display": "Nearly every day"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 3
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "linkId": "b",
+          "text": "Feeling down, depressed, or hopeless",
+          "type": "choice",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "0",
+                "display": "Not at all"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 0
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "Several days"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 1
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "2",
+                "display": "More than half the days"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 2
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "3",
+                "display": "Nearly every day"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 3
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "linkId": "c",
+          "text": "Trouble falling or staying asleep, or sleeping too much",
+          "type": "choice",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "0",
+                "display": "Not at all"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 0
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "Several days"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 1
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "2",
+                "display": "More than half the days"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 2
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "3",
+                "display": "Nearly every day"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 3
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "linkId": "d",
+          "text": "Feeling tired or having little energy",
+          "type": "choice",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "0",
+                "display": "Not at all"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 0
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "Several days"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 1
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "2",
+                "display": "More than half the days"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 2
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "3",
+                "display": "Nearly every day"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 3
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "linkId": "e",
+          "text": "Poor appetite or overeating",
+          "type": "choice",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "0",
+                "display": "Not at all"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 0
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "Several days"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 1
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "2",
+                "display": "More than half the days"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 2
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "3",
+                "display": "Nearly every day"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 3
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "linkId": "f",
+          "text": "Feeling bad about yourself or that you are a failure or have let yourself or your family down",
+          "type": "choice",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "0",
+                "display": "Not at all"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 0
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "Several days"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 1
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "2",
+                "display": "More than half the days"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 2
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "3",
+                "display": "Nearly every day"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 3
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "linkId": "g",
+          "text": "Trouble concentrating on things, such as reading the newspaper or watching television",
+          "type": "choice",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "0",
+                "display": "Not at all"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 0
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "Several days"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 1
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "2",
+                "display": "More than half the days"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 2
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "3",
+                "display": "Nearly every day"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 3
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "linkId": "h",
+          "text": "Moving or speaking so slowly that other people could have noticed",
+          "type": "choice",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "0",
+                "display": "Not at all"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 0
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "Several days"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 1
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "2",
+                "display": "More than half the days"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 2
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "3",
+                "display": "Nearly every day"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 3
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "linkId": "i",
+          "text": "Thoughts that you would be better off dead or of hurting yourself in some way",
+          "type": "choice",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "0",
+                "display": "Not at all"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 0
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "Several days"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 1
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "2",
+                "display": "More than half the days"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 2
+                }
+              ]
+            },
+            {
+              "valueCoding": {
+                "code": "3",
+                "display": "Nearly every day"
+              },
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                  "valueDecimal": 3
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "total",
+      "text": "Total score",
+      "type": "integer",
+      "readOnly": true,
+      "code": [
+        {
+          "system": "http://loinc.org",
+          "code": "44261-6"
+        }
+      ]
+    }
+  ]
+}

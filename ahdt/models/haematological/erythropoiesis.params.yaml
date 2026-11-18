@@ -1,0 +1,40 @@
+# Erythropoiesis with erythropoietin feedback.
+model_id: ahdt.haematological.bone_marrow_and_erythrocytes
+sources:
+- id: semba2001
+  citation: "Semba RD, Broadhead R, Taha TE, Totin D, Ricks MO, Kumwenda N. Erythropoietin
+    response to anemia among human immunodeficiency virus-infected infants in Malawi.
+    Haematologica. 2001;86(11):1221-1222"
+  url: http://www.haematologica.it/2001_11/1221.htm
+- id: hoshen2000
+  citation: "Hoshen MB, Heinrich R, Stein WD, Ginsburg H. Mathematical modelling of the
+    within-host dynamics of Plasmodium falciparum. Parasitology. 2000;121(3):227-235.
+    doi:10.1017/S0031182099006368"
+- id: west
+  citation: "West JB, Luks AM. West's Respiratory Physiology: The Essentials. 11th ed.
+    Wolters Kluwer; 2020. Chapter 6 (oxygen content)"
+- id: atra-assumption
+  citation: ATRA design 01 rule R5 assumption register
+params:
+  epo_intercept: {value: 2.90, unit: log10(IU/L), source: semba2001,
+                  note: "HIV-uninfected Malawian infants; adult validity not established"}
+  epo_slope: {value: 0.013, unit: log10(IU/L) per g/L, source: semba2001}
+  rbc_lifespan: {value: 120, unit: d, source: hoshen2000, calibrate: true, prior_cv: 0.2}
+  mch: {value: 30, unit: pg, source: atra-assumption, assumption: true, calibrate: true,
+        prior_cv: 0.1,
+        justification: "Mean cell haemoglobin converting red cell count to haemoglobin; taken
+          from the person's full blood count when available"}
+  maturation_days: {value: 5, unit: d, source: atra-assumption, assumption: true,
+                    justification: "Mean marrow transit before release, as a two-stage chain;
+                      no single published value located for this simplified form"}
+  epo_gain: {value: 1.0, unit: '1', source: atra-assumption, assumption: true,
+             justification: "Exponent of production on relative EPO; 1 makes production
+               proportional to EPO"}
+  mcv: {value: 90, unit: fL, source: atra-assumption, assumption: true, calibrate: true,
+        prior_cv: 0.1,
+        justification: "Mean cell volume converting red cell count to haematocrit; taken from
+          the person's full blood count when available"}
+  hufner: {value: 1.34, unit: mL/g, source: west, note: O2 bound per gram of haemoglobin}
+  o2_solubility: {value: 0.003, unit: 'mL/dL/mm[Hg]', source: west}
+  malaria_cycle_days: {value: 2, unit: d, source: hoshen2000,
+                       note: asexual cycle of P. falciparum after which a parasitised cell ruptures}

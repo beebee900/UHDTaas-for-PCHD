@@ -1,0 +1,18 @@
+{
+  "$id": "https://atra.local/schemas/connectors/renal_function/v2.0",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "egfr": {
+      "maximum": 200,
+      "minimum": 1,
+      "type": "number",
+      "x-ucum": "mL/min/{1.73_m2}"
+    }
+  },
+  "required": [
+    "egfr"
+  ],
+  "title": "renal_function v2.0",
+  "type": "object"
+}

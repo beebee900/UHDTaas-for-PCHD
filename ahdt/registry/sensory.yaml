@@ -1,0 +1,55 @@
+kind: sensory
+name: Sensory DT
+referent: Eye, ear, olfactory and gustatory organs
+fields:
+- name: visual_acuity_logmar
+  ucum: '1'
+  ref: range.visual_acuity_logmar
+  source:
+  - manual
+  - self_report
+- name: hearing_threshold
+  ucum: dB
+  ref: range.hearing_threshold
+  source:
+  - manual
+- name: vestibular_score
+  ucum: '{score}'
+  ref: range.vestibular_score
+  source:
+  - manual
+models:
+- ahdt.sensory.eye
+- ahdt.sensory.ear
+- ahdt.sensory.olfactory_and_gustatory
+- ahdt.sensory.sensory_decline
+owns_instances:
+- UBERON:0000970
+- UBERON:0001690
+- UBERON:0002268
+- UBERON:0001727
+reads_facets: []
+standing_goals:
+- id: sens.change
+  text: Detect a change in acuity or hearing
+  check:
+    kind: threshold
+    params:
+      fields:
+      - visual_acuity_logmar
+      - hearing_threshold
+      change_above:
+        kb: goal.sens.change
+- id: sens.adapt_interface
+  text: Set interface adaptation flags for the apps
+  check:
+    kind: composite
+    params:
+      outputs:
+      - large_text
+      - audio_first
+connectors_out:
+- SensoryBehaviouralConnector
+- SystemToWholeBodyConnector
+connectors_in:
+- NormsConnector

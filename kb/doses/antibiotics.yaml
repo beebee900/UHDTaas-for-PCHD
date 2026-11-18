@@ -1,0 +1,574 @@
+# Antibiotic regimens. Doses are for normal renal function unless a renal rule is given.
+# `every_h` is the dosing interval. A weight band holds from `min_kg` to below `below_kg`.
+
+# Urinary tract infection, adults (AWaRe chapters 23 and 34)
+- id: dose.amoxicillin_clavulanate_oral_adult_lower_uti
+  drug: amoxicillin + clavulanic acid
+  atc: J01CR02
+  route: oral
+  mg: {amoxicillin: 500, clavulanic_acid: 125}
+  every_h: 8
+  duration_days: [3, 5]
+  provenance:
+    source: who-aware-2022
+    section: 23. Lower urinary tract infection
+    page: 297
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: dose.cotrimoxazole_oral_adult_lower_uti
+  drug: sulfamethoxazole + trimethoprim
+  atc: J01EE01
+  route: oral
+  mg: {sulfamethoxazole: 800, trimethoprim: 160}
+  every_h: 12
+  duration_days: 3
+  provenance:
+    source: who-aware-2022
+    section: 23. Lower urinary tract infection
+    page: 297
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: dose.trimethoprim_oral_adult_lower_uti
+  drug: trimethoprim
+  atc: J01EA01
+  route: oral
+  mg: 200
+  every_h: 12
+  duration_days: 3
+  provenance:
+    source: who-aware-2022
+    section: 23. Lower urinary tract infection
+    page: 297
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: dose.nitrofurantoin_oral_adult_lower_uti
+  drug: nitrofurantoin
+  atc: J01XE01
+  route: oral
+  options:
+  - {formulation: modified_release, mg: 100, every_h: 12}
+  - {formulation: immediate_release, mg: 50, every_h: 6}
+  duration_days: 5
+  provenance:
+    source: who-aware-2022
+    section: 23. Lower urinary tract infection
+    page: 297
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: dose.ciprofloxacin_oral_adult
+  drug: ciprofloxacin
+  atc: J01MA02
+  route: oral
+  mg: 500
+  every_h: 12
+  provenance:
+    source: who-aware-2022
+    section: 34. Upper urinary tract infection
+    page: 493
+    also:
+    - {source: who-aware-2022, section: 15. Enteric fever, page: 202}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: dose.cefotaxime_iv_adult
+  drug: cefotaxime
+  atc: J01DD01
+  route: [intravenous, intramuscular]
+  mg: 1000
+  every_h: 8
+  provenance:
+    source: who-aware-2022
+    section: 34. Upper urinary tract infection
+    page: 493
+    derived:
+      mg: Source states 1 g.
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: dose.ceftriaxone_iv_adult_uti
+  drug: ceftriaxone
+  atc: J01DD04
+  route: [intravenous, intramuscular]
+  mg: 1000
+  every_h: 24
+  provenance:
+    source: who-aware-2022
+    section: 34. Upper urinary tract infection
+    page: 493
+    derived:
+      mg: Source states 1 g.
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: dose.amikacin_iv
+  drug: amikacin
+  atc: J01GB06
+  route: intravenous
+  mg_per_kg: 15
+  every_h: 24
+  provenance:
+    source: who-aware-2022
+    section: 34. Upper urinary tract infection
+    page: 493
+    also:
+    - {source: who-aware-2022, page: 495}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: dose.gentamicin_iv_adult
+  drug: gentamicin
+  atc: J01GB03
+  route: intravenous
+  mg_per_kg: 5
+  every_h: 24
+  provenance:
+    source: who-aware-2022
+    section: 34. Upper urinary tract infection
+    page: 493
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+# Urinary tract infection, children (AWaRe chapters 23 and 34)
+- id: dose.cefotaxime_iv_child
+  drug: cefotaxime
+  atc: J01DD01
+  route: [intravenous, intramuscular]
+  mg_per_kg_per_dose: 50
+  every_h: 8
+  provenance:
+    source: who-aware-2022
+    page: 495
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: dose.ceftriaxone_iv_child
+  drug: ceftriaxone
+  atc: J01DD04
+  route: [intravenous, intramuscular]
+  mg_per_kg_per_dose: 80
+  every_h: 24
+  provenance:
+    source: who-aware-2022
+    page: 495
+    also:
+    - {source: who-aware-2022, section: 15. Enteric fever, page: 203}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: dose.gentamicin_iv_child
+  drug: gentamicin
+  atc: J01GB03
+  route: intravenous
+  mg_per_kg_per_dose: {neonate: 5, child: 7.5}
+  every_h: 24
+  provenance:
+    source: who-aware-2022
+    page: 495
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: dose.ciprofloxacin_oral_child
+  drug: ciprofloxacin
+  atc: J01MA02
+  route: oral
+  mg_per_kg_per_dose: 15
+  every_h: 12
+  weight_bands:
+  - {min_kg: 3, below_kg: 6, mg: 50}
+  - {min_kg: 6, below_kg: 10, mg: 100}
+  - {min_kg: 10, below_kg: 15, mg: 150}
+  - {min_kg: 15, below_kg: 20, mg: 200}
+  - {min_kg: 20, below_kg: 30, mg: 300}
+  - {min_kg: 30, mg: 500}
+  provenance:
+    source: who-aware-2022
+    page: 495
+    also:
+    - {source: who-aware-2022, section: 15. Enteric fever, page: 203}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: dose.amoxicillin_clavulanate_oral_child
+  drug: amoxicillin + clavulanic acid
+  atc: J01CR02
+  route: oral
+  mg_per_kg_per_day_amoxicillin: [80, 90]
+  weight_bands:
+  - {min_kg: 3, below_kg: 6, mg_amoxicillin: 250, every_h: 12}
+  - {min_kg: 6, below_kg: 10, mg_amoxicillin: 375, every_h: 12}
+  - {min_kg: 10, below_kg: 15, mg_amoxicillin: 500, every_h: 12}
+  - {min_kg: 15, below_kg: 20, mg_amoxicillin: 750, every_h: 12}
+  - {min_kg: 20, mg_amoxicillin: 500, every_h: 8}
+  duration_days: [3, 5]
+  provenance:
+    source: who-aware-2022
+    section: 23. Lower urinary tract infection
+    page: 299
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+# Pregnancy (IMAI district clinician manual, section 11.44)
+- id: dose.nitrofurantoin_oral_pregnancy
+  drug: nitrofurantoin
+  atc: J01XE01
+  route: oral
+  mg: 100
+  doses_per_day: 2
+  duration_days: 5
+  provenance:
+    source: who-imai-dcm-2011-v2
+    page: 517
+    derived:
+      doses_per_day: Text "twice daily".
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: dose.amoxicillin_clavulanate_oral_pregnancy
+  drug: amoxicillin + clavulanic acid
+  atc: J01CR02
+  route: oral
+  mg_amoxicillin: 500
+  doses_per_day: 3
+  duration_days: [3, 7]
+  provenance:
+    source: who-imai-dcm-2011-v2
+    page: 517
+    derived:
+      doses_per_day: Text "3 times daily".
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: dose.ceftriaxone_iv_pregnancy_pyelonephritis
+  drug: ceftriaxone
+  atc: J01DD04
+  route: [intravenous, intramuscular]
+  mg: 1000
+  doses_per_day: 1
+  total_duration_days: [10, 14]
+  switch_to_oral_after_afebrile_h: 24
+  provenance:
+    source: who-imai-dcm-2011-v2
+    page: 517
+    derived:
+      mg: Source states 1 g.
+      doses_per_day: Text "daily".
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: dose.gentamicin_iv_pregnancy_pyelonephritis
+  drug: gentamicin
+  atc: J01GB03
+  route: intravenous
+  mg_per_kg_per_day: [4, 6]
+  total_duration_days: [10, 14]
+  switch_to_oral_after_afebrile_h: 24
+  provenance:
+    source: who-imai-dcm-2011-v2
+    page: 517
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+# Enteric fever (AWaRe chapter 15)
+- id: dose.azithromycin_oral_adult_enteric
+  drug: azithromycin
+  atc: J01FA10
+  route: oral
+  day_1_mg: 1000
+  then_mg: 500
+  every_h: 24
+  provenance:
+    source: who-aware-2022
+    section: 15. Enteric fever
+    page: 202
+    derived:
+      day_1_mg: Source states 1 g.
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: dose.ceftriaxone_iv_adult_enteric
+  drug: ceftriaxone
+  atc: J01DD04
+  route: intravenous
+  mg: 2000
+  every_h: 24
+  provenance:
+    source: who-aware-2022
+    section: 15. Enteric fever
+    page: 202
+    derived:
+      mg: Source states 2 g.
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: dose.azithromycin_oral_child_enteric
+  drug: azithromycin
+  atc: J01FA10
+  route: oral
+  mg_per_kg_per_dose: 20
+  every_h: 24
+  provenance:
+    source: who-aware-2022
+    section: 15. Enteric fever
+    page: 203
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+# Community-acquired pneumonia, adults (AWaRe chapter 12, page 166, read from the rendered page)
+- id: dose.amoxicillin_oral_adult_cap
+  drug: amoxicillin
+  atc: J01CA04
+  route: oral
+  g: 1
+  every_h: 8
+  provenance:
+    source: who-aware-2022
+    section: 12. Community-acquired pneumonia – mild
+    page: 166
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: dose.phenoxymethylpenicillin_oral_adult_cap
+  drug: phenoxymethylpenicillin
+  atc: J01CE02
+  route: oral
+  mg: 500
+  iu: 800000
+  every_h: 6
+  provenance:
+    source: who-aware-2022
+    section: 12. Community-acquired pneumonia – mild
+    page: 166
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: dose.amoxicillin_clavulanate_oral_adult_cap
+  drug: amoxicillin + clavulanic acid
+  atc: J01CR02
+  route: oral
+  mg: {amoxicillin: 875, clavulanic_acid: 125}
+  every_h: 8
+  provenance:
+    source: who-aware-2022
+    section: 12. Community-acquired pneumonia – mild
+    page: 166
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: dose.doxycycline_oral_adult
+  drug: doxycycline
+  atc: J01AA02
+  route: oral
+  mg: 100
+  every_h: 12
+  provenance:
+    source: who-aware-2022
+    section: 12. Community-acquired pneumonia – mild
+    page: 166
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: dose.cefotaxime_iv_adult_severe
+  drug: cefotaxime
+  atc: J01DD01
+  route: [intravenous, intramuscular]
+  g: 2
+  every_h: 8
+  provenance:
+    source: who-aware-2022
+    section: 12. Community-acquired pneumonia – mild
+    page: 166
+    also:
+    - {source: who-aware-2022, section: 24. Sepsis in adults (including septic shock), page: 318}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: dose.ceftriaxone_iv_adult_severe
+  drug: ceftriaxone
+  atc: J01DD04
+  route: intravenous
+  g: 2
+  every_h: 24
+  intramuscular_g: 1
+  provenance:
+    source: who-aware-2022
+    section: 12. Community-acquired pneumonia – mild
+    page: 166
+    also:
+    - {source: who-aware-2022, section: 24. Sepsis in adults (including septic shock), page: 318}
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: dose.clarithromycin_adult
+  drug: clarithromycin
+  atc: J01FA09
+  route: [oral, intravenous]
+  mg: 500
+  every_h: 12
+  provenance:
+    source: who-aware-2022
+    section: 12. Community-acquired pneumonia – mild
+    page: 166
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: dose.amoxicillin_clavulanate_iv_adult
+  drug: amoxicillin + clavulanic acid
+  atc: J01CR02
+  route: intravenous
+  mg: {amoxicillin: 1000, clavulanic_acid: 200}
+  every_h: 8
+  higher_option_every_h: 6
+  provenance:
+    source: who-aware-2022
+    section: 12. Community-acquired pneumonia – mild
+    page: 166
+    derived:
+      mg.amoxicillin: Source states 1 g.
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+# Community-acquired pneumonia, children (AWaRe chapter 12, page 168, read from the rendered page)
+- id: dose.amoxicillin_oral_child_cap
+  drug: amoxicillin
+  atc: J01CA04
+  route: oral
+  mg_per_kg_per_day: [80, 90]
+  weight_bands:
+  - {min_kg: 3, below_kg: 6, mg: 250, every_h: 12}
+  - {min_kg: 6, below_kg: 10, mg: 375, every_h: 12}
+  - {min_kg: 10, below_kg: 15, mg: 500, every_h: 12}
+  - {min_kg: 15, below_kg: 20, mg: 750, every_h: 12}
+  - {min_kg: 20, mg: 500, every_h: 8}
+  provenance:
+    source: who-aware-2022
+    section: 12. Community-acquired pneumonia – mild
+    page: 168
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: dose.amoxicillin_parenteral_child
+  drug: amoxicillin
+  atc: J01CA04
+  route: [intravenous, intramuscular]
+  mg_per_kg_per_dose: 50
+  every_h_by_age: [{age_up_to_days: 7, every_h: 12}, {age_above_days: 7, every_h: 8}]
+  provenance:
+    source: who-aware-2022
+    section: 12. Community-acquired pneumonia – mild
+    page: 168
+    derived:
+      every_h_by_age[*].age_*: Text "≤1wk of life" and ">1wk of life".
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: dose.ampicillin_parenteral_child
+  drug: ampicillin
+  atc: J01CA01
+  route: [intravenous, intramuscular]
+  mg_per_kg_per_dose: 50
+  every_h_by_age: [{age_up_to_days: 7, every_h: 12}, {age_above_days: 7, every_h: 8}]
+  provenance:
+    source: who-aware-2022
+    section: 12. Community-acquired pneumonia – mild
+    page: 168
+    also:
+    - {source: who-aware-2022, section: 25. Sepsis in neonates (< 28 days) and children (28 days–12 years), page: 344}
+    derived:
+      every_h_by_age[*].age_*: Text "≤1wk of life" and ">1wk of life".
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: dose.benzylpenicillin_iv_child
+  drug: benzylpenicillin
+  atc: J01CE01
+  route: intravenous
+  mg_per_kg_per_dose: 30
+  iu_per_kg_per_dose: 50000
+  every_h: 8
+  provenance:
+    source: who-aware-2022
+    section: 12. Community-acquired pneumonia – mild
+    page: 168
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: dose.cotrimoxazole_child_pcp
+  drug: sulfamethoxazole + trimethoprim
+  atc: J01EE01
+  route: [intravenous, oral]
+  mg_per_kg: {sulfamethoxazole: 40, trimethoprim: 8}
+  every_h: 8
+  duration_weeks: 3
+  provenance:
+    source: who-aware-2022
+    section: 12. Community-acquired pneumonia – mild
+    page: 168
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+# Sepsis in children (AWaRe chapter 25, page 344, read from the rendered page)
+- id: dose.cloxacillin_iv_child
+  drug: cloxacillin
+  atc: J01CF02
+  route: intravenous
+  mg_per_kg_per_dose: 25
+  every_h: 6
+  provenance:
+    source: who-aware-2022
+    section: 25. Sepsis in neonates (< 28 days) and children (28 days–12 years)
+    page: 344
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified
+
+- id: dose.amoxicillin_oral_child_sepsis_no_referral
+  drug: amoxicillin
+  atc: J01CA04
+  route: oral
+  mg_per_kg_per_dose: 50
+  every_h_by_age: [{age_up_to_months: 2, every_h: 12}, {age_above_months: 2, every_h: 8}]
+  provenance:
+    source: who-aware-2022
+    section: 25. Sepsis in neonates (< 28 days) and children (28 days–12 years)
+    page: 344
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified

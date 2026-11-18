@@ -1,0 +1,24 @@
+{
+  "$id": "https://atra.local/schemas/apdt/preference_weights.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "hdt_id": {
+      "title": "Hdt Id",
+      "type": "string"
+    },
+    "weights": {
+      "additionalProperties": {
+        "type": "number"
+      },
+      "title": "Weights",
+      "type": "object"
+    }
+  },
+  "required": [
+    "hdt_id",
+    "weights"
+  ],
+  "title": "PreferenceWeights",
+  "type": "object"
+}

@@ -1,0 +1,71 @@
+{
+  "$id": "https://atra.local/schemas/tools/ahdt.cognitive.perceive.args.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "content_ref": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Content Ref"
+    },
+    "hdt_id": {
+      "pattern": "^hdt-[0-9a-f]{12}$",
+      "title": "Hdt Id",
+      "type": "string"
+    },
+    "language": {
+      "anyOf": [
+        {
+          "enum": [
+            "en",
+            "yo",
+            "ha",
+            "ig",
+            "pcm"
+          ],
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Language"
+    },
+    "modality": {
+      "enum": [
+        "speech",
+        "image",
+        "signal",
+        "text"
+      ],
+      "title": "Modality",
+      "type": "string"
+    },
+    "text": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Text"
+    }
+  },
+  "required": [
+    "hdt_id",
+    "modality"
+  ],
+  "title": "PerceiveArgs",
+  "type": "object"
+}

@@ -1,0 +1,22 @@
+# KDIGO 2024 CKD nomenclature: CKD is abnormal kidney structure or function for at least 3
+# months; it is classified by GFR category (ml/min/1.73 m2) and albuminuria category (ACR).
+- id: severity.ckd.kdigo
+  minimum_duration_months: 3
+  gfr_categories:
+  - {category: G1, at_or_above: 90}
+  - {category: G2, from: 60, to: 89}
+  - {category: G3a, from: 45, to: 59}
+  - {category: G3b, from: 30, to: 44}
+  - {category: G4, from: 15, to: 29}
+  - {category: G5, below: 15}
+  albuminuria_categories:
+  - {category: A1, acr_below_mg_g: 30, acr_below_mg_mmol: 3}
+  - {category: A2, acr_mg_g: [30, 300], acr_mg_mmol: [3, 30]}
+  - {category: A3, acr_above_mg_g: 300, acr_above_mg_mmol: 30}
+  provenance:
+    source: kdigo-ckd-2024-full
+    section: Current Chronic Kidney Disease (CKD) Nomenclature
+    page: 11
+    extracted_by: llm
+    verified_by: second_pass
+    status: verified

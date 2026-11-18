@@ -1,0 +1,22 @@
+# WP14d VM queue: <name> <MemoryMax> <command>. runner.sh runs them in order, one at a time.
+# NLLB (2.5 GB) and MMS ASR (3.9 GB) are not on the disk together, to keep 8 GB free.
+setup 2G bash evaluation/language/vm/setup.sh
+fetch 2G python -m evaluation.language.fetch qwen mms-tts-yor mms-tts-hau mms-tts-eng mms-tts-yor-disc whisper-small bge-reranker biolord waxal-ibo corpora
+translate 6G python -m evaluation.language.translate
+prepare 2G python -m evaluation.language.prepare
+train-lora-yo 6G python -m evaluation.language.train_lora yo --budget-s 3600
+train-lora-ha 6G python -m evaluation.language.train_lora ha --budget-s 3600
+train-lora-ig 6G python -m evaluation.language.train_lora ig --budget-s 3600
+train-lora-pcm 6G python -m evaluation.language.train_lora pcm --budget-s 3600
+train-vits-ibo 6G python -m evaluation.language.finetune_vits --budget-s 9000
+eval-yo 6G python -m evaluation.language.eval_lm yo --n-dialogue 50
+eval-ha 6G python -m evaluation.language.eval_lm ha
+eval-ig 6G python -m evaluation.language.eval_lm ig
+eval-pcm 6G python -m evaluation.language.eval_lm pcm
+fetch-mms 2G python -m evaluation.language.fetch mms-asr
+fetch-nllb 2G python -m evaluation.language.fetch nllb
+backtrans 6G python -m evaluation.language.backtranslate
+drop-nllb2 1G rm -rf /home/ubuntu/atra/wp14d/models/nllb
+roundtrip 6G python -m evaluation.language.roundtrip
+hosts 4G python -m evaluation.language.hosts_check
+detect 2G python -m evaluation.language.eval_detect

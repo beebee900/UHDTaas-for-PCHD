@@ -1,0 +1,67 @@
+{
+  "$id": "https://atra.local/schemas/tools/ahdt.cognitive.request_data.args.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "channel": {
+      "anyOf": [
+        {
+          "enum": [
+            "app",
+            "sms",
+            "ussd",
+            "voice"
+          ],
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Channel"
+    },
+    "deadline_h": {
+      "anyOf": [
+        {
+          "exclusiveMinimum": 0,
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Deadline H"
+    },
+    "from": {
+      "enum": [
+        "person",
+        "device",
+        "clinician"
+      ],
+      "title": "From",
+      "type": "string"
+    },
+    "hdt_id": {
+      "pattern": "^hdt-[0-9a-f]{12}$",
+      "title": "Hdt Id",
+      "type": "string"
+    },
+    "what": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "title": "What",
+      "type": "array"
+    }
+  },
+  "required": [
+    "hdt_id",
+    "what",
+    "from"
+  ],
+  "title": "RequestDataArgs",
+  "type": "object"
+}

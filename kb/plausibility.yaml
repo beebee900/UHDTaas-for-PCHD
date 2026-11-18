@@ -1,0 +1,85 @@
+# Physiological plausibility bounds for ingestion (AHDT Layer 3, design 04 step 2).
+# A value outside its bounds is a measurement or entry error, not a clinical state:
+# the record is stored with quality = rejected. Bounds are wide on purpose and never
+# drive clinical decisions (thresholds, ranges and critical values do that).
+
+- id: plausibility.bounds
+  fields:
+    heart_rate: {min: 20, max: 300, unit: /min}
+    sbp: {min: 40, max: 300, unit: 'mm[Hg]'}
+    dbp: {min: 20, max: 200, unit: 'mm[Hg]'}
+    map: {min: 25, max: 250, unit: 'mm[Hg]'}
+    hrv_rmssd: {min: 1, max: 300, unit: ms}
+    ecg_lead_ii: {min: -10, max: 10, unit: mV}
+    troponin_i: {min: 0, max: 500000, unit: ng/L}
+    bnp: {min: 0, max: 50000, unit: pg/mL}
+    respiratory_rate: {min: 2, max: 120, unit: /min}
+    spo2: {min: 30, max: 100, unit: '%'}
+    fio2: {min: 21, max: 100, unit: '%'}
+    pef: {min: 30, max: 900, unit: L/min}
+    fev1: {min: 0.2, max: 8, unit: L}
+    temperature: {min: 25, max: 45, unit: Cel}
+    skin_temp: {min: 15, max: 45, unit: Cel}
+    glucose: {min: 0.5, max: 120, unit: mmol/L}
+    hba1c: {min: 2, max: 25, unit: '%'}
+    cortisol: {min: 0, max: 5000, unit: nmol/L}
+    tsh: {min: 0, max: 500, unit: 'm[IU]/L'}
+    hb: {min: 1, max: 25, unit: g/dL}
+    hbf: {min: 0, max: 100, unit: '%'}
+    platelets: {min: 0, max: 3000, unit: 10*9/L}
+    wbc: {min: 0, max: 500, unit: 10*9/L}
+    inr: {min: 0.5, max: 20, unit: '{INR}'}
+    crp: {min: 0, max: 700, unit: mg/L}
+    parasitaemia: {min: 0, max: 60, unit: '%'}
+    cd4: {min: 0, max: 5000, unit: /uL}
+    viral_load: {min: 0, max: 100000000, unit: '{copies}/mL'}
+    alt: {min: 0, max: 20000, unit: U/L}
+    ast: {min: 0, max: 30000, unit: U/L}
+    bilirubin: {min: 0, max: 1000, unit: umol/L}
+    albumin: {min: 0.5, max: 7, unit: g/dL}
+    creatinine: {min: 5, max: 3000, unit: umol/L}
+    egfr: {min: 1, max: 200, unit: 'mL/min/{1.73_m2}'}
+    sodium: {min: 90, max: 200, unit: mmol/L}
+    potassium: {min: 1, max: 12, unit: mmol/L}
+    urine_output: {min: 0, max: 2000, unit: mL/h}
+    oestradiol: {min: 0, max: 100000, unit: pmol/L}
+    gestation_weeks: {min: 0, max: 45, unit: wk}
+    weight: {min: 0.3, max: 350, unit: kg}
+    height: {min: 20, max: 250, unit: cm}
+    bmi: {min: 8, max: 100, unit: kg/m2}
+    waist: {min: 20, max: 250, unit: cm}
+    gcs_total: {min: 3, max: 15, unit: '{score}'}
+    news2: {min: 0, max: 20, unit: '{score}'}
+    phq9: {min: 0, max: 27, unit: '{score}'}
+    gad7: {min: 0, max: 21, unit: '{score}'}
+    pain_nrs: {min: 0, max: 10, unit: '{score}'}
+    sleep_duration: {min: 0, max: 24, unit: h}
+    steps: {min: 0, max: 100000, unit: /d}
+    gait_speed: {min: 0, max: 4, unit: m/s}
+    cadence: {min: 0, max: 250, unit: /min}
+    stride_time_cv: {min: 0, max: 100, unit: '%'}
+    energy_intake: {min: 0, max: 10000, unit: kcal/d}
+    fluid_intake: {min: 0, max: 15000, unit: mL/d}
+    stool_frequency: {min: 0, max: 40, unit: /d}
+    pm25: {min: 0, max: 2000, unit: ug/m3}
+    ambient_temp: {min: -10, max: 60, unit: Cel}
+    humidity: {min: 0, max: 100, unit: '%'}
+    distance_to_facility: {min: 0, max: 1000, unit: km}
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Outer limits of recorded human survival and of device measuring ranges, set wide so that only device or entry errors are rejected. They never trigger care; reference ranges and critical values do.
+
+- id: plausibility.rules
+  rules:
+  - {id: sbp_above_dbp, expr: sbp > dbp, fields: [sbp, dbp]}
+  - {id: map_between, expr: dbp <= map <= sbp, fields: [sbp, dbp, map]}
+  - {id: bmi_consistent, expr: 'abs(bmi - weight / (height / 100) ** 2) <= 1.0', fields: [bmi, weight, height]}
+  - {id: max_rate_of_change_temperature, field: temperature, max_change_per_hour: 3.0}
+  - {id: max_rate_of_change_weight, field: weight, max_change_per_day: 5.0}
+  provenance:
+    verified_by: assumption_listed
+    status: verified
+    assumption: true
+    justification: Definitional consistency checks (MAP lies between diastolic and systolic pressure; BMI is weight over height squared) plus rate limits that flag sensor jumps. They reject records, not people.

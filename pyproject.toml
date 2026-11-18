@@ -1,0 +1,91 @@
+[project]
+name = "atra-health"
+version = "0.1.0"
+description = "Agentic Human Digital Twin (AHDT) and Agentic Patient Digital Twin (APDT) on the Agentic Twin Reference Architecture (ATRA)"
+requires-python = ">=3.12,<3.13"
+readme = "README.md"
+
+[tool.setuptools.packages.find]
+include = ["atra*", "ahdt*", "apdt*", "population*", "edge*", "channels*", "synth*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+extend-exclude = ["contracts/proto/*_pb2*", "apps", "firmware", "var"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B", "SIM", "ASYNC", "RUF"]
+ignore = [
+    "SIM108",
+    "RUF001", "RUF002", "RUF003",  # en-dashes, arrows and Greek letters in clinical text are intentional
+    "ASYNC109",
+    "RUF012",
+    "UP042",                       # `(str, Enum)` keeps the supplied enums' str() output unchanged
+]
+
+[tool.ruff.lint.per-file-ignores]
+# The supplied ATRA code and its tests keep their original style (design rule R6).
+"atra/connectors.py" = ["E501", "RUF022", "UP006", "UP035", "UP037", "UP045"]
+"atra/gateway.py" = ["E501", "RUF022", "SIM117", "UP006", "UP035", "UP041", "UP045"]
+"tests/unit/atra/test_connectors.py" = ["E501"]
+"tests/unit/atra/test_gateway.py" = ["E501", "RUF059"]
+
+[tool.mypy]
+python_version = "3.12"
+plugins = ["pydantic.mypy"]
+ignore_missing_imports = true
+disable_error_code = ["import-untyped"]
+check_untyped_defs = true
+warn_unused_ignores = true
+
+[[tool.mypy.overrides]]
+module = ["atra.*", "contracts.*"]
+strict = true
+
+[[tool.mypy.overrides]]
+# Large dependencies are treated as untyped to keep a mypy run within the laptop's memory.
+module = ["dyon.*", "qdrant_client.*", "sqlalchemy.*", "mlflow.*", "pydicom.*", "networkx.*",
+          "prov.*", "jose.*", "opentelemetry.*", "langchain.*", "langchain_core.*",
+          "langgraph.*", "torch.*", "transformers.*", "pandas.*", "scipy.*", "sklearn.*",
+          "fhir.*", "mcp.*", "mcp_types.*", "httpx2.*", "pint.*",
+          "uvicorn.*", "grpc.*", "strawberry.*", "a2a.*", "pgmpy.*", "shap.*", "monai.*",
+          "owlready2.*", "quantus.*", "neo4j.*", "neo4j_graphrag.*", "medspacy.*"]
+follow_imports = "skip"
+
+[[tool.mypy.overrides]]
+# owlready2 classes are declared by subclassing its untyped `Thing` and property bases.
+module = ["ahdt.knowledge.owl", "ahdt.xai.semantic"]
+disallow_subclassing_any = false
+
+[[tool.mypy.overrides]]
+# torch is skipped above, so the networks subclass an untyped `nn.Module`.
+module = ["ahdt.models.ml.ecg", "ahdt.models.ml.gnn", "ahdt.models.ml.sleep",
+          "ahdt.models.ml.torchjob", "ahdt.xai.deep", "ahdt.xai.subjects", "ahdt.xai.quality", "ahdt.xai.rails"]
+disallow_subclassing_any = false
+
+[[tool.mypy.overrides]]
+# Mesa agents and models and pythonfmu slaves are subclassed from untyped bases.
+module = ["ahdt.models.external.immune_abm", "ahdt.models.external.mobility_abm",
+          "ahdt.models.external.cosim_fmus"]
+disallow_subclassing_any = false
+
+[[tool.mypy.overrides]]
+module = ["contracts.proto.*"]
+ignore_errors = true
+
+[[tool.mypy.overrides]]
+# The supplied modules keep their original typing (design rule R6); their behaviour is
+# covered by the supplied tests and, for the MCP port, by a test against the real SDK.
+module = ["atra.connectors", "atra.gateway"]
+ignore_errors = true
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+pythonpath = ["."]
+testpaths = ["tests"]
+addopts = "-m 'not profile and not e2e'"
+markers = [
+    "profile(name): needs the container profile `name` (p1 to p4); skipped in p0",
+    "slow: trains or runs a long simulation",
+    "e2e: starts services and a browser; run with `make e2e`",
+]

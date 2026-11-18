@@ -1,0 +1,242 @@
+{
+  "$defs": {
+    "Artefact": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "enum": [
+            "heatmap",
+            "plot",
+            "subgraph"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "ref": {
+          "title": "Ref",
+          "type": "string"
+        }
+      },
+      "required": [
+        "kind",
+        "ref"
+      ],
+      "title": "Artefact",
+      "type": "object"
+    },
+    "Counterfactual": {
+      "additionalProperties": false,
+      "properties": {
+        "changes": {
+          "additionalProperties": true,
+          "title": "Changes",
+          "type": "object"
+        },
+        "outcome": {
+          "title": "Outcome"
+        }
+      },
+      "required": [
+        "changes",
+        "outcome"
+      ],
+      "title": "Counterfactual",
+      "type": "object"
+    },
+    "Driver": {
+      "additionalProperties": false,
+      "properties": {
+        "contribution": {
+          "title": "Contribution",
+          "type": "number"
+        },
+        "direction": {
+          "enum": [
+            "up",
+            "down"
+          ],
+          "title": "Direction",
+          "type": "string"
+        },
+        "feature": {
+          "title": "Feature",
+          "type": "string"
+        },
+        "value": {
+          "default": null,
+          "title": "Value"
+        }
+      },
+      "required": [
+        "feature",
+        "contribution",
+        "direction"
+      ],
+      "title": "Driver",
+      "type": "object"
+    },
+    "ExplanationQuality": {
+      "additionalProperties": false,
+      "properties": {
+        "complexity": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Complexity"
+        },
+        "faithfulness": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Faithfulness"
+        },
+        "robustness": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Robustness"
+        }
+      },
+      "title": "ExplanationQuality",
+      "type": "object"
+    }
+  },
+  "$id": "https://atra.local/schemas/ahdt_explanation.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "artefacts": {
+      "anyOf": [
+        {
+          "items": {
+            "$ref": "#/$defs/Artefact"
+          },
+          "type": "array"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Artefacts"
+    },
+    "causal_graph_ref": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Causal Graph Ref"
+    },
+    "counterfactuals": {
+      "anyOf": [
+        {
+          "items": {
+            "$ref": "#/$defs/Counterfactual"
+          },
+          "type": "array"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Counterfactuals"
+    },
+    "drivers": {
+      "items": {
+        "$ref": "#/$defs/Driver"
+      },
+      "title": "Drivers",
+      "type": "array"
+    },
+    "explainer": {
+      "title": "Explainer",
+      "type": "string"
+    },
+    "explanation_id": {
+      "title": "Explanation Id",
+      "type": "string"
+    },
+    "method_family": {
+      "enum": [
+        "attribution",
+        "saliency",
+        "counterfactual",
+        "sensitivity",
+        "rule_trace",
+        "ontology_justification",
+        "citation",
+        "temporal_attribution",
+        "graph"
+      ],
+      "title": "Method Family",
+      "type": "string"
+    },
+    "model_id": {
+      "title": "Model Id",
+      "type": "string"
+    },
+    "output_id": {
+      "title": "Output Id",
+      "type": "string"
+    },
+    "quality": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/ExplanationQuality"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "text": {
+      "title": "Text",
+      "type": "string"
+    },
+    "uncertainty": {
+      "additionalProperties": true,
+      "title": "Uncertainty",
+      "type": "object"
+    },
+    "version": {
+      "title": "Version",
+      "type": "string"
+    }
+  },
+  "required": [
+    "explanation_id",
+    "output_id",
+    "model_id",
+    "version",
+    "explainer",
+    "method_family",
+    "text"
+  ],
+  "title": "AHDTExplanation",
+  "type": "object"
+}

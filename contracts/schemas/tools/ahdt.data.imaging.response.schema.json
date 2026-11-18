@@ -1,0 +1,62 @@
+{
+  "$defs": {
+    "ImagingStudy": {
+      "additionalProperties": false,
+      "properties": {
+        "description": {
+          "title": "Description",
+          "type": "string"
+        },
+        "dicomweb_url": {
+          "title": "Dicomweb Url",
+          "type": "string"
+        },
+        "modality": {
+          "title": "Modality",
+          "type": "string"
+        },
+        "series_count": {
+          "minimum": 0,
+          "title": "Series Count",
+          "type": "integer"
+        },
+        "started": {
+          "format": "date-time",
+          "title": "Started",
+          "type": "string"
+        },
+        "study_uid": {
+          "title": "Study Uid",
+          "type": "string"
+        }
+      },
+      "required": [
+        "study_uid",
+        "modality",
+        "started",
+        "description",
+        "dicomweb_url",
+        "series_count"
+      ],
+      "title": "ImagingStudy",
+      "type": "object"
+    }
+  },
+  "$id": "https://atra.local/schemas/tools/ahdt.data.imaging.response.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "studies": {
+      "items": {
+        "$ref": "#/$defs/ImagingStudy"
+      },
+      "title": "Studies",
+      "type": "array"
+    }
+  },
+  "required": [
+    "studies"
+  ],
+  "title": "ImagingData",
+  "type": "object"
+}

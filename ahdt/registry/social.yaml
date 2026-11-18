@@ -1,0 +1,65 @@
+kind: social
+name: Social DT
+referent: Household, network, community and environment
+fields:
+- name: household_support
+  ucum: '1'
+  ref: range.household_support
+  source:
+  - self_report
+  - derived
+- name: distance_to_facility
+  ucum: km
+  ref: range.distance_to_facility
+  source:
+  - derived
+- name: pm25
+  ucum: ug/m3
+  ref: range.pm25
+  source:
+  - device
+- name: ambient_temp
+  ucum: Cel
+  ref: range.ambient_temp
+  source:
+  - device
+- name: humidity
+  ucum: '%'
+  ref: range.humidity
+  source:
+  - device
+- name: food_security
+  ucum: '1'
+  ref: range.food_security
+  source:
+  - self_report
+models:
+- ahdt.social.social_network
+- ahdt.social.family_and_household
+- ahdt.social.occupational_and_team
+- ahdt.social.community_and_social_determinants
+- ahdt.social.mobility
+- ahdt.social.exposome
+owns_instances: []
+reads_facets: []
+standing_goals:
+- id: soc.context
+  text: Keep support network, household and exposome current
+  check:
+    kind: freshness
+    params:
+      fields:
+      - household_support
+      - pm25
+      max_age_s: 604800
+- id: soc.mobilise
+  text: Mobilise carers when support is needed
+  check:
+    kind: composite
+    params:
+      when: needs_carer
+connectors_out:
+- ContextToBehaviourConnector
+- ExposomeConnector
+connectors_in:
+- BehaviourToSocialConnector

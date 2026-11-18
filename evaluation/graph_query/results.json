@@ -1,0 +1,478 @@
+{
+ "passed": 20,
+ "total": 20,
+ "results": [
+  {
+   "persona": "ao",
+   "q": "Which conditions does she have?",
+   "expect": [
+    "Plasmodium falciparum malaria"
+   ],
+   "pass": true,
+   "answer": "Recorded conditions: Plasmodium falciparum malaria.",
+   "missing": [],
+   "citations": [
+    {
+     "node_id": "cond:hdt-5537426f869a:snomed:62676009",
+     "label": "Condition"
+    }
+   ],
+   "unresolved": []
+  },
+  {
+   "persona": "ao",
+   "q": "What medicines is she taking?",
+   "expect": [
+    "artemether and lumefantrine"
+   ],
+   "pass": true,
+   "answer": "Recorded medicines: artemether and lumefantrine.",
+   "missing": [],
+   "citations": [
+    {
+     "node_id": "med:hdt-5537426f869a:P01BF01",
+     "label": "Medication"
+    }
+   ],
+   "unresolved": []
+  },
+  {
+   "persona": "ao",
+   "q": "What is her latest temperature?",
+   "expect": [
+    "38.6",
+    "Cel"
+   ],
+   "pass": true,
+   "answer": "Latest temperature: 38.6 Cel at 2026-10-01T08:00:00+00:00.",
+   "missing": [],
+   "citations": [
+    {
+     "node_id": "obs:hdt-5537426f869a:temperature",
+     "label": "Observation"
+    }
+   ],
+   "unresolved": []
+  },
+  {
+   "persona": "ao",
+   "q": "Which system owns the falciparum malaria?",
+   "expect": [
+    "Haematological DT"
+   ],
+   "pass": true,
+   "answer": "Plasmodium falciparum malaria is owned by the Haematological DT.",
+   "missing": [],
+   "citations": [
+    {
+     "node_id": "cond:hdt-5537426f869a:snomed:62676009",
+     "label": "Condition"
+    },
+    {
+     "node_id": "system:haematological",
+     "label": "System",
+     "path": [
+      "cond:hdt-5537426f869a:snomed:62676009",
+      "OWNED_BY",
+      "system:haematological"
+     ]
+    }
+   ],
+   "unresolved": []
+  },
+  {
+   "persona": "ao",
+   "q": "What is the first-line treatment for uncomplicated falciparum malaria?",
+   "expect": [],
+   "cite": "artemisinin-based combination therapy",
+   "pass": true,
+   "answer": "5.2.1.4.1 Pregnant and lactating women Malaria in pregnancy is associated with low-birth-weight infants, increased anaemia and, in low-transmission areas, increased risks for severe malaria, pregnancy loss and death. In high-transmission settings, despite the adverse effects on fetal growth, malaria is usually asymptomatic in pregnancy or is associated with only mild, non-specific symptoms. There is insufficient information on the safety, efficacy and pharmacokinetics of most antimalarial agents in pregnancy, particularly during the first trimester. First trimester of pregnancy Malaria in preg",
+   "missing": [],
+   "citations": [
+    {
+     "doc_id": "who-malaria-2026#s37",
+     "label": "5.2.1.4.1 Pregnant and lactating women (p. 182)",
+     "path": [
+      "who-malaria-2026",
+      "5. Case management",
+      "5.1 Diagnosing malaria",
+      "5.2.1 Treating uncomplicated malaria",
+      "5.2.1.4 Special risk groups",
+      "5.2.1.4.1 Pregnant and lactating women"
+     ]
+    },
+    {
+     "doc_id": "who-imai-dcm-2011-v1#s3655",
+     "label": "A fi rst-line antimalarial (p. 400)",
+     "path": [
+      "who-imai-dcm-2011-v1",
+      "A fi rst-line antimalarial"
+     ]
+    },
+    {
+     "doc_id": "who-malaria-2026#s31",
+     "label": "5.2.1.1 Artemisinin-based combination therapy (p. 170)",
+     "path": [
+      "who-malaria-2026",
+      "5. Case management",
+      "5.1 Diagnosing malaria",
+      "5.2.1 Treating uncomplicated malaria",
+      "5.2.1.1 Artemisinin-based combination therapy"
+     ]
+    },
+    {
+     "doc_id": "who-pocketbook-children-2013#s1254",
+     "label": "Uncomplicated P. falciparum malaria: Treat for 3 days with one of the recom- (p. 188)",
+     "path": [
+      "who-pocketbook-children-2013",
+      "6. FEVER",
+      "Uncomplicated P. falciparum malaria: Treat for 3 days with one of the recom-"
+     ]
+    },
+    {
+     "doc_id": "who-malaria-2026#s29",
+     "label": "5.1 Diagnosing malaria (p. 166)",
+     "path": [
+      "who-malaria-2026",
+      "5. Case management",
+      "5.1 Diagnosing malaria"
+     ]
+    }
+   ],
+   "unresolved": []
+  },
+  {
+   "persona": "bm",
+   "q": "What is the latest glucose value?",
+   "expect": [
+    "2.1",
+    "mmol/L"
+   ],
+   "pass": true,
+   "answer": "Latest glucose: 2.1 mmol/L at 2026-10-01T08:00:00+00:00.",
+   "missing": [],
+   "citations": [
+    {
+     "node_id": "obs:hdt-21639ea535e8:glucose",
+     "label": "Observation"
+    }
+   ],
+   "unresolved": []
+  },
+  {
+   "persona": "bm",
+   "q": "List the diagnoses recorded for him.",
+   "expect": [
+    "Hypoglycaemia",
+    "malaria"
+   ],
+   "pass": true,
+   "answer": "Recorded conditions: Hypoglycaemia; Plasmodium falciparum malaria.",
+   "missing": [],
+   "citations": [
+    {
+     "node_id": "cond:hdt-21639ea535e8:snomed:302866003",
+     "label": "Condition"
+    },
+    {
+     "node_id": "cond:hdt-21639ea535e8:snomed:62676009",
+     "label": "Condition"
+    }
+   ],
+   "unresolved": []
+  },
+  {
+   "persona": "cn",
+   "q": "What symptoms does she report?",
+   "expect": [
+    "Flank pain",
+    "Dysuria"
+   ],
+   "pass": true,
+   "answer": "Recorded phenotypes: Dysuria; Flank pain.",
+   "missing": [],
+   "citations": [
+    {
+     "node_id": "pheno:hdt-fa6993fb8be4:HP:0100518",
+     "label": "Phenotype"
+    },
+    {
+     "node_id": "pheno:hdt-fa6993fb8be4:HP:0030157",
+     "label": "Phenotype"
+    }
+   ],
+   "unresolved": []
+  },
+  {
+   "persona": "cn",
+   "q": "Which organs does the pyelonephritis affect?",
+   "expect": [
+    "UBERON:0002113"
+   ],
+   "pass": true,
+   "answer": "Upper urinary tract infection (acute pyelonephritis) affects UBERON:0002113.",
+   "missing": [],
+   "citations": [
+    {
+     "node_id": "cond:hdt-fa6993fb8be4:snomed:36689008",
+     "label": "Condition"
+    },
+    {
+     "node_id": "inst-hdt-fa6993fb8be4-0002113",
+     "label": "Organ",
+     "path": [
+      "cond:hdt-fa6993fb8be4:snomed:36689008",
+      "AFFECTS",
+      "inst-hdt-fa6993fb8be4-0002113"
+     ]
+    }
+   ],
+   "unresolved": []
+  },
+  {
+   "persona": "de",
+   "q": "Which medications is he prescribed?",
+   "expect": [
+    "amlodipine",
+    "lisinopril",
+    "metformin"
+   ],
+   "pass": true,
+   "answer": "Recorded medicines: amlodipine; lisinopril; metformin.",
+   "missing": [],
+   "citations": [
+    {
+     "node_id": "med:hdt-bf604cf7a075:C08CA01",
+     "label": "Medication"
+    },
+    {
+     "node_id": "med:hdt-bf604cf7a075:C09AA03",
+     "label": "Medication"
+    },
+    {
+     "node_id": "med:hdt-bf604cf7a075:A10BA02",
+     "label": "Medication"
+    }
+   ],
+   "unresolved": []
+  },
+  {
+   "persona": "de",
+   "q": "What was his most recent systolic pressure?",
+   "expect": [
+    "162"
+   ],
+   "pass": true,
+   "answer": "Latest sbp: 162 mm[Hg] at 2026-10-01T08:00:00+00:00.",
+   "missing": [],
+   "citations": [
+    {
+     "node_id": "obs:hdt-bf604cf7a075:sbp",
+     "label": "Observation"
+    }
+   ],
+   "unresolved": []
+  },
+  {
+   "persona": "de",
+   "q": "Which twin owns his hypertension?",
+   "expect": [
+    "Cardiovascular DT"
+   ],
+   "pass": true,
+   "answer": "Hypertension is owned by the Cardiovascular DT.",
+   "missing": [],
+   "citations": [
+    {
+     "node_id": "cond:hdt-bf604cf7a075:snomed:59621000",
+     "label": "Condition"
+    },
+    {
+     "node_id": "system:cardiovascular",
+     "label": "System",
+     "path": [
+      "cond:hdt-bf604cf7a075:snomed:59621000",
+      "OWNED_BY",
+      "system:cardiovascular"
+     ]
+    }
+   ],
+   "unresolved": []
+  },
+  {
+   "persona": "de",
+   "q": "Which drugs treat hypertension according to the domain graph?",
+   "mode": "graphrag",
+   "expect": [
+    "Amlodipine"
+   ],
+   "pass": true,
+   "answer": "Hetionet lists 68 compound entries that treat Hypertension, including Acebutolol, Amiloride, Amlodipine, Atorvastatin, Benazepril, Bendroflumethiazide, Bepridil, Betaxolol, Bumetanide, Candesartan, Captopril, Carvedilol.",
+   "missing": [],
+   "citations": [
+    {
+     "node_id": "cond:hdt-bf604cf7a075:snomed:59621000",
+     "label": "Condition"
+    },
+    {
+     "doc_id": "https://het.io/Disease/DOID_10763",
+     "label": "Hetionet disease"
+    }
+   ],
+   "unresolved": []
+  },
+  {
+   "persona": "de",
+   "q": "Which symptoms present in hypertension?",
+   "mode": "graphrag",
+   "expect": [
+    "Dizziness"
+   ],
+   "pass": true,
+   "answer": "Hetionet lists 33 symptom entries that present with Hypertension, including Albuminuria, Angina Pectoris, Anoxia, Birth Weight, Body Weight, Cardiac Output, Low, Decerebrate State, Dizziness, Edema, Eye Manifestations, Fetal Distress, Fetal Hypoxia.",
+   "missing": [],
+   "citations": [
+    {
+     "node_id": "cond:hdt-bf604cf7a075:snomed:59621000",
+     "label": "Condition"
+    },
+    {
+     "doc_id": "https://het.io/Disease/DOID_10763",
+     "label": "Hetionet disease"
+    }
+   ],
+   "unresolved": []
+  },
+  {
+   "persona": "de",
+   "q": "What is the latest creatinine?",
+   "expect": [
+    "180",
+    "umol/L"
+   ],
+   "pass": true,
+   "answer": "Latest creatinine: 180 umol/L at 2026-10-01T08:00:00+00:00.",
+   "missing": [],
+   "citations": [
+    {
+     "node_id": "obs:hdt-bf604cf7a075:creatinine",
+     "label": "Observation"
+    }
+   ],
+   "unresolved": []
+  },
+  {
+   "persona": "ef",
+   "q": "What conditions are recorded?",
+   "expect": [
+    "Sickle cell disease"
+   ],
+   "pass": true,
+   "answer": "Recorded conditions: Sickle cell disease with vaso-occlusive crisis.",
+   "missing": [],
+   "citations": [
+    {
+     "node_id": "cond:hdt-ca1a4365ace6:snomed:417425009",
+     "label": "Condition"
+    }
+   ],
+   "unresolved": []
+  },
+  {
+   "persona": "ef",
+   "q": "What is her latest haemoglobin?",
+   "expect": [
+    "7.1",
+    "g/dL"
+   ],
+   "pass": true,
+   "answer": "Latest hb: 7.1 g/dL at 2026-10-01T08:00:00+00:00.",
+   "missing": [],
+   "citations": [
+    {
+     "node_id": "obs:hdt-ca1a4365ace6:hb",
+     "label": "Observation"
+    }
+   ],
+   "unresolved": []
+  },
+  {
+   "persona": "gh",
+   "q": "Do any of his medicines interact?",
+   "expect": [
+    "dolutegravir",
+    "rifampicin"
+   ],
+   "pass": true,
+   "answer": "lamivudine, tenofovir disoproxil and dolutegravir with rifampicin, pyrazinamide, ethambutol and isoniazid: Rifampicin induces dolutegravir metabolism and lowers its exposure.",
+   "missing": [],
+   "citations": [
+    {
+     "node_id": "med:hdt-8b3095406ebb:J05AR27",
+     "label": "Medication"
+    },
+    {
+     "node_id": "med:hdt-8b3095406ebb:J04AM06",
+     "label": "Medication"
+    },
+    {
+     "doc_id": "kb:ix.dolutegravir.rifampicin",
+     "label": "kb interaction"
+    }
+   ],
+   "unresolved": []
+  },
+  {
+   "persona": "gh",
+   "q": "Which system owns the cough?",
+   "expect": [
+    "Respiratory DT"
+   ],
+   "pass": true,
+   "answer": "Cough is owned by the Respiratory DT.",
+   "missing": [],
+   "citations": [
+    {
+     "node_id": "pheno:hdt-8b3095406ebb:HP:0012735",
+     "label": "Phenotype"
+    },
+    {
+     "node_id": "system:respiratory",
+     "label": "System",
+     "path": [
+      "pheno:hdt-8b3095406ebb:HP:0012735",
+      "OWNED_BY",
+      "system:respiratory"
+     ]
+    }
+   ],
+   "unresolved": []
+  },
+  {
+   "persona": "gh",
+   "q": "Which twins hold his data?",
+   "expect": [
+    "Immune and Lymphatic DT",
+    "Respiratory DT"
+   ],
+   "pass": true,
+   "answer": "Recorded twins: Immune and Lymphatic DT; Respiratory DT; Whole-Body DT.",
+   "missing": [],
+   "citations": [
+    {
+     "node_id": "system:immune_lymphatic",
+     "label": "System"
+    },
+    {
+     "node_id": "system:respiratory",
+     "label": "System"
+    },
+    {
+     "node_id": "system:whole_body",
+     "label": "System"
+    }
+   ],
+   "unresolved": []
+  }
+ ]
+}
